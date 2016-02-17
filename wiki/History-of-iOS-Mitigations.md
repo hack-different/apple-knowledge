@@ -26,4 +26,8 @@ On the S5L8900 no sigchecking was performed by the bootrom before jumping into t
 # validateFirstFewPages
 # KPP
 # Modern AMFI
+# LaunchDaemons plists moved to xpcd_cache.dylib
+1. First attempt (iOS x.y) just moved plists to code-signed xpcd_cache.dylib
+2. Second attempt (iOS x.y) added a dummy function to xpcd_cache.dylib that launchd runs to make sure AMFI kicks in and checks integrety.
+
 __TODO__
