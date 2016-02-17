@@ -35,7 +35,7 @@ Common workarounds are bootrom exploits or similar low level exploits, or an use
 # LaunchDaemons plists moved to xpcd_cache.dylib
 1. First attempt (iOS x.y) just moved plists to code-signed xpcd_cache.dylib
 2. Second attempt (iOS x.y) added a dummy function to xpcd_cache.dylib that launchd runs to make sure AMFI kicks in and checks integrety.
-3. 
+
 Commond workarounds usually involve replacing daemons directly. A good target for this is softwareupdated, since stashing breaks OTA (and OTA is an unwanted feature, too).
 
 __TODO__
