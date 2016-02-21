@@ -1,7 +1,7 @@
 # iOSRE
 iOS Reverse Engineering
 
-The aim of this project is to provide useful and updated tools and knowledge on iOS Reverse Engineering.
+The aim of this project is to provide useful and updated tools and knowledge on iOS reverse engineering and exploitation.
 This is an ongoing effort, and still in a very new stage.
 
 You may contribute actual files by adding it to the "resources" folder.
