@@ -10,7 +10,7 @@ brew install ldid
 echo "Installing Theos"
 echo "export THEOS=\"/opt/theos\"" >>~/.bash_profile
 source ~/.bash_profile
-sudo git clone git://github.com/DHowett/theos.git $THEOS
+sudo git clone git://github.com/theos/theos.git $THEOS
 echo "Installing wget"
 brew install wget
 echo "Installing Reveal"
