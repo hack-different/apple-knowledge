@@ -22,6 +22,7 @@ _Note: As I'm writing this, I'm realizing that this whole writeup on Mach/BSD wi
                 +   [Introduction](#ports_intro)
                 +   [Port rights](#port_rights)
 +   [BSD](#bsd)
++   [Resources](#resources)
 
 ## Mach
 
@@ -203,3 +204,9 @@ Ports may be accessed only via port rights. Those are basically permissions held
 BSD is primarily needed to implement what Mach leaves unimplemented. Things such as users, groups, files and others are obviously needed. BSD has also been heavily modified by Apple and differs significantly from other BSD implementations.
 
 Although Mach builds the foundations, XNU can still be considered mostly a BSD-like system, since the POSIX APIs exposed are more complete and effectively more used than Mach's.
+
+<a name="resources"></a>
+### Resources
+A list of useful external resources.
+
+-   [A deep-dive into the many flavors of IPC available on OS X](https://vimeo.com/127859750) : A talk by Ian Beer about IPC on OS X.
