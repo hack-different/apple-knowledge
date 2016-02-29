@@ -23,5 +23,8 @@ echo "Installing Hopper"
 unzip -XK ./Hoppper-Latest.zip
 mv './Hopper Disassembler v3.app' '/Applications/Hopper Disassembler v3.app'
 ./debugserver.py
+git clone https://github.com/nygard/class-dump.git class-dump
+xcodebuild -project ./class-dump/class-dump.xcodeproj #Compile classdump
+mv ./class-dump/build/Release/class-dump /usr/local/bin
 
 
