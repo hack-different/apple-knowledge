@@ -61,6 +61,7 @@
 >>kernelcache.release.n49
 
 #All of these files could be Extracted using corresponding keys and xpwn
+#Some keys are available at https://ipsw.me/keys/
 For The KernelCache. First run:
 
 *xpwntool PATH/TO/CACHE /PATH/TO/OUTPUT -k YOURKEYHERE -iv YOURIVHERE -decrypt*
