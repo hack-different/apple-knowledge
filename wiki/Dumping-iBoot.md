@@ -6,7 +6,7 @@ In order to dump iBoot, you need:
 2. gPhysBase and gVirtBase
 3. A pointer to the kernel pmap's level1 translation table entries.
 
-Once those are obtained, just add a mapping for gPhysBase to the level1 table, mapping 1GB of physical memory at a given virtual address.
+Once those are obtained, just add a mapping for gPhysBase to the level1 table (code for this is available upon request; drop me a pm on freenode), mapping 1GB of physical memory at a given virtual address.
 Additionally, make sure to clear the read only bit and set the EL0-accessible bit. 
 
 At this point, it's simple matter of memmem to figure out where iBoot is hiding in phys. Given a gPhysBase map  at 0xffffffc3c0000000, this code should do the trick.
