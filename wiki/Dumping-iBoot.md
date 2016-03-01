@@ -16,7 +16,7 @@ int main(int argc, char **argv, char **envp) {
 	char* base = (char*) 0xffffffc3c0000000;
 	char* sig = (char*) "FFiBoot for ";
 	char* iboot = (char*) memmem(base, (1<<30), sig+2, strlen(sig)-2);
-	while (*(iboot-1) == 'F') {
+	while (*(iboot-1) == 'F' && *(iboot-2) == 'F') {
 		iboot ++;
 		/* should fix size up here but too lazy lol */
 		iboot = (char*) memmem(iboot, (1<<30), sig+2, strlen(sig)-2);
