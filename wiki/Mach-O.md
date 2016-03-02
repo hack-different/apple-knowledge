@@ -20,7 +20,7 @@ Each architecture is defined as a section of the fat file itself, and is specifi
 __ TODO __
 # mach_header(_64)
 
-# Load Commands and struct load_command
+# Load Commands
 
 # Segments
 
@@ -32,7 +32,7 @@ __ TODO __
 
 # Special Segments
 
-# LC_MAIN, LC_UNIXTHREAD
+# Other common load commands
 
 # Malformed Mach-O
 
