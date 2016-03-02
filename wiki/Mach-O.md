@@ -24,6 +24,10 @@ __ TODO __
 
 # Segments
 
+# Sections
+
+# nlist / nlist_64
+
 # Symbols
 
 # Lazy Linking
@@ -46,3 +50,5 @@ __ TODO __
 __ add apple docs here maybe? __
 
 # Talk
+I "refactored" Naville's contribution to somewhat better layout and added a bunch of possible topics to expand to. Please let me know any opinion on this, and if you'd like something in particular to be discussed please add it to this list. 
+If you wish to contribute to this, it's probably better to have different people focusing on single topics at a time. We could coordinate here. Ideas? ~qwertyoruiop
