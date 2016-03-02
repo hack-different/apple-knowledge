@@ -14,7 +14,7 @@ Support for multi-architecture executables is also provided thanks to the fat fo
 # Fat Mach-Os
 
 A fat Mach-O is simply made out of a fat header, which contains a magic value (which allows you to derive endianess of the fat image; in case magic equals FAT_CIGAM, remember to endian flip your values) and multiple architecture structures.
-Each architecture is defined as a section of the fat file itself, and is specific for a particular cpu(sub)type. 
+Each architecture is defined as a section of the fat file itself (which is itself nothing more than a thin Mach-O) and is specific for a particular cpu(sub)type. 
 
 
 __ TODO __
