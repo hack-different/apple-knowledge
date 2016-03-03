@@ -32,9 +32,15 @@ __ TODO __
 
 # Lazy Linking
 
-# Position Indipendent Executables
+# Position Independent Executables
+ a.k.a. ASLR-Enabled Executables.
+ PIE Flag is in the *thin* mach_header with value 0x200000 
+ Minus that from the original flag value will disable ASLR, and vice verse
 
 # Special Segments
+	__PAGEZERO is a special segment with *ZERO* disk space and takes a page in VM.
+	When code access NULL, it will land there
+	Mach-O containing __RESTRICT/__restrict will be flagged by dyld and thus DYLD_INSERT_LIBRARIES EnvVar will be ignored.(This is added after iOS6)
 
 # Other common load commands
 
