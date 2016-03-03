@@ -19,7 +19,7 @@ Each architecture is defined as a section of the fat file itself (which is itsel
 
 __ TODO __
 # mach_header(_64)
-
+	struct mach_header (for 64-Bit Devices it's mach_header_64. Only difference is size. a.k.a. uint32_t or uint64_t)
 # Load Commands
 
 # Segments
@@ -45,6 +45,13 @@ __ TODO __
 # The Mach-O Address Space in xnu/dyld based OSes
 
 # Dyld Shared Cache
+Download the latest dyld source from Apple [Apple OpenSource](http://opensource.apple.com/source/dyld/)
+open ./launch-cache/dsc_extractor.cpp and change *\#if 0 * to *\#if 1 *
+Then just clang++ -o dsc_extractor dsc_extractor.cpp dsc_iterator.cpp
+and run dsc_extractor on the cache to extract.
+##Known Issues:
+  Seems like segment VM Address is wrong. So the binary is not class-dump able (Just use runtime dump instead)
+  not nm-able(Solution:Simple replace LC_SEGMENT_SPLIT_INFO to  LC_SOURCE_VERSION)
 
 # References
 __ add apple docs here maybe? __
