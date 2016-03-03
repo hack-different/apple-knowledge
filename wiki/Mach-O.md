@@ -17,9 +17,28 @@ A fat Mach-O is simply made out of a fat header, which contains a magic value (w
 Each architecture is defined as a section of the fat file itself (which is itself nothing more than a thin Mach-O) and is specific for a particular cpu(sub)type. 
 
 
-__ TODO __
 # mach_header(_64)
-	struct mach_header (for 64-Bit Devices it's mach_header_64. Only difference is size. a.k.a. uint32_t or uint64_t)
+```
+struct mach_header; // 32-bit Mach-O format
+struct mach_header_64; // 64-bit Mach-O format
+```
+
+As per loader.h, the header fine defining Mach-O constants and structures,
+```
+struct mach_header(_64) {
+	uint32_t	magic;		/* mach magic number identifier */
+	cpu_type_t	cputype;	/* cpu specifier */
+	cpu_subtype_t	cpusubtype;	/* machine specifier */
+	uint32_t	filetype;	/* type of file */
+	uint32_t	ncmds;		/* number of load commands */
+	uint32_t	sizeofcmds;	/* the size of all the load commands */
+	uint32_t	flags;		/* flags */
+	(uint32_t	reserved;	/* reserved; 64 bit only */)
+};
+#define	MH_MAGIC	0xfeedface	/* the mach magic number */
+#define MH_MAGIC_64 0xfeedfacf 		/* the 64-bit mach magic number */
+```
+
 # Load Commands
 
 # Segments
@@ -60,7 +79,8 @@ and run dsc_extractor on the cache to extract.
   not nm-able(Solution:Simple replace LC_SEGMENT_SPLIT_INFO to  LC_SOURCE_VERSION)
 
 # References
-__ add apple docs here maybe? __
+[Apple OS X ABI Mach-O File Format Reference](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/MachORuntime/)
+[loader.h (mach-o file format .h)](http://www.opensource.apple.com/source/xnu/xnu-3248.20.55/EXTERNAL_HEADERS/mach-o/loader.h)
 
 # Talk
 I "refactored" Naville's contribution to somewhat better layout and added a bunch of possible topics to expand to. Please let me know any opinion on this, and if you'd like something in particular to be discussed please add it to this list. 
