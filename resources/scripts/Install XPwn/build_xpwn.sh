@@ -19,6 +19,7 @@ if [[ $(uname) != 'Linux' ]]; then
   echo "This script is only for Linux"
   exit 1
 fi
+
 apt-get -y install binutils
 apt-get -y install p7zip-full
 apt-get -y install git
