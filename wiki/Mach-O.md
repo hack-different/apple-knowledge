@@ -118,7 +118,3 @@ and run `dsc_extractor` on the cache to extract.
 # References
 -	[Apple OS X ABI Mach-O File Format Reference](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/MachORuntime/)
 -	[loader.h (mach-o file format .h)](http://www.opensource.apple.com/source/xnu/xnu-3248.20.55/EXTERNAL_HEADERS/mach-o/loader.h)
-
-# Talk
-I "refactored" Naville's contribution to somewhat better layout and added a bunch of possible topics to expand to. Please let me know any opinion on this, and if you'd like something in particular to be discussed please add it to this list.
-If you wish to contribute to this, it's probably better to have different people focusing on single topics at a time. We could coordinate here. Ideas? ~qwertyoruiop
