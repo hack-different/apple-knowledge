@@ -99,16 +99,22 @@ struct mach_header(_64) {
 
 # Malformed Mach-O
 By altering Mach-O headers. Different issues would happen within dyld.
+
 Sometimes it can protect the binary from being analyzed
+
 Sometimes it's a 0Day and can help bypass Code-Signature-Verification
+
 Examples:
+
 ~~[MachOProtector](https://github.com/Naville/MachOProtecter)~~
+
 Won't Work After iOS 8.1 or OS X 10.11
 
 [yalu](https://github.com/kpwn/yalu)
+
 Maybe. Didn't Check SRC.
 
-[Pangu8](https://pangu.io)
+[Pangu8](http://8.pangu.io)
 
 
 # Two Level Namespace
