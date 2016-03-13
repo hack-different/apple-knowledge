@@ -7,7 +7,7 @@ We focus on 64 bit iBoot cause we should:)
 ### The Loading Address
 
 Bootloaders in general and iBoot in particular expect to run at a specific, predefined, addresses.
-Such an address called the __loading address__ of a bootloader.
+Such an address called the __loading address__ (reset vector) of a bootloader.
 When loading the bootloader into IDA you need to supply the loading address, so IDA will be able to resolve data and code references properly.
 
 Most Apple bootloaders start with a relocation code which compares the loading address with the current address and moves the bootloader if needed.
