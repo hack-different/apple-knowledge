@@ -38,7 +38,7 @@ As stated before, Mach does not concern itself with higher level concepts, imple
 
 The core idea behind Mach its minimalism. Being a microkernel, Mach implements only the fundamental abstractions (described more in detail later).
 
-Another key point in the Mach philosophy is how the various subsystems communicate, i.e. via a message passing facility. Interaction between components is completely implemented via IPC in Mach. This means that objects cannot directly call/invoke themselves, rather a message is sent from one object to another, that message is queued until the receiver handles it.
+Another key point in the Mach philosophy is how the various subsystems communicate, i.e. via a message passing facility. Interaction between components is completely implemented via IPC (inter-process communication) in Mach. This means that objects cannot directly call/invoke themselves, rather a message is sent from one object to another, that message is queued until the receiver handles it.
 This may seem unconventional, and it is. But, since Mach is a microkernel, all of the subsystems are separated from one another, thus message passing is needed for communication.
 
 Summarizing, remember that Mach is just the pure foundation of XNU, and everything else is built upon it.
