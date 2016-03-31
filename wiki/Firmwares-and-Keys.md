@@ -32,9 +32,9 @@ iPhone5,4_9.2.1_13D15_Restore.ipsw/
 ├────── iBSS.n49.RELEASE.dfu
 ├──── usr/
 ├────── local/
-├────── standalone
-├────── Restore.plist
-└────── kernelcache.release.n49
+├────── standalone/
+├── Restore.plist
+└── kernelcache.release.n49
 ```
 
 All of these files can be extracted using keys and xpwn.
