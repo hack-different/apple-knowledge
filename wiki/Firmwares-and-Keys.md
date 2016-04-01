@@ -45,7 +45,7 @@ For the kernelcache, run:
 
 `xpwntool path/to/cache /path/to/output -k KEY -iv IV -decrypt`
 
-The roof filesystem is in the largest DMG file of the .ipsw. To extract it, download dmg ([OS X](http://www.ifans.com/forums/attachments/dmg-zip.68330/), [Windows](https://intdev.googlecode.com/files/dmg.exe)). Make sure dmg or dmg.exe is in your path and execute one of the following:
+The root filesystem is in the largest DMG file of the .ipsw. To extract it, download dmg ([OS X](http://www.ifans.com/forums/attachments/dmg-zip.68330/), [Windows](https://intdev.googlecode.com/files/dmg.exe)). Make sure dmg or dmg.exe is in your path and execute one of the following:
 
 `./dmg input.dmg output.dmg -k KEY` (OS X)
 
