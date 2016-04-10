@@ -9,7 +9,7 @@ Support for multi-architecture executables is also provided thanks to the fat fo
 1. otool is provided out-of-the-box with the xcode cli utils.
 2. jtool, by Jonathan Levin, author of MOXiI and MOXiI II, is an analog but more flexible and advanced tool. On the other hand, it lacks support for disassembling architectures other than arm64.
 2. lipo is a tool for working with fat files
-3. Apple headers, specifically <mach-o/fat.h>.
+3. Apple headers, specifically `<mach-o/fat.h>`.
 
 # General structure
 This image from Apple documentation illustrates pretty well how a Mach-O file is composed.
