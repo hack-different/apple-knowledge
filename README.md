@@ -1,6 +1,7 @@
 # iOSRE
 iOS Reverse Engineering
 
+[![Join the chat at freenode:iOSRE](https://img.shields.io/badge/irc-freenode:%20%23iOSRE-blue.svg)](http://webchat.freenode.net/?channels=%23iOSRE)
 The aim of this project is to provide useful and updated tools and knowledge on iOS reverse engineering and exploitation.
 This is an ongoing effort, and still in a very new stage.
 
