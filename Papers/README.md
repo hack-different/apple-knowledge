@@ -11,6 +11,8 @@ I personally maintained (though didn't update them for quite a while) on Mega.nz
 Thought would be better to use that mega so the repo size is reduces.
 
 Have Fun
-[Mega](https://mega.nz/#F!PsEXmKTJ!7H7se140fU8kRXKi_oaxvA)
 
-@__PAGEZERO 
+#External
+
+[@osxreverser 's Collection](https://reverse.put.as/papers/)
+[@__PAGEZERO 's Collection] (https://mega.nz/#F!PsEXmKTJ!7H7se140fU8kRXKi_oaxvA)
