@@ -10,7 +10,10 @@ brew install ldid
 echo "Installing Theos"
 echo "export THEOS=\"/opt/theos\"" >>~/.bash_profile
 source ~/.bash_profile
-sudo git clone git://github.com/theos/theos.git $THEOS
+sudo git clone https://github.com/theos/theos.git $THEOS
+sudo git clone https://github.com/theos/headers.git $THEOS/Headers
+sudo cp -r $THEOS/Headers/ $THEOS/include
+sudo rm -rf $THEOS/Headers/
 echo "Installing wget"
 brew install wget
 echo "Installing Reveal"
@@ -26,5 +29,3 @@ mv './Hopper Disassembler v3.app' '/Applications/Hopper Disassembler v3.app'
 git clone https://github.com/nygard/class-dump.git class-dump
 xcodebuild -project ./class-dump/class-dump.xcodeproj #Compile classdump
 mv ./class-dump/build/Release/class-dump /usr/local/bin
-
-
