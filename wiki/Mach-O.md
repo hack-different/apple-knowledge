@@ -82,12 +82,16 @@ struct mach_header(_64) {
 # nlist / nlist_64
 
 # Symbols
+Check [facebook/fishhook](https://github.com/facebook/fishhook) For Explanations
 
 # Lazy Linking
+Check [facebook/fishhook](https://github.com/facebook/fishhook) For Explanations
 
 # Position Independent Executables
  a.k.a. ASLR-Enabled Executables.
+ 
  PIE Flag is in the *thin* mach_header with value 0x200000
+ 
  Minus that from the original flag value will disable ASLR, and vice verse
 
 # Special Segments
