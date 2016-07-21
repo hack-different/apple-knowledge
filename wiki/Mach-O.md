@@ -9,7 +9,7 @@ Support for multi-architecture executables is also provided thanks to the fat fo
 1. otool is provided out-of-the-box with the xcode cli utils.
 2. jtool, by Jonathan Levin, author of MOXiI and MOXiI II, is an analog but more flexible and advanced tool. On the other hand, it lacks support for disassembling architectures other than arm64.
 2. lipo is a tool for working with fat files
-3. Apple headers, specifically `<mach-o/fat.h>`.
+3. Apple headers, specifically `<mach-o/loader.h>`/`<mach-o/fat.h>`.
 
 # General structure
 This image from Apple documentation illustrates pretty well how a Mach-O file is composed.
@@ -22,11 +22,79 @@ Immediately following the header there are the **load commands**, these commands
 
 Finally, we have the **data**. This part of the file contains actual data. It also contains, as you are probably wondering, the executable code of the Mach-O. The structure of this part is described exactly by the load commands discussed above, the layout is really the same. Each segment may be divided into various **sections** which simply exist to sub-categorize the data in each segment. For example, the `__TEXT` segment contains various sections, among those the `__text` section, that contains the actual executable machine bytes. Another section is the `__cstring`, which only contains hardcoded C strings used in the program.  
 
-# Fat Mach-Os
+# Universal Binaries (fat Mach-Os) structure
 
-A fat Mach-O is simply made out of a fat header, which contains a magic value (which allows you to derive endianess of the fat image; in case magic equals FAT_CIGAM, remember to endian flip your values) and multiple architecture structures.
-Each architecture is defined as a section of the fat file itself (which is itself nothing more than a thin Mach-O) and is specific for a particular cpu(sub)type.
+Apple introduced universal binaries when the transition from PPC architecture to x86 architecture was made. Universal binaries consists of more Mach-O files chained together, preceded by a so-called _fat header_, which contains the fat magic number and the number of Mach-O objects included in the file.
 
+Here's the structure of a fat header (`struct fat_header`):
+
+```
+struct fat_header {
+	uint32_t	magic;		/* FAT_MAGIC */
+	uint32_t	nfat_arch;	/* number of structs that follow */
+};
+```
+
+Immediately following the header, we find an `nfat_arch` number of `struct fat_arch`, each of those defines more in detail every Mach-O contained in the file. Here's the structure definition:
+
+```
+struct fat_arch {
+	cpu_type_t	cputype;	/* cpu specifier (int) */
+	cpu_subtype_t	cpusubtype;	/* machine specifier (int) */
+	uint32_t	offset;		/* file offset to this object file */
+	uint32_t	size;		/* size of this object file */
+	uint32_t	align;		/* alignment as a power of 2 */
+};
+```
+
+The first two fields describe the architecture for the Mach-O this structure is referring to, so that _dyld_ knows which Mach-O to load for your specific CPU.
+<br>
+The `offset` field indicates, from the beginning of the file, where the Mach-O this structure is referring to is located in the whole fat binary. The `size` field indicates the whole size of that same Mach-O. Finally, the `align` field indicates the address boundary where the Mach-O should be aligned (generally, this is a page boundary, `4096`).
+
+The `fat_header` and the various `fat_arch`s are stored at the beginning of the file, in the so-called _fat section_. The _fat section_ is 4096 bytes in size, and thus it can hypothetically contain up to 204 `fat_arch`s. The rest of the _fat section_, which doesn't contain either the header nor the archs, is filled with zeroes.
+
+On a final note, remember that every single value found in the _fat section_ (`fat_header` + `fat_arch`s) is big-endian encoded. This is because at the time universal binaries were designed PPC was still the most widely used architecture, and it was big-endian. So, when reading values from parsed structures in the _fat section_, flip them.
+
+Summarizing an universal binary structure with a visual representation:
+
+```
++---------------------+		/* header (fat_header: 0x8) */
+|                     |
+|     FAT HEADER      |
+|                     |
++---------------------+		/* archs (fat_arch: 0x14, up to 0x50) */
+|     FAT ARCH #1     |
++---------------------+
+|     FAT ARCH #2     |
++---------------------+
+|         ...         |		/* other eventual fat archs... */
++---------------------+		/* Mach-Os section (variable size) */
+|                     |
+|                     |
+|                     |
+|                     |
+|      MACH-O #1      |
+|                     |
+|                     |
+|                     |
+|                     |
+|                     |
++---------------------+
+|                     |
+|                     |
+|                     |
+|                     |
+|                     |
+|      MACH-O #2      |
+|                     |
+|                     |
+|                     |
+|                     |
++---------------------+
+|         ...         |		/* other eventual Mach-Os... */
++---------------------+
+
+```
 
 # mach_header(_64)
 There are two structs (for both _x86_ and _x64_ architectures) for representing a Mach-O header:
@@ -47,7 +115,7 @@ struct mach_header(_64) {
 	uint32_t	ncmds;			/* number of load commands */
 	uint32_t	sizeofcmds;		/* the size of all the load commands */
 	uint32_t	flags;			/* flags */
-	(uint32_t	reserved;		/* reserved; 64 bit only */)
+	uint32_t	reserved;		/* reserved; 64 bit only */
 };
 #define	MH_MAGIC	0xfeedface	/* the mach magic number */
 #define	MH_MAGIC_64 0xfeedfacf 		/* the 64-bit mach magic number */
@@ -74,10 +142,27 @@ struct mach_header(_64) {
 #define	MH_KEXT_BUNDLE	0xb		/* x86_64 kexts */
 ```
 # Load Commands
+Load commands are located immediately after the Mach header. They describe the content of the file, and are necessary to correctly parse the Mach-O.
+
+They can be parsed using the `struct load_command`:
+
+```
+struct load_command {
+	uint32_t cmd;		/* type of load command */
+	uint32_t cmdsize;	/* total size of command in bytes */
+};
+```
+For a comprehensive list and descriptions of load commands, look in `mach-o/loader.h`.
+
+The most important ones are the `LC_SEGMENT(_64)`s, which describe each segment in the file. For example, the segment's name, the virtual address, the virtual size, the file offset (i.e. where that segment data is located in the file), the file size, initial and maximum memory protections and the number of sections for that segment.
 
 # Segments
+Segments are portions of the Mach-O file that get mapped in the address space at runtime. They are composed of sections, which hold actual data.
+<br>
+Whatever data they contain, it is needed by the process at runtime and so it gets mapped in the address space.
 
 # Sections
+As we have stated before, segments are made of sections, and those hold actual data. They can contain virtually anything, like executable code bytes, data, pointers, strings or even nothing at all (see `__PAGEZERO` segment).
 
 # nlist / nlist_64
 
@@ -89,9 +174,9 @@ Check [facebook/fishhook](https://github.com/facebook/fishhook) For Explanations
 
 # Position Independent Executables
  a.k.a. ASLR-Enabled Executables.
- 
+
  PIE Flag is in the *thin* mach_header with value 0x200000
- 
+
  Minus that from the original flag value will disable ASLR, and vice verse
 
 # Special Segments
