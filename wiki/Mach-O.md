@@ -62,7 +62,7 @@ Summarizing an universal binary structure with a visual representation:
 |                     |
 |     FAT HEADER      |
 |                     |
-+---------------------+		/* archs (fat_arch: 0x14, up to 0x50) */
++---------------------+		/* archs (fat_arch: 0x14) */
 |     FAT ARCH #1     |
 +---------------------+
 |     FAT ARCH #2     |
