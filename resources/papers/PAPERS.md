@@ -45,6 +45,13 @@ Similarly, if you want to add documents, please submit a pull request with your 
 | [Review and Exploit Neglected Attack Surface in iOS 8](https://reverse.put.as/wp-content/uploads/2015/11/us-15-Wang-Review-And-Exploit-Neglected-Attack-Surface-In-iOS-8.pdf) | N/A | Pangu Team | 2015 |
 | [Hacking from iOS 8 to iOS 9](https://reverse.put.as/wp-content/uploads/2015/11/POC2015_RUXCON2015.pdf) | N/A | Pangu Team | 2015 |
 
+
+## Technical
+| *Document* | *Related Talk* | *Author* | *Year* |
+|-----------------------------------------------------------------------------------------------------------|----------------|----------------|--------|
+| [Security Enslave](http://mista.nu/research/sep-paper.pdf) | N/A | Tarjei Mandt, Mathew Solnik, and David Wang | N/A |
+
+
 ## External Links
 Here you can find external list of papers and documents, most of which are not listed here.
 
