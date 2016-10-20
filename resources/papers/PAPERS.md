@@ -49,7 +49,7 @@ Similarly, if you want to add documents, please submit a pull request with your 
 ## Technical
 | *Document* | *Related Talk* | *Author* | *Year* |
 |-----------------------------------------------------------------------------------------------------------|----------------|----------------|--------|
-| [Security Enslave](http://mista.nu/research/sep-paper.pdf) | N/A | Tarjei Mandt, Mathew Solnik, and David Wang | N/A |
+| [Security Enclave](http://mista.nu/research/sep-paper.pdf) | N/A | Tarjei Mandt, Mathew Solnik, and David Wang | N/A |
 
 
 ## External Links
