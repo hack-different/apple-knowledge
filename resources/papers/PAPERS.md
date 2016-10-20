@@ -25,7 +25,7 @@ Similarly, if you want to add documents, please submit a pull request with your 
 |-----------------------------------------------------------------------------------------------------------|----------------|----------------|--------|
 | [DYLIB HIJACKING ON OS X](https://reverse.put.as/wp-content/uploads/2015/11/vb201503-dylib-hijacking.pdf) | N/A | Patrick Wardle | 2015 |
 | [Code Signing – Hashed Out](https://reverse.put.as/wp-content/uploads/2015/12/CodeSigning-RSA.pdf) | N/A | Jonathan Levin | 2015 |
-
+| [The ARMs race to TrustZone](http://technologeeks.com/files/TZ.pdf) | N/A | Jonathan Levin | 2016 |
 # iOS
 
 ## Exploitation
