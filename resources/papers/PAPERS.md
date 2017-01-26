@@ -55,5 +55,5 @@ Similarly, if you want to add documents, please submit a pull request with your 
 ## External Links
 Here you can find external list of papers and documents, most of which are not listed here.
 
-*   [@osxreverser](https://twitter.com/osxreverser)'s list: https://reverse.put.as/papers/
+*   [@osxreverser](https://twitter.com/osxreverser)'s list: https://papers.put.as/ios/ios/
 *   [@__PAGEZERO](https://twitter.com/__pagezero)'s list: https://mega.nz/#F!PsEXmKTJ!7H7se140fU8kRXKi_oaxvA
