@@ -57,3 +57,4 @@ Here you can find external list of papers and documents, most of which are not l
 
 *   [@osxreverser](https://twitter.com/osxreverser)'s list: https://papers.put.as/ios/ios/
 *   [@__PAGEZERO](https://twitter.com/__pagezero)'s list: https://mega.nz/#F!PsEXmKTJ!7H7se140fU8kRXKi_oaxvA
+*   [@snakeninny](https://twitter.com/snakeninny)'s iOSRE Book for beginners: https://github.com/iosre/iOSAppReverseEngineering
