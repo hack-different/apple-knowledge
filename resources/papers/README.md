@@ -51,6 +51,12 @@ Similarly, if you want to add documents, please submit a pull request with your 
 |-----------------------------------------------------------------------------------------------------------|----------------|----------------|--------|
 | [Security Enclave](http://mista.nu/research/sep-paper.pdf) | N/A | Tarjei Mandt, Mathew Solnik, and David Wang | N/A |
 
+## Exploit Write-ups
+| *CVEIDs* | *LINK* |
+|-------------|----------------|----------------|
+| CVE-2016-4655 CVE-2016-4656 | <https://jndok.github.io/2016/10/04/pegasus-writeup/> | 
+|CVE-2016-7644 CVE-2016-7637 CVE-2016-7661|<https://bugs.chromium.org/p/project-zero/issues/detail?id=965> |
+
 
 ## External Links
 Here you can find external list of papers and documents, most of which are not listed here.
