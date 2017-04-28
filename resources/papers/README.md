@@ -44,6 +44,7 @@ Similarly, if you want to add documents, please submit a pull request with your 
 | [OPTIMIZED FUZZING IOKIT IN iOS](https://reverse.put.as/wp-content/uploads/2015/11/us-15-Lei-Optimized-Fuzzing-IOKit-In-iOS.pdf) | [Optimized Fuzzing IOKit In iOS](https://www.youtube.com/watch?v=XDT9Cn8GjJU) | Lei Long | 2015 |
 | [Review and Exploit Neglected Attack Surface in iOS 8](https://reverse.put.as/wp-content/uploads/2015/11/us-15-Wang-Review-And-Exploit-Neglected-Attack-Surface-In-iOS-8.pdf) | N/A | Pangu Team | 2015 |
 | [Hacking from iOS 8 to iOS 9](https://reverse.put.as/wp-content/uploads/2015/11/POC2015_RUXCON2015.pdf) | N/A | Pangu Team | 2015 |
+| [Dig Into The Attack Surface Of PDF And Gain 100 CVEs In 1 Year](https://www.blackhat.com/docs/asia-17/materials/asia-17-Liu-Dig-Into-The-Attack-Surface-Of-PDF-And-Gain-100-CVEs-In-1-Year.pdf)| N/A | Tencent XuanWu Lab | 2017 |
 
 
 ## Technical
