@@ -19,6 +19,7 @@ Similarly, if you want to add documents, please submit a pull request with your 
 | [Memory corruption is for wussies!](https://reverse.put.as/wp-content/uploads/2016/04/SyScan360_SG_2016_-_Memory_Corruption_is_for_wussies.pdf) | N/A | fG! | 2016 |
 | [Don’t Trust Your Eye: Apple Graphics is Compromised!](https://reverse.put.as/wp-content/uploads/2016/05/CanSecWest2016_Apple_Graphics_Compromised.pdf) | N/A | Liang Chen, Marco Grassi, Qidan He | 2016 |
 | [OS X El Capitan sinking the Ship](https://reverse.put.as/wp-content/uploads/2016/05/syscan360stefanesserosxelcapitansinkingtheship.pdf) | N/A | Stefan Esser | 2016 |
+|[XNU:A Security Evaluation](https://papers.put.as/papers/macosx/2012/XNU_-a-security-evaluation-Daan_Keuper_2012-12-14-xnu.pdf)| N/A | Daan_Keuper | 2012 |
 
 ## Technical
 | *Document* | *Related Talk* | *Author* | *Year* |
