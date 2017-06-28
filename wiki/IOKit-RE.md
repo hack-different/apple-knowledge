@@ -18,7 +18,7 @@ Seriously though, there is a meta class for each and every class in libkern/IOKi
 It provides the basis for runtime information about the classes and helps us a lot.
 
 ### Registration
-During the initialization of the kernel/kext, new classed are registered
+During the initialization of the kernel/kext, new classes are registered
 into the RTTI system by calling the OSMetaClass::OSMetaClass() function.  
 This "register" function takes the following arguments:
   - pointer to instance of the meta class for the class we register
@@ -26,7 +26,7 @@ This "register" function takes the following arguments:
   - pointer to instance of parent's meta class
   - size of an instance of the class we register
 
-These register calls are made from the init functions located in the __mod_init_func sections of the kernle and the kexts.  
+These register calls are made from the init functions located in the __mod_init_func sections of the kernel and the kexts.  
 Lets take the AMFI kext for example. It has 2 init functions in the mod_init_func section.  
 Bellow is the content of the first one:
 ~~~ data
@@ -67,7 +67,7 @@ class.
 
 #### Beautification
 Let's apply the knowledge we've gathered. Let's rename the objects and the vtable by the following
-patters (python):
+patterns (python):
 ~~~python
 meta_object = "__ZN%d%s10gMetaClassE" % (len(class_name), class_name)
 meta_vtable = "__ZTVN%d%s9metaClassE" % (len(class_name), class_name)
