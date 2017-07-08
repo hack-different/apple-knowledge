@@ -60,6 +60,7 @@ Similarly, if you want to add documents, please submit a pull request with your 
 |CVE-2016-7644 CVE-2016-7637 CVE-2016-7661|<https://bugs.chromium.org/p/project-zero/issues/detail?id=965> |
 |CVE-2017-2370|<https://googleprojectzero.blogspot.co.uk/2017/04/exception-oriented-exploitation-on-ios.html>|
 |CVE-2017-2416|<https://blog.flanker017.me/cve-2017-2416-gif-remote-exec/>|
+|CVE-2017-2533|<https://phoenhex.re/2017-06-09/pwn2own-diskarbitrationd-privesc>|
 ## External Links
 Here you can find external list of papers and documents, most of which are not listed here.
 
