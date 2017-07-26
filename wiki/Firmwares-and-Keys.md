@@ -39,7 +39,7 @@ iPhone5,4_9.2.1_13D15_Restore.ipsw/
 
 All of these files can be extracted using keys and xpwn.
 
-Firmware keys are posted on https://theiphonewiki.com/wiki/Firmware_Keys and https://ipsw.me/keys
+Firmware keys are posted on https://theiphonewiki.com/wiki/Firmware_Keys, https://ipsw.me/keys and https://ipswcentral.com//keys
 
 For the kernelcache, run:
 
