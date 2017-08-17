@@ -11,3 +11,7 @@ In particular, Pangu9 replaced hooks in AMFI's MAC policy to either disable or a
 This technique has been mitigated in iOS 9.2 by moving MAC policies in __const.
 
 LwVM::_mapForIO patches on the other hand are applied by actually unprotecting the root partition in the partition structure rather than by patching the protection check out. This can be done by finding the LwVM manager, which contains an array of pointers to partition structures. To find the LwVM manager, take a look at a LightweightVolumeManagerUserClient object.
+
+
+-------------------------------
+Found this by @xerub [Tick (FPU) Tock (IRQ)](https://xerub.github.io/ios/kpp/2017/04/13/tick-tock.html)
