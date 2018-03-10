@@ -61,6 +61,7 @@ Similarly, if you want to add documents, please submit a pull request with your 
 |CVE-2017-2370|<https://googleprojectzero.blogspot.co.uk/2017/04/exception-oriented-exploitation-on-ios.html>|
 |CVE-2017-2416|<https://blog.flanker017.me/cve-2017-2416-gif-remote-exec/>|
 |CVE-2017-2533 CVE-2017-2535 CVE-2017-2534|<https://phoenhex.re/2017-06-09/pwn2own-diskarbitrationd-privesc> <https://phoenhex.re/2017-07-06/pwn2own-sandbox-escape>|
+|CVE-2018-4087|https://blog.zimperium.com/cve-2018-4087-poc-escaping-sandbox-misleading-bluetoothd/|
 ## External Links
 Here you can find external list of papers and documents, most of which are not listed here.
 
