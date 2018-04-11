@@ -46,7 +46,7 @@ Similarly, if you want to add documents, please submit a pull request with your 
 | [Review and Exploit Neglected Attack Surface in iOS 8](https://papers.put.as/papers/ios/2015/us-15-Wang-Review-And-Exploit-Neglected-Attack-Surface-In-iOS-8.pdf) | N/A | Pangu Team | 2015 |
 | [Hacking from iOS 8 to iOS 9](https://papers.put.as/papers/ios/2015/POC2015_RUXCON2015.pdf) | N/A | Pangu Team | 2015 |
 | [Dig Into The Attack Surface Of PDF And Gain 100 CVEs In 1 Year](https://www.blackhat.com/docs/asia-17/materials/asia-17-Liu-Dig-Into-The-Attack-Surface-Of-PDF-And-Gain-100-CVEs-In-1-Year.pdf)| N/A | Tencent XuanWu Lab | 2017 |
-
+|[Diving into the iOS Kernel: Breaking Entitlements](https://sparkes.zone/blog/jekyll/update/2018/04/06/diving-into-the-kernel-entitlements.html)| N/A | @iBSparkes | 2018|
 
 ## Technical
 | *Document* | *Related Talk* | *Author* | *Year* |
@@ -62,6 +62,7 @@ Similarly, if you want to add documents, please submit a pull request with your 
 |CVE-2017-2416|<https://blog.flanker017.me/cve-2017-2416-gif-remote-exec/>|
 |CVE-2017-2533 CVE-2017-2535 CVE-2017-2534|<https://phoenhex.re/2017-06-09/pwn2own-diskarbitrationd-privesc> <https://phoenhex.re/2017-07-06/pwn2own-sandbox-escape>|
 |CVE-2018-4087|https://blog.zimperium.com/cve-2018-4087-poc-escaping-sandbox-misleading-bluetoothd/|
+|CVE-2B-DETERMINED|http://bazad.github.io/2018/04/kernel-pointer-crash-log-ios/|
 ## External Links
 Here you can find external list of papers and documents, most of which are not listed here.
 
