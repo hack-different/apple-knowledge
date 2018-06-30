@@ -52,6 +52,7 @@ Similarly, if you want to add documents, please submit a pull request with your 
 | *Document* | *Related Talk* | *Author* | *Year* |
 |-----------------------------------------------------------------------------------------------------------|----------------|----------------|--------|
 | [Security Enclave](http://mista.nu/research/sep-paper.pdf) | N/A | Tarjei Mandt, Mathew Solnik, and David Wang | N/A |
+| [Build your own iOS kernel debugger](https://bugs.chromium.org/p/project-zero/issues/attachment?aid=346425&signed_aid=drSMyPfPWvCZgYKtiwI2iA==) | N/A | Ian Beer | 2018 |
 
 ## Exploit Write-ups
 | *CVEIDs* | *LINK* |
