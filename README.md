@@ -18,42 +18,42 @@ Repo inspired by https://github.com/papers-we-love/papers-we-love
 
 ### Code and Signature Formats
 * Mach-O
- * https://github.com/sbingner/ldid
+  * https://github.com/sbingner/ldid
 * img4 - Apple signed images, version 4
- * https://www.theiphonewiki.com/wiki/IMG4_File_Format
- * https://github.com/h3adshotzz/img4helper
+  * https://www.theiphonewiki.com/wiki/IMG4_File_Format
+  * https://github.com/h3adshotzz/img4helper
 * TrustCache - Pre-authorized Binary Hashes
- * https://support.apple.com/guide/security/trust-caches-sec7d38fbf97/web
- * https://github.com/t8012/go-aapl-integrity
+  * https://support.apple.com/guide/security/trust-caches-sec7d38fbf97/web
+  * https://github.com/t8012/go-aapl-integrity
 * EALF - `eficheck` baselines
- * https://github.com/t8012/go-aapl-integrity
- * https://github.com/t8012/efivalidate
+  * https://github.com/t8012/go-aapl-integrity
+  * https://github.com/t8012/efivalidate
 * ChunkList - Used to verify macOS Recovery / Internet Recovery
- * https://github.com/t8012/go-aapl-integrity
+  * https://github.com/t8012/go-aapl-integrity
 * `dyld` Shared Cache
- * https://github.com/rickmark/yolo_dsc
+  * https://github.com/rickmark/yolo_dsc
 * iBoot LocalPolicy, RemotePolicy and BAA signing
 * Apple iDevice Backup Format
- * https://github.com/rickmark/libibackup
+  * https://github.com/rickmark/libibackup
 
 ### USB Protocols
 * Basically all iDevice iTunes
- * https://github.com/libimobiledevice/libimobiledevice
+  * https://github.com/libimobiledevice/libimobiledevice
 * DFU / Recovery
- * libimoibledevice/libirecovery
+  * libimoibledevice/libirecovery
 * usbmuxd - USB transport for iDevices
- * libimobiledevice/usbmuxd
+  * libimobiledevice/usbmuxd
 * `com.apple.restored` - iDevice Restore Protocol
- * https://github.com/libimobiledevice/idevicerestore
+  * https://github.com/libimobiledevice/idevicerestore
 * UTDM - USB Target Disk Mode
- * https://github.com/rickmark/apple_utdm
+  * https://github.com/rickmark/apple_utdm
 * USB-C Power Delivery - Vendor Defined Messages
- * https://blog.t8012.dev/ace-part-1/
- * https://github.com/rickmark/macvdmtool
+  * https://blog.t8012.dev/ace-part-1/
+  * https://github.com/rickmark/macvdmtool
 
 ### Network / Wireless / Transit
 * Apple Wi-Fi Password Sharing
- * https://github.com/seemoo-lab/openwifipass
+  * https://github.com/seemoo-lab/openwifipass
 * AWDL
 * Bluetooth Bonjour (Service Discovery)
 * Apple Watch Pairing
@@ -62,7 +62,7 @@ Repo inspired by https://github.com/papers-we-love/papers-we-love
 * ATC - Air Traffic Control - iTunes Wi-Fi Sync
 * RemoteXPC
 * macOS Internet Recovery
- * https://github.com/rickmark/apple_net_recovery
+  * https://github.com/rickmark/apple_net_recovery
 
 ### System Configuration and State
 * FDR - Factory Data Restore
