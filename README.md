@@ -14,7 +14,10 @@ Repo inspired by https://github.com/papers-we-love/papers-we-love
 
 ### Image, Sound and Other Resources
 * Apple Flavored PNG
- * http://www.jongware.com/pngdefry.html 
+  * http://www.jongware.com/pngdefry.html
+* Apple IMA ADPCM
+  * http://wiki.multimedia.cx/index.php?title=Apple_QuickTime_IMA_ADPCM
+  * https://www.downtowndougbrown.com/2012/07/power-macintosh-g3-blue-and-white-custom-startup-sound/
 
 ### Code and Signature Formats
 * Mach-O
