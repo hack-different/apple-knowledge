@@ -14,7 +14,7 @@ Repo inspired by https://github.com/papers-we-love/papers-we-love
 
 ### Image, Sound and Other Resources
 * Apple Flavored PNG
- * http://www.jongware.com/pngdefry.html 
+  * http://www.jongware.com/pngdefry.html 
 
 ### Code and Signature Formats
 * Mach-O
