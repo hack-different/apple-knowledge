@@ -39,6 +39,7 @@ Repo inspired by https://github.com/papers-we-love/papers-we-love
 * `dyld` Shared Cache
   * https://github.com/rickmark/yolo_dsc
 * iBoot LocalPolicy, RemotePolicy and BAA signing
+  * [SEP/M1_Boot_Policy.dm](SEP/M1_Boot_Policy.md)
 * Apple iDevice Backup Format
   * https://github.com/rickmark/libibackup
 
