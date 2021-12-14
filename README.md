@@ -12,6 +12,12 @@ Repo inspired by https://github.com/papers-we-love/papers-we-love
 * `dmg`
 * SSV - Signed System Volumes, `root_ha
 
+### Databases
+* iTunes database
+  * https://github.com/jeanthom/libitlp
+  * https://github.com/josephw/titl
+  * https://metacpan.org/pod/Mac::iTunes::Library::Parse
+
 ### Image, Sound and Other Resources
 * Apple Flavored PNG
   * http://www.jongware.com/pngdefry.html 
