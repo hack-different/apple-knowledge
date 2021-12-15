@@ -91,3 +91,4 @@ A master index of Apple 4CCs exists at [iBoot/4CC.md](iBoot/4CC.md)
   * https://www.theiphonewiki.com/wiki/ICloud_Keychain
 * Mojo Serial
 * XHC20 USB Capture
+  * https://github.com/t8012/demuxusb/blob/b6b1a1a6633449c2cb16ad44edcc22aab4dc29cd/ext/pcapng.h
