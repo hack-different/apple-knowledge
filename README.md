@@ -86,7 +86,7 @@ A master index of Apple 4CCs exists at [iBoot/4CC.md](iBoot/4CC.md)
 
 ### Diagnostic Protocols
 * AWDD - Apple Wireless Diagnostics (misnomer, more then wireless, system trace)
-  * rickmark/awdd_decode
+  * [rickmark/awdd_decode](https://github.com/rickmark/awdd_decode)
 * iCloud Keychain (Umbrella for multiple formats)
   * https://www.theiphonewiki.com/wiki/ICloud_Keychain
 * Mojo Serial
