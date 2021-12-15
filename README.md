@@ -12,12 +12,19 @@ Repo inspired by https://github.com/papers-we-love/papers-we-love
 * `dmg`
 * SSV - Signed System Volumes, `root_ha
 
+### Databases
+* iTunes database
+  * https://github.com/jeanthom/libitlp
+  * https://github.com/josephw/titl
+  * https://metacpan.org/pod/Mac::iTunes::Library::Parse
+
 ### Image, Sound and Other Resources
 * Apple Flavored PNG
   * http://www.jongware.com/pngdefry.html
 * Apple IMA ADPCM
   * http://wiki.multimedia.cx/index.php?title=Apple_QuickTime_IMA_ADPCM
   * https://www.downtowndougbrown.com/2012/07/power-macintosh-g3-blue-and-white-custom-startup-sound/
+
 
 ### Code and Signature Formats
 * Mach-O
@@ -36,6 +43,7 @@ Repo inspired by https://github.com/papers-we-love/papers-we-love
 * `dyld` Shared Cache
   * https://github.com/rickmark/yolo_dsc
 * iBoot LocalPolicy, RemotePolicy and BAA signing
+  * [SEP/M1_Boot_Policy.dm](SEP/M1_Boot_Policy.md)
 * Apple iDevice Backup Format
   * https://github.com/rickmark/libibackup
 
