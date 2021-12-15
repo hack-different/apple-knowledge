@@ -4,6 +4,10 @@ A collection of reverse engineered Apple formats
 
 Repo inspired by https://github.com/papers-we-love/papers-we-love
 
+# Apple 4CC
+
+A master index of Apple 4CCs exists at [iBoot/4CC.md](iBoot/4CC.md)
+
 ## Table of Contents
 
 ### Archive / Disk Formats
