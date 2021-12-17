@@ -31,8 +31,9 @@ A master index of Apple 4CCs exists at [iBoot/4CC.md](iBoot/4CC.md)
 
 
 ### Code and Signature Formats
-* Mach-O
+* Mach-O / Signing / Entitlements
   * https://github.com/sbingner/ldid
+  * http://newosxbook.com/ent.jl
 * img4 - Apple signed images, version 4
   * https://www.theiphonewiki.com/wiki/IMG4_File_Format
   * https://github.com/h3adshotzz/img4helper
