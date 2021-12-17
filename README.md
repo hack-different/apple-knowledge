@@ -46,6 +46,7 @@ A master index of Apple 4CCs exists at [iBoot/4CC.md](iBoot/4CC.md)
   * https://github.com/t8012/go-aapl-integrity
 * `dyld` Shared Cache
   * https://github.com/rickmark/yolo_dsc
+  * https://github.com/arandomdev/DyldExtractor
 * iBoot LocalPolicy, RemotePolicy and BAA signing
   * [SEP/M1_Boot_Policy.dm](SEP/M1_Boot_Policy.md)
 * Apple iDevice Backup Format
