@@ -2,6 +2,8 @@
 
 A collection of reverse engineered Apple formats
 
+Join us on Discord: https://discord.gg/hackdifferent
+
 Repo inspired by https://github.com/papers-we-love/papers-we-love
 
 # Apple 4CC
