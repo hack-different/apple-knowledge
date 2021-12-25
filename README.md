@@ -21,13 +21,29 @@ The contents of this repo are dual-licensed under the [MIT](https://opensource.o
 
 A master index of Apple 4CCs exists at [iBoot/4CC.md](iBoot/4CC.md)
 
-## Table of Contents
+## Tools
+
+* https://hex-rays.com/ida-pro/
+  * https://github.com/onethawt/idaplugins-list
+  * https://github.com/bazad/ida_kernelcache
+  * https://github.com/cellebrite-srl/ida_kernelcache
+  * https://github.com/cellebrite-srl/PacXplorer
+  * https://github.com/cellebrite-srl/FunctionInliner
+* https://salmanarif.bitbucket.io/visual/index.html
+* https://ghidra-sre.org
+* https://www.hopperapp.com
+
+## Guides
+
+* https://github.com/OWASP/owasp-mstg/blob/master/Document/0x06c-Reverse-Engineering-and-Tampering.md
+
+## Protocols / Formats
 
 ### Archive / Disk Formats
 * `bom`
 * `pbzx`
 * `dmg`
-* SSV - Signed System Volumes, `root_ha
+* SSV - Signed System Volumes, `root_hash`
 
 ### Databases
 * iTunes database
@@ -106,3 +122,8 @@ A master index of Apple 4CCs exists at [iBoot/4CC.md](iBoot/4CC.md)
 * Mojo Serial
 * XHC20 USB Capture
   * https://github.com/t8012/demuxusb/blob/b6b1a1a6633449c2cb16ad44edcc22aab4dc29cd/ext/pcapng.h
+
+### X-Plat
+
+* https://github.com/corellium/linux-m1
+* https://github.com/corellium/projectsandcastle
