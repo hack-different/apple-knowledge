@@ -1,8 +1,22 @@
-EFI?
-====
+# EFI
 
+## T1 and Historical Intel
 
-Apple Silicon don't run EFI but iBoot instead.
+The EFI firmware is loaded from a SPI flash chip as is typical in an Intel computer.  It just implements additonal services and communicates with the ARM SMC (System Management Controller).
+
+Look into the Medussa from CMIzapper for direct access to the SPI Flash
+
+`eficheck` is a utility provided in 10.13 to verify the firmware of the SPI flash chip, though it skips the Intel ME region.
+
+`efivalidate` is a re-implementation of `eficheck` by Rick Mark
+
+## T2
+
+T2 systems boot EFI like their predicessors.  Unlike previous versions they use [eSPI](https://www.intel.com/content/dam/support/us/en/documents/software/chipset-software/327432-004_espi_base_specification_rev1.0_cb.pdf) to load the firmware and write back NVRAM to a virutal backing device prvided by the T2, thereby allowing the T2 to use img4 to verify the `MacEFI.im4` firmware and theoredically enhancing security.
+
+## Apple Silicon
+
+Apple Silicon don't run EFI but iBoot instead.  (Though it does emulate parts of the EFI system via IOKit for back compatibility)
 However, you can chainload to another bootloader if you want to, it's not prevented when Secure Boot is set to permissive.
 That permissive option doesn't technically turn off Secure Boot. It allows you to enroll your own hashes to the Secure Boot policy on the system w/ user authentication instead.
 
