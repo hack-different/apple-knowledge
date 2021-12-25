@@ -1,10 +1,21 @@
-# Apple Data Formats
+# Apple Data Formats and Knowledge
 
-A collection of reverse engineered Apple formats
+A collection of reverse engineered Apple formats, protocols, or other interesting bits.
 
 Join us on Discord: https://discord.gg/hackdifferent
 
 Repo inspired by https://github.com/papers-we-love/papers-we-love
+
+## WARNING
+This repo accepts (gleefully) PRs that enhance and enable development, but under no circumstances create a PR based on `AppleInternal`, or any other copyrighted workds protected by the [DMCA](https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act).  If you need help determining this tag the PR and join the Discord server and ask a `#Legit` or higher role for help.
+
+Violation of the DMCA or Copyright law is the responsibility of the submitter.
+
+## License
+
+The contents of this repo are dual-licensed under the [MIT](https://opensource.org/licenses/MIT) license as well as the CC-SA-BY
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Apple Knowledge</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/hack-different/apple-knowledge" property="cc:attributionName" rel="cc:attributionURL">Hack Different</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
 # Apple 4CC
 
