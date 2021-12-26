@@ -1,6 +1,6 @@
 # Introduction
 
-When emulating SEP, it is particularly useful to know its physical memory layout (i.e. MMIO address). Inside the decoded 64bit SEP Firmware (>=A11), there are some constant arrays of structure that has the following format:
+When emulating SEP, it is particularly useful to know its physical memory layout (i.e. MMIO address). Inside the decoded 64bit SEP Firmware (>=A11), there are some constant arrays of structure which have the following format:
 
 ```c
 struct phys_range {
@@ -104,7 +104,7 @@ For your convenience, A11 and A12's memmap are put here.
 
 ## Character codes
 
-Here are some that we known:
+Here are some that are known:
 
 | 4CC  | Meaning                      |
 |------|------------------------------|
@@ -120,9 +120,7 @@ Many SEP's peripherals have a similar MMIO format compared to AP. This includes 
 
 ### AKF
 
-The AKF block generally contains both the interrupt dispatcher (intr) and the AP mailbox.
-A11 and A12 stores different address for this.
-However, we are certain that the mailbox address ends with 0x4000, because it sits right after 0x4000 bytes of intr's MMIO.
+The AKF block generally contains both the interrupt dispatcher (intr) and the AP mailbox. Although A11 and A12 store different addresses for this, we are certain that the mailbox address ends with 0x4000, because it sits right after 0x4000 bytes of intr's MMIO.
 
 In the above dump, A11's SEP stores intr's address, A12's SEP stores mailbox's address.
 
