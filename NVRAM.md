@@ -2,85 +2,226 @@
 ## Flags
 V = Volitale
 P = Persistent
+S = System
+C = Common
 
 
-| Name            				| Type     	| Flags	| Device Types    	|  Description											|
-| ----------------------------- | --------- | ----- | ----------------- | ----------------------------------------------------- |
-| auto-boot       				| Boolean  	| P   	| iDevice, T2, M1 	| If the device should `fsboot` upon power on
-| bootdelay       				| Integer  	| P   	| iDevice, T2, M1 	| 
-| auto-boot-usb   				| 			| 		|					|
-| boot-command    				| String   	|		|
-| boot-args       				| String  	|		|
-| boot-device     				| String	|
-| boot-partition  				| Integer	|
-| boot-path       				| String	|
-| boot-ramdisk    				|
-| boot-script    				|
-| boot-stage      				|
-| boot-volume     				|
-| failboot-breadcrumbs 			|
-| diags-path					|
-| build-version    				|
-| build-style                   |
-| device-material             	|
-| utc-offset                  	|
-| SystemAudioVolumeExtension  	|
-| SystemAudioVolume				|
-| IDInstallerDataV2				| String	| P		| macOS				| Installer Data
-| fmm-computer-name				| String	| P		| macOS, M1			|
-| lts-persistance				|
-| prev-lang:kbd               	| String 	| P 	| macOS				|
-| prev-lang-diags:kbd 			| String 	| P 	| macOS				|
-| aht-results 					| String	| P 	| macOS 			| Apple Hardware Test (diags) - PList
-| filesize 						| String 	| V 	| iDevices, T2, M1 	| Hex number
-| loadaddr						|
-| pintoaddr						|
-| debug-uarts 					| Integer 	| P 	| iDevices, T2, M1 	| Bitfield of which UARTs to enable
-| debug-gg						|
-| debug-soc						|
-| usb-enabled					|
-| is-tethered					|
-| restore-outcome				|
-| upgrade-boot-volume			|
-| update-volume					|
-| enable-upgrade-fallback		|
-| force-upgrade-fail			|
-| ota-updateType				|
-| ota-controllerVersion			|
-| ota-uuid						|
-| ota-breadcrumbs				|
-| core-bin-offset				|
-| cpu-bin-offset				|
-| soc-bin-offset				|
-| ramdisk-size					|
-| radio-error					|
-| display-color-space			|
-| display-timing				|
-| display-rotation				|
-| backlight-level				|
-| com.apple.System.boot-nonce	|
-| kaslr-off						|
-| kaslr-slide					|
-| ipaddr						|
-| serverip						|
-| rbdaddr0						|
-| eth1addr						|
-| ethaddr						|
-| bt1addr						|
-| btaddr						|
-| wifi1addr						|
-| wifiaddr						|
-| pwr-path						|
-| pmgr_gpu_override				|
-| pmgr_cpu_override				|
-| idle-off						|
-| darkboot						|
-| DClr_override					|
-| adbe-tunable					|
-| adbe-tunables					|
-| adfe-tunables					|
-| cam-use-ext-ldo				|
-| e75							|
-| fixed-lcm-boost				|
-| pinot-panel-id				|
-| summit-panel-id				|
+| Name                                      | Type      | Flags | Device Types      |  Description                                          |
+| ----------------------------------------- | --------- | ----- | ----------------- | ----------------------------------------------------- |
+| _csegbufsz_experiment                     |
+| _libmalloc_experiment                     |
+| AAPL,ignore                               |
+| aapl,panic-info                           |
+| adbe-tunable                              |
+| adbe-tunables	                            |
+| adfe-tunables                             |
+| aht-results                               | String    | P     | macOS 			| Apple Hardware Test (diags) - PList
+| ane-type                                  |
+| aud-early-boot-critical                   |
+| auto-boot                                 | Boolean   | P     | iDevice, T2, M1 	| If the device should `fsboot` upon power on
+| auto-boot-usb                             |           |       |					|
+| auto-boot-x86-once                        |
+| backlight-level                           |
+| backlight-nits                            |
+| BaseSystemAccessabiliityFeatures          | 
+| battary-health                            |
+| bluetoothHostControllerSwitchBehaviour    |
+| BluetoothInfo                             |
+| BluetoothUHEDevices                       |
+| board-id                                  |
+| bootdelay                                 | Integer  	| P   	| iDevice, T2, M1 	| 
+| boot-breadcrumbs                          |
+| boot-command                              | String   	|		|
+| boot-args                                 | String  	|		|
+| boot-device                               | String	|
+| boot-partition                            | Integer	|
+| boot-path                                 | String	|
+| boot-ramdisk                              |
+| boot-script                               |
+| boot-stage                                |
+| boot-volume                               |
+| BOSCatalogURL                             |
+| build-version                             |
+| build-style                               |
+| bt1addr                                   |
+| btaddr                                    |
+| cam-use-ext-ldo                           |
+| com.apple.System.boot-nonce	            |
+| com.apple.System.fp-state                 |
+| com.apple.System.tz0-size                 |
+| core-bin-offset                           |
+| cpu-bin-offset                            |
+| csr-data                                  |
+| current-network                           |
+| darkboot                                  |
+| DClr_override                             |
+| debug-gg                                  |
+| debug-soc                                 |
+| debug-uarts                               | Integer 	| P 	| iDevices, T2, M1 	| Bitfield of which UARTs to enable
+| DebugBluetoothHIDShim                     |
+| DefaultBackgroundColor                    |
+| device-material                           |
+| diags-path                                |
+| disable_screensavers                      |
+| display-carveout-inhibitcache             |
+| display-color-space                       |
+| display-timing                            |
+| display-rotation                          |
+| e75                                       |
+| enable-remap-mode                         |
+| eth1addr                                  |
+| ethaddr                                   |
+| failboot-breadcrumbs                      |
+| filesize                                  | String    | V     | iDevices, T2, M1 	| Hex number
+| fixed-lcm-boost                           |
+| fmm-computer-name                         | String    | P	    | macOS, M1         |
+| fmm-mobileme-token-FMM                    |
+| fmm-mobileme-token-FMM-BridgeHasAccount   |
+| fmm-mobileme-foken-FMM-WipePending        |
+| force-upgrade-fail                        |
+| HardwareModel                             |
+| idle-off                                  |
+| IASCurrentInstallPhase                    |
+| IASInstallPhaseList                       |
+| IASUCatalogURL                            |
+| IDInstallerDataV2	                        | String    | P	    | macOS	            | Installer Data
+| IOBusyInterest                            |
+| IODeviceMemory                            |
+| IOPlatformActiveAction                    |
+| IOPlatformHaltRestartAction               |
+| IOPlatformPanicAction                     |
+| IOPlatformQuiensceAction                  |
+| IOPlatformSleepAction                     |
+| IOPlatformWakeAction                      |
+| IORematchPersonality                      |
+| ipaddr                                    |
+| is-tethered                               |
+| kaslr-off	                                |
+| kaslr-slide                               |
+| loadaddr                                  |
+| LocationServicesEnabled                   |
+| lts-persistance                           |
+| mca-info0                                 |
+| net-boot                                  |
+| non-coherent                              |
+| nonce-seeds                               |
+| obliteration                              |
+| oblit-begins                              |
+| oblit-inprogress                          |
+| ota-anomalies                             |
+| ota-brain-version                         |
+| ota-breadcrumbs                           |
+| ota-child-failures                        |
+| ota-context                               |
+| ota-controllerVersion	                    |
+| ota-conv-panic-indicator                  |
+| ota-failure-reason                        |
+| ota-forced-reset-uptime                   |
+| OTA-fsck-metrics                          |
+| ota-initial-breadcrumbs                   |
+| ota-initial-result                        |
+| ota-internal-failure-reason               |
+| ota-internal-forced-reset-uptime          |
+| ota-install-tonight                       |
+| ota-os-version                            |
+| ota-original-os-version                   |
+| ota-outcome                               |
+| ota-perform-shutdown                      |
+| OTA-post-conversion                       |
+| OTA-pre-conversion                        |
+| ota-reboot-retry-enabled                  |
+| ota-reboot-retry-zone                     |
+| ota-result                                |
+| ota-retry-battery-level                   |
+| ota-retry-breadcrumbs                     |
+| ota-retry-codes                           |
+| ota-retry-domains                         |
+| ota-retry-enabled                         |
+| ota-retry-external-power                  |
+| ota-retry-failure-reason                  |
+| ota-retry-ids                             |
+| ota-retry-monitor                         |
+| ota-retry-names                           |
+| ota-retry-error                           |
+| ota-retry-result                          |
+| ota-retry-results                         |
+| ota-retry-uptime                          |
+| ota-retry-user-progress                   |
+| ota-retry-warnings                        |
+| OTA-sealvolume-metrics                    |
+| ota-step-battery-level                    |
+| ota-step-codes                            |
+| ota-step-domains                          |
+| ota-step-error                            |
+| ota-step-external-power                   |
+| ota-step-ids                              |
+| ota-step-monitor                          |
+| ota-step-names                            |
+| ota-step-results                          |
+| ota-step-user-progress                    |
+| ota-step-uptime                           |
+| ots-step-warnings                         |
+| ota-snapshot-update                       |
+| ota-submission-url                        |
+| ota-updateType                            |
+| ota-uuid                                  |
+| panicmedic                                |
+| pinot-panel-id                            |
+| pintoaddr	                                |
+| policy-nonce-digests                      |
+| pmgr_gpu_override                         |
+| pmgr_cpu_override	                        |
+| pre-recovery-ota-failure-uuid             |
+| preferred-count                           |
+| prev-lang:kbd                             | String    | P     | macOS	            |
+| prev-lang-diags:kbd                       | String    | P     | macOS	            |
+| pwr-path                                  |
+| radio-error                               |
+| rbdaddr0                                  |
+| ramdisk-size                              |
+| ramrod-nvram-shadow-path                  |
+| ramrod-nvram-sequence                     |
+| ramrod-nvram-session                      |
+| recovery-boot-setting                     |
+| recovery-boot-mode                        |
+| recoveryos-inited-update                  |
+| restore-child-failures                    |
+| restore-retry-coes                        |
+| restore-retry-domains                     |
+| restore-retry-ids                         |
+| restore-outcome                           |
+| restore-perform-shutdown                  |
+| restore-reboot-retry-enabled              |
+| restore-reboot-retry-zone                 |
+| restore-retry-error                       |
+| restore-retry-monitor                     |
+| restore-retry-names                       |
+| restore-retry-results                     |
+| restore-step-codes                        |
+| restore-step-domains                      |
+| restore-step-error                        |
+| restore-step-ids                          |
+| restore-step-names                        |
+| restore-step-monitor                      |
+| restore-step-warnings                     |
+| restore-step-results                      |
+| serverip                                  |
+| SleepWakeFailurePanic                     |
+| SleepWakeFailureString                    |
+| soc-bin-offset                            |
+| stress-rack                               |
+| summit-panel-id                           |
+| SystemAudioVolumeExtension                |
+| SystemAudioVolume	                        |
+| target-uuid                               |
+| tbt-options                               |
+| upgrade-fallback-boot-command             |
+| upgrade-boot-volume                       |
+| update-volume	                            |
+| usb-enabled                               |
+| utc-offset                                |
+| wifi-fw-path                              |
+| wifi-nvram-path                           |
+| wifi1addr                                 |
+| wifiaddr                                  |
+| zhuge_debug                               |
