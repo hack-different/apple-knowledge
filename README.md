@@ -7,7 +7,7 @@ Join us on Discord: https://discord.gg/hackdifferent
 Repo inspired by https://github.com/papers-we-love/papers-we-love
 
 ## WARNING
-This repo accepts (gleefully) PRs that enhance and enable development, but under no circumstances create a PR based on `AppleInternal`, or any other copyrighted workds protected by the [DMCA](https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act).  If you need help determining this tag the PR and join the Discord server and ask a `#Legit` or higher role for help.
+This repo accepts (gleefully) PRs that enhance and enable development, but under no circumstances create a PR based on `AppleInternal`, or any other copyrighted words protected by the [DMCA](https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act).  If you need help determining this, tag the PR, join the Discord server, and ask a `#Legit` or higher role for help.
 
 Violation of the DMCA or Copyright law is the responsibility of the submitter.
 
