@@ -13,13 +13,13 @@ struct phys_range {
 static_assert(sizeof(struct phys_range) == 0x18, "");
 ```
 
-This array contains physical location of many SEP's peripherals.
+This array contains the physical location of many SEP's peripherals.
 
-The `ctx` and `name` field are in reversed ASCII.
+The `ctx` and `name` fields are in reversed ASCII.
 
 ## Methodology
 
-First, we have to fully decrypt sep-firmware, this can be done using [xerub's img4lib](https://github.com/xerub/img4lib). You also need the decryption keys.
+First, we have to decrypt the sep-firmware. This can be done using [xerub's img4lib](https://github.com/xerub/img4lib). You'll also need the decryption keys.
 
 For A11 SEPOS especially, you might have to do lzvn decode after decrypting img4 since it is an unpacker.
 
@@ -29,9 +29,9 @@ lzvn -d sepfw.lzvn sepfw
 ```
 
 [LZVN](https://github.com/xerub/lzvn)
-(Credit goes to @Siguza)
+(Credit goes to [@s1guza](https://twitter.com/s1guza))
 
-To find these arrays, we can do a `/ EASB` or `/x 0000010006` on the sep-firmware image. Then go backward to the farthest chunk of 8 ASCII character (`ctx` and `name` field).
+To find these arrays, we can do a `/ EASB` or `/x 0000010006` on the sep-firmware image. Then go back to the farthest chunk of 8 ASCII characters (`ctx` and `name` field).
 
 Here is the python code to dump these fields on A12 sep-firmware:
 
@@ -41,19 +41,18 @@ import struct
 f = struct.Struct("<4s4sQII")
 assert f.size == 0x18
 def dump_map(buffer):
-	for x in f.iter_unpack(buffer):
-		print(*[x[0][::-1].decode('utf-8'), x[1][::-1].decode('utf-8'), hex(x[2]), hex(x[3]), hex(x[4])])
+ for x in f.iter_unpack(buffer):
+  print(*[x[0][::-1].decode('utf-8'), x[1][::-1].decode('utf-8'), hex(x[2]), hex(x[3]), hex(x[4])])
 
 with open("sepos", "rb") as fd:
-	fd.seek(0x2cb180)
-	buffer = fd.read(0x18*14)
-	dump_map(buffer)
+ fd.seek(0x2cb180)
+ buffer = fd.read(0x18*14)
+ dump_map(buffer)
 
-	fd.seek(0x2d6080)
-	buffer = fd.read(0x18*2)
-	dump_map(buffer)
+ fd.seek(0x2d6080)
+ buffer = fd.read(0x18*2)
+ dump_map(buffer)
 ```
-
 
 ## Examples
 
@@ -130,8 +129,8 @@ SEP's interrupt dispatcher (intr) has some similarity with Apple Interrupt Contr
 
 The intr outputs to the core's IRQ line, it dispatches IRQ from peripherals and the physical timer.
 
-Most of the registers are unknown; however, the SEP's IRQ handler reads from offset (+0x81C) to find the asserting interrupt.
-This register has a similar format with AIC's IACK.
+Most of the registers are unknown; however, the SEP's IRQ handler reads from the offset (+0x81C) to find the asserting interrupt.
+This register has a similar format to AIC's IACK.
 
 - External Interrupt: `0x10000 | (v & 0x1ff)`
 - Timer Interrupt: `0x70000 | 1`

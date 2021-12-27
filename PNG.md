@@ -1,7 +1,8 @@
 # PNG images
 
 The standard PNG format is documented in the [PNG specification](http://www.libpng.org/pub/png/spec/1.2/PNG-Contents.html).
-It consists of a series of "chunks", which contain:
+It consists of a series of "chunks" which contain:
+
 * length (4 bytes big-endian, only counts length of data, may be 0)
 * chunk type (4 bytes)
 * data (variable length, may be empty)
@@ -15,15 +16,15 @@ but they also extended them with proprietary chunks.
 Ever since the first iPhoneOS,
 PNG images included in the operating system (such as application icons)
 have a custom chunk called `CgBI`.
-These images are not supported by standard PNG viewers;
-the `CgBI` chunk is marked "critical",
-so standard decoders reject the whole file.
-In theory the purpose is optimizing the image decoding
+These images are not supported by standard PNG viewers since the `CgBI` chunk is marked "critical".
+Standard decoders reject the whole file.
+In theory, the purpose is to optimize the image decoding
 on the slow CPUs of early iPhones.
 For example, red and blue channels are flipped (BGR instead of RGB)
 to match the iPhone framebuffer format.
 
 There is some public information about this format:
+
 * [Apple's patent](https://patents.google.com/patent/US20080177769A1/en)
 * [The iPhone Wiki](https://www.theiphonewiki.com/wiki/PNG_Images)
 * [iPhone dev wiki](https://iphonedev.wiki/index.php/CgBI_file_format)
@@ -32,6 +33,7 @@ There is some public information about this format:
 
 There are also many tools to create (flip color channels, add CgBI chunk)
 and decode (convert to standard PNG image) these PNG files:
+
 * [pincrush](https://github.com/DHowett/pincrush) (Python encoder)
 * [ipin.py](https://axelbrz.com/?mod=iphone-png-images-normalizer) (Python decoder)
 * [pngdefry](http://www.jongware.com/pngdefry.html) (C decoder)
@@ -44,12 +46,13 @@ and none of the public information seems to have actually figured out
 what the *content* of the `CgBI` chunk is about.
 
 By the specification:
+
 * The `IHDR` chunk must appear first.
 * The image data, if true-color, must have color components in RGB order.
 * "The color values stored for a pixel are not affected
   by the alpha value assigned to the pixel.
   This rule is sometimes called 'unassociated' or 'non-premultiplied' alpha.
-  PNG does *not* use premultipled alpha".
+  PNG does *not* use pre-multiplied alpha".
 * Image data is compressed with 'deflate'
   and the compressed data stream is stored in the "zlib" format
   (compression method + flags + data + Adler-32 checksum).
@@ -61,7 +64,7 @@ It contains 4 bytes with flags.
 
 The image data is (sometimes?) byte-swapped such that the colors are in BGR order instead of RGB.
 The alpha channel is also (sometimes?) in pre-multiplied format.
-This *may* depend on other flags in `CgBI` but I haven't figured it out exactly yet.
+This *may* depend on other flags in `CgBI`, but I haven't figured it out exactly yet.
 
 If bit 0x1 is set in the first byte of the `CgBI` chunk,
 then the compressed stream is in raw format,
@@ -79,7 +82,7 @@ It even appears on screenshots taken on iOS.
 
 This chunk has information that allows decoding the PNG image using multiple threads.
 
-More information is available on https://www.hackerfactor.com/blog/index.php?/archives/895-Connecting-the-iDOTs.html
+More information is available on <https://www.hackerfactor.com/blog/index.php?/archives/895-Connecting-the-iDOTs.html>
 
 ## apPD chunk
 
@@ -87,6 +90,7 @@ The ImageIO framework has code that looks for an `apPD` chunk.
 Probably means "app data".
 
 The format seems to be:
+
 * Offset 0, length 4: unknown
 * Offset 4, length 4: subtype? Only `pKit` is supported
 * Offset 8, length 4: big-endian number, payload length

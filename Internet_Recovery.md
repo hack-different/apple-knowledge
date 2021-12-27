@@ -1,6 +1,6 @@
 # Disection of the Apple Internet Recovery protocol and Security Analysis
 
-NOTE: The authors machine always downgrades from 10.15.3 to 10.13.0 via
+NOTE: The authors' machine always downgrades from 10.15.3 to 10.13.0 via
 internet recovery, therefore some experiments may not be working the same
 due to a network issue with an attacker at a position of privilege on the
 network.
@@ -8,7 +8,6 @@ network.
 ## Verification of BaseSystem.dmg and OSDInstall.dmg
 
 See `doc/chunklist_v1.md` and [https://github.com/t8012/cnklverify]
-
 
 ## Request / Response of Internet Recovery image location
 
@@ -18,18 +17,16 @@ PAW and ruby code
 `lib/request_recovery.rb`
 
 It seems that it is impossible to fake a response from the Apple Internet
-recovery server, but since the forgery token is not mixed in with the signed
+recovery server, but since the forgery token isn't included with the signed
 response it opens up the case where a man-in-the-middle attack on the request
 may occur.  This leads to the potential to downgrade an operating system.
-
 
 This may be in part due to the age of the IR protocol and lack of stronger
 PKI based crypto in older (read Lion 10.9) versions of IR.
 
-
 ### Request Format
 
-A session cookie is requestd from `http://osrecovery.apple.com/` then
+A session cookie is requested from `http://osrecovery.apple.com/` then
 A request is made to `http://osrecovery.apple.com/InstallationPayload/RecoveryImage`
 
 A request is in the form of:
@@ -52,7 +49,6 @@ An analysis of variables comes to these assumed names
 * `bv` - Version of bridgeOS
 * `fg` - Anti forgery challenge (unknown, server accepts any value)
 
-
 ### Response Format
 
 A response is in the form of
@@ -67,10 +63,10 @@ A response is in the form of
 
 An analysis shows the following values
 
-* AP - Apple's update ID for the packge, from the software update catalog
+* AP - Apple's update ID for the package, from the software update catalog
 * AU - base system URL to download from (dmg)
 * AH - Some form of hash for the base system URL / content
-* AT - BaseSystem url token cookie (Passed in the next request as a cookie header)
+* AT - BaseSystem URL token cookie (Passed in the next request as a cookie header)
 * CU - chunklist URL (this becomes dangerous if downgrade attacked to v1)
-* CH - Chunklist url hash / content
-* CT - Chunklist url token cookie (Passed in the next request as a cookie header)
+* CH - Chunklist URL hash / content
+* CT - Chunklist URL token cookie (Passed in the next request as a cookie header)
