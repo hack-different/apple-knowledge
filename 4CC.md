@@ -2,9 +2,6 @@
 
 As a lineage from the Classic MacOS operating system, Apple still uses 4CC or 4 character codes pervasively.  This helps you identify an unknown 4 ASCII sequence
 
-
-
-
 | 4CC  | Usage                 | Description
 | ---- | --------------------- | --------------------
 | 0Cfg | SysCfg                |
@@ -57,7 +54,7 @@ As a lineage from the Classic MacOS operating system, Apple still uses 4CC or 4 
 | pmpf | Firmware              | Power Management Processor Firmware
 | Regn | FDR, SysCfg           | Region
 | rlg1 | Firmware              |
-| rlg2 | Firmware              | 
+| rlg2 | Firmware              |
 | rpnh | Boot Policy           | Remote Policy Nonce Hash
 | roph | Boot Policy           | RecoveryOS Policy Nonce Hash
 | seal | FDR
@@ -74,17 +71,6 @@ As a lineage from the Classic MacOS operating system, Apple still uses 4CC or 4 
 | smb4 | Boot Policy           | Secure Multi-Boot
 | SrNm | SysCfg                | Serial Number
 | tCfg | FDR, SysCfg
-| tmuf | Firmware              | 
+| tmuf | Firmware              |
 | WSKU | SysCfg
 | vuid | Boot Policy           | Volume UUID
-
-
-
-
-
-
-
-
-
-
-

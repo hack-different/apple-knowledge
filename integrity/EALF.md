@@ -13,12 +13,13 @@ NOTE: In progress
 * 34: - NULL = UTF-16 null terminated EFI version string
 
 # 60 byte "rows"
+
 * 1 byte FD region (see `fdutil`)
-    * 0 = FD header / region
-    * 1 = BIOS / EFI
-    * 2 = Intel ME (Code + Data)
-    * 3 = Gigabit Ethernet (Unused)
-    * 4 = Platform Data & Bootloader
+  * 0 = FD header / region
+  * 1 = BIOS / EFI
+  * 2 = Intel ME (Code + Data)
+  * 3 = Gigabit Ethernet (Unused)
+  * 4 = Platform Data & Bootloader
 * 1 byte sub-region
 * 2 byte index
 * 4 byte offset
