@@ -20,7 +20,7 @@ The contents of this repo are dual-licensed under the [MIT](https://opensource.o
 
 # Apple 4CC
 
-A master index of Apple 4CCs exists at [iBoot/4CC.md](iBoot/4CC.md)
+A master index of Apple 4CCs exists at [docs/4CC.md](docs/4CC)
 
 ## Tools
 
@@ -37,8 +37,15 @@ A master index of Apple 4CCs exists at [iBoot/4CC.md](iBoot/4CC.md)
 ## Guides
 
 * <https://github.com/OWASP/owasp-mstg/blob/master/Document/0x06c-Reverse-Engineering-and-Tampering.md>
+* [Kerenel Debug Kit](docs/kdk)
 
 ## Protocols / Formats
+
+## Bootloader Related
+
+* [docs/EFI](docs/efi)
+* [docs/NVRAM](docs/nvram)
+* [docs/memmap](docs/memmap)
 
 ### Archive / Disk Formats
 
@@ -56,7 +63,7 @@ A master index of Apple 4CCs exists at [iBoot/4CC.md](iBoot/4CC.md)
 
 ### Image, Sound and Other Resources
 
-* [Apple Flavored PNG](PNG.md)
+* [Apple Flavored PNG](docs/png)
 * Apple IMA ADPCM
   * <http://wiki.multimedia.cx/index.php?title=Apple_QuickTime_IMA_ADPCM>
   * <https://www.downtowndougbrown.com/2012/07/power-macintosh-g3-blue-and-white-custom-startup-sound/>
@@ -81,18 +88,20 @@ A master index of Apple 4CCs exists at [iBoot/4CC.md](iBoot/4CC.md)
   * <https://github.com/rickmark/yolo_dsc>
   * <https://github.com/arandomdev/DyldExtractor>
 * iBoot LocalPolicy, RemotePolicy and BAA signing
-  * [SEP/M1_Boot_Policy.dm](SEP/M1_Boot_Policy.md)
+  * [SEP/M1_Boot_Policy.dm](docs/M1_Boot_Policy)
 * Apple iDevice Backup Format
   * <https://github.com/rickmark/libibackup>
 
 ### USB Protocols
 
-* Basically all iDevice iTunes
-  * <https://github.com/libimobiledevice/libimobiledevice>
+* Basically all iDevice / iTunes
+  * [libimobiledevice](https://libimobiledevice.org)
+  * [libimobiledevice/libimobiledevice]<https://github.com/libimobiledevice/libimobiledevice>
 * DFU / Recovery
-  * libimoibledevice/libirecovery
+  * [libimoibledevice/libirecovery](https://github.com/libimobiledevice/libirecovery)
 * usbmuxd - USB transport for iDevices
-  * libimobiledevice/usbmuxd
+  * [libimobiledevice/usbmuxd](https://github.com/libimobiledevice/usbmuxd)
+  * [demuxusb](https://github.com/t8012/demuxusb)
 * `com.apple.restored` - iDevice Restore Protocol
   * <https://github.com/libimobiledevice/idevicerestore>
 * UTDM - USB Target Disk Mode
@@ -105,13 +114,17 @@ A master index of Apple 4CCs exists at [iBoot/4CC.md](iBoot/4CC.md)
 
 * Apple Wi-Fi Password Sharing
   * <https://github.com/seemoo-lab/openwifipass>
-* AWDL
+* AWDL - Apple Wireless Distribution Link
+  * <https://googleprojectzero.blogspot.com/2020/12/an-ios-zero-click-radio-proximity.html>
 * Bluetooth Bonjour (Service Discovery)
 * Apple Watch Pairing
 * `com.apple.terminusd`
 * Magic Pairing
 * ATC - Air Traffic Control - iTunes Wi-Fi Sync
+  * 
 * RemoteXPC
+  * <https://duo.com/labs/research/apple-t2-xpc>
+  * <http://newosxbook.com/tools/XPoCe2.html>
 * macOS Internet Recovery
   * <https://github.com/rickmark/apple_net_recovery>
 
@@ -128,10 +141,13 @@ A master index of Apple 4CCs exists at [iBoot/4CC.md](iBoot/4CC.md)
 * iCloud Keychain (Umbrella for multiple formats)
   * <https://www.theiphonewiki.com/wiki/ICloud_Keychain>
 * Mojo Serial
+  * [MojoKDP.kext.S](https://github.com/rickmark/mojo_thor/blob/master/MojoKDP/mojo.kext.S)
 * XHC20 USB Capture
   * <https://github.com/t8012/demuxusb/blob/b6b1a1a6633449c2cb16ad44edcc22aab4dc29cd/ext/pcapng.h>
 
 ### X-Plat
 
-* <https://github.com/corellium/linux-m1>
-* <https://github.com/corellium/projectsandcastle>
+* [pongoOS](https://github.com/checkra1n/pongoOS)
+* [Asahi Linux for M1](https://asahilinux.org)
+* [Corellium's M1 Branch](https://github.com/corellium/linux-m1)
+* [Android on pongoOS](https://github.com/corellium/projectsandcastle)
