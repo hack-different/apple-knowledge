@@ -1,0 +1,335 @@
+---
+_csegbufsz_experiment:
+_libmalloc_experiment:
+AAPL,ignore:
+aapl,pci:
+aapl,panic-info:
+adbe-tunable:
+adbe-tunables:
+acc-cm-override-charger-count:
+acc-cm-override-count:
+acc-mb-ld-lifetime:
+adfe-tunables:
+aht-results:
+  type: :string
+  platforms:
+    - macOS PPC
+    - macOS Intel
+  description: Apple Hardware Test (diags) - PList
+allow-root-hash-mismatch:
+ane-type:
+aud-early-boot-critical:
+auto-boot:
+  type: :boolean
+  description: If the device should `fsboot` upon power on
+auto-boot?:
+  type: :boolean
+auto-boot-halt-stage:
+auto-boot-usb:
+auto-boot-x86-once:
+backlight-level:
+backlight-nits:
+base-system-path:
+BaseSystemAccessabiliityFeatures:
+battery-health:
+bluetoothHostControllerSwitchBehaviour:
+BluetoothInfo:
+BluetoothUHEDevices:
+board-id:
+bootdelay:
+  type: :number
+  persistent: true
+  description: Seconds to pause before autoboot
+boot-args:
+  type: :string
+  persistent: true
+  description: String passed to the XNU kernel at boot (M1's do filter this though)
+boot-breadcrumbs:
+  type: :string
+boot-command:
+  type: :string
+boot-device:
+  type: :string
+boot-file:
+boot-image:
+boot-partition:
+  type: :number
+boot-path:
+boot-ramdisk:
+boot-script:
+boot-stage:
+boot-volume:
+BOSCatalogURL:
+build-version:
+build-style:
+bt1addr:
+btaddr:
+cam-use-ext-ldo:
+com.apple.System.boot-nonce:
+com.apple.System.fp-state:
+com.apple.System.sep.art:
+com.apple.System.tz0-size:
+console-screen:
+core-bin-offset:
+cpu-bin-offset:
+csr-data:
+current-network:
+darkboot:
+DClr_override:
+debug-gg:
+debug-soc:
+debug-uarts:
+  type: :integer
+  persistent: true
+  description: Bitfield of which UARTs to enable
+DebugBluetoothHIDShim:
+default-client-ip:
+default-gateway-ip:
+default-mac-address?:
+  type: :boolean
+default-router-ip:
+default-server-ip:
+default-subnet-mask:
+DefaultBackgroundColor:
+device-material:
+diag-device:
+diag-file:
+diag-switch?:
+diags-path:
+disable_screensavers:
+display-carveout-inhibitcache:
+display-color-space:
+display-timing:
+display-rotation:
+e75:
+emu:
+enable-remap-mode:
+enter-tdm-mode:
+  type: :boolean
+  platforms:
+    - macOS Intel
+  description: Enter USB Target Disk Mode
+eth1addr:
+ethaddr:
+failboot-breadcrumbs:
+fcode-debug?:
+  type: :string
+  platforms:
+    - macOS PPC
+  description: Forth code debugging for OpenFirmware
+filesize:
+fixed-lcm-boost:
+fmm-computer-name:
+  type: :string
+fmm-mobileme-token-FMM:
+fmm-mobileme-token-FMM-BridgeHasAccount:
+  type: :boolean
+  platforms:
+    - macOS Intel
+    - macOS ASi
+  description: If this value is true FMM is handled by the T2 coprocessor.  This is always false on Apple Silicon as there is no bridgeOS device
+fmm-mobileme-token-FMM-WipePending:
+  type: :boolean
+  platforms:
+    - macOS Intel
+  description: If a device wipe has been requested by FindMy
+force-upgrade-fail:
+HardwareModel:
+HW_BOOT_DATA:
+idle-off:
+IASCurrentInstallPhase:
+IASInstallPhaseList:
+IASUCatalogURL:
+  type: :string
+  platforms:
+    - macOS Intel
+  description: This is the update url used for install / update.  Security issues can occur when set to HTTP.  Typically managed through `seedutil`
+IDInstallerDataV2:
+input-device:
+  platforms:
+    - macOS PPC
+input-device-1:
+  platforms:
+    - macOS PPC
+IOBusyInterest:
+IODeviceMemory:
+IOPlatformActiveAction:
+IOPlatformHaltRestartAction:
+IOPlatformPanicAction:
+IOPlatformQuiensceAction:
+IOPlatformSleepAction:
+IOPlatformWakeAction:
+IORematchPersonality:
+ipaddr:
+is-tethered:
+kaslr-off:
+kaslr-slide:
+little-endian?:
+  type: :boolean
+  platforms:
+    - macOS PPC
+  description: If the CPU is a little endian architecture
+load-base:
+loadaddr:
+LocationServicesEnabled:
+lts-persistance:
+  type: :string
+mca-info0:
+mouse-device:
+net-boot:
+non-coherent:
+nonce-seeds:
+nvramrc:
+obliteration:
+oblit-begins:
+oblit-inprogress:
+oem-banner:
+oem-banner?:
+oem-logo:
+oem-logo?:
+output-device:
+output-device-1:
+one-time-boot-command:
+ota-anomalies:
+ota-brain-version:
+ota-breadcrumbs:
+ota-child-failures:
+ota-context:
+ota-controllerVersion:
+ota-conv-panic-indicator:
+ota-failure-reason:
+ota-forced-reset-uptime:
+OTA-fsck-metrics:
+ota-initial-breadcrumbs:
+ota-initial-result:
+ota-internal-failure-reason:
+ota-internal-forced-reset-uptime:
+ota-install-tonight:
+ota-os-version:
+ota-original-os-version:
+ota-outcome:
+ota-perform-shutdown:
+OTA-post-conversion:
+OTA-pre-conversion:
+ota-reboot-retry-enabled:
+ota-reboot-retry-zone:
+ota-result:
+ota-retry-battery-level:
+ota-retry-breadcrumbs:
+ota-retry-codes:
+ota-retry-domains:
+ota-retry-enabled:
+ota-retry-external-power:
+ota-retry-failure-reason:
+ota-retry-ids:
+ota-retry-monitor:
+ota-retry-names:
+ota-retry-error:
+ota-retry-result:
+ota-retry-results:
+ota-retry-uptime:
+ota-retry-user-progress:
+ota-retry-warnings:
+OTA-sealvolume-metrics:
+ota-step-battery-level:
+ota-step-codes:
+ota-step-domains:
+ota-step-error:
+ota-step-external-power:
+ota-step-ids:
+ota-step-monitor:
+ota-step-names:
+ota-step-results:
+ota-step-user-progress:
+ota-step-uptime:
+ots-step-warnings:
+ota-snapshot-update:
+ota-submission-url:
+ota-updateType:
+ota-uuid:
+panicmedic:
+pci-probe-list:
+pci-probe-mask:
+pinot-panel-id:
+pintoaddr:
+policy-nonce-digests:
+pmgr_gpu_override:
+pmgr_cpu_override:
+pre-recovery-ota-failure-uuid:
+preferred-count:
+"prev-lang:kbd":
+"prev-lang-diags:kbd":
+prevent-restores:
+pwr-path:
+radio-error:
+rbdaddr0:
+ramdisk-size:
+ramrod-nvram-shadow-path:
+ramrod-nvram-sequence:
+ramrod-nvram-session:
+recovery-boot-setting:
+recovery-boot-mode:
+recoveryos-inited-update:
+recoveryos-passcode-blob:
+real-base:
+  type: :number
+real-base?:
+  type: :boolean
+real-size:
+  type: :number
+restore-child-failures:
+restore-retry-codes:
+restore-retry-domains:
+restore-retry-ids:
+restore-outcome:
+restore-perform-shutdown:
+restore-reboot-retry-enabled:
+restore-reboot-retry-zone:
+restore-retry-error:
+restore-retry-monitor:
+restore-retry-names:
+restore-retry-results:
+restore-step-codes:
+restore-step-domains:
+restore-step-error:
+restore-step-ids:
+restore-step-names:
+restore-step-monitor:
+restore-step-warnings:
+restore-step-results:
+root-live-fs:
+:"screen-#columns":
+  type: :number
+:"screen-#rows":
+  type: :number
+security-mode:
+security-password:
+:"selftest-#megs":
+  type: :number
+serverip:
+SleepWakeFailurePanic:
+SleepWakeFailureString:
+soc-bin-offset:
+StartupMute:
+stress-rack:
+summit-panel-id:
+system-passcode-lock-blob:
+SystemAudioVolume:
+SystemAudioVolumeExtension:
+SystemAudioVolumeSaved:
+target-uuid:
+tbt-options:
+upgrade-fallback-boot-command:
+upgrade-boot-volume:
+update-volume:
+usb-enabled:
+use-generic?:
+use-nvramrc?:
+utc-offset:
+virt-base:
+virt-size:
+wifi-fw-path:
+wifi-nvram-path:
+wifi1addr:
+wifiaddr:
+zhuge_debug:
