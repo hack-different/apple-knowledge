@@ -7,6 +7,7 @@
 - name: DClr_override
 - name: DebugBluetoothHIDShim
 - name: DefaultBackgroundColor
+- name: GPUROM
 - name: HW_BOOT_DATA
 - name: HardwareModel
 - name: IASCurrentInstallPhase
@@ -32,6 +33,7 @@
 - name: OTA-post-conversion
 - name: OTA-pre-conversion
 - name: OTA-sealvolume-metrics
+- name: PSFU_STATUS
 - name: SleepWakeFailurePanic
 - name: SleepWakeFailureString
 - name: StartupMute
@@ -69,7 +71,9 @@
 - name: backlight-nits
 - name: base-system-path
 - name: battery-health
+- name: bluetoothActiveControllerInfo
 - name: bluetoothHostControllerSwitchBehaviour
+- name: bluetoothInternalControllerInfo
 - name: board-id
 - type: :string
   persistent: true
@@ -133,6 +137,10 @@
 - name: display-rotation
 - name: display-timing
 - name: e75
+- name: efi-backup-boot-device
+- name: efi-backup-boot-device-data
+- name: efi-boot-device
+- name: efi-boot-device-data
 - name: emu
 - name: enable-remap-mode
 - type: :boolean
@@ -150,6 +158,8 @@
   name: fcode-debug?
 - name: filesize
 - name: fixed-lcm-boost
+- name: fm-activation-locked
+- name: fm-spstatus
 - type: :string
   name: fmm-computer-name
 - name: fmm-mobileme-token-FMM
@@ -166,6 +176,7 @@
   description: If a device wipe has been requested by FindMy
   name: fmm-mobileme-token-FMM-WipePending
 - name: force-upgrade-fail
+- name: gpu-policy
 - name: idle-off
 - platforms:
   - macOS PPC
@@ -188,6 +199,8 @@
   name: lts-persistance
 - name: mca-info0
 - name: mouse-device
+- name: multiupdater-retry-limits
+- name: multiupdater-state
 - name: net-boot
 - name: non-coherent
 - name: nonce-seeds
@@ -265,9 +278,11 @@
 - name: policy-nonce-digests
 - name: pre-recovery-ota-failure-uuid
 - name: preferred-count
+- name: preferred-networks
 - name: prev-lang-diags:kbd
 - name: prev-lang:kbd
 - name: prevent-restores
+- name: previous-system-uuid
 - name: pwr-path
 - name: radio-error
 - name: ramdisk-size
