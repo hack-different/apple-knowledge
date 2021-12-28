@@ -89,7 +89,7 @@ task :credits do
   credits = {}
 
   links.each do |repo|
-    credits[repo] = { contributors: github.contributors(repo).map(&:to_h) }
+    credits[repo] = { 'contributors' => github.contributors(repo).map { |c| c.to_h.stringify_keys } }
   rescue Octokit::Forbidden
     # TODO: GitHub won't work when its a fork of something large (like linux) - we could grab the org members
     # in leau which is usually what is meant

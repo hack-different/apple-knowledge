@@ -223,7 +223,7 @@ facilitated by the volunteer work of the Hack Different moderation team.
 Portions of data and knowledge come from <https://theiphonewiki.org>, <https://libimobiledevice.org> and 
 <https://checkra.in> as well as the individuals who brought you those projects.
 
-Tooling is being written to credit all parties using GitHub's API
+A list of all projects and their contributors is at [CREDITS](credits)
 
 ## Dedication
 
