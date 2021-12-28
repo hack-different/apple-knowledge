@@ -22,9 +22,12 @@ end
 
 group :development do
   gem 'activesupport'
+  gem 'kramdown'
   gem 'manpages'
+  gem 'octokit'
   gem 'overcommit'
   gem 'plist'
+  gem 'pry'
   gem 'rake'
   gem 'rubocop'
   gem 'webrick'
