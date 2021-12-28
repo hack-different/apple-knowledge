@@ -5,6 +5,13 @@
   name: ApChipID
   scopes:
   - 94b73556-2197-4702-82a8-3e1337dafbfb
+- type: :boolean
+  platforms:
+  - macOS T2
+  description: Controls trust in Microsoft's PCA 2011 cert for Apple Secure Boot
+  name: AppleSecureBootWindowsPolicy
+  scopes:
+  - 94b73556-2197-4702-82a8-3e1337dafbfb
 - name: BOSCatalogURL
 - name: BaseSystemAccessabiliityFeatures
 - name: BluetoothInfo
@@ -46,6 +53,9 @@
 - name: PSFU_STATUS
 - name: SleepWakeFailurePanic
 - name: SleepWakeFailureString
+- name: StartupManagerPolicy
+  scopes:
+  - 5eeb160f-45fb-4ce9-b4e3-610359abf6f8
 - type: :integer
   description: Mute startup chime
   name: StartupMute
@@ -88,6 +98,8 @@
 - type: :boolean
   name: auto-boot?
 - name: backlight-level
+  scopes:
+  - common
 - name: backlight-nits
 - name: base-system-path
 - name: battery-health
@@ -216,6 +228,13 @@
   name: fmm-mobileme-token-FMM-WipePending
 - name: force-upgrade-fail
 - name: gpu-policy
+- type: :boolean
+  platforms:
+  - macOS Intel
+  description: Disable dGPU (I think only for older models)
+  name: gpu-power-prefs
+  scopes:
+  - FA4CE28D-B62F-4C99-9CC3-6815686E30F9
 - name: idle-off
 - platforms:
   - macOS PPC
