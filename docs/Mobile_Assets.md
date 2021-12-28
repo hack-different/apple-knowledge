@@ -1,19 +1,15 @@
+# Mobile Assets (Including OTAs)
 
-## Flags
-V = Volitale
-P = Persistent
-S = System
-C = Common
 
 <table>
 <thead>
-    <th>Name</th>
+    <th>URL</th>
     <th>Description</th>
 </thead>
     <tbody>
-{% for entry in site.data.nvram %}
+{% for entry in site.data.mobile_assets %}
     <tr>
-        <td>{{ entry.name }}</td>
+        <td>{{ entry.url }}</td>
         <td>{{ entry.description }}</td>
     </tr>
 {% endfor %}

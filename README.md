@@ -56,12 +56,14 @@ Updates and additions there should automatically be reflected in the documents
 ## Guides and General
 
 * [OWASP: iOS Tampering and Reverse Engineering](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x06c-Reverse-Engineering-and-Tampering.md)
-* [Kernel Debug Kit](docs/kdk)
+* [Kernel Debug Kit](docs/KDK)
 * [*OS Internals by Jonathan Levin](https://newosxbook.com/index.php)
 * [T2 Dev Setup](docs/T2)
+* [Apple 4CC](docs/4CC)
 
 ## Devices
 
+* [Device List](docs/Devices)
 * [T2 Dev Team: `t8012` / Apple T2 / bridgeOS](https://t8012.dev)
 * [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Main_Page)
 
@@ -69,10 +71,11 @@ Updates and additions there should automatically be reflected in the documents
 
 ### Bootloader Related
 
-* [`EFI`](docs/efi)
-* [`NVRAM`](docs/nvram)
+* [`EFI`](docs/EFI)
+* [`NVRAM`](docs/NVRAM)
 * [`SEP_memmap`](docs/SEP_memmap)
 * [`apple/darwin-xnu`](https://github.com/apple/darwin-xnu)
+* [`Factory_Firmware_Payloads`](docs/Factory_Firmware_Payloads)
 
 ### Archive / Disk Formats
 
@@ -103,7 +106,7 @@ Updates and additions there should automatically be reflected in the documents
 
 ### Image, Sound and Other Resources
 
-* [Apple Flavored PNG](docs/png)
+* [Apple Flavored PNG](docs/PNG)
 * Apple IMA ADPCM
   * <http://wiki.multimedia.cx/index.php?title=Apple_QuickTime_IMA_ADPCM>
   * <https://www.downtowndougbrown.com/2012/07/power-macintosh-g3-blue-and-white-custom-startup-sound/>
@@ -112,6 +115,7 @@ Updates and additions there should automatically be reflected in the documents
 
 ### Software Update / Installers
 
+* [Mobile Asset URLs](docs/Mobile_Assets)
 * [`notpeter/apple-installer-checksums`](https://github.com/notpeter/apple-installer-checksums)
 
 ### Code and Signature Formats
@@ -128,6 +132,7 @@ Updates and additions there should automatically be reflected in the documents
 * EALF - `eficheck` baselines
   * [`t8012/go-aapl-integrity`](https://github.com/t8012/go-aapl-integrity)
   * [`t8012/efivalidate`](https://github.com/t8012/efivalidate)
+  * [`EALF`](docs/EALF)
 * ChunkList - Used to verify macOS Recovery / Internet Recovery
   * [`t8012/go-aapl-integrity`](https://github.com/t8012/go-aapl-integrity)
 * `dyld` Shared Cache
@@ -171,6 +176,7 @@ Updates and additions there should automatically be reflected in the documents
   * <http://newosxbook.com/tools/XPoCe2.html>
 * macOS Internet Recovery
   * [`rickmark/apple_net_recovery`](https://github.com/rickmark/apple_net_recovery)
+  * [`Internet Recovery`](docs/Internet_Recovery)
 
 ### System Configuration and State
 
@@ -223,7 +229,7 @@ facilitated by the volunteer work of the Hack Different moderation team.
 Portions of data and knowledge come from <https://theiphonewiki.org>, <https://libimobiledevice.org> and 
 <https://checkra.in> as well as the individuals who brought you those projects.
 
-A list of all projects and their contributors is at [CREDITS](credits)
+A list of all projects and their contributors is at [CREDITS](CREDITS)
 
 ## Dedication
 
