@@ -54,10 +54,20 @@ namespace :sort do
   task :mobile_assets do
     sort_yaml 'mobile_assets', :url
   end
+
+  desc 'sort Apple 4CCs'
+  task :four_cc do
+    sort_yaml '4cc', :code
+  end
+
+  desc 'sort devices'
+  task :devices do
+    sort_yaml 'devices', :id
+  end
 end
 
 desc 'sort everything'
-task sort: ['sort:nvram', 'sort:services', 'sort:mobile_assets']
+task sort: ['sort:nvram', 'sort:services', 'sort:mobile_assets', 'sort:four_cc', 'sort:devices']
 
 desc 'do all precommit tasks'
 task precommit: ['sort']

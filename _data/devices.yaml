@@ -1,0 +1,971 @@
+---
+- id: ADP3,2
+  name: Developer Transition Kit (2020)
+  chip_id: 32807
+  board_id: 66
+  board_name: j273aap
+- id: AppleTV11,1
+  name: Apple TV 4K (2nd gen)
+  chip_id: 32800
+  board_id: 8
+  board_name: j305ap /* HomePod */
+- id: AppleTV2,1
+  name: Apple TV 2
+  chip_id: 35120
+  board_id: 16
+  board_name: k66ap
+- id: AppleTV3,1
+  name: Apple TV 3
+  chip_id: 35138
+  board_id: 8
+  board_name: j33ap
+- id: AppleTV3,2
+  name: Apple TV 3 (2013)
+  chip_id: 35143
+  board_id: 0
+  board_name: j33iap
+- id: AppleTV5,3
+  name: Apple TV 4
+  chip_id: 28672
+  board_id: 52
+  board_name: j42dap
+- id: AppleTV6,2
+  name: Apple TV 4K
+  chip_id: 32785
+  board_id: 2
+  board_name: j105aap
+- id: AudioAccessory1,1
+  name: HomePod
+  chip_id: 28672
+  board_id: 56
+  board_name: b238aap
+- id: AudioAccessory1,2
+  name: HomePod
+  chip_id: 28672
+  board_id: 26
+  board_name: b238ap
+- id: AudioAccessory5,1
+  name: HomePod mini
+  chip_id: 32774
+  board_id: 34
+  board_name: b520ap /* Apple Watch */
+- id: MacBookAir10,1
+  name: MacBook Air (M1, 2020)
+  chip_id: 33027
+  board_id: 38
+  board_name: j313ap
+- id: MacBookPro17,1
+  name: MacBook Pro (M1, 2020)
+  chip_id: 33027
+  board_id: 36
+  board_name: j293ap
+- id: MacBookPro18,1
+  name: MacBook Pro (M1 Pro, 16-inch, 2021)
+  chip_id: 24576
+  board_id: 10
+  board_name: j316sap
+- id: MacBookPro18,2
+  name: MacBook Pro (M1 Max, 16-inch, 2021)
+  chip_id: 24577
+  board_id: 10
+  board_name: j316cap
+- id: MacBookPro18,3
+  name: MacBook Pro (M1 Pro, 14-inch, 2021)
+  chip_id: 24576
+  board_id: 8
+  board_name: j314sap
+- id: MacBookPro18,4
+  name: MacBook Pro (M1 Max, 14-inch, 2021)
+  chip_id: 24577
+  board_id: 8
+  board_name: j314cap
+- id: Macmini9,1
+  name: Mac mini (M1, 2020)
+  chip_id: 33027
+  board_id: 34
+  board_name: j274ap
+- id: Watch1,1
+  name: Apple Watch 38mm (1st gen)
+  chip_id: 28674
+  board_id: 2
+  board_name: n27aap
+- id: Watch1,2
+  name: Apple Watch 42mm (1st gen)
+  chip_id: 28674
+  board_id: 4
+  board_name: n28aap
+- id: Watch2,3
+  name: Apple Watch Series 2 (38mm)
+  chip_id: 32770
+  board_id: 12
+  board_name: n74ap
+- id: Watch2,4
+  name: Apple Watch Series 2 (42mm)
+  chip_id: 32770
+  board_id: 14
+  board_name: n75ap
+- id: Watch2,6
+  name: Apple Watch Series 1 (38mm)
+  chip_id: 32770
+  board_id: 2
+  board_name: n27dap
+- id: Watch2,7
+  name: Apple Watch Series 1 (42mm)
+  chip_id: 32770
+  board_id: 4
+  board_name: n28dap
+- id: Watch3,1
+  name: Apple Watch Series 3 (38mm Cellular)
+  chip_id: 32772
+  board_id: 28
+  board_name: n111sap
+- id: Watch3,2
+  name: Apple Watch Series 3 (42mm Cellular)
+  chip_id: 32772
+  board_id: 30
+  board_name: n111bap
+- id: Watch3,3
+  name: Apple Watch Series 3 (38mm)
+  chip_id: 32772
+  board_id: 24
+  board_name: n121sap
+- id: Watch3,4
+  name: Apple Watch Series 3 (42mm)
+  chip_id: 32772
+  board_id: 26
+  board_name: n121bap
+- id: Watch4,1
+  name: Apple Watch Series 4 (40mm)
+  chip_id: 32774
+  board_id: 8
+  board_name: n131sap
+- id: Watch4,2
+  name: Apple Watch Series 4 (44mm)
+  chip_id: 32774
+  board_id: 10
+  board_name: n131bap
+- id: Watch4,3
+  name: Apple Watch Series 4 (40mm Cellular)
+  chip_id: 32774
+  board_id: 12
+  board_name: n141sap
+- id: Watch4,4
+  name: Apple Watch Series 4 (44mm Cellular)
+  chip_id: 32774
+  board_id: 14
+  board_name: n141bap
+- id: Watch5,1
+  name: Apple Watch Series 5 (40mm)
+  chip_id: 32774
+  board_id: 16
+  board_name: n144sap
+- id: Watch5,10
+  name: Apple Watch SE (44mm)
+  chip_id: 32774
+  board_id: 42
+  board_name: n140bap
+- id: Watch5,11
+  name: Apple Watch SE (40mm Cellular)
+  chip_id: 32774
+  board_id: 44
+  board_name: n142sap
+- id: Watch5,12
+  name: Apple Watch SE (44mm Cellular)
+  chip_id: 32774
+  board_id: 46
+  board_name: n142bap
+- id: Watch5,2
+  name: Apple Watch Series 5 (44mm)
+  chip_id: 32774
+  board_id: 18
+  board_name: n144bap
+- id: Watch5,3
+  name: Apple Watch Series 5 (40mm Cellular)
+  chip_id: 32774
+  board_id: 20
+  board_name: n146sap
+- id: Watch5,4
+  name: Apple Watch Series 5 (44mm Cellular)
+  chip_id: 32774
+  board_id: 22
+  board_name: n146bap
+- id: Watch5,9
+  name: Apple Watch SE (40mm)
+  chip_id: 32774
+  board_id: 40
+  board_name: n140sap
+- id: Watch6,1
+  name: Apple Watch Series 6 (40mm)
+  chip_id: 33537
+  board_id: 8
+  board_name: n157sap
+- id: Watch6,2
+  name: Apple Watch Series 6 (44mm)
+  chip_id: 33537
+  board_id: 10
+  board_name: n157bap
+- id: Watch6,3
+  name: Apple Watch Series 6 (40mm Cellular)
+  chip_id: 33537
+  board_id: 12
+  board_name: n158sap
+- id: Watch6,4
+  name: Apple Watch Series 6 (44mm Cellular)
+  chip_id: 33537
+  board_id: 14
+  board_name: n158bap
+- id: Watch6,6
+  name: Apple Watch Series 7 (41mm)
+  chip_id: 33537
+  board_id: 16
+  board_name: n187sap
+- id: Watch6,7
+  name: Apple Watch Series 7 (45mm)
+  chip_id: 33537
+  board_id: 18
+  board_name: n187bap
+- id: Watch6,8
+  name: Apple Watch Series 7 (41mm Cellular)
+  chip_id: 33537
+  board_id: 20
+  board_name: n188sap
+- id: Watch6,9
+  name: Apple Watch Series 7 (45mm Cellular)
+  chip_id: 33537
+  board_id: 22
+  board_name: n188bap /* Apple T2 Coprocessor */
+- id: iBridge2,1
+  name: Apple T2 iMacPro1,1 (j137)
+  chip_id: 32786
+  board_id: 10
+  board_name: j137ap
+- id: iBridge2,10
+  name: Apple T2 MacBookPro15,4 (j213)
+  chip_id: 32786
+  board_id: 24
+  board_name: j213ap
+- id: iBridge2,12
+  name: Apple T2 MacBookAir8,2 (j140a)
+  chip_id: 32786
+  board_id: 55
+  board_name: j140aap
+- id: iBridge2,14
+  name: Apple T2 MacBookPro16,1 (j152f)
+  chip_id: 32786
+  board_id: 58
+  board_name: j152fap
+- id: iBridge2,15
+  name: Apple T2 MacBookAir9,1 (j230k)
+  chip_id: 32786
+  board_id: 63
+  board_name: j230kap
+- id: iBridge2,16
+  name: Apple T2 MacBookPro16,2 (j214k)
+  chip_id: 32786
+  board_id: 62
+  board_name: j214kap
+- id: iBridge2,19
+  name: Apple T2 iMac20,1 (j185)
+  chip_id: 32786
+  board_id: 34
+  board_name: j185ap
+- id: iBridge2,20
+  name: Apple T2 iMac20,2 (j185f)
+  chip_id: 32786
+  board_id: 35
+  board_name: j185fap
+- id: iBridge2,21
+  name: Apple T2 MacBookPro16,3 (j223)
+  chip_id: 32786
+  board_id: 59
+  board_name: j223ap
+- id: iBridge2,22
+  name: Apple T2 MacBookPro16,4 (j215)
+  chip_id: 32786
+  board_id: 56
+  board_name: j215ap /* Apple Silicon Macs */
+- id: iBridge2,3
+  name: Apple T2 MacBookPro15,1 (j680)
+  chip_id: 32786
+  board_id: 11
+  board_name: j680ap
+- id: iBridge2,4
+  name: Apple T2 MacBookPro15,2 (j132)
+  chip_id: 32786
+  board_id: 12
+  board_name: j132ap
+- id: iBridge2,5
+  name: Apple T2 Macmini8,1 (j174)
+  chip_id: 32786
+  board_id: 14
+  board_name: j174ap
+- id: iBridge2,6
+  name: Apple T2 MacPro7,1 (j160)
+  chip_id: 32786
+  board_id: 15
+  board_name: j160ap
+- id: iBridge2,7
+  name: Apple T2 MacBookPro15,3 (j780)
+  chip_id: 32786
+  board_id: 7
+  board_name: j780ap
+- id: iBridge2,8
+  name: Apple T2 MacBookAir8,1 (j140k)
+  chip_id: 32786
+  board_id: 23
+  board_name: j140kap
+- id: iMac21,1
+  name: iMac 24-inch (M1, Two Ports, 2021)
+  chip_id: 33027
+  board_id: 40
+  board_name: j456ap
+- id: iMac21,2
+  name: iMac 24-inch (M1, Four Ports, 2021)
+  chip_id: 33027
+  board_id: 42
+  board_name: j457ap
+- id: iPad1,1
+  name: iPad
+  chip_id: 35120
+  board_id: 2
+  board_name: k48ap
+- id: iPad11,1
+  name: iPad mini (5th gen, WiFi)
+  chip_id: 32800
+  board_id: 20
+  board_name: j210ap
+- id: iPad11,2
+  name: iPad mini (5th gen, Cellular)
+  chip_id: 32800
+  board_id: 22
+  board_name: j211ap
+- id: iPad11,3
+  name: iPad Air (3rd gen, WiFi)
+  chip_id: 32800
+  board_id: 28
+  board_name: j217ap
+- id: iPad11,4
+  name: iPad Air (3rd gen, Celluar)
+  chip_id: 32800
+  board_id: 30
+  board_name: j218ap
+- id: iPad11,6
+  name: iPad (8th gen, WiFi)
+  chip_id: 32800
+  board_id: 36
+  board_name: j171aap
+- id: iPad11,7
+  name: iPad (8th gen, Celluar)
+  chip_id: 32800
+  board_id: 38
+  board_name: j172aap
+- id: iPad12,1
+  name: iPad (9th gen, WiFi)
+  chip_id: 32816
+  board_id: 24
+  board_name: j181ap
+- id: iPad12,2
+  name: iPad (9th gen, Cellular)
+  chip_id: 32816
+  board_id: 26
+  board_name: j182ap
+- id: iPad13,1
+  name: iPad Air (4th gen, WiFi)
+  chip_id: 33025
+  board_id: 4
+  board_name: j307ap
+- id: iPad13,10
+  name: iPad Pro 12.9-inch (5th gen, Celluar)
+  chip_id: 33027
+  board_id: 28
+  board_name: j523ap
+- id: iPad13,11
+  name: iPad Pro 12.9-inch (5th gen, Celluar, 2TB)
+  chip_id: 33027
+  board_id: 30
+  board_name: j523xap
+- id: iPad13,2
+  name: iPad Air (4th gen, Celluar)
+  chip_id: 33025
+  board_id: 6
+  board_name: j308ap
+- id: iPad13,4
+  name: iPad Pro 11-inch (3rd gen, WiFi)
+  chip_id: 33027
+  board_id: 8
+  board_name: j517ap
+- id: iPad13,5
+  name: iPad Pro 11-inch (3rd gen, WiFi, 2TB)
+  chip_id: 33027
+  board_id: 10
+  board_name: j517xap
+- id: iPad13,6
+  name: iPad Pro 11-inch (3rd gen, Cellular)
+  chip_id: 33027
+  board_id: 12
+  board_name: j518ap
+- id: iPad13,7
+  name: iPad Pro 11-inch (3rd gen, Celluar, 2TB)
+  chip_id: 33027
+  board_id: 14
+  board_name: j518xap
+- id: iPad13,8
+  name: iPad Pro 12.9-inch (5th gen, WiFi)
+  chip_id: 33027
+  board_id: 24
+  board_name: j522ap
+- id: iPad13,9
+  name: iPad Pro 12.9-inch (5th gen, WiFi, 2TB)
+  chip_id: 33027
+  board_id: 26
+  board_name: j522xap
+- id: iPad14,1
+  name: iPad mini (6th gen, WiFi)
+  chip_id: 33040
+  board_id: 4
+  board_name: j310ap
+- id: iPad14,2
+  name: iPad mini (6th gen, Cellular)
+  chip_id: 33040
+  board_id: 6
+  board_name: j311ap /* Apple TV */
+- id: iPad2,1
+  name: iPad 2 (WiFi)
+  chip_id: 35136
+  board_id: 4
+  board_name: k93ap
+- id: iPad2,2
+  name: iPad 2 (GSM)
+  chip_id: 35136
+  board_id: 6
+  board_name: k94ap
+- id: iPad2,3
+  name: iPad 2 (CDMA)
+  chip_id: 35136
+  board_id: 2
+  board_name: k95ap
+- id: iPad2,4
+  name: iPad 2 (WiFi) R2 2012
+  chip_id: 35138
+  board_id: 6
+  board_name: k93aap
+- id: iPad2,5
+  name: iPad mini (WiFi)
+  chip_id: 35138
+  board_id: 10
+  board_name: p105ap
+- id: iPad2,6
+  name: iPad mini (GSM)
+  chip_id: 35138
+  board_id: 12
+  board_name: p106ap
+- id: iPad2,7
+  name: iPad mini (Global)
+  chip_id: 35138
+  board_id: 14
+  board_name: p107ap
+- id: iPad3,1
+  name: iPad (3rd gen, WiFi)
+  chip_id: 35141
+  board_id: 0
+  board_name: j1ap
+- id: iPad3,2
+  name: iPad (3rd gen, CDMA)
+  chip_id: 35141
+  board_id: 2
+  board_name: j2ap
+- id: iPad3,3
+  name: iPad (3rd gen, GSM)
+  chip_id: 35141
+  board_id: 4
+  board_name: j2aap
+- id: iPad3,4
+  name: iPad (4th gen, WiFi)
+  chip_id: 35157
+  board_id: 0
+  board_name: p101ap
+- id: iPad3,5
+  name: iPad (4th gen, GSM)
+  chip_id: 35157
+  board_id: 2
+  board_name: p102ap
+- id: iPad3,6
+  name: iPad (4th gen, Global)
+  chip_id: 35157
+  board_id: 4
+  board_name: p103ap
+- id: iPad4,1
+  name: iPad Air (WiFi)
+  chip_id: 35168
+  board_id: 16
+  board_name: j71ap
+- id: iPad4,2
+  name: iPad Air (Cellular)
+  chip_id: 35168
+  board_id: 18
+  board_name: j72ap
+- id: iPad4,3
+  name: iPad Air (China)
+  chip_id: 35168
+  board_id: 20
+  board_name: j73ap
+- id: iPad4,4
+  name: iPad mini 2 (WiFi)
+  chip_id: 35168
+  board_id: 10
+  board_name: j85ap
+- id: iPad4,5
+  name: iPad mini 2 (Cellular)
+  chip_id: 35168
+  board_id: 12
+  board_name: j86ap
+- id: iPad4,6
+  name: iPad mini 2 (China)
+  chip_id: 35168
+  board_id: 14
+  board_name: j87ap
+- id: iPad4,7
+  name: iPad mini 3 (WiFi)
+  chip_id: 35168
+  board_id: 50
+  board_name: j85map
+- id: iPad4,8
+  name: iPad mini 3 (Cellular)
+  chip_id: 35168
+  board_id: 52
+  board_name: j86map
+- id: iPad4,9
+  name: iPad mini 3 (China)
+  chip_id: 35168
+  board_id: 54
+  board_name: j87map
+- id: iPad5,1
+  name: iPad mini 4 (WiFi)
+  chip_id: 28672
+  board_id: 8
+  board_name: j96ap
+- id: iPad5,2
+  name: iPad mini 4 (Cellular)
+  chip_id: 28672
+  board_id: 10
+  board_name: j97ap
+- id: iPad5,3
+  name: iPad Air 2 (WiFi)
+  chip_id: 28673
+  board_id: 6
+  board_name: j81ap
+- id: iPad5,4
+  name: iPad Air 2 (Cellular)
+  chip_id: 28673
+  board_id: 2
+  board_name: j82ap
+- id: iPad6,11
+  name: iPad (5th gen, WiFi)
+  chip_id: 32768
+  board_id: 16
+  board_name: j71sap
+- id: iPad6,11
+  name: iPad (5th gen, WiFi)
+  chip_id: 32771
+  board_id: 16
+  board_name: j71tap
+- id: iPad6,12
+  name: iPad (5th gen, Cellular)
+  chip_id: 32771
+  board_id: 18
+  board_name: j72tap
+- id: iPad6,12
+  name: iPad (5th gen, Cellular)
+  chip_id: 32768
+  board_id: 18
+  board_name: j72sap
+- id: iPad6,3
+  name: iPad Pro 9.7-inch (WiFi)
+  chip_id: 32769
+  board_id: 8
+  board_name: j127ap
+- id: iPad6,4
+  name: iPad Pro 9.7-inch (Cellular)
+  chip_id: 32769
+  board_id: 10
+  board_name: j128ap
+- id: iPad6,7
+  name: iPad Pro 12.9-inch (1st gen, WiFi)
+  chip_id: 32769
+  board_id: 16
+  board_name: j98aap
+- id: iPad6,8
+  name: iPad Pro 12.9-inch (1st gen, Cellular)
+  chip_id: 32769
+  board_id: 18
+  board_name: j99aap
+- id: iPad7,1
+  name: iPad Pro 12.9-inch (2nd gen, WiFi)
+  chip_id: 32785
+  board_id: 12
+  board_name: j120ap
+- id: iPad7,11
+  name: iPad (7th gen, WiFi)
+  chip_id: 32784
+  board_id: 28
+  board_name: j171ap
+- id: iPad7,12
+  name: iPad (7th gen, Cellular)
+  chip_id: 32784
+  board_id: 30
+  board_name: j172ap
+- id: iPad7,2
+  name: iPad Pro 12.9-inch (2nd gen, Cellular)
+  chip_id: 32785
+  board_id: 14
+  board_name: j121ap
+- id: iPad7,3
+  name: iPad Pro 10.5-inch (WiFi)
+  chip_id: 32785
+  board_id: 4
+  board_name: j207ap
+- id: iPad7,4
+  name: iPad Pro 10.5-inch (Cellular)
+  chip_id: 32785
+  board_id: 6
+  board_name: j208ap
+- id: iPad7,5
+  name: iPad (6th gen, WiFi)
+  chip_id: 32784
+  board_id: 24
+  board_name: j71bap
+- id: iPad7,6
+  name: iPad (6th gen, Cellular)
+  chip_id: 32784
+  board_id: 26
+  board_name: j72bap
+- id: iPad8,1
+  name: iPad Pro 11-inch (1st gen, WiFi)
+  chip_id: 32807
+  board_id: 12
+  board_name: j317ap
+- id: iPad8,10
+  name: iPad Pro 11-inch (2nd gen, Cellular)
+  chip_id: 32807
+  board_id: 62
+  board_name: j418ap
+- id: iPad8,11
+  name: iPad Pro 12.9-inch (4th gen, WiFi)
+  chip_id: 32807
+  board_id: 56
+  board_name: j420ap
+- id: iPad8,12
+  name: iPad Pro 12.9-inch (4th gen, Cellular)
+  chip_id: 32807
+  board_id: 58
+  board_name: j421ap
+- id: iPad8,2
+  name: iPad Pro 11-inch (1st gen, WiFi, 1TB)
+  chip_id: 32807
+  board_id: 28
+  board_name: j317xap
+- id: iPad8,3
+  name: iPad Pro 11-inch (1st gen, Cellular)
+  chip_id: 32807
+  board_id: 14
+  board_name: j318ap
+- id: iPad8,4
+  name: iPad Pro 11-inch (1st gen, Cellular, 1TB)
+  chip_id: 32807
+  board_id: 30
+  board_name: j318xap
+- id: iPad8,5
+  name: iPad Pro 12.9-inch (3rd gen, WiFi)
+  chip_id: 32807
+  board_id: 8
+  board_name: j320ap
+- id: iPad8,6
+  name: iPad Pro 12.9-inch (3rd gen, WiFi, 1TB)
+  chip_id: 32807
+  board_id: 24
+  board_name: j320xap
+- id: iPad8,7
+  name: iPad Pro 12.9-inch (3rd gen, Cellular)
+  chip_id: 32807
+  board_id: 10
+  board_name: j321ap
+- id: iPad8,8
+  name: iPad Pro 12.9-inch (3rd gen, Cellular, 1TB)
+  chip_id: 32807
+  board_id: 26
+  board_name: j321xap
+- id: iPad8,9
+  name: iPad Pro 11-inch (2nd gen, WiFi)
+  chip_id: 32807
+  board_id: 60
+  board_name: j417ap
+- id: iPhone1,1
+  name: iPhone 2G
+  chip_id: 35072
+  board_id: 0
+  board_name: m68ap
+- id: iPhone1,2
+  name: iPhone 3G
+  chip_id: 35072
+  board_id: 4
+  board_name: n82ap
+- id: iPhone10,1
+  name: iPhone 8 (Global)
+  chip_id: 32789
+  board_id: 2
+  board_name: d20ap
+- id: iPhone10,2
+  name: iPhone 8 Plus (Global)
+  chip_id: 32789
+  board_id: 4
+  board_name: d21ap
+- id: iPhone10,3
+  name: iPhone X (Global)
+  chip_id: 32789
+  board_id: 6
+  board_name: d22ap
+- id: iPhone10,4
+  name: iPhone 8 (GSM)
+  chip_id: 32789
+  board_id: 10
+  board_name: d201ap
+- id: iPhone10,5
+  name: iPhone 8 Plus (GSM)
+  chip_id: 32789
+  board_id: 12
+  board_name: d211ap
+- id: iPhone10,6
+  name: iPhone X (GSM)
+  chip_id: 32789
+  board_id: 14
+  board_name: d221ap
+- id: iPhone11,2
+  name: iPhone XS
+  chip_id: 32800
+  board_id: 14
+  board_name: d321ap
+- id: iPhone11,4
+  name: iPhone XS Max (China)
+  chip_id: 32800
+  board_id: 10
+  board_name: d331ap
+- id: iPhone11,6
+  name: iPhone XS Max
+  chip_id: 32800
+  board_id: 26
+  board_name: d331pap
+- id: iPhone11,8
+  name: iPhone XR
+  chip_id: 32800
+  board_id: 12
+  board_name: n841ap
+- id: iPhone12,1
+  name: iPhone 11
+  chip_id: 32816
+  board_id: 4
+  board_name: n104ap
+- id: iPhone12,3
+  name: iPhone 11 Pro
+  chip_id: 32816
+  board_id: 6
+  board_name: d421ap
+- id: iPhone12,5
+  name: iPhone 11 Pro Max
+  chip_id: 32816
+  board_id: 2
+  board_name: d431ap
+- id: iPhone12,8
+  name: iPhone SE (2020)
+  chip_id: 32816
+  board_id: 16
+  board_name: d79ap
+- id: iPhone13,1
+  name: iPhone 12 mini
+  chip_id: 33025
+  board_id: 10
+  board_name: d52gap
+- id: iPhone13,2
+  name: iPhone 12
+  chip_id: 33025
+  board_id: 12
+  board_name: d53gap
+- id: iPhone13,3
+  name: iPhone 12 Pro
+  chip_id: 33025
+  board_id: 14
+  board_name: d53pap
+- id: iPhone13,4
+  name: iPhone 12 Pro Max
+  chip_id: 33025
+  board_id: 8
+  board_name: d54pap
+- id: iPhone14,2
+  name: iPhone 13 Pro
+  chip_id: 33040
+  board_id: 12
+  board_name: d63ap
+- id: iPhone14,3
+  name: iPhone 13 Pro Max
+  chip_id: 33040
+  board_id: 14
+  board_name: d64ap
+- id: iPhone14,4
+  name: iPhone 13 mini
+  chip_id: 33040
+  board_id: 8
+  board_name: d16ap
+- id: iPhone14,5
+  name: iPhone 13
+  chip_id: 33040
+  board_id: 10
+  board_name: d17ap /* iPod */
+- id: iPhone2,1
+  name: iPhone 3Gs
+  chip_id: 35104
+  board_id: 0
+  board_name: n88ap
+- id: iPhone3,1
+  name: iPhone 4 (GSM)
+  chip_id: 35120
+  board_id: 0
+  board_name: n90ap
+- id: iPhone3,2
+  name: iPhone 4 (GSM) R2 2012
+  chip_id: 35120
+  board_id: 4
+  board_name: n90bap
+- id: iPhone3,3
+  name: iPhone 4 (CDMA)
+  chip_id: 35120
+  board_id: 6
+  board_name: n92ap
+- id: iPhone4,1
+  name: iPhone 4s
+  chip_id: 35136
+  board_id: 8
+  board_name: n94ap
+- id: iPhone5,1
+  name: iPhone 5 (GSM)
+  chip_id: 35152
+  board_id: 0
+  board_name: n41ap
+- id: iPhone5,2
+  name: iPhone 5 (Global)
+  chip_id: 35152
+  board_id: 2
+  board_name: n42ap
+- id: iPhone5,3
+  name: iPhone 5c (GSM)
+  chip_id: 35152
+  board_id: 10
+  board_name: n48ap
+- id: iPhone5,4
+  name: iPhone 5c (Global)
+  chip_id: 35152
+  board_id: 14
+  board_name: n49ap
+- id: iPhone6,1
+  name: iPhone 5s (GSM)
+  chip_id: 35168
+  board_id: 0
+  board_name: n51ap
+- id: iPhone6,2
+  name: iPhone 5s (Global)
+  chip_id: 35168
+  board_id: 2
+  board_name: n53ap
+- id: iPhone7,1
+  name: iPhone 6 Plus
+  chip_id: 28672
+  board_id: 4
+  board_name: n56ap
+- id: iPhone7,2
+  name: iPhone 6
+  chip_id: 28672
+  board_id: 6
+  board_name: n61ap
+- id: iPhone8,1
+  name: iPhone 6s
+  chip_id: 32768
+  board_id: 4
+  board_name: n71ap
+- id: iPhone8,1
+  name: iPhone 6s
+  chip_id: 32771
+  board_id: 4
+  board_name: n71map
+- id: iPhone8,2
+  name: iPhone 6s Plus
+  chip_id: 32771
+  board_id: 6
+  board_name: n66map
+- id: iPhone8,2
+  name: iPhone 6s Plus
+  chip_id: 32768
+  board_id: 6
+  board_name: n66ap
+- id: iPhone8,4
+  name: iPhone SE
+  chip_id: 32771
+  board_id: 2
+  board_name: n69ap
+- id: iPhone8,4
+  name: iPhone SE
+  chip_id: 32768
+  board_id: 2
+  board_name: n69uap
+- id: iPhone9,1
+  name: iPhone 7 (Global)
+  chip_id: 32784
+  board_id: 8
+  board_name: d10ap
+- id: iPhone9,2
+  name: iPhone 7 Plus (Global)
+  chip_id: 32784
+  board_id: 10
+  board_name: d11ap
+- id: iPhone9,3
+  name: iPhone 7 (GSM)
+  chip_id: 32784
+  board_id: 12
+  board_name: d101ap
+- id: iPhone9,4
+  name: iPhone 7 Plus (GSM)
+  chip_id: 32784
+  board_id: 14
+  board_name: d111ap
+- id: iPod1,1
+  name: iPod Touch (1st gen)
+  chip_id: 35072
+  board_id: 2
+  board_name: n45ap
+- id: iPod2,1
+  name: iPod Touch (2nd gen)
+  chip_id: 34592
+  board_id: 0
+  board_name: n72ap
+- id: iPod3,1
+  name: iPod Touch (3rd gen)
+  chip_id: 35106
+  board_id: 2
+  board_name: n18ap
+- id: iPod4,1
+  name: iPod Touch (4th gen)
+  chip_id: 35120
+  board_id: 8
+  board_name: n81ap
+- id: iPod5,1
+  name: iPod Touch (5th gen)
+  chip_id: 35138
+  board_id: 0
+  board_name: n78ap
+- id: iPod7,1
+  name: iPod Touch (6th gen)
+  chip_id: 28672
+  board_id: 16
+  board_name: n102ap
+- id: iPod9,1
+  name: iPod Touch (7th gen)
+  chip_id: 32784
+  board_id: 22
+  board_name: n112ap /* iPad */
