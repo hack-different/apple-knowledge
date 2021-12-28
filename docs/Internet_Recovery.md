@@ -70,3 +70,8 @@ An analysis shows the following values
 * CU - chunklist URL (this becomes dangerous if downgrade attacked to v1)
 * CH - Chunklist URL hash / content
 * CT - Chunklist URL token cookie (Passed in the next request as a cookie header)
+
+
+# Credit
+
+Research by Rick Mark and moved from `rickmark/apple_net_recovery`

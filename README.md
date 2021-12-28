@@ -58,10 +58,12 @@ Updates and additions there should automatically be reflected in the documents
 * [OWASP: iOS Tampering and Reverse Engineering](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x06c-Reverse-Engineering-and-Tampering.md)
 * [Kernel Debug Kit](docs/kdk)
 * [*OS Internals by Jonathan Levin](https://newosxbook.com/index.php)
+* [T2 Dev Setup](docs/T2)
 
 ## Devices
 
 * [T2 Dev Team: `t8012` / Apple T2 / bridgeOS](https://t8012.dev)
+* [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Main_Page)
 
 ## Protocols / Formats
 
@@ -70,12 +72,22 @@ Updates and additions there should automatically be reflected in the documents
 * [`EFI`](docs/efi)
 * [`NVRAM`](docs/nvram)
 * [`SEP_memmap`](docs/SEP_memmap)
+* [`apple/darwin-xnu`](https://github.com/apple/darwin-xnu)
 
 ### Archive / Disk Formats
 
-* `bom`
+* APFS - Apple Filesystem
+  * [Apple APFS Reference](https://developer.apple.com/support/downloads/Apple-File-System-Reference.pdf)
+  * [`sgan81/apfs-fuse`](https://github.com/sgan81/apfs-fuse)
+  * [`libyal/libfsapfs`](https://github.com/libyal/libfsapfs)
+  * [`cugu/apfs.ksy`](https://github.com/cugu/apfs.ksy)
+* NeXT / Apple "Bill of Materials" / `pkg` / `bom`
+  * [`iineva/bom`](https://github.com/iineva/bom)
 * `pbzx`
-* `dmg`
+* Apple Disk Image - `dmg`
+  * [`jhermsmeier/node-udif`](https://github.com/jhermsmeier/node-udif)
+  * [`nlitsme/encrypteddmg`](https://github.com/nlitsme/encrypteddmg)
+  * [`darlinghq/darling-dmg`](https://github.com/darlinghq/darling-dmg)
 * Signed System Volumes (SSV) / `root_hash`
 
 ### Databases
@@ -97,6 +109,10 @@ Updates and additions there should automatically be reflected in the documents
   * <https://www.downtowndougbrown.com/2012/07/power-macintosh-g3-blue-and-white-custom-startup-sound/>
 * AirPlay2
   * [`mikebrady/shareport-sync`](https://github.com/mikebrady/shairport-sync)
+
+### Software Update / Installers
+
+* [`notpeter/apple-installer-checksums`](https://github.com/notpeter/apple-installer-checksums)
 
 ### Code and Signature Formats
 
@@ -173,12 +189,31 @@ Updates and additions there should automatically be reflected in the documents
 * XHC20 USB Capture
   * <https://github.com/t8012/demuxusb/blob/b6b1a1a6633449c2cb16ad44edcc22aab4dc29cd/ext/pcapng.h>
 
-### X-Plat
+## Jailbreaks
+
+* [limera1n](https://github.com/Chronic-Dev/syringe/blob/master/syringe/exploits/limera1n/limera1n.c)
+* [`OpenJailbreak/greenpois0n`](https://github.com/OpenJailbreak/greenpois0n)
+* [`axi0mX/ipwndfu`](https://github.com/axi0mX/ipwndfu)
+* [checkra1n](https://checkra.in)
+* [unc0ver](https://unc0ver.dev)
+
+### Jailbreak Tooling
+
+* [`Chronic-Dev/syringe`](https://github.com/Chronic-Dev/syringe)
+* [Cydia](https://cydia.saurik.com)
+
+## X-Plat
 
 * [pongoOS](https://github.com/checkra1n/pongoOS)
 * [Asahi Linux for M1](https://asahilinux.org)
 * [Corellium's M1 Branch](https://github.com/corellium/linux-m1)
 * [Android on pongoOS](https://github.com/corellium/projectsandcastle)
+
+## Safety / Protection
+
+* [`rickmark/isafety`](https://github.com/rickmark/isafety)
+* [Mobile Verification Toolkit](https://docs.mvt.re/en/latest/)
+* [`mvt-project/mvt`](https://github.com/mvt-project/mvt)
 
 # Credits
 
@@ -189,3 +224,25 @@ Portions of data and knowledge come from <https://theiphonewiki.org>, <https://l
 <https://checkra.in> as well as the individuals who brought you those projects.
 
 Tooling is being written to credit all parties using GitHub's API
+
+## Dedication
+
+> Here’s to the crazy ones, the misfits, the rebels, the troublemakers
+> 
+> the round pegs in the square holes… 
+>
+> the ones who see things differently — they’re not fond of rules… 
+> 
+> You can quote them, disagree with them, glorify or vilify them, but the only thing you can’t do is ignore them because they change things… 
+> 
+> They push the human race forward, and while some may see them as the crazy ones, 
+> 
+> we see genius, 
+> 
+> because the ones who are crazy enough to think that they can change the world, 
+> 
+> are the ones who do.
+>
+> — Steve Jobs, 1997
+
+Also dedicated to the volunteer work of those who use this for good, and deny the shadow to those who seek to harm.
