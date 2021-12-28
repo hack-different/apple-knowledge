@@ -20,4 +20,6 @@ end
 
 group :development do
   gem 'webrick'
+  gem 'manpages'
+  gem 'plist'
 end

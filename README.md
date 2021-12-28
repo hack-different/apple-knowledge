@@ -33,6 +33,7 @@ A master index of Apple 4CCs exists at [docs/4CC.md](docs/4CC)
 * <https://salmanarif.bitbucket.io/visual/index.html>
 * <https://ghidra-sre.org>
 * <https://www.hopperapp.com>
+* [blacktop/ipsw](https://github.com/blacktop/ipsw)
 
 ## Guides
 

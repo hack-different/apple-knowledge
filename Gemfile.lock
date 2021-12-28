@@ -218,6 +218,7 @@ GEM
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    manpages (0.6.1)
     mercenary (0.3.6)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
@@ -232,6 +233,7 @@ GEM
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+    plist (3.6.0)
     public_suffix (4.0.6)
     racc (1.6.0)
     rb-fsevent (0.11.0)
@@ -266,7 +268,7 @@ GEM
     unf_ext (0.0.8)
     unicode-display_width (1.8.0)
     webrick (1.7.0)
-    zeitwerk (2.5.1)
+    zeitwerk (2.5.2)
 
 PLATFORMS
   x86_64-darwin-21
@@ -274,6 +276,8 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-feed
+  manpages
+  plist
   webrick
 
 BUNDLED WITH
