@@ -2,138 +2,138 @@
 - code: 0Cfg
   description:
   usage:
-    - SysCfg
+  - SysCfg
 - code: AAPL
   description: Generic 4CC for Apple, often Creator Code
   usage:
-    - Everwhere
+  - Everwhere
 - code: ADDA
   description:
   usage:
-    - SysCfg
+  - SysCfg
 - code: BNDL
   description: Loadable Bundle (plugin)
   usage:
-    - macOS
+  - macOS
 - code: BORD
   description:
   usage:
-    - APTicket
+  - APTicket
 - code: CEPO
   description: Certificate Epoch
   usage:
-    - APTicket
+  - APTicket
 - code: CHIP
   description: Chip ID
   usage:
-    - APTicket
-- code: coih
-  usage:
-    - APTicket
+  - APTicket
 - code: CLHS
   description:
   usage:
-    - SysCfg
+  - SysCfg
 - code: CPRO
   description: Chip Production Status
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: CPRV
   description: Chip Revision
   usage:
-    - APTicket
+  - APTicket
 - code: CSEC
   description: Chip security mode
   usage:
-    - APTicket
+  - APTicket
 - code: ECID
   description: Exclusive Chip ID
   usage:
-    - APTicket
+  - APTicket
 - code: EPRO
   description:
   usage:
-    - APTicket
+  - APTicket
 - code: ESEC
   description:
   usage:
-    - APTicket
+  - APTicket
 - code: MOJO
   description: Mojo Debug Flag
   usage:
-    - SMC
+  - SMC
 - code: Mod#
   description: Model Number
   usage:
-    - FDR
-    - SysCfg
+  - FDR
+  - SysCfg
 - code: Regn
   description: Region
   usage:
-    - FDR
-    - SysCfg
+  - FDR
+  - SysCfg
 - code: SDOM
   description: Security Domain
   usage:
-    - APTicket
+  - APTicket
 - code: SrNm
   description: Serial Number
   usage:
-    - SysCfg
+  - SysCfg
 - code: WSKU
   description:
   usage:
-    - SysCfg
+  - SysCfg
 - code: anef
   description: Apple Neural Engine Firmware
   usage:
-    - Firmware
+  - Firmware
 - code: ansf
   description: Apple NAND Storage Firmware
   usage:
-    - Firmware
+  - Firmware
 - code: aopf
   description: Always-on-Processor Firmware
   usage:
-    - Firmware
+  - Firmware
 - code: appv
   description:
   usage:
-    - FDR
-    - SysCfg
+  - FDR
+  - SysCfg
 - code: aubt
   description:
   usage: []
 - code: auxi
   description: Auxiliary Kernel Cache Image4 Hash
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: auxp
   description: User Authorized Kext List Hash
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: auxr
   description: Kext Receipt Hash
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: avef
   description: Audio / Video Encryption (DRM) Firmware
   usage:
-    - Firmware
+  - Firmware
 - code: bstc
   description:
   usage: []
 - code: ciof
   description:
   usage:
-    - Firmware
+  - Firmware
+- code: coih
+  usage:
+  - APTicket
 - code: csys
   description:
   usage: []
 - code: dCfg
   description:
   usage:
-    - FDR
+  - FDR
 - code: dcp2
   description:
   usage: []
@@ -143,136 +143,136 @@
 - code: dtre
   description: Device Tree
   usage:
-    - Firmware
+  - Firmware
 - code: eCfg
   description:
   usage:
-    - FDR
-    - SysCfg
+  - FDR
+  - SysCfg
 - code: fCfg
   description:
   usage: []
 - code: gfxf
   description: Graphics Firmware
   usage:
-    - Firmware
+  - Firmware
 - code: ibdt
   description: iBoot Data
   usage:
-    - Firmware
+  - Firmware
 - code: ibot
   description: iBoot
   usage:
-    - Firmware
+  - Firmware
 - code: ispf
   description: Image Signal Processor |Firmware
   usage:
-    - Firmware
+  - Firmware
 - code: krnl
   description: XNU Kernel
   usage:
-    - Firmware
+  - Firmware
 - code: ksku
   description:
   usage: []
 - code: kuid
   description: Key Exchange Key UUID
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: logo
   description: iBoot Apple Logo
   usage:
-    - Firmware
+  - Firmware
 - code: love
   description: OS Version
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: lpnh
   description: LocalPolicy Nonce Hash
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: lpol
   description: Local Policy
   usage:
-    - Firmware
-    - Boot Policy
+  - Firmware
+  - Boot Policy
 - code: nsih
   description:
   usage: []
 - code: pmpf
   description: Power Management Processor Firmware
   usage:
-    - Firmware
+  - Firmware
 - code: rlg1
   description:
   usage:
-    - Firmware
+  - Firmware
 - code: rlg2
   description:
   usage:
-    - Firmware
+  - Firmware
 - code: roph
   description: RecoveryOS Policy Nonce  Hash
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: rpnh
   description: Remote Policy Nonce Hash
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: seal
   description:
   usage:
-    - FDR
+  - FDR
 - code: siof
   description: Smart-IO Firmware
   usage:
-    - Firmware
+  - Firmware
 - code: sip0
   description: System Integrity  Protection
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: sip1
   description: System Integrity Protection
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: sip2
   description: System Integrity Protection
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: sip3
   description: System Integrity Protection
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: smb0
   description: Secure Multi-Boot
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: smb1
   description: Secure Multi-Boot
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: smb2
   description: Secure Multi-Boot
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: smb3
   description: Secure Multi-Boot
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: smb4
   description: Secure Multi-Boot
   usage:
-    - Boot Policy
+  - Boot Policy
 - code: tCfg
   description:
   usage:
-    - FDR
-    - SysCfg
+  - FDR
+  - SysCfg
 - code: tmuf
   description:
   usage:
-    - Firmware
+  - Firmware
 - code: vuid
   description: Volume UUID
   usage:
-    - Boot Policy
+  - Boot Policy
