@@ -140,6 +140,8 @@ Updates and additions there should automatically be reflected in the documents
   * [`arandomdev/DyldExtractor`](https://github.com/arandomdev/DyldExtractor)
 * iBoot LocalPolicy, RemotePolicy and BAA signing
   * [`M1_Boot_Policy`](docs/M1_Boot_Policy)
+* Rosetta2
+  * [ProjectChampollion](https://github.com/FFRI/ProjectChampollion/)
 
 
 ### USB Protocols
