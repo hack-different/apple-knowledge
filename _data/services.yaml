@@ -4,7 +4,7 @@
 - name: com.apple.AXMediaUtilitiesService
 - name: com.apple.Accessibility.AccessibilityUIServer
 - name: com.apple.AdminLite
-  binary: /System/Library/PrivateFrameworks/AdminLite.framework/Resources/AdminLiteTool
+  binary: "/System/Library/PrivateFrameworks/AdminLite.framework/Resources/AdminLiteTool"
   description: Turns on / off setting boot-args
 - name: com.apple.AppImageMounter
 - name: com.apple.AppleCredentialManagerDaemon
@@ -22,13 +22,7 @@
 - name: com.apple.BarcodeSupport.BarcodeNotificationService
   description: Camera QR code reader
 - name: com.apple.BlueTool
-- name: com.apple.TrustEvaluationAgent
-  binary: /System/Library/PrivateFrameworks/TrustEvaluationAgent.framework/Resources/trustevaluationagent
-  platforms:
-  - macOS Intel
 - name: com.apple.CallHistorySyncHelper
-- name: com.apple.distnoted.xpc.agent
-  binary: /usr/sbin/distnoted
 - name: com.apple.CarPlayApp
   platforms:
   - iOS
@@ -36,9 +30,14 @@
   description: Deal with the radios
 - name: com.apple.CommCenterMobileHelper
 - name: com.apple.CommCenterRootHelper
+- name: com.apple.CoreAuthentication.agent
+  binary: "/System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd"
+  description: coreauthd is a system daemon or agent that provides LocalAuthentication
+    services. It maintains the authenticated contexts and presents the authentication
+    user interface.
 - name: com.apple.CoreAuthentication.daemon
 - name: com.apple.CoreRoutine.helperservice
-  binary: /System/Library/PrivateFrameworks/CoreRoutine.framework/Versions/A/XPCServices/CoreRoutineHelperService.xpc/Contents/MacOS/CoreRoutineHelperService
+  binary: "/System/Library/PrivateFrameworks/CoreRoutine.framework/Versions/A/XPCServices/CoreRoutineHelperService.xpc/Contents/MacOS/CoreRoutineHelperService"
   platforms:
   - macOS Intel
   endpoints:
@@ -80,7 +79,7 @@
 - name: com.apple.ReportMemoryException
 - name: com.apple.SCHelper
   platforms:
-    - macOS
+  - macOS
   description: Smart Card helper
 - name: com.apple.Safari.SafeBrowsing.Service
 - name: com.apple.SafariBookmarksSyncAgent
@@ -91,16 +90,15 @@
 - name: com.apple.SepUpdateTimer
 - name: com.apple.SpringBoard
   platforms:
-    - iOS
+  - iOS
 - name: com.apple.SyncAgent
 - name: com.apple.TextInput.kbd
-- name: com.apple.CoreAuthentication.agent
-  binary: /System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd
-  description: coreauthd is a system daemon or agent that provides LocalAuthentication services. It maintains the authenticated contexts and presents the authentication user interface.
-- name: com.apple.security.XPCTimeStampingService
-  binary: /System/Library/Frameworks/Security.framework/Versions/A/XPCServices/XPCTimeStampingService.xpc/Contents/MacOS/XPCTimeStampingService
+- name: com.apple.TrustEvaluationAgent
+  binary: "/System/Library/PrivateFrameworks/TrustEvaluationAgent.framework/Resources/trustevaluationagent"
+  platforms:
+  - macOS Intel
 - name: com.apple.TrustedPeersHelper
-  binary: /System/Library/Frameworks/Security.framework/Versions/A/XPCServices/TrustedPeersHelper.xpc/Contents/MacOS/TrustedPeersHelper
+  binary: "/System/Library/Frameworks/Security.framework/Versions/A/XPCServices/TrustedPeersHelper.xpc/Contents/MacOS/TrustedPeersHelper"
   description:
 - name: com.apple.UIKit.KeyboardManagement
 - name: com.apple.UsageTrackingAgent
@@ -126,14 +124,14 @@
 - name: com.apple.accounts.dom
 - name: com.apple.accountsd
 - name: com.apple.adid
-  binary: /usr/libexec/adid
+  binary: "/usr/libexec/adid"
 - name: com.apple.afcd
-  binary: /usr/libexec/afcd
+  binary: "/usr/libexec/afcd"
 - name: com.apple.aggregated
   description: Create aggregate logs
 - name: com.apple.aggregated.addaily
 - name: com.apple.airtunesd
-  binary: /usr/libexec/airtunesd
+  binary: "/usr/libexec/airtunesd"
   description: iTunes library sharing
 - name: com.apple.akd
   description: AuthKit
@@ -141,19 +139,19 @@
 - name: com.apple.analyticsd
 - name: com.apple.and
 - name: com.apple.ap.adprivacyd
-  binary: /usr/libexec/adprivacyd
+  binary: "/usr/libexec/adprivacyd"
   description: iAd privacy
 - name: com.apple.ap.adservicesd
-  binary: /usr/libexec/adservicesd
+  binary: "/usr/libexec/adservicesd"
   description: iAd services
 - name: com.apple.applecamerad
-  binary: /usr/libexec/adservicesd
+  binary: "/usr/libexec/adservicesd"
   description: Camera handler
 - name: com.apple.appstored
   description: App Store
 - name: com.apple.apsd
 - name: com.apple.asd
-  binary: /usr/libexec/asd
+  binary: "/usr/libexec/asd"
 - name: com.apple.askpermissiond
 - name: com.apple.aslmanager
   description: Apple System Log
@@ -164,16 +162,16 @@
 - name: com.apple.assistantd
 - name: com.apple.assistivetouchd
 - name: com.apple.atc
-  binary: /usr/libexec/atc
+  binary: "/usr/libexec/atc"
 - name: com.apple.atc.atwakeup
-  binary: /usr/libexec/atwakeup
+  binary: "/usr/libexec/atwakeup"
 - name: com.apple.audio.toolbox.reporting.service
 - name: com.apple.avatarsd
   description: iMessage / iCloud profile photos
 - name: com.apple.awdd
   description: Apple Wireless Diagnostics Daemon
 - name: com.apple.backboardd
-  binary: /usr/libexec/backboardd
+  binary: "/usr/libexec/backboardd"
 - name: com.apple.backupd
 - name: com.apple.biometrickitd.pearl
   description: FaceID
@@ -205,7 +203,7 @@
 - name: com.apple.commandandcontrol
 - name: com.apple.companion_proxy
 - name: com.apple.configd
-  binary: /usr/libexec/configd
+  binary: "/usr/libexec/configd"
 - name: com.apple.contacts.donation-agent
   description: Provide contacts from a sync provider
 - name: com.apple.contactsd
@@ -218,8 +216,9 @@
 - name: com.apple.coredatad
 - name: com.apple.coreduetd
 - name: com.apple.coreidvd
-  binary: /usr/libexec/coreidvd
-  description: Daemon for the CoreIDV private framework (probably "identity verification" for Apple Pay)
+  binary: "/usr/libexec/coreidvd"
+  description: Daemon for the CoreIDV private framework (probably "identity verification"
+    for Apple Pay)
 - name: com.apple.coreparsec.silhoette
 - name: com.apple.coreservices.useractivityd
 - name: com.apple.corespeechd
@@ -230,7 +229,7 @@
 - name: com.apple.ctkd
   description: Cloud Token Kit daemon
 - name: com.apple.dasd
-  binary: /usr/libexec/dasd
+  binary: "/usr/libexec/dasd"
   description: Duet Activity Scheduler Daemon (related to DuetActivityScheduler.framework)
 - name: com.apple.dataaccess.dataaccessd
 - name: com.apple.datamigrator
@@ -239,13 +238,16 @@
 - name: com.apple.deferredmediad
 - name: com.apple.deleted_helper
 - name: com.apple.device-o-matic
-  description: Figure out what profile to present when the device is connected via USB
+  description: Figure out what profile to present when the device is connected via
+    USB
 - name: com.apple.devicecheckd
 - name: com.apple.devicedataresetd
 - name: com.apple.diagnosticd
   description: Diagnostics
 - name: com.apple.diagnosticextensionsd
   description: Manage diagnostic extensions
+- name: com.apple.distnoted.xpc.agent
+  binary: "/usr/sbin/distnoted"
 - name: com.apple.distnoted.xpc.daemon
   description: Distributed notificaions
 - name: com.apple.dmd
@@ -259,13 +261,14 @@
 - name: com.apple.facebook.xpc
   description: Facebook account handler
 - name: com.apple.fairplay.H2
-  description: FairPlay is the DRM (digital rights management) system for Apple - research in this area is dangorous
+  description: FairPlay is the DRM (digital rights management) system for Apple -
+    research in this area is dangorous
 - name: com.apple.familycircled
   description: iCloud Family Management
 - name: com.apple.familynotificaiton
   description: Notify UI for family events
 - name: com.apple.fdrhelper
-  binary: /usr/libexec/fdrhelper
+  binary: "/usr/libexec/fdrhelper"
   description: Factory Data Reset
 - name: com.apple.filesystems.apfs_defragd
   description: online defragment and optimize for APFS
@@ -285,10 +288,10 @@
 - name: com.apple.gamed
   description: GameKit
 - name: com.apple.geod
-  binary: /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod
+  binary: "/System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod"
   platforms:
   - macOS Intel
-  description:  Geo-fencing
+  description: Geo-fencing
 - name: com.apple.gpsd
   description: GPS
 - name: com.apple.handreporter
@@ -313,10 +316,11 @@
 - name: com.apple.icloud.fmflocatord
   description: Find my friends
 - name: com.apple.icloud.searchpartyd
-  description: The searching component looking for offline devices broadcasging for FindMy and sending to Apple
+  description: The searching component looking for offline devices broadcasging for
+    FindMy and sending to Apple
 - name: com.apple.iconservices.iconservicesagent
 - name: com.apple.idamd
-  binary: /usr/libexec/idamd
+  binary: "/usr/libexec/idamd"
 - name: com.apple.identityservicesd
 - name: com.apple.ids.IDSCredentialsAgent
 - name: com.apple.idsfoundation.IDSRemoteURLConnectionAgent
@@ -343,10 +347,10 @@
 - name: com.apple.lsd
   description: Launch Services daemon
 - name: com.apple.lskdd
-  binary: /usr/libexec/lskdd
-  description:  Local System Kernel Debug Daemon?
+  binary: "/usr/libexec/lskdd"
+  description: Local System Kernel Debug Daemon?
 - name: com.apple.lskdmsed
-  binary: /usr/libexec/lskdmsed
+  binary: "/usr/libexec/lskdmsed"
   description: Local System Kernel Debug Memory Daemon?
 - name: com.apple.mDNSResponder.reloaded
 - name: com.apple.mDNSResponderHelper.reloaded
@@ -355,7 +359,7 @@
 - name: com.apple.managedconfiguration.passscodenagd
   description: Tells you to set a passcode if set from policy
 - name: com.apple.managedconfiguration.profiled
-  description: .mobileprofile management
+  description: ".mobileprofile management"
 - name: com.apple.managedconfiguration.teslad
 - name: com.apple.maps.destinationd
 - name: com.apple.matd
@@ -373,12 +377,12 @@
 - name: com.apple.migrationpluginwrapper
   description: Environment for OS upgrade migration plugins to run in
 - name: com.apple.misagent
-  binary: /usr/libexec/misagent
+  binary: "/usr/libexec/misagent"
   description: Provisioning profiles
 - name: com.apple.mlmodelingd
   description: Machine Learning modeling daemon
 - name: com.apple.mobile.MCInstall
-  description: .mobileconfig management
+  description: ".mobileconfig management"
 - name: com.apple.mobile.assertion_agent
 - name: com.apple.mobile.cache_delete_app_container_caches
 - name: com.apple.mobile.cache_delete_daily
@@ -413,32 +417,32 @@
 - name: com.apple.nanoregistryd
   description: Apple Watch application registry (launch services)
 - name: com.apple.nanoregistrylaunchd
-- name: com.apple.nanotimekitcompaniond
 - name: com.apple.nanosubridged
   description: Apple Watch Software Update Bridge
+- name: com.apple.nanotimekitcompaniond
 - name: com.apple.navd
 - name: com.apple.ndoagent
 - name: com.apple.neagent-ios
-  binary: /usr/libexec/neagent
+  binary: "/usr/libexec/neagent"
   description: Network Extension - Agent
 - name: com.apple.nearbyd
-  binary: /usr/libexec/nearbyd
+  binary: "/usr/libexec/nearbyd"
 - name: com.apple.nehelper
-  binary: /usr/libexec/nehelper
+  binary: "/usr/libexec/nehelper"
   description: Network Extensions
 - name: com.apple.nesessionmanager
-  binary: /usr/libexec/nesessionmanager
+  binary: "/usr/libexec/nesessionmanager"
 - name: com.apple.networkserviceproxy
-  binary: /usr/libexec/networkserviceproxy
+  binary: "/usr/libexec/networkserviceproxy"
 - name: com.apple.newsd
   description: Apple News
 - name: com.apple.nfcd
-  binary: /usr/libexec/nfcd
+  binary: "/usr/libexec/nfcd"
   description: Near Field Communications
 - name: com.apple.nfrestore
-  binary: /usr/libexec/nfrestore_service
+  binary: "/usr/libexec/nfrestore_service"
 - name: com.apple.nlcd
-  binary: /usr/libexec/ncld
+  binary: "/usr/libexec/ncld"
   description: Network Link Conditioner
 - name: com.apple.notifyd
 - name: com.apple.nsurlsessiond
@@ -452,23 +456,24 @@
 - name: com.apple.pasteboard.pasted
   description: Clipboard / Paseboard Services
 - name: com.apple.pcapd
-  binary: /usr/libexec/pcapd
+  binary: "/usr/libexec/pcapd"
   description: Packet Capture
 - name: com.apple.peakpowermanagerd
 - name: com.apple.perfdiagsselfenabled
 - name: com.apple.pfd
-  binary: /usr/libexec/pfd
+  binary: "/usr/libexec/pfd"
   description: Packet Filter
 - name: com.apple.photoanalysisd
 - name: com.apple.photos.ImageConversionService
 - name: com.apple.pipelined
 - name: com.apple.pluginkit.pkd
-  binary: /usr/libexec/pkd
-  description: pkd manages plug-ins for the PlugInKit subsystem. It is a classic launch agent managed by launchd.
+  binary: "/usr/libexec/pkd"
+  description: pkd manages plug-ins for the PlugInKit subsystem. It is a classic launch
+    agent managed by launchd.
   platforms:
-    - macOS Intel
+  - macOS Intel
   endpoints:
-    - com.apple.pluginkit.pkd
+  - com.apple.pluginkit.pkd
 - name: com.apple.pluginkit.pkreporter
 - name: com.apple.powerd
 - name: com.apple.powerlogHelperd
@@ -509,28 +514,30 @@
 - name: com.apple.searchd
   description: Spotlight
 - name: com.apple.security.CircleJoinRequested
+- name: com.apple.security.XPCTimeStampingService
+  binary: "/System/Library/Frameworks/Security.framework/Versions/A/XPCServices/XPCTimeStampingService.xpc/Contents/MacOS/XPCTimeStampingService"
 - name: com.apple.security.cloudkeychainproxy3
 - name: com.apple.security.swcagent
 - name: com.apple.securityd
-  binary: /usr/libexec/securityd
+  binary: "/usr/libexec/securityd"
   description: Handle keychains etc
 - name: com.apple.securityuploadd
-  binary: /usr/libexec/securityuploadd
+  binary: "/usr/libexec/securityuploadd"
 - name: com.apple.seld
-  binary: /usr/libexec/seld
+  binary: "/usr/libexec/seld"
 - name: com.apple.sensorkitd
-  binary: /usr/libexec/sensorkitd
+  binary: "/usr/libexec/sensorkitd"
 - name: com.apple.seserviced
-  binary: /usr/libexec/seserviced
+  binary: "/usr/libexec/seserviced"
   description: Secure Element interface
 - name: com.apple.sharingd
-  binary: /usr/libexec/sharingd
+  binary: "/usr/libexec/sharingd"
   description: Generic "Share" action handler
 - name: com.apple.sidecar-relay
-  binary: /usr/libexec/SidecarRelay
+  binary: "/usr/libexec/SidecarRelay"
   description: Use iDevice as a screen
 - name: com.apple.signpost.signpost_reporter
-  binary: /usr/libexec/signpost_reporter
+  binary: "/usr/libexec/signpost_reporter"
 - name: com.apple.siri-distributed-evaluation
 - name: com.apple.siri.ClientFlow.ClientScripter
 - name: com.apple.siri.acousticsignature
@@ -545,12 +552,12 @@
 - name: com.apple.spotlight.IndexAgent
 - name: com.apple.storebookkeeperd
 - name: com.apple.streaming_zip_conduit
-  binary: /usr/libexec/streaming_zip_conduit
+  binary: "/usr/libexec/streaming_zip_conduit"
   description: Handle untrusted Zip content out of process
 - name: com.apple.subridged
 - name: com.apple.suggestd
 - name: com.apple.swcd
-  binary: /usr/libexec/swcd
+  binary: "/usr/libexec/swcd"
   description: Shared Web Credentials
 - name: com.apple.symptomsd
 - name: com.apple.symptomsd.helper
@@ -559,73 +566,73 @@
 - name: com.apple.sysdiagnose_helper
 - name: com.apple.systemstats.microstackshot_periodic
 - name: com.apple.tailspind
-  binary: /usr/libexec/tailspind
+  binary: "/usr/libexec/tailspind"
 - name: com.apple.tccd
   description: Total and Complete Control - App privacy settings
 - name: com.apple.telephonyutilities.callservicesd
 - name: com.apple.tencentweibo.xpc
 - name: com.apple.terminusd
-  binary: /usr/libexec/terminusd
+  binary: "/usr/libexec/terminusd"
   description: On-demand VPN
 - name: com.apple.thermalmonitord
-  binary: /usr/libexec/thermalmonitord
+  binary: "/usr/libexec/thermalmonitord"
 - name: com.apple.timed
-  binary: /usr/libexec/timed
+  binary: "/usr/libexec/timed"
   description: NTP Client
 - name: com.apple.timezoneupdates.tzd
-  binary: /usr/libexec/tzd
+  binary: "/usr/libexec/tzd"
 - name: com.apple.tipsd
-  binary: /usr/libexec/tipsd
+  binary: "/usr/libexec/tipsd"
   description: Tip of the day
 - name: com.apple.tonelibraryd
   description: Ringtone library access
 - name: com.apple.touchsetupd
 - name: com.apple.transparencyd
-  binary: /usr/libexec/transparencyd
+  binary: "/usr/libexec/transparencyd"
 - name: com.apple.triald
-  binary: /usr/libexec/triald
+  binary: "/usr/libexec/triald"
   description: Apple A/B testing
 - name: com.apple.trustd
-  binary: /usr/libexec/trustd
+  binary: "/usr/libexec/trustd"
   description: PKI trust evaluation
 - name: com.apple.tvremoted
   description: Apple TV remote app
 - name: com.apple.twitter.xpc
   description: Twitter account handler
 - name: com.apple.tzlinkd
-  binary: /usr/libexec/tzlinkd
+  binary: "/usr/libexec/tzlinkd"
   description: Time Zones
 - name: com.apple.usb.networking.addNetworkInterface
 - name: com.apple.videosybscriptionsd
-  binary: /usr/libexec/videosubscriptionsd
+  binary: "/usr/libexec/videosubscriptionsd"
 - name: com.apple.voiced
 - name: com.apple.voicemail.vmd
 - name: com.apple.voicememod
   description: Voice Memos
 - name: com.apple.watchdogd
-  binary: /usr/libexec/watchdogd
+  binary: "/usr/libexec/watchdogd"
 - name: com.apple.watchlistd
 - name: com.apple.wcd
-  binary: /usr/libexec/wcd
+  binary: "/usr/libexec/wcd"
 - name: com.apple.webinspectord
-  binary: /usr/libexec/webinspectord
+  binary: "/usr/libexec/webinspectord"
 - name: com.apple.webio.xpc
   description: Webio account handler
 - name: com.apple.wifi.hostapd
   description: Host Access Point - Instant Hotspot
 - name: com.apple.wifi.wapic
-  binary: /usr/libexec/wapic
+  binary: "/usr/libexec/wapic"
 - name: com.apple.wifiFirmwareLoader
-  binary: /usr/libexec/wifiFirmwareLoader
+  binary: "/usr/libexec/wifiFirmwareLoader"
   description: Move the firmware from disk to the WiFi chip
 - name: com.apple.wifianalyticsd
-  binary: /usr/libexec/wifianalyticsd
+  binary: "/usr/libexec/wifianalyticsd"
 - name: com.apple.wifid
   description: WiFi
 - name: com.apple.wifip2pd
-  binary: /usr/libexec/wifip2pd
+  binary: "/usr/libexec/wifip2pd"
   description: WiFi peer-to-peer
 - name: com.apple.wifivelocityd
-  binary: /usr/libexec/wifivelocityd
+  binary: "/usr/libexec/wifivelocityd"
 - name: com.apple.xpc.roleaccountd
-  binary: /usr/libexec/xpcroleaccountd
+  binary: "/usr/libexec/xpcroleaccountd"

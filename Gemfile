@@ -1,4 +1,6 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
 # file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
@@ -14,12 +16,16 @@ source "https://rubygems.org"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "github-pages"
-  gem "jekyll-feed"
+  gem 'github-pages'
+  gem 'jekyll-feed'
 end
 
 group :development do
-  gem 'webrick'
+  gem 'activesupport'
   gem 'manpages'
+  gem 'overcommit'
   gem 'plist'
+  gem 'rake'
+  gem 'rubocop'
+  gem 'webrick'
 end

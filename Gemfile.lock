@@ -9,6 +9,8 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    ast (2.4.2)
+    childprocess (4.1.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -48,7 +50,7 @@ GEM
     ffi (1.15.4)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
-    github-pages (222)
+    github-pages (223)
       github-pages-health-check (= 1.17.9)
       jekyll (= 3.9.0)
       jekyll-avatar (= 0.7.0)
@@ -58,6 +60,7 @@ GEM
       jekyll-feed (= 0.15.1)
       jekyll-gist (= 1.5.0)
       jekyll-github-metadata (= 2.13.0)
+      jekyll-include-cache (= 0.2.1)
       jekyll-mentions (= 1.6.0)
       jekyll-optional-front-matter (= 0.3.2)
       jekyll-paginate (= 1.1.0)
@@ -104,6 +107,7 @@ GEM
     http_parser.rb (0.8.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    iniparse (1.5.0)
     jekyll (3.9.0)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -138,6 +142,8 @@ GEM
     jekyll-github-metadata (2.13.0)
       jekyll (>= 3.4, < 5.0)
       octokit (~> 4.0, != 4.4.0)
+    jekyll-include-cache (0.2.1)
+      jekyll (>= 3.7, < 5.0)
     jekyll-mentions (1.6.0)
       html-pipeline (~> 2.3)
       jekyll (>= 3.7, < 5.0)
@@ -231,18 +237,40 @@ GEM
     octokit (4.21.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
+    overcommit (0.58.0)
+      childprocess (>= 0.6.3, < 5)
+      iniparse (~> 1.4)
+      rexml (~> 3.2)
+    parallel (1.21.0)
+    parser (3.0.3.2)
+      ast (~> 2.4.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     plist (3.6.0)
     public_suffix (4.0.6)
     racc (1.6.0)
+    rainbow (3.0.0)
+    rake (13.0.6)
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    regexp_parser (2.2.0)
     rexml (3.2.5)
     rouge (3.26.0)
+    rubocop (1.24.0)
+      parallel (~> 1.10)
+      parser (>= 3.0.0.0)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.8, < 3.0)
+      rexml
+      rubocop-ast (>= 1.15.0, < 2.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 3.0)
+    rubocop-ast (1.15.1)
+      parser (>= 3.0.1.1)
     ruby-enum (0.9.0)
       i18n
+    ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     safe_yaml (1.0.5)
@@ -274,10 +302,14 @@ PLATFORMS
   x86_64-darwin-21
 
 DEPENDENCIES
+  activesupport
   github-pages
   jekyll-feed
   manpages
+  overcommit
   plist
+  rake
+  rubocop
   webrick
 
 BUNDLED WITH

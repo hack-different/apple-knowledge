@@ -1,4 +1,4 @@
-
+# frozen_string_literal: true
 
 ROOT_PATH = ARGV[0]
 
@@ -7,4 +7,4 @@ MACOS_RELATIVE_PATHS = [
   '/Library/LaunchDaemons',
   '/System/Library/LaunchAgents',
   '/System/Library/LaunchDaemons'
-]
+].freeze
