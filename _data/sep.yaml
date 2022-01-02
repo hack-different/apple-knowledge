@@ -1,0 +1,202 @@
+---
+services:
+- service: SEPD # Incorrect: fixed at ID 0, sepd is a play on launchd
+  fixed_endpoint: 0
+  xnu_name: AppleSEPControl
+  xnu_kext: AppleSEPManager
+  opcodes:
+  - id: 0
+    const: kOpCode_NOP
+    description: No operation
+  - id: 2
+    const: kOpCode_SET_OOL_IN_ADDR
+    description: set the address of a block of AP memory to be transfered to the SEP for the next request
+  - id: 3
+    const: kOpCode_SET_OOL_OUT_ADDR
+    description: set the address of a block of AP memory to be used to return the result of a given SEP response
+  - id: 4
+    const: kOpCode_SET_OOL_IN_SIZE
+    description: set the size of the memory block to be transfered to the endpoint as a parameter
+  - id: 5
+    const: kOpCode_SET_OOL_OUT_SIZE
+    description: set the size of the memory block allocated to the be written to as a response to a SEP request
+  - id: 10
+    const: kOpCode_TTYIN
+  - id: 12
+    const: kOpCode_Sleep
+    description: put the SEP into low power and wait for an external IRQ
+  - id: 19
+    name: kOpCode_Nap
+    description: put the SEP into low power and wake after a timeout
+  - id: 0x14
+    const: kOpCode_SECMODE_REQUEST
+    description: get the current effective security mode of the SEP
+  - id: 0x18
+    const: kOpCode_SELFTEST
+    description: perform diagnostics and internal consistancy checks on the the SEP
+  - id: 0x25
+    name: kOpCode_ERASE_INSTALL
+    description: Queue the system for a wipe and install of IPSW
+  - id: 0x26
+    const: kOpCode_L4_PANIC
+    description: Panic the L4 microkernel
+  - id: 0x27
+    const: kOpCode_SEPOSPANIC
+    description: Panic the SEPOS 
+- service: slog # Incorrect: notknown - Sep logging service
+  description: SEP logging service
+  xnu_name: AppleSEPLogger
+  xnu_kext: AppleSEPManager
+- service: arts # Incorrect: ART storage
+  description: Anti-replay Token Storage
+  xnu_name: AppleSEPARTStorage
+  xnu_kext: AppleSEPManager
+- service: artr # Incorrect: not known - SEP anti-replay storage
+  description: Anti-replay token request
+  xnu_name: 
+- service: sepS
+  description: SEP services endpoint
+- service: sbio
+  description: Secure Biometic Services
+- service: skgs
+  description: Secure Key Generation Service
+- service: test
+  description: Test Service
+- service: sars 
+  description: Secure Anti-Replay Service
+- service: enti
+  description: Entitlement Service
+- service: debg # Incorrect: not known
+  description: Debug
+  xnu_name: AppleSEPDebug
+  xnu_kext: AppleSEPManager
+- service: sks\0
+  description: Secure Key Storage (AppleKeyStore)
+  xnu_name: AppleSEPKeyStore
+  xnu_kext: AppleSEPKeyStore
+- service: sse\0
+  description: Proxy access to the SE (secure element)
+  xnu_kext: AppleSSE
+- service: scrd
+  description: Secure Credential Manager (AppleCredentialStore)
+  xnu_kext: AppleCredentialManager
+- service: lpol # Incorrect: unknown
+  name: boot_policy # Incorrect: not known yet
+  description: Manage Apple Silicon macOS boot policy
+  opcodes:
+  - id: 2
+    name: begin_update_policy
+    description: Begin a boot policy update operation
+  - id: 3
+    name: end_update_policy  
+- service: disc # Incorrect - not known 
+  fixed_endpoint: 253
+  name: discovery # Incorrect: not 4CC
+  description: |
+    First advertise, then expose
+    
+    `id` is endpoint number
+    `name` is `'scrd'` or `'sks\0'` for example. (4 char code)
+    
+    struct app_info
+    {
+      uint64_t physical_addr;
+      uint32_t virtual_base;
+      uint32_t size;
+      uint32_t entry;
+      uint8_t name[12];
+      uint8_t hash[16];
+    }
+  opcodes:
+  - id: 0
+    name: advertise
+    request_struct: |
+      // Credit: ntrung03
+      struct ep_advertise_data {
+        uint8_t id; /* param */
+        uint32_t name; /* data, Apple 4CC for the applet name */
+      };
+  - id: 1
+    name: expose
+    request_struct: |
+      // Credit: ntrung03
+      struct ep_expose_data {
+        uint8_t id; /* param */
+        char ool_in_min_pages;
+        char ool_in_max_pages;
+        char ool_out_min_pages;
+        char ool_out_max_pages;
+      };
+- service: krnl # Incorrect: not known yet
+  fixed_endpoint: 254
+  name: L4info
+  opcodes:
+  - id: 0
+    name: L4_Ipc
+    desciption: Set up ipc between two threads
+  - id: 4
+    name: L4_ThreadSwitch
+    description: Yield execution to thread
+  - id: 8
+    name: L4_ThreadControl
+    description: Create or delete threads
+    privileged: true
+  - id: 0xC
+    name: L4_ExchangeRegisters
+    description: Exchange registers
+  - id: 0x10
+    name: L4_Schedule
+    description: Set thread scheduling information
+  - id: 0x14
+    name: L4_MapControl
+    description: Map or free virtual memory
+    privileged: true
+  - id: 0x18
+    name: L4_SpaceControl
+    description: Create a new address space
+    privileged: true
+  - id: 0x1C
+    name: L4_ProcessorControl
+    description: Sets processor attributes
+  - id: 0x20
+    name: L4_CacheControl
+    description: Cache flushing
+  - id: 0x24
+    name: L4_IpcControl
+    description: Adjust IPC access
+    privileged: true
+  - id: 0x28
+    name: L4_InterruptControl
+    description: Enable or disable an interrupt
+    privileged: true
+  - id: 0x2C
+    name: L4_GetTimebase
+    description: Gets the system time
+  - id: 0x30
+    name: L4_SetTimeout
+    description: Set timeout for IPC sessions
+  - id: 0x34
+    name: L4_SharedMappingControl
+    description: Set up a shared mapping
+    privileged: true
+  - id: 0x38
+    name: L4_SleepKernel
+    description: cause the SEP kernel to sleep until an external inturupt occurs
+  - id: 0x3C
+    name: L4_PowerControl
+  - id: 0x40
+    name: L4_KernelInterface
+    description: Get information about the running L4 kernel
+- service: sepr # Incorrect: not known yet
+  fixed_endpoint: 255
+  name: seprom # Incorrect: not 4CC - name not important as it is always at 255
+  opcodes:
+  - id: 01
+    name: ping
+    description: request a pong from the SEP
+  - id: 0x0F
+    name: panic
+    description: Common to all Apps, panic
+  - id: 10
+    name: random
+    description: get random bytes from the SEP
