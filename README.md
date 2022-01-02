@@ -142,7 +142,10 @@ Updates and additions there should automatically be reflected in the documents
   * [`M1_Boot_Policy`](docs/M1_Boot_Policy)
 * Rosetta2
   * [ProjectChampollion](https://github.com/FFRI/ProjectChampollion/)
-
+* SEP - Secure Enclave Processor
+  * http://mista.nu/research/sep-paper.pdf?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US
+  * https://www.theiphonewiki.com/wiki/Seputil
+  * https://github.com/mwpcheung/AppleSEPFirmware
 
 ### USB Protocols
 
