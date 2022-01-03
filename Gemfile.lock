@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    CFPropertyList (3.0.5)
+      rexml
     activesupport (6.0.4.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
@@ -244,7 +246,7 @@ GEM
       iniparse (~> 1.4)
       rexml (~> 3.2)
     parallel (1.21.0)
-    parser (3.0.3.2)
+    parser (3.1.0.0)
       ast (~> 2.4.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -262,13 +264,13 @@ GEM
     regexp_parser (2.2.0)
     rexml (3.2.5)
     rouge (3.26.0)
-    rubocop (1.24.0)
+    rubocop (1.24.1)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml
-      rubocop-ast (>= 1.15.0, < 2.0)
+      rubocop-ast (>= 1.15.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.15.1)
@@ -301,12 +303,13 @@ GEM
     unf_ext (0.0.8)
     unicode-display_width (1.8.0)
     webrick (1.7.0)
-    zeitwerk (2.5.2)
+    zeitwerk (2.5.3)
 
 PLATFORMS
   x86_64-darwin-21
 
 DEPENDENCIES
+  CFPropertyList
   activesupport
   github-pages
   jekyll-feed

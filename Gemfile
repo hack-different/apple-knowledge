@@ -22,6 +22,7 @@ end
 
 group :development do
   gem 'activesupport'
+  gem 'CFPropertyList'
   gem 'kramdown'
   gem 'manpages'
   gem 'octokit'

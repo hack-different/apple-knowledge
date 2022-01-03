@@ -36,7 +36,7 @@ def sort_yaml(file, key)
 
   items.sort_by! { |item| item[key.to_s] }
 
-  File.open(path, 'w') { |output_file| output_file.write(items.to_yaml) }
+  File.write(path, items.to_yaml)
 end
 
 namespace :sort do
@@ -98,7 +98,5 @@ task :credits do
 
   puts credits.inspect
 
-  File.open(File.join(BASE_PATH, '_data', 'credits.yaml'), 'w') do |credit_file|
-    credit_file.write credits.to_yaml
-  end
+  File.write(File.join(BASE_PATH, '_data', 'credits.yaml'), credits.to_yaml)
 end
