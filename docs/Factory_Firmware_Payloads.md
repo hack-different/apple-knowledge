@@ -1,5 +1,4 @@
-
-## Contents of `Hardware` iBoot Volume
+# Contents of `Hardware` iBoot Volume
 
 Several of these files seem to exist at once.  The format is as such:
 

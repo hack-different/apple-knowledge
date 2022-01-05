@@ -22,9 +22,11 @@ end
 
 group :development do
   gem 'activesupport'
+  gem 'bundle-audit'
   gem 'CFPropertyList'
   gem 'kramdown'
   gem 'manpages'
+  gem 'mdl'
   gem 'octokit'
   gem 'overcommit'
   gem 'plist'

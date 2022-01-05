@@ -1,6 +1,7 @@
 # Introduction
 
-When emulating SEP, it is particularly useful to know its physical memory layout (i.e. MMIO address). Inside the decoded 64bit SEP Firmware (>=A11), there are some constant arrays of structure which have the following format:
+When emulating SEP, it is particularly useful to know its physical memory layout (i.e. MMIO address). Inside the decoded
+64bit SEP Firmware (>=A11), there are some constant arrays of structure which have the following format:
 
 ```c
 struct phys_range {
@@ -14,16 +15,16 @@ static_assert(sizeof(struct phys_range) == 0x18, "");
 ```
 
 This array contains the physical location of many SEP's peripherals.
-
 The `ctx` and `name` fields are in reversed ASCII.
 
 ## Methodology
 
-First, we have to decrypt the sep-firmware. This can be done using [xerub's img4lib](https://github.com/xerub/img4lib). You'll also need the decryption keys.
+First, we have to decrypt the sep-firmware. This can be done using [xerub's img4lib](https://github.com/xerub/img4lib).
+You'll also need the decryption keys.å
 
 For A11 SEPOS especially, you might have to do lzvn decode after decrypting img4 since it is an unpacker.
 
-```
+```shell
 dd if=sepfw-raw of=sepfw.lzvn bs=0x20000 skip=1
 lzvn -d sepfw.lzvn sepfw
 ```
@@ -31,11 +32,12 @@ lzvn -d sepfw.lzvn sepfw
 [LZVN](https://github.com/xerub/lzvn)
 (Credit goes to [@s1guza](https://twitter.com/s1guza))
 
-To find these arrays, we can do a `/ EASB` or `/x 0000010006` on the sep-firmware image. Then go back to the farthest chunk of 8 ASCII characters (`ctx` and `name` field).
+To find these arrays, we can do a `/ EASB` or `/x 0000010006` on the sep-firmware image. Then go back to the farthest
+chunk of 8 ASCII characters (`ctx` and `name` field).
 
 Here is the python code to dump these fields on A12 sep-firmware:
 
-```py
+```python
 import struct
 
 f = struct.Struct("<4s4sQII")
@@ -115,11 +117,14 @@ Here are some that are known:
 
 ## SEP's peripherals
 
-Many SEP's peripherals have a similar MMIO format compared to AP. This includes the I2C master, interrupt dispatcher, and mailbox.
+Many SEP's peripherals have a similar MMIO format compared to AP. This includes the I2C master, interrupt dispatcher,
+and mailbox.
 
 ### AKF
 
-The AKF block generally contains both the interrupt dispatcher (intr) and the AP mailbox. Although A11 and A12 store different addresses for this, we are certain that the mailbox address ends with 0x4000, because it sits right after 0x4000 bytes of intr's MMIO.
+The AKF block generally contains both the interrupt dispatcher (intr) and the AP mailbox. Although A11 and A12 store
+different addresses for this, we are certain that the mailbox address ends with 0x4000, because it sits right after
+0x4000 bytes of intr's MMIO.
 
 In the above dump, A11's SEP stores intr's address, A12's SEP stores mailbox's address.
 
@@ -129,8 +134,8 @@ SEP's interrupt dispatcher (intr) has some similarity with Apple Interrupt Contr
 
 The intr outputs to the core's IRQ line, it dispatches IRQ from peripherals and the physical timer.
 
-Most of the registers are unknown; however, the SEP's IRQ handler reads from the offset (+0x81C) to find the asserting interrupt.
-This register has a similar format to AIC's IACK.
+Most of the registers are unknown; however, the SEP's IRQ handler reads from the offset (+0x81C) to find the
+asserting interrupt.  This register has a similar format to AIC's IACK.
 
 - External Interrupt: `0x10000 | (v & 0x1ff)`
 - Timer Interrupt: `0x70000 | 1`

@@ -1,17 +1,3 @@
 # Mobile Assets (Including OTAs)
 
-
-<table>
-<thead>
-    <th>URL</th>
-    <th>Description</th>
-</thead>
-    <tbody>
-{% for entry in site.data.mobile_assets %}
-    <tr>
-        <td>{{ entry.url }}</td>
-        <td>{{ entry.description }}</td>
-    </tr>
-{% endfor %}
-    </tbody>
-</table>
+{{ include mobile_assets_table.html }}

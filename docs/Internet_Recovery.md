@@ -7,7 +7,7 @@ network.
 
 ## Verification of BaseSystem.dmg and OSDInstall.dmg
 
-See `doc/chunklist_v1.md` and [https://github.com/t8012/cnklverify]
+See `doc/chunklist_v1.md` and <https://github.com/t8012/cnklverify>
 
 ## Request / Response of Internet Recovery image location
 
@@ -26,11 +26,12 @@ PKI based crypto in older (read Lion 10.9) versions of IR.
 
 ### Request Format
 
-A session cookie is requested from `http://osrecovery.apple.com/` then
-A request is made to `http://osrecovery.apple.com/InstallationPayload/RecoveryImage`
+A session cookie is requested from <http://osrecovery.apple.com/> then
+A request is made to <http://osrecovery.apple.com/InstallationPayload/RecoveryImage>
 
 A request is in the form of:
 
+```text
     cid=A64F96125D28533D
     sn=C079442000SJRWLAX
     bid=Mac-7BA5B2DFE22DDD8C
@@ -38,6 +39,7 @@ A request is in the form of:
     os=latest
     bv=17.16.11081.0.0,0
     fg=9ECA302EC3E25279AA80C088EF82A821DAD22197B8516F2E9966CC462B524393
+```
 
 An analysis of variables comes to these assumed names
 
@@ -53,6 +55,7 @@ An analysis of variables comes to these assumed names
 
 A response is in the form of
 
+```text
     AP: 041-76812
     AU: http://oscdn.apple.com/content/downloads/22/29/041-76812a/2liqsakq9ocpldao5gxogpqqkg3666itc6/RecoveryImage/BaseSystem.dmg
     AH: 0DD88446D924DC180B25085F53BEA4A2B148024F69EA93E265AEC2F1102E4CB4
@@ -60,6 +63,7 @@ A response is in the form of
     CU: http://oscdn.apple.com/content/downloads/22/29/041-76812a/2liqsakq9ocpldao5gxogpqqkg3666itc6/RecoveryImage/BaseSystem.chunklist
     CH: 791BD581006AD8147F988138B434A2CB792D87F4C2187BD992CC06B64234CA4A
     CT: expires=1585251286~access=/content/downloads/22/29/041-76812a/2liqsakq9ocpldao5gxogpqqkg3666itc6/RecoveryImage/BaseSystem.chunklist~md5=7b7ae5fd362c4ff1b216016121f6cb87
+```
 
 An analysis shows the following values
 
@@ -71,7 +75,6 @@ An analysis shows the following values
 * CH - Chunklist URL hash / content
 * CT - Chunklist URL token cookie (Passed in the next request as a cookie header)
 
-
-# Credit
+## Credit
 
 Research by Rick Mark and moved from `rickmark/apple_net_recovery`

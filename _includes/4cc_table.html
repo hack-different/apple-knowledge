@@ -1,0 +1,14 @@
+<table>
+    <thead>
+    <th>Code</th>
+    <th>Description</th>
+    </thead>
+    <tbody>
+    {% for entry in site.data.4cc %}
+    <tr>
+        <td>{{ entry.code }}</td>
+        <td>{{ entry.description }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>

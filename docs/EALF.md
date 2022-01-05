@@ -1,7 +1,6 @@
+# Header
 
 NOTE: In progress
-
-# Header
 
 * 0-4: "magic" = "EALF"
 * 5-8: number of hash rows
@@ -12,7 +11,7 @@ NOTE: In progress
 * 32: UInt16 Number of Unicode-16 characters following
 * 34: - NULL = UTF-16 null terminated EFI version string
 
-# 60 byte "rows"
+## 60 byte "rows"
 
 * 1 byte FD region (see `fdutil`)
   * 0 = FD header / region

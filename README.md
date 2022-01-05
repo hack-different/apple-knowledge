@@ -6,22 +6,22 @@ Join us on Discord: <https://discord.gg/hackdifferent>
 
 Repo inspired by <https://github.com/papers-we-love/papers-we-love>
 
-## Contributing and a warning...
+## Contributing and a warning
 
-We want this collection to be around for new jailbreakers and hobbiests for years to come, so we must say: this 
-collection accepts (with gratitude) pull-requests that improve it, but under no circumstances 
-will a PR based on `AppleInternal`, or any other copyrighted works protected by the 
-[DMCA](https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act) be accepted.  If 
-you need help determining this, tag the PR with `license help`, join the 
+We want this collection to be around for new jailbreakers and hobbiests for years to come, so we must say: this
+collection accepts (with gratitude) pull-requests that improve it, but under no circumstances
+will a PR based on `AppleInternal`, or any other copyrighted works protected by the
+[DMCA](https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act) be accepted.  If
+you need help determining this, tag the PR with `license help`, join the
 [Discord server](https://discord.gg/hackdifferent), and ask a `#Legit` or higher role for help.
 
 Violation of the DMCA or Copyright law is the responsibility of the submitter.
 
-### Why not \<insert wiki here\>?
+### Why not \<insert wiki here\>
 
 Wiki's best serve prose, and part of the goal here is to leverage machine readable and ingestable information with
-human augmentation wherever possible.  Also GitHub is more conducive to allowing any user to fork and PR the repo lowering
-the barrier to entry.  The core team reviews PRs for quality before merging.
+human augmentation wherever possible.  Also GitHub is more conducive to allowing any user to fork and PR the repo
+lowering the barrier to entry.  The core team reviews PRs for quality before merging.
 
 ## License
 
@@ -31,9 +31,16 @@ Licensed under the [MIT](https://opensource.org/licenses/MIT) license
 
 Also licensed under the CC-BY-SA
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Apple Knowledge</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/hack-different/apple-knowledge" property="cc:attributionName" rel="cc:attributionURL">Hack Different</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png){style="border-width:0"}
+](http://creativecommons.org/licenses/by-sa/4.0/){rel=license}
+[Apple Knowledge](http://creativecommons.org/licenses/by-sa/4.0/){:xmlns:dct="http://purl.org/dc/terms/",
+:property="dct:title"} by
+[Hack Different](https://github.com/hack-different/apple-knowledge){:xmlns:cc="http://creativecommons.org/ns#",
+:property="cc:attributionName", :rel="cc:attributionURL"}
+is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/
+licenses/by-sa/4.0/){:rel="license"}
 
-# Primary Data Source
+## Primary Data Source
 
 All data is derived from machine readable files (YAML) in this repo under `_data`
 
@@ -55,7 +62,8 @@ Updates and additions there should automatically be reflected in the documents
 
 ## Guides and General
 
-* [OWASP: iOS Tampering and Reverse Engineering](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x06c-Reverse-Engineering-and-Tampering.md)
+* [OWASP: iOS Tampering and Reverse Engineering](https://github.com/OWASP/
+  owasp-mstg/blob/master/Document/0x06c-Reverse-Engineering-and-Tampering.md)
 * [Kernel Debug Kit](docs/KDK)
 * [*OS Internals by Jonathan Levin](https://newosxbook.com/index.php)
 * [T2 Dev Setup](docs/T2)
@@ -143,9 +151,9 @@ Updates and additions there should automatically be reflected in the documents
 * Rosetta2
   * [ProjectChampollion](https://github.com/FFRI/ProjectChampollion/)
 * SEP - Secure Enclave Processor
-  * http://mista.nu/research/sep-paper.pdf?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US
-  * https://www.theiphonewiki.com/wiki/Seputil
-  * https://github.com/mwpcheung/AppleSEPFirmware
+  * <http://mista.nu/research/sep-paper.pdf?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US>
+  * <https://www.theiphonewiki.com/wiki/Seputil>
+  * <https://github.com/mwpcheung/AppleSEPFirmware>
 
 ### USB Protocols
 
@@ -226,12 +234,12 @@ Updates and additions there should automatically be reflected in the documents
 * [Mobile Verification Toolkit](https://docs.mvt.re/en/latest/)
 * [`mvt-project/mvt`](https://github.com/mvt-project/mvt)
 
-# Credits
+## Credits
 
 Hack Different's Knowledge is a product of the entire community and belongs to the community.  It is
 facilitated by the volunteer work of the Hack Different moderation team.
 
-Portions of data and knowledge come from <https://theiphonewiki.org>, <https://libimobiledevice.org> and 
+Portions of data and knowledge come from <https://theiphonewiki.org>, <https://libimobiledevice.org> and
 <https://checkra.in> as well as the individuals who brought you those projects.
 
 A list of all projects and their contributors is at [CREDITS](CREDITS)
@@ -239,19 +247,20 @@ A list of all projects and their contributors is at [CREDITS](CREDITS)
 ## Dedication
 
 > Here’s to the crazy ones, the misfits, the rebels, the troublemakers
-> 
-> the round pegs in the square holes… 
 >
-> the ones who see things differently — they’re not fond of rules… 
-> 
-> You can quote them, disagree with them, glorify or vilify them, but the only thing you can’t do is ignore them because they change things… 
-> 
-> They push the human race forward, and while some may see them as the crazy ones, 
-> 
-> we see genius, 
-> 
-> because the ones who are crazy enough to think that they can change the world, 
-> 
+> the round pegs in the square holes…
+>
+> the ones who see things differently — they’re not fond of rules…
+>
+> You can quote them, disagree with them, glorify or vilify them, but the only thing you can’t do is ignore them because
+> they change things…
+>
+> They push the human race forward, and while some may see them as the crazy ones,
+>
+> we see genius,
+>
+> because the ones who are crazy enough to think that they can change the world,
+>
 > are the ones who do.
 >
 > — Steve Jobs, 1997

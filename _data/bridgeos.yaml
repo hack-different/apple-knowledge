@@ -124,8 +124,10 @@ remote:
     properties:
       UsesRemoteXPC: true
   - name: com.apple.corespeech.xpc.remote.record
+    properties:
       UsesRemoteXPC: true
   - name: com.apple.videoprocessingd.encode.remote
+    properties:
       UsesRemoteXPC: true
   - name: com.apple.multiverse.remote.bridgetime
   - name: com.apple.recoverylogd.bridge

@@ -42,7 +42,7 @@ services:
     description: Panic the L4 microkernel
   - id: 0x27
     const: kOpCode_SEPOSPANIC
-    description: Panic the SEPOS 
+    description: Panic the SEPOS
 - service: slog # Incorrect: notknown - Sep logging service
   description: SEP logging service
   xnu_name: AppleSEPLogger
@@ -53,7 +53,7 @@ services:
   xnu_kext: AppleSEPManager
 - service: artr # Incorrect: not known - SEP anti-replay storage
   description: Anti-replay token request
-  xnu_name: 
+  xnu_name:
 - service: sepS
   description: SEP services endpoint
 - service: sbio
@@ -62,7 +62,7 @@ services:
   description: Secure Key Generation Service
 - service: test
   description: Test Service
-- service: sars 
+- service: sars
   description: Secure Anti-Replay Service
 - service: enti
   description: Entitlement Service
@@ -88,25 +88,25 @@ services:
     name: begin_update_policy
     description: Begin a boot policy update operation
   - id: 3
-    name: end_update_policy  
-- service: disc # Incorrect - not known 
+    name: end_update_policy
+- service: disc # Incorrect - not known
   fixed_endpoint: 253
   name: discovery # Incorrect: not 4CC
-  description: |
-    First advertise, then expose
-    
-    `id` is endpoint number
-    `name` is `'scrd'` or `'sks\0'` for example. (4 char code)
-    
-    struct app_info
-    {
-      uint64_t physical_addr;
-      uint32_t virtual_base;
-      uint32_t size;
-      uint32_t entry;
-      uint8_t name[12];
-      uint8_t hash[16];
-    }
+  description: >-
+      First advertise, then expose
+
+      `id` is endpoint number
+      `name` is `'scrd'` or `'sks\0'` for example. (4 char code)
+
+      struct app_info
+      {
+        uint64_t physical_addr;
+        uint32_t virtual_base;
+        uint32_t size;
+        uint32_t entry;
+        uint8_t name[12];
+        uint8_t hash[16];
+      }
   opcodes:
   - id: 0
     name: advertise

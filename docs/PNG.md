@@ -1,6 +1,7 @@
 # PNG images
 
-The standard PNG format is documented in the [PNG specification](http://www.libpng.org/pub/png/spec/1.2/PNG-Contents.html).
+The standard PNG format is documented in the
+[PNG specification](http://www.libpng.org/pub/png/spec/1.2/PNG-Contents.html).
 It consists of a series of "chunks" which contain:
 
 * length (4 bytes big-endian, only counts length of data, may be 0)

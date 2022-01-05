@@ -1,5 +1,4 @@
-KDK
-===
+# KDK
 
 Apple Silicon supports kernel debugging, but there are some limitations.
 
@@ -19,15 +18,15 @@ inside the debugger.
 > Note: SIP needs to be disabled to set NVRAM boot arguments
 
 There are multiple ways to get a connection between your host and target machine,
-but the cheapest option is to purchase a "Thunderbolt 3 (USB-C) to Thunderbolt 2 Adapter"
-and "Thunderbolt to Gigabit Ethernet Adapter". Then connect an ethernet cable
+but the cheapest option is to purchase a "Thunderbolt 3 (USB-C) to Thunderbolt 2
+Adapter" and "Thunderbolt to Gigabit Ethernet Adapter". Then connect an ethernet cable
 between the target and host (can use a USB-C to ethernet adapter on the host end).
 A regular ethernet to USB-C adapter on the target **will not work**.
 
 Once both machines are connected, find the name of the networking interface in
 `ifconfig` and set the `boot-args` accordingly:
 
-```
+```shell
 sudo nvram boot-args="debug=0x44 kdp_match_name=enX wdt=-1"
 ```
 
@@ -35,14 +34,14 @@ Reboot and record the address of the target on using `ifconfig` (on the interfac
 used for debugging) then trigger a panic on the target machine. On the host machine, run `lldb`
 and `kdp-remote` with the address of the target machine:
 
-```
+```shell
 $ lldb
 (lldb) kdp-remote 169.254.XXX.XXX
 ```
 
 Once you've finished with debugging, clear the `boot-args` with
 
-```
+```shell
 sudo nvram -d boot-args
 ```
 
@@ -50,7 +49,7 @@ sudo nvram -d boot-args
 
 If on any `memory read` or `x` (`x` is an alias for `memory read`) you are getting
 
-```
+```text
 error: kdp read memory failed
 ```
 
@@ -63,14 +62,14 @@ semantics. The heap on iOS is `0xFFFFFFE0xxxxxxxx` whereas on ASi it's `0xFFFFFE
 
 This is apparent if you open a coredump and inspect an address:
 
-```
+```lldb
 (lldb) x/x 0xffffe00010204000
 error: core file does not contain 0xffffffe010204000
 ```
 
 To work around this issue on a broken `lldb`, use `p` to evaluate expressions, e.g.:
 
-```
+```lldb
 p *(uint32_t*) 0xfffffe0010204000
 ```
 
@@ -95,16 +94,16 @@ You can alternatively debug the system by writing coredumps to a remote server
 and then inspect them afterwards. Note that coredumps are typically very large uncompressed
 (e.g.: 700mb+), so ensure there's adequate space on the server before continuing.
 
-Connect both machines using the same setup in [Two-Machine Debugging Setup](#two-machine-debugging-setup) and record the IP address of the server running
-`kdumpd`. Then, on the panicking machine, set the `boot-args` as follows:
+Connect both machines using the same setup in [Two-Machine Debugging Setup](#two-machine-debugging-setup) and record
+the IP address of the server running `kdumpd`.  Then, on the panicking machine, set the `boot-args` as follows:
 
-```
-$ sudo nvram boot-args="debug=0xc44 kdp_match_name=enX wdt=-1 _panicd_ip=169.254.XXX.XXX"
+```shell
+sudo nvram boot-args="debug=0xc44 kdp_match_name=enX wdt=-1 _panicd_ip=169.254.XXX.XXX"
 ```
 
 On the server, create a location for the coredumps and start `kdumpd`:
 
-```
+```shell
 sudo mkdir /PanicDumps
 sudo chown root:wheel /PanicDumps
 sudo chmod 1777 /PanicDumps
@@ -112,20 +111,20 @@ sudo chmod 1777 /PanicDumps
 
 You can either start the daemon:
 
-```
+```shell
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.kdumpd.plist
 ```
 
 Or you can run it in the foreground:
 
-```
+```shell
 kdumpd -w /PanicDumps
 ```
 
 Once the panicking machine panics, the coredump will be written gzipped to
 `/PanicDumps`. `gunzip` it and then load it in `lldb` with
 
-```
+```shell
 lldb /System/Library/Kernels/kernel.release.t8101 --core core-xnu-XXX
 ```
 

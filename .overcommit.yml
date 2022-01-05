@@ -24,15 +24,43 @@ PreCommit:
   RuboCop:
     enabled: true
     on_warn: fail # Treat all warnings as failures
-#
-#  TrailingWhitespace:
-#    enabled: true
-#    exclude:
-#      - '**/db/structure.sql' # Ignore trailing whitespace in generated files
+
+  TrailingWhitespace:
+    enabled: true
+
+  Mdl:
+    enabled: true
+    exclude: _site
+
+  YamlSyntax:
+    enabled: true
+
+  BundleAudit:
+    enabled: true
+  BundleCheck:
+    enabled: true
+  BundleOutdated:
+    enabled: true
+
+PostRewrite:
+  BundleInstall:
+    enabled: true
+
+PostCheckout:
+  IndexTags:
+    enabled: true # Generate a tags file with `ctags` exach time HEAD changes
+
+  BundleInstall:
+    enabled: true
+
+  SubmoduleStatus:
+    enabled: true
+
+PostMerge:
+  SubmoduleStatus:
+    enabled: true
 #
 #PostCheckout:
 #  ALL: # Special hook name that customizes all hooks of this type
 #    quiet: true # Change all post-checkout hooks to only display output on failure
 #
-#  IndexTags:
-#    enabled: true # Generate a tags file with `ctags` each time HEAD changes
