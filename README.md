@@ -17,6 +17,18 @@ you need help determining this, tag the PR with `license help`, join the
 
 Violation of the DMCA or Copyright law is the responsibility of the submitter.
 
+### Setting up `overcommit` and the linters
+
+In order to keep the repo, docs and data tidy, we use a tool called `overcommit` to connect up the git hooks to a
+set of quality checks.  The fastest way to get setup is to run the following to make sure you have all the tools:
+
+```shell
+brew install hunspell
+gem install overcommit bundler
+bundle install
+overcommit --install
+```
+
 ### Why not \<insert wiki here\>
 
 Wiki's best serve prose, and part of the goal here is to leverage machine readable and ingestable information with

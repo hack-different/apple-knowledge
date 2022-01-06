@@ -243,6 +243,7 @@ GEM
       mixlib-shellout
     mercenary (0.3.6)
     method_source (1.0.0)
+    mini_portile2 (2.6.1)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
@@ -254,7 +255,8 @@ GEM
     mixlib-shellout (3.2.5)
       chef-utils
     multipart-post (2.1.1)
-    nokogiri (1.12.5-x86_64-darwin)
+    nokogiri (1.12.5)
+      mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     octokit (4.21.0)
       faraday (>= 0.9)
@@ -326,6 +328,7 @@ GEM
     zeitwerk (2.5.3)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-darwin-21
 
 DEPENDENCIES
