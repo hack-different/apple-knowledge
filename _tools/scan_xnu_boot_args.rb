@@ -22,6 +22,7 @@ unless File.directory? XNU_SOURCE_ROOT
 end
 
 PARSE_ARGN = /PE_parse_boot_argn\(\s*"([^"]+)"/m
+TUNABLE = /TUNABLE\(\w+,\s*\w+,\s*"([^"]+)",\s*\w+\)/m
 
 result = YAML.load_file OUTPUT_FILE
 
@@ -32,6 +33,8 @@ Dir.glob(File.join(XNU_SOURCE_ROOT, '**', '*')).each do |entry|
   next unless SUPPORTED_FILE_EXTENSIONS.include? File.extname(entry).delete_prefix('.')
 
   content = File.read entry
+
+  discovered_args.merge content.scan(TUNABLE).flatten
   discovered_args.merge content.scan(PARSE_ARGN).flatten
 
 rescue StandardError => e
