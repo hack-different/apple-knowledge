@@ -1,13 +1,17 @@
 ---
 - name: AAPL,ignore
 - platforms:
-  - macOS T2
+  - macOS
+  - Intel
+  - bridgeOS
   name: ApChipID
   scopes:
   - 94b73556-2197-4702-82a8-3e1337dafbfb
 - type: :boolean
   platforms:
-  - macOS T2
+  - macOS
+  - Intel
+  - bridgeOS
   description: Controls trust in Microsoft's PCA 2011 cert for Apple Secure Boot
   name: AppleSecureBootWindowsPolicy
   scopes:
@@ -19,7 +23,8 @@
 - name: DClr_override
 - name: DebugBluetoothHIDShim
 - platforms:
-  - macOS Intel
+  - macOS
+  - Intel
   description: boot.efi background color. Stored as BGRA.
   name: DefaultBackgroundColor
   scopes:
@@ -31,7 +36,8 @@
 - name: IASInstallPhaseList
 - type: :string
   platforms:
-  - macOS Intel
+  - macOS
+  - Intel
   description: This is the update url used for install / update.  Security issues
     can occur when set to HTTP.  Typically managed through `seedutil`
   name: IASUCatalogURL
@@ -65,7 +71,8 @@
 - name: SystemAudioVolumeExtension
 - name: SystemAudioVolumeSaved
 - platforms:
-  - macOS Intel
+  - macOS
+  - Intel
   description: boot.efi interface scaling
   name: UIScale
   scopes:
@@ -82,8 +89,9 @@
 - name: adfe-tunables
 - type: :string
   platforms:
-  - macOS PPC
-  - macOS Intel
+  - macOS
+  - PPC
+  - Intel
   description: Apple Hardware Test (diags) - PList
   name: aht-results
 - name: allow-root-hash-mismatch
@@ -145,14 +153,16 @@
 - name: core-bin-offset
 - name: cpu-bin-offset
 - platforms:
-  - macOS Intel
+  - macOS
+  - Intel
   description: SIP bitmask (see csr.h in xnu source)
   name: csr-active-config
   scopes:
   - common
 - type: :string
   platforms:
-  - macOS Intel
+  - macOS
+  - Intel
   description: Kexts to approve regardless of CSR_ALLOW_UNAPPROVED_KEXTS
   name: csr-data
   scopes:
@@ -193,7 +203,8 @@
 - name: enable-remap-mode
 - type: :boolean
   platforms:
-  - macOS Intel
+  - macOS
+  - Intel
   description: Enter USB Target Disk Mode
   name: enter-tdm-mode
 - name: eth1addr
@@ -201,7 +212,8 @@
 - name: failboot-breadcrumbs
 - type: :string
   platforms:
-  - macOS PPC
+  - macOS
+  - PPC
   description: Forth code debugging for OpenFirmware
   name: fcode-debug?
 - name: filesize
@@ -216,31 +228,36 @@
 - name: fmm-mobileme-token-FMM
 - type: :boolean
   platforms:
-  - macOS Intel
+  - macOS
+  - Intel
   - macOS ASi
   description: If this value is true FMM is handled by the T2 coprocessor.  This is
     always false on Apple Silicon as there is no bridgeOS device
   name: fmm-mobileme-token-FMM-BridgeHasAccount
 - type: :boolean
   platforms:
-  - macOS Intel
+  - macOS
+  - Intel
   description: If a device wipe has been requested by FindMy
   name: fmm-mobileme-token-FMM-WipePending
 - name: force-upgrade-fail
 - name: gpu-policy
 - type: :boolean
   platforms:
-  - macOS Intel
+  - macOS
+  - Intel
   description: Disable dGPU (I think only for older models)
   name: gpu-power-prefs
   scopes:
   - FA4CE28D-B62F-4C99-9CC3-6815686E30F9
 - name: idle-off
 - platforms:
-  - macOS PPC
+  - macOS
+  - PPC
   name: input-device
 - platforms:
-  - macOS PPC
+  - macOS
+  - PPC
   name: input-device-1
 - name: ipaddr
 - name: is-tethered
@@ -248,7 +265,8 @@
 - name: kaslr-slide
 - type: :boolean
   platforms:
-  - macOS PPC
+  - macOS
+  - PPC
   description: If the CPU is a little endian architecture
   name: little-endian?
 - name: load-base
@@ -392,7 +410,8 @@
 - type: :number
   name: screen-#rows
 - type: :string
-  description: FireWire security mode (see IOFireWireController.cpp in IOFireWireFamily)
+  description: "FireWire security mode \nSee IOFireWireController.cpp in IOFireWireFamily:
+    https://github.com/apple-oss-distributions/IOFireWireFamily/blob/IOFireWireFamily-483/IOFireWireFamily.kmodproj/IOFireWireController.cpp#L4212\n"
   name: security-mode
   scopes:
   - common
