@@ -315,6 +315,10 @@ GEM
       faraday (> 0.8, < 2.0)
     simpleidn (0.2.1)
       unf (~> 0.1.4)
+    sorbet (0.5.9491)
+      sorbet-static (= 0.5.9491)
+    sorbet-runtime (0.5.9491)
+    sorbet-static (0.5.9491-universal-darwin-21)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thor (1.2.1)
@@ -350,6 +354,8 @@ DEPENDENCIES
   pry
   rake
   rubocop
+  sorbet
+  sorbet-runtime
   webrick
 
 BUNDLED WITH
