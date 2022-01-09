@@ -23,8 +23,8 @@ end
 def compose_os_info
   version_files = OS_VERSION_PATHS.map { |path| File.join(ROOT_PATH, path) }.select { |file| File.exist? file }
 
-  versions_data = version_files.map do |file|
-    CFPropertyList.native_types(CFPropertyList::List.new(file:).value)
+  versions_data = version_files.map do |version_file|
+    CFPropertyList.native_types(CFPropertyList::List.new(file: version_file).value)
   end.reduce(&:merge).transform_keys(&:underscore)
 
   { os_version: versions_data, services: [] }.stringify_keys
