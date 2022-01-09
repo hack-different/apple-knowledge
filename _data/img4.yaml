@@ -1,0 +1,50 @@
+---
+tags:
+  - name: CHIP
+    description: Unique identifier for a single Apple designed application processor sharing the same GID key
+    width: 2
+  - name: ECID
+    description: Exclusive chip identifier.  This is burned into an eFuse at time of manufacture and unique across all devices sharing the same CHIP
+    width: 8
+  - name: SDOM
+    description: |-
+      Security domain, or which set of certificates govern device security.
+
+      Known values:
+        0x01 - Main Production certificates
+    width: 2
+  - name: name
+  - name: BORD
+    description: |-
+      The board the chip is attached to.  With iPhones/iPads this is the variation between device sizes (occasionally
+      also used for low cost devices like the SE/XR).
+
+      With the T2 this value is unique to all MacBooks with the T2
+  - name: lobo
+  - name: ronh
+    description: recoveryOS nonce hash
+  - name: lpnh
+    description: LocalPolicy nonce hash
+  - name: rpnh
+    description: RemotePolicy nonce hash
+  - name: BNCH
+  - name: CSEC
+    description: Burned-in chip security mode
+  - name: ESEC
+    description: Effective security mode
+  - name: AMNM
+  - name: CPRO
+  - name: nsih
+  - name: ECID
+  - name: CEPO
+    description: |-
+      Certificate Epoch.  This is a unit of roll-forward time (monotonic) that allows for any security issues
+      in the prior epoch to be fixed by a anti-rollback scheme.
+  - name: EPRO
+  - name: DPRO
+  - name: ESEC
+  - name: DSEC
+  - name: DGST
+  - name: srnm
+  - name: udid
+  - name: seid
