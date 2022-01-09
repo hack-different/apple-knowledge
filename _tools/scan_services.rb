@@ -30,7 +30,7 @@ def compose_os_info
   { os_version: versions_data, services: [] }.stringify_keys
 end
 
-OS_TYPE = File.join(File.dirname(__FILE__), '..', '_data',
+OS_TYPE = File.join(File.dirname(__FILE__), '..', '_data', 'launchd',
                     "services_#{ARGV[1]}_#{compose_os_info['os_version']['product_version']}.yaml")
 
 def map_service_to_hash(service)
