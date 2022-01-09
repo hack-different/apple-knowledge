@@ -1,12 +1,34 @@
 ---
 - name: AAPL,ignore
+- platforms:
+  - macOS
+  - Intel
+  - bridgeOS
+  name: ApChipID
+  scopes:
+  - 94b73556-2197-4702-82a8-3e1337dafbfb
+- type: :boolean
+  platforms:
+  - macOS
+  - Intel
+  - bridgeOS
+  description: Controls trust in Microsoft's PCA 2011 cert for Apple Secure Boot
+  name: AppleSecureBootWindowsPolicy
+  scopes:
+  - 94b73556-2197-4702-82a8-3e1337dafbfb
 - name: BOSCatalogURL
 - name: BaseSystemAccessabiliityFeatures
 - name: BluetoothInfo
 - name: BluetoothUHEDevices
 - name: DClr_override
 - name: DebugBluetoothHIDShim
-- name: DefaultBackgroundColor
+- platforms:
+  - macOS
+  - Intel
+  description: boot.efi background color. Stored as BGRA.
+  name: DefaultBackgroundColor
+  scopes:
+  - 4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14
 - name: GPUROM
 - name: HW_BOOT_DATA
 - name: HardwareModel
@@ -14,7 +36,8 @@
 - name: IASInstallPhaseList
 - type: :string
   platforms:
-  - macOS Intel
+  - macOS
+  - Intel
   description: This is the update url used for install / update.  Security issues
     can occur when set to HTTP.  Typically managed through `seedutil`
   name: IASUCatalogURL
@@ -36,10 +59,24 @@
 - name: PSFU_STATUS
 - name: SleepWakeFailurePanic
 - name: SleepWakeFailureString
-- name: StartupMute
+- name: StartupManagerPolicy
+  scopes:
+  - 5eeb160f-45fb-4ce9-b4e3-610359abf6f8
+- type: :integer
+  description: Mute startup chime
+  name: StartupMute
+  scopes:
+  - default
 - name: SystemAudioVolume
 - name: SystemAudioVolumeExtension
 - name: SystemAudioVolumeSaved
+- platforms:
+  - macOS
+  - Intel
+  description: boot.efi interface scaling
+  name: UIScale
+  scopes:
+  - 4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14
 - name: _csegbufsz_experiment
 - name: _libmalloc_experiment
 - name: aapl,panic-info
@@ -52,8 +89,9 @@
 - name: adfe-tunables
 - type: :string
   platforms:
-  - macOS PPC
-  - macOS Intel
+  - macOS
+  - PPC
+  - Intel
   description: Apple Hardware Test (diags) - PList
   name: aht-results
 - name: allow-root-hash-mismatch
@@ -68,6 +106,8 @@
 - type: :boolean
   name: auto-boot?
 - name: backlight-level
+  scopes:
+  - common
 - name: backlight-nits
 - name: base-system-path
 - name: battery-health
@@ -79,6 +119,8 @@
   persistent: true
   description: String passed to the XNU kernel at boot (M1's do filter this though)
   name: boot-args
+  scopes:
+  - common
 - type: :string
   name: boot-breadcrumbs
 - type: :string
@@ -110,8 +152,24 @@
 - name: console-screen
 - name: core-bin-offset
 - name: cpu-bin-offset
-- name: csr-data
+- platforms:
+  - macOS
+  - Intel
+  description: SIP bitmask (see csr.h in xnu source)
+  name: csr-active-config
+  scopes:
+  - common
+- type: :string
+  platforms:
+  - macOS
+  - Intel
+  description: Kexts to approve regardless of CSR_ALLOW_UNAPPROVED_KEXTS
+  name: csr-data
+  scopes:
+  - common
 - name: current-network
+  scopes:
+  - 36C28AB5-6566-4C50-9EBD-CBB920F83843
 - name: darkboot
 - name: debug-gg
 - name: debug-soc
@@ -145,7 +203,8 @@
 - name: enable-remap-mode
 - type: :boolean
   platforms:
-  - macOS Intel
+  - macOS
+  - Intel
   description: Enter USB Target Disk Mode
   name: enter-tdm-mode
 - name: eth1addr
@@ -153,7 +212,8 @@
 - name: failboot-breadcrumbs
 - type: :string
   platforms:
-  - macOS PPC
+  - macOS
+  - PPC
   description: Forth code debugging for OpenFirmware
   name: fcode-debug?
 - name: filesize
@@ -161,28 +221,43 @@
 - name: fm-activation-locked
 - name: fm-spstatus
 - type: :string
+  description: Current saved host name
   name: fmm-computer-name
+  scopes:
+  - common
 - name: fmm-mobileme-token-FMM
 - type: :boolean
   platforms:
-  - macOS Intel
+  - macOS
+  - Intel
   - macOS ASi
   description: If this value is true FMM is handled by the T2 coprocessor.  This is
     always false on Apple Silicon as there is no bridgeOS device
   name: fmm-mobileme-token-FMM-BridgeHasAccount
 - type: :boolean
   platforms:
-  - macOS Intel
+  - macOS
+  - Intel
   description: If a device wipe has been requested by FindMy
   name: fmm-mobileme-token-FMM-WipePending
 - name: force-upgrade-fail
 - name: gpu-policy
+- type: :boolean
+  platforms:
+  - macOS
+  - Intel
+  description: Disable dGPU (I think only for older models)
+  name: gpu-power-prefs
+  scopes:
+  - FA4CE28D-B62F-4C99-9CC3-6815686E30F9
 - name: idle-off
 - platforms:
-  - macOS PPC
+  - macOS
+  - PPC
   name: input-device
 - platforms:
-  - macOS PPC
+  - macOS
+  - PPC
   name: input-device-1
 - name: ipaddr
 - name: is-tethered
@@ -190,7 +265,8 @@
 - name: kaslr-slide
 - type: :boolean
   platforms:
-  - macOS PPC
+  - macOS
+  - PPC
   description: If the CPU is a little endian architecture
   name: little-endian?
 - name: load-base
@@ -278,9 +354,17 @@
 - name: policy-nonce-digests
 - name: pre-recovery-ota-failure-uuid
 - name: preferred-count
+  scopes:
+  - 36C28AB5-6566-4C50-9EBD-CBB920F83843
 - name: preferred-networks
+  scopes:
+  - 36C28AB5-6566-4C50-9EBD-CBB920F83843
 - name: prev-lang-diags:kbd
-- name: prev-lang:kbd
+- type: :string
+  description: Default keyboard layout
+  name: prev-lang:kbd
+  scopes:
+  - common
 - name: prevent-restores
 - name: previous-system-uuid
 - name: pwr-path
@@ -325,7 +409,12 @@
   name: screen-#columns
 - type: :number
   name: screen-#rows
-- name: security-mode
+- type: :string
+  description: "FireWire security mode \nSee IOFireWireController.cpp in IOFireWireFamily:
+    https://github.com/apple-oss-distributions/IOFireWireFamily/blob/IOFireWireFamily-483/IOFireWireFamily.kmodproj/IOFireWireController.cpp#L4212\n"
+  name: security-mode
+  scopes:
+  - common
 - name: security-password
 - type: :number
   name: selftest-#megs
