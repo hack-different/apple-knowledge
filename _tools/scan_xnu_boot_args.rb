@@ -12,6 +12,8 @@ end
 
 OUTPUT_FILE = File.join(File.dirname(__FILE__), '..', '_data', 'boot-args.yaml')
 
+REQUIRED_KEYS = %w[description].freeze
+
 XNU_SOURCE_ROOT = ARGV[0]
 
 SUPPORTED_FILE_EXTENSIONS = %w[c h m mm cpp hpp hxx cxx].freeze
@@ -24,7 +26,7 @@ end
 PARSE_ARGN = /PE_parse_boot_argn\(\s*"([^"]+)"/m
 TUNABLE = /TUNABLE\(\w+,\s*\w+,\s*"([^"]+)",\s*\w+\)/m
 
-result = YAML.load_file OUTPUT_FILE
+result = YAML.load_file(OUTPUT_FILE).map(&:stringify_keys)
 
 discovered_args = Set[]
 
@@ -42,13 +44,17 @@ rescue StandardError => e
 end
 
 discovered_args.each do |arg|
-  next if result.any? { |item| item.with_indifferent_access[:name] == arg }
+  next if result.any? { |item| item['name'] == arg }
 
   result << { name: arg }
 end
 
-result.each(&:stringify_keys!)
+result.each do |entry|
+  REQUIRED_KEYS.each do |key|
+    entry[key] = nil unless entry.key? key
+  end
+end
 
-result.sort_by! { |entry| entry.with_indifferent_access[:name] }
+result.sort_by! { |entry| entry['name'] }
 
 File.write(OUTPUT_FILE, result.to_yaml)

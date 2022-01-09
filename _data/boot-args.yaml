@@ -1,430 +1,856 @@
 ---
 - name: "-arm64e_preview_abi"
+  description: Enable pointer-authenticaton-codes and tagging (arm64e) features for
+    non-platform binaries
 - name: "-bsdmgroot"
+  description:
 - name: "-corpse_threshold_system_limit"
+  description:
 - name: "-cpuid"
+  description:
 - name: "-disable_aslr"
+  description: Disable user mode address space layout randomization
 - name: "-disable_atm"
+  description:
 - name: "-disable_cseg_write_protection"
+  description:
 - name: "-disable_freezer_cseg_acct"
+  description:
 - name: "-disable_mtx_chk"
+  description:
 - name: "-disable_procref_tracking"
+  description:
 - name: "-disable_syscallfilter"
+  description:
 - name: "-disable_x86_64h"
+  description: Disable Haswell x86_64 optimization / instructions
 - name: "-enable_kprintf_spam"
+  description:
 - name: "-enable_x86_64h"
+  description: Enable Haswell x86_64 optimization / instructions
 - name: "-fp_exceptions"
+  description:
 - name: "-gzalloc_mode"
+  description:
 - name: "-gzalloc_no_dfree_check"
+  description:
 - name: "-gzalloc_noconsistency"
+  description:
 - name: "-gzalloc_uf_mode"
+  description:
 - name: "-gzalloc_wp"
+  description:
 - name: "-interrupt_latency_assert_enable"
+  description:
 - name: "-kernel_text_ps_4K"
+  description:
 - name: "-kill_on_no_paging_space"
+  description:
 - name: "-l"
+  description:
 - name: "-minimalboot"
+  description:
 - name: "-multiq-deep-drain"
+  description:
 - name: "-multiq-sanity-check"
+  description:
 - name: "-no-copyio-zalloc-check"
+  description:
 - name: "-no-zp"
+  description:
 - name: "-no_corpses"
+  description:
 - name: "-no_shared_cr3"
+  description:
 - name: "-no_sigsys"
+  description:
 - name: "-no_slto_panic"
+  description:
 - name: "-no_vnode_drain"
+  description:
 - name: "-no_vnode_jetsam"
+  description:
 - name: "-nobsdmgroot"
+  description:
 - name: "-nogzalloc_mode"
+  description:
 - name: "-nokcmismatchpanic"
+  description:
 - name: "-nomsr35h"
+  description:
 - name: "-nomt_core"
+  description:
 - name: "-noprogress"
+  description:
 - name: "-novfscache"
+  description:
 - name: "-panic_on_exception_triage"
+  description:
 - name: "-pmap_disable_kheap_nx"
+  description:
 - name: "-pmap_disable_kstack_nx"
+  description:
 - name: "-pmap_pagetable_corruption_deassert"
+  description:
 - name: "-pmap_pcid_disable"
+  description:
 - name: "-pmap_smap_disable"
+  description:
 - name: "-pmap_smep_disable"
+  description:
 - name: "-pmap_trace"
+  description:
 - name: "-progress"
+  description:
 - name: "-qos-policy-allow"
+  description:
 - name: "-restore"
+  description:
 - name: "-rootdmg-ramdisk"
+  description:
 - name: "-rwroot_hack"
+  description:
 - name: "-s"
+  description:
 - name: "-show_pointers"
+  description:
 - name: "-topo"
+  description:
 - name: "-unsafe_kernel_text"
+  description:
 - name: "-v"
+  description: Boot the system into verbose mode
 - name: "-vm_compressor_hybrid"
+  description:
 - name: "-vm_compressor_wk"
+  description:
 - name: "-vnode_cache_defeat"
+  description:
 - name: "-x"
+  description:
 - name: "-zc"
+  description:
 - name: "-zl"
+  description:
 - name: "-zleakoff"
+  description:
 - name: "-zleakon"
+  description:
 - name: "-zp"
+  description:
 - name: "-zt"
+  description:
 - name: IgnoreFBTBlacklist
+  description:
 - name: TSC_deadline_timer
+  description:
 - name: TSC_sync_margin
+  description:
 - name: _fpu
+  description:
 - name: _panicd_corename
+  description:
 - name: _panicd_ip
+  description:
 - name: _router_ip
+  description:
 - name: alt-dyld
+  description:
 - name: alternate_debugger_init
+  description:
 - name: alternate_debugger_init_pages
+  description:
 - name: alternate_debugger_pause_for_load_at_boot
+  description:
 - name: aotlinger
+  description:
 - name: arm64_maxoffset
+  description:
 - name: arm_maxoffset
+  description:
 - name: arp0
+  description:
 - name: assertions
+  description:
 - name: atm_diagnostic_config
+  description:
 - name: avx512
+  description:
 - name: bad_static_mfree
+  description:
 - name: bg_preempt
+  description:
 - name: boot-uuid
+  description:
 - name: bootprofile_buffer_size
+  description:
 - name: bootprofile_interval_ms
+  description:
 - name: bootprofile_proc_name
+  description:
 - name: bootprofile_stackshot_flags
+  description:
 - name: bootprofile_type
+  description:
 - name: bpret
+  description:
 - name: bsdmgpath
+  description:
 - name: clamshell
+  description:
 - name: clump_size
+  description:
 - name: colors
+  description:
 - name: corefile_size_mb
+  description:
 - name: corpse_for_fatal_memkill
+  description:
 - name: cpu-factor
+  description:
 - name: cpumon_ustackshots_trigger_pct
+  description:
 - name: cpus
+  description:
 - name: cpus_defeatures
+  description:
 - name: cpus_per_pset
+  description:
 - name: cs_debug
+  description:
 - name: cs_enforcement_disable
+  description:
 - name: cs_enforcement_panic
+  description:
 - name: cs_library_val_enable
+  description:
 - name: cs_relax_platform_task_ports
+  description:
 - name: cwad
+  description:
 - name: cwae
+  description:
 - name: darkwake
+  description:
 - name: dart
+  description:
 - name: dataconstro
+  description:
 - name: dcc
+  description:
 - name: debug4k_filter
+  description:
 - name: delay_above_gb
+  description:
 - name: dextrelaunch
+  description:
 - name: diag
+  description:
 - name: diagnostic_api
+  description:
 - name: direct_handoff
+  description:
 - name: disable_NO_SMT_threads
+  description:
 - name: disable_exc_resource
+  description:
 - name: disable_persona_propagate_check
+  description:
 - name: dk
+  description:
 - name: drain_uart_sync
+  description:
 - name: dtrace_dof_mode
+  description:
 - name: dtrace_kernel_symbol_mode
+  description:
 - name: dyld_flags
+  description:
 - name: ebsz
+  description:
 - name: enable_copyout_shim
+  description:
 - name: enable_skstb
+  description:
 - name: enable_skstsct
+  description:
 - name: enforce_quiesce_safety
+  description:
 - name: entitled_max_task_pmem
+  description:
 - name: entropy-analysis-sample-count
+  description:
 - name: exc_resource_threads
+  description:
 - name: exc_via_corpse_forking
+  description:
 - name: execfailurecrashes
+  description:
 - name: fast_jetsam_enabled
+  description:
 - name: fastipi
+  description:
 - name: fill
+  description:
 - name: firehose_chunk_count
+  description:
 - name: firehose_io_pages
+  description:
 - name: fpsimd_fault_popc
+  description:
 - name: fq_codel_quantum
+  description:
 - name: gzalloc_fc_size
+  description:
 - name: gzalloc_max
+  description:
 - name: gzalloc_min
+  description:
 - name: gzalloc_size
+  description:
 - name: gzalloc_zscale
+  description:
 - name: gzname
+  description:
 - name: halt_restart_timeout
+  description:
 - name: haltmslog
+  description:
 - name: haltmspanic
+  description:
 - name: hcalls
+  description:
 - name: hfile
+  description:
 - name: himemory_mode
+  description:
 - name: hwm_user_cores
+  description:
 - name: ifa_debug
+  description:
 - name: ifclassq_target_qdelay
+  description:
 - name: ifclassq_update_interval
+  description:
 - name: ifnet_debug
+  description:
 - name: immediate_NMI
+  description:
 - name: imp_interactive_receiver
+  description:
 - name: ina6ddr_nhash
+  description:
 - name: inaddr_nhash
+  description:
 - name: initmcl
+  description:
 - name: insn_capcnt
+  description:
 - name: intcoproc_unrestricted
+  description:
 - name: intcpumax
+  description:
 - name: interrupt_accounting
+  description:
 - name: interrupt_latency_cap_us
+  description:
 - name: interrupt_masked_debug_timeout
+  description:
 - name: interrupt_watchdog
+  description:
 - name: io
+  description:
 - name: io_telemetry_limit
+  description:
 - name: io_throttle_period_tier1
+  description:
 - name: io_throttle_period_tier2
+  description:
 - name: io_throttle_period_tier3
+  description:
 - name: io_throttle_window_tier1
+  description:
 - name: io_throttle_window_tier2
+  description:
 - name: io_throttle_window_tier3
+  description:
 - name: iocthreads
+  description:
 - name: iokit_iomd_setownership_enabled
+  description:
 - name: iosched
+  description:
 - name: iotrace
+  description:
 - name: ip6_checkinterface
+  description:
 - name: ip_checkinterface
+  description:
 - name: ipc_control_port_options
+  description:
 - name: ipc_strict_reply
+  description:
 - name: jcon
+  description:
 - name: jetsam_aging_policy
+  description:
 - name: jetsam_idle_snapshot
+  description:
 - name: jtag
+  description:
 - name: kasan
+  description:
 - name: kasan.checks
+  description:
 - name: kasan.free_yield_ms
+  description:
 - name: kasan.leak_fatal_threshold
+  description:
 - name: kasan.leak_threshold
+  description:
 - name: kdp_crashdump_pkt_size
+  description:
 - name: kdp_ip_addr
+  description:
 - name: kdp_match_name
+  description:
 - name: keepsyms
+  description:
 - name: kern.jetsam_critical_threshold
+  description:
 - name: kern.jetsam_delta
+  description:
 - name: kern.jetsam_user_freezer_snapshot
+  description:
 - name: kern.thread_group_extra_bytes
+  description:
 - name: kern.thread_group_set_by_bankvoucher
+  description:
 - name: kernPOST
+  description:
 - name: kernPOST_config
+  description:
 - name: kernel_stack_pages
+  description:
 - name: kernelmanagerd
+  description:
 - name: kevent_debug
+  description:
 - name: kextlog
+  description:
 - name: kheap_temp_debug
+  description:
 - name: kmem
+  description:
 - name: lapic_dont_panic
+  description:
 - name: launchdsuffix
+  description:
 - name: lbr_support
+  description:
 - name: lcks
+  description:
 - name: legacy_footprint_entitlement_mode
+  description:
 - name: lo_txstart
+  description:
 - name: longterm
+  description:
 - name: lt_tbl_size
+  description:
 - name: malloc_no_cow
+  description:
 - name: max_cpumon_interval
+  description:
 - name: max_cpumon_percentage
+  description:
 - name: max_jetsam_threads
+  description:
 - name: max_task_pmem
+  description:
 - name: max_valid_dma_addr
+  description:
 - name: maxloreserve
+  description:
 - name: maxmem
+  description:
 - name: mbuf_debug
+  description:
 - name: mbuf_pool
+  description:
 - name: mcache_flags
+  description:
 - name: md
   description: The "memory device"
 - name: memmap
+  description:
 - name: meter
+  description:
 - name: mleak_sample_factor
+  description:
 - name: mmio_uart
+  description:
 - name: mseg
+  description:
 - name: msgbuf
+  description:
 - name: mtxspin
+  description:
 - name: multiq_drain_band_limit
+  description:
 - name: multiq_drain_ceiling
+  description:
 - name: multiq_drain_depth_limit
+  description:
 - name: nbuf
+  description:
 - name: ncl
+  description:
 - name: nested_panic_max
+  description:
 - name: net_affinity
+  description:
 - name: net_async
+  description:
 - name: net_rtref
+  description:
 - name: net_rxpoll
+  description:
 - name: network-type
+  description:
 - name: no-dockfifo-uart
+  description:
 - name: no32exec
+  description:
 - name: no_interrupt_masked_debug
+  description:
 - name: noidle
+  description:
 - name: nointr_consio
+  description:
 - name: npvhash
+  description:
 - name: nvram-log
+  description:
 - name: nvram_paniclog
+  description:
 - name: panic_clmismatch
+  description:
 - name: panic_halt
+  description:
 - name: panic_io_port
+  description:
 - name: panic_on_cs_killed
+  description:
 - name: panic_on_trap_mask
+  description:
 - name: panic_on_trap_procname
+  description:
 - name: panic_on_unsigned_execute
+  description:
 - name: panic_restart_timeout
+  description:
 - name: panic_trace
+  description:
 - name: panicd_port
+  description:
 - name: pcie_mmio_uart
+  description:
 - name: pgtrace
+  description:
 - name: phyreadmaxus
+  description:
 - name: phys_carveout_mb
+  description:
 - name: phywritemaxus
+  description:
 - name: pmap_asid_plru
+  description:
 - name: pmap_asserts
+  description:
 - name: pmap_inp_max
+  description:
 - name: pmap_ledgers_panic
+  description:
 - name: pmap_ledgers_panic_leeway
+  description:
 - name: pmap_panic_dev_wimg_on_managed
+  description:
 - name: pmap_stats_assert
+  description:
 - name: pmap_trace
+  description:
 - name: pmsafe_debug
+  description:
 - name: pmtimeout
+  description:
 - name: policy_check
+  description:
 - name: poll
+  description:
 - name: preempt
+  description:
 - name: prioritize_launch
+  description:
 - name: pvpanic_io_port
+  description:
 - name: qos_override_mode
+  description:
 - name: rd
   description: The "root device"
 - name: rlog
+  description:
 - name: rootdev
+  description:
 - name: rootpath
+  description:
 - name: rp
+  description:
 - name: rp0
+  description:
 - name: rp1
+  description:
 - name: rt_ini_count
+  description:
 - name: rte_debug
+  description:
 - name: sched_clutch_bucket_group_interactive_pri
+  description:
 - name: sched_debug
+  description:
 - name: sched_decay_penalty
+  description:
 - name: sched_decay_usage_age_factor
+  description:
 - name: sched_pri_decay_limit
+  description:
 - name: secluded_for_apps
+  description:
 - name: secluded_for_fbdp
+  description:
 - name: secluded_for_filecache
+  description:
 - name: secluded_for_iokit
+  description:
 - name: secluded_mem_mb
+  description:
 - name: secluded_shutoff_mb
+  description:
 - name: serial
+  description:
 - name: serialbaud
+  description:
 - name: serverperfmode
+  description:
 - name: setpowerstate_log
+  description:
 - name: setpowerstate_panic
+  description:
 - name: sigrestrict
+  description:
 - name: slto_us
+  description:
 - name: socket_debug
+  description:
 - name: stackshot_maxsz
+  description:
 - name: startup_debug
+  description:
 - name: statistics
+  description:
 - name: stop_clocks
+  description:
 - name: swd_panic
+  description:
 - name: swd_sleeptimeout
+  description:
 - name: swd_timeout
+  description:
 - name: swd_wakereason_panic
+  description:
 - name: swd_waketimeout
+  description:
 - name: task_exc_guard_default
+  description:
 - name: task_iomon_interval_secs
+  description:
 - name: task_iomon_limit_mb
+  description:
 - name: task_policy_suppression_flags
+  description:
 - name: task_wakeups_monitor_interval
+  description:
 - name: task_wakeups_monitor_rate
+  description:
 - name: task_wakeups_monitor_ustackshots_trigger_pct
+  description:
 - name: tcp_log
+  description:
 - name: telemetry_buffer_size
+  description:
 - name: telemetry_notification_leeway
+  description:
 - name: telemetry_sample_all_tasks
+  description:
 - name: telemetry_sample_rate
+  description:
 - name: text_corruption_panic
+  description:
 - name: tg_adaptive
+  description:
 - name: timebase_validation
+  description:
 - name: tlbto_us
+  description:
 - name: tlto_us
+  description:
 - name: trace
+  description:
 - name: tracephyreadus
+  description:
 - name: tracephywriteus
+  description:
 - name: ts_htable_buckets
+  description:
 - name: turnstile_max_hop
+  description:
 - name: uncore_pmi_mask
+  description:
 - name: unentitled_ios_sim_launch
+  description:
 - name: unique_persona
+  description:
 - name: unrestrict_coalition_syscalls
+  description:
 - name: unsafe
+  description:
 - name: up_style_idle_exit
+  description:
 - name: urgency_notification_abstime
+  description:
 - name: use_contiguous_hint
+  description:
 - name: validation_disables
+  description:
 - name: vm_check_map_sanity
+  description:
 - name: vm_compression_limit
+  description:
 - name: vm_compressor
+  description:
 - name: vm_compressor_codec
+  description:
 - name: vm_compressor_validation
+  description:
 - name: vm_footprint_suspend_allowed
+  description:
 - name: vm_map_debug_apple_protect
+  description:
 - name: vm_map_debug_fourk
+  description:
 - name: vm_map_executable_immutable
+  description:
 - name: vm_map_executable_immutable_verbose
+  description:
 - name: vm_max_num_swap_files
+  description:
 - name: vm_memory_malloc_no_cow_mask
+  description:
 - name: vm_object_tracking
+  description:
 - name: vm_page_bg_exclude_external
+  description:
 - name: vm_page_bg_mode
+  description:
 - name: vm_page_bg_target
+  description:
 - name: vm_protect_privileged_from_untrusted
+  description:
 - name: vm_restricted_to_single_processor
+  description:
 - name: vm_rtfault_records
+  description:
 - name: vm_shared_region_by_entitlement
+  description:
 - name: vm_shared_region_per_team_id
+  description:
 - name: vm_shared_region_reslide_aslr
+  description:
 - name: vm_shared_region_reslide_restrict
+  description:
 - name: vmcomp_ecluster
+  description:
 - name: vmcomp_threads
+  description:
 - name: vmpgo_pcluster
+  description:
 - name: vmpgoi_maxlaundry
+  description:
 - name: vnguard
+  description:
 - name: vps_dynamic_priority_enabled
+  description:
 - name: vti
+  description:
 - name: wdt
+  description:
 - name: wfe_events_sec
+  description:
 - name: wfe_mode
+  description:
 - name: wfi
+  description:
 - name: workaround_41447923
+  description:
 - name: wpkernel
+  description:
 - name: wql_tsize
+  description:
 - name: wqp_tsize
+  description:
 - name: wqsize
+  description:
 - name: wqt_min_free
+  description:
 - name: x2apic
+  description:
 - name: yield
+  description:
 - name: yield_delay_us
+  description:
 - name: zc_auto_enable_threshold
+  description:
 - name: zc_defrag_ratio
+  description:
 - name: zc_free_batch_size
+  description:
 - name: zc_grow_threshold
+  description:
 - name: zc_mag_size()
+  description:
 - name: zc_recirc_denom
+  description:
 - name: zclear_size
+  description:
 - name: zelems
+  description:
 - name: zfactor
+  description:
 - name: zleak-allocs
+  description:
 - name: zleak-traces
+  description:
 - name: zlog
+  description:
 - name: zone_foreign_pages
+  description:
 - name: zp-factor
+  description:
 - name: zp-scale
+  description:
 - name: zrecs
+  description:
 - name: zs
+  description:
 - name: zsize
+  description:
