@@ -89,6 +89,9 @@ Updates and additions there should automatically be reflected in the documents
 * [Device List](docs/Devices)
 * [T2 Dev Team: `t8012` / Apple T2 / bridgeOS](https://t8012.dev)
 * [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Main_Page)
+* SMC (System Management Controller) for pre-T2
+  * [acidanthera/VirtualSMC](https://github.com/acidanthera/VirtualSMC)
+  * [t8012/smcutil](https://github.com/t8012/smcutil) - Create SMC binaries from update payloads
 
 ## Protocols / Formats
 
@@ -172,7 +175,12 @@ Updates and additions there should automatically be reflected in the documents
   * <https://www.theiphonewiki.com/wiki/Seputil>
   * <https://github.com/mwpcheung/AppleSEPFirmware>
 
-### USB Protocols
+### Kernel and Kexts
+
+* [acidanthera/Lilu](https://github.com/acidanthera/Lilu)
+* [osy/AMFIExemption](https://github.com/osy/AMFIExemption)
+
+### USB / Wired Protocols
 
 * Basically all iDevice / iTunes
   * [libimobiledevice.org](https://libimobiledevice.org)
@@ -190,6 +198,7 @@ Updates and additions there should automatically be reflected in the documents
   * [USB-C Port Controller (ACE) Secrets](https://blog.t8012.dev/ace-part-1/)
   * [`rickmark/macvdmtool`](https://github.com/rickmark/macvdmtool)
 * [gh2o/rvi_capture](https://github.com/gh2o/rvi_capture)
+* [osy/ThunderboltPatcher](https://github.com/osy/ThunderboltPatcher)
 
 ### Network / Wireless / Transit
 
