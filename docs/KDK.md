@@ -9,6 +9,20 @@ Limitations:
 * Active debugging is not supported, but you can still trigger an NMI with the
   power button.
 
+## Contents of the KDK
+
+The KDK is a folder that contains a number of assets and is installed on macOS under `/Library/Developer/KDKs`
+
+The KDK contains:
+
+* `DEVELOPMENT` and `KASAN` (kernel address sanitizer) versions of the kernel
+* `dSYM` bundles which contains external [DWARF](https://en.wikipedia.org/wiki/DWARF) files to symbolicate
+  the kernel as well as lldb python helpers
+* Extensions and their respective `dSYM` bundles
+* `KernelSupport` which contain the non-open-source content of XNU on the Apple Silicon platform (Prior to the M1 XNU
+  itself was truly open-source and could be compiled and run, albeit without the majority of what we call macOS.  As
+  of the M1, Apple silently closed portions required to create a bootable image)
+
 ## Two-Machine Debugging Setup
 
 This is somewhat straightforward and follows the general guidelines outlined in the

@@ -71,6 +71,8 @@ Updates and additions there should automatically be reflected in the documents
 * [Ghidra Disassembler](https://ghidra-sre.org)
 * [Hopper Disassembler](https://www.hopperapp.com)
 * [`blacktop/ipsw`](https://github.com/blacktop/ipsw)
+* [jtool2](http://www.newosxbook.com/tools/jtool.html)
+* [frida](https://frida.re)
 
 ## Guides and General
 
@@ -80,6 +82,7 @@ Updates and additions there should automatically be reflected in the documents
 * [*OS Internals by Jonathan Levin](https://newosxbook.com/index.php)
 * [T2 Dev Setup](docs/T2)
 * [Apple 4CC](docs/4CC)
+* [bytepack/IntroToiOSReverseEngineering](https://github.com/bytepack/IntroToiOSReverseEngineering)
 
 ## Devices
 
@@ -137,6 +140,8 @@ Updates and additions there should automatically be reflected in the documents
 
 * [Mobile Asset URLs](docs/Mobile_Assets)
 * [`notpeter/apple-installer-checksums`](https://github.com/notpeter/apple-installer-checksums)
+* [ipsw.me](https://ipsw.me)
+* [ipsw.dev](https://ipsw.dev)
 
 ### Code and Signature Formats
 
@@ -184,6 +189,7 @@ Updates and additions there should automatically be reflected in the documents
 * USB-C Power Delivery - Vendor Defined Messages
   * [USB-C Port Controller (ACE) Secrets](https://blog.t8012.dev/ace-part-1/)
   * [`rickmark/macvdmtool`](https://github.com/rickmark/macvdmtool)
+* [gh2o/rvi_capture](https://github.com/gh2o/rvi_capture)
 
 ### Network / Wireless / Transit
 
@@ -227,6 +233,7 @@ Updates and additions there should automatically be reflected in the documents
 * [`axi0mX/ipwndfu`](https://github.com/axi0mX/ipwndfu)
 * [checkra1n](https://checkra.in)
 * [unc0ver](https://unc0ver.dev)
+* [Taurine](https://taurine.app)
 
 ### Jailbreak Tooling
 
