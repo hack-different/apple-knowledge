@@ -69,6 +69,7 @@ Updates and additions there should automatically be reflected in the documents
   * [`cellebrite-srl/FunctionInliner`](https://github.com/cellebrite-srl/FunctionInliner)
 * [VisUAL ARM Simulator](https://salmanarif.bitbucket.io/visual/index.html)
 * [Ghidra Disassembler](https://ghidra-sre.org)
+  * [`AllsafeCyberSecurity/awesome-ghidra`](https://github.com/AllsafeCyberSecurity/awesome-ghidra)
 * [Hopper Disassembler](https://www.hopperapp.com)
 * [`blacktop/ipsw`](https://github.com/blacktop/ipsw)
 * [jtool2](http://www.newosxbook.com/tools/jtool.html)
