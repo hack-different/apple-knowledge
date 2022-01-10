@@ -60,6 +60,12 @@ Updates and additions there should automatically be reflected in the documents
 
 [`hack-different/apple-knowledge/_data`](https://github.com/hack-different/apple-knowledge/tree/main/_data)
 
+Another authoritiative source of information is the open source code released by Apple themselves at one of the following locations:
+
+* [https://opensource.apple.com](https://opensource.apple.com)
+* [GitHub apple](https://github.com/apple)
+* [GitHub apple-oss-distributions](https://github.com/apple-oss-distributions)
+
 ## Tools
 
 * [IDA Disassembler by HexRays](https://hex-rays.com/ida-pro/)
