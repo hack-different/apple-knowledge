@@ -82,6 +82,8 @@ Another authoritiative source of information is the open source code released by
 
 ## Guides and General
 
+* [https://github.com/Proteas/apple-cve](https://github.com/Proteas/apple-cve)
+* [About Apple Prototype and CPFM](docs/Prototypes)
 * [OWASP: iOS Tampering and Reverse Engineering](https://github.com/OWASP/
   owasp-mstg/blob/master/Document/0x06c-Reverse-Engineering-and-Tampering.md)
 * [Kernel Debug Kit](docs/KDK)
@@ -108,6 +110,7 @@ Another authoritiative source of information is the open source code released by
 * [`SEP_memmap`](docs/SEP_memmap)
 * [`apple/darwin-xnu`](https://github.com/apple/darwin-xnu)
 * [`Factory_Firmware_Payloads`](docs/Factory_Firmware_Payloads)
+* [All About Kernels](docs/Kernels)
 
 ### Archive / Disk Formats
 
@@ -154,6 +157,7 @@ Another authoritiative source of information is the open source code released by
 
 ### Code and Signature Formats
 
+* [Mach-O File Types](docs/MachO)
 * Mach-O / Signing / Entitlements
   * [`sbingner/ldid`](https://github.com/sbingner/ldid)
   * [J's Entitlements Database](http://newosxbook.com/ent.jl)
@@ -170,8 +174,8 @@ Another authoritiative source of information is the open source code released by
 * ChunkList - Used to verify macOS Recovery / Internet Recovery
   * [`t8012/go-aapl-integrity`](https://github.com/t8012/go-aapl-integrity)
 * `dyld` Shared Cache
-  * [`rickmark/yolo_dsc`](https://github.com/rickmark/yolo_dsc)
-  * [`arandomdev/DyldExtractor`](https://github.com/arandomdev/DyldExtractor)
+  * [`rickmark/yolo_dsc`](https://github.com/rickmark/yolo_dsc) - Used as last resort and depend on Xcode
+  * [`arandomdev/DyldExtractor`](https://github.com/arandomdev/DyldExtractor) - Fixes up linking
 * iBoot LocalPolicy, RemotePolicy and BAA signing
   * [`M1_Boot_Policy`](docs/M1_Boot_Policy)
 * Rosetta2

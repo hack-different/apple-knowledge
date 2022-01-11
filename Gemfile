@@ -35,6 +35,7 @@ group :development do
   gem 'pry'
   gem 'rake'
   gem 'rubocop'
+  gem 'ruby-macho'
   gem 'sorbet'
   gem 'webrick'
 end
