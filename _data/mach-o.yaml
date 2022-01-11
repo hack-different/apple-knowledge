@@ -1,2 +1,367 @@
 ---
-sections: []
+segments:
+  __TEXT:
+    description: The text region contains any executable code (in the machine code
+      of the platform for this binary) and therefore will always be a read-only (write
+      protected) region of memory when mapped into a process.
+    __text:
+      description: Generic code region.  This area will have the execute flag set
+        on it's content
+    __const:
+      description: Constant variables. This region will be non-execute on platforms
+        that support execute never, DEP or NX concepts
+    __cstring:
+      description: ASCII strings null terminated.  This region can be split on `\0`
+        into strings
+    __os_log:
+      description: Specific support for Apple OSLog facility containing the patterns
+        used
+    __eh_frame:
+      description: Execption handling frame
+    __stubs:
+      description:
+    __stub_helper:
+      description:
+    __info_plist:
+      description:
+    __unwind_info:
+      description:
+    __auth_stubs:
+      description:
+    __init_offsets:
+      description:
+    __objc_methlist:
+      description:
+    __gcc_except_tab:
+      description:
+    __objc_classname:
+      description:
+    __objc_methname:
+      description:
+    __objc_methtype:
+      description:
+  __DATA:
+    description:
+    __data:
+      description:
+    __lock_grp:
+      description:
+    __percpu:
+      description:
+    __llvm_prf_cnts:
+      description:
+    __llvm_prf_data:
+      description:
+    __llvm_prf_names:
+      description:
+    __llvm_prf_vnds:
+      description:
+    __llvm_orderfile:
+      description:
+    __sdt_cstring:
+      description:
+    __sdt:
+      description:
+    __common:
+      description:
+    __bss:
+      description:
+    __got:
+      description:
+    __mod_init_func:
+      description:
+    __mod_term_func:
+      description:
+    __const:
+      description:
+    __nl_symbol_ptr:
+      description:
+    __la_symbol_ptr:
+      description:
+    __objc_imageinfo:
+      description:
+    __objc_selrefs:
+      description:
+    __objc_classrefs:
+      description:
+    __objc_superrefs:
+      description:
+    __objc_ivar:
+      description:
+  __DATA_CONST:
+    description:
+    __got:
+      description:
+    __mod_init_func:
+      description:
+    __const:
+      description:
+    __kalloc_type:
+      description:
+    __objc_classlist:
+      description:
+    __objc_protolist:
+      description:
+    __objc_imageinfo:
+      description:
+    __objc_const:
+      description:
+  __KLDDATA:
+    description: Data region for KLD or kernel linker
+    __init:
+      description:
+    __init_entry_set:
+      description:
+    __cstring:
+      description:
+    __const:
+      description:
+    __mod_init_func:
+      description:
+    __mod_term_func:
+      description:
+    __bss:
+      description:
+  __HIB:
+    description:
+    __text:
+      description:
+    __bootPT:
+      description:
+    __desc:
+      description:
+    __data:
+      description:
+    __const:
+      description:
+    __cstring:
+      description:
+    __bss:
+      description:
+    __common:
+      description:
+  __VECTORS:
+    description:
+    __recover:
+      description:
+  __KLD:
+    description: The kernel linker
+    __text:
+      description:
+  __LASTDATA_CONST:
+    description:
+    __mod_init_func:
+      description:
+  __LAST:
+    description:
+    __last:
+      description:
+  __PRELINK_TEXT:
+    description:
+    __text:
+      description:
+  __PRELINK_INFO:
+    description:
+    __info:
+      description:
+  __LINKINFO:
+    description:
+    __symbolsets:
+      description:
+  __CTF:
+    description:
+    __ctf:
+      description:
+  __LINKEDIT:
+    description:
+  __TEXT_EXEC:
+    description:
+  __PAGEZERO:
+    description:
+  __AUTH_CONST:
+    description:
+    __const:
+      description:
+    __auth_got:
+      description:
+    __cfstring:
+      description:
+    __auth_ptr:
+      description:
+    __objc_const:
+      description:
+    __got:
+      description:
+  __AUTH:
+    description:
+    __data:
+      description:
+    __objc_data:
+      description:
+  __OBJC_CONST:
+    description:
+    __objc_class_ro:
+      description:
+commands:
+  LC_SEGMENT:
+    description:
+    value: 1
+  LC_SYMTAB:
+    description:
+    value: 2
+  LC_SYMSEG:
+    description:
+    value: 3
+  LC_THREAD:
+    description:
+    value: 4
+  LC_UNIXTHREAD:
+    description:
+    value: 5
+  LC_LOADFVMLIB:
+    description:
+    value: 6
+  LC_IDFVMLIB:
+    description:
+    value: 7
+  LC_IDENT:
+    description:
+    value: 8
+  LC_FVMFILE:
+    description:
+    value: 9
+  LC_PREPAGE:
+    description:
+    value: 10
+  LC_DYSYMTAB:
+    description:
+    value: 11
+  LC_LOAD_DYLIB:
+    description:
+    value: 12
+  LC_ID_DYLIB:
+    description:
+    value: 13
+  LC_LOAD_DYLINKER:
+    description:
+    value: 14
+  LC_ID_DYLINKER:
+    description:
+    value: 15
+  LC_PREBOUND_DYLIB:
+    description:
+    value: 16
+  LC_ROUTINES:
+    description:
+    value: 17
+  LC_SUB_FRAMEWORK:
+    description:
+    value: 18
+  LC_SUB_UMBRELLA:
+    description:
+    value: 19
+  LC_SUB_CLIENT:
+    description:
+    value: 20
+  LC_SUB_LIBRARY:
+    description:
+    value: 21
+  LC_TWOLEVEL_HINTS:
+    description:
+    value: 22
+  LC_PREBIND_CKSUM:
+    description:
+    value: 23
+  LC_LOAD_WEAK_DYLIB:
+    description:
+    value: 2147483672
+  LC_SEGMENT_64:
+    description:
+    value: 25
+  LC_ROUTINES_64:
+    description:
+    value: 26
+  LC_UUID:
+    description:
+    value: 27
+  LC_RPATH:
+    description:
+    value: 2147483676
+  LC_CODE_SIGNATURE:
+    description:
+    value: 29
+  LC_SEGMENT_SPLIT_INFO:
+    description:
+    value: 30
+  LC_REEXPORT_DYLIB:
+    description:
+    value: 2147483679
+  LC_LAZY_LOAD_DYLIB:
+    description:
+    value: 32
+  LC_ENCRYPTION_INFO:
+    description:
+    value: 33
+  LC_DYLD_INFO:
+    description:
+    value: 34
+  LC_DYLD_INFO_ONLY:
+    description:
+    value: 2147483682
+  LC_LOAD_UPWARD_DYLIB:
+    description:
+    value: 2147483683
+  LC_VERSION_MIN_MACOSX:
+    description:
+    value: 36
+  LC_VERSION_MIN_IPHONEOS:
+    description:
+    value: 37
+  LC_FUNCTION_STARTS:
+    description:
+    value: 38
+  LC_DYLD_ENVIRONMENT:
+    description:
+    value: 39
+  LC_MAIN:
+    description:
+    value: 2147483688
+  LC_DATA_IN_CODE:
+    description:
+    value: 41
+  LC_SOURCE_VERSION:
+    description:
+    value: 42
+  LC_DYLIB_CODE_SIGN_DRS:
+    description:
+    value: 43
+  LC_ENCRYPTION_INFO_64:
+    description:
+    value: 44
+  LC_LINKER_OPTION:
+    description:
+    value: 45
+  LC_LINKER_OPTIMIZATION_HINT:
+    description:
+    value: 46
+  LC_VERSION_MIN_TVOS:
+    description:
+    value: 47
+  LC_VERSION_MIN_WATCHOS:
+    description:
+    value: 48
+  LC_NOTE:
+    description:
+    value: 49
+  LC_BUILD_VERSION:
+    description:
+    value: 50
+  LC_DYLD_EXPORTS_TRIE:
+    description:
+    value: 2147483699
+  LC_DYLD_CHAINED_FIXUPS:
+    description:
+    value: 2147483700
+  LC_FILESET_ENTRY:
+    description:
+    value: 2147483701

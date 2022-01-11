@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/homebrew/ruby-macho.git
+  revision: 0e0e30f5246c5c5687701b8e039f245784a165bd
+  specs:
+    ruby-macho (2.5.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -310,7 +316,6 @@ GEM
       parser (>= 3.0.1.1)
     ruby-enum (0.9.0)
       i18n
-    ruby-macho (2.5.1)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
@@ -329,8 +334,7 @@ GEM
       sorbet-static (= 0.5.9494)
     sorbet-runtime (0.5.9494)
     sorbet-static (0.5.9494-universal-darwin-21)
-    terminal-table (1.8.0)
-      unicode-display_width (~> 1.1, >= 1.1.1)
+    terminal-table (1.6.0)
     thor (1.2.1)
     thread_safe (0.3.6)
     time (0.2.0)
@@ -344,7 +348,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8)
-    unicode-display_width (1.8.0)
+    unicode-display_width (2.1.0)
     webrick (1.7.0)
     zeitwerk (2.5.3)
 
@@ -367,7 +371,7 @@ DEPENDENCIES
   pry
   rake
   rubocop
-  ruby-macho
+  ruby-macho!
   sorbet
   sorbet-runtime
   webrick
