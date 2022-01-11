@@ -60,13 +60,21 @@ Updates and additions there should automatically be reflected in the documents
 
 [`hack-different/apple-knowledge/_data`](https://github.com/hack-different/apple-knowledge/tree/main/_data)
 
-Another authoritiative source of information is the open source code released by Apple themselves at one of the following locations:
+Another authoritative source of information is the open source code released by Apple themselves at one of the
+following locations:
 
 * [https://opensource.apple.com](https://opensource.apple.com)
 * [GitHub apple](https://github.com/apple)
 * [GitHub apple-oss-distributions](https://github.com/apple-oss-distributions)
+* [Apple Gifts](docs/GIFTS)
 
 ## Tools
+
+### Libraries for Binary Analysis and Modification
+
+See [docs/Binary_Tooling](docs/Binary_Tooling)
+
+### Tools for Binary Analysis and Modification
 
 * [IDA Disassembler by HexRays](https://hex-rays.com/ida-pro/)
   * [`onethawt/idaplugins-list`](https://github.com/onethawt/idaplugins-list)
