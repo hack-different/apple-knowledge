@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/homebrew/ruby-macho.git
-  revision: 0e0e30f5246c5c5687701b8e039f245784a165bd
+  revision: 9175d6ae2104b2095e8434e4bc8f3b52d07c277c
   specs:
-    ruby-macho (2.5.1)
+    ruby-macho (3.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -360,11 +360,13 @@ DEPENDENCIES
   CFPropertyList
   activesupport
   bundle-audit
+  faraday
   github-pages
   jekyll-feed
   kramdown
   manpages
   mdl
+  nokogiri
   octokit
   overcommit
   plist
