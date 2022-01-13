@@ -210,19 +210,19 @@ segments:
       description: ObjC class info that is read-only to prevent runtime tampering (swizzling for example)
 commands:
   LC_SEGMENT:
-    description:
+    description: Causes the loading of a 32bit segment with a given protection level.  Contains 0 or more sections
     value: 1
   LC_SYMTAB:
-    description:
+    description: Symbol table
     value: 2
   LC_SYMSEG:
     description:
     value: 3
   LC_THREAD:
-    description:
+    description: Initial state of the Mach thread for a executable Mach-O
     value: 4
   LC_UNIXTHREAD:
-    description:
+    description: Initial state of the Unix / POSIX thread for an executable Mach-O
     value: 5
   LC_LOADFVMLIB:
     description:
@@ -231,7 +231,7 @@ commands:
     description:
     value: 7
   LC_IDENT:
-    description:
+    description: Identity of this Mach-O object
     value: 8
   LC_FVMFILE:
     description:
@@ -240,19 +240,19 @@ commands:
     description:
     value: 10
   LC_DYSYMTAB:
-    description:
+    description: Dynamic Symbol Table.
     value: 11
   LC_LOAD_DYLIB:
-    description:
+    description: Load a dynamic library (dylib) by it's identity.  This occurs before process start.
     value: 12
   LC_ID_DYLIB:
-    description:
+    description: Unique identifier for this dynamic library to be used in locating it for import
     value: 13
   LC_LOAD_DYLINKER:
-    description:
+    description: Command to load a specific dynamic linker to bind dylibs into this object
     value: 14
   LC_ID_DYLINKER:
-    description:
+    description: The identity of the dynamic linker (dyld) expected to be used to bind this object in memory
     value: 15
   LC_PREBOUND_DYLIB:
     description:
@@ -261,10 +261,12 @@ commands:
     description:
     value: 17
   LC_SUB_FRAMEWORK:
-    description:
+    description: Used by "Umbrella Frameworks" to declare the frameworks that the umbrella re-exports.  For an example
+      see Cocoa, AppKit and Foundation
     value: 18
   LC_SUB_UMBRELLA:
-    description:
+    description: Used by "Umbrella Frameworks" that re-export other frameworks (Cocoa exports Foundation, AppKit for
+      example of this)
     value: 19
   LC_SUB_CLIENT:
     description:
@@ -279,34 +281,35 @@ commands:
     description:
     value: 23
   LC_LOAD_WEAK_DYLIB:
-    description:
+    description: Attempt to load a Dylib but do not fail if binding cannot occur due to its absence
     value: 2147483672
   LC_SEGMENT_64:
-    description:
+    description: Causes the loading of a 64bit segment with a given protection level.  Contains 0 or more sections
     value: 25
   LC_ROUTINES_64:
     description:
     value: 26
   LC_UUID:
-    description:
+    description: A UUID (GUID) that uniquely identifies this object.  Should only occur once
     value: 27
   LC_RPATH:
     description:
     value: 2147483676
   LC_CODE_SIGNATURE:
-    description:
+    description: Section of mach-o that contains a signature for the object
     value: 29
   LC_SEGMENT_SPLIT_INFO:
     description:
     value: 30
   LC_REEXPORT_DYLIB:
-    description:
+    description: Used to export symbols from an object file that this object imported
     value: 2147483679
   LC_LAZY_LOAD_DYLIB:
-    description:
+    description: Dylibs that should be included in this objects dependencies but should only be loaded and bound when
+      a reference is made to them
     value: 32
   LC_ENCRYPTION_INFO:
-    description:
+    description: Used by FairPlay / DSMOS to protect a binary from dump / reverse engineering (DRM, be mindful of DMCA)
     value: 33
   LC_DYLD_INFO:
     description:
@@ -318,10 +321,10 @@ commands:
     description:
     value: 2147483683
   LC_VERSION_MIN_MACOSX:
-    description:
+    description: A declared minimum SDK for macOS
     value: 36
   LC_VERSION_MIN_IPHONEOS:
-    description:
+    description: A declared minimum SDK for iOS
     value: 37
   LC_FUNCTION_STARTS:
     description:
@@ -333,16 +336,16 @@ commands:
     description:
     value: 2147483688
   LC_DATA_IN_CODE:
-    description:
+    description: Generic region of a Mach-O file that can contain arbitrary data
     value: 41
   LC_SOURCE_VERSION:
-    description:
+    description: The verion of source code this Mach-O file was built from
     value: 42
   LC_DYLIB_CODE_SIGN_DRS:
     description:
     value: 43
   LC_ENCRYPTION_INFO_64:
-    description:
+    description: Used by FairPlay / DSMOS to protect a binary from dump / reverse engineering (DRM, be mindful of DMCA)
     value: 44
   LC_LINKER_OPTION:
     description:
@@ -357,7 +360,7 @@ commands:
     description:
     value: 48
   LC_NOTE:
-    description:
+    description: An arbitrary human readable text note included in this Mach-O
     value: 49
   LC_BUILD_VERSION:
     description:
