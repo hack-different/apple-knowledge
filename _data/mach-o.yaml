@@ -1,4 +1,42 @@
 ---
+file_types:
+  MH_OBJECT:
+    description: An intermediate object file that results from a compile unit (e.g. single .c file)
+    value: 1
+  MH_EXECUTE:
+    description: A complete executable MachO file (typically a user mode binary)
+    value: 2
+  MH_FVMLIB:
+    description: A FVM (fixed virtual memory) library
+    value: 3
+  MH_CORE:
+    description: A core dump (user or kernel)
+    value: 4
+  MH_PRELOAD:
+    description:
+    value: 5
+  MH_DYLIB:
+    description: A dynamic (read bound at runtime) library
+    value: 6
+  MH_DYLINKER:
+    description: A dynamic linker
+    value: 7
+  MH_BUNDLE:
+    description: A loadable bundle (often essentially a plugin) should be a complete closure on symbols such as a
+      executable but intended to be loaded into another process's virtual memory space
+    value: 8
+  MH_DYLIB_STUB:
+    description: An object used for linking that contains no content.  Somewhat similar in nature to a `.tlb` file
+    value: 9
+  MH_DSYM:
+    description: A compile unit containing only debugging symbols
+    value: 10
+  MH_KEXT_BUNDLE:
+    description: A kernel extension bundle
+    value: 11
+  MH_FILESET:
+    description: A collection of other MachO files, used by KernelCollections
+    value: 12
 segments:
   __TEXT:
     description: The text region contains any executable code (in the machine code
