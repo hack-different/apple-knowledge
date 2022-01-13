@@ -1,3 +1,3 @@
 # Device List
 
-{{ include devices_table.html }}
+{% include devices_table.html %}

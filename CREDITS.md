@@ -6,4 +6,4 @@
 
 {% for credit in project[1].contributors %}
 
-* {{ credit.login }}{% endfor %}{% endfor %}
+* @{{ credit.login }}{% endfor %}{% endfor %}

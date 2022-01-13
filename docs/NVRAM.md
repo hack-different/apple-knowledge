@@ -7,4 +7,4 @@ P = Persistent
 S = System
 C = Common
 
-{{ include nvram_table.html }}
+{% include nvram_table.html %}

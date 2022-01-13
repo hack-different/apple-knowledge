@@ -8,7 +8,7 @@ require 'active_support/all'
 require 'yaml'
 require 'macho'
 
-MACHO_FILE = File.join(File.dirname(__FILE__), '../_data/mach-o.yaml')
+MACHO_FILE = File.join(File.dirname(__FILE__), '../_data/mach_o.yaml')
 FILESET_REGION = /__REGION\d+/
 
 result = YAML.load_file MACHO_FILE

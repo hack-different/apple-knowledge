@@ -66,6 +66,19 @@ namespace :sort do
   end
 end
 
+namespace :stubs do
+  desc 'create format stubs'
+  task :formats do
+    Dir.glob(File.join(BASE_PATH, '_data/*.yaml')) do |file|
+      format_name = File.basename(file).delete_suffix '.yaml'
+
+      document_name = File.join(BASE_PATH, "formats/#{format_name}.md")
+
+      File.write(document_name, "# #{format_name}\n") unless File.exist? document_name
+    end
+  end
+end
+
 desc 'sort everything'
 task sort: ['sort:nvram', 'sort:services', 'sort:mobile_assets', 'sort:four_cc', 'sort:devices']
 

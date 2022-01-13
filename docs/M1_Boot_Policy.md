@@ -33,4 +33,4 @@ volume group.
 Note: all commands specify that the SEP must respond to API level v7
 Note: "hashes" are 48 bytes long, which corresponds to SHA2-384
 
-{{ include bputil_sep_commands.html }}
+{% include bputil_sep_commands.html %}
