@@ -93,6 +93,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 ## Guides and General
 
 * [https://github.com/Proteas/apple-cve](https://github.com/Proteas/apple-cve)
+* [kpwn / qwertyoruiop's Wiki](https://github.com/kpwn/iOSRE/tree/master/wiki)
+* [kpwn / qwertyoruiop's Papers](https://github.com/kpwn/iOSRE/tree/master/resources/papers)
 * [About Apple Prototype and CPFM](docs/Prototypes)
 * [OWASP: iOS Tampering and Reverse Engineering](https://github.com/OWASP/
   owasp-mstg/blob/master/Document/0x06c-Reverse-Engineering-and-Tampering.md)
@@ -101,6 +103,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [T2 Dev Setup](docs/T2)
 * [Apple 4CC](docs/4CC)
 * [bytepack/IntroToiOSReverseEngineering](https://github.com/bytepack/IntroToiOSReverseEngineering)
+* [Remote Attack Surface](https://googleprojectzero.blogspot.com/2019/08/the-fully-remote-attack-surface-of.html)
 
 ## Devices
 
@@ -111,16 +114,40 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [acidanthera/VirtualSMC](https://github.com/acidanthera/VirtualSMC)
   * [t8012/smcutil](https://github.com/t8012/smcutil) - Create SMC binaries from update payloads
 
+## Kernel General
+
+* [Mach](https://developer.apple.com/library/content/documentation/Darwin/Conceptual/KernelProgramming/Mach/Mach.html)
+  * <https://opensource.apple.com/tarballs/xnu/>
+* [Mach and the Mach Interface Generator by nemo](https://www.exploit-db.com/papers/13176/)
+* [Appl IPC by Ian Beer](https://thecyberwire.com/events/docs/IanBeer_JSS_Slides.pdf)
+* [acidanthera/Lilu](https://github.com/acidanthera/Lilu)
+* [osy/AMFIExemption](https://github.com/osy/AMFIExemption)
+* [KTRR by Siguza](https://blog.siguza.net/KTRR/)
+* [Tick Tock by xerub](https://xerub.github.io/ios/kpp/2017/04/13/tick-tock.html)
+* [Casa de PPL by Levin](http://newosxbook.com/articles/CasaDePPL.html)
+* [KTRW by Brandon Azad](https://googleprojectzero.blogspot.com/2019/10/ktrw-journey-to-build-debuggable-iphone.html)
+* [Qwertyoruiopz Attacking XNU: Part 1](https://web.archive.org/web/20160131061526/http://blog.qwertyoruiop.com/?p=38)
+* [Qwertyoruiopz Attacking XNU: Part 2](https://web.archive.org/web/20160131061526/http://blog.qwertyoruiop.com/?p=48)
+* [Kernel Heap by Stefan Esser](http://gsec.hitb.org/materials/sg2016/D2%20-%20Stefan%20Esser%20-%20iOS%2010%20Kernel%20Heap%20Revisited.pdf)
+* [Who needs task_for_pid anyway](http://newosxbook.com/articles/PST2.html)
+* Apple Official Documentation
+  * [Kernel Programming Guide](https://developer.apple.com/library/content/documentation/Darwin/Conceptual/KernelProgramming)
+  * [IOKit Fundamentals](https://developer.apple.com/library/content/documentation/DeviceDrivers/Conceptual/IOKitFundamentals)
+  * [Virtual Memory System](https://developer.apple.com/library/content/documentation/Performance/Conceptual/ManagingMemory/Articles/AboutMemory.html)
+
 ## Protocols / Formats
 
 ### Bootloader Related
 
 * [`EFI`](docs/EFI)
 * [`NVRAM`](docs/NVRAM)
+  * [NVRAM unlock](https://stek29.rocks/2018/06/26/nvram.html)
 * [`SEP_memmap`](docs/SEP_memmap)
 * [`apple/darwin-xnu`](https://github.com/apple/darwin-xnu)
 * [`Factory_Firmware_Payloads`](docs/Factory_Firmware_Payloads)
 * [All About Kernels](docs/Kernels)
+* [*OS iBoot](http://newosxbook.com/bonus/iBoot.pdf)
+* [SecureROM Binaries](https://github.com/hekapooios/hekapooios.github.io/tree/master/resources/APROM)
 
 ### Archive / Disk Formats
 
@@ -129,6 +156,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [`sgan81/apfs-fuse`](https://github.com/sgan81/apfs-fuse)
   * [`libyal/libfsapfs`](https://github.com/libyal/libfsapfs)
   * [`cugu/apfs.ksy`](https://github.com/cugu/apfs.ksy)
+  * [bxl1989 APFS Remount](https://bxl1989.github.io/2019/01/17/apfs-remount.html)
+* [LwVM Lightweight Volume Manager](https://stek29.rocks/2018/01/22/lwvm-mapforio.html)
 * NeXT / Apple "Bill of Materials" / `pkg` / `bom`
   * [`iineva/bom`](https://github.com/iineva/bom)
 * `pbzx`
@@ -138,7 +167,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [`darlinghq/darling-dmg`](https://github.com/darlinghq/darling-dmg)
 * Signed System Volumes (SSV) / `root_hash`
 
-### Databases
+### Databases / Serialization
 
 * Property Lists
   * [`libimobiledevice/libplist`](https://github.com/libimobiledevice/libplist)
@@ -167,10 +196,11 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ### Code and Signature Formats
 
-* [Mach-O File Types](docs/MachO)
-* Mach-O / Signing / Entitlements
+* [Mach-O File Types](docs/MachO) - Mach-O / Signing / Entitlements
   * [`sbingner/ldid`](https://github.com/sbingner/ldid)
+  * [m4b Mach Binaries](http://www.m4b.io/reverse/engineering/mach/binaries/2015/03/29/mach-binaries.html)
   * [J's Entitlements Database](http://newosxbook.com/ent.jl)
+  * [Levin's Code Signing](http://www.newosxbook.com/articles/CodeSigning.pdf)
 * img4 - Apple signed images, version 4
   * <https://www.theiphonewiki.com/wiki/IMG4_File_Format>
   * [`h3adshotzz/img4helper`](https://github.com/h3adshotzz/img4helper)
@@ -183,30 +213,58 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [`EALF`](docs/EALF)
 * ChunkList - Used to verify macOS Recovery / Internet Recovery
   * [`t8012/go-aapl-integrity`](https://github.com/t8012/go-aapl-integrity)
-* `dyld` Shared Cache
+* `dyld` and DSC (dyld Shared Cache)
+  * [Levin's Dyld](http://www.newosxbook.com/articles/DYLD.html)
   * [`rickmark/yolo_dsc`](https://github.com/rickmark/yolo_dsc) - Used as last resort and depend on Xcode
   * [`arandomdev/DyldExtractor`](https://github.com/arandomdev/DyldExtractor) - Fixes up linking
+  * [dyld_shared_cache_util.cpp](https://opensource.apple.com/source/dyld/dyld-195.5/launch-cache/dyld_shared_cache_util.cpp.auto.html)
 * iBoot LocalPolicy, RemotePolicy and BAA signing
   * [`M1_Boot_Policy`](docs/M1_Boot_Policy)
 * Rosetta2
   * [ProjectChampollion](https://github.com/FFRI/ProjectChampollion/)
-* SEP - Secure Enclave Processor
-  * <http://mista.nu/research/sep-paper.pdf?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US>
-  * <https://www.theiphonewiki.com/wiki/Seputil>
-  * <https://github.com/mwpcheung/AppleSEPFirmware>
 
-### Kernel and Kexts
+### Sandbox or 'Seatbelt'
 
-* [acidanthera/Lilu](https://github.com/acidanthera/Lilu)
-* [osy/AMFIExemption](https://github.com/osy/AMFIExemption)
+* [Levin's - The Apple Sandbox](http://newosxbook.com/files/HITSB.pdf)
+* [iBSparkles Breaking Entitlements](https://sparkes.zone/blog/ios/2018/04/06/diving-into-the-kernel-entitlements.html)
+* [stek29 Shenanigans Shenanigans](https://stek29.rocks/2018/12/11/shenanigans.html)
+* [argp vs com.apple.security.sandbox](https://census-labs.com/media/sandbox-argp-csw2019-public.pdf)
 
-### USB / Wired Protocols
+### Secure Enclave Processor
+
+* [SEP_memmap](docs/SEP_memmap)
+* [sep.yaml](_data/sep.yaml)
+* [SEPROM](https://github.com/hekapooios/hekapooios.github.io/tree/master/resources/SEPROM)
+* <http://mista.nu/research/sep-paper.pdf?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US>
+* <https://www.theiphonewiki.com/wiki/Seputil>
+* <https://github.com/mwpcheung/AppleSEPFirmware>
+* <https://www.blackhat.com/docs/us-16/materials/us-16-Mandt-Demystifying-The-Secure-Enclave-Processor.pdf>
+* <https://data.hackinn.com/ppt/2018腾讯安全国际技术峰会/SEPOS：A%20Guided%20Tour.pdf>
+* <https://github.com/windknown/presentations/blob/master/Attack_Secure_Boot_of_SEP.pdf> - blackbird
+
+### ARM / x86
+
+* ARM General
+  * [ARMv8 Overview](https://www.element14.com/community/servlet/JiveServlet/previewBody/41836-102-1-229511/ARM.Reference_Manual.pdf)
+  * [ARMv8 ARM ARM (Architecture Reference Manual)](https://developer.arm.com/docs/ddi0487/latest)
+  * [ARMv8-A Tools](https://developer.arm.com/products/architecture/cpu-architecture/a-profile/exploration-tools)
+  * [ARM Software Standards](https://developer.arm.com/architectures/system-architectures/software-standards)
+  * [Siguza's ARM Bootcamp](https://github.com/Siguza/ios-resources/blob/master/bits/arm64.md)
+* Compilers
+  * [ARM Clang PAC ABI](https://github.com/apple/llvm-project/blob/apple/main/clang/docs/PointerAuthentication.rst)
+* ARM Mitigations
+  * [APRR](https://blog.siguza.net/APRR/)
+  * [PAN](https://blog.siguza.net/PAN/)
+  * [SPRR & GXF](https://blog.svenpeter.dev/posts/m1_sprr_gxf/)
+
+### USB / Wired Protocols / Low Level Hardware
 
 * Basically all iDevice / iTunes
   * [libimobiledevice.org](https://libimobiledevice.org)
   * [`libimobiledevice/libimobiledevice`](https://github.com/libimobiledevice/libimobiledevice)
 * DFU / Recovery
   * [`libimoibledevice/libirecovery`](https://github.com/libimobiledevice/libirecovery)
+  * <https://habr.com/en/company/dsec/blog/472762/>
 * usbmuxd - USB transport for iDevices
   * [`libimobiledevice/usbmuxd`](https://github.com/libimobiledevice/usbmuxd)
   * [`t8012/demuxusb`](https://github.com/t8012/demuxusb)
@@ -217,6 +275,12 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * USB-C Power Delivery - Vendor Defined Messages
   * [USB-C Port Controller (ACE) Secrets](https://blog.t8012.dev/ace-part-1/)
   * [`rickmark/macvdmtool`](https://github.com/rickmark/macvdmtool)
+* Lightning
+  * <http://ramtin-amin.fr/#tristar>
+  * <https://nyansatan.github.io/lightning/>
+* NVMe / NAND / PCIe
+  * <http://ramtin-amin.fr/#nvmepcie>
+  * <http://ramtin-amin.fr/#nvmedma>
 * [gh2o/rvi_capture](https://github.com/gh2o/rvi_capture)
 * [osy/ThunderboltPatcher](https://github.com/osy/ThunderboltPatcher)
 
@@ -263,6 +327,12 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [checkra1n](https://checkra.in)
 * [unc0ver](https://unc0ver.dev)
 * [Taurine](https://taurine.app)
+* [evasi0n writeup by geohot](http://geohot.com/e7writeup.html)
+* TaIG
+  * [8.0](http://www.newosxbook.com/articles/TaiG.html)
+  * [8.1.2](http://www.newosxbook.com/articles/TaiG2.html)
+  * [8.1.3](http://www.newosxbook.com/articles/28DaysLater.html)
+  * [8.4](http://www.newosxbook.com/articles/HIDeAndSeek.html)
 
 ### Jailbreak Tooling
 
@@ -282,15 +352,24 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [Mobile Verification Toolkit](https://docs.mvt.re/en/latest/)
 * [`mvt-project/mvt`](https://github.com/mvt-project/mvt)
 
-## Credits
+## [CREDITS](CREDITS)
 
 Hack Different's Knowledge is a product of the entire community and belongs to the community.  It is
 facilitated by the volunteer work of the Hack Different moderation team.
 
 Portions of data and knowledge come from <https://theiphonewiki.org>, <https://libimobiledevice.org> and
-<https://checkra.in> as well as the individuals who brought you those projects.
+<https://checkra.in> as well as the individuals who brought you those projects.  (And many more!)
 
-A list of all projects and their contributors is at [CREDITS](CREDITS)
+Special mention to Jonathan Levin and Amit Singh for taking the time to publish books on these topics.
+
+* [Mac OS Internals by Singh](https://www.amazon.com/Mac-OS-Internals-Approach-paperback/dp/0134426541)
+* [Mac and iOS Internals by Levin](https://www.amazon.com/Mac-OS-iOS-Internals-Apples/dp/1118057651)
+* [*OS Internals - User Mode by Levin](https://www.amazon.com/dp/099105556X/ref=as_sl_pc_qf_sp_asin_til?tag=newosxbookcom-20&linkCode=w00&linkId=25d40cd80f346c76537ef5fb1ea1ed81&creativeASIN=099105556X)
+* [*OS Internals - Kernel Mode by Levin](https://www.amazon.com/dp/0991055578/ref=as_sl_pc_tf_til?tag=newosxbookcom-20&linkCode=w00&linkId=1b6f861f86e509fd79773eb10adc0bbf&creativeASIN=0991055578)
+* [*OS Internals - Security by Levin](https://www.amazon.com/dp/0991055535/ref=as_sl_pc_qf_sp_asin_til?tag=newosxbookcom-20&linkCode=w00&linkId=0b61c945365c9c37cd3cf88f10a5f629&creativeASIN=0991055535)
+
+A list of all projects and their contributors is at [CREDITS](CREDITS) and is updated by a script.  If there are
+persons not updated due to limitations please PR the CREDITS page and call them out.
 
 ## Dedication
 
