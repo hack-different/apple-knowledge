@@ -3,29 +3,31 @@ segments:
   __TEXT:
     description: The text region contains any executable code (in the machine code
       of the platform for this binary) and therefore will always be a read-only (write
-      protected) region of memory when mapped into a process.
+      protected) region of memory when mapped into a process.  (r-x)
     __text:
       description: Generic code region.  This area will have the execute flag set
         on it's content
     __const:
       description: Constant variables. This region will be non-execute on platforms
-        that support execute never, DEP or NX concepts
+        that support execute never, DEP or NX concepts.  See `__DATA_CONST.__const`
     __cstring:
       description: ASCII strings null terminated.  This region can be split on `\0`
-        into strings
+        into strings.
     __os_log:
       description: Specific support for Apple OSLog facility containing the patterns
         used
     __eh_frame:
       description: Execption handling frame
     __stubs:
-      description:
+      description: Locations that text calls that initially point to a helper thunk (see __stub_helper) but will be
+        late bound to the dynamic symbol
     __stub_helper:
-      description:
+      description: A helper function that when called binds the prior call site to the proper dyld import
     __info_plist:
       description:
     __unwind_info:
-      description:
+      description: Information to help debuggers / exception handlers unwind the stack (info about prolouge etc)
+        allowing for parts of the stack to remain a compiler implementation detail.
     __auth_stubs:
       description:
     __init_offsets:
@@ -33,21 +35,21 @@ segments:
     __objc_methlist:
       description:
     __gcc_except_tab:
-      description:
+      description: GCC exception handler table
     __objc_classname:
-      description:
+      description: A collection of strings that provide the names for Objective-C classes in this object file
     __objc_methname:
-      description:
+      description: A colleciton of strings that provide the names of Objective-C methods for a given class (selectors)
     __objc_methtype:
       description:
   __DATA:
-    description:
+    description: Mutable data region (rw-)
     __data:
-      description:
+      description: General purpose mutable data region
     __lock_grp:
       description:
     __percpu:
-      description:
+      description: Local storage per CPU allowing for lock free globals
     __llvm_prf_cnts:
       description:
     __llvm_prf_data:
@@ -67,13 +69,13 @@ segments:
     __bss:
       description:
     __got:
-      description:
+      description: Global Object Table
     __mod_init_func:
-      description:
+      description: Module initializer function (called at load)
     __mod_term_func:
-      description:
+      description: Module termination function (called at unload)
     __const:
-      description:
+      description: Constant data, no longer in common usage, see __DATA_CONST.__const
     __nl_symbol_ptr:
       description:
     __la_symbol_ptr:
@@ -87,25 +89,25 @@ segments:
     __objc_superrefs:
       description:
     __objc_ivar:
-      description:
+      description: ObjC instance variables (ivar)
   __DATA_CONST:
-    description:
+    description: Immutable data region (r--)
     __got:
-      description:
+      description: Global Object Table
     __mod_init_func:
-      description:
+      description: Module initializer function
     __const:
-      description:
+      description: Constant initialized data
     __kalloc_type:
       description:
     __objc_classlist:
-      description:
+      description: List of ObjC classes exported
     __objc_protolist:
-      description:
+      description: List of ObjC protocols (like interfaces)
     __objc_imageinfo:
       description:
     __objc_const:
-      description:
+      description: Constant ObjC data
   __KLDDATA:
     description: Data region for KLD or kernel linker
     __init:
@@ -113,55 +115,58 @@ segments:
     __init_entry_set:
       description:
     __cstring:
-      description:
+      description: C-Style (null terminated) strings for the kernel linker
     __const:
-      description:
+      description: Constant data
     __mod_init_func:
-      description:
+      description: Module initializer funtion
     __mod_term_func:
-      description:
+      description: Module termination function
     __bss:
-      description:
+      description: Initialized data
   __HIB:
-    description:
+    description: Hardware specific information for coming out of hibernation.  This section is solely responsable for
+      ensuring that the sleepimage is restored.  Note that it all operates at the same protection levels (code, const,
+      and data) and therefore doesn't take advantage of some hardware protections.
     __text:
-      description:
+      description: Executable code used to pull a machine out of hibernation
     __bootPT:
-      description:
+      description: Initial page table for use during boot up from a hibernation for protected mode
     __desc:
       description:
     __data:
-      description:
+      description: General purpose data region for hibernation restore
     __const:
-      description:
+      description: Constant data
     __cstring:
-      description:
+      description: C-Style strings for the sleep image restore function
     __bss:
-      description:
+      description: Initialized mutable data
     __common:
       description:
   __VECTORS:
-    description:
+    description: Vector table.  Often used to configure a kernel / coprocessor for reset, exception etc.  See ARM-M
+      profile for an example
     __recover:
       description:
   __KLD:
-    description: The kernel linker
+    description: The kernel linker (used to dynamiclly bind a kernel extension) analagous to dyld in user-mode
     __text:
-      description:
+      description: The executable code for the kernel linker
   __LASTDATA_CONST:
-    description:
+    description: Last exported symbol from the const region of the kernel or object
     __mod_init_func:
-      description:
+      description: Module initialization function
   __LAST:
-    description:
+    description: Segment that contains the last kernel symbol exported
     __last:
-      description:
+      description: Contains `_last_kernel_symbol` which is the last exported kernel symbol
   __PRELINK_TEXT:
-    description:
+    description: A region of executable code that is the combination of multiple linkable objects having been prebound
     __text:
-      description:
+      description: The prelinked, executable code region
   __PRELINK_INFO:
-    description:
+    description: Descriptive information about the prelinked region of this object
     __info:
       description:
   __LINKINFO:
@@ -169,7 +174,7 @@ segments:
     __symbolsets:
       description:
   __CTF:
-    description:
+    description: Compact C Type Format
     __ctf:
       description:
   __LINKEDIT:
@@ -177,31 +182,32 @@ segments:
   __TEXT_EXEC:
     description:
   __PAGEZERO:
-    description:
+    description: A dummy page used to mark addresses at low memory as not readable.  This causes a dereference of a low
+      integer to cause a page fault helping not propogate type errors when casting pointers.
   __AUTH_CONST:
-    description:
+    description: Used by arm64e pointer authentication codes (PAC) and read only
     __const:
       description:
     __auth_got:
-      description:
+      description: Authenticated Global Object Table
     __cfstring:
-      description:
+      description: Authenticated CoreFoundation strings
     __auth_ptr:
       description:
     __objc_const:
       description:
     __got:
-      description:
+      description: Global Object Table
   __AUTH:
-    description:
+    description: Used by arm64e for pointer authenticaton codes (PAC) mutable data
     __data:
-      description:
+      description: General purpose PAC authenticated data
     __objc_data:
-      description:
+      description: ObjC specific PAC authenticated data
   __OBJC_CONST:
-    description:
+    description: A region of Objective-C metadata that is read-only
     __objc_class_ro:
-      description:
+      description: ObjC class info that is read-only to prevent runtime tampering (swizzling for example)
 commands:
   LC_SEGMENT:
     description:
