@@ -54,7 +54,8 @@ licenses/by-sa/4.0/){:rel="license"}
 
 ## Primary Data Source
 
-All data is derived from machine readable files (YAML) in this repo under `_data`
+We attempt to derive from machine sources and produce machine readable files (YAML) in this repo under `_data`.  For
+information about creating and extending data format see [Data Format Guidance](docs/Data_Formats).
 
 Updates and additions there should automatically be reflected in the documents
 
