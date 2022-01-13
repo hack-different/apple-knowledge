@@ -1,9 +1,3 @@
-GIT
-  remote: https://github.com/homebrew/ruby-macho.git
-  revision: 9175d6ae2104b2095e8434e4bc8f3b52d07c277c
-  specs:
-    ruby-macho (3.0.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -35,9 +29,7 @@ GEM
     commonmarker (0.17.13)
       ruby-enum (~> 0.5)
     concurrent-ruby (1.1.9)
-    date (3.2.2)
-    dnsruby (1.61.8)
-      net-ftp
+    dnsruby (1.61.9)
       simpleidn (~> 0.1)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
@@ -130,7 +122,6 @@ GEM
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     iniparse (1.5.0)
-    io-wait (0.2.1)
     jekyll (3.9.0)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -267,17 +258,9 @@ GEM
     mixlib-shellout (3.2.5)
       chef-utils
     multipart-post (2.1.1)
-    net-ftp (0.1.3)
-      net-protocol
-      time
-    net-protocol (0.1.2)
-      io-wait
-      timeout
-    nokogiri (1.13.0-arm64-darwin)
-      racc (~> 1.4)
     nokogiri (1.13.0-x86_64-darwin)
       racc (~> 1.4)
-    octokit (4.21.0)
+    octokit (4.22.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
     overcommit (0.58.0)
@@ -316,6 +299,7 @@ GEM
       parser (>= 3.0.1.1)
     ruby-enum (0.9.0)
       i18n
+    ruby-macho (3.0.0)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
@@ -330,16 +314,13 @@ GEM
       faraday (> 0.8, < 2.0)
     simpleidn (0.2.1)
       unf (~> 0.1.4)
-    sorbet (0.5.9494)
-      sorbet-static (= 0.5.9494)
-    sorbet-runtime (0.5.9494)
-    sorbet-static (0.5.9494-universal-darwin-21)
+    sorbet (0.5.9507)
+      sorbet-static (= 0.5.9507)
+    sorbet-runtime (0.5.9507)
+    sorbet-static (0.5.9507-universal-darwin-21)
     terminal-table (1.6.0)
     thor (1.2.1)
     thread_safe (0.3.6)
-    time (0.2.0)
-      date
-    timeout (0.2.0)
     tomlrb (2.0.1)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
@@ -353,7 +334,6 @@ GEM
     zeitwerk (2.5.3)
 
 PLATFORMS
-  arm64-darwin-21
   x86_64-darwin-21
 
 DEPENDENCIES
@@ -373,10 +353,10 @@ DEPENDENCIES
   pry
   rake
   rubocop
-  ruby-macho!
+  ruby-macho
   sorbet
   sorbet-runtime
   webrick
 
 BUNDLED WITH
-   2.2.22
+   2.3.3
