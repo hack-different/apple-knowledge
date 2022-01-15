@@ -258,6 +258,12 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [PAN](https://blog.siguza.net/PAN/)
   * [SPRR & GXF](https://blog.svenpeter.dev/posts/m1_sprr_gxf/)
 
+### Hypervisor / Virtualization
+
+* Apple Hypervisor
+  * <https://developer.apple.com/documentation/hypervisor>
+  * <https://developer.apple.com/documentation/hypervisor/apple_silicon>
+
 ### USB / Wired Protocols / Low Level Hardware
 
 * Basically all iDevice / iTunes
