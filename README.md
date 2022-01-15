@@ -2,9 +2,9 @@
 
 A collection of reverse engineered Apple formats, protocols, or other interesting bits.
 
-Join us on Discord: <https://discord.gg/hackdifferent>
+[Join us on Discord](https://discord.gg/NAxRYvysuc) - [Discord Rules](https://hackdiffe.rent)
 
-Repo inspired by <https://github.com/papers-we-love/papers-we-love>
+Repo inspired by [Papers we Love](https://github.com/papers-we-love/papers-we-love)
 
 ## Contributing and a warning
 
