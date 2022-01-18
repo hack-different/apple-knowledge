@@ -8,6 +8,8 @@ Repo inspired by [Papers we Love](https://github.com/papers-we-love/papers-we-lo
 
 ## Contributing and a warning
 
+[Linking your Discord and GitHub](https://hackdiffe.rent/LINKING)
+
 We want this collection to be around for new jailbreakers and hobbiests for years to come, so we must say: this
 collection accepts (with gratitude) pull-requests that improve it, but under no circumstances
 will a PR based on `AppleInternal`, or any other copyrighted works protected by the

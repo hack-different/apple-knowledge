@@ -258,6 +258,8 @@ GEM
     mixlib-shellout (3.2.5)
       chef-utils
     multipart-post (2.1.1)
+    nokogiri (1.13.1-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.1-x86_64-darwin)
       racc (~> 1.4)
     octokit (4.22.0)
@@ -314,10 +316,10 @@ GEM
       faraday (> 0.8, < 2.0)
     simpleidn (0.2.1)
       unf (~> 0.1.4)
-    sorbet (0.5.9519)
-      sorbet-static (= 0.5.9519)
-    sorbet-runtime (0.5.9519)
-    sorbet-static (0.5.9519-universal-darwin-21)
+    sorbet (0.5.9531)
+      sorbet-static (= 0.5.9531)
+    sorbet-runtime (0.5.9531)
+    sorbet-static (0.5.9531-universal-darwin-21)
     terminal-table (1.6.0)
     thor (1.2.1)
     thread_safe (0.3.6)
@@ -334,6 +336,7 @@ GEM
     zeitwerk (2.5.3)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-darwin-21
 
 DEPENDENCIES
@@ -360,4 +363,4 @@ DEPENDENCIES
   webrick
 
 BUNDLED WITH
-   2.3.3
+   2.3.5
