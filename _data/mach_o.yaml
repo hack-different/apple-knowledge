@@ -1,4 +1,5 @@
 ---
+cpu_types:
 file_types:
   MH_OBJECT:
     description: An intermediate object file that results from a compile unit (e.g. single .c file)
@@ -7,32 +8,36 @@ file_types:
     description: A complete executable MachO file (typically a user mode binary)
     value: 2
   MH_FVMLIB:
-    description: A FVM (fixed virtual memory) library
+    description: A FVM (fixed virtual memory, or non-relocatable/non-position independenct code PIC) dynamic library
     value: 3
   MH_CORE:
     description: A core dump (user or kernel)
     value: 4
   MH_PRELOAD:
-    description:
+    description: \"Preloaded\" images.  Used for firmware payloads
     value: 5
   MH_DYLIB:
     description: A dynamic (read bound at runtime) library
     value: 6
   MH_DYLINKER:
-    description: A dynamic linker
+    description: A dynamic linker (typically only one exists and is
     value: 7
   MH_BUNDLE:
     description: A loadable bundle (often essentially a plugin) should be a complete closure on symbols such as a
-      executable but intended to be loaded into another process's virtual memory space
+      executable but intended to be loaded into another process's virtual memory space.  A reason for the usage of
+      `MH_BUNDLE` is that the object must be explicitly late bound by calling `dlopen` or related APIs, it cannot
+      be linked to as though it were a library.
     value: 8
   MH_DYLIB_STUB:
-    description: An object used for linking that contains no content.  Somewhat similar in nature to a `.tlb` file
+    description: An object used for linking that contains no content.  Somewhat similar in nature to a `.tlb` file and
+      no longer in common usage as Apple uses TLB files as a replacement.
     value: 9
   MH_DSYM:
     description: A compile unit containing only debugging symbols
     value: 10
   MH_KEXT_BUNDLE:
-    description: A kernel extension bundle
+    description: A kernel extension bundle.  Name comes from 32bit lineage where MH_BUNDLE were kexts on non-64bit
+      platforms
     value: 11
   MH_FILESET:
     description: A collection of other MachO files, used by KernelCollections
@@ -105,9 +110,9 @@ segments:
     __common:
       description:
     __bss:
-      description:
+      description: Basic initialized data section
     __got:
-      description: Global Object Table
+      description: Global offset table
     __mod_init_func:
       description: Module initializer function (called at load)
     __mod_term_func:
@@ -115,9 +120,9 @@ segments:
     __const:
       description: Constant data, no longer in common usage, see __DATA_CONST.__const
     __nl_symbol_ptr:
-      description:
+      description: Non-lazy symbol pointers
     __la_symbol_ptr:
-      description:
+      description: Lazy symbol pointers
     __objc_imageinfo:
       description:
     __objc_selrefs:
@@ -131,7 +136,7 @@ segments:
   __DATA_CONST:
     description: Immutable data region (r--)
     __got:
-      description: Global Object Table
+      description: Global offset table
     __mod_init_func:
       description: Module initializer function
     __const:
@@ -216,7 +221,9 @@ segments:
     __ctf:
       description:
   __LINKEDIT:
-    description:
+    description: Though named "LINKEDIT" this segment actually contains any metadata of this Mach-O object.  For example
+      this area contains code signature, as well as dynamic linker opcodes.  This area is always read only.  The
+      contents of this area are described by various `LC_` load commands.
   __TEXT_EXEC:
     description:
   __PAGEZERO:
@@ -225,17 +232,17 @@ segments:
   __AUTH_CONST:
     description: Used by arm64e pointer authentication codes (PAC) and read only
     __const:
-      description:
+      description: Authenticated constants
     __auth_got:
-      description: Authenticated Global Object Table
+      description: Authenticated Global offset Table
     __cfstring:
       description: Authenticated CoreFoundation strings
     __auth_ptr:
       description:
     __objc_const:
-      description:
+      description: Authenticated Objective-C constant values
     __got:
-      description: Global Object Table
+      description: Global offset Table
   __AUTH:
     description: Used by arm64e for pointer authenticaton codes (PAC) mutable data
     __data:
@@ -251,10 +258,10 @@ commands:
     description: Causes the loading of a 32bit segment with a given protection level.  Contains 0 or more sections
     value: 1
   LC_SYMTAB:
-    description: Symbol table
+    description: Classical symbol table (direct symbols defined in this object)
     value: 2
   LC_SYMSEG:
-    description:
+    description: Classical GCC compatible "symbol segment".  Not commonly used as it is replaced with dyld opcodes.
     value: 3
   LC_THREAD:
     description: Initial state of the Mach thread for a executable Mach-O
@@ -278,7 +285,7 @@ commands:
     description:
     value: 10
   LC_DYSYMTAB:
-    description: Dynamic Symbol Table.
+    description: Dynamic or indirect symbol table.
     value: 11
   LC_LOAD_DYLIB:
     description: Load a dynamic library (dylib) by it's identity.  This occurs before process start.
@@ -296,7 +303,8 @@ commands:
     description:
     value: 16
   LC_ROUTINES:
-    description:
+    description: Used to define initialize / finalize functions on 32bit platforms.  Historical as _init_func/_term_func
+      are now how this is handled.
     value: 17
   LC_SUB_FRAMEWORK:
     description: Used by "Umbrella Frameworks" to declare the frameworks that the umbrella re-exports.  For an example
@@ -313,10 +321,12 @@ commands:
     description:
     value: 21
   LC_TWOLEVEL_HINTS:
-    description:
+    description: Two level namespacing allows for the binding to a symbol that may have the same name in two different
+      libraries.  The first namespace is the dylib contining the symbol and the second namespace is the symbol itself.
     value: 22
   LC_PREBIND_CKSUM:
-    description:
+    description: Checksum data to know if this "optimized" or prebound object is still valid for the files it was
+      generated from.
     value: 23
   LC_LOAD_WEAK_DYLIB:
     description: Attempt to load a Dylib but do not fail if binding cannot occur due to its absence
@@ -325,7 +335,8 @@ commands:
     description: Causes the loading of a 64bit segment with a given protection level.  Contains 0 or more sections
     value: 25
   LC_ROUTINES_64:
-    description:
+    description: Used to define initialize / finalize functions on 64bit platforms.  Historical as _init_func/_term_func
+      are now how this is handled.
     value: 26
   LC_UUID:
     description: A UUID (GUID) that uniquely identifies this object.  Should only occur once
@@ -371,7 +382,7 @@ commands:
     description:
     value: 39
   LC_MAIN:
-    description:
+    description: Mach-O binary entry point
     value: 2147483688
   LC_DATA_IN_CODE:
     description: Generic region of a Mach-O file that can contain arbitrary data
@@ -380,7 +391,8 @@ commands:
     description: The verion of source code this Mach-O file was built from
     value: 42
   LC_DYLIB_CODE_SIGN_DRS:
-    description:
+    description: Classical code signing "designated requirements".  No longer in common usage as this is now in a
+      LC_CODE_SIGNATURE "magic page"
     value: 43
   LC_ENCRYPTION_INFO_64:
     description: Used by FairPlay / DSMOS to protect a binary from dump / reverse engineering (DRM, be mindful of DMCA)
@@ -392,23 +404,25 @@ commands:
     description:
     value: 46
   LC_VERSION_MIN_TVOS:
-    description:
+    description: The minimum tvOS to load and execute this binary
     value: 47
   LC_VERSION_MIN_WATCHOS:
-    description:
+    description: The minimum watchOS to laod and execute this binary
     value: 48
   LC_NOTE:
-    description: An arbitrary human readable text note included in this Mach-O
+    description: An arbitrary human readable text note included in this Mach-O.  These should not be used by automated
+      tooling as their unstructured
     value: 49
   LC_BUILD_VERSION:
-    description:
+    description: Contains information about the binaries platform, it's target and minimum SDK
     value: 50
   LC_DYLD_EXPORTS_TRIE:
-    description:
+    description: The exporeted DYLD symbols from this dylib
     value: 2147483699
   LC_DYLD_CHAINED_FIXUPS:
     description:
     value: 2147483700
   LC_FILESET_ENTRY:
-    description:
+    description: An entry of a Mach-O object containing other Mach-O files.  Current usage is in macOS
+      11+ KernelCollections
     value: 2147483701
