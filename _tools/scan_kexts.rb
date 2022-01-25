@@ -34,6 +34,13 @@ Dir.glob(File.join(KERNEL_COLLECTION_DIR, '*.kc')).each do |collection|
   end
 end
 
+Dir.glob(File.join(KERNEL_COLLECTION_DIR, '*.kc.elides')).each do |collection|
+  data = File.read(collection).split
+  data.each do |kext|
+    entries[kext] ||= { 'id' => kext, 'description' => nil }
+  end
+end
+
 result = entries.values
 
 result.sort_by! { |entry| entry['id'] }

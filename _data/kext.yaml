@@ -59,10 +59,14 @@
   description:
   collections:
   - SystemKernelExtensions.kc
+- id: com.apple.driver.AirPort.Brcm4360-MFG
+  description:
 - id: com.apple.driver.AirPort.BrcmNIC
   description:
   collections:
   - BootKernelExtensions.kc
+- id: com.apple.driver.AirPort.BrcmNIC-MFG
+  description:
 - id: com.apple.driver.Apple16X50ACPI
   description:
   collections:
@@ -103,6 +107,8 @@
   description:
   collections:
   - SystemKernelExtensions.kc
+- id: com.apple.driver.AppleAstrisGpioProbe
+  description:
 - id: com.apple.driver.AppleAudioClockLibs
   description:
   collections:
@@ -119,6 +125,8 @@
   description:
   collections:
   - BootKernelExtensions.kc
+- id: com.apple.driver.AppleBSDKextStarterVPN
+  description:
 - id: com.apple.driver.AppleBacklight
   description:
   collections:
@@ -307,6 +315,8 @@
   description:
   collections:
   - SystemKernelExtensions.kc
+- id: com.apple.driver.AppleHWAccess
+  description:
 - id: com.apple.driver.AppleHollywood
   description:
   collections:
@@ -347,6 +357,8 @@
   description:
   collections:
   - BootKernelExtensions.kc
+- id: com.apple.driver.AppleIntelCPUPowerManagementDriver
+  description:
 - id: com.apple.driver.AppleIntelFramebufferAzul
   description:
   collections:
@@ -483,6 +495,8 @@
   description:
   collections:
   - SystemKernelExtensions.kc
+- id: com.apple.driver.AppleNVMePassThrough
+  description:
 - id: com.apple.driver.AppleOLYHALMac
   description:
   collections:
@@ -783,6 +797,10 @@
   description:
   collections:
   - BootKernelExtensions.kc
+- id: com.apple.driver.DrizzlePlatformSupport
+  description:
+- id: com.apple.driver.DrizzleSMC
+  description:
 - id: com.apple.driver.DspFuncLib
   description:
   collections:
@@ -831,10 +849,16 @@
   description:
   collections:
   - BootKernelExtensions.kc
+- id: com.apple.driver.KernelRelayTesterHost
+  description:
 - id: com.apple.driver.LSI_FW_500
   description:
   collections:
   - SystemKernelExtensions.kc
+- id: com.apple.driver.LuaHardwareAccess
+  description:
+- id: com.apple.driver.MEDetect
+  description:
 - id: com.apple.driver.MKE_LF_D211A
   description:
   collections:
@@ -951,6 +975,8 @@
   description:
   collections:
   - BootKernelExtensions.kc
+- id: com.apple.driver.usb.AppleUSBKDP
+  description:
 - id: com.apple.driver.usb.AppleUSBOHCI
   description:
   collections:
@@ -963,6 +989,8 @@
   description:
   collections:
   - SystemKernelExtensions.kc
+- id: com.apple.driver.usb.AppleUSBRecoveryHost
+  description:
 - id: com.apple.driver.usb.AppleUSBUHCI
   description:
   collections:
@@ -991,6 +1019,8 @@
   description:
   collections:
   - BootKernelExtensions.kc
+- id: com.apple.driver.usb.AppleUSBVHCIRSM
+  description:
 - id: com.apple.driver.usb.AppleUSBXHCI
   description:
   collections:
@@ -1395,10 +1425,14 @@
   description:
   collections:
   - SystemKernelExtensions.kc
+- id: com.apple.iokit.RUSBHostFamily
+  description:
 - id: com.apple.iokit.SCSITaskUserClient
   description:
   collections:
   - BootKernelExtensions.kc
+- id: com.apple.iokit.fipscavs-kext-tool
+  description:
 - id: com.apple.kec.AppleEncryptedArchive
   description:
   collections:
@@ -1591,6 +1625,8 @@
   description:
   collections:
   - SystemKernelExtensions.kc
+- id: com.apple.kext.MojoKDP
+  description:
 - id: com.apple.kext.OSvKernDSPLib
   description:
   collections:
@@ -1631,6 +1667,8 @@
   description:
   collections:
   - SystemKernelExtensions.kc
+- id: com.apple.pae.driver.AppleQuaibridgePCIE
+  description:
 - id: com.apple.plugin.IOAVBControlPlugin
   description:
   collections:
