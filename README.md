@@ -110,6 +110,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [Apple 4CC](docs/4CC)
 * [bytepack/IntroToiOSReverseEngineering](https://github.com/bytepack/IntroToiOSReverseEngineering)
 * [Remote Attack Surface](https://googleprojectzero.blogspot.com/2019/08/the-fully-remote-attack-surface-of.html)
+* [Lakr233's Research](https://lab.qaq.wiki/Lakr233/iOS-kernel-research/-/tree/master))
 
 ## Devices
 
@@ -256,6 +257,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [ARMv8-A Tools](https://developer.arm.com/products/architecture/cpu-architecture/a-profile/exploration-tools)
   * [ARM Software Standards](https://developer.arm.com/architectures/system-architectures/software-standards)
   * [Siguza's ARM Bootcamp](https://github.com/Siguza/ios-resources/blob/master/bits/arm64.md)
+* Apple CPUs
+  * [dougallj's applecpu](https://dougallj.github.io/applecpu/firestorm.html)
 * Compilers
   * [ARM Clang PAC ABI](https://github.com/apple/llvm-project/blob/apple/main/clang/docs/PointerAuthentication.rst)
 * ARM Mitigations

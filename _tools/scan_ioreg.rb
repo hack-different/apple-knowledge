@@ -33,7 +33,7 @@ class IORegClass
     instance = for_name hash['name']
     instance.description = hash['description']
     instance.parents = hash['parents']
-    instance.known_names = hash['known_names']
+    instance.known_names = (hash['known_names'] || []).sort
   end
 
   def to_h
@@ -54,7 +54,7 @@ result['classes'] ||= []
 
 unique_classes = result['classes'].select { |entry| IORegClass.load_one(entry) }
 
-CLASS_NAME_REGEX = /o\s([A-Za-z0-9\s]+)(@[a-fA-F0-9]+)?\s+<class ([a-zA-Z0-9:]+),/
+CLASS_NAME_REGEX = /o\s([A-Za-z0-9\s,\-_]+)(@[a-fA-F0-9]+)?\s+<class ([a-zA-Z0-9:]+),/
 BEGIN_PROPERTIES_REGEX = /\{$/
 PROPERTY_LINE_REGEX = /"([A-Za-z0-9 ]+)" = ([^\n]+)$/
 END_PROPERTIES_REGEX = /\}$/
