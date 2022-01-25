@@ -81,6 +81,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 * [checkra1n/toolchain](https://github.com/checkra1n/toolchain)
 * [alephsecurity/xnu-qemu-arm64](https://github.com/alephsecurity/xnu-qemu-arm64)
+  * [alephsecurity/xnu-qemu-arm64-tools](https://github.com/alephsecurity/xnu-qemu-arm64-tools)
+  * [Build iOS on QEMU](https://github.com/alephsecurity/xnu-qemu-arm64/wiki/Build-iOS-on-QEMU)
 * [IDA Disassembler by HexRays](https://hex-rays.com/ida-pro/)
   * [`onethawt/idaplugins-list`](https://github.com/onethawt/idaplugins-list)
   * [`cellebrite-srl/ida_kernelcache`](https://github.com/cellebrite-srl/ida_kernelcache)
