@@ -32,10 +32,16 @@ class IORegClass
   def self.load_one(hash)
     instance = for_name hash['name']
     instance.description = hash['description']
+    instance.parents = hash['parents']
+    instance.known_names = hash['known_names']
   end
 
   def to_h
     { 'name' => @name, 'description' => @description, 'parents' => @parents, 'known_names' => @known_names }
+  end
+
+  def user_client?
+    @parents.include? 'IOUserClient'
   end
 end
 
@@ -48,12 +54,16 @@ result['classes'] ||= []
 
 unique_classes = result['classes'].select { |entry| IORegClass.load_one(entry) }
 
-CLASS_NAME_REGEX = /([A-Za-z0-9]+)(@[a-fA-F0-9]+)?\s+<class ([a-zA-Z0-9:]+),/
+CLASS_NAME_REGEX = /o\s([A-Za-z0-9\s]+)(@[a-fA-F0-9]+)?\s+<class ([a-zA-Z0-9:]+),/
+BEGIN_PROPERTIES_REGEX = /\{$/
+PROPERTY_LINE_REGEX = /"([A-Za-z0-9 ]+)" = ([^\n]+)$/
+END_PROPERTIES_REGEX = /\}$/
 
 INPUT_DIRECTORY = ARGV[0]
 
 Dir.glob(File.join(INPUT_DIRECTORY, '*.txt')).each do |file|
   puts "Scanning File: #{file}"
+  instance = nil
   File.readlines(file).each do |line|
     match = line.match CLASS_NAME_REGEX
 
@@ -63,10 +73,12 @@ Dir.glob(File.join(INPUT_DIRECTORY, '*.txt')).each do |file|
 
     puts "#{match[1]}: #{tree.inspect}"
 
+    name = match[1].strip
+
     instance = IORegClass.for_name(tree.first)
     instance.parents = tree[1..]
     instance.known_names ||= []
-    instance.known_names << match[1] unless instance.known_names.include? match[1]
+    instance.known_names << name unless instance.known_names.include? name
   rescue StandardError => e
     puts "Error: #{e}\nError Line: #{line}"
   end

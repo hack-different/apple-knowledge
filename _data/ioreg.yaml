@@ -1,5 +1,14 @@
 ---
 classes:
+- name: ADPParamFIFO
+  description:
+  parents:
+  - IOMFBParamFIFO
+  - AppleARMParamFIFO
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - ADPParamFIFO
 - name: AFKEndpointInterfaceUserClient
   description:
   parents:
@@ -23,13 +32,13 @@ classes:
   - IOService
   - IORegistryEntry
   known_names:
-  - controller
-  - service
-  - device
-  - interface
-  - power
-  - allocator
   - system
+  - DCPDPDevice
+  - CBAPToDCPService
+  - AppleDCPDPTXController
+  - AppleDCPDPTXPowerController
+  - AppleDCPAgileCDIDPDisplay
+  - AppleDCPDPTXRemotePort
 - name: AFKRemoteMemoryDescriptorAllocator
   description:
   parents:
@@ -104,11 +113,8 @@ classes:
   - AUC
 - name: AppleA7IOPNub
   description:
-  parents:
-  - IOService
-  - IORegistryEntry
+  parents: []
   known_names:
-  - nub
 - name: AppleANS3NVMeController
   description:
   parents:
@@ -155,20 +161,8 @@ classes:
   - AppleAOPAudioDevice
 - name: AppleAOPAudioDeviceNode
   description:
-  parents:
-  - IOService
-  - IORegistryEntry
+  parents: []
   known_names:
-  - codecmclkmgr
-  - speaker
-  - hall
-  - config
-  - leap
-  - hapticmgr
-  - haptic
-  - hpdbg
-  - in
-  - audiomgr
 - name: AppleAOPAudioDeviceProvider
   description:
   parents:
@@ -211,6 +205,14 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleAOPAudioPCMAssetManagerDevice
+- name: AppleAOPAudioPDM2Device
+  description:
+  parents:
+  - AppleAOPAudioDevice
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleAOPAudioPDM2Device
 - name: AppleAOPAudioUserClient
   description:
   parents:
@@ -275,6 +277,31 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleAPFSContainer
+- name: AppleAPFSContainerScheme
+  description:
+  parents:
+  - IOStorage
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleAPFSContainerScheme
+- name: AppleAPFSMedia
+  description:
+  parents:
+  - IOMedia
+  - IOStorage
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleAPFSMedia
+- name: AppleAPFSMediaBSDClient
+  description:
+  parents:
+  - IOMediaBSDClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleAPFSMediaBSDClient
 - name: AppleAPFSVolume
   description:
   parents:
@@ -283,12 +310,25 @@ classes:
   - IOService
   - IORegistryEntry
   known_names:
-  - System
-  - Data
+  - iSCPreboot
   - xART
   - Hardware
-  - Preboot
+  - Recovery
   - Update
+  - Nouvau
+  - Preboot
+  - VM
+  - System
+  - Data
+  - Baseband Data
+- name: AppleAPFSVolumeBSDClient
+  description:
+  parents:
+  - IOMediaBSDClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleAPFSVolumeBSDClient
 - name: AppleARMBacklight
   description:
   parents:
@@ -303,6 +343,14 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleARMBootPerf
+- name: AppleARMCHRPNVRAM
+  description:
+  parents:
+  - IONVRAMController
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleARMCHRPNVRAM
 - name: AppleARMCPU
   description:
   parents:
@@ -326,91 +374,73 @@ classes:
   - IOService
   - IORegistryEntry
   known_names:
-  - top
+  - hpmBusManager
   - babbage
-  - eeprom
   - parrot
   - tristar
   - accbuck
 - name: AppleARMIISDevice
   description:
-  parents:
-  - IOService
-  - IORegistryEntry
+  parents: []
   known_names:
-  - voice
-  - codec
-  - debug1
-  - loopback
-  - halogen
-  - hawking
-  - top
-  - hpdbg
-  - haptic
 - name: AppleARMIODevice
   description:
   parents:
   - IOService
   - IORegistryEntry
   known_names:
+  - spi0
   - spi2
-  - aic
-  - timebase
-  - pmgr
-  - nco
-  - wdt
-  - gpio
+  - spi3
+  - spi4
+  - i2c1
+  - i2c2
+  - i2c3
+  - i2c4
+  - fpwm
+  - alc0
+  - dispdfr
+  - wlan
+  - uart2
+  - bluetooth
+  - apcie
+  - apciec0
+  - acio0
+  - apciec1
+  - acio1
   - mcc
-  - handler
+  - aic
+  - wdt
   - dwi
   - pwm
   - aes
+  - gpio
   - aop
+  - pmgr
+  - nco
   - pmp
   - sep
   - sio
   - ans
   - smc
-  - rsm
-  - uart
   - uart0
-  - uart4
-  - spi3
-  - i2c2
-  - i2c3
-  - i2c1
-  - spmi0
-  - phy
-  - usb
-  - drd
+  - spi1
+  - i2c0
   - disp0
   - dcp
-  - controller
+  - dispext0
+  - dcpext
   - scaler0
-  - scaler
   - jpeg0
   - jpeg1
-  - isp
   - ave
   - avd
+  - isp
   - ane
-  - expert
   - sgx
-  - asc
-  - audio
-  - canary
-  - switch
   - mca0
   - mca1
-  - mca2
   - mca3
-  - mca4
-  - mca5
-  - alc0
-  - alc2
-  - apcie
-  - apcie1
-  - apcie2
   - tempsensor0
   - tempsensor1
   - tempsensor2
@@ -430,15 +460,18 @@ classes:
   - mtrtempsensor16
   - mtrtempsensor17
   - mtrtempsensor18
+  - smctempsensor0
+  - aft
+  - timesync
+  - uart4
+  - mca2
+  - mca4
+  - mca5
+  - alc2
   - mtrtempsensor19
   - mtrtempsensor20
   - vtempctl0
-  - smctempsensor0
-  - interface
   - aod2
-  - manager
-  - wlan
-  - bluetooth
 - name: AppleARMLightEmUp
   description: ARM CoreSight / Debug
   parents:
@@ -446,13 +479,22 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleARMLightEmUp
+- name: AppleARMMIPIDSIDevice
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - lcddfr
 - name: AppleARMNORFlashDevice
   description:
   parents:
   - IOService
   - IORegistryEntry
   known_names:
-  - data
+  - firmware
+  - anvram
+  - syscfg
 - name: AppleARMPE
   description: ARM Processing Element (CPU Core)
   parents:
@@ -488,18 +530,26 @@ classes:
   - IOService
   - IORegistryEntry
   known_names:
-  - touch
-  - codec
+  - mesa
+  - ipd
+  - dp855
+  - spinor
+- name: AppleARMSPIFlashController
+  description:
+  parents:
+  - AppleARMNORFlashController
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleARMSPIFlashController
 - name: AppleARMSPMIDevice
   description:
   parents:
   - IOService
   - IORegistryEntry
   known_names:
-  - pmu
   - btm
   - dotara
-  - spmi
 - name: AppleARMSlowAdaptiveClockingManager
   description:
   parents:
@@ -553,6 +603,28 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleAVE2Driver
+- name: AppleActuatorDevice
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleActuatorDevice
+- name: AppleActuatorDeviceUserClient
+  description:
+  parents:
+  - IOUserClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleActuatorDeviceUserClient
+- name: AppleActuatorHIDEventDriver
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleActuatorHIDEventDriver
 - name: AppleAudioFirmwareDownloader
   description:
   parents:
@@ -723,19 +795,8 @@ classes:
   - QMAP
 - name: AppleBasebandPCIPDPSkywalkInterface
   description:
-  parents:
-  - AppleBasebandPCISkywalkInterfaceBase
-  - IOSkywalkNetworkInterface
-  - IOSkywalkInterface
-  - IOService
-  - IORegistryEntry
+  parents: []
   known_names:
-  - ip0
-  - ip1
-  - ip2
-  - ip3
-  - ip4
-  - ip5
 - name: AppleBasebandPCIQMAPControl
   description:
   parents:
@@ -743,18 +804,11 @@ classes:
   - IOService
   - IORegistryEntry
   known_names:
-  - Control
+  - QMAP Control
 - name: AppleBasebandPCIStewieSkywalkInterface
   description:
-  parents:
-  - AppleBasebandPCIPDPSkywalkInterface
-  - AppleBasebandPCISkywalkInterfaceBase
-  - IOSkywalkNetworkInterface
-  - IOSkywalkInterface
-  - IOService
-  - IORegistryEntry
+  parents: []
   known_names:
-  - stewie0
 - name: AppleBasebandPCITraceBackendRaw
   description:
   parents:
@@ -787,6 +841,21 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleBatteryAuth
+- name: AppleBiometricServices
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleBiometricServices
+- name: AppleBiometricServicesUserClient
+  description:
+  parents:
+  - IOUserClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleBiometricServicesUserClient
 - name: AppleBluetoothModule
   description:
   parents:
@@ -872,6 +941,30 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleCS42L7xMikeyBus
+- name: AppleCS42L83Audio
+  description:
+  parents:
+  - AppleI2CPagedAudio
+  - AppleI2CAudio
+  - AppleEmbeddedAudio
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleCS42L83Audio
+- name: AppleCS42L83Mikey
+  description:
+  parents:
+  - AppleCSHTDCodecMikey
+  - AppleCSDS911CodecMikey
+  - AppleCSCodecMikey
+  - AppleMikeyReceiver
+  - AppleEmbeddedButtonController
+  - AppleEmbeddedAudioButtons
+  - IOHIDDevice
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleCS42L83Mikey
 - name: AppleConvergedIPCOLYBTControl
   description:
   parents:
@@ -942,6 +1035,22 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleCredentialManagerUserClient
+- name: AppleDCPDPTXRemoteHDCPInterfaceProxy
+  description:
+  parents:
+  - DCPAVProxy
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleDCPDPTXRemoteHDCPInterfaceProxy
+- name: AppleDCPDPTXRemotePortProxy
+  description:
+  parents:
+  - DCPAVProxy
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleDCPDPTXRemotePortProxy
 - name: AppleDCPExpert
   description:
   parents:
@@ -957,6 +1066,14 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleDCPLinkServiceSoC
+- name: AppleDeviceManagementHIDEventService
+  description:
+  parents:
+  - IOHIDEventService
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleDeviceManagementHIDEventService
 - name: AppleDiagnosticDataAccessReadOnly
   description:
   parents:
@@ -996,9 +1113,10 @@ classes:
   - IOService
   - IORegistryEntry
   known_names:
-  - Actuator
-  - Debug
   - Speaker
+  - Codec Output
+  - Actuator
+  - Haptic Debug
   - Codec
 - name: AppleEmbeddedAudioResourceManager
   description:
@@ -1032,6 +1150,13 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleEmbeddedNVMeTemperatureSensor
+- name: AppleEmbeddedSimpleSPINORFlasherDriver
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleEmbeddedSimpleSPINORFlasherDriver
 - name: AppleEmbeddedTouchEEPROMDriver
   description:
   parents:
@@ -1054,6 +1179,17 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleEventLogHandler
+- name: AppleExternalSecondaryAudio
+  description:
+  parents:
+  - AppleSecondaryAudio
+  - AppleARMIISAudioDevice
+  - AppleARMDMAAudioDevice
+  - IOAudio2Device
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - Digital Mic
 - name: AppleFAN53740
   description:
   parents:
@@ -1061,6 +1197,13 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleFAN53740
+- name: AppleFDEKeyStore
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleFDEKeyStore
 - name: AppleFairplayTextCrypter
   description: Load encrypted (FairPlay) protected apps such as those from the app
     store
@@ -1131,6 +1274,16 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleH13PearlCam
+- name: AppleHIDKeyboardEventDriverV2
+  description:
+  parents:
+  - AppleEmbeddedKeyboard
+  - IOHIDEventDriver
+  - IOHIDEventService
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleHIDKeyboardEventDriverV2
 - name: AppleHIDTransportBootloaderHBPP
   description:
   parents:
@@ -1140,6 +1293,15 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleHIDTransportBootloaderHBPP
+- name: AppleHIDTransportBootloaderHIDDevice
+  description:
+  parents:
+  - AppleHIDTransportBootloader
+  - AIDService
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleHIDTransportBootloaderHIDDevice
 - name: AppleHIDTransportBootloaderUserClient
   description:
   parents:
@@ -1175,6 +1337,9 @@ classes:
   - IORegistryEntry
   known_names:
   - grape
+  - Device Management
+  - Actuator
+  - Accelerometer
   - debug
 - name: AppleHIDTransportProtocolHIDSPI
   description:
@@ -1185,6 +1350,46 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleHIDTransportProtocolHIDSPI
+- name: AppleHIDTransportProtocolZ2
+  description:
+  parents:
+  - AppleHIDTransportProtocol
+  - AIDService
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleHIDTransportProtocolZ2
+- name: AppleHPMARM
+  description:
+  parents:
+  - AppleHPMEmbedded
+  - AppleHPM
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleHPMARM
+- name: AppleHPMBusController
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleHPMBusController
+- name: AppleHPMBusDevice
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - hpm0
+  - hpm1
+- name: AppleHPMDevice
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleHPMDevice
 - name: AppleHapticsSupportArcEEPROM
   description:
   parents:
@@ -1276,18 +1481,8 @@ classes:
   - AppleKeyStoreUserClient
 - name: AppleKrakenBuiltIn
   description:
-  parents:
-  - AppleHydraBuiltIn
-  - AppleTriStarBuiltIn
-  - AppleTriStarDock
-  - IOAccessoryDock9Pin
-  - IOAccessoryManagerAID
-  - IOAccessoryManager
-  - IOPort
-  - IOService
-  - IORegistryEntry
+  parents: []
   known_names:
-  - Lightning
 - name: AppleM2ScalerCSCDriver
   description:
   parents:
@@ -1295,6 +1490,17 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleM2ScalerCSCDriver
+- name: AppleM3WrapV2ACIO
+  description:
+  parents:
+  - AppleM3WrapV2
+  - AppleA7IOP
+  - AppleIOP
+  - IOSlaveCPU
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleM3WrapV2ACIO
 - name: AppleM68Buttons
   description:
   parents:
@@ -1312,6 +1518,46 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleMCA2Switch
+- name: AppleMesaResources
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleMesaResources
+- name: AppleMesaSEPDriver
+  description:
+  parents:
+  - AppleMesaSEPDriverInterface
+  - IOBiometricSensorInterface
+  - IOSEPBiometricService
+  - IOBiometricService
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleMesaSEPDriver
+- name: AppleMesaShim
+  description:
+  parents:
+  - AppleEmbeddedHIDEventService
+  - IOHIDEventService
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleMesaShim
+- name: AppleMobileADBE0
+  description:
+  parents:
+  - AppleCLCD
+  - AppleH7DisplayPipe
+  - AppleDisplayPipe
+  - IOMobileFramebufferLegacy
+  - IOMobileFramebufferService
+  - IOMobileFramebuffer
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleMobileADBE0
 - name: AppleMobileApNonce
   description: APNonce (used for APTicket) support
   parents:
@@ -1364,21 +1610,25 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleMultitouchHIDService
-- name: AppleNVMeEAN
+- name: AppleMultitouchTrackpadHIDEventDriver
   description:
   parents:
-  - AppleNVMeNamespaceDevice
+  - AppleMultitouchInputHIDEventDriver
+  - AppleMultitouchHIDEventDriverV2
+  - IOHIDEventDriver
+  - IOHIDEventService
   - IOService
   - IORegistryEntry
   known_names:
-  - '07'
+  - AppleMultitouchTrackpadHIDEventDriver
+- name: AppleNVMeEAN
+  description:
+  parents: []
+  known_names:
 - name: AppleNVMeNamespaceDevice
   description: Non-Volatile Memory Express - NS or Namespace
-  parents:
-  - IOService
-  - IORegistryEntry
+  parents: []
   known_names:
-  - '06'
 - name: AppleNullTextCrypter
   description: Load unencrypted Mach-O binaries
   parents:
@@ -1401,22 +1651,33 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleOnboardSerialBSDClient
-- name: ApplePCIEMSIController
+- name: ApplePCIECHostBridge
   description:
   parents:
-  - IOPCIMessagedInterruptController
-  - IOInterruptController
+  - IOPCI2PCIBridge
+  - IOPCIBridge
   - IOService
   - IORegistryEntry
   known_names:
-  - apcie
+  - IOPP
+- name: ApplePCIEMSIController
+  description:
+  parents: []
+  known_names:
+- name: ApplePIODMAPCIeCT8103
+  description:
+  parents:
+  - ApplePIODMA
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - ApplePIODMAPCIeCT8103
 - name: ApplePMGRNub
   description: Power-Manager Nub
   parents:
   - IOService
   - IORegistryEntry
   known_names:
-  - tuner
   - clpc
   - ppm
 - name: ApplePMP
@@ -1450,6 +1711,14 @@ classes:
   - IORegistryEntry
   known_names:
   - ApplePPMUserClient
+- name: AppleParadeDP855TCON
+  description:
+  parents:
+  - AppleTCON
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleParadeDP855TCON
 - name: AppleParrot
   description:
   parents:
@@ -1457,6 +1726,15 @@ classes:
   - IORegistryEntry
   known_names:
   - parrot
+- name: ApplePassthroughPPM
+  description:
+  parents:
+  - ApplePPMCPMS
+  - ApplePPM
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - ApplePassthroughPPM
 - name: ApplePearlSEPDriver
   description:
   parents:
@@ -1484,6 +1762,14 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleProxHIDEventDriver
+- name: AppleS5L8920XFPWM
+  description:
+  parents:
+  - AppleARMPWM
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleS5L8920XFPWM
 - name: AppleS5L8920XPWM
   description:
   parents:
@@ -1523,6 +1809,13 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleS8000DWI
+- name: AppleSCSISubsystemGlobals
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleSCSISubsystemGlobals
 - name: AppleSEPARTService
   description: Secure Enclave Processor - Anti-Replay Token (gigalocker/xART)
   parents:
@@ -1532,18 +1825,23 @@ classes:
   - AppleSEPARTService
 - name: AppleSEPDeviceService
   description:
+  parents: []
+  known_names:
+- name: AppleSEPHDCPInterface
+  description:
+  parents:
+  - IOHDCPInterface
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleSEPHDCPInterface
+- name: AppleSEPHDCPManager
+  description:
   parents:
   - IOService
   - IORegistryEntry
   known_names:
-  - xars
-  - cntl
-  - xarm
-  - sidv
-  - scrd
-  - sprl
-  - sks
-  - sse
+  - AppleSEPHDCPManager
 - name: AppleSEPManager
   description: Secure Enclave Processor Manager
   parents:
@@ -1584,6 +1882,14 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleSMCChargerPS
+- name: AppleSMCClient
+  description:
+  parents:
+  - IOUserClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleSMCClient
 - name: AppleSMCHighVoltageCharger
   description:
   parents:
@@ -1597,10 +1903,7 @@ classes:
   - IOService
   - IORegistryEntry
   known_names:
-  - pmu
-  - charger
   - portmicro
-  - aop
 - name: AppleSMCPMU
   description: System Management Controller - Power Management Unit
   parents:
@@ -1663,18 +1966,10 @@ classes:
   - IORegistryEntry
   known_names:
   - SPUApp
-  - spherecontrol
-  - rose
-  - audio
-  - control
   - i2c
-  - baseband
-  - context
-  - voicetrigger
+  - rose
   - romeo
   - juliet
-  - profile
-  - audprov
 - name: AppleSPUBasebandDriver
   description:
   parents:
@@ -1682,6 +1977,17 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleSPUBasebandDriver
+- name: AppleSPUCT720
+  description:
+  parents:
+  - AppleSPUALSColorDriver
+  - AppleSPUHIDDriver
+  - AppleEmbeddedHIDEventService
+  - IOHIDEventService
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleSPUCT720
 - name: AppleSPUCT725
   description:
   parents:
@@ -1748,21 +2054,19 @@ classes:
   - IOService
   - IORegistryEntry
   known_names:
+  - als
+  - wakehint
   - gyro
   - pressure
-  - '1'
   - compass
   - jarvis
   - prox
   - accel
   - devmotion10
   - ttw
-  - als
-  - supervisor
   - devmotion6
   - cma
   - devmotion
-  - wakehint
   - gesture
   - orientation
 - name: AppleSPUProfileDriver
@@ -1842,6 +2146,16 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleSamsungSerial
+- name: AppleSandDollar
+  description:
+  parents:
+  - AppleMesa
+  - AppleSPIBiometricSensor
+  - AppleBiometricSensor
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleSandDollar
 - name: AppleSecondaryAudio
   description:
   parents:
@@ -1851,10 +2165,11 @@ classes:
   - IOService
   - IORegistryEntry
   known_names:
+  - Codec Input
   - Loopback
-  - Debug1
-  - Voice
-  - Secondary
+  - DSP Debug1
+  - Baseband Voice
+  - Mikeybus Secondary
   - Halogen
   - Hawking
 - name: AppleSerialShim
@@ -1866,13 +2181,8 @@ classes:
   - AppleSerialShim
 - name: AppleSimpleUARTSync
   description:
-  parents:
-  - AppleOnboardSerialSync
-  - IOSerialStreamSync
-  - IOService
-  - IORegistryEntry
+  parents: []
   known_names:
-  - '1'
 - name: AppleSmartBattery
   description:
   parents:
@@ -1902,14 +2212,12 @@ classes:
   - IOService
   - IORegistryEntry
   known_names:
+  - IODMAController0000009A
   - IODMAController0000005B
 - name: AppleSmartIODMANub
   description:
-  parents:
-  - IOService
-  - IORegistryEntry
+  parents: []
   known_names:
-  - dma
 - name: AppleStockholmControl
   description: Secure Element (NFC / ApplePay)
   parents:
@@ -1942,6 +2250,36 @@ classes:
   known_names:
   - AppleStockholmSPMI
   - AppleHammerfestSPMI
+- name: AppleSummitLCD
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleSummitLCD
+- name: AppleSynopsysMIPIDSIController
+  description:
+  parents:
+  - AppleARMMIPIDSIController
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleSynopsysMIPIDSIController
+- name: AppleSystemPolicy
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleSystemPolicy
+- name: AppleSystemPolicyUserClient
+  description:
+  parents:
+  - IOUserClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleSystemPolicyUserClient
 - name: AppleT8015TempSensor
   description:
   parents:
@@ -1969,6 +2307,14 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleT8020MTRTempSensor
+- name: AppleT8020SOCTuner
+  description:
+  parents:
+  - AppleSOCTuner
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleT8020SOCTuner
 - name: AppleT8027USBXDCI
   description:
   parents:
@@ -2041,15 +2387,8 @@ classes:
   - AppleT8101TypeCPhy
 - name: AppleT8101USB20XHCILightningPort
   description:
-  parents:
-  - AppleUSB20XHCILightningPort
-  - AppleUSB20XHCIPort
-  - AppleUSBXHCIPort
-  - AppleUSBHostPort
-  - IOService
-  - IORegistryEntry
+  parents: []
   known_names:
-  - hs
 - name: AppleT8101USBXHCI
   description: USB eXtensable Host Controller Interface
   parents:
@@ -2061,6 +2400,74 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleT8101USBXHCI
+- name: AppleT8103MemCacheController
+  description:
+  parents:
+  - AppleMemCacheController
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleT8103MemCacheController
+- name: AppleT8103PCIe
+  description:
+  parents:
+  - AppleT810xPCIe
+  - AppleEmbeddedPCIE
+  - IOPCIHostBridge
+  - IOPCIBridge
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleT8103PCIe
+- name: AppleT8103PCIeC
+  description:
+  parents:
+  - AppleTunneledPCIE
+  - IOPCIHostBridge
+  - IOPCIBridge
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleT8103PCIeC
+- name: AppleT8103PMGR
+  description:
+  parents:
+  - AppleT8101PMGR
+  - ApplePMGR
+  - IOPMGR
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleT8103PMGR
+- name: AppleT8103TypeCPhy
+  description:
+  parents:
+  - AppleTypeCPhy
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleT8103TypeCPhy
+- name: AppleT8103USBXDCI
+  description:
+  parents:
+  - AppleUSBXDCIARM
+  - AppleUSBXDCI
+  - IOUSBDeviceController
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleT8103USBXDCI
+- name: AppleT8103USBXHCI
+  description:
+  parents:
+  - AppleSynopsysDRDUSBXHCI
+  - AppleUSBXHCIARM
+  - AppleUSBXHCI
+  - AppleUSBHostController
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleT8103USBXHCI
 - name: AppleT810xIO
   description:
   parents:
@@ -2070,6 +2477,16 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleT810xIO
+- name: AppleTAS5770LAmp
+  description:
+  parents:
+  - AppleTII2CAudio
+  - AppleI2CMultipleAudio
+  - AppleEmbeddedAudio
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleTAS5770LAmp
 - name: AppleTemperatureStatistics
   description:
   parents:
@@ -2077,6 +2494,81 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleTemperatureStatistics
+- name: AppleThunderboltDPInAdapter
+  description:
+  parents:
+  - AppleThunderboltDPAdapterFamily
+  - IOThunderboltTunnelDriver
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleThunderboltDPInAdapter
+- name: AppleThunderboltHALType5
+  description:
+  parents:
+  - AppleThunderboltGenericHAL
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleThunderboltHALType5
+- name: AppleThunderboltIPPort
+  description:
+  parents:
+  - IOEthernetController
+  - IONetworkController
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleThunderboltIPPort
+- name: AppleThunderboltIPService
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleThunderboltIPService
+- name: AppleThunderboltNHIType5
+  description:
+  parents:
+  - AppleThunderboltNHI
+  - IOThunderboltNHI
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleThunderboltNHIType5
+- name: AppleThunderboltPCIDownAdapterType5
+  description:
+  parents:
+  - AppleThunderboltPCIDownAdapter
+  - IOThunderboltTunnelDriver
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleThunderboltPCIDownAdapterType5
+- name: AppleThunderboltUSBDownAdapter
+  description:
+  parents:
+  - IOThunderboltTunnelDriver
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleThunderboltUSBDownAdapter
+- name: AppleTrustedAccessoryManager
+  description:
+  parents:
+  - AppleTrustedAccessoryManagerInterface
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleTrustedAccessoryManager
+- name: AppleTrustedAccessoryManagerUserClient
+  description:
+  parents:
+  - IOUserClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleTrustedAccessoryManagerUserClient
 - name: AppleUSBDeviceAudioController
   description:
   parents:
@@ -2107,6 +2599,16 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleUSBDeviceNCMData
+- name: AppleUSBDeviceNCMPrivateEthernetInterface
+  description:
+  parents:
+  - IOEthernetInterface
+  - IONetworkInterface
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - anpi0
+  - anpi1
 - name: AppleUSBEthernetDevice
   description:
   parents:
@@ -2145,6 +2647,13 @@ classes:
   - IORegistryEntry
   known_names:
   - AppleUSBMike
+- name: AppleUSBUserHCIResources
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - AppleUSBUserHCIResources
 - name: AppleUserHIDEventService
   description:
   parents:
@@ -2231,6 +2740,8 @@ classes:
   - IOService
   - IORegistryEntry
   known_names:
+  - IODMAController000000B2
+  - IODMAController000000B1
   - IODMAController000000B5
   - IODMAController000000B4
 - name: AudioKernelClientInterface
@@ -2249,6 +2760,28 @@ classes:
   - IORegistryEntry
   known_names:
   - BTDebug
+- name: BootPolicy
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - BootPolicy
+- name: BootPolicyUserClient
+  description:
+  parents:
+  - IOUserClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - BootPolicyUserClient
+- name: BroadcomBluetoothHostControllerUSBTransport
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - BroadcomBluetoothHostControllerUSBTransport
 - name: CCDataPipe
   description: CommCenter Data Pipe
   parents:
@@ -2306,6 +2839,13 @@ classes:
   - IORegistryEntry
   known_names:
   - CCLogStream
+- name: CSRBluetoothHostControllerUSBTransport
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - CSRBluetoothHostControllerUSBTransport
 - name: CoreAnalyticsHub
   description:
   parents:
@@ -2328,6 +2868,21 @@ classes:
   - IORegistryEntry
   known_names:
   - CoreAnalyticsUserClient
+- name: CoreKDLDriver
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - CoreKDLDriver
+- name: CoreKDLUserClient
+  description:
+  parents:
+  - IOUserClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - CoreKDLUserClient
 - name: DCPAVControllerProxy
   description:
   parents:
@@ -2383,6 +2938,30 @@ classes:
   - IORegistryEntry
   known_names:
   - DCPAVVideoInterfaceProxy
+- name: DCPDPControllerProxy
+  description:
+  parents:
+  - DCPAVProxy
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - DCPDPControllerProxy
+- name: DCPDPDeviceProxy
+  description:
+  parents:
+  - DCPAVProxy
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - DCPDPDeviceProxy
+- name: DCPDPServiceProxy
+  description:
+  parents:
+  - DCPAVProxy
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - DCPDPServiceProxy
 - name: DCPEndpoint
   description:
   parents:
@@ -2401,6 +2980,21 @@ classes:
   - IORegistryEntry
   known_names:
   - DCPMIPIControllerProxy
+- name: EndpointSecurityDriver
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - EndpointSecurityDriver
+- name: EndpointSecurityDriverClient
+  description:
+  parents:
+  - IOUserClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - EndpointSecurityDriverClient
 - name: H11ANEIn
   description: Apple Neural Engine
   parents:
@@ -2408,6 +3002,14 @@ classes:
   - IORegistryEntry
   known_names:
   - H11ANE
+- name: HibernationService
+  description:
+  parents:
+  - SEPHibernatorService
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - HibernationService
 - name: IO80211APIUserClient
   description:
   parents:
@@ -2441,15 +3043,17 @@ classes:
   - IORegistryEntry
   known_names:
   - IO80211P2PDaemonUserClient
-- name: IOAccessoryDock0PinBuiltin
+- name: IOAVBNub
   description:
   parents:
-  - IOAccessoryManager
-  - IOPort
   - IOService
   - IORegistryEntry
   known_names:
-  - Inductive
+  - IOAVBNub
+- name: IOAccessoryDock0PinBuiltin
+  description:
+  parents: []
+  known_names:
 - name: IOAccessoryManagerUserClient
   description:
   parents:
@@ -2522,6 +3126,71 @@ classes:
   - IORegistryEntry
   known_names:
   - IOBlockStorageDriver
+- name: IOBluetoothACPIMethods
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOBluetoothACPIMethods
+- name: IOBluetoothDevice
+  description:
+  parents:
+  - IOBluetoothObject
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOBluetoothDevice
+- name: IOBluetoothHCIController
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOBluetoothHCIController
+- name: IOBluetoothHCIUserClient
+  description:
+  parents:
+  - IOUserClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOBluetoothHCIUserClient
+- name: IOBluetoothHostControllerPCIeTransport
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOBluetoothHostControllerPCIeTransport
+- name: IOBluetoothHostControllerTransport
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOBluetoothHostControllerTransport
+- name: IOBluetoothHostControllerUARTTransport
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOBluetoothHostControllerUARTTransport
+- name: IOBluetoothHostControllerUSBTransport
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOBluetoothHostControllerUSBTransport
+- name: IOBluetoothSerialManager
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOBluetoothSerialManager
 - name: IOCPUInterruptController
   description:
   parents:
@@ -2548,33 +3217,8 @@ classes:
   - IODARTMapper
 - name: IODARTMapperNub
   description: Device Address Resolution Table Nub
-  parents:
-  - IOService
-  - IORegistryEntry
+  parents: []
   known_names:
-  - aop
-  - admac
-  - scm
-  - pmp
-  - sep
-  - sio
-  - aes
-  - rsm
-  - otg
-  - drd
-  - dcp
-  - disp0
-  - piodma
-  - scaler
-  - jpeg0
-  - jpeg1
-  - isp
-  - ave
-  - avd
-  - ane
-  - wlan
-  - bt
-  - apcie2
 - name: IODTNVRAM
   description: Device Tree Non-Volitale RAM (PRAM)
   parents:
@@ -2591,21 +3235,19 @@ classes:
   - IODTNVRAMDiags
 - name: IODTNVRAMVariables
   description:
-  parents:
-  - IOService
-  - IORegistryEntry
+  parents: []
   known_names:
-  - common
-- name: IOEmbeddedNVMeBlockDevice
+- name: IODisplayWrangler
   description:
   parents:
-  - IONVMeBlockStorageDevice
-  - IOBlockStorageDevice
   - IOService
   - IORegistryEntry
   known_names:
-  - '01'
-  - '02'
+  - IODisplayWrangler
+- name: IOEmbeddedNVMeBlockDevice
+  description:
+  parents: []
+  known_names:
 - name: IOEthernetInterface
   description: Generic IOKit ethernet family
   parents:
@@ -2613,8 +3255,26 @@ classes:
   - IOService
   - IORegistryEntry
   known_names:
-  - en2
   - en1
+  - en2
+  - en3
+  - en4
+- name: IOGPUGLDrawableUserClient
+  description:
+  parents:
+  - IOUserClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOGPUGLDrawableUserClient
+- name: IOGPUSurfaceMTL
+  description:
+  parents:
+  - IOUserClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOGPUSurfaceMTL
 - name: IOGUIDPartitionScheme
   description:
   parents:
@@ -2639,6 +3299,14 @@ classes:
   - IORegistryEntry
   known_names:
   - IOHIDEventServiceUserClient
+- name: IOHIDEventSystemUserClient
+  description:
+  parents:
+  - IOUserClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOHIDEventSystemUserClient
 - name: IOHIDInterface
   description:
   parents:
@@ -2654,6 +3322,14 @@ classes:
   - IORegistryEntry
   known_names:
   - IOHIDLibUserClient
+- name: IOHIDParamUserClient
+  description:
+  parents:
+  - IOUserClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOHIDParamUserClient
 - name: IOHIDResource
   description:
   parents:
@@ -2669,6 +3345,21 @@ classes:
   - IORegistryEntry
   known_names:
   - IOHIDResourceDeviceUserClient
+- name: IOHIDSystem
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOHIDSystem
+- name: IOHIDUserClient
+  description:
+  parents:
+  - IOUserClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOHIDUserClient
 - name: IOHIDUserDevice
   description: IOKit generic class for Human Interface Devices
   parents:
@@ -2684,6 +3375,13 @@ classes:
   - IORegistryEntry
   known_names:
   - IOImageLoader
+- name: IOKitRegistryCompatibility
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOKitRegistryCompatibility
 - name: IOMedia
   description:
   parents:
@@ -2691,9 +3389,11 @@ classes:
   - IOService
   - IORegistryEntry
   known_names:
-  - '0'
-  - '1'
-  - Media
+  - APPLE SSD AP0512Q Media
+  - iBootSystemContainer
+  - Untitled 2
+  - RecoveryOSContainer
+  - APPLE SSD AP0256Z Media
   - Container
 - name: IOMediaBSDClient
   description:
@@ -2747,11 +3447,7 @@ classes:
   - IOService
   - IORegistryEntry
   known_names:
-  - bridge1
   - wlan
-  - '1'
-  - bridge2
-  - pcie
 - name: IOPMrootDomain
   description:
   parents:
@@ -2772,28 +3468,44 @@ classes:
   - cpu3
   - cpu4
   - cpu5
+  - cpu6
+  - cpu7
   - pram
   - vram
-  - ram
-  - io
-  - buttons
-  - '1'
-  - backlight
-  - baseband
+  - hibernate
   - amfm
+  - buttons
+  - backlight
   - sacm
   - defaults
   - product
+  - baseband
   - filesystems
-  - syscfg
 - name: IOPlatformExpertDevice
   description:
   parents:
   - IOService
   - IORegistryEntry
   known_names:
-  - tree
+  - J293AP
   - D54pAP
+- name: IOPortTransportStateCC
+  description:
+  parents:
+  - IOPortTransportState
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - CC
+- name: IOPortTransportStateUSB2
+  description:
+  parents:
+  - IOPortTransportStateUSB
+  - IOPortTransportState
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - USB2
 - name: IOPowerConnection
   description:
   parents:
@@ -2848,36 +3560,33 @@ classes:
   - IORegistryEntry
   known_names:
   - chosen
-  - properties
-  - manifests
-  - hashes
-  - map
-  - regs
   - amcc
-  - a
   - iBoot
-  - report
+  - asmb
   - aliases
   - memory
-  - cover
+  - wlan
   - Ocelot
   - xART
-  - console
-  - hilo
-  - bridge1
-  - wlan
-  - pcie
-  - bridge2
-  - gps
+  - InvalidateHmac
   - camera
+  - audio
+  - hilo
+  - gps
   - facetime
   - maps
   - haptics
-  - audio
   - fstab
-  - vol
-  - data
-  - entitlements
+- name: IOServiceCompatibility
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - display
+  - IOFB
+  - IOAccelerator
+  - platform
 - name: IOSkywalkKernelPipeBSDClient
   description:
   parents:
@@ -2909,6 +3618,7 @@ classes:
   - IOService
   - IORegistryEntry
   known_names:
+  - IOSurfaceRoot
   - IOCoreSurfaceRoot
 - name: IOSurfaceRootUserClient
   description: Used by user mode processes to move data to kernel IOSurface objects
@@ -2925,6 +3635,46 @@ classes:
   - IORegistryEntry
   known_names:
   - IOSystemStateNotification
+- name: IOTBTTunnelClientInterfaceManager
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOTBTTunnelClientInterfaceManager
+- name: IOThunderboltControllerType5
+  description:
+  parents:
+  - IOThunderboltController
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOThunderboltControllerType5
+- name: IOThunderboltLocalNode
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOThunderboltLocalNode
+- name: IOThunderboltPort
+  description:
+  parents:
+  - IOThunderboltNub
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOThunderboltPort
+- name: IOThunderboltSwitchType5
+  description:
+  parents:
+  - IOThunderboltSwitchOS
+  - IOThunderboltSwitch
+  - IOThunderboltNub
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOThunderboltSwitchType5
 - name: IOTimeSyncClockManager
   description:
   parents:
@@ -2948,6 +3698,15 @@ classes:
   - IORegistryEntry
   known_names:
   - IOTimeSyncTranslationMach
+- name: IOTimeSyncTranslationPMGR
+  description:
+  parents:
+  - IOTimeSyncFilteredService
+  - IOTimeSyncService
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOTimeSyncTranslationPMGR
 - name: IOTimeSyncUserClient
   description:
   parents:
@@ -2956,12 +3715,23 @@ classes:
   - IORegistryEntry
   known_names:
   - IOTimeSyncUserClient
+- name: IOUSBDeviceConfigurator
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOUSBDeviceConfigurator
 - name: IOUSBDeviceInterface
   description:
   parents:
   - IOService
   - IORegistryEntry
   known_names:
+  - AppleUSBNCMControl
+  - AppleUSBNCMData
+  - AppleUSBNCMControlAux
+  - AppleUSBNCMDataAux
   - PTP
   - USBAudioControl
   - USBAudioStreaming
@@ -2973,8 +3743,6 @@ classes:
   - USBAudio2StreamIN
   - USBAudio2StreamOUT
   - IDAMInterface
-  - AppleUSBNCMControl
-  - AppleUSBNCMData
 - name: IOUSBDeviceInterfaceUserClient
   description:
   parents:
@@ -2990,6 +3758,25 @@ classes:
   - IORegistryEntry
   known_names:
   - IOUSBMassStorageResource
+- name: IOUserEthernetController
+  description:
+  parents:
+  - IOEthernetController
+  - IONetworkController
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOUserEthernetController
+- name: IOUserEthernetInterface
+  description:
+  parents:
+  - IOEthernetInterface
+  - IONetworkInterface
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - vmenet0
+  - vmenet1
 - name: IOUserEthernetResource
   description:
   parents:
@@ -2997,6 +3784,14 @@ classes:
   - IORegistryEntry
   known_names:
   - IOUserEthernetResource
+- name: IOUserEthernetResourceUserClient
+  description:
+  parents:
+  - IOUserClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOUserEthernetResourceUserClient
 - name: IOUserResources
   description:
   parents:
@@ -3004,6 +3799,30 @@ classes:
   - IORegistryEntry
   known_names:
   - IOUserResources
+- name: IOUserSerial
+  description:
+  parents:
+  - IOSerialStreamSync
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOUserPseudoSerial
+- name: IOUserService
+  description:
+  parents:
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOUserBluetoothSerialDriver
+- name: IOUserUserClient
+  description:
+  parents:
+  - IOUserClient
+  - IOService
+  - IORegistryEntry
+  known_names:
+  - IOUserBluetoothSerialClient
+  - IOUserPseudoSerialUserClient
 - name: IOWatchdogUserClient
   description:
   parents:
@@ -3035,12 +3854,49 @@ classes:
   - AOPEndpoint1
   - AOPEndpoint2
   - AOPEndpoint3
-  - AOPEndpoint4
   - AOPEndpoint5
   - AOPEndpoint6
   - AOPEndpoint7
   - AOPEndpoint8
   - AOPEndpoint9
+  - PMPEndpoint1
+  - SIOEndpoint1
+  - ANS2Endpoint1
+  - ANS2Endpoint2
+  - SMCEndpoint1
+  - DCPEndpoint1
+  - DCPEndpoint2
+  - DCPEndpoint3
+  - DCPEndpoint4
+  - DCPEndpoint5
+  - DCPEndpoint6
+  - DCPEndpoint7
+  - DCPEndpoint8
+  - DCPEndpoint9
+  - DCPEndpoint10
+  - DCPEndpoint11
+  - DCPEndpoint12
+  - DCPEndpoint13
+  - DCPEndpoint14
+  - DCPEndpoint24
+  - DCPEXTEndpoint1
+  - DCPEXTEndpoint2
+  - DCPEXTEndpoint3
+  - DCPEXTEndpoint4
+  - DCPEXTEndpoint5
+  - DCPEXTEndpoint6
+  - DCPEXTEndpoint7
+  - DCPEXTEndpoint8
+  - DCPEXTEndpoint9
+  - DCPEXTEndpoint10
+  - DCPEXTEndpoint11
+  - DCPEXTEndpoint12
+  - DCPEXTEndpoint13
+  - DCPEXTEndpoint14
+  - DCPEXTEndpoint24
+  - GFXEndpoint1
+  - GFXEndpoint2
+  - AOPEndpoint4
   - AOPEndpoint10
   - AOPEndpoint11
   - AOPEndpoint12
@@ -3055,26 +3911,7 @@ classes:
   - AOPEndpoint21
   - AOPEndpoint22
   - AOPEndpoint23
-  - PMPEndpoint1
-  - SIOEndpoint1
-  - ANS2Endpoint1
-  - ANS2Endpoint2
-  - SMCEndpoint1
   - SMCEndpoint2
-  - DCPEndpoint1
-  - DCPEndpoint2
-  - DCPEndpoint3
-  - DCPEndpoint4
-  - DCPEndpoint5
-  - DCPEndpoint6
-  - DCPEndpoint9
-  - DCPEndpoint10
-  - DCPEndpoint11
-  - DCPEndpoint12
-  - DCPEndpoint13
-  - DCPEndpoint24
-  - GFXEndpoint1
-  - GFXEndpoint2
 - name: RTBuddyIOReportingEndpoint
   description:
   parents:
