@@ -1,0 +1,686 @@
+---
+classes:
+- name: IORegistryEntry
+  description:
+- name: IOPlatformExpertDevice
+  description:
+- name: IOService
+  description:
+- name: IODTNVRAM
+  description:
+- name: IOPlatformDevice
+  description:
+- name: AppleARMIODevice
+  description:
+- name: AppleARMSPIDevice
+  description:
+- name: ApplePMGRNub
+  description:
+- name: AppleA7IOPNub
+  description:
+- name: AppleSPUHIDInterface
+  description:
+- name: AppleSPUAppInterface
+  description:
+- name: AppleAOPAudioDeviceNode
+  description:
+- name: IODARTMapperNub
+  description:
+- name: AppleSmartIODMANub
+  description:
+- name: AppleANS3NVMeController
+  description:
+- name: IOMedia
+  description:
+- name: AppleSMCInterface
+  description:
+- name: AppleSimpleUARTSync
+  description:
+- name: AppleARMIICDevice
+  description:
+- name: AppleARMNORFlashDevice
+  description:
+- name: AppleARMSPMIDevice
+  description:
+- name: AppleStockholmControlConfig
+  description:
+- name: AppleT8101USB20XHCILightningPort
+  description:
+- name: AppleARMIISDevice
+  description:
+- name: IOPCIDevice
+  description:
+- name: IORootParent
+  description:
+- name: IOPowerConnection
+  description:
+- name: IOPMrootDomain
+  description:
+- name: AppleARMBootPerf
+  description:
+- name: AppleIPAppender
+  description:
+- name: AppleT8015TempSensor
+  description:
+- name: AppleCredentialManager
+  description:
+- name: AppleIDV
+  description:
+- name: AppleOLYHAL
+  description:
+- name: AppleEmbeddedAudioDevice
+  description:
+- name: AppleT8101TypeCPhy
+  description:
+- name: AppleMCA2Switch
+  description:
+- name: AppleSecondaryAudio
+  description:
+- name: RTBuddyV2
+  description:
+- name: AppleEmbeddedNVMeNVRAM
+  description:
+- name: AppleSamsungSerial
+  description:
+- name: IOAccessoryPortSerialSync
+  description:
+- name: AppleDialogSPMIPMU
+  description:
+- name: AppleSMC
+  description:
+- name: AppleSMCCharger
+  description:
+- name: AppleSmartBatteryManager
+  description:
+- name: AppleT8101PCIe
+  description:
+- name: IOPCI2PCIBridge
+  description:
+- name: AppleBCMWLANBusInterfacePCIe
+  description:
+- name: AppleBCMWLANCore
+  description:
+- name: AppleBCMWLANSkywalkInterface
+  description:
+- name: IOSkywalkNetworkBSDClient
+  description:
+- name: AppleBCMWLANLowLatencyInterface
+  description:
+- name: AppleConvergedPCI
+  description:
+- name: AppleBasebandPCI
+  description:
+- name: AppleSEPManager
+  description:
+- name: AppleKeyStore
+  description:
+- name: AppleSSE
+  description:
+- name: AudioDMAController
+  description:
+- name: AudioDMAChannel
+  description:
+- name: AppleSPU
+  description:
+- name: AppleSPUAppDriver
+  description:
+- name: AppleSPUSphereDriver
+  description:
+- name: AppleAOPSMCDriver
+  description:
+- name: AppleSPUHIDDriver
+  description:
+- name: AOPTouchHIDDriver
+  description:
+- name: AppleSPUCT725
+  description:
+- name: AppleAOPVoiceTriggerController
+  description:
+- name: AppleUserHIDEventService
+  description:
+- name: AppleAOPAudioController
+  description:
+- name: AppleAOPAudioDeviceProvider
+  description:
+- name: AppleAOPAudioHapticLEAP
+  description:
+- name: AudioKernelClientInterface
+  description:
+- name: AppleAOPAudioClientManager
+  description:
+- name: AppleAOPAudioHallDevice
+  description:
+- name: AppleAOPAudioLPMicInDevice
+  description:
+- name: AppleAOPAudioPCMAssetManagerDevice
+  description:
+- name: AppleAOPAudioDevice
+  description:
+- name: AppleAOPInput
+  description:
+- name: AppleAOPHaptics
+  description:
+- name: AppleAOPAD5860
+  description:
+- name: AppleSPURoseDriver
+  description:
+- name: AppleSPUTimesyncV2
+  description:
+- name: AppleDCPExpert
+  description:
+- name: DCPEndpoint
+  description:
+- name: AFKMailboxEndpointInterface
+  description:
+- name: AFKRemoteMemoryDescriptorAllocator
+  description:
+- name: AppleCLCD2
+  description:
+- name: AppleAVD
+  description:
+- name: AppleJPEGDriver
+  description:
+- name: AppleMultiFunctionManager
+  description:
+- name: H11ANEIn
+  description:
+- name: AppleStockholmSPMI
+  description:
+- name: AppleStockholmControl
+  description:
+- name: AppleM2ScalerCSCDriver
+  description:
+- name: AppleT8101USBXHCI
+  description:
+- name: AppleBluetoothModule
+  description:
+- name: AppleConvergedIPCOLYBTControl
+  description:
+- name: AppleAVE2Driver
+  description:
+- name: AppleM68Buttons
+  description:
+- name: AppleBasebandPCIMAVControl
+  description:
+- name: AppleBasebandPCIQMAPControl
+  description:
+- name: AppleBasebandPCIPDPQMAPSkywalk
+  description:
+- name: AppleCS35L27Amp
+  description:
+- name: AppleH13CamIn
+  description:
+- name: ApplePearlSEPDriver
+  description:
+- name: AppleCS42L77Audio
+  description:
+- name: AppleCS42L7xMikeyBus
+  description:
+- name: AppleCBTL1614
+  description:
+- name: AppleKrakenBuiltIn
+  description:
+- name: IOAccessoryUSBConnectShim
+  description:
+- name: AppleHIDTransportDeviceSPI
+  description:
+- name: IODTNVRAMDiags
+  description:
+- name: IODTNVRAMVariables
+  description:
+- name: AppleARMPE
+  description:
+- name: IOSystemStateNotification
+  description:
+- name: RootDomainUserClient
+  description:
+- name: AppleARMCPU
+  description:
+- name: IOCPUInterruptController
+  description:
+- name: AppleT810xIO
+  description:
+- name: AppleSPIMCController
+  description:
+- name: AppleGenericMultitouchDecider
+  description:
+- name: AIDImageDownloader
+  description:
+- name: AppleHIDTransportBootloaderHBPP
+  description:
+- name: AppleHIDTransportBootloaderUserClient
+  description:
+- name: AppleHIDTransportProtocolHIDSPI
+  description:
+- name: AppleHIDTransportInterface
+  description:
+- name: AppleHIDTransportHIDDevice
+  description:
+- name: IOHIDInterface
+  description:
+- name: AppleMultitouchHIDService
+  description:
+- name: AppleMultitouchDevice
+  description:
+- name: AppleMultitouchDeviceUserClient
+  description:
+- name: AppleInterruptController
+  description:
+- name: AppleT8101PMGR
+  description:
+- name: AppleT8030SOCTuner
+  description:
+- name: AppleCLPC
+  description:
+- name: ApplePPMCPMS
+  description:
+- name: ApplePPMUserClient
+  description:
+- name: AppleS5L8960XNCO
+  description:
+- name: AppleARMWatchdogTimer
+  description:
+- name: IOWatchdogUserClient
+  description:
+- name: AppleT8101GPIOIC
+  description:
+- name: AppleT8101MemCacheController
+  description:
+- name: AppleT8101PlatformErrorHandler
+  description:
+- name: AppleS8000DWI
+  description:
+- name: AppleS5L8920XPWM
+  description:
+- name: AppleEventLogHandler
+  description:
+- name: AppleS8000AESAccelerator
+  description:
+- name: AppleASCWrapV4
+  description:
+- name: RTBuddyService
+  description:
+- name: AppleSPUFirmwareService
+  description:
+- name: RTBuddyIOReportingEndpoint
+  description:
+- name: RTBuddyEndpointService
+  description:
+- name: AppleSPUProfileDriver
+  description:
+- name: AppleHapticsSupportArcEEPROM
+  description:
+- name: AppleSPUBasebandDriver
+  description:
+- name: AppleSPUHIDDevice
+  description:
+- name: IOHIDEventServiceUserClient
+  description:
+- name: AppleSPUHIDDriverUserClient
+  description:
+- name: AppleSPUHIDDeviceUserClient
+  description:
+- name: AppleAOPAudioUserClient
+  description:
+- name: AppleSPUProfileFirmwareDriver
+  description:
+- name: AppleProxHIDEventDriver
+  description:
+- name: AppleAOPVoiceTriggerUserClient
+  description:
+- name: AppleSPUGpioUnplugDriver
+  description:
+- name: AppleSPURoseDriverUserClient
+  description:
+- name: AppleSPUUserClient
+  description:
+- name: AppleT8020DART
+  description:
+- name: IODARTMapper
+  description:
+- name: ApplePMPFirmware
+  description:
+- name: ApplePMP
+  description:
+- name: AppleASCWrapV4SEP
+  description:
+- name: AppleSEPARTService
+  description:
+- name: NVMeSEPNotifier
+  description:
+- name: AppleSEPDeviceService
+  description:
+- name: AppleSEPXARTService
+  description:
+- name: AppleSmartIO
+  description:
+- name: AppleSmartIODMAController
+  description:
+- name: AppleEmbeddedNVMeTemperatureSensor
+  description:
+- name: IOEmbeddedNVMeBlockDevice
+  description:
+- name: IOBlockStorageDriver
+  description:
+- name: IOMediaBSDClient
+  description:
+- name: IOGUIDPartitionScheme
+  description:
+- name: AppleAPFSContainer
+  description:
+- name: AppleAPFSVolume
+  description:
+- name: AppleEmbeddedNVMeDiagnostics
+  description:
+- name: AppleDiagnosticDataAccessReadOnly
+  description:
+- name: AppleNVMeNamespaceDevice
+  description:
+- name: AppleNVMeEAN
+  description:
+- name: IOCoastGuardSARTMapper
+  description:
+- name: AppleARMPMUPowerSensor
+  description:
+- name: AppleARMPMUTempSensor
+  description:
+- name: AppleSMCPMU
+  description:
+- name: AppleSMCChargerPS
+  description:
+- name: AppleSMCWirelessCharger
+  description:
+- name: AppleSMCHighVoltageCharger
+  description:
+- name: AppleAOPSMC
+  description:
+- name: AppleSmartBattery
+  description:
+- name: AppleBatteryAuth
+  description:
+- name: AppleAuthCPRelay
+  description:
+- name: AppleAuthCPUserClient
+  description:
+- name: AppleGasGaugeUpdate
+  description:
+- name: AppleSerialShim
+  description:
+- name: AppleOnboardSerialBSDClient
+  description:
+- name: IOSerialBSDClient
+  description:
+- name: IOAccessoryPortUserClient
+  description:
+- name: AppleCS42L77AudioDSP
+  description:
+- name: AppleAudioFirmwareDownloader
+  description:
+- name: AppleFirmwareUpdateKext
+  description:
+- name: IOMikeyBusDockPort
+  description:
+- name: AppleS5L8940XI2CController
+  description:
+- name: AppleARMI2CEEPROM
+  description:
+- name: AppleEmbeddedTouchEEPROMDriver
+  description:
+- name: AppleEmbeddedTouchEEPROMDriverUC
+  description:
+- name: AppleParrot
+  description:
+- name: AppleCBTL1614Device
+  description:
+- name: AppleAuthCPAID
+  description:
+- name: IOAccessoryTRM
+  description:
+- name: IOAccessoryManagerUserClient
+  description:
+- name: AppleFAN53740
+  description:
+- name: AppleGen1SPMIController
+  description:
+- name: AppleDialogSPMIPMURTC
+  description:
+- name: AppleBTM
+  description:
+- name: IOHIDLibUserClient
+  description:
+- name: AppleStockholmControlUserClient
+  description:
+- name: AppleT8027USBXDCI
+  description:
+- name: IOUSBDeviceInterface
+  description:
+- name: AppleUSBMike
+  description:
+- name: IOAudio2DeviceUserClient
+  description:
+- name: IOAccessoryPortUSB
+  description:
+- name: AppleUSBDeviceMux
+  description:
+- name: AppleUSBEthernetDevice
+  description:
+- name: IOEthernetInterface
+  description:
+- name: IONetworkStack
+  description:
+- name: IONetworkStackUserClient
+  description:
+- name: IOUSBDeviceInterfaceUserClient
+  description:
+- name: AppleUSBDeviceAudioController
+  description:
+- name: AppleIDAMInterface
+  description:
+- name: AppleUSBDeviceNCMControl
+  description:
+- name: AppleUSBDeviceNCMData
+  description:
+- name: IOMobileFramebufferUserClient
+  description:
+- name: DCPAVSACController
+  description:
+- name: AppleJPEGDriverUserClient
+  description:
+- name: AppleH13PearlCam
+  description:
+- name: ApplePearlUserClient
+  description:
+- name: AppleH13CamInUserClient
+  description:
+- name: AFKEndpointInterfaceUserClient
+  description:
+- name: DCPMIPIControllerProxy
+  description:
+- name: DCPAVControllerProxy
+  description:
+- name: DCPAVPowerControllerProxy
+  description:
+- name: DCPAVRemoteSACControllerProxy
+  description:
+- name: DCPAVDeviceProxy
+  description:
+- name: DCPAVServiceProxy
+  description:
+- name: DCPAVVideoInterfaceProxy
+  description:
+- name: AppleDCPLinkServiceSoC
+  description:
+- name: AFKFirmwareService
+  description:
+- name: AGXDeviceUserClient
+  description:
+- name: AGXFirmwareKextG13RTBuddy
+  description:
+- name: AGXArmFirmwareMapper
+  description:
+- name: AppleGPIOCanary
+  description:
+- name: AppleMobsiTmpSADC
+  description:
+- name: AppleT8020MTRTempSensor
+  description:
+- name: AppleVTempDispatcher
+  description:
+- name: AppleSMCSensorDispatcher
+  description:
+- name: AppleSMCSensorDispatcherUserClient
+  description:
+- name: AppleARMLightEmUp
+  description:
+- name: AppleHapticsSupportLEAP
+  description:
+- name: AHSTemperatureReporter
+  description:
+- name: AppleEmbeddedAudioResourceManager
+  description:
+- name: CCLogPipe
+  description:
+- name: CCLogStream
+  description:
+- name: CCDataPipe
+  description:
+- name: CCDataStream
+  description:
+- name: CCFaultReporter
+  description:
+- name: CCIOReporterLogStream
+  description:
+- name: IOImageLoader
+  description:
+- name: IO80211Controller
+  description:
+- name: IOSkywalkLegacyEthernetInterface
+  description:
+- name: IO80211APIUserClient
+  description:
+- name: AppleBCMWLANIO80211APSTAInterface
+  description:
+- name: CCIOReporterDataStream
+  description:
+- name: AppleBCMWLANProximityInterface
+  description:
+- name: IO80211AsyncEventUserClient
+  description:
+- name: IO80211P2PDaemonUserClient
+  description:
+- name: AppleConvergedIPCOLYBTCoreDumpProvider
+  description:
+- name: AppleConvergedIPCRTIDevice
+  description:
+- name: AppleConvergedIPCRTIInterface
+  description:
+- name: AppleConvergedIPCSkywalkInterface
+  description:
+- name: IOSkywalkKernelPipeBSDClient
+  description:
+- name: AppleConvergedIPCOLYBTLogProvider
+  description:
+- name: BTDebug
+  description:
+- name: IOAccessoryDock0PinBuiltin
+  description:
+- name: AppleARMBacklight
+  description:
+- name: AppleBasebandM20
+  description:
+- name: AppleBasebandPCITraceBackendRaw
+  description:
+- name: AppleBasebandPCIMHIDevice
+  description:
+- name: AppleBasebandPCIMHIInterface
+  description:
+- name: AppleBasebandPCIUserClient
+  description:
+- name: AppleBasebandPCIMAVPDPManager
+  description:
+- name: AppleBasebandPCIPDPSkywalkInterface
+  description:
+- name: AppleBasebandPCIStewieSkywalkInterface
+  description:
+- name: AppleBasebandUserClient
+  description:
+- name: AppleARMSlowAdaptiveClockingManager
+  description:
+- name: AppleImage4
+  description:
+- name: AppleMobileApNonce
+  description:
+- name: ApplePCIEMSIController
+  description:
+- name: IOResources
+  description:
+- name: IOReportHub
+  description:
+- name: IOReportUserClient
+  description:
+- name: CoreAnalyticsHub
+  description:
+- name: CoreAnalyticsMessenger
+  description:
+- name: CoreAnalyticsUserClient
+  description:
+- name: AppleIPAppenderUserClient
+  description:
+- name: AppleUSBHostResources
+  description:
+- name: AppleUSBHostResourcesClient
+  description:
+- name: AppleUSBHostPacketFilter
+  description:
+- name: ProvInfoIOKit
+  description:
+- name: IOHDIXController
+  description:
+- name: AppleSSEUserClient
+  description:
+- name: ASIOKit
+  description:
+- name: IOUserEthernetResource
+  description:
+- name: IOUSBMassStorageResource
+  description:
+- name: AUC
+  description:
+- name: AppleKeyStoreUserClient
+  description:
+- name: AppleCredentialManagerUserClient
+  description:
+- name: AppleTemperatureStatistics
+  description:
+- name: IOAudioCodecs
+  description:
+- name: AppleDiskImagesController
+  description:
+- name: AppleMobileFileIntegrity
+  description:
+- name: IOHIDResource
+  description:
+- name: IOHIDResourceDeviceUserClient
+  description:
+- name: IOHIDUserDevice
+  description:
+- name: IOSurfaceRoot
+  description:
+- name: IOSurfaceRootUserClient
+  description:
+- name: AppleFairplayTextCrypter
+  description:
+- name: AppleNullTextCrypter
+  description:
+- name: AppleBSDKextStarter
+  description:
+- name: IOTimeSyncClockManager
+  description:
+- name: IOTimeSyncTranslationMach
+  description:
+- name: IOTimeSyncUserClient
+  description:
+- name: IOTimeSyncClockManagerUserClient
+  description:
+- name: IOUserResources
+  description:
