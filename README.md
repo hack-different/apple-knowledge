@@ -6,6 +6,14 @@ A collection of reverse engineered Apple formats, protocols, or other interestin
 
 Repo inspired by [Papers we Love](https://github.com/papers-we-love/papers-we-love)
 
+## Our Tooling Repos
+
+### Our Homebrew Tap
+
+Install our tap with `brew tap hack-different/jailbreak`
+
+Information about the maintaining of that tap can be found at [FORMULA](FORMULA)
+
 ## Contributing and a warning
 
 [Linking your Discord and GitHub](https://hackdiffe.rent/LINKING)
@@ -18,41 +26,6 @@ you need help determining this, tag the PR with `license help`, join the
 [Discord server](https://discord.gg/hackdifferent), and ask a `#Legit` or higher role for help.
 
 Violation of the DMCA or Copyright law is the responsibility of the submitter.
-
-### Setting up `overcommit` and the linters
-
-In order to keep the repo, docs and data tidy, we use a tool called `overcommit` to connect up the git hooks to a
-set of quality checks.  The fastest way to get setup is to run the following to make sure you have all the tools:
-
-```shell
-brew install hunspell
-gem install overcommit bundler
-bundle install
-overcommit --install
-```
-
-### Why not \<insert wiki here\>
-
-Wiki's best serve prose, and part of the goal here is to leverage machine readable and ingestable information with
-human augmentation wherever possible.  Also GitHub is more conducive to allowing any user to fork and PR the repo
-lowering the barrier to entry.  The core team reviews PRs for quality before merging.
-
-## License
-
-The contents of this repo are dual-licensed:
-
-Licensed under the [MIT](https://opensource.org/licenses/MIT) license
-
-Also licensed under the CC-BY-SA
-
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png){style="border-width:0"}
-](http://creativecommons.org/licenses/by-sa/4.0/){rel=license}
-[Apple Knowledge](http://creativecommons.org/licenses/by-sa/4.0/){:xmlns:dct="http://purl.org/dc/terms/",
-:property="dct:title"} by
-[Hack Different](https://github.com/hack-different/apple-knowledge){:xmlns:cc="http://creativecommons.org/ns#",
-:property="cc:attributionName", :rel="cc:attributionURL"}
-is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/
-licenses/by-sa/4.0/){:rel="license"}
 
 ## Primary Data Source
 
@@ -387,6 +360,41 @@ Special mention to Jonathan Levin and Amit Singh for taking the time to publish 
 
 A list of all projects and their contributors is at [CREDITS](CREDITS) and is updated by a script.  If there are
 persons not updated due to limitations please PR the CREDITS page and call them out.
+
+### Setting up `overcommit` and the linters
+
+In order to keep the repo, docs and data tidy, we use a tool called `overcommit` to connect up the git hooks to a
+set of quality checks.  The fastest way to get setup is to run the following to make sure you have all the tools:
+
+```shell
+brew install hunspell
+gem install overcommit bundler
+bundle install
+overcommit --install
+```
+
+### Why not \<insert wiki here\>
+
+Wiki's best serve prose, and part of the goal here is to leverage machine readable and ingestable information with
+human augmentation wherever possible.  Also GitHub is more conducive to allowing any user to fork and PR the repo
+lowering the barrier to entry.  The core team reviews PRs for quality before merging.
+
+## License
+
+The contents of this repo are dual-licensed:
+
+Licensed under the [MIT](https://opensource.org/licenses/MIT) license
+
+Also licensed under the CC-BY-SA
+
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png){style="border-width:0"}
+](http://creativecommons.org/licenses/by-sa/4.0/){rel=license}
+[Apple Knowledge](http://creativecommons.org/licenses/by-sa/4.0/){:xmlns:dct="http://purl.org/dc/terms/",
+:property="dct:title"} by
+[Hack Different](https://github.com/hack-different/apple-knowledge){:xmlns:cc="http://creativecommons.org/ns#",
+:property="cc:attributionName", :rel="cc:attributionURL"}
+is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/
+licenses/by-sa/4.0/){:rel="license"}
 
 ## Dedication
 
