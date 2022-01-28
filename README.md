@@ -12,7 +12,7 @@ Repo inspired by [Papers we Love](https://github.com/papers-we-love/papers-we-lo
 
 Install our tap with `brew tap hack-different/jailbreak`
 
-Information about the maintaining of that tap can be found at [FORMULA](FORMULA)
+Information about the maintaining of that tap can be found at [homebrew-jailbreak](http://hackdiffe.rent/homebrew-jailbreak/)
 
 ## Contributing and a warning
 
