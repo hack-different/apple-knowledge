@@ -18,7 +18,7 @@ PAW and ruby code
 
 It seems that it is impossible to fake a response from the Apple Internet
 recovery server, but since the forgery token isn't included with the signed
-response it opens up the case where a man-in-the-middle attack on the request
+response, it opens up the case where a man-in-the-middle attack on the request
 may occur.  This leads to the potential to downgrade an operating system.
 
 This may be in part due to the age of the IR protocol and lack of stronger

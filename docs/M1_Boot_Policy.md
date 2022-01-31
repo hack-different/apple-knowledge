@@ -5,7 +5,7 @@ non-Apple operating systems (see Ashai linux).  This scheme is based on the idea
 (iBoot System Container?) portion of the disk.  In order to ensure that the policy file is modified only in approved
 ways, the system must be first booted to 1TR (one true recoveryOS) to allow the SEP to sign a new policy file.
 Furthermore, the SEP must be authenticated to by an administrator to approve the change.  Because the SEP has
-limited storage (see Lynx, next-generation Ocelot) the policy is stored on disk and only the appropriate hashes are
+limited storage (see Lynx, next-generation Ocelot), the policy is stored on disk, and only the appropriate hashes are
 stored in SEP local storage / EEPROM.
 
 ## Methodology
@@ -14,7 +14,7 @@ By using `bputil -l` the commands sent to the SEP are plainly visible.  This is 
 
 Aside:
 I do find it unusual that there is both a SEP command to retrieve the policy nonces as well as a system
-`policy-nonce-digests` nvram variable as this seems
+`policy-nonce-digests` NVRAM variable as this seems
 redundant
 
 ## Storage of Policy

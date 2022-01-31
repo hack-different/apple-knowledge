@@ -11,7 +11,7 @@ The kernel then loads from the following additional collections:
 
 * Immutable BootKernelCollection - all Kexts are loaded and considered boot critical
 * Immutable SystemKernelCollection - all additional system immutable Kexts
-* User approved AuxiliaryKernelCollection which contains Kexts added by the user, it must be rebuilt
+* User approved AuxiliaryKernelCollection, which contains Kexts added by the user, it must be rebuilt
   through a reboot
 
 ## Apple Silicon and Boot Policy
