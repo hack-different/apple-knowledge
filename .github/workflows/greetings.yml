@@ -1,0 +1,16 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Snap.  Thanks for the report.  If the issue is with the content of the repo, please submit a fix in a PR instead of as an issue.'
+        pr-message: 'Boo ya! Congratulations on you're first contribution to the knowledge base! If you hadn't before make sure you've given the contribution guidance.'
