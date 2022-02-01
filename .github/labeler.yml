@@ -1,0 +1,8 @@
+data-update:
+- any: [ "_data/** " ]
+
+text-update:
+- any: [ "**/*.md" ]
+
+code-update:
+- any: [ "**/*.rb", "Gemfile", "Rakefile", "_config.yml", ".*" ]
