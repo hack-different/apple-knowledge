@@ -30,7 +30,7 @@ Violation of the DMCA or Copyright law is the responsibility of the submitter.
 ## Primary Data Source
 
 We attempt to derive from machine sources and produce machine readable files (YAML) in this repo under `_data`.  For
-information about creating and extending data format see [Data Format Guidance](docs/Data_Formats.md).
+information about creating and extending data format see [Data Format Guidance](docs/Data_Formats).
 
 Updates and additions there should automatically be reflected in the documents
 
@@ -42,7 +42,7 @@ following locations:
 * [https://opensource.apple.com](https://opensource.apple.com)
 * [GitHub apple](https://github.com/apple)
 * [GitHub apple-oss-distributions](https://github.com/apple-oss-distributions)
-* [Apple Gifts](docs/GIFTS.md)
+* [Apple Gifts](docs/GIFTS)
 
 ## Tools
 
@@ -75,19 +75,19 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [https://github.com/Proteas/apple-cve](https://github.com/Proteas/apple-cve)
 * [kpwn / qwertyoruiop's Wiki](https://github.com/kpwn/iOSRE/tree/master/wiki)
 * [kpwn / qwertyoruiop's Papers](https://github.com/kpwn/iOSRE/tree/master/resources/papers)
-* [About Apple Prototype and CPFM](docs/Prototypes.md)
+* [About Apple Prototype and CPFM](docs/Prototypes)
 * [OWASP: iOS Tampering and Reverse Engineering](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x06c-Reverse-Engineering-and-Tampering.md)
-* [Kernel Debug Kit](docs/KDK.md)
+* [Kernel Debug Kit](docs/KDK)
 * [*OS Internals by Jonathan Levin](https://newosxbook.com/index.php)
-* [T2 Dev Setup](docs/T2.md)
-* [Apple 4CC](docs/4CC.md)
+* [T2 Dev Setup](docs/T2)
+* [Apple 4CC](docs/4CC)
 * [bytepack/IntroToiOSReverseEngineering](https://github.com/bytepack/IntroToiOSReverseEngineering)
 * [Remote Attack Surface](https://googleprojectzero.blogspot.com/2019/08/the-fully-remote-attack-surface-of.html)
 * [Lakr233's Research](https://lab.qaq.wiki/Lakr233/iOS-kernel-research/-/tree/master))
 
 ## Devices
 
-* [Device List](docs/Devices.md)
+* [Device List](docs/Devices)
 * [T2 Dev Team: `t8012` / Apple T2 / bridgeOS](https://t8012.dev)
 * [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Main_Page)
 * SMC (System Management Controller) for pre-T2
@@ -119,13 +119,13 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ### Bootloader Related
 
-* [`EFI`](docs/EFI.md)
-* [`NVRAM`](docs/NVRAM.md)
+* [`EFI`](docs/EFI)
+* [`NVRAM`](docs/NVRAM)
   * [NVRAM unlock](https://stek29.rocks/2018/06/26/nvram.html)
-* [`SEP_memmap`](docs/SEP_memmap.md)
+* [`SEP_memmap`](docs/SEP_memmap)
 * [`apple/darwin-xnu`](https://github.com/apple/darwin-xnu)
 * [`Factory_Firmware_Payloads`](docs/Factory_Firmware_Payloads)
-* [All About Kernels](docs/Kernels.md)
+* [All About Kernels](docs/Kernels)
 * [*OS iBoot](http://newosxbook.com/bonus/iBoot.pdf)
 * [SecureROM Binaries](https://github.com/hekapooios/hekapooios.github.io/tree/master/resources/APROM)
 
@@ -169,7 +169,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ### Software Update / Installers
 
-* [Mobile Asset URLs](docs/Mobile_Assets.md)
+* [Mobile Asset URLs](docs/Mobile_Assets)
 * [`notpeter/apple-installer-checksums`](https://github.com/notpeter/apple-installer-checksums)
 * [ipsw.me](https://ipsw.me)
 * [ipsw.dev](https://ipsw.dev)
@@ -199,7 +199,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [`arandomdev/DyldExtractor`](https://github.com/arandomdev/DyldExtractor) - Fixes up linking
   * [dyld_shared_cache_util.cpp](https://opensource.apple.com/source/dyld/dyld-195.5/launch-cache/dyld_shared_cache_util.cpp.auto.html)
 * iBoot LocalPolicy, RemotePolicy and BAA signing
-  * [`M1_Boot_Policy`](docs/M1_Boot_Policy.md)
+  * [`M1_Boot_Policy`](docs/M1_Boot_Policy)
 * Rosetta2
   * [ProjectChampollion](https://github.com/FFRI/ProjectChampollion/)
 
@@ -212,8 +212,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ### Secure Enclave Processor
 
-* [SEP_memmap](docs/SEP_memmap.md)
-* [sep.yaml](_data/sep.yaml.md)
+* [SEP_memmap](docs/SEP_memmap)
+* [sep.yaml](_data/sep.yaml)
 * [SEPROM](https://github.com/hekapooios/hekapooios.github.io/tree/master/resources/SEPROM)
 * <http://mista.nu/research/sep-paper.pdf?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US>
 * <https://www.theiphonewiki.com/wiki/Seputil>
@@ -289,7 +289,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * <http://newosxbook.com/tools/XPoCe2.html>
 * macOS Internet Recovery
   * [`rickmark/apple_net_recovery`](https://github.com/rickmark/apple_net_recovery)
-  * [`Internet Recovery`](docs/Internet_Recovery.md)
+  * [`Internet Recovery`](docs/Internet_Recovery)
 
 ### System Configuration and State
 
