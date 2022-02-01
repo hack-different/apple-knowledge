@@ -18,7 +18,7 @@ Information about the maintaining of that tap can be found at [homebrew-jailbrea
 
 [Linking your Discord and GitHub](https://hackdiffe.rent/LINKING)
 
-We want this collection to be around for new jailbreakers and hobbiests for years to come, so we must say: this
+We want this collection to be around for new jailbreakers and hobbyists for years to come, so we must say: this
 collection accepts (with gratitude) pull-requests that improve it, but under no circumstances
 will a PR based on `AppleInternal`, or any other copyrighted works protected by the
 [DMCA](https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act) be accepted.  If
@@ -30,7 +30,7 @@ Violation of the DMCA or Copyright law is the responsibility of the submitter.
 ## Primary Data Source
 
 We attempt to derive from machine sources and produce machine readable files (YAML) in this repo under `_data`.  For
-information about creating and extending data format see [Data Format Guidance](docs/Data_Formats).
+information about creating and extending data format see [Data Format Guidance](docs/Data_Formats.md).
 
 Updates and additions there should automatically be reflected in the documents
 
@@ -42,7 +42,7 @@ following locations:
 * [https://opensource.apple.com](https://opensource.apple.com)
 * [GitHub apple](https://github.com/apple)
 * [GitHub apple-oss-distributions](https://github.com/apple-oss-distributions)
-* [Apple Gifts](docs/GIFTS)
+* [Apple Gifts](docs/GIFTS.md)
 
 ## Tools
 
@@ -75,19 +75,19 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [https://github.com/Proteas/apple-cve](https://github.com/Proteas/apple-cve)
 * [kpwn / qwertyoruiop's Wiki](https://github.com/kpwn/iOSRE/tree/master/wiki)
 * [kpwn / qwertyoruiop's Papers](https://github.com/kpwn/iOSRE/tree/master/resources/papers)
-* [About Apple Prototype and CPFM](docs/Prototypes)
+* [About Apple Prototype and CPFM](docs/Prototypes.md)
 * [OWASP: iOS Tampering and Reverse Engineering](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x06c-Reverse-Engineering-and-Tampering.md)
-* [Kernel Debug Kit](docs/KDK)
+* [Kernel Debug Kit](docs/KDK.md)
 * [*OS Internals by Jonathan Levin](https://newosxbook.com/index.php)
-* [T2 Dev Setup](docs/T2)
-* [Apple 4CC](docs/4CC)
+* [T2 Dev Setup](docs/T2.md)
+* [Apple 4CC](docs/4CC.md)
 * [bytepack/IntroToiOSReverseEngineering](https://github.com/bytepack/IntroToiOSReverseEngineering)
 * [Remote Attack Surface](https://googleprojectzero.blogspot.com/2019/08/the-fully-remote-attack-surface-of.html)
 * [Lakr233's Research](https://lab.qaq.wiki/Lakr233/iOS-kernel-research/-/tree/master))
 
 ## Devices
 
-* [Device List](docs/Devices)
+* [Device List](docs/Devices.md)
 * [T2 Dev Team: `t8012` / Apple T2 / bridgeOS](https://t8012.dev)
 * [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Main_Page)
 * SMC (System Management Controller) for pre-T2
@@ -119,13 +119,13 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ### Bootloader Related
 
-* [`EFI`](docs/EFI)
-* [`NVRAM`](docs/NVRAM)
+* [`EFI`](docs/EFI.md)
+* [`NVRAM`](docs/NVRAM.md)
   * [NVRAM unlock](https://stek29.rocks/2018/06/26/nvram.html)
-* [`SEP_memmap`](docs/SEP_memmap)
+* [`SEP_memmap`](docs/SEP_memmap.md)
 * [`apple/darwin-xnu`](https://github.com/apple/darwin-xnu)
 * [`Factory_Firmware_Payloads`](docs/Factory_Firmware_Payloads)
-* [All About Kernels](docs/Kernels)
+* [All About Kernels](docs/Kernels.md)
 * [*OS iBoot](http://newosxbook.com/bonus/iBoot.pdf)
 * [SecureROM Binaries](https://github.com/hekapooios/hekapooios.github.io/tree/master/resources/APROM)
 
@@ -169,14 +169,14 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ### Software Update / Installers
 
-* [Mobile Asset URLs](docs/Mobile_Assets)
+* [Mobile Asset URLs](docs/Mobile_Assets.md)
 * [`notpeter/apple-installer-checksums`](https://github.com/notpeter/apple-installer-checksums)
 * [ipsw.me](https://ipsw.me)
 * [ipsw.dev](https://ipsw.dev)
 
 ### Code and Signature Formats
 
-* [Mach-O File Types](docs/MachO) - Mach-O / Signing / Entitlements
+* [Mach-O File Types](docs/MachO.md) - Mach-O / Signing / Entitlements
   * [`sbingner/ldid`](https://github.com/sbingner/ldid)
   * [m4b Mach Binaries](http://www.m4b.io/reverse/engineering/mach/binaries/2015/03/29/mach-binaries.html)
   * [J's Entitlements Database](http://newosxbook.com/ent.jl)
@@ -199,7 +199,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [`arandomdev/DyldExtractor`](https://github.com/arandomdev/DyldExtractor) - Fixes up linking
   * [dyld_shared_cache_util.cpp](https://opensource.apple.com/source/dyld/dyld-195.5/launch-cache/dyld_shared_cache_util.cpp.auto.html)
 * iBoot LocalPolicy, RemotePolicy and BAA signing
-  * [`M1_Boot_Policy`](docs/M1_Boot_Policy)
+  * [`M1_Boot_Policy`](docs/M1_Boot_Policy.md)
 * Rosetta2
   * [ProjectChampollion](https://github.com/FFRI/ProjectChampollion/)
 
@@ -212,8 +212,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ### Secure Enclave Processor
 
-* [SEP_memmap](docs/SEP_memmap)
-* [sep.yaml](_data/sep.yaml)
+* [SEP_memmap](docs/SEP_memmap.md)
+* [sep.yaml](_data/sep.yaml.md)
 * [SEPROM](https://github.com/hekapooios/hekapooios.github.io/tree/master/resources/SEPROM)
 * <http://mista.nu/research/sep-paper.pdf?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US>
 * <https://www.theiphonewiki.com/wiki/Seputil>
@@ -289,7 +289,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * <http://newosxbook.com/tools/XPoCe2.html>
 * macOS Internet Recovery
   * [`rickmark/apple_net_recovery`](https://github.com/rickmark/apple_net_recovery)
-  * [`Internet Recovery`](docs/Internet_Recovery)
+  * [`Internet Recovery`](docs/Internet_Recovery.md)
 
 ### System Configuration and State
 
@@ -347,8 +347,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 Hack Different's Knowledge is a product of the entire community and belongs to the community.  It is
 facilitated by the volunteer work of the Hack Different moderation team.
 
-Portions of data and knowledge come from <https://theiphonewiki.org>, <https://libimobiledevice.org> and
-<https://checkra.in> as well as the individuals who brought you those projects.  (And many more!)
+Portions of data and knowledge come from <https://theiphonewiki.org>, <https://libimobiledevice.org>, and
+<https://checkra.in>, as well as the individuals who brought you those projects.  (And many more!)
 
 Special mention to Jonathan Levin and Amit Singh for taking the time to publish books on these topics.
 
@@ -359,11 +359,11 @@ Special mention to Jonathan Levin and Amit Singh for taking the time to publish 
 * [*OS Internals - Security by Levin](https://www.amazon.com/dp/0991055535/ref=as_sl_pc_qf_sp_asin_til?tag=newosxbookcom-20&linkCode=w00&linkId=0b61c945365c9c37cd3cf88f10a5f629&creativeASIN=0991055535)
 
 A list of all projects and their contributors is at [CREDITS](CREDITS) and is updated by a script.  If there are
-persons not updated due to limitations please PR the CREDITS page and call them out.
+persons not updated due to limitations, please PR the CREDITS page and call them out.
 
 ### Setting up `overcommit` and the linters
 
-In order to keep the repo, docs and data tidy, we use a tool called `overcommit` to connect up the git hooks to a
+To keep the repo, docs, and data tidy, we use a tool called `overcommit` to connect up the git hooks to a
 set of quality checks.  The fastest way to get setup is to run the following to make sure you have all the tools:
 
 ```shell
@@ -376,7 +376,7 @@ overcommit --install
 ### Why not \<insert wiki here\>
 
 Wiki's best serve prose, and part of the goal here is to leverage machine readable and ingestable information with
-human augmentation wherever possible.  Also GitHub is more conducive to allowing any user to fork and PR the repo
+human augmentation wherever possible.  Also, GitHub is more conducive to allowing any user to fork and PR the repo
 lowering the barrier to entry.  The core team reviews PRs for quality before merging.
 
 ## License

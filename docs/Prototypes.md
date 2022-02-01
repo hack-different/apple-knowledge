@@ -8,11 +8,11 @@ as an Apple trade secret.
 
 You will find that un-fused devices are available through channels.  These devices are stolen and smuggled out of
 Apple facilities.  While it may be broadly impossible for us to tell how knowledge was gained, by using any such
-device you run the risk of tainting this resource, promoting theft, and generally making the lawyers angry.  Please
+device, you run the risk of tainting this resource, promoting theft, and generally making the lawyers angry.  Please
 keep to a high moral standard, avoid the temptation and ensure we can continue to have fun.
 
 The SRD (or Security Research Device) is designed to be outside of Apple, but is covered by NDAs.  Any such owner of
-said device will also know their legal and moral obligations here.
+said the device will also know their legal and moral obligations here.
 
 ## Stages of Apple Production
 

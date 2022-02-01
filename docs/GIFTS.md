@@ -15,4 +15,4 @@ With the release of `com.apple.dyld` caches in iOS 15, the dyld shared cache is 
 
 ## iBoot Source Leak
 
-While not technically a 'gift' in that it was an employee leak, the iBoot sources from around iOS 9 were disclosed, and widely avaiable including being able to be downloaded from GitHub.com.  Apple succeeded in having it removed under the DMCA but it came into such common usage before that many were able to review a copy.
+While not technically a 'gift' in that it was an employee leak, the iBoot sources from around iOS 9 were disclosed, and widely available including being able to be downloaded from GitHub.com.  Apple succeeded in having it removed under the DMCA, but it came into such common usage before that many were able to review a copy.

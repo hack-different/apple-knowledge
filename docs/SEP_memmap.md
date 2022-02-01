@@ -33,7 +33,7 @@ lzvn -d sepfw.lzvn sepfw
 (Credit goes to [@s1guza](https://twitter.com/s1guza))
 
 To find these arrays, we can do a `/ EASB` or `/x 0000010006` on the sep-firmware image. Then go back to the farthest
-chunk of 8 ASCII characters (`ctx` and `name` field).
+chunk of 8 ASCII characters (`ctx` and `name` fields).
 
 Here is the python code to dump these fields on A12 sep-firmware:
 
