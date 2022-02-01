@@ -52,6 +52,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ### Tools for Binary Analysis and Modification
 
+* [mootool](https://github.com/hack-different/mootool) - FOSS Ruby Mach-O Tool (aims to replicate jtool2 feature set)
+* [ktool](https://github.com/cxnder/ktool) - FOSS Python Mach-O Tool
 * [checkra1n/toolchain](https://github.com/checkra1n/toolchain)
 * [alephsecurity/xnu-qemu-arm64](https://github.com/alephsecurity/xnu-qemu-arm64)
   * [alephsecurity/xnu-qemu-arm64-tools](https://github.com/alephsecurity/xnu-qemu-arm64-tools)
