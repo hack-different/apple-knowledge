@@ -31,6 +31,8 @@ baseurl: "/apple-knowledge" # the subpath of your site, e.g. /blog
 url: "https://hackdiffe.rent" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  hack-different
 
+repository: hack-different/apple-knowledge
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -40,7 +42,8 @@ github_username:  hack-different
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+- '_code/**'
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
