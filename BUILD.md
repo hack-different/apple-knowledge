@@ -15,6 +15,17 @@ brew install hunspell rbenv libxml2
 rbenv install 3.1.0
 ```
 
+#### BONUS: Making Tower Work with Overcommit / Yubikeys
+
+Get your `PATH` from the console:
+
+```shell
+$ echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+```
+
+Set `PATH` for Tower: <https://www.git-tower.com/help/guides/integration/environment/mac>
+
 ### Possible on Linux
 
 #### Modern Ruby for Debian / Ubuntu
