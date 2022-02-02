@@ -347,7 +347,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ## [CREDITS](CREDITS)
 
-Hack Different's Knowledge is a product of the entire community and belongs to the community.  It is
+Hack Different - Apple Knowledge is a product of the entire community and belongs to the community.  It is
 facilitated by the volunteer work of the Hack Different moderation team.
 
 Portions of data and knowledge come from <https://theiphonewiki.org>, <https://libimobiledevice.org>, and
@@ -381,16 +381,19 @@ overcommit --install
 ### Why not \<insert wiki here\>
 
 Wiki's best serve prose, and part of the goal here is to leverage machine readable and ingestable information with
-human augmentation wherever possible.  Also, GitHub is more conducive to allowing any user to fork and PR the repo
-lowering the barrier to entry.  The core team reviews PRs for quality before merging.
+human augmentation wherever possible.
+
+As of 2022, GitHub has 56 million users.  That means that there are 56 million people who are able to contribute
+directly to this repo via a fork and PR, in opposition to wiki's which have a relatively small number of potential
+editors.  The PR process also allows for modifications to be reviewed, commented and debated before inclusion.
 
 ## License
 
 The contents of this repo are dual-licensed:
 
-Licensed under the [MIT](https://opensource.org/licenses/MIT) license
+Code and data licensed under the [MIT](https://opensource.org/licenses/MIT) license
 
-Also licensed under the CC-BY-SA
+Documents also licensed under the CC-BY-SA
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png){style="border-width:0"}
 ](http://creativecommons.org/licenses/by-sa/4.0/){rel=license}
