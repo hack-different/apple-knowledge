@@ -1,7 +1,7 @@
 # Introduction
 
 The M1 introduced us to a new 'boot policy' scheme for allowing booting older versions of macOS as well as other
-non-Apple operating systems (see Ashai linux).  This scheme is based on the idea of a `img4` file in the `iSCPreboot`
+non-Apple operating systems (see Asahi Linux).  This scheme is based on the idea of a `img4` file in the `iSCPreboot`
 (iBoot System Container?) portion of the disk.  In order to ensure that the policy file is modified only in approved
 ways, the system must be first booted to 1TR (one true recoveryOS) to allow the SEP to sign a new policy file.
 Furthermore, the SEP must be authenticated to by an administrator to approve the change.  Because the SEP has

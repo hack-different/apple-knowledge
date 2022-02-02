@@ -1,4 +1,4 @@
-# Disection of the Apple Internet Recovery protocol and Security Analysis
+# Dissection of the Apple Internet Recovery protocol and Security Analysis
 
 NOTE: The authors' machine always downgrades from 10.15.3 to 10.13.0 via
 internet recovery, therefore some experiments may not be working the same

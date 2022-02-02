@@ -5,12 +5,12 @@
 The EFI firmware is loaded from an SPI flash chip as is typical in an Intel computer.  It just implements additional
 services and communicates with the ARM SMC (System Management Controller).
 
-Look into the Medussa from CMIzapper for direct access to the SPI Flash
+Look into the Medusa from CMIzapper for direct access to the SPI Flash.
 
 `eficheck` is a utility provided in 10.13 to verify the firmware of the SPI flash chip, though it skips the
 Intel ME region.
 
-`efivalidate` is a re-implementation of `eficheck` by Rick Mark
+`efivalidate` is a re-implementation of `eficheck` by Rick Mark.
 
 ## T2
 

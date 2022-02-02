@@ -302,7 +302,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ### Diagnostic Protocols
 
-* AWDD - Apple Wireless Diagnostics (misnomer, more then wireless, system trace)
+* AWDD - Apple Wireless Diagnostics (misnomer, more than wireless, system trace)
   * [`rickmark/awdd_decode`](https://github.com/rickmark/awdd_decode)
 * iCloud Keychain (Umbrella for multiple formats)
   * <https://www.theiphonewiki.com/wiki/ICloud_Keychain>

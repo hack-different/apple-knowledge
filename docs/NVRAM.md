@@ -1,8 +1,8 @@
-# NVRAM Variqbl3w
+# NVRAM Variables
 
 ## Flags
 
-V = Volitale
+V = Volatile
 P = Persistent
 S = System
 C = Common

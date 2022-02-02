@@ -17,5 +17,5 @@ The kernel then loads from the following additional collections:
 ## Apple Silicon and Boot Policy
 
 Part of the reason for the required reboot is that the 1TR must generate the AuxiliaryKernelCollection then integrate
-it's hash into the LocalPolicy prior to the next boot cycle.  This ensures that the kernel is only modified from a
+its hash into the LocalPolicy prior to the next boot cycle.  This ensures that the kernel is only modified from a
 trusted environment.
