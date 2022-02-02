@@ -5,7 +5,7 @@ Several of these files seem to exist at once.  The format is as such:
 `[mandev-|mansta-]<FIRMWARE_4CC>-<COMPONENT_SERIAL_NUMBER>`
 
 * `FSCl`
-* `HmCA` - bare, mandev versions. Serial is Ambiant Light Sensor
+* `HmCA` - bare, mandev versions. Serial is Ambient Light Sensor
 * `NvMR` - bare, mandev, mansta versions.  Serial is Display Panel
 * `appv` - bare, mandev, mansta versions.  Serial is `<CPID>-<ECID>`
 * `dCfg`

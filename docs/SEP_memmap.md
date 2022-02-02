@@ -20,7 +20,7 @@ The `ctx` and `name` fields are in reversed ASCII.
 ## Methodology
 
 First, we have to decrypt the sep-firmware. This can be done using [xerub's img4lib](https://github.com/xerub/img4lib).
-You'll also need the decryption keys.å
+You'll also need the decryption keys.
 
 For A11 SEPOS especially, you might have to do lzvn decode after decrypting img4 since it is an unpacker.
 
