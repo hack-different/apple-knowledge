@@ -364,7 +364,9 @@ Special mention to Jonathan Levin and Amit Singh for taking the time to publish 
 A list of all projects and their contributors is at [CREDITS](CREDITS) and is updated by a script.  If there are
 persons not updated due to limitations, please PR the CREDITS page and call them out.
 
-### Setting up `overcommit` and the linters
+### Setting up `overcommit`, the linters, and the build
+
+Main article is in [BUILD](BUILD.md)
 
 To keep the repo, docs, and data tidy, we use a tool called `overcommit` to connect up the git hooks to a
 set of quality checks.  The fastest way to get setup is to run the following to make sure you have all the tools:
