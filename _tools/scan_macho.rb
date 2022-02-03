@@ -1,12 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'bundler/setup'
-
-require 'cfpropertylist'
-require 'active_support/all'
-require 'yaml'
-require 'macho'
+require_relative '_common'
 
 MACHO_FILE = File.join(File.dirname(__FILE__), '../_data/mach_o.yaml')
 FILESET_REGION = /__REGION\d+/

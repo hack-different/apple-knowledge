@@ -1,1 +1,79 @@
 ---
+clients:
+- AMPDeviceDiscoveryAgent
+- Safari
+- SpringBoard
+- accountsd
+- atwakeup
+- backupd
+domains:
+- name: com.apple.Accessibility
+  description:
+  properties:
+  - ClosedCaptioningEnabledByiTunes
+  - InvertDisplayEnabledByiTunes
+  - MonoAudioEnabledByiTunes
+  - SpeakAutoCorrectionsEnabledByiTunes
+  - VoiceOverTouchEnabledByiTunes
+  - ZoomTouchEnabledByiTunes
+- name: com.apple.MobileDeviceCrashCopy
+  description:
+  properties: []
+- name: com.apple.TerminalFlashr
+  description:
+  properties: []
+- name: com.apple.mobile.backup
+  description:
+  properties:
+  - CloudBackupEnabled
+  - LastCloudBackupDate
+  - LastCloudBackupTZ
+  - WillEncrypt
+- name: com.apple.mobile.data_sync
+  description:
+  properties: []
+- name: com.apple.mobile.iTunes
+  description:
+  properties: []
+- name: com.apple.mobile.iTunes.accessories
+  description:
+  properties: []
+- name: com.apple.mobile.restriction
+  description:
+  properties:
+  - ClosedCaptioningEnabledByiTunes
+  - CloudBackupEnabled
+  - DeveloperStatus
+  - EnableWifiConnections
+  - EnableWifiDebugging
+  - InvertDisplayEnabledByiTunes
+  - LastCloudBackupDate
+  - LastCloudBackupTZ
+  - MonoAudioEnabledByiTunes
+  - Notes
+  - ProhibitAppDelete
+  - ProhibitAppInstall
+  - RestoreState
+  - SetupState
+  - SpeakAutoCorrectionsEnabledByiTunes
+  - VoiceOverTouchEnabledByiTunes
+  - WillEncrypt
+  - ZoomTouchEnabledByiTunes
+- name: com.apple.mobile.tethered_sync
+  description:
+  properties:
+  - Notes
+- name: com.apple.mobile.wireless_lockdown
+  description:
+  properties:
+  - EnableWifiConnections
+  - EnableWifiDebugging
+- name: com.apple.purplebuddy
+  description:
+  properties:
+  - RestoreState
+  - SetupState
+- name: com.apple.xcode.developerdomain
+  description:
+  properties:
+  - DeveloperStatus

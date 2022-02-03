@@ -1,11 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'bundler/setup'
-
-require 'yaml'
-require 'faraday'
-require 'plist'
+require_relative '_common'
 
 MOBILE_ASSETS_PATH = File.join(File.dirname(__FILE__), '../_data/mobile_assets.yaml')
 

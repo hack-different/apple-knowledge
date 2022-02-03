@@ -4,9 +4,12 @@ data-update:
 text-update:
 - '**/*.md'
 
+tool-update:
+- '_tools/**'
+
 code-update:
 - '**/*.rb'
-- './Gemfile'
-- './Rakefile'
-- './_config.yml'
-- './.*'
+- 'Gemfile'
+- 'Rakefile'
+- '_config.yml'
+- '.*'

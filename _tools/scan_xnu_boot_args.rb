@@ -1,9 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'yaml'
-require 'set'
-require 'active_support/all'
+require '_common'
 
 if ARGV.length != 1
   puts 'Usage: scan_xnu_boot_args <XNU_SOURCE_PATH>'
