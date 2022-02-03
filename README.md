@@ -204,6 +204,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [`M1_Boot_Policy`](docs/M1_Boot_Policy)
 * Rosetta2
   * [ProjectChampollion](https://github.com/FFRI/ProjectChampollion/)
+* Swift
+  * [Swift Mangling](https://github.com/apple/swift/blob/main/docs/ABI/Mangling.rst)
 
 ### Sandbox or 'Seatbelt'
 
