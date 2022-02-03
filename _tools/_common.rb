@@ -38,9 +38,6 @@ end
 
 SCHEMAS = File.join(SCHEMAS_DIR, '*.rb')
 
-puts "Loading Schemas from #{SCHEMAS_DIR}..."
-
 Dir.glob(SCHEMAS).each do |schema|
-  puts "Loading Schema: #{schema}"
   require schema
 end
