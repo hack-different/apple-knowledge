@@ -7,7 +7,7 @@ uaages:
   rcrt: remote/recovery certificate?
   scrt: server certificate?
   tcrt: test certificate?
-  ucrt: user certificate
+  ucrt: user certificate (mapps to a single iCloud account)
   vcrt: virtual certificate?
 private_oid_root: 1.2.840.113635
 oids:
@@ -60,6 +60,9 @@ oids:
 - oid: 1.2.840.113635.100.7.1.1
   apple_description: 'Apple FairPlay certificate extended Application Authentication & Authorization: Policy'
 - oid: 1.2.840.113635.100.8.4
+  description: contains 3 integer values in ASN1, the second of which seems to be a 64bit mask of 0xFE000000
+  is_asn_body: true
+  is_extension: true
   found_in:
     - dcrt
     - dcrt-oid
@@ -68,6 +71,8 @@ oids:
   ous:
     - BAA Certification
 - oid: 1.2.840.113635.100.8.5
+  is_asn_body: true
+  is_extension: true
   found_in:
     - dcrt
     - dcrt-oid
@@ -76,7 +81,9 @@ oids:
   ous:
     - BAA Certification
 - oid: 1.2.840.113635.100.8.7
-  description: ASN1 data for the version of macOS for the issued under
+  description: ASN1 data for the version of macOS for the issued under (e.g. 12.2)
+  is_asn_body: true
+  is_extension: true
   found_in:
     - dcrt
     - dcrt-oid
