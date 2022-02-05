@@ -4,6 +4,10 @@ low_energy:
   - subtype: 0x02
     description: iBeacon Advertisement Data
 uuids:
+- uuid: "0x110B"
+  description: A2DP sink (receiver)
+- uuid: "0x110A"
+  descritpion: A2DP source (sender)
 - uuid: "0x1800"
   description: Generic Access Profile
 - uuid: "0x1801"
@@ -18,17 +22,22 @@ uuids:
   description: Battery
 - uuid: "7798082B-B7B7-45A6-9DED-F6B6C4551967"
 - uuid: "7905F431-B5CE-4E99-A40F-4B1E122D00D0"
+  description: Apple Notification Service (Voice & SMS)
 - uuid: "87290102-3C51-43B1-A1A9-11B9DC38478B"
 - uuid: "89D3502B-0F36-433A-8EF4-C502AD55F8DC"
+  description: Apple Media Service
 - uuid: "9BD708D7-64C7-4E9F-9DED-F6B6C4551967"
+  description: AirPods Specific
 - uuid: "9FA480E0-4967-4542-9390-D343DC5D04AE"
+  description: Apple Nearby Service
 - uuid: "D0611E78-BBB4-4591-A5F8-487910AE4366"
+  description: Continuity
 - uuid: "0xFD43"
   description: Apple (Unknown)
 - uuid: "0xFD44"
   description: Apple (Unknown)
 - uuid: "0xFD6F"
-  description: Apple (Unknown)
+  description: Exposure Notifications Service
 - uuid: "0xFE13"
   description: Apple (Unknown)
 - uuid: "0xFE25"

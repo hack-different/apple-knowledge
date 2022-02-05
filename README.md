@@ -69,7 +69,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [`0x36/ghidra_kernelcache`](https://github.com/0x36/ghidra_kernelcache)
 * [Hopper Disassembler](https://www.hopperapp.com)
 * [`blacktop/ipsw`](https://github.com/blacktop/ipsw)
-* [jtool2](http://www.newosxbook.com/tools/jtool.html)
+* [jtool2](https://www.newosxbook.com/tools/jtool.html)
 * [frida](https://frida.re)
 
 ## Guides and General
@@ -106,12 +106,12 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [osy/AMFIExemption](https://github.com/osy/AMFIExemption)
 * [KTRR by Siguza](https://blog.siguza.net/KTRR/)
 * [Tick Tock by xerub](https://xerub.github.io/ios/kpp/2017/04/13/tick-tock.html)
-* [Casa de PPL by Levin](http://newosxbook.com/articles/CasaDePPL.html)
+* [Casa de PPL by Levin](https://newosxbook.com/articles/CasaDePPL.html)
 * [KTRW by Brandon Azad](https://googleprojectzero.blogspot.com/2019/10/ktrw-journey-to-build-debuggable-iphone.html)
 * [Qwertyoruiopz Attacking XNU: Part 1](https://web.archive.org/web/20160131061526/http://blog.qwertyoruiop.com/?p=38)
 * [Qwertyoruiopz Attacking XNU: Part 2](https://web.archive.org/web/20160131061526/http://blog.qwertyoruiop.com/?p=48)
 * [Kernel Heap by Stefan Esser](http://gsec.hitb.org/materials/sg2016/D2%20-%20Stefan%20Esser%20-%20iOS%2010%20Kernel%20Heap%20Revisited.pdf)
-* [Who needs task_for_pid anyway](http://newosxbook.com/articles/PST2.html)
+* [Who needs task_for_pid anyway](https://newosxbook.com/articles/PST2.html)
 * Apple Official Documentation
   * [Kernel Programming Guide](https://developer.apple.com/library/content/documentation/Darwin/Conceptual/KernelProgramming)
   * [IOKit Fundamentals](https://developer.apple.com/library/content/documentation/DeviceDrivers/Conceptual/IOKitFundamentals)
@@ -128,7 +128,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [`apple/darwin-xnu`](https://github.com/apple/darwin-xnu)
 * [`Factory_Firmware_Payloads`](docs/Factory_Firmware_Payloads)
 * [All About Kernels](docs/Kernels)
-* [*OS iBoot](http://newosxbook.com/bonus/iBoot.pdf)
+* [*OS iBoot](https://newosxbook.com/bonus/iBoot.pdf)
 * [SecureROM Binaries](https://github.com/hekapooios/hekapooios.github.io/tree/master/resources/APROM)
 
 ### Archive / Disk Formats
@@ -181,7 +181,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [Mach-O File Types](docs/MachO.md) - Mach-O / Signing / Entitlements
   * [`sbingner/ldid`](https://github.com/sbingner/ldid)
   * [m4b Mach Binaries](http://www.m4b.io/reverse/engineering/mach/binaries/2015/03/29/mach-binaries.html)
-  * [J's Entitlements Database](http://newosxbook.com/ent.jl)
+  * [J's Entitlements Database](https://newosxbook.com/ent.jl)
   * [Levin's Code Signing](http://www.newosxbook.com/articles/CodeSigning.pdf)
 * img4 - Apple signed images, version 4
   * <https://www.theiphonewiki.com/wiki/IMG4_File_Format>
@@ -209,7 +209,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ### Sandbox or 'Seatbelt'
 
-* [Levin's - The Apple Sandbox](http://newosxbook.com/files/HITSB.pdf)
+* [Levin's - The Apple Sandbox](https://newosxbook.com/files/HITSB.pdf)
 * [iBSparkles Breaking Entitlements](https://sparkes.zone/blog/ios/2018/04/06/diving-into-the-kernel-entitlements.html)
 * [stek29 Shenanigans Shenanigans](https://stek29.rocks/2018/12/11/shenanigans.html)
 * [argp vs com.apple.security.sandbox](https://census-labs.com/media/sandbox-argp-csw2019-public.pdf)
