@@ -11,6 +11,22 @@ uaages:
   vcrt: virtual certificate?
 private_oid_root: 1.2.840.113635
 oids:
+- oid: 1.2.840.113635.100.5.3
+  apple_description: ADC Certificate Policy
+- oid: 1.2.840.113635.100.5.4
+  apple_description: Markers for iPhone OS Device Certificate Policies, used for external sources to trust iPhone OS devices
+- oid: 1.2.840.113635.100.5.4.1
+  apple_description: BBC's Policy
+- oid: 1.2.840.113635.100.6.1.1
+  apple_description: Apple Released Code Signature
+- oid: 1.2.840.113635.100.6.1.2
+  apple_description: Apple World Wide Developer Relations Certificates for Code Signing during development
+- oid: 1.2.840.113635.100.6.1.3
+  apple_description: Apple World Wide Developer Relations Certificates for Code Signing for General Release through the iTMS
+- oid: 1.2.840.113635.100.6.1.3.1
+  apple_description: Apple World Wide Developer Relations Certificates for Code Signing for Test Release through the iTMS
+- oid: 1.2.840.113635.100.6.1.4
+  apple_description: Apple World Wide Developer Relations Certificates for Code Signing GM from developer to Apple
 - oid: 1.2.840.113635.100.6.1.15
   description:
     Contains the boot policy of the machine during certificate issuance
@@ -25,6 +41,24 @@ oids:
   ous:
     - BAA Certification
     - ucrt Leaf Certificate
+- oid: 1.2.840.113635.100.6.2.1
+  apple_description: Marker for the WWDR Intermediate Certificate
+- oid: 1.2.840.113635.100.6.2.2
+  apple_description: Marker for the iTunes Store Intermediate Certificate
+- oid: 1.2.840.113635.100.6.3.1
+  apple_description: Apple World Wide Developer Relations Client SSL Certificates for Accessing the Development Apple Push Service
+- oid: 1.2.840.113635.100.6.3.2
+  apple_description: Apple World Wide Developer Relations Client SSL Certificates for Accessing the Production Apple Push Service
+- oid: 1.2.840.113635.100.6.4.1
+  apple_description: Extension Markers for device version string, expects UTF8 to follow in SubjectAltName
+- oid: 1.2.840.113635.100.6 4.2
+  apple_description: Extension Markers for OS version string, expects UTF8 to follow in SubjectAltName
+- oid: 1.2.840.113635.100.6.5.1
+  apple_description: Apple iTunes Store Certificates for Signing Receipts of Purchases from the iTS
+- oid: 1.2.840.113635.100.6.5.2
+  apple_description: Apple iTunes Store Certificates for Signing Requests to Purchase for the iTS
+- oid: 1.2.840.113635.100.7.1.1
+  apple_description: 'Apple FairPlay certificate extended Application Authentication & Authorization: Policy'
 - oid: 1.2.840.113635.100.8.4
   found_in:
     - dcrt
