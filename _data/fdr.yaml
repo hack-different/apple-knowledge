@@ -2,30 +2,11 @@
 properties:
 - name: AlsH
   description:
-- name: BMac
-  description: Bluetooth MAC Address
-- name: BORD
-  description: Board ID
-- name: CmCl
-  description:
-- name: GpC2
-  description:
-- name: HmCl
-  description:
-- name: IfCl
-  description:
-- name: SDOM
-  description: Security Domain
-- name: ShMC
-  description:
-- name: ShSC
-  description:
-- name: SrNm
-  description: Serial Number
-- name: WMac
-  description: Wireless MAC Address
 - name: appv
   description:
+  contexts:
+    - base
+    - mandev
 - name: arc#
   description:
 - name: bbcl
@@ -34,13 +15,53 @@ properties:
   description: Baseband
 - name: bbpv
   description: Baseband
+- name: BMac
+  description: Bluetooth MAC Address
+- name: BORD
+  description: Board ID
+- name: CmCl
+  description:
 - name: dCfg
   description:
+  contexts:
+    - base
+    - mansta
+- name: dcrt
+  description:
+    bputil certificate from BAA Certification / Basic Attestation User Sub CA2
+    seems related to "key recovery assistant" as this is device level so for all
+    iCloud users (KeyRecoveryAssistant_dcrt_baa_request/response)
 - name: drp#
   description:
 - name: eeid
   description: eSIM Embedded ID (EID)
 - name: fCfg
+  description:
+  contexts:
+    - base
+    - mandev
+    - mansta
+- name: FSCl
+  description:
+  contexts:
+    - mandev
+    - mansta
+- name: GpC2
+  description:
+- name: HmCA
+  description:
+  contexts:
+    - base
+    - mansta
+- name: HmCl
+  description:
+- name: hop0
+  description:
+  contexts:
+    - base
+    - mandev
+    - mansta
+- name: IfCl
   description:
 - name: ime2
   description: International Mobile Equipment Identifier 2
@@ -64,12 +85,20 @@ properties:
   description:
 - name: lcrt
   description:
+  contexts:
+    - base
+    - mansta
 - name: meid
   description: Mobile Equipment Identifier (CMDA)
 - name: mlb#
   description: Main Logic Board Serial Number
 - name: nuid
   description:
+- name: NvMR
+  description:
+  contexts:
+    - mandev
+    - mansta
 - name: pbas
   description:
 - name: pcic
@@ -78,6 +107,8 @@ properties:
   description:
 - name: pcrt
   description:
+  contexts:
+    - base
 - name: pcvc
   description:
 - name: pcve
@@ -102,21 +133,39 @@ properties:
   description:
 - name: pwcl
   description:
+- name: rcrt
+  description:
 - name: rMCl
   description:
 - name: rSCl
   description:
-- name: rcrt
-  description:
 - name: scrt
   description:
+  contexts:
+    - base
+- name: SDOM
+  description: Security Domain
 - name: seal
   description:
+  contexts:
+    - base
 - name: seid
   description: Secure Element ID (for NFC / Payments)
+- name: ShMC
+  description:
+- name: ShSC
+  description:
+- name: SrNm
+  description: Serial Number
+- name: tCfg
+  description:
+  contexts:
+    - mansta
 - name: tcrt
   description:
 - name: tsid
   description:
 - name: vcrt
   description:
+- name: WMac
+  description: Wireless MAC Address

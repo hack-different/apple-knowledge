@@ -1,0 +1,129 @@
+---
+uaages:
+  dcrt: device certificate
+  dcrt-oid: device owner certificate
+  lcrt: local certificate?
+  pcrt: product/production certificate?
+  rcrt: remote/recovery certificate?
+  scrt: server certificate?
+  tcrt: test certificate?
+  ucrt: user certificate
+  vcrt: virtual certificate?
+private_oid_root: 1.2.840.113635
+oids:
+- oid: 1.2.840.113635.100.6.1.15
+  description:
+    Contains the boot policy of the machine during certificate issuance
+    based on boot policy.  includes BORD, ronh, lobo, SDOM, lpnh, rpnh
+    BNCH, CSEC, CHIP, ECID, CPEO, OBJP, EPRO, DPRO, ESEC, DSEC and DGST
+  found_in:
+    - ucrt
+    - dcrt-oid
+  issuers:
+    - Basic Attestation User Sub CA2
+    - FDRDC-UCRT-SUBCA
+  ous:
+    - BAA Certification
+    - ucrt Leaf Certificate
+- oid: 1.2.840.113635.100.8.4
+  found_in:
+    - dcrt
+    - dcrt-oid
+  issuers:
+    - Basic Attestation User Sub CA2
+  ous:
+    - BAA Certification
+- oid: 1.2.840.113635.100.8.5
+  found_in:
+    - dcrt
+    - dcrt-oid
+  issuers:
+    - Basic Attestation User Sub CA2
+  ous:
+    - BAA Certification
+- oid: 1.2.840.113635.100.8.7
+  description: ASN1 data for the version of macOS for the issued under
+  found_in:
+    - dcrt
+    - dcrt-oid
+  issuers:
+    - Basic Attestation User Sub CA2
+  ous:
+    - BAA Certification
+- oid: 1.2.840.113635.100.10.1
+  description:
+    Hardware device identifiers of the machine the certificate is issued to
+    contains BORD, CHIP, ECID, srnm, udid, seid
+  found_in:
+    - ucrt
+  issuers:
+    - FDRDC-UCRT-SUBCA
+  ous:
+    - ucrt Leaf Certificate
+- oid: 1.2.840.113635.100.10.2
+  found_in:
+    - ucrt
+  issuers:
+    - FDRDC-UCRT-SUBCA
+  ous:
+    - ucrt Leaf Certificate
+known_symbols:
+  ekus:
+    - _oidAppleExtendedKeyUsageAppleID
+    - _oidAppleExtendedKeyUsageCodeSigning
+    - _oidAppleExtendedKeyUsageCodeSigningDev
+    - _oidAppleExtendedKeyUsagePassbook
+    - _oidAppleExtendedKeyUsageProfileSigning
+    - _oidAppleExtendedKeyUsageQAProfileSigning
+  purposes:
+    - _oidAppleApplicationSigning
+    - _oidAppleProvisioningProfile
+    - _oidAppleInstallerPackagingSigningExternal
+    - _oidApplePushServiceClient
+  extensions:
+    - _oidAppleCertExtAST2DiagnosticsServerAuthProd
+    - _oidAppleCertExtAST2DiagnosticsServerAuthProdQA
+    - _oidAppleCertExtATVAppSigningProd
+    - _oidAppleCertExtATVAppSigningProdQA
+    - _oidAppleCertExtATVVPNProfileSigning
+    - _oidAppleCertExtApplePPQSigningProd
+    - _oidAppleCertExtApplePPQSigningProdQA
+    - _oidAppleCertExtAppleSMPEncryption
+    - _oidAppleCertExtAppleServerAuthentication
+    - _oidAppleCertExtAppleServerAuthenticationAPNProd
+    - _oidAppleCertExtAppleServerAuthenticationAPNProdQA
+    - _oidAppleCertExtAppleServerAuthenticationGS
+    - _oidAppleCertExtAppleServerAuthenticationIDSProd
+    - _oidAppleCertExtAppleServerAuthenticationIDSProdQA
+    - _oidAppleCertExtAppleServerAuthenticationMMCSProd
+    - _oidAppleCertExtAppleServerAuthenticationMMCSProdQA
+    - _oidAppleCertExtAppleServerAuthenticationPPQProd
+    - _oidAppleCertExtAppleServerAuthenticationPPQProdQA
+    - _oidAppleCertExtAppleServerAuthenticationiCloudSetupProd
+    - _oidAppleCertExtAppleServerAuthenticationiCloudSetupProdQA
+    - _oidAppleCertExtCryptoServicesExtEncryption
+    - _oidAppleCertExtEscrowProxyServerAuthProd
+    - _oidAppleCertExtEscrowProxyServerAuthProdQA
+    - _oidAppleCertExtFMiPServerAuthProd
+    - _oidAppleCertExtFMiPServerAuthProdQA
+    - _oidAppleCertExtHomeKitServerAuth
+    - _oidAppleCertExtOSXProvisioningProfileSigning
+    - _oidAppleCertExtTrustCacheSigning
+    - _oidAppleCertExtTrustCacheSigningTest
+    - _oidAppleCertExtensionAppleIDRecordValidationSigning
+  unknown:
+    - _oidAppleImg4ManifestCertSpec
+    - _oidAppleIntmMarkerAppleHomeKitServerCA
+    - _oidAppleIntmMarkerAppleID
+    - _oidAppleIntmMarkerAppleID2
+    - _oidAppleIntmMarkerAppleServerAuthentication
+    - _oidAppleIntmMarkerAppleSystemIntg2
+    - _oidAppleIntmMarkerAppleSystemIntgG3
+    - _oidAppleIntmMarkerAppleWWDR
+    - _oidApplePolicyEscrowService
+    - _oidApplePolicyMobileStore
+    - _oidApplePolicyMobileStoreProdQA
+    - _oidAppleSecureBootCertSpec
+    - _oidAppleSecureBootTicketCertSpec
+    - _oidAppleTVOSApplicationSigningProd
+    - _oidAppleTVOSApplicationSigningProdQA
