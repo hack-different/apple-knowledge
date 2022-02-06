@@ -1,0 +1,386 @@
+# SPDX-FileCopyrightText: 2021 Nicolás Alvarez <nicolas.alvarez@gmail.com>
+#
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+# Legacy incoming commands (current client code seems to support them still):
+# 0x01 connected
+# 0x03 message received
+# 0x06 keep-alive response
+
+0x07:
+  name:  connect
+  label: Connect
+  direction: outgoing
+  items:
+    0x01:
+      name:  token
+      label: Token
+    0x02:
+      name:  state
+      label: State
+    0x05:
+      # the bitfield is not decoded yet, and it doesn't seem easy,
+      # as there's several constant values.
+      name:  flags
+      label: Flags
+    0x06:
+      # 'interface' internally has values [0..4], but the number in this field
+      # is only 0/1 for cellular/WiFi
+      name:  interface
+      label: Interface
+      type: FT_UINT8
+      base: BASE_DEC
+      strings: VALS(interface_string)
+    0x07:
+      name:  active_interval
+      label: Active Interval
+    0x08:
+      name:  carrier
+      label: Carrier
+      type: FT_STRING
+    0x09:
+      name:  software_version
+      label: Software Version
+      type: FT_STRING
+    0x0a:
+      name:  software_build
+      label: Software Build
+      type: FT_STRING
+    0x0b:
+      name:  hardware_version
+      label: Hardware Version
+      type: FT_STRING
+    0x0c:
+      name:  certificate
+      label: Certificate
+    0x0d:
+      name:  nonce
+      label: Nonce
+    0x0e:
+      name:  signature
+      label: Signature
+    0x10:
+      # I *think* this is a protocol version. Values seen:
+      # macOS Sierra: 3
+      # iOS 12.4.8:   6
+      # iOS 13.7:     7
+
+      name:  version
+      label: Protocol Version
+      type: FT_UINT16
+      base: BASE_DEC
+    0x11:
+      name:  redirect_count
+      label: Redirect Count
+      type: FT_UINT16
+      base: BASE_DEC
+    0x13:
+      name:  dns_time
+      label: DNS Resolve Time
+    0x14:
+      name:  tls_time
+      label: TLS Handshake Time
+      type: FT_RELATIVE_TIME
+
+0x08:
+  name:  connected
+  label: Connected
+  direction: incoming
+  items:
+    0x01:
+      name:  connected_response
+      label: Response
+      type: FT_UINT8
+      base: BASE_HEX
+    0x02:
+      name:  server_metadata
+      label: Server Metadata
+      type: FT_STRING
+    0x03:
+      name:  token
+      label: Token
+    0x04:
+      name:  message_size
+      label: Message Size
+      type: FT_UINT16
+      base: BASE_DEC
+    0x06:
+      name:  capabilities
+      label: Capabilities
+      type: FT_UINT32
+      base: BASE_HEX
+      ## whole field: capabilities
+      ## bit0: dualChannelSupport
+      ## bit1: reportLastReversePushRTT
+    0x07:
+      name:  bad_nonce_time
+      label: Server Time For Bad Nonce
+      type: FT_UINT64
+      base: BASE_HEX
+    0x08:
+      name:  large_message_size
+      label: Large Message Size
+      type: FT_UINT16
+      base: BASE_DEC
+    0x09:
+      name:  redirect_reason
+      label: Redirect Reason
+      type: FT_STRING
+    0x0a:
+      name:  server_time
+      label: Server Time
+      type: FT_ABSOLUTE_TIME
+      base: ABSOLUTE_TIME_UTC
+    0x0b:
+      name:  geo_region
+      label: Geo Region
+      type: FT_STRING
+    # This is a timestamp but I don't know what it means
+    0x0c:
+      name:  unknown_ts
+      label: Unknown
+      type: FT_ABSOLUTE_TIME
+      base: ABSOLUTE_TIME_UTC
+
+0x09:
+  name:  filter
+  label: Filter
+  direction: outgoing
+  items:
+    0x01:
+      name:  token
+      label: Token
+    0x02:
+      name:  enabled_hash
+      label: Enabled Topic Hash
+    0x03:
+      name:  ignored_hash
+      label: Ignored Topic Hash
+    0x04:
+      name:  opportunistic_hash
+      label: Opportunistic Topic Hash
+    0x05:
+      name:  paused_hash
+      label: Paused Topic Hash
+
+0x0a:
+  name:  message
+  label: Message
+  direction: both
+  items:
+  # outgoing, 1 is topic hash, 2 is token
+  # incoming, 1 is token, 2 is topic hash
+    0x1:
+      name:  topic_hash
+      label: Topic Hash
+    0x2:
+      name:  token
+      label: Token
+    0x3:
+      name:  payload
+      label: Payload
+    0x4:
+      name:  message_id
+      label: Message ID
+      type: FT_UINT32
+      base: BASE_HEX
+    0x5:
+      name:  expiry
+      label: Message Expiry Time
+      type: FT_ABSOLUTE_TIME
+      base: ABSOLUTE_TIME_UTC
+    0x6:
+      # this is nanoseconds since Unix epoch,
+      # but Wireshark doesn't yet support that
+      name:  timestamp
+      label: Message Timestamp
+      type: FT_UINT64
+      base: BASE_HEX
+    0x9:
+      name:  storage_flags
+      label: Storage Fiags
+      type: FT_UINT8
+      base: BASE_HEX
+    0xd:
+      name:  priority
+      label: Priority
+      type: FT_UINT8
+      base: BASE_HEX
+    0xf:
+      name:  base_token
+      label: Base Token
+    0x15:
+      name:  tracing_uuid
+      label: Message Tracing UUID
+    0x18:
+      name:  correlation_id
+      label: Correlation Identifier
+      type: FT_STRING
+    0x1a:
+      name:  apn_flags
+      label: APN Flags
+      type: FT_UINT32
+      base: BASE_HEX
+    0x1c:
+      name:  push_type
+      label: Push Type
+      type: FT_UINT16
+      base: BASE_DEC
+      strings: VALS(push_type_string)
+    0x19:
+      name:  lastRTT
+      label: Last RTT
+      type: FT_UINT16
+      base: BASE_DEC
+
+0x0b:
+  name:  ack
+  label: Acknowledge Message
+  direction: both
+  items:
+    0x1:
+      name:  token
+      label: Token
+    0x4:
+      name:  message_id
+      label: Message ID
+      type: FT_UINT32
+      base: BASE_HEX
+    0x8:
+      name:  response
+      label: Response
+      type: FT_UINT8
+      base: BASE_HEX
+
+0x0c:
+  name:  keepalive
+  label: Keep-Alive
+  direction: outgoing
+  items:
+    0x01:
+      name:  carrier
+      label: Carrier
+      type: FT_STRING
+    0x02:
+      name:  software_version
+      label: Software Version
+      type: FT_STRING
+    0x03:
+      name:  software_build
+      label: Software Build
+      type: FT_STRING
+    0x04:
+      name:  hardware_version
+      label: Hardware Version
+      type: FT_STRING
+    0x05:
+      name:  interval
+      label: Keepalive Interval
+      type: FT_STRING
+    0x06:
+      name:  delayed_interval
+      label: Delayed Response Interval
+      type: FT_STRING
+
+0x0d:
+  name: keepalive_response
+  label: Keep-Alive Response
+  direction: incoming
+  items:
+    0x1:
+      name:  response
+      label: Response
+      type: FT_UINT8
+      base: BASE_HEX
+
+0x0f:
+  name:  flush
+  label: Flush
+  direction: incoming
+  items:
+    0x1:
+      name:  want_padding
+      label: Want Padding
+      type: FT_UINT16
+      base: BASE_HEX
+
+0x10:
+  name:  flush_response
+  label: Flush Response
+  direction: incoming
+
+0x11:
+  name:  apptoken
+  label: App Token Generate Request
+  direction: outgoing
+  items:
+    0x01:
+      name:  base_token
+      label: Base Token
+    0x02:
+      name:  topic_hash
+      label: Topic Hash
+    0x03:
+      name:  appid
+      label: App ID
+      type: FT_UINT16
+      base: BASE_HEX
+
+0x12:
+  name:  apptoken_response
+  label: App Token Generate Response
+  direction: incoming
+  items:
+    0x01:
+      name:  response
+      label: Response
+      type: FT_UINT8
+      base: BASE_HEX
+    0x02:
+      name:  token
+      label: Token
+    0x03:
+      name:  topic_hash
+      label: Topic Hash
+    0x04:
+      name:  appid
+      label: App ID
+      type: FT_UINT16
+      base: BASE_HEX
+
+0x14:
+  name:  setstate
+  label: Set Active State
+  direction: outgoing
+  items:
+    0x01:
+      name: state
+      label: State
+      type: FT_UINT8
+      base: BASE_DEC
+      strings: VALS(active_state_string)
+    # this is hardcoded to 0x258 ??
+    0x02:
+      name: interval
+      label: Interval
+      type: FT_UINT32
+      base: BASE_HEX
+
+0x16:
+  name:  keepalive_ack
+  label: Keep-Alive Ack
+  direction: incoming
+
+0x17:
+  name:  redirect
+  label: Redirect # ??
+  direction: incoming
+  items:
+    0x02:
+      name:  server_metadata
+      label: Server Metadata
+      type: FT_STRING
+    0x09:
+      name:  redirect_reason
+      label: Redirect Reason
+      type: FT_STRING
