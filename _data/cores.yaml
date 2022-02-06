@@ -3,6 +3,11 @@ bootrom_exploits:
   - checkm8
 chip_ids:
   6000:
+    name: t6000
+    description: M1 Pro
+  6001:
+    name: t6001
+    description: M1 Max
   7000:
   7001:
   7002:
@@ -18,4 +23,9 @@ chip_ids:
       - checkm8
   8015:
   8020:
-  
+  8103:
+    name: t8103
+    description: The M1 processor
+    os:
+      - macOS
+      - padOS
