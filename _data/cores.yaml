@@ -1,0 +1,21 @@
+---
+bootrom_exploits:
+  - checkm8
+chip_ids:
+  6000:
+  7000:
+  7001:
+  7002:
+  8000:
+  8000:
+  8012:
+    name: t8012
+    description: The T2 found in Intel macs
+    securerom: http://securerom.fun/resources/APROM/SecureROM%20for%20t8012si,%20iBoot-3401.0.0.1.16
+    architecture: arm64
+    seprom:
+    vulnerable_to:
+      - checkm8
+  8015:
+  8020:
+  
