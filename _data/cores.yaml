@@ -12,20 +12,67 @@ chip_ids:
   7001:
   7002:
   8000:
-  8000:
+  8001:
+  8002:
+  8003:
+  8004:
+  8006:
+  8010:
+  8011:
   8012:
     name: t8012
     description: The T2 found in Intel macs
-    securerom: http://securerom.fun/resources/APROM/SecureROM%20for%20t8012si,%20iBoot-3401.0.0.1.16
+    securerom:
+      - version: iBoot-3401.0.0.1.16
+        url: http://securerom.fun/resources/APROM/SecureROM%20for%20t8012si,%20iBoot-3401.0.0.1.16
+        hash:
     architecture: arm64
     seprom:
+      - version:
+        url:
+        hash:
     vulnerable_to:
       - checkm8
   8015:
   8020:
+  8027:
+  8030:
+  8101:
   8103:
     name: t8103
     description: The M1 processor
     os:
       - macOS
       - padOS
+  8110:
+  8301:
+  8720:
+  8900:
+    name: S5L8900
+    boards:
+      00:
+        product_name: iPhone 2G
+        product_id: iPhone1,1
+        board_name: m68ap
+      02:
+        product_name: iPod Touch (1st gen)
+        product_id: iPod1,1
+        board_name: m45ap
+      04:
+        product_name: iPhone 3G
+        product_id: iPhone1,2
+        board_name: n82ap
+    securerom:
+      - version: Rev.2
+        url: http://securerom.fun/resources/APROM/ROM%20BOOT,%20S5L8900%20Rev.2
+        hash: 220027d6f8ea24603f8c5ad5e920ab553d85a9cd809d79c7e6f6f0eefdc2bc95
+  8920:
+  8922:
+  8930:
+  8940:
+  8942:
+  8945:
+  8947:
+  8950:
+  8955:
+  8960:
