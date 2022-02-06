@@ -9,6 +9,7 @@ require 'yaml'
 require 'active_support/all'
 require 'kramdown'
 require 'octokit'
+require 'json'
 
 BASE_PATH = File.dirname(__FILE__)
 
@@ -112,4 +113,14 @@ task :credits do
   puts credits.inspect
 
   File.write(File.join(BASE_PATH, '_data', 'credits.yaml'), credits.to_yaml)
+end
+
+desc 'convert to JSON'
+task :json do
+  yaml_glob = File.join(BASE_PATH, '_data', '*.yaml')
+  Dir.glob(yaml_glob) do |file|
+    new_file = File.realdirpath(file).to_s.sub('.yaml', '.json')
+    data = YAML.load_file file
+    File.write(new_file, JSON.dump(data))
+  end
 end
