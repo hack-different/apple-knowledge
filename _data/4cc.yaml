@@ -11,6 +11,10 @@
   description:
   usage:
   - SysCfg
+- code: BNCH
+  description: Boot Nonce Hash
+  usage:
+  - APTicket
 - code: BNDL
   description: Loadable Bundle (plugin)
   usage:
@@ -71,6 +75,10 @@
   - SysCfg
 - code: SDOM
   description: Security Domain
+  usage:
+  - APTicket
+- code: snon
+  description: Secure Enclave Processor Boot Nonce Hash
   usage:
   - APTicket
 - code: SrNm
