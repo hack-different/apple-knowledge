@@ -2,24 +2,319 @@
 bootrom_exploits:
   - checkm8
 chip_ids:
-  6000:
+  0x6000:
     name: t6000
     description: M1 Pro
-  6001:
+    boards:
+      0x08:
+        product_name: MacBook Pro (M1 Pro, 14-inch, 2021)
+        product_id: MacBookPro18,3
+        board_name: j314sap
+      0x0A:
+        product_name: MacBook Pro (M1 Pro, 16-inch, 2021)
+        product_id: MacBookPro18,1
+        board_name: j316sap
+  0x6001:
     name: t6001
     description: M1 Max
-  7000:
-  7001:
-  7002:
-  8000:
-  8001:
-  8002:
-  8003:
-  8004:
-  8006:
-  8010:
-  8011:
-  8012:
+    boards:
+      0x08:
+        product_name: MacBook Pro (M1 Max, 14-inch, 2021)
+        product_id: MacBookPro18,4
+        board_name: j314cap
+      0x0A:
+        product_name: MacBook Pro (M1 Max, 16-inch, 2021)
+        product_id: MacBookPro18,2
+        board_name: j316cap
+  0x7000:
+    name: t7000
+    description: A8
+    boards:
+      0x04:
+        product_name: iPhone 6 Plus
+        product_id: iPhone7,1
+        board_name: n56ap
+      0x06:
+        product_name: iPhone 6
+        product_id: iPhone7,2
+        board_name: n61ap
+      0x08:
+        product_name: iPad mini 4 (WiFi)
+        product_id: iPad5,1
+        board_name: j96ap
+      0x0A:
+        product_name: iPad mini 4 (Cellular)
+        product_id: iPad5,2
+        board_name: j97ap
+      0x10:
+        product_name: iPod Touch (6th gen)
+        product_id: iPod7,1
+        board_name: n102ap
+      0x1A:
+        product_name: HomePod
+        product_id: AudioAccessory1,2
+        board_name: b238ap
+      0x34:
+        product_name: Apple TV 4
+        product_id: AppleTV5,3
+        board_name: j42dap
+      0x38:
+        product_name: HomePod
+        product_id: AudioAccessory1,1
+        board_name: b238aap
+  0x7001:
+    name:
+    description:
+    board:
+      0x02:
+        product_name: iPad Air 2 (Cellular)
+        product_id: iPad5,4
+        board_name: j82ap
+      0x06:
+        product_name: iPad Air 2 (WiFi)
+        product_id: iPad5,3
+        board_name: j81ap
+  0x7002:
+    name:
+      description:
+        boards:
+          0x02:
+            product_name: Apple Watch 38mm (1st gen)
+            product_id: Watch1,1
+            board_name: n27aap
+          0x04:
+            product_name: Apple Watch 42mm (1st gen)
+            product_id: Watch1,2
+            board_name: n28aap
+  0x8000:
+    name: t8000
+    description: A9
+    boards:
+      0x02:
+        product_name: iPhone SE
+        product_id: iPhone8,4
+        board_name: n69uap
+      0x04:
+        product_name: iPhone 6s
+        product_id: iPhone8,1
+        board_name: n71ap
+      0x06:
+        product_name: iPhone 6s Plus
+        product_id: iPhone8,2
+        board_name: n66ap
+      0x10:
+        product_name: iPad (5th gen, WiFi)
+        product_id: iPad6,11
+        board_name: j71sap
+      0x12:
+        product_name: iPad (5th gen, Cellular)
+        product_id: iPad6,12
+        board_name: j72sap
+  0x8001:
+    name:
+    description:
+    boards:
+      0x08:
+        product_name: iPad Pro 9.7-inch (WiFi)
+        product_id: iPad6,3
+        board_name: j127ap
+      0x0A:
+        product_name: iPad Pro 9.7-inch (Cellular)
+        product_id: iPad6,4
+        board_name: j128ap
+      0x10:
+        product_name: iPad Pro 12.9-inch (1st gen, WiFi)
+        product_id: iPad6,7
+        board_name: j98aap
+      0x12:
+        product_name: iPad Pro 12.9-inch (1st gen, Cellular)
+        product_id: iPad6,8
+        board_name: j99aap
+  0x8002:
+    name:
+    descrioption:
+    boards:
+      0x02:
+        product_name: Apple Watch Series 1 (38mm)
+        product_id: Watch2,6
+        board_name: n27dap
+      0x04:
+        product_name: Apple Watch Series 1 (42mm)
+        product_id: Watch2,7
+        board_name: n28dap
+      0x0C:
+        product_name: Apple Watch Series 2 (38mm)
+        product_id: Watch2,3
+        board_name: n74ap
+      0x0E:
+        product_name: Apple Watch Series 2 (42mm)
+        product_id: Watch2,4
+        board_name: n75ap
+  0x8003:
+    name: t8003
+    description: A9
+    boards:
+      0x02:
+        product_name: iPhone SE
+        product_id: iPhone8,4
+        board_name: n69ap
+      0x04:
+        product_name: iPhone 6s
+        product_id: iPhone8,1
+        board_name: n71map
+      0x06:
+        product_name: iPhone 6s Plus
+        product_id: iPhone8,2
+        board_name: n66map
+      0x10:
+        product_name: iPad (5th gen, WiFi)
+        product_id: iPad6,11
+        board_name: j71tap
+      0x12:
+        product_name: iPad (5th gen, Cellular)
+        product_id: iPad6,12
+        board_name: j72tap
+  0x8004:
+    name:
+    description:
+    boards:
+      0x18:
+        product_name: Apple Watch Series 3 (38mm)
+        product_id: Watch3,3
+        board_name: n121sap
+      0x1A:
+        product_name: Apple Watch Series 3 (42mm)
+        proudct_id: Watch3,4
+        board_name: n121bap
+      0x1C:
+        product_name: Apple Watch Series 3 (38mm Cellular)
+        product_id: Watch3,1
+        board_name: n111sap
+      0x1E:
+        product_namw: Apple Watch Series 3 (42mm Cellular)
+        product_id: Watch3,2
+        board_name: n111bap
+  0x8006:
+    name:
+    description:
+    boards:
+      0x08:
+        product_name: Apple Watch Series 4 (40mm)
+        product_id: Watch4,1
+        board_name: n131sap
+      0x0A:
+        product_name: Apple Watch Series 4 (44mm)
+        product_id: Watch4,2
+        board_name: n131bap
+      0x0C:
+        product_name: Apple Watch Series 4 (40mm Cellular)
+        product_id: Watch4,3
+        board_name: n141sap
+      0x0E:
+        product_name: Apple Watch Series 4 (44mm Cellular)
+        product_id: Watch4,4
+        board_name: n141bap
+      0x10:
+        product_name: Apple Watch Series 5 (40mm)
+        product_id: Watch5,1
+        board_name: n144sap
+      0x12:
+        product_name: Apple Watch Series 5 (44mm)
+        product_id: Watch5,2
+        board_name: n144bap
+      0x14:
+        product_name: Apple Watch Series 5 (40mm Cellular)
+        product_id: Watch5,3
+        board_name: n146sap
+      0x16:
+        product_name: Apple Watch Series 5 (44mm Cellular)
+        product_id: Watch5,4
+        board_name: n146bap
+      0x22:
+        product_name: HomePod mini
+        product_id: AudioAccessory5,1
+        board_name: b520ap
+      0x28:
+        product_name: Apple Watch SE (40mm)
+        product_id: Watch5,9
+        board_name: n140sap
+      0x2A:
+        product_name: Apple Watch SE (44mm)
+        product_id: Watch5,10
+        board_name: n140bap
+      0x2C:
+        product_name: Apple Watch SE (40mm Cellular)
+        product_id: Watch5,11
+        board_name: n142sap
+      0x2E:
+        product_name: Apple Watch SE (44mm Cellular)
+        product_id: Watch5,12
+        board_name: n142bap
+  0x8010:
+    name: t8010
+    description: A10
+    boards:
+      0x08:
+        product_name: iPhone 7 (Global)
+        product_id: iPhone9,1
+        board_name: d10ap
+      0x0A:
+        proudct_name: iPhone 7 Plus (Global)
+        product_id: iPhone9,2
+        board_name: d11ap
+      0x0C:
+        product_name: iPhone 7 (GSM)
+        product_id: iPhone9,3
+        board_name: d101ap
+      0x0E:
+        product_name: iPhone 7 Plus (GSM)
+        product_id: iPhone9,4
+        board_name: d111ap
+      0x18:
+        product_name: iPad (6th gen, WiFi)
+        product_id: iPad7,5
+        board_name: j71bap
+      0x1A:
+        product_name: iPad (6th gen, Cellular)
+        product_id: iPad7,6
+        board_name: j72bap
+      0x1C:
+        product_name: iPad (7th gen, WiFi)
+        product_id: iPad7,11
+        board_name: j171ap
+      0x1E:
+        product_name: iPad (7th gen, Cellular)
+        product_id: iPad7,12
+      board_name: j172ap
+  0x8011:
+    name:
+    description:
+    boards:
+      0x02:
+        product_name: Apple TV 4K
+        product_id: AppleTV6,2
+        board_name: j105aap
+      0x04:
+        product_name: iPad Pro 10.5-inch (WiFi)
+        product_id: iPad7,3
+        board_name: j207ap
+      0x06:
+        product_name: iPad Pro 10.5-inch (Cellular)
+        product_id: iPad7,4
+        board_name: j208ap
+      0x08:
+        product_name: Apple TV 4K (2nd gen)
+        product_id: AppleTV11,1
+        board_name: j305ap
+      0x0C:
+        product_name: iPad Pro 12.9-inch (2nd gen, WiFi)
+        product_id: iPad7,1
+        board_name: j120ap
+      0x0E:
+        product_name: iPad Pro 12.9-inch (2nd gen, Cellular)
+        product_id: iPad7,2
+        board_name: j121ap
+  0x8012:
     name: t8012
     description: The T2 found in Intel macs
     securerom:
@@ -33,32 +328,409 @@ chip_ids:
         hash:
     vulnerable_to:
       - checkm8
-  8015:
-  8020:
-  8027:
-  8030:
-  8101:
-  8103:
+    boards:
+      0x07:
+        product_name: Apple T2 MacBookPro15,3 (j780)
+        product_id: iBridge2,7
+        board_name: j780ap
+      0x08:
+        product_name: Apple T2 MacBookPro15,1 (j680)
+        product_id: iBridge2,3
+        board_name: j680ap
+      0x0A:
+        product_name: Apple T2 iMacPro1,1 (j137)
+        product_id: iBridge2,1
+        board_name: j137ap
+      0x0B:
+        product_name: Apple T2 MacBookPro15,1 (j680)
+        product_id: iBridge2,3
+        board_name: j680ap
+      0x0C:
+        product_name: Apple T2 MacBookPro15,2 (j132)
+        product_id: iBridge2,4
+        board_name: j132ap
+      0x0E:
+        product_name: Apple T2 Macmini8,1 (j174)
+        product_id: iBridge2,5
+        board_name: j174ap
+      0x0F:
+        product_name: Apple T2 MacPro7,1 (j160)
+        product_id: iBridge2,6
+        board_name: j160ap
+      0x17:
+        product_name: Apple T2 MacBookAir8,1 (j140k)
+        product_id: iBridge2,8
+        board_name: j140kap
+      0x18:
+        product_name: Apple T2 MacBookPro15,4 (j213)
+        product_id: iBridge2,10
+        board_name: j213ap
+      0x22:
+        product_name: Apple T2 iMac20,1 (j185)
+        product_id: iBridge2,19
+        board_name: j185ap
+      0x23:
+        product_name: Apple T2 iMac20,2 (j185f)
+        product_id: iBridge2,20
+        board_name: j185fap
+      0x37:
+        product_name: Apple T2 MacBookAir8,2 (j140a)
+        product_id: iBridge2,12
+        board_name: j140aap
+      0x38:
+        product_name: Apple T2 MacBookPro16,4 (j215)
+        product_id: iBridge2,22
+        board_name: j215ap
+      0x3A:
+        product_name: Apple T2 MacBookPro16,1 (j152f)
+        product_id: iBridge2,14
+        board_name: j152fap
+      0x3B:
+        product_name: Apple T2 MacBookPro16,3 (j223)
+        product_id: iBridge2,21
+        board_name: j223ap
+      0x3E:
+        product_name: Apple T2 MacBookPro16,2 (j214k)
+        product_id: iBridge2,16
+        board_name: j214kap
+      0x3F:
+        product_name: Apple T2 MacBookAir9,1 (j230k)
+        product_id: iBridge2,15
+        board_name: j230kap
+  0x8015:
+    name: t8015
+    description: A12
+    boards:
+      0x02:
+        product_name: iPhone 8 (Global)
+        product_id: iPhone10,1
+        board_name: d20ap
+      0x04:
+        product_name: iPhone 8 Plus (Global)
+        product_id: iPhone10,2
+        board_name: d21ap
+      0x06:
+        product_name: iPhone X (Global)
+        product_id: iPhone10,3
+        board_name: d22ap
+      0x0A:
+        product_name: iPhone 8 (GSM)
+        product_id: iPhone10,4
+        board_name: d201ap
+      0x0C:
+        product_name: iPhone 8 Plus (GSM)
+        product_id: iPhone10,5
+        board_name: d221ap
+      0x0E:
+        product_name: iPhone X (GSM)
+        product_id: iPhone10,6
+        board_name: d221ap
+  0x8020:
+    name: t8020
+    description: A13
+    boards:
+      0x08:
+        product_name:
+        product_id: AppleTV11,1
+        board_name: j305ap
+      0x0A:
+        product_name: iPhone XS Max (China)
+        product_id: iPhone11,4
+        board_name: d331ap
+      0x0C:
+        product_name: iPhone XR
+        product_id: iPhone11,8
+        board_name: n841ap
+      0x0E:
+        product_name: iPhone XS
+        product_id: iPhone11,2
+        board_name: d321ap
+      0x14:
+        product_name: iPad mini (5th gen, WiFi)
+        product_id: iPad11,1
+        board_name: j210ap
+      0x16:
+        product_name: iPad mini (5th gen, Cellular)
+        product_id: iPad11,2
+        board_name: j211ap
+      0x1A:
+        product_name: iPhone XS Max
+        product_id: iPhone11,6
+        board_name: d331pap
+      0x1C:
+        product_name: iPad Air (3rd gen, WiFi)
+        product_id: iPad11,3
+        board_name: j217ap
+      0x1E:
+        product_name: iPad Air (3rd gen, Celluar)
+        product_id: iPad11,4
+        board_name: j218ap
+      0x24:
+        product_name: iPad (8th gen, WiFi)
+        product_id: iPad11,6
+        board_name: j171aap
+      0x26:
+        product_name: iPad (8th gen, Celluar)
+        product_id: iPad11,7
+        board_name: j172aap
+  0x8027:
+    name: t8027
+    description: A14X/Z
+    boards:
+      0x08:
+        product_name: iPad Pro 12.9-inch (3rd gen, WiFi)
+        product_id: iPad8,5
+        board_name: j320ap
+      0x0C:
+        product_name: iPad Pro 11-inch (1st gen, WiFi)
+        product_id: iPad8,1
+        board_name: j317ap
+      0x0A:
+        product_name: iPad Pro 12.9-inch (3rd gen, Cellular)
+        product_id: iPad8,7
+        board_name: j321ap
+      0x0E:
+        product_name: iPad Pro 11-inch (1st gen, Cellular)
+        product_id: iPad8,3
+        board_name: j318ap
+      0x18:
+        product_name: iPad Pro 12.9-inch (3rd gen, WiFi, 1TB)
+        product_id: iPad8,6
+        board_name: j320xap
+      0x1A:
+        product_name: iPad Pro 12.9-inch (3rd gen, Cellular, 1TB)
+        product_id: iPad8,8
+        board_name: j321xap
+      0x1C:
+        product_name: iPad Pro 11-inch (1st gen, WiFi, 1TB)
+        product_id: iPad8,2
+        board_name: j317xap
+      0x1E:
+        product_name: iPad Pro 11-inch (1st gen, Cellular, 1TB)
+        product_id: iPad8,4
+        board_name: j318xap
+      0x38:
+        product_name: iPad Pro 12.9-inch (4th gen, WiFi)
+        product_id: iPad8,11
+        board_name: j420ap
+      0x3A:
+        product_name: iPad Pro 12.9-inch (4th gen, Cellular)
+        product_id: iPad8,12
+        board_name: j421ap
+      0x3C:
+        product_name: iPad Pro 11-inch (2nd gen, WiFi)
+        product_id: iPad8,9
+        board_name: j417ap
+      0x3E:
+        product_name: iPad Pro 11-inch (2nd gen, Cellular)
+        product_id: iPad8,10
+        board_name: j418ap
+      0x42:
+        product_name: Developer Transition Kit (2020)
+        product_id: ADP3,2
+        board_name: j273aap
+  0x8030:
+    name: t8030
+    description: A14
+    boards:
+      0x02:
+        product_name: iPhone 11 Pro Max
+        product_id: iPhone12,5
+        board_name: d431ap
+      0x04:
+        product_name: iPhone 11
+        product_id: iPhone12,1
+        board_name: n104ap
+      0x06:
+        product_name: iPhone 11 Pro
+        product_id: iPhone12,3
+        board_name: d421ap
+      0x10:
+        product_name: iPhone SE (2020)
+        product_id: iPhone12,8
+        board_name: d79ap
+      0x18:
+        product_name: iPad (9th gen, WiFi)
+        product_id: iPad12,1
+        board_name: j181ap
+      0x1A:
+        product_name: iPad (9th gen, Cellular)
+        product_id: iPad12,2
+        board_name: j182ap
+  0x8101:
+    name:
+    description:
+    boards:
+      0x04:
+        product_name: iPad Air (4th gen, WiFi)
+        product_id: iPad13,1
+        board_name: j307ap
+      0x06:
+        product_name: iPad Air (4th gen, Celluar)
+        product_id: iPad13,2
+        board_name: j308ap
+      0x08:
+        product_name: iPhone 12 Pro Max
+        product_id: iPhone13,4
+        board_name: d54pap
+      0x0A:
+        product_name: iPhone 12 mini
+        product_id: iPhone13,1
+        board_name: d52gap
+      0x0C:
+        product_name: iPhone 12
+        product_id: iPhone13,2
+        board_name: d53gap
+      0x0E:
+        product_name: iPhone 12 Pro
+        product_id: iPhone13,3
+        board_name: d53pap
+      0x16:
+        product_name: iPod Touch (7th gen)
+        product_id: iPod9,1
+        board_name: n112ap
+  0x8103:
     name: t8103
     description: The M1 processor
     os:
       - macOS
       - padOS
-  8110:
-  8301:
-  8720:
-  8900:
-    name: S5L8900
     boards:
-      00:
+      0x08:
+        product_name: iPad Pro 11-inch (3rd gen, WiFi)
+        product_id: iPad13,4
+        board_name: j517ap
+      0x0A:
+        product_name: iPad Pro 11-inch (3rd gen, WiFi, 2TB)
+        product_id: iPad13,5
+        board_name: j517xap
+      0x0C:
+        product_name: iPad Pro 11-inch (3rd gen, Cellular)
+        product_id: iPad13,6
+        board_name: j518ap
+      0x0E:
+        product_name: iPad Pro 11-inch (3rd gen, Celluar, 2TB)
+        product_id: iPad13,7
+        board_name: j518xap
+      0x18:
+        product_name: iPad Pro 12.9-inch (5th gen, WiFi)
+        product_id: iPad13,8
+        board_name: j522ap
+      0x1A:
+        product_name: iPad Pro 12.9-inch (5th gen, WiFi, 2TB)
+        product_id: iPad13,9
+        board_name: j522xap
+      0x1C:
+        product_name: iPad Pro 12.9-inch (5th gen, Celluar)
+        product_id: iPad13,10
+        board_name: j523ap
+      0x1E:
+        product_name: iPad Pro 12.9-inch (5th gen, Celluar, 2TB)
+        product_id: iPad13,11
+        board_name: j523xap
+      0x22:
+        product_name: Mac mini (M1, 2020)
+        product_id: Macmini9,1
+        board_name: j274ap
+      0x24:
+        product_name: MacBook Pro (M1, 2020)
+        product_id: MacBookPro17,1
+        board_name: j293ap
+      0x26:
+        product_name: MacBook Air (M1, 2020)
+        product_id: MacBookAir10,1
+        board_name: j313ap
+      0x28:
+        product_name: iMac 24-inch (M1, Two Ports, 2021)
+        product_id: iMac21,1
+        board_name: j456ap
+      0x2A:
+        product_name: iMac 24-inch (M1, Four Ports, 2021)
+        product_id: iMac21,2
+        board_name: iMac21,2
+  0x8110:
+    name: t8110
+    description: A15
+    boards:
+      0x04:
+        product_name: iPad mini (6th gen, WiFi)
+        product_id: iPad14,1
+        board_name: j310ap
+      0x06:
+        product_name: iPad mini (6th gen, Cellular)
+        product_id: iPad14,2
+        board_name: j311ap
+      0x08:
+        product_name: iPhone 13 mini
+        product_id: iPhone14,4
+        board_name: d16ap
+      0x0A:
+        product_name: iPhone 13
+        product_id: iPhone14,5
+        board_name: d17ap
+      0x0C:
+        product_name: iPhone 13 Pro
+        product_id: iPhone14,2
+        board_name: d63ap
+      0x0E:
+        product_name: iPhone 13 Pro Max
+        product_id: iPhone14,3
+        board_name: d64ap
+  0x8301:
+    name:
+    description:
+    boards:
+      0x08:
+        product_name: Apple Watch Series 6 (40mm)
+        product_id: Watch6,1
+        board_name: n157sap
+      0x0A:
+        product_name: Apple Watch Series 6 (44mm)
+        product_id: Watch6,2
+        board_name: n157bap
+      0x0C:
+        product_name: Apple Watch Series 6 (40mm Cellular)
+        product_id: Watch6,3
+        board_name: n158sap
+      0x0E:
+        product_name: Apple Watch Series 6 (44mm Cellular)
+        product_id: Watch6,4
+        board_name: n158bap
+      0x10:
+        product_name: Apple Watch Series 7 (41mm)
+        product_id: Watch6,6
+        board_name: n187sap
+      0x12:
+        product_name: Apple Watch Series 7 (45mm)
+        product_id: Watch6,7
+        board_name: n187bap
+      0x14:
+        product_name: Apple Watch Series 7 (41mm Cellular)
+        product_id: Watch6,8
+        board_name: n188sap
+      0x16:
+        product_name: Apple Watch Series 7 (45mm Cellular)
+        product_id: Watch6,9
+        board_name: n188bap
+  0x8720:
+    name:
+    boards:
+      0x00:
+        product_name: iPod Touch (2nd gen)
+        product_id: iPod2,1
+        board_name: n72ap
+  0x8900:
+    name: s5L8900
+    boards:
+      0x00:
         product_name: iPhone 2G
         product_id: iPhone1,1
         board_name: m68ap
-      02:
+      0x02:
         product_name: iPod Touch (1st gen)
         product_id: iPod1,1
         board_name: m45ap
-      04:
+      0x04:
         product_name: iPhone 3G
         product_id: iPhone1,2
         board_name: n82ap
@@ -66,13 +738,195 @@ chip_ids:
       - version: Rev.2
         url: http://securerom.fun/resources/APROM/ROM%20BOOT,%20S5L8900%20Rev.2
         hash: 220027d6f8ea24603f8c5ad5e920ab553d85a9cd809d79c7e6f6f0eefdc2bc95
-  8920:
-  8922:
-  8930:
-  8940:
-  8942:
-  8945:
-  8947:
-  8950:
-  8955:
-  8960:
+  0x8920:
+  0x8922:
+    name:
+    boards:
+      0x02:
+        product_name: iPod Touch (3rd gen)
+        product_id: iPod3,1
+        board_name: n18ap
+  0x8930:
+    name: s8930
+    description: A4
+    boards:
+      0x00:
+        product_name: iPhone 4 (GSM)
+        product_id: AppleTV2,1
+        board_name: k66ap
+      0x02:
+        product_name: iPad
+        product_id: iPad1,1
+        board_name: k48ap
+      0x04:
+        product_nawe: iPhone 4 (GSM) R2 2012
+        product_id: iPhone3,3
+        board_name: n92ap
+      0x06:
+        product_name: iPhone 4 (CDMA)
+        product_id: iPhone3,3
+        board_name: k66ap
+      0x08:
+        product_name: iPod Touch (4th gen)
+        product_id: iPod4,1
+        board_name: n81ap
+      0x10:
+        product_name: Apple TV 2
+        product_id: AppleTV2,1
+        board_name: k66ap
+  0x8940:
+    name: s8940
+    description: A5
+    boards:
+      0x02:
+        product_name: iPad 2 (CDMA)
+        product_id: iPad2,3
+        board_name: k95ap
+      0x04:
+        product_name: iPad 2 (WiFi)
+        product_id: iPad2,1
+        board_name: k93ap
+      0x06:
+        product_name: iPad 2 (GSM)
+        product_id: iPad2,2
+        board_name: k94ap
+      0x08:
+        product_name: iPhone 4s
+        product_id: iPhone4,1
+        board_name: n94ap
+  0x8942:
+    name:
+    description:
+    boards:
+      0x00:
+        product_name: iPod Touch (5th gen)
+        product_id: iPod5,1
+        board_name: n78ap
+      0x06:
+        product_name: iPad 2 (WiFi) R2 2012
+        product_id: iPad2,4
+        board_name: k93aap
+      0x08:
+        product_name: Apple TV 3
+        product_id: AppleTV3,1
+        board_name: j33ap
+      0x0A:
+        product_name: iPad mini (WiFi)
+        product_id: iPad2,5
+        board_name: p105ap
+      0x0C:
+        product_name: iPad mini (GSM)
+        product_id: iPad2,6
+        board_name: p106ap
+      0x0E:
+        product_name: iPad mini (Global)
+        product_id: iPad2,7
+        board_name: p107ap
+  0x8945:
+    name:
+    description:
+    boards:
+      0x00:
+        product_name: iPad (3rd gen, WiFi)
+        product_id: iPad3,1
+        board_name: j1ap
+      0x02:
+        product_name: iPad (3rd gen, CDMA)
+        product_id: iPad3,2
+        board_name: j2ap
+      0x04:
+        product_name: iPad (3rd gen, GSM)
+        product_id: iPad3,3
+        board_name: j2aap
+  0x8947:
+    name:
+    description:
+    boards:
+      0x00:
+        product_name: Apple TV 3 (2013)
+        product_id: AppleTV3,2
+        board_name: j33iap
+  0x8950:
+    name: s8950
+    description: A6
+    boards:
+      0x00:
+        product_name: iPhone 5 (GSM)
+        product_id: iPhone5,1
+        board_name: n41ap
+      0x02:
+        product_name: iPhone 5 (Global)
+        product_id: iPhone5,2
+        board_name: n42ap
+      0x0A:
+        product_name: iPhone 5c (GSM)
+        product_id: iPhone5,3
+        board_name: n48ap
+      0x0E:
+        product_name: iPhone 5c (Global)
+        product_id: iPhone5,4
+        board_name: n49ap
+  0x8955:
+    name:
+    description:
+    boards:
+      0x00:
+        product_name: iPad (4th gen, WiFi)
+        product_id: iPad3,4
+        board_name: p101ap
+      0x02:
+        product_name: iPad (4th gen, GSM)
+        product_id: iPad3,5
+        board_name: p102ap
+      0x04:
+        product_name: iPad (4th gen, Global)
+        product_id: iPad3,6
+        board_name: p103ap
+      0x10:
+        product_name: iPad Air (WiFi)
+        product_id: iPad4,1
+        board_name: j71ap
+      0x12:
+        product_name: iPad Air (Cellular)
+        product_id: iPad4,2
+        board_name: j72ap
+      0x14:
+        product_name: iPad Air (China)
+        product_id: iPad4,3
+        board_name: j73ap
+  0x8960:
+    name: s8960
+    description: A7
+    board:
+      0x00:
+        product_name: iPhone 5s (GSM)
+        product_id: iPhone6,1
+        board_name: n51ap
+      0x02:
+        product_name: iPhone 5s (Global)
+        product_id: iPhone6,2
+        board_name: n53ap
+      0x0A:
+        product_name: iPad mini 2 (WiFi)
+        product_id: iPad4,4
+        board_name: j85ap
+      0x0C:
+        product_name: iPad mini 2 (Cellular)
+        product_id: iPad4,5
+        board_name: j86ap
+      0x0E:
+        product_name: iPad mini 2 (China)
+        product_id: iPad4,6
+        board_name: j87ap
+      0x32:
+        product_name: iPad mini 3 (WiFi)
+        product_id: iPad4,7
+        board_name: j85map
+      0x34:
+        product_name: iPad mini 3 (Cellular)
+        product_id: iPad4,8
+        board_name: j86map
+      0x36:
+        product_name: iPad mini 3 (China)
+        product_id: iPad4,9
+        board_name: j87map

@@ -60,11 +60,6 @@ namespace :sort do
   task :four_cc do
     sort_yaml '4cc', :code
   end
-
-  desc 'sort devices'
-  task :devices do
-    sort_yaml 'devices', :id
-  end
 end
 
 namespace :stubs do
@@ -81,7 +76,7 @@ namespace :stubs do
 end
 
 desc 'sort everything'
-task sort: ['sort:nvram', 'sort:services', 'sort:mobile_assets', 'sort:four_cc', 'sort:devices']
+task sort: ['sort:nvram', 'sort:services', 'sort:mobile_assets', 'sort:four_cc']
 
 desc 'do all precommit tasks'
 task precommit: ['sort']
