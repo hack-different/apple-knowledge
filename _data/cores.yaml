@@ -63,9 +63,9 @@ chip_ids:
         product_id: AudioAccessory1,1
         board_name: b238aap
   0x7001:
-    name:
-    description:
-    board:
+    name: t7001
+    description: A8X
+    boards:
       0x02:
         product_name: iPad Air 2 (Cellular)
         product_id: iPad5,4
@@ -75,17 +75,17 @@ chip_ids:
         product_id: iPad5,3
         board_name: j81ap
   0x7002:
-    name:
-      description:
-        boards:
-          0x02:
-            product_name: Apple Watch 38mm (1st gen)
-            product_id: Watch1,1
-            board_name: n27aap
-          0x04:
-            product_name: Apple Watch 42mm (1st gen)
-            product_id: Watch1,2
-            board_name: n28aap
+    name: t7002
+    description:
+    boards:
+      0x02:
+        product_name: Apple Watch 38mm (1st gen)
+        product_id: Watch1,1
+        board_name: n27aap
+      0x04:
+        product_name: Apple Watch 42mm (1st gen)
+        product_id: Watch1,2
+        board_name: n28aap
   0x8000:
     name: t8000
     description: A9
@@ -111,8 +111,8 @@ chip_ids:
         product_id: iPad6,12
         board_name: j72sap
   0x8001:
-    name:
-    description:
+    name: t8001
+    description: A9X
     boards:
       0x08:
         product_name: iPad Pro 9.7-inch (WiFi)
@@ -131,8 +131,8 @@ chip_ids:
         product_id: iPad6,8
         board_name: j99aap
   0x8002:
-    name:
-    descrioption:
+    name: t8002
+    descrioption: S1
     boards:
       0x02:
         product_name: Apple Watch Series 1 (38mm)
@@ -175,8 +175,8 @@ chip_ids:
         product_id: iPad6,12
         board_name: j72tap
   0x8004:
-    name:
-    description:
+    name: t8004
+    description: S3
     boards:
       0x18:
         product_name: Apple Watch Series 3 (38mm)
@@ -195,8 +195,8 @@ chip_ids:
         product_id: Watch3,2
         board_name: n111bap
   0x8006:
-    name:
-    description:
+    name: t8006
+    description: S4
     boards:
       0x08:
         product_name: Apple Watch Series 4 (40mm)
@@ -285,10 +285,10 @@ chip_ids:
       0x1E:
         product_name: iPad (7th gen, Cellular)
         product_id: iPad7,12
-      board_name: j172ap
+        board_name: j172ap
   0x8011:
-    name:
-    description:
+    name: t8011
+    description: A10X
     boards:
       0x02:
         product_name: Apple TV 4K
@@ -316,12 +316,12 @@ chip_ids:
         board_name: j121ap
   0x8012:
     name: t8012
-    description: The T2 found in Intel macs
+    description: T2
+    architecture: arm64
     securerom:
       - version: iBoot-3401.0.0.1.16
         url: http://securerom.fun/resources/APROM/SecureROM%20for%20t8012si,%20iBoot-3401.0.0.1.16
         hash:
-    architecture: arm64
     seprom:
       - version:
         url:
@@ -558,8 +558,8 @@ chip_ids:
         product_id: iPad12,2
         board_name: j182ap
   0x8101:
-    name:
-    description:
+    name: t8101
+    description: A14
     boards:
       0x04:
         product_name: iPad Air (4th gen, WiFi)
@@ -591,7 +591,7 @@ chip_ids:
         board_name: n112ap
   0x8103:
     name: t8103
-    description: The M1 processor
+    description: M1
     os:
       - macOS
       - padOS
@@ -677,8 +677,8 @@ chip_ids:
         product_id: iPhone14,3
         board_name: d64ap
   0x8301:
-    name:
-    description:
+    name: t8301
+    description: S6
     boards:
       0x08:
         product_name: Apple Watch Series 6 (40mm)
@@ -713,7 +713,15 @@ chip_ids:
         product_id: Watch6,9
         board_name: n188bap
   0x8720:
-    name:
+    name: s5L8720
+    description:
+    securerom:
+      - version: iBoot-240.4
+        url: http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8720xsi,%20iBoot-240.4
+        hash: 55f4d8ea2791ba51dd89934168f38f0fb21ce8762ff614c1e742407c0d3ca054
+      - version: iBoot-240.5.1
+        url: http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8720xsi,%20iBoot-240.5.1
+        hash: cddedc17eb815cd94276469407e450a923db125b367cacd5139a12efdfcf2143
     boards:
       0x00:
         product_name: iPod Touch (2nd gen)
@@ -721,6 +729,10 @@ chip_ids:
         board_name: n72ap
   0x8900:
     name: s5L8900
+    securerom:
+      - version: Rev.2
+        url: http://securerom.fun/resources/APROM/ROM%20BOOT,%20S5L8900%20Rev.2
+        hash: 220027d6f8ea24603f8c5ad5e920ab553d85a9cd809d79c7e6f6f0eefdc2bc95
     boards:
       0x00:
         product_name: iPhone 2G
@@ -730,17 +742,31 @@ chip_ids:
         product_name: iPod Touch (1st gen)
         product_id: iPod1,1
         board_name: m45ap
+  0x8920:
+    name: s5l8920xsi
+    description:
+    securerom:
+      - version: iBoot-359.3
+        url: http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8920xsi,%20iBoot-359.3
+        harh: 99fd16f919a506c7f0701620e132e18c0e6f4025a57a85807960ca092e5e3587
+      - version: iBoot-359.3.2
+        url: http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8920xsi,%20iBoot-359.3.2
+        hash: 0e6feb1144c95b1ee088ecd6c45bfdc2ed17191167555b6ca513d6572e463c86
+    boards:
+      0x00:
+        product_name: iPhone 3Gs
+        product_id: iPhone2,1
+        board_name: n88ap
       0x04:
         product_name: iPhone 3G
         product_id: iPhone1,2
         board_name: n82ap
-    securerom:
-      - version: Rev.2
-        url: http://securerom.fun/resources/APROM/ROM%20BOOT,%20S5L8900%20Rev.2
-        hash: 220027d6f8ea24603f8c5ad5e920ab553d85a9cd809d79c7e6f6f0eefdc2bc95
-  0x8920:
   0x8922:
-    name:
+    name: s5l8922xsi
+    securerom:
+      - version: iBoot-359.5
+        url: http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8922xsi,%20iBoot-359.5
+        hash: 07b8a615f00961c5802451b5717c344db287b68c5f6d2331ac6ba7a6acdbac9d
     boards:
       0x02:
         product_name: iPod Touch (3rd gen)
@@ -749,6 +775,10 @@ chip_ids:
   0x8930:
     name: s8930
     description: A4
+    securerom:
+      - version: iBoot-574.4
+        url: http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8930xsi,%20iBoot-574.4
+        hash: 4f34652a238a57ae0018b6e66c20a240cdbee8b4cca59a99407d09f83ea8082d
     boards:
       0x00:
         product_name: iPhone 4 (GSM)
@@ -775,8 +805,12 @@ chip_ids:
         product_id: AppleTV2,1
         board_name: k66ap
   0x8940:
-    name: s8940
+    name: s5l8940xsi
     description: A5
+    securerom:
+      - version: iBoot-838.3
+        url: http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8940xsi,%20iBoot-838.3
+        hash: b4ac75591fb4240c6978251bec1ce6f1162344612a5691193f35baefa826af95
     boards:
       0x02:
         product_name: iPad 2 (CDMA)
@@ -823,8 +857,12 @@ chip_ids:
         product_id: iPad2,7
         board_name: p107ap
   0x8945:
-    name:
+    name: s5l8945xsi
     description:
+    securerom:
+      - version: iBoot-1062.2
+        url: http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8945xsi,%20iBoot-1062.2
+        hash: 0a74f025a62a55a2beb201f582d104eeecc3e6b069d5a3d2636ccacad25675f7
     boards:
       0x00:
         product_name: iPad (3rd gen, WiFi)
@@ -849,6 +887,10 @@ chip_ids:
   0x8950:
     name: s8950
     description: A6
+    securerom:
+      - version: iBoot-1458.2
+        url: http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8950xsi,%20iBoot-1145.3
+        hash: 59b9e3782af4be3aead0ed8196b5bd1f0457a904756df52628f7c6e2532b5405
     boards:
       0x00:
         product_name: iPhone 5 (GSM)
@@ -867,7 +909,7 @@ chip_ids:
         product_id: iPhone5,4
         board_name: n49ap
   0x8955:
-    name:
+    name: s5l8950xsi
     description:
     boards:
       0x00:
