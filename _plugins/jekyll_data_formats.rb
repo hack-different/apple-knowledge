@@ -33,6 +33,8 @@ class JekyllDataFormatsPlugin < Jekyll::Generator
 
         site.pages << file
       end
+    rescue StandardError => e
+      warn "Error processing data file #{name}\n\n#{e}"
     end
   end
 end
