@@ -17,7 +17,7 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-      - uses: helaili/jekyll-action@master
+      - uses: hack-different/jekyll-action@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           jekyll_build_options: '--baseurl /'
