@@ -21,7 +21,11 @@ class JekyllDataFormatsPlugin < Jekyll::Generator
   end
 
   def formats_for_data(data)
-    { json: JSON.dump(data), yaml: data.to_yaml, plist: data&.to_plist }
+    {
+      json: JSON.dump(data),
+      yaml: data.to_yaml,
+      plist: data&.to_plist
+    }
   end
 
   def generate(site)
