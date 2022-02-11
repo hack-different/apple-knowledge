@@ -8,6 +8,7 @@ on:
 jobs:
   github-pages:
     runs-on: ubuntu-latest
+    environment: gh-pages
     steps:
       - uses: actions/checkout@v2
       - uses: actions/cache@v2
@@ -19,6 +20,5 @@ jobs:
       - uses: helaili/jekyll-action@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          cname: docs.hackdiffe.rent
           target_branch: gh-pages
           target_path: /
