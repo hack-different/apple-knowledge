@@ -137,6 +137,7 @@ GEM
       mixlib-shellout
     mercenary (0.4.0)
     method_source (1.0.0)
+    mini_portile2 (2.7.1)
     minitest (5.15.0)
     mixlib-cli (2.1.8)
     mixlib-config (3.0.9)
@@ -144,6 +145,9 @@ GEM
     mixlib-shellout (3.2.5)
       chef-utils
     multipart-post (2.1.1)
+    nokogiri (1.13.1)
+      mini_portile2 (~> 2.7.0)
+      racc (~> 1.4)
     nokogiri (1.13.1-arm64-darwin)
       racc (~> 1.4)
     octokit (4.22.0)
@@ -198,7 +202,15 @@ GEM
     sorbet (0.5.9626)
       sorbet-static (= 0.5.9626)
     sorbet-runtime (0.5.9626)
+    sorbet-static (0.5.9626-universal-darwin-14)
+    sorbet-static (0.5.9626-universal-darwin-15)
+    sorbet-static (0.5.9626-universal-darwin-16)
+    sorbet-static (0.5.9626-universal-darwin-17)
+    sorbet-static (0.5.9626-universal-darwin-18)
+    sorbet-static (0.5.9626-universal-darwin-19)
+    sorbet-static (0.5.9626-universal-darwin-20)
     sorbet-static (0.5.9626-universal-darwin-21)
+    sorbet-static (0.5.9626-x86_64-linux)
     terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thor (1.2.1)
@@ -210,6 +222,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  ruby
 
 DEPENDENCIES
   CFPropertyList
