@@ -21,6 +21,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           debug: true
-          jekyll_build_options: '--baseurl /'
           target_branch: gh-pages
           target_path: /
