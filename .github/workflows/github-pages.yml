@@ -19,5 +19,6 @@ jobs:
       - uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          cname: docs.hackdiffe.rent
           target_branch: gh-pages
           target_path: /
