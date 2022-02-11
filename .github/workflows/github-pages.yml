@@ -20,5 +20,6 @@ jobs:
       - uses: helaili/jekyll-action@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          jekyll_build_options: '--baseurl /'
           target_branch: gh-pages
           target_path: /
