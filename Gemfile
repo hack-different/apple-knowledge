@@ -14,14 +14,26 @@ source 'https://rubygems.org'
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 
+gem 'jekyll', '~> 4.2'
+gem 'plist'
 gem 'sorbet-runtime'
 
 # If you have any plugins, put them here!
 # RESOURCE: https://github.com/planetjekyll/awesome-jekyll-plugins
 group :jekyll_plugins do
-  gem 'github-pages'
+  gem 'jekyll-coffeescript'
+  gem 'jekyll-commonmark-ghpages'
+  gem 'jekyll-default-layout'
+  gem 'jekyll-gist'
   gem 'jekyll-github-metadata'
   gem 'jekyll-mentions'
+  gem 'jekyll-optional-front-matter'
+  gem 'jekyll-paginate'
+  gem 'jekyll-readme-index'
+  gem 'jekyll-relative-links'
+  gem 'jekyll-remote-theme'
+  gem 'jekyll-seo-tag'
+  gem 'jekyll-titles-from-headings'
 end
 
 group :development do
@@ -35,7 +47,6 @@ group :development do
   gem 'nokogiri'
   gem 'octokit'
   gem 'overcommit'
-  gem 'plist'
   gem 'pry'
   gem 'rake'
   gem 'rubocop'

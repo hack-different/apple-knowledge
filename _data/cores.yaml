@@ -1,6 +1,11 @@
 ---
 bootrom_exploits:
   - checkm8
+secondary_cores:
+  homr:
+  magg:
+    name: maggie
+    description: Ultra low power FPGA (iCE5LP4K) / Lattice iCEcube2
 chip_ids:
   0x6000:
     name: t6000
