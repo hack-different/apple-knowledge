@@ -10,7 +10,7 @@ Repo inspired by [Papers we Love](https://github.com/papers-we-love/papers-we-lo
 
 ### Our Homebrew Tap
 
-Install our tap with `brew tap hack-different/jailbreak`
+Install our tap with `brew tap hack-different/homebrew-jailbreak`
 
 Information about the maintaining of that tap can be found at [homebrew-jailbreak](http://hackdiffe.rent/homebrew-jailbreak/)
 

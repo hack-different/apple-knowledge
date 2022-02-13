@@ -3,9 +3,22 @@ bootrom_exploits:
   - checkm8
 secondary_cores:
   homr:
+  isp:
+    name: isp
+    firmware_image: ispf
+    description: Image Signal Processor
   magg:
     name: maggie
     description: Ultra low power FPGA (iCE5LP4K) / Lattice iCEcube2
+  pmpf:
+    name: pmp
+    description: Power Management Processor
+  rans:
+    name: AppleNandStorage
+  veridian:
+    name: Veridian
+    type: ARM Cortex-M
+    firmware_image:
 chip_ids:
   0x6000:
     name: t6000
