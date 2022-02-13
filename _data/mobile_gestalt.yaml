@@ -1,613 +1,1835 @@
 ---
 known_keys:
-- 3GProximityCapability
-- 3Gvenice
-- 64-bit
-- 720p
-- AWDID
-- AWDLCapability
-- ActivationProtocol
-- ActiveWirelessTechnology
-- AggregateDevicePhotoZoomFactor
-- AggregateDeviceVideoZoomFactor
-- AirDropCapability
-- AirplaneMode
-- Allow32BitApps
-- AllowOnlyATVCPSDKApps
-- AllowYouTube
-- AllowYouTubePlugin
-- AmbientLightSensorSerialNumber
-- ApNonce
-- ApNonceRetrieve
-- AppCapacityTVOS
-- AppStore
-- ArcModuleSerialNumber
-- ArtworkTraits
-- AudioPlaybackCapability
-- AvailableDisplayZoomSizes
-- BacklightCapability
-- BasebandAPTimeSync
-- BasebandBoardSnum
-- BasebandCertId
-- BasebandChipId
-- BasebandChipset
-- BasebandClass
-- BasebandFirmwareManifestData
-- BasebandFirmwareUpdateInfo
-- BasebandFirmwareVersion
-- BasebandKeyHashInformation
-- BasebandPostponementStatus
-- BasebandPostponementStatusBlob
-- BasebandRegionSKU
-- BasebandRegionSKURadioTechnology
-- BasebandSecurityInfoBlob
-- BasebandSerialNumber
-- BasebandStatus
-- BasebandUniqueId
-- BatteryCurrentCapacity
-- BatteryIsCharging
-- BatteryIsFullyCharged
-- BatterySerialNumber
-- BlueLightReductionSupported
-- BluetoothAddress
-- BluetoothAddressData
-- BoardId
-- BootManifestHash
-- BootNonce
-- BridgeBuild
-- BridgeRestoreVersion
-- BuddyLanguagesAnimationRequiresOptimization
-- BuildID
-- BuildVersion
-- CPUArchitecture
-- CPUSubType
-- CPUType
-- CameraFrontFlashCapability
-- CameraHDR2Capability
-- CameraLiveEffectsCapability
-- CameraMaxBurstLength
-- CarrierBundleInfoArray
-- CarrierInstallCapability
-- CellularTelephonyCapability
-- CertificateProductionStatus
-- CertificateSecurityMode
-- ChipID
-- CloudPhotoLibraryCapability
-- CoastlineGlowRenderingCapability
-- CompassCalibration
-- CompassCalibrationDictionary
-- CompassType
-- ComputerName
-- ConfigNumber
-- ContinuityCapability
-- CoreRoutineCapability
-- CoverglassSerialNumber
-- DMin
-- DebugBoardRevision
-- DesenseBuild
-- DeviceAlwaysPrewarmActuator
-- DeviceBackGlassMaterial
-- DeviceBackingColor
-- DeviceBrand
-- DeviceClass
-- DeviceClassNumber
-- DeviceColor
-- DeviceColorMapPolicy
-- DeviceCornerRadius
-- DeviceCoverGlassColor
-- DeviceCoverGlassMaterial
-- DeviceCoverMaterial
-- DeviceEnclosureColor
-- DeviceEnclosureMaterial
-- DeviceEnclosureRGBColor
-- DeviceHasAggregateCamera
-- DeviceHousingColor
-- DeviceLaunchTimeLimitScale
-- DeviceName
-- DevicePrefers3DBuildingStrokes
-- DevicePrefersBuildingStrokes
-- DevicePrefersCheapTrafficShaders
-- DevicePrefersProceduralAntiAliasing
-- DevicePrefersTrafficAlpha
-- DeviceRGBColor
-- DeviceRequiresPetalOptimization
-- DeviceRequiresProximityAmeliorations
-- DeviceRequiresSoftwareBrightnessCalculations
-- DeviceSceneUpdateTimeLimitScale
-- DeviceSubBrand
-- DeviceSupports1080p
-- DeviceSupports3DImagery
-- DeviceSupports3DMaps
-- DeviceSupports4G
-- DeviceSupports4k
-- DeviceSupports720p
-- DeviceSupports9Pin
-- DeviceSupportsAOP
-- DeviceSupportsASTC
-- DeviceSupportsAdaptiveMapsUI
-- DeviceSupportsAlwaysListening
-- DeviceSupportsAlwaysOnCompass
-- DeviceSupportsApplePencil
-- DeviceSupportsAutoLowLightVideo
-- DeviceSupportsBatteryModuleAuthentication
-- DeviceSupportsBerkelium2
-- DeviceSupportsCCK
-- DeviceSupportsCameraCaptureOnTouchDown
-- DeviceSupportsCameraHaptics
-- DeviceSupportsCarIntegration
-- DeviceSupportsCinnamon
-- DeviceSupportsClosedLoopHaptics
-- DeviceSupportsCrudeProx
-- DeviceSupportsDClr
-- DeviceSupportsDoNotDisturbWhileDriving
-- DeviceSupportsELabel
-- DeviceSupportsEnhancedAC3
-- DeviceSupportsFloorCounting
-- DeviceSupportsHaptics
-- DeviceSupportsHardwareDetents
-- DeviceSupportsHeartHealthAlerts
-- DeviceSupportsHeartRateVariability
-- DeviceSupportsHiResBuildings
-- DeviceSupportsLineIn
-- DeviceSupportsLiquidDetection_CorrosionMitigation
-- DeviceSupportsLivePhotoAuto
-- DeviceSupportsMapsBlurredUI
-- DeviceSupportsNavigation
-- DeviceSupportsNewton
-- DeviceSupportsOnDemandPhotoAnalysis
-- DeviceSupportsP3ColorspaceVideoRecording
-- DeviceSupportsPeriodicALSUpdates
-- DeviceSupportsPhotosLocalLight
-- DeviceSupportsPortraitLightEffectFilters
-- DeviceSupportsRGB10
-- DeviceSupportsRaiseToSpeak
-- DeviceSupportsSiDP
-- DeviceSupportsSimplisticRoadMesh
-- DeviceSupportsSingleCameraPortrait
-- DeviceSupportsSiriSpeaks
-- DeviceSupportsStereoAudioRecording
-- DeviceSupportsStudioLightPortraitPreview
-- DeviceSupportsSwimmingWorkouts
-- DeviceSupportsTapToWake
-- DeviceSupportsTelephonyOverUSB
-- DeviceSupportsTethering
-- DeviceSupportsToneMapping
-- DeviceSupportsWebkit
-- DeviceSupportsYCbCr10
-- DeviceVariant
-- DeviceVariantGuess
-- DiagData
-- DieId
-- DiskUsage
-- DualSIMActivationPolicyCapable
-- EUICCChipID
-- EffectiveProductionStatusAp
-- EffectiveProductionStatusSEP
-- EffectiveSecurityModeAp
-- EffectiveSecurityModeSEP
-- EthernetMacAddress
-- EthernetMacAddressData
-- ExternalChargeCapability
-- ExternalPowerSourceConnected
-- FDRSealingStatus
-- FMFAllowed
-- FaceTimeBackCameraTemporalNoiseReductionMode
-- FaceTimeBitRate2G
-- FaceTimeBitRate3G
-- FaceTimeBitRateLTE
-- FaceTimeBitRateWiFi
-- FaceTimeCameraRequiresFastSwitchOptions
-- FaceTimeCameraSupportsHardwareFaceDetection
-- FaceTimeDecodings
-- FaceTimeEncodings
-- FaceTimeFrontCameraTemporalNoiseReductionMode
-- FaceTimePhotosOptIn
-- FaceTimePreferredDecoding
-- FaceTimePreferredEncoding
-- FirmwareNonce
-- FirmwarePreflightInfo
-- FirmwareVersion
-- FirstPartyLaunchTimeLimitScale
-- ForwardCameraCapability
-- FrontFacingCameraAutoHDRCapability
-- FrontFacingCameraBurstCapability
-- FrontFacingCameraHDRCapability
-- FrontFacingCameraHDROnCapability
-- FrontFacingCameraHFRCapability
-- FrontFacingCameraMaxVideoZoomFactor
-- FrontFacingCameraModuleSerialNumber
-- FrontFacingCameraStillDurationForBurst
-- FrontFacingCameraVideoCapture1080pMaxFPS
-- FrontFacingCameraVideoCapture4kMaxFPS
-- FrontFacingCameraVideoCapture720pMaxFPS
-- FrontFacingIRCameraModuleSerialNumber
-- FrontFacingIRStructuredLightProjectorModuleSerialNumber
-- GSDeviceName
-- H264EncoderCapability
-- HEVCDecoder10bitSupported
-- HEVCDecoder12bitSupported
-- HEVCDecoder8bitSupported
-- HEVCEncodingCapability
-- HWModelStr
-- HardwarePlatform
-- HasAppleNeuralEngine
-- HasBaseband
-- HasBattery
-- HasDaliMode
-- HasExtendedColorDisplay
-- HasIcefall
-- HasInternalSettingsBundle
-- HasMesa
-- HasPKA
-- HasSEP
-- HasSpringBoard
-- HasThinBezel
-- HighestSupportedVideoMode
-- HomeButtonType
-- IDAMCapability
-- IOSurfaceFormatDictionary
-- IceFallID
-- IcefallInRestrictedMode
-- IcefallInfo
-- Image4CryptoHashMethod
-- Image4Supported
-- InDiagnosticsMode
-- IntegratedCircuitCardIdentifier
-- IntegratedCircuitCardIdentifier2
-- InternalBuild
-- InternationalMobileEquipmentIdentity
-- InternationalMobileEquipmentIdentity2
-- InverseDeviceID
-- IsEmulatedDevice
-- IsLargeFormatPhone
-- IsPwrOpposedVol
-- IsSimulator
-- IsThereEnoughBatteryLevelForSoftwareUpdate
-- IsUIBuild
-- LaunchTimeLimitScaleSupported
-- LisaCapability
-- LowPowerWalletMode
-- LunaFlexSerialNumber
-- LynxPublicKey
-- LynxSerialNumber
-- MLBSerialNumber
-- MainDisplayRotation
-- MainScreenCanvasSizes
-- MainScreenStaticInfo
-- MarketingProductName
-- MarketingVersion
-- MaxH264PlaybackLevel
-- MaximumScreenScale
-- MedusaFloatingLiveAppCapability
-- MedusaOverlayAppCapability
-- MedusaPIPCapability
-- MedusaPinnedAppCapability
-- MesaSerialNumber
-- MicrophoneCount
-- MinimumSupportediTunesVersion
-- MixAndMatchPrevention
-- MobileDeviceMinimumVersion
-- MobileEquipmentIdentifier
-- MobileEquipmentInfoBaseId
-- MobileEquipmentInfoBaseProfile
-- MobileEquipmentInfoBaseVersion
-- MobileEquipmentInfoCSN
-- MobileEquipmentInfoDisplayCSN
-- MobileSubscriberCountryCode
-- MobileSubscriberNetworkCode
-- ModelNumber
-- MonarchLowEndHardware
-- MusicStore
-- N78aHack
-- NFCRadio
-- NFCRadioCalibrationDataPresent
-- NFCUniqueChipID
-- NVRAMDictionary
-- NandControllerUID
-- NavajoFusingState
-- OLEDDisplay
-- OfflineDictationCapability
-- OpenGLESVersion
-- PanelSerialNumber
-- PanoramaCameraCapability
-- PartitionType
-- PasswordConfigured
-- PasswordProtected
-- PearlCameraCapability
-- PearlIDCapability
-- PeekUICapability
-- PeekUIWidth
-- PhoneNumber
-- PhosphorusCapability
-- PhotoCapability
-- PhotoSharingCapability
-- PhotosPostEffectsCapability
-- PintoMacAddress
-- PintoMacAddressData
-- PipelinedStillImageProcessingCapability
-- PlatinumCapability
-- ProductHash
-- ProductName
-- ProductType
-- ProductVersion
-- ProximitySensorCalibration
-- ProximitySensorCalibrationDictionary
-- RFExposureSeparationDistance
-- RawPanelSerialNumber
-- RearCameraCapability
-- RearCameraOffsetFromDisplayCenter
-- RearFacingCamera60fpsVideoCaptureCapability
-- RearFacingCameraAutoHDRCapability
-- RearFacingCameraBurstCapability
-- RearFacingCameraHDRCapability
-- RearFacingCameraHDROnCapability
-- RearFacingCameraHFRCapability
-- RearFacingCameraHFRVideoCapture1080pMaxFPS
-- RearFacingCameraHFRVideoCapture720pMaxFPS
-- RearFacingCameraMaxVideoZoomFactor
-- RearFacingCameraModuleSerialNumber
-- RearFacingCameraStillDurationForBurst
-- RearFacingCameraVideoCapture1080pMaxFPS
-- RearFacingCameraVideoCapture4kMaxFPS
-- RearFacingCameraVideoCapture720pMaxFPS
-- RearFacingCameraVideoCaptureFPS
-- RearFacingTelephotoCameraCapability
-- RearFacingTelephotoCameraModuleSerialNumber
-- RegionCode
-- RegionInfo
-- RegionSupportsCinnamon
-- RegionalBehaviorAll
-- RegionalBehaviorChinaBrick
-- RegionalBehaviorEUVolumeLimit
-- RegionalBehaviorGB18030
-- RegionalBehaviorGoogleMail
-- RegionalBehaviorNTSC
-- RegionalBehaviorNoPasscodeLocationTiles
-- RegionalBehaviorNoVOIP
-- RegionalBehaviorNoWiFi
-- RegionalBehaviorShutterClick
-- RegionalBehaviorValid
-- RegionalBehaviorVolumeLimit
-- RegulatoryModelNumber
-- ReleaseType
-- RemoteBluetoothAddress
-- RemoteBluetoothAddressData
-- RenderWideGamutImagesAtDisplayTime
-- RendersLetterPressSlowly
-- RequiredBatteryLevelForSoftwareUpdate
-- RestoreOSBuild
-- RestrictedCountryCodes
-- RosalineSerialNumber
-- RoswellChipID
-- RotateToWakeStatus
-- SBAllowSensitiveUI
-- SBCanForceDebuggingInfo
-- SDIOManufacturerTuple
-- SDIOProductInfo
-- SEInfo
-- SEPNonce
-- SIMStatus
-- SIMStatus2
-- SIMTrayStatus
-- SIMTrayStatus2
-- SavageChipID
-- SavageInfo
-- SavageSerialNumber
-- SavageUID
-- ScreenRecorderCapability
-- SecondaryBluetoothMacAddress
-- SecondaryBluetoothMacAddressData
-- SecondaryEthernetMacAddress
-- SecondaryEthernetMacAddressData
-- SecondaryWifiMacAddress
-- SecondaryWifiMacAddressData
-- SecureElement
-- SecureElementID
-- SerialNumber
-- ShouldHactivate
-- SiKACapability
-- SigningFuse
-- SiliconBringupBoard
-- SiriOfflineCapability
-- Skey
-- SoftwareBehavior
-- SoftwareBundleVersion
-- SoftwareDimmingAlpha
-- SpeakerCalibrationMiGa
-- SpeakerCalibrationSpGa
-- SpeakerCalibrationSpTS
-- SphereCapability
-- StarkCapability
-- StockholmJcopInfo
-- SupportedDeviceFamilies
-- SupportedKeyboards
-- SupportsBurninMitigation
-- SupportsEDUMU
-- SupportsForceTouch
-- SupportsIrisCapture
-- SupportsLowPowerMode
-- SupportsPerseus
-- SupportsRotateToWake
-- SupportsSOS
-- SupportsSSHBButtonType
-- SupportsTouchRemote
-- SysCfg
-- SysCfgDict
-- SystemImageID
-- TimeSyncCapability
-- TouchDelivery120Hz
-- TristarID
-- UIBackgroundQuality
-- UIParallaxCapability
-- UIProceduralWallpaperCapability
-- UIReachability
-- UniqueChipID
-- UniqueDeviceID
-- UniqueDeviceIDData
-- UserAssignedDeviceName
-- UserIntentPhysicalButtonCGRect
-- UserIntentPhysicalButtonCGRectString
-- UserIntentPhysicalButtonNormalizedCGRect
-- VibratorCapability
-- WAGraphicQuality
-- WLANBkgScanCache
-- WSKU
-- WatchSupportsAutoPlaylistPlayback
-- WatchSupportsHighQualityClockFaceGraphics
-- WatchSupportsListeningOnGesture
-- WatchSupportsMusicStreaming
-- WatchSupportsSiriCommute
-- WiFiCallingCapability
-- WifiAddress
-- WifiAddressData
-- WifiAntennaSKUVersion
-- WifiCallingSecondaryDeviceCapability
-- WifiChipset
-- WifiFirmwareVersion
-- WifiVendor
-- WirelessBoardSnum
-- WirelessChargingCapability
-- YonkersChipID
-- YonkersSerialNumber
-- YonkersUID
-- accelerometer
-- accessibility
-- additional-text-tones
-- airDropRestriction
-- airplay-mirroring
-- all-features
-- ambient-light-sensor
-- any-telephony
-- apn
-- apple-internal-install
-- applicationInstallation
-- arkit
-- arm64
-- armv6
-- armv7
-- armv7s
-- assistant
-- auto-focus-camera
-- bcm-window-type
-- bluetooth
-- bluetooth-le
-- c2k-device
-- call-forwarding
-- call-waiting
-- caller-id
-- camera-flash
-- cameraRestriction
-- cell-broadcast
-- cellular-data
-- contains-cellular-radio
-- data-plan
-- delay-sleep-for-headset-click
-- device-name
-- device-name-localized
-- dictation
-- display-mirroring
-- displayport
-- enc-bot-type
-- enc-top-type
-- encode-aac
-- encrypted-data-partition
-- enforce-googlemail
-- enforce-shutter-click
-- explicitContentRestriction
-- fcc-logos-via-software
-- fcm-type
-- front-facing-camera
-- full-6
-- gamekit
-- gas-gauge-battery
-- gps
-- green-tea
-- gyroscope
-- hall-effect-sensor
-- hardware-keyboard
-- hd-video-capture
-- hdr-image-capture
-- healthkit
-- hearingaid-audio-equalization
-- hearingaid-low-energy-audio
-- hearingaid-power-reduction
-- hiccough-interval
-- hide-non-default-apps
-- hidpi
-- homescreen-wallpaper
-- hw-encode-snapshots
-- hw-snapshots-need-purplegfx
-- iAP2Capability
-- iTunesFamilyID
-- inAppPurchasesRestriction
-- international-settings
-- io-surface-backed-images
-- ipad
-- kConferenceCallType
-- kSimultaneousCallAndDataCurrentlySupported
-- kSimultaneousCallAndDataSupported
-- launch-applications-while-animating
-- load-thumbnails-while-scrolling
-- location-reminders
-- location-services
-- lte-device
-- magnetometer
-- main-screen-class
-- main-screen-height
-- main-screen-orientation
-- main-screen-pitch
-- main-screen-scale
-- main-screen-width
-- marketing-name
-- metal
-- microphone
-- mms
-- multi-touch
-- multitasking
-- multitasking-gestures
-- nfc
-- nike-ipod
-- not-green-tea
-- opal
-- opengles-1
-- opengles-2
-- opengles-3
-- ota-activation
-- peer-peer
-- personal-hotspot
-- photo-adjustments
-- photo-stream
-- piezo-clicker
-- proximity-sensor
-- ptp-large-files
-- rear-facing-camera
-- ringer-switch
-- screen-dimensions
-- sensitive-ui
-- shoebox
-- sim
-- sim-phonebook
-- siri-gesture
-- sms
-- stand-alone-contacts
-- still-camera
-- telephony
-- telephony-maximum-generation
-- touch-id
-- tv-out-crossfade
-- tv-out-settings
-- umts-device
-- unified-ipod
-- venice
-- video-camera
-- video-stills
-- voice-control
-- voip
-- volume-buttons
-- volume-limit-restriction
-- wapi
-- watch-companion
-- wi-fi
-- wifi
-- youtube
-- youtubePlugin
+- question: 3GProximityCapability
+  description:
+  obsfucated:
+- question: 3Gvenice
+  description:
+  obsfucated:
+- question: 64-bit
+  description:
+  obsfucated:
+- question: 720p
+  description:
+  obsfucated:
+- question: AWDID
+  description:
+  obsfucated:
+- question: AWDLCapability
+  description:
+  obsfucated:
+- question: ActivationProtocol
+  description:
+  obsfucated:
+- question: ActiveWirelessTechnology
+  description:
+  obsfucated:
+- question: AggregateDevicePhotoZoomFactor
+  description:
+  obsfucated:
+- question: AggregateDeviceVideoZoomFactor
+  description:
+  obsfucated:
+- question: AirDropCapability
+  description:
+  obsfucated:
+- question: AirplaneMode
+  description:
+  obsfucated:
+- question: Allow32BitApps
+  description:
+  obsfucated:
+- question: AllowOnlyATVCPSDKApps
+  description:
+  obsfucated:
+- question: AllowYouTube
+  description:
+  obsfucated:
+- question: AllowYouTubePlugin
+  description:
+  obsfucated:
+- question: AmbientLightSensorSerialNumber
+  description:
+  obsfucated:
+- question: ApNonce
+  description:
+  obsfucated:
+- question: ApNonceRetrieve
+  description:
+  obsfucated:
+- question: AppCapacityTVOS
+  description:
+  obsfucated:
+- question: AppStore
+  description:
+  obsfucated:
+- question: ArcModuleSerialNumber
+  description:
+  obsfucated:
+- question: ArtworkTraits
+  description:
+  obsfucated:
+- question: AudioPlaybackCapability
+  description:
+  obsfucated:
+- question: AvailableDisplayZoomSizes
+  description:
+  obsfucated:
+- question: BacklightCapability
+  description:
+  obsfucated:
+- question: BasebandAPTimeSync
+  description:
+  obsfucated:
+- question: BasebandBoardSnum
+  description:
+  obsfucated:
+- question: BasebandCertId
+  description:
+  obsfucated:
+- question: BasebandChipId
+  description:
+  obsfucated:
+- question: BasebandChipset
+  description:
+  obsfucated:
+- question: BasebandClass
+  description:
+  obsfucated:
+- question: BasebandFirmwareManifestData
+  description:
+  obsfucated:
+- question: BasebandFirmwareUpdateInfo
+  description:
+  obsfucated:
+- question: BasebandFirmwareVersion
+  description:
+  obsfucated:
+- question: BasebandKeyHashInformation
+  description:
+  obsfucated:
+- question: BasebandPostponementStatus
+  description:
+  obsfucated:
+- question: BasebandPostponementStatusBlob
+  description:
+  obsfucated:
+- question: BasebandRegionSKU
+  description:
+  obsfucated:
+- question: BasebandRegionSKURadioTechnology
+  description:
+  obsfucated:
+- question: BasebandSecurityInfoBlob
+  description:
+  obsfucated:
+- question: BasebandSerialNumber
+  description:
+  obsfucated:
+- question: BasebandStatus
+  description:
+  obsfucated:
+- question: BasebandUniqueId
+  description:
+  obsfucated:
+- question: BatteryCurrentCapacity
+  description:
+  obsfucated:
+- question: BatteryIsCharging
+  description:
+  obsfucated:
+- question: BatteryIsFullyCharged
+  description:
+  obsfucated:
+- question: BatterySerialNumber
+  description:
+  obsfucated:
+- question: BlueLightReductionSupported
+  description:
+  obsfucated:
+- question: BluetoothAddress
+  description:
+  obsfucated:
+- question: BluetoothAddressData
+  description:
+  obsfucated:
+- question: BoardId
+  description:
+  obsfucated:
+- question: BootManifestHash
+  description:
+  obsfucated:
+- question: BootNonce
+  description:
+  obsfucated:
+- question: BridgeBuild
+  description:
+  obsfucated:
+- question: BridgeRestoreVersion
+  description:
+  obsfucated:
+- question: BuddyLanguagesAnimationRequiresOptimization
+  description:
+  obsfucated:
+- question: BuildID
+  description:
+  obsfucated:
+- question: BuildVersion
+  description:
+  obsfucated:
+- question: CPUArchitecture
+  description:
+  obsfucated:
+- question: CPUSubType
+  description:
+  obsfucated:
+- question: CPUType
+  description:
+  obsfucated:
+- question: CameraFrontFlashCapability
+  description:
+  obsfucated:
+- question: CameraHDR2Capability
+  description:
+  obsfucated:
+- question: CameraLiveEffectsCapability
+  description:
+  obsfucated:
+- question: CameraMaxBurstLength
+  description:
+  obsfucated:
+- question: CarrierBundleInfoArray
+  description:
+  obsfucated:
+- question: CarrierInstallCapability
+  description:
+  obsfucated:
+- question: CellularTelephonyCapability
+  description:
+  obsfucated:
+- question: CertificateProductionStatus
+  description:
+  obsfucated:
+- question: CertificateSecurityMode
+  description:
+  obsfucated:
+- question: ChipID
+  description:
+  obsfucated:
+- question: CloudPhotoLibraryCapability
+  description:
+  obsfucated:
+- question: CoastlineGlowRenderingCapability
+  description:
+  obsfucated:
+- question: CompassCalibration
+  description:
+  obsfucated:
+- question: CompassCalibrationDictionary
+  description:
+  obsfucated:
+- question: CompassType
+  description:
+  obsfucated:
+- question: ComputerName
+  description:
+  obsfucated:
+- question: ConfigNumber
+  description:
+  obsfucated:
+- question: ContinuityCapability
+  description:
+  obsfucated:
+- question: CoreRoutineCapability
+  description:
+  obsfucated:
+- question: CoverglassSerialNumber
+  description:
+  obsfucated:
+- question: DMin
+  description:
+  obsfucated:
+- question: DebugBoardRevision
+  description:
+  obsfucated:
+- question: DesenseBuild
+  description:
+  obsfucated:
+- question: DeviceAlwaysPrewarmActuator
+  description:
+  obsfucated:
+- question: DeviceBackGlassMaterial
+  description:
+  obsfucated:
+- question: DeviceBackingColor
+  description:
+  obsfucated:
+- question: DeviceBrand
+  description:
+  obsfucated:
+- question: DeviceClass
+  description:
+  obsfucated:
+- question: DeviceClassNumber
+  description:
+  obsfucated:
+- question: DeviceColor
+  description:
+  obsfucated:
+- question: DeviceColorMapPolicy
+  description:
+  obsfucated:
+- question: DeviceCornerRadius
+  description:
+  obsfucated:
+- question: DeviceCoverGlassColor
+  description:
+  obsfucated:
+- question: DeviceCoverGlassMaterial
+  description:
+  obsfucated:
+- question: DeviceCoverMaterial
+  description:
+  obsfucated:
+- question: DeviceEnclosureColor
+  description:
+  obsfucated:
+- question: DeviceEnclosureMaterial
+  description:
+  obsfucated:
+- question: DeviceEnclosureRGBColor
+  description:
+  obsfucated:
+- question: DeviceHasAggregateCamera
+  description:
+  obsfucated:
+- question: DeviceHousingColor
+  description:
+  obsfucated:
+- question: DeviceLaunchTimeLimitScale
+  description:
+  obsfucated:
+- question: DeviceName
+  description:
+  obsfucated:
+- question: DevicePrefers3DBuildingStrokes
+  description:
+  obsfucated:
+- question: DevicePrefersBuildingStrokes
+  description:
+  obsfucated:
+- question: DevicePrefersCheapTrafficShaders
+  description:
+  obsfucated:
+- question: DevicePrefersProceduralAntiAliasing
+  description:
+  obsfucated:
+- question: DevicePrefersTrafficAlpha
+  description:
+  obsfucated:
+- question: DeviceRGBColor
+  description:
+  obsfucated:
+- question: DeviceRequiresPetalOptimization
+  description:
+  obsfucated:
+- question: DeviceRequiresProximityAmeliorations
+  description:
+  obsfucated:
+- question: DeviceRequiresSoftwareBrightnessCalculations
+  description:
+  obsfucated:
+- question: DeviceSceneUpdateTimeLimitScale
+  description:
+  obsfucated:
+- question: DeviceSubBrand
+  description:
+  obsfucated:
+- question: DeviceSupports1080p
+  description:
+  obsfucated:
+- question: DeviceSupports3DImagery
+  description:
+  obsfucated:
+- question: DeviceSupports3DMaps
+  description:
+  obsfucated:
+- question: DeviceSupports4G
+  description:
+  obsfucated:
+- question: DeviceSupports4k
+  description:
+  obsfucated:
+- question: DeviceSupports720p
+  description:
+  obsfucated:
+- question: DeviceSupports9Pin
+  description:
+  obsfucated:
+- question: DeviceSupportsAOP
+  description:
+  obsfucated:
+- question: DeviceSupportsASTC
+  description:
+  obsfucated:
+- question: DeviceSupportsAdaptiveMapsUI
+  description:
+  obsfucated:
+- question: DeviceSupportsAlwaysListening
+  description:
+  obsfucated:
+- question: DeviceSupportsAlwaysOnCompass
+  description:
+  obsfucated:
+- question: DeviceSupportsApplePencil
+  description:
+  obsfucated:
+- question: DeviceSupportsAutoLowLightVideo
+  description:
+  obsfucated:
+- question: DeviceSupportsBatteryModuleAuthentication
+  description:
+  obsfucated:
+- question: DeviceSupportsBerkelium2
+  description:
+  obsfucated:
+- question: DeviceSupportsCCK
+  description:
+  obsfucated:
+- question: DeviceSupportsCameraCaptureOnTouchDown
+  description:
+  obsfucated:
+- question: DeviceSupportsCameraHaptics
+  description:
+  obsfucated:
+- question: DeviceSupportsCarIntegration
+  description:
+  obsfucated:
+- question: DeviceSupportsCinnamon
+  description:
+  obsfucated:
+- question: DeviceSupportsClosedLoopHaptics
+  description:
+  obsfucated:
+- question: DeviceSupportsCrudeProx
+  description:
+  obsfucated:
+- question: DeviceSupportsDClr
+  description:
+  obsfucated:
+- question: DeviceSupportsDoNotDisturbWhileDriving
+  description:
+  obsfucated:
+- question: DeviceSupportsELabel
+  description:
+  obsfucated:
+- question: DeviceSupportsEnhancedAC3
+  description:
+  obsfucated:
+- question: DeviceSupportsFloorCounting
+  description:
+  obsfucated:
+- question: DeviceSupportsHaptics
+  description:
+  obsfucated:
+- question: DeviceSupportsHardwareDetents
+  description:
+  obsfucated:
+- question: DeviceSupportsHeartHealthAlerts
+  description:
+  obsfucated:
+- question: DeviceSupportsHeartRateVariability
+  description:
+  obsfucated:
+- question: DeviceSupportsHiResBuildings
+  description:
+  obsfucated:
+- question: DeviceSupportsLineIn
+  description:
+  obsfucated:
+- question: DeviceSupportsLiquidDetection_CorrosionMitigation
+  description:
+  obsfucated:
+- question: DeviceSupportsLivePhotoAuto
+  description:
+  obsfucated:
+- question: DeviceSupportsMapsBlurredUI
+  description:
+  obsfucated:
+- question: DeviceSupportsNavigation
+  description:
+  obsfucated:
+- question: DeviceSupportsNewton
+  description:
+  obsfucated:
+- question: DeviceSupportsOnDemandPhotoAnalysis
+  description:
+  obsfucated:
+- question: DeviceSupportsP3ColorspaceVideoRecording
+  description:
+  obsfucated:
+- question: DeviceSupportsPeriodicALSUpdates
+  description:
+  obsfucated:
+- question: DeviceSupportsPhotosLocalLight
+  description:
+  obsfucated:
+- question: DeviceSupportsPortraitLightEffectFilters
+  description:
+  obsfucated:
+- question: DeviceSupportsRGB10
+  description:
+  obsfucated:
+- question: DeviceSupportsRaiseToSpeak
+  description:
+  obsfucated:
+- question: DeviceSupportsSiDP
+  description:
+  obsfucated:
+- question: DeviceSupportsSimplisticRoadMesh
+  description:
+  obsfucated:
+- question: DeviceSupportsSingleCameraPortrait
+  description:
+  obsfucated:
+- question: DeviceSupportsSiriSpeaks
+  description:
+  obsfucated:
+- question: DeviceSupportsStereoAudioRecording
+  description:
+  obsfucated:
+- question: DeviceSupportsStudioLightPortraitPreview
+  description:
+  obsfucated:
+- question: DeviceSupportsSwimmingWorkouts
+  description:
+  obsfucated:
+- question: DeviceSupportsTapToWake
+  description:
+  obsfucated:
+- question: DeviceSupportsTelephonyOverUSB
+  description:
+  obsfucated:
+- question: DeviceSupportsTethering
+  description:
+  obsfucated:
+- question: DeviceSupportsToneMapping
+  description:
+  obsfucated:
+- question: DeviceSupportsWebkit
+  description:
+  obsfucated:
+- question: DeviceSupportsYCbCr10
+  description:
+  obsfucated:
+- question: DeviceVariant
+  description:
+  obsfucated:
+- question: DeviceVariantGuess
+  description:
+  obsfucated:
+- question: DiagData
+  description:
+  obsfucated:
+- question: DieId
+  description:
+  obsfucated:
+- question: DiskUsage
+  description:
+  obsfucated:
+- question: DualSIMActivationPolicyCapable
+  description:
+  obsfucated:
+- question: EUICCChipID
+  description:
+  obsfucated:
+- question: EffectiveProductionStatusAp
+  description:
+  obsfucated:
+- question: EffectiveProductionStatusSEP
+  description:
+  obsfucated:
+- question: EffectiveSecurityModeAp
+  description:
+  obsfucated:
+- question: EffectiveSecurityModeSEP
+  description:
+  obsfucated:
+- question: EthernetMacAddress
+  description:
+  obsfucated:
+- question: EthernetMacAddressData
+  description:
+  obsfucated:
+- question: ExternalChargeCapability
+  description:
+  obsfucated:
+- question: ExternalPowerSourceConnected
+  description:
+  obsfucated:
+- question: FDRSealingStatus
+  description:
+  obsfucated:
+- question: FMFAllowed
+  description:
+  obsfucated:
+- question: FaceTimeBackCameraTemporalNoiseReductionMode
+  description:
+  obsfucated:
+- question: FaceTimeBitRate2G
+  description:
+  obsfucated:
+- question: FaceTimeBitRate3G
+  description:
+  obsfucated:
+- question: FaceTimeBitRateLTE
+  description:
+  obsfucated:
+- question: FaceTimeBitRateWiFi
+  description:
+  obsfucated:
+- question: FaceTimeCameraRequiresFastSwitchOptions
+  description:
+  obsfucated:
+- question: FaceTimeCameraSupportsHardwareFaceDetection
+  description:
+  obsfucated:
+- question: FaceTimeDecodings
+  description:
+  obsfucated:
+- question: FaceTimeEncodings
+  description:
+  obsfucated:
+- question: FaceTimeFrontCameraTemporalNoiseReductionMode
+  description:
+  obsfucated:
+- question: FaceTimePhotosOptIn
+  description:
+  obsfucated:
+- question: FaceTimePreferredDecoding
+  description:
+  obsfucated:
+- question: FaceTimePreferredEncoding
+  description:
+  obsfucated:
+- question: FirmwareNonce
+  description:
+  obsfucated:
+- question: FirmwarePreflightInfo
+  description:
+  obsfucated:
+- question: FirmwareVersion
+  description:
+  obsfucated:
+- question: FirstPartyLaunchTimeLimitScale
+  description:
+  obsfucated:
+- question: ForwardCameraCapability
+  description:
+  obsfucated:
+- question: FrontFacingCameraAutoHDRCapability
+  description:
+  obsfucated:
+- question: FrontFacingCameraBurstCapability
+  description:
+  obsfucated:
+- question: FrontFacingCameraHDRCapability
+  description:
+  obsfucated:
+- question: FrontFacingCameraHDROnCapability
+  description:
+  obsfucated:
+- question: FrontFacingCameraHFRCapability
+  description:
+  obsfucated:
+- question: FrontFacingCameraMaxVideoZoomFactor
+  description:
+  obsfucated:
+- question: FrontFacingCameraModuleSerialNumber
+  description:
+  obsfucated:
+- question: FrontFacingCameraStillDurationForBurst
+  description:
+  obsfucated:
+- question: FrontFacingCameraVideoCapture1080pMaxFPS
+  description:
+  obsfucated:
+- question: FrontFacingCameraVideoCapture4kMaxFPS
+  description:
+  obsfucated:
+- question: FrontFacingCameraVideoCapture720pMaxFPS
+  description:
+  obsfucated:
+- question: FrontFacingIRCameraModuleSerialNumber
+  description:
+  obsfucated:
+- question: FrontFacingIRStructuredLightProjectorModuleSerialNumber
+  description:
+  obsfucated:
+- question: GSDeviceName
+  description:
+  obsfucated:
+- question: H264EncoderCapability
+  description:
+  obsfucated:
+- question: HEVCDecoder10bitSupported
+  description:
+  obsfucated:
+- question: HEVCDecoder12bitSupported
+  description:
+  obsfucated:
+- question: HEVCDecoder8bitSupported
+  description:
+  obsfucated:
+- question: HEVCEncodingCapability
+  description:
+  obsfucated:
+- question: HWModelStr
+  description:
+  obsfucated:
+- question: HardwarePlatform
+  description:
+  obsfucated:
+- question: HasAppleNeuralEngine
+  description:
+  obsfucated:
+- question: HasBaseband
+  description:
+  obsfucated:
+- question: HasBattery
+  description:
+  obsfucated:
+- question: HasDaliMode
+  description:
+  obsfucated:
+- question: HasExtendedColorDisplay
+  description:
+  obsfucated:
+- question: HasIcefall
+  description:
+  obsfucated:
+- question: HasInternalSettingsBundle
+  description:
+  obsfucated:
+- question: HasMesa
+  description:
+  obsfucated:
+- question: HasPKA
+  description:
+  obsfucated:
+- question: HasSEP
+  description:
+  obsfucated:
+- question: HasSpringBoard
+  description:
+  obsfucated:
+- question: HasThinBezel
+  description:
+  obsfucated:
+- question: HighestSupportedVideoMode
+  description:
+  obsfucated:
+- question: HomeButtonType
+  description:
+  obsfucated:
+- question: IDAMCapability
+  description:
+  obsfucated:
+- question: IOSurfaceFormatDictionary
+  description:
+  obsfucated:
+- question: IceFallID
+  description:
+  obsfucated:
+- question: IcefallInRestrictedMode
+  description:
+  obsfucated:
+- question: IcefallInfo
+  description:
+  obsfucated:
+- question: Image4CryptoHashMethod
+  description:
+  obsfucated:
+- question: Image4Supported
+  description:
+  obsfucated:
+- question: InDiagnosticsMode
+  description:
+  obsfucated:
+- question: IntegratedCircuitCardIdentifier
+  description:
+  obsfucated:
+- question: IntegratedCircuitCardIdentifier2
+  description:
+  obsfucated:
+- question: InternalBuild
+  description:
+  obsfucated:
+- question: InternationalMobileEquipmentIdentity
+  description:
+  obsfucated:
+- question: InternationalMobileEquipmentIdentity2
+  description:
+  obsfucated:
+- question: InverseDeviceID
+  description:
+  obsfucated:
+- question: IsEmulatedDevice
+  description:
+  obsfucated:
+- question: IsLargeFormatPhone
+  description:
+  obsfucated:
+- question: IsPwrOpposedVol
+  description:
+  obsfucated:
+- question: IsSimulator
+  description:
+  obsfucated:
+- question: IsThereEnoughBatteryLevelForSoftwareUpdate
+  description:
+  obsfucated:
+- question: IsUIBuild
+  description:
+  obsfucated:
+- question: LaunchTimeLimitScaleSupported
+  description:
+  obsfucated:
+- question: LisaCapability
+  description:
+  obsfucated:
+- question: LowPowerWalletMode
+  description:
+  obsfucated:
+- question: LunaFlexSerialNumber
+  description:
+  obsfucated:
+- question: LynxPublicKey
+  description:
+  obsfucated:
+- question: LynxSerialNumber
+  description:
+  obsfucated:
+- question: MLBSerialNumber
+  description:
+  obsfucated:
+- question: MainDisplayRotation
+  description:
+  obsfucated:
+- question: MainScreenCanvasSizes
+  description:
+  obsfucated:
+- question: MainScreenStaticInfo
+  description:
+  obsfucated:
+- question: MarketingProductName
+  description:
+  obsfucated:
+- question: MarketingVersion
+  description:
+  obsfucated:
+- question: MaxH264PlaybackLevel
+  description:
+  obsfucated:
+- question: MaximumScreenScale
+  description:
+  obsfucated:
+- question: MedusaFloatingLiveAppCapability
+  description:
+  obsfucated:
+- question: MedusaOverlayAppCapability
+  description:
+  obsfucated:
+- question: MedusaPIPCapability
+  description:
+  obsfucated:
+- question: MedusaPinnedAppCapability
+  description:
+  obsfucated:
+- question: MesaSerialNumber
+  description:
+  obsfucated:
+- question: MicrophoneCount
+  description:
+  obsfucated:
+- question: MinimumSupportediTunesVersion
+  description:
+  obsfucated:
+- question: MixAndMatchPrevention
+  description:
+  obsfucated:
+- question: MobileDeviceMinimumVersion
+  description:
+  obsfucated:
+- question: MobileEquipmentIdentifier
+  description:
+  obsfucated:
+- question: MobileEquipmentInfoBaseId
+  description:
+  obsfucated:
+- question: MobileEquipmentInfoBaseProfile
+  description:
+  obsfucated:
+- question: MobileEquipmentInfoBaseVersion
+  description:
+  obsfucated:
+- question: MobileEquipmentInfoCSN
+  description:
+  obsfucated:
+- question: MobileEquipmentInfoDisplayCSN
+  description:
+  obsfucated:
+- question: MobileSubscriberCountryCode
+  description:
+  obsfucated:
+- question: MobileSubscriberNetworkCode
+  description:
+  obsfucated:
+- question: ModelNumber
+  description:
+  obsfucated:
+- question: MonarchLowEndHardware
+  description:
+  obsfucated:
+- question: MusicStore
+  description:
+  obsfucated:
+- question: N78aHack
+  description:
+  obsfucated:
+- question: NFCRadio
+  description:
+  obsfucated:
+- question: NFCRadioCalibrationDataPresent
+  description:
+  obsfucated:
+- question: NFCUniqueChipID
+  description:
+  obsfucated:
+- question: NVRAMDictionary
+  description:
+  obsfucated:
+- question: NandControllerUID
+  description:
+  obsfucated:
+- question: NavajoFusingState
+  description:
+  obsfucated:
+- question: OLEDDisplay
+  description:
+  obsfucated:
+- question: OfflineDictationCapability
+  description:
+  obsfucated:
+- question: OpenGLESVersion
+  description:
+  obsfucated:
+- question: PanelSerialNumber
+  description:
+  obsfucated:
+- question: PanoramaCameraCapability
+  description:
+  obsfucated:
+- question: PartitionType
+  description:
+  obsfucated:
+- question: PasswordConfigured
+  description:
+  obsfucated:
+- question: PasswordProtected
+  description:
+  obsfucated:
+- question: PearlCameraCapability
+  description:
+  obsfucated:
+- question: PearlIDCapability
+  description:
+  obsfucated:
+- question: PeekUICapability
+  description:
+  obsfucated:
+- question: PeekUIWidth
+  description:
+  obsfucated:
+- question: PhoneNumber
+  description:
+  obsfucated:
+- question: PhosphorusCapability
+  description:
+  obsfucated:
+- question: PhotoCapability
+  description:
+  obsfucated:
+- question: PhotoSharingCapability
+  description:
+  obsfucated:
+- question: PhotosPostEffectsCapability
+  description:
+  obsfucated:
+- question: PintoMacAddress
+  description:
+  obsfucated:
+- question: PintoMacAddressData
+  description:
+  obsfucated:
+- question: PipelinedStillImageProcessingCapability
+  description:
+  obsfucated:
+- question: PlatinumCapability
+  description:
+  obsfucated:
+- question: ProductHash
+  description:
+  obsfucated:
+- question: ProductName
+  description:
+  obsfucated:
+- question: ProductType
+  description:
+  obsfucated:
+- question: ProductVersion
+  description:
+  obsfucated:
+- question: ProximitySensorCalibration
+  description:
+  obsfucated:
+- question: ProximitySensorCalibrationDictionary
+  description:
+  obsfucated:
+- question: RFExposureSeparationDistance
+  description:
+  obsfucated:
+- question: RawPanelSerialNumber
+  description:
+  obsfucated:
+- question: RearCameraCapability
+  description:
+  obsfucated:
+- question: RearCameraOffsetFromDisplayCenter
+  description:
+  obsfucated:
+- question: RearFacingCamera60fpsVideoCaptureCapability
+  description:
+  obsfucated:
+- question: RearFacingCameraAutoHDRCapability
+  description:
+  obsfucated:
+- question: RearFacingCameraBurstCapability
+  description:
+  obsfucated:
+- question: RearFacingCameraHDRCapability
+  description:
+  obsfucated:
+- question: RearFacingCameraHDROnCapability
+  description:
+  obsfucated:
+- question: RearFacingCameraHFRCapability
+  description:
+  obsfucated:
+- question: RearFacingCameraHFRVideoCapture1080pMaxFPS
+  description:
+  obsfucated:
+- question: RearFacingCameraHFRVideoCapture720pMaxFPS
+  description:
+  obsfucated:
+- question: RearFacingCameraMaxVideoZoomFactor
+  description:
+  obsfucated:
+- question: RearFacingCameraModuleSerialNumber
+  description:
+  obsfucated:
+- question: RearFacingCameraStillDurationForBurst
+  description:
+  obsfucated:
+- question: RearFacingCameraVideoCapture1080pMaxFPS
+  description:
+  obsfucated:
+- question: RearFacingCameraVideoCapture4kMaxFPS
+  description:
+  obsfucated:
+- question: RearFacingCameraVideoCapture720pMaxFPS
+  description:
+  obsfucated:
+- question: RearFacingCameraVideoCaptureFPS
+  description:
+  obsfucated:
+- question: RearFacingTelephotoCameraCapability
+  description:
+  obsfucated:
+- question: RearFacingTelephotoCameraModuleSerialNumber
+  description:
+  obsfucated:
+- question: RegionCode
+  description:
+  obsfucated:
+- question: RegionInfo
+  description:
+  obsfucated:
+- question: RegionSupportsCinnamon
+  description:
+  obsfucated:
+- question: RegionalBehaviorAll
+  description:
+  obsfucated:
+- question: RegionalBehaviorChinaBrick
+  description:
+  obsfucated:
+- question: RegionalBehaviorEUVolumeLimit
+  description:
+  obsfucated:
+- question: RegionalBehaviorGB18030
+  description:
+  obsfucated:
+- question: RegionalBehaviorGoogleMail
+  description:
+  obsfucated:
+- question: RegionalBehaviorNTSC
+  description:
+  obsfucated:
+- question: RegionalBehaviorNoPasscodeLocationTiles
+  description:
+  obsfucated:
+- question: RegionalBehaviorNoVOIP
+  description:
+  obsfucated:
+- question: RegionalBehaviorNoWiFi
+  description:
+  obsfucated:
+- question: RegionalBehaviorShutterClick
+  description:
+  obsfucated:
+- question: RegionalBehaviorValid
+  description:
+  obsfucated:
+- question: RegionalBehaviorVolumeLimit
+  description:
+  obsfucated:
+- question: RegulatoryModelNumber
+  description:
+  obsfucated:
+- question: ReleaseType
+  description:
+  obsfucated:
+- question: RemoteBluetoothAddress
+  description:
+  obsfucated:
+- question: RemoteBluetoothAddressData
+  description:
+  obsfucated:
+- question: RenderWideGamutImagesAtDisplayTime
+  description:
+  obsfucated:
+- question: RendersLetterPressSlowly
+  description:
+  obsfucated:
+- question: RequiredBatteryLevelForSoftwareUpdate
+  description:
+  obsfucated:
+- question: RestoreOSBuild
+  description:
+  obsfucated:
+- question: RestrictedCountryCodes
+  description:
+  obsfucated:
+- question: RosalineSerialNumber
+  description:
+  obsfucated:
+- question: RoswellChipID
+  description:
+  obsfucated:
+- question: RotateToWakeStatus
+  description:
+  obsfucated:
+- question: SBAllowSensitiveUI
+  description:
+  obsfucated:
+- question: SBCanForceDebuggingInfo
+  description:
+  obsfucated:
+- question: SDIOManufacturerTuple
+  description:
+  obsfucated:
+- question: SDIOProductInfo
+  description:
+  obsfucated:
+- question: SEInfo
+  description:
+  obsfucated:
+- question: SEPNonce
+  description:
+  obsfucated:
+- question: SIMStatus
+  description:
+  obsfucated:
+- question: SIMStatus2
+  description:
+  obsfucated:
+- question: SIMTrayStatus
+  description:
+  obsfucated:
+- question: SIMTrayStatus2
+  description:
+  obsfucated:
+- question: SavageChipID
+  description:
+  obsfucated:
+- question: SavageInfo
+  description:
+  obsfucated:
+- question: SavageSerialNumber
+  description:
+  obsfucated:
+- question: SavageUID
+  description:
+  obsfucated:
+- question: ScreenRecorderCapability
+  description:
+  obsfucated:
+- question: SecondaryBluetoothMacAddress
+  description:
+  obsfucated:
+- question: SecondaryBluetoothMacAddressData
+  description:
+  obsfucated:
+- question: SecondaryEthernetMacAddress
+  description:
+  obsfucated:
+- question: SecondaryEthernetMacAddressData
+  description:
+  obsfucated:
+- question: SecondaryWifiMacAddress
+  description:
+  obsfucated:
+- question: SecondaryWifiMacAddressData
+  description:
+  obsfucated:
+- question: SecureElement
+  description:
+  obsfucated:
+- question: SecureElementID
+  description:
+  obsfucated:
+- question: SerialNumber
+  description:
+  obsfucated:
+- question: ShouldHactivate
+  description:
+  obsfucated:
+- question: SiKACapability
+  description:
+  obsfucated:
+- question: SigningFuse
+  description:
+  obsfucated:
+- question: SiliconBringupBoard
+  description:
+  obsfucated:
+- question: SiriOfflineCapability
+  description:
+  obsfucated:
+- question: Skey
+  description:
+  obsfucated:
+- question: SoftwareBehavior
+  description:
+  obsfucated:
+- question: SoftwareBundleVersion
+  description:
+  obsfucated:
+- question: SoftwareDimmingAlpha
+  description:
+  obsfucated:
+- question: SpeakerCalibrationMiGa
+  description:
+  obsfucated:
+- question: SpeakerCalibrationSpGa
+  description:
+  obsfucated:
+- question: SpeakerCalibrationSpTS
+  description:
+  obsfucated:
+- question: SphereCapability
+  description:
+  obsfucated:
+- question: StarkCapability
+  description:
+  obsfucated:
+- question: StockholmJcopInfo
+  description:
+  obsfucated:
+- question: SupportedDeviceFamilies
+  description:
+  obsfucated:
+- question: SupportedKeyboards
+  description:
+  obsfucated:
+- question: SupportsBurninMitigation
+  description:
+  obsfucated:
+- question: SupportsEDUMU
+  description:
+  obsfucated:
+- question: SupportsForceTouch
+  description:
+  obsfucated:
+- question: SupportsIrisCapture
+  description:
+  obsfucated:
+- question: SupportsLowPowerMode
+  description:
+  obsfucated:
+- question: SupportsPerseus
+  description:
+  obsfucated:
+- question: SupportsRotateToWake
+  description:
+  obsfucated:
+- question: SupportsSOS
+  description:
+  obsfucated:
+- question: SupportsSSHBButtonType
+  description:
+  obsfucated:
+- question: SupportsTouchRemote
+  description:
+  obsfucated:
+- question: SysCfg
+  description:
+  obsfucated:
+- question: SysCfgDict
+  description:
+  obsfucated:
+- question: SystemImageID
+  description:
+  obsfucated:
+- question: TimeSyncCapability
+  description:
+  obsfucated:
+- question: TouchDelivery120Hz
+  description:
+  obsfucated:
+- question: TristarID
+  description:
+  obsfucated:
+- question: UIBackgroundQuality
+  description:
+  obsfucated:
+- question: UIParallaxCapability
+  description:
+  obsfucated:
+- question: UIProceduralWallpaperCapability
+  description:
+  obsfucated:
+- question: UIReachability
+  description:
+  obsfucated:
+- question: UniqueChipID
+  description:
+  obsfucated:
+- question: UniqueDeviceID
+  description:
+  obsfucated:
+- question: UniqueDeviceIDData
+  description:
+  obsfucated:
+- question: UserAssignedDeviceName
+  description:
+  obsfucated:
+- question: UserIntentPhysicalButtonCGRect
+  description:
+  obsfucated:
+- question: UserIntentPhysicalButtonCGRectString
+  description:
+  obsfucated:
+- question: UserIntentPhysicalButtonNormalizedCGRect
+  description:
+  obsfucated:
+- question: VibratorCapability
+  description:
+  obsfucated:
+- question: WAGraphicQuality
+  description:
+  obsfucated:
+- question: WLANBkgScanCache
+  description:
+  obsfucated:
+- question: WSKU
+  description:
+  obsfucated:
+- question: WatchSupportsAutoPlaylistPlayback
+  description:
+  obsfucated:
+- question: WatchSupportsHighQualityClockFaceGraphics
+  description:
+  obsfucated:
+- question: WatchSupportsListeningOnGesture
+  description:
+  obsfucated:
+- question: WatchSupportsMusicStreaming
+  description:
+  obsfucated:
+- question: WatchSupportsSiriCommute
+  description:
+  obsfucated:
+- question: WiFiCallingCapability
+  description:
+  obsfucated:
+- question: WifiAddress
+  description:
+  obsfucated:
+- question: WifiAddressData
+  description:
+  obsfucated:
+- question: WifiAntennaSKUVersion
+  description:
+  obsfucated:
+- question: WifiCallingSecondaryDeviceCapability
+  description:
+  obsfucated:
+- question: WifiChipset
+  description:
+  obsfucated:
+- question: WifiFirmwareVersion
+  description:
+  obsfucated:
+- question: WifiVendor
+  description:
+  obsfucated:
+- question: WirelessBoardSnum
+  description:
+  obsfucated:
+- question: WirelessChargingCapability
+  description:
+  obsfucated:
+- question: YonkersChipID
+  description:
+  obsfucated:
+- question: YonkersSerialNumber
+  description:
+  obsfucated:
+- question: YonkersUID
+  description:
+  obsfucated:
+- question: accelerometer
+  description:
+  obsfucated:
+- question: accessibility
+  description:
+  obsfucated:
+- question: additional-text-tones
+  description:
+  obsfucated:
+- question: airDropRestriction
+  description:
+  obsfucated:
+- question: airplay-mirroring
+  description:
+  obsfucated:
+- question: all-features
+  description:
+  obsfucated:
+- question: ambient-light-sensor
+  description:
+  obsfucated:
+- question: any-telephony
+  description:
+  obsfucated:
+- question: apn
+  description:
+  obsfucated:
+- question: apple-internal-install
+  description:
+  obsfucated:
+- question: applicationInstallation
+  description:
+  obsfucated:
+- question: arkit
+  description:
+  obsfucated:
+- question: arm64
+  description:
+  obsfucated:
+- question: armv6
+  description:
+  obsfucated:
+- question: armv7
+  description:
+  obsfucated:
+- question: armv7s
+  description:
+  obsfucated:
+- question: assistant
+  description:
+  obsfucated:
+- question: auto-focus-camera
+  description:
+  obsfucated:
+- question: bcm-window-type
+  description:
+  obsfucated:
+- question: bluetooth
+  description:
+  obsfucated:
+- question: bluetooth-le
+  description:
+  obsfucated:
+- question: c2k-device
+  description:
+  obsfucated:
+- question: call-forwarding
+  description:
+  obsfucated:
+- question: call-waiting
+  description:
+  obsfucated:
+- question: caller-id
+  description:
+  obsfucated:
+- question: camera-flash
+  description:
+  obsfucated:
+- question: cameraRestriction
+  description:
+  obsfucated:
+- question: cell-broadcast
+  description:
+  obsfucated:
+- question: cellular-data
+  description:
+  obsfucated:
+- question: contains-cellular-radio
+  description:
+  obsfucated:
+- question: data-plan
+  description:
+  obsfucated:
+- question: delay-sleep-for-headset-click
+  description:
+  obsfucated:
+- question: device-name
+  description:
+  obsfucated:
+- question: device-name-localized
+  description:
+  obsfucated:
+- question: dictation
+  description:
+  obsfucated:
+- question: display-mirroring
+  description:
+  obsfucated:
+- question: displayport
+  description:
+  obsfucated:
+- question: enc-bot-type
+  description:
+  obsfucated:
+- question: enc-top-type
+  description:
+  obsfucated:
+- question: encode-aac
+  description:
+  obsfucated:
+- question: encrypted-data-partition
+  description:
+  obsfucated:
+- question: enforce-googlemail
+  description:
+  obsfucated:
+- question: enforce-shutter-click
+  description:
+  obsfucated:
+- question: explicitContentRestriction
+  description:
+  obsfucated:
+- question: fcc-logos-via-software
+  description:
+  obsfucated:
+- question: fcm-type
+  description:
+  obsfucated:
+- question: front-facing-camera
+  description:
+  obsfucated:
+- question: full-6
+  description:
+  obsfucated:
+- question: gamekit
+  description:
+  obsfucated:
+- question: gas-gauge-battery
+  description:
+  obsfucated:
+- question: gps
+  description:
+  obsfucated:
+- question: green-tea
+  description:
+  obsfucated:
+- question: gyroscope
+  description:
+  obsfucated:
+- question: hall-effect-sensor
+  description:
+  obsfucated:
+- question: hardware-keyboard
+  description:
+  obsfucated:
+- question: hd-video-capture
+  description:
+  obsfucated:
+- question: hdr-image-capture
+  description:
+  obsfucated:
+- question: healthkit
+  description:
+  obsfucated:
+- question: hearingaid-audio-equalization
+  description:
+  obsfucated:
+- question: hearingaid-low-energy-audio
+  description:
+  obsfucated:
+- question: hearingaid-power-reduction
+  description:
+  obsfucated:
+- question: hiccough-interval
+  description:
+  obsfucated:
+- question: hide-non-default-apps
+  description:
+  obsfucated:
+- question: hidpi
+  description:
+  obsfucated:
+- question: homescreen-wallpaper
+  description:
+  obsfucated:
+- question: hw-encode-snapshots
+  description:
+  obsfucated:
+- question: hw-snapshots-need-purplegfx
+  description:
+  obsfucated:
+- question: iAP2Capability
+  description:
+  obsfucated:
+- question: iTunesFamilyID
+  description:
+  obsfucated:
+- question: inAppPurchasesRestriction
+  description:
+  obsfucated:
+- question: international-settings
+  description:
+  obsfucated:
+- question: io-surface-backed-images
+  description:
+  obsfucated:
+- question: ipad
+  description:
+  obsfucated:
+- question: kConferenceCallType
+  description:
+  obsfucated:
+- question: kSimultaneousCallAndDataCurrentlySupported
+  description:
+  obsfucated:
+- question: kSimultaneousCallAndDataSupported
+  description:
+  obsfucated:
+- question: launch-applications-while-animating
+  description:
+  obsfucated:
+- question: load-thumbnails-while-scrolling
+  description:
+  obsfucated:
+- question: location-reminders
+  description:
+  obsfucated:
+- question: location-services
+  description:
+  obsfucated:
+- question: lte-device
+  description:
+  obsfucated:
+- question: magnetometer
+  description:
+  obsfucated:
+- question: main-screen-class
+  description:
+  obsfucated:
+- question: main-screen-height
+  description:
+  obsfucated:
+- question: main-screen-orientation
+  description:
+  obsfucated:
+- question: main-screen-pitch
+  description:
+  obsfucated:
+- question: main-screen-scale
+  description:
+  obsfucated:
+- question: main-screen-width
+  description:
+  obsfucated:
+- question: marketing-name
+  description:
+  obsfucated:
+- question: metal
+  description:
+  obsfucated:
+- question: microphone
+  description:
+  obsfucated:
+- question: mms
+  description:
+  obsfucated:
+- question: multi-touch
+  description:
+  obsfucated:
+- question: multitasking
+  description:
+  obsfucated:
+- question: multitasking-gestures
+  description:
+  obsfucated:
+- question: nfc
+  description:
+  obsfucated:
+- question: nike-ipod
+  description:
+  obsfucated:
+- question: not-green-tea
+  description:
+  obsfucated:
+- question: opal
+  description:
+  obsfucated:
+- question: opengles-1
+  description:
+  obsfucated:
+- question: opengles-2
+  description:
+  obsfucated:
+- question: opengles-3
+  description:
+  obsfucated:
+- question: ota-activation
+  description:
+  obsfucated:
+- question: peer-peer
+  description:
+  obsfucated:
+- question: personal-hotspot
+  description:
+  obsfucated:
+- question: photo-adjustments
+  description:
+  obsfucated:
+- question: photo-stream
+  description:
+  obsfucated:
+- question: piezo-clicker
+  description:
+  obsfucated:
+- question: proximity-sensor
+  description:
+  obsfucated:
+- question: ptp-large-files
+  description:
+  obsfucated:
+- question: rear-facing-camera
+  description:
+  obsfucated:
+- question: ringer-switch
+  description:
+  obsfucated:
+- question: screen-dimensions
+  description:
+  obsfucated:
+- question: sensitive-ui
+  description:
+  obsfucated:
+- question: shoebox
+  description:
+  obsfucated:
+- question: sim
+  description:
+  obsfucated:
+- question: sim-phonebook
+  description:
+  obsfucated:
+- question: siri-gesture
+  description:
+  obsfucated:
+- question: sms
+  description:
+  obsfucated:
+- question: stand-alone-contacts
+  description:
+  obsfucated:
+- question: still-camera
+  description:
+  obsfucated:
+- question: telephony
+  description:
+  obsfucated:
+- question: telephony-maximum-generation
+  description:
+  obsfucated:
+- question: touch-id
+  description:
+  obsfucated:
+- question: tv-out-crossfade
+  description:
+  obsfucated:
+- question: tv-out-settings
+  description:
+  obsfucated:
+- question: umts-device
+  description:
+  obsfucated:
+- question: unified-ipod
+  description:
+  obsfucated:
+- question: venice
+  description:
+  obsfucated:
+- question: video-camera
+  description:
+  obsfucated:
+- question: video-stills
+  description:
+  obsfucated:
+- question: voice-control
+  description:
+  obsfucated:
+- question: voip
+  description:
+  obsfucated:
+- question: volume-buttons
+  description:
+  obsfucated:
+- question: volume-limit-restriction
+  description:
+  obsfucated:
+- question: wapi
+  description:
+  obsfucated:
+- question: watch-companion
+  description:
+  obsfucated:
+- question: wi-fi
+  description:
+  obsfucated:
+- question: wifi
+  description:
+  obsfucated:
+- question: youtube
+  description:
+  obsfucated:
+- question: youtubePlugin
+  description:
+  obsfucated:
