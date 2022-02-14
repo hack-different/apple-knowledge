@@ -6,11 +6,15 @@
 - code: AAPL
   description: Generic 4CC for Apple, often Creator Code
   usage:
-  - Everwhere
+  - Everywhere
 - code: ADDA
   description:
   usage:
   - SysCfg
+- code: BNCH
+  description: Boot Nonce Hash
+  usage:
+  - APTicket
 - code: BNDL
   description: Loadable Bundle (plugin)
   usage:
@@ -55,6 +59,14 @@
   description: Effective Security Status
   usage:
   - APTicket
+- code: MANB
+  description: Manifest Body
+  usage:
+  - APTicket
+- code: MANP
+  description: Manifest Properties
+  usage:
+  - APTicket
 - code: MOJO
   description: Mojo Debug Flag
   usage:
@@ -71,6 +83,10 @@
   - SysCfg
 - code: SDOM
   description: Security Domain
+  usage:
+  - APTicket
+- code: snon
+  description: Secure Enclave Processor Boot Nonce Hash
   usage:
   - APTicket
 - code: SrNm
