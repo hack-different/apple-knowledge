@@ -85,10 +85,6 @@
   description: Security Domain
   usage:
   - APTicket
-- code: snon
-  description: Secure Enclave Processor Boot Nonce Hash
-  usage:
-  - APTicket
 - code: SrNm
   description: Serial Number
   usage:
@@ -280,6 +276,10 @@
   description: Secure Multi-Boot (DEP-allowed MDM Control)
   usage:
   - Boot Policy
+- code: snon
+  description: Secure Enclave Processor Boot Nonce Hash
+  usage:
+  - APTicket
 - code: tCfg
   description:
   usage:

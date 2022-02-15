@@ -9,6 +9,8 @@ require 'set'
 require 'macho'
 require 'faraday'
 require 'plist'
+require 'zip'
+require 'openssl'
 
 DATA_DIR = File.join(File.dirname(__FILE__), '..', '_data')
 
