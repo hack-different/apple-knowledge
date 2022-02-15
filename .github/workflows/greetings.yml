@@ -1,6 +1,8 @@
-name: Greetings
+name: Greet first time contributors
 
-on: [pull_request, issues]
+on:
+  - pull_request_target
+  - issues
 
 jobs:
   greeting:
