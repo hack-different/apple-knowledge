@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require_relative '_common'
+require_relative 'lib/common'
 
 MACHO_FILE = File.join(File.dirname(__FILE__), '../_data/mach_o.yaml')
 FILESET_REGION = /__REGION\d+/

@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require_relative './_common'
+require_relative './b/_common'
 
 GET_VALUE_REGEX = /handle_get_value: (\w+) attempting to get \[([^\]]+)\]:\[([^\]]+)\]/
 SET_VALUE_REGEX = /handle_set_value: (\w+) attempting to set \[([^\]]+)\]:\[([^\]]+)\] to [([^\]]+)] of type (\d+)/

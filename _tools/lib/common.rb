@@ -11,6 +11,8 @@ require 'faraday'
 require 'plist'
 require 'zip'
 require 'openssl'
+require 'base64'
+require 'digest'
 
 DATA_DIR = File.join(File.dirname(__FILE__), '..', '_data')
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require_relative '_common'
+require_relative 'lib/common'
 
 OS_VERSION_PATHS = %w[System/Library/CoreServices/BridgeVersions.plist
                       System/Library/CoreServices/SystemVersion.plist].freeze
