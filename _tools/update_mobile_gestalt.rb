@@ -5,8 +5,8 @@ require_relative 'lib/common'
 
 GESTALT_DATA_FILE = File.join(File.dirname(__FILE__), '../_data/mobile_gestalt.yaml')
 
-def obfuscate(_key)
-  hashed = Digest::MD5.digest "MGCopyAnswer#{ARGV[0]}"
+def obfuscate(input_key)
+  hashed = Digest::MD5.digest "MGCopyAnswer#{input_key}"
 
   Base64.encode64(hashed).delete('=').squish
 end
