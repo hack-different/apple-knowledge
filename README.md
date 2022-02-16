@@ -257,6 +257,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * Basically all iDevice / iTunes
   * [libimobiledevice.org](https://libimobiledevice.org)
   * [`libimobiledevice/libimobiledevice`](https://github.com/libimobiledevice/libimobiledevice)
+  * [`hack-different/python-libimobiledevice`](https://github.com/hack-different/python-libimobiledevice)
+  * [`doronz88/pymobiledevice3`](https://github.com/doronz88/pymobiledevice3)
 * DFU / Recovery
   * [`libimoibledevice/libirecovery`](https://github.com/libimobiledevice/libirecovery)
   * <https://habr.com/en/company/dsec/blog/472762/>
