@@ -294,6 +294,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * Apple Watch Pairing
 * `com.apple.terminusd`
 * Magic Pairing
+  * <https://arxiv.org/pdf/2005.07255.pdf>
 * ATC - Air Traffic Control - iTunes Wi-Fi Sync
 * RemoteXPC
   * <https://duo.com/labs/research/apple-t2-xpc>
