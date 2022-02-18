@@ -185,6 +185,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [m4b Mach Binaries](http://www.m4b.io/reverse/engineering/mach/binaries/2015/03/29/mach-binaries.html)
   * [J's Entitlements Database](https://newosxbook.com/ent.jl)
   * [Levin's Code Signing](http://www.newosxbook.com/articles/CodeSigning.pdf)
+  * [Apple CTF / Compact Type Format](https://github.com/apple-oss-distributions/dtrace/tree/main/tools/ctfconvert)
 * img4 - Apple signed images, version 4
   * <https://www.theiphonewiki.com/wiki/IMG4_File_Format>
   * [`h3adshotzz/img4helper`](https://github.com/h3adshotzz/img4helper)

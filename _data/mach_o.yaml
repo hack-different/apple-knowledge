@@ -219,7 +219,7 @@ segments:
   __CTF:
     description: Compact C Type Format
     __ctf:
-      description:
+      description: https://github.com/apple-oss-distributions/dtrace/tree/main/tools/ctfconvert
   __LINKEDIT:
     description: Though named "LINKEDIT" this segment actually contains any metadata of this Mach-O object.  For example
       this area contains code signature, as well as dynamic linker opcodes.  This area is always read only.  The
