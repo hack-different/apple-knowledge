@@ -215,6 +215,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [iBSparkles Breaking Entitlements](https://sparkes.zone/blog/ios/2018/04/06/diving-into-the-kernel-entitlements.html)
 * [stek29 Shenanigans Shenanigans](https://stek29.rocks/2018/12/11/shenanigans.html)
 * [argp vs com.apple.security.sandbox](https://census-labs.com/media/sandbox-argp-csw2019-public.pdf)
+* [malus-security/sandblaster](https://github.com/malus-security/sandblaster)
 
 ### Secure Enclave Processor
 
@@ -251,6 +252,10 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * Apple Hypervisor
   * <https://developer.apple.com/documentation/hypervisor>
   * <https://developer.apple.com/documentation/hypervisor/apple_silicon>
+
+### Coprocessors
+
+* [hollance/neural-engine](https://github.com/hollance/neural-engine)
 
 ### USB / Wired Protocols / Low Level Hardware
 
