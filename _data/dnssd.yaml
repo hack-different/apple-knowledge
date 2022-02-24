@@ -1,0 +1,226 @@
+services:
+  - service: adisk
+    transport: tcp
+    name: Time Capsule Backups
+  - service: afpovertcp
+    transport: tcp
+    name: Apple Filing Protocol
+  - service: airdrop
+    transport: tcp
+    name: AirDrop
+  - service: airplay
+    transport: tcp
+    name: AirPlay
+    properties:
+      acl:
+      btaddr: Bluetooth Address
+      deviceid: Cannonical Device Identifier
+      fex:
+      featuers:
+      flags:
+      gid:
+      igl:
+      gcgl:
+      gpn:
+      psgsz:
+      psgtp:
+      psgid:
+      pgm:
+      pgid:
+      pgcfg:
+      tsid:
+      tsm:
+      model:
+      protovers:
+      pi:
+      psi:
+      pk:
+      srcvers:
+      osvers:
+      vv:
+  - service: airport
+    transport: tcp
+    name: AirPort Base Station
+  - service: companion-link
+    transport: tcp
+    properties:
+      rpMac:
+      rpHN:
+      rpFl:
+      rpHA:
+      rpVr:
+      rpAD:
+      rpHI:
+      rpBA:
+  - service: dacp
+    transport: tcp
+    name: Digital Audio Control Protocol
+  - service: hap
+    transport: tcp
+    name: HomeKit Accessory Protocol
+    properties:
+      c#:
+      ff:
+      id:
+      md:
+      pv:
+      sf:
+      s#:
+      ci:
+  - service: homekit
+    transport: tcp
+    properties:
+      si:
+  - service: hue
+    transport: tcp
+    name: Phillips Hue
+  - service: ieee1588
+    transport: udp
+    name: Precision Time Protocol
+    properties:
+      domain:
+      server-id:
+  - service: meshcop
+    transport: udp
+    name: Thread Mesh Commissioning
+    properties:
+      nn:
+      xp:
+      rv:
+      sb:
+      tv:
+      xa:
+  - service: raop
+    transport: tcp
+    name: Remote Audio Output Protocol (AirPlay2)
+    properties:
+      cn:
+      da:
+      et:
+      ft:
+      sf:
+      md:
+      am: Apple Model
+      pk: Public Key
+      tp: Transport Protocol
+      vn:
+      vs: Version
+      ov: OS Version
+      vv:
+  - service: sleep-proxy
+    transport: udp
+    name: Sleep Proxy Server
+    description: Protocol used by Apple Products to advratise devices capiable of WoL or WWoL
+    properties:
+  - service: srpl-tls
+    transport: tcp
+    name: Service Registration Protocol - Replication over TLS
+    properties:
+      domain:
+      server-id:
+  - service: amzn-wplay
+    transport: tcp
+  - service: apple-mobdev2
+    transport: tcp
+    name: iTunes Wi-Fi Sync
+  - service: apple-sasl
+    transport: tcp
+    name: Apple Password Server
+  - service: appletv-v2
+    transport: tcp
+    name: Apple TV Home Sharing
+  - service: atc
+    transport: tcp
+    name: iTunes Shared Library
+  - service: daap
+    transport: tcp
+    name: Digital Audio Access Protocol
+  - service: device-info
+    transport: tcp
+    name: macOS Device Infrormation Protocol
+  - service: distcc
+    transport: tcp
+    name: Xcode Distributed Compiler
+  - service: dpap
+    transport: tcp
+    name: Digital Photo Access Protocol
+  - service: eppc
+    transport: tcp
+    name: Remote Apple Events
+  - service: ftp
+    transport: tcp
+    name: File Transport Protocol
+  - service: home-sharing
+    transport: tcp
+    name: iTunes Home Sharing
+  - service: http
+    transport: tcp
+    name: Hyper Text Transfer Protocol
+  - service: ica-networking
+    transport: tcp
+    name: Image Capture Sharing
+  - service: ichat
+    transport: tcp
+    name: iChat Instant Messaging Protocol
+  - service: ipp
+    transport: tcp
+    name: Internet Printing Protocol
+    subresource:
+      - service: print
+  - service: ipps
+    transport: tcp
+    name: Internet Printing Protocol (Secure)
+    subresource:
+      print: AirPrint
+      cups: Common Unix Printing System
+  - service: KeynoteControl
+    transport: tcp
+    name: Keynote Remote
+  - service: keynotepair
+    transport: tcp
+    name: Keynote Remote Pairing
+  - service: mediaremotetv
+    transport: tcp
+    name: Apple TV Media Remote
+  - service: nfs
+    transport: tcp
+    name: Network File System (NFS)
+  - service: pdl-datastream
+    transport: tcp
+    name: Page Description Language (PDL) Data Stream
+  - service: printer
+    transport: tcp
+    name:  Line Printer Daemon
+  - service: rfb
+    transport: tcp
+    name: Remote Framebuffer - macOS Screen Sharing
+  - service: riousbprint
+    transport: tcp
+    name: Remote I/O USB Printer Protocol
+  - service: scanner
+    transport: tcp
+    name: Remote Scanning Protocol
+  - service: servermgr
+    transport: tcp
+    name: macOS Server Remote Administration
+  - service: sftp-ssh
+    transport: tcp
+    name: Secure File Transport Protocol (SFTP)
+  - service: smb
+    transport: tcp
+    name: Server Message Block (SMB) / Common Internet File System (CIFS)
+  - service: ssh
+    transport: tcp
+    name: Secure Shell
+  - service: telnet
+    transport: tcp
+    name: Telnet
+  - service: touch-able
+    transport: tcp
+    name: Apple TV Remote App (iOS devices)
+  - service: workstation
+    transport: tcp
+    name: Apple Workgroup Manager
+  - service: xserveraid
+    transport: tcp
+    name: Xserve RAID
