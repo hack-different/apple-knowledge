@@ -1,13 +1,48 @@
 services:
   - service: adisk
     transport: tcp
-    name: Time Capsule Backups
+    name: Time Capsule Backups / Auto Disk Discovery
+    properties:
+      sys:
+      dkX:
   - service: afpovertcp
     transport: tcp
     name: Apple Filing Protocol
+    properties:
+      u: Username
+      p: Password
+      path: Path
+  - service: apple-midi
+    transport: udp
+    name: Apple MIDI
+  - service: applerdbg
+    name: Apple Remote Debug Services (OpenGL Profiler)
+  - service: appletv
+    name: Apple TV
+    properties:
+      txtvers:
+      PrVs:
+      OSsi:
+      MniT:
+  - service: parentcontrol
+  - service: pcast
+    name: Apple Podcast Producer
+  - service: presence
+    name: eXtensable Message and Presence Protocol (Jabber)
+  - service: xgrid
+  - service: appletv-itunes
+    name: Apple TV discovery of iTunes
   - service: airdrop
     transport: tcp
     name: AirDrop
+  - service: appletv-pair
+    name: Apple TV Pairing
+    properties:
+      txtvers:
+  - service: asr
+    name: Apple Software Restore
+    properties:
+      image: HTTP URL of disk image
   - service: airplay
     transport: tcp
     name: AirPlay
@@ -135,6 +170,16 @@ services:
   - service: daap
     transport: tcp
     name: Digital Audio Access Protocol
+    properties:
+  - service: dns-llq
+    name: DNS-SD Long Lievd Queries
+    urls:
+      - http://files.dns-sd.org/draft-sekar-dns-llq.txt
+  - service: dns-update
+    name: DNS Dynamic Update Service
+    urls:
+      - http://www.ietf.org/rfc/rfc2136.txt
+      - http://www.ietf.org/rfc/rfc3007.txt
   - service: device-info
     transport: tcp
     name: macOS Device Infrormation Protocol
@@ -153,6 +198,20 @@ services:
   - service: home-sharing
     transport: tcp
     name: iTunes Home Sharing
+    properties:
+      txtvers:
+      hQ:
+      dmb:
+      OSci:
+      hG:
+      hC:
+  - service: net-assistant
+  - service: netrestore
+  - service: nssocketport
+  - service: od-master
+    name: OpenDirectory Master
+  - service: odisk
+    name: Optical Disk Sharing
   - service: http
     transport: tcp
     name: Hyper Text Transfer Protocol
@@ -221,6 +280,10 @@ services:
   - service: workstation
     transport: tcp
     name: Apple Workgroup Manager
+  - service: xsanserver
+  - service: xasnclient
+  - service: xserverraid
+  - service: xsync
   - service: xserveraid
     transport: tcp
     name: Xserve RAID
