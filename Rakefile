@@ -31,11 +31,15 @@ class KramdownVisitor
   end
 end
 
-def sort_yaml(file, key)
+def sort_yaml(file, key, property = nil)
   path = File.join(BASE_PATH, '_data', "#{file}.yaml")
   items = YAML.load_file path
 
-  items.sort_by! { |item| item[key.to_s] }
+  if property
+    items[property].sort_by! { |item| item[key.to_s] }
+  else
+    items.sort_by! { |item| item[key.to_s] }
+  end
 
   File.write(path, items.to_yaml)
 end
@@ -43,7 +47,7 @@ end
 namespace :sort do
   desc 'sort and unique all NVRAM variables'
   task :nvram do
-    sort_yaml 'nvram', :name
+    sort_yaml 'nvram', :name, 'variables'
   end
 
   desc 'sort and unique all LaunchD services'

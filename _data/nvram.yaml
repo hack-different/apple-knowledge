@@ -1,19 +1,20 @@
 ---
+variables:
 - name: AAPL,ignore
-- platforms:
-  - macOS
-  - Intel
-  - bridgeOS
-  name: ApChipID
-  scopes:
-  - 94b73556-2197-4702-82a8-3e1337dafbfb
-- type: :boolean
   platforms:
   - macOS
   - Intel
   - bridgeOS
+- name: ApChipID
+  scopes:
+  - 94b73556-2197-4702-82a8-3e1337dafbfb
+- name: AppleSecureBootWindowsPolicy
   description: Controls trust in Microsoft's PCA 2011 cert for Apple Secure Boot
-  name: AppleSecureBootWindowsPolicy
+  type: boolean
+  platforms:
+  - macOS
+  - Intel
+  - bridgeOS
   scopes:
   - 94b73556-2197-4702-82a8-3e1337dafbfb
 - name: BOSCatalogURL
@@ -22,11 +23,11 @@
 - name: BluetoothUHEDevices
 - name: DClr_override
 - name: DebugBluetoothHIDShim
-- platforms:
+- name: DefaultBackgroundColor
+  description: boot.efi background color. Stored as BGRA.
+  platforms:
   - macOS
   - Intel
-  description: boot.efi background color. Stored as BGRA.
-  name: DefaultBackgroundColor
   scopes:
   - 4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14
 - name: GPUROM
@@ -34,13 +35,13 @@
 - name: HardwareModel
 - name: IASCurrentInstallPhase
 - name: IASInstallPhaseList
-- type: :string
+- name: IASUCatalogURL
+  description: This is the update url used for install / update.  Security issues
+    can occur when set to HTTP.  Typically managed through `seedutil`
+  type: string
   platforms:
   - macOS
   - Intel
-  description: This is the update url used for install / update.  Security issues
-    can occur when set to HTTP.  Typically managed through `seedutil`
-  name: IASUCatalogURL
 - name: IDInstallerDataV2
 - name: IOBusyInterest
 - name: IODeviceMemory
@@ -62,19 +63,19 @@
 - name: StartupManagerPolicy
   scopes:
   - 5eeb160f-45fb-4ce9-b4e3-610359abf6f8
-- type: :integer
+- name: StartupMute
   description: Mute startup chime
-  name: StartupMute
+  type: integer
   scopes:
   - default
 - name: SystemAudioVolume
 - name: SystemAudioVolumeExtension
 - name: SystemAudioVolumeSaved
-- platforms:
+- name: UIScale
+  description: boot.efi interface scaling
+  platforms:
   - macOS
   - Intel
-  description: boot.efi interface scaling
-  name: UIScale
   scopes:
   - 4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14
 - name: _csegbufsz_experiment
@@ -87,24 +88,24 @@
 - name: adbe-tunable
 - name: adbe-tunables
 - name: adfe-tunables
-- type: :string
+- name: aht-results
+  description: Apple Hardware Test (diags) - PList
+  type: string
   platforms:
   - macOS
   - PPC
   - Intel
-  description: Apple Hardware Test (diags) - PList
-  name: aht-results
 - name: allow-root-hash-mismatch
 - name: ane-type
 - name: aud-early-boot-critical
-- type: :boolean
+- name: auto-boot
   description: If the device should `fsboot` upon power on
-  name: auto-boot
+  type: boolean
 - name: auto-boot-halt-stage
 - name: auto-boot-usb
 - name: auto-boot-x86-once
-- type: :boolean
-  name: auto-boot?
+- name: auto-boot?
+  type: :boolean
 - name: backlight-level
   scopes:
   - common
@@ -115,31 +116,31 @@
 - name: bluetoothHostControllerSwitchBehaviour
 - name: bluetoothInternalControllerInfo
 - name: board-id
-- type: :string
-  persistent: true
+- name: boot-args
   description: String passed to the XNU kernel at boot (M1's do filter this though)
-  name: boot-args
+  type: string
+  persistent: true
   scopes:
   - common
-- type: :string
-  name: boot-breadcrumbs
-- type: :string
-  name: boot-command
-- type: :string
-  name: boot-device
+- name: boot-breadcrumbs
+  type: string
+- name: boot-command
+  type: string
+- name: boot-device
+  type: string
 - name: boot-file
 - name: boot-image
-- type: :number
-  name: boot-partition
+- name: boot-partition
+  type: number
 - name: boot-path
 - name: boot-ramdisk
 - name: boot-script
 - name: boot-stage
 - name: boot-volume
-- type: :number
-  persistent: true
+- name: bootdelay
   description: Seconds to pause before autoboot
-  name: bootdelay
+  type: number
+  persistent: true
 - name: bt1addr
 - name: btaddr
 - name: build-style
@@ -152,19 +153,19 @@
 - name: console-screen
 - name: core-bin-offset
 - name: cpu-bin-offset
-- platforms:
-  - macOS
-  - Intel
+- name: csr-active-config
   description: SIP bitmask (see csr.h in xnu source)
-  name: csr-active-config
-  scopes:
-  - common
-- type: :string
   platforms:
   - macOS
   - Intel
+  scopes:
+  - common
+- name: csr-data
   description: Kexts to approve regardless of CSR_ALLOW_UNAPPROVED_KEXTS
-  name: csr-data
+  type: string
+  platforms:
+  - macOS
+  - Intel
   scopes:
   - common
 - name: current-network
@@ -173,14 +174,14 @@
 - name: darkboot
 - name: debug-gg
 - name: debug-soc
-- type: :integer
-  persistent: true
+- name: debug-uarts
   description: Bitfield of which UARTs to enable
-  name: debug-uarts
+  type: integer
+  persistent: true
 - name: default-client-ip
 - name: default-gateway-ip
-- type: :boolean
-  name: default-mac-address?
+- name: default-mac-address?
+  type: boolean
 - name: default-router-ip
 - name: default-server-ip
 - name: default-subnet-mask
@@ -201,78 +202,78 @@
 - name: efi-boot-device-data
 - name: emu
 - name: enable-remap-mode
-- type: :boolean
+- name: enter-tdm-mode
+  description: Enter USB Target Disk Mode
+  type: boolean
   platforms:
   - macOS
   - Intel
-  description: Enter USB Target Disk Mode
-  name: enter-tdm-mode
 - name: eth1addr
 - name: ethaddr
 - name: failboot-breadcrumbs
-- type: :string
+- name: fcode-debug?
+  description: Forth code debugging for OpenFirmware
+  type: string
   platforms:
   - macOS
   - PPC
-  description: Forth code debugging for OpenFirmware
-  name: fcode-debug?
 - name: filesize
 - name: fixed-lcm-boost
 - name: fm-activation-locked
 - name: fm-spstatus
-- type: :string
+- name: fmm-computer-name
   description: Current saved host name
-  name: fmm-computer-name
+  type: string
   scopes:
   - common
 - name: fmm-mobileme-token-FMM
-- type: :boolean
+- name: fmm-mobileme-token-FMM-BridgeHasAccount
+  description: If this value is true FMM is handled by the T2 coprocessor.  This is
+    always false on Apple Silicon as there is no bridgeOS device
+  type: boolean
   platforms:
   - macOS
   - Intel
   - macOS ASi
-  description: If this value is true FMM is handled by the T2 coprocessor.  This is
-    always false on Apple Silicon as there is no bridgeOS device
-  name: fmm-mobileme-token-FMM-BridgeHasAccount
-- type: :boolean
+- name: fmm-mobileme-token-FMM-WipePending
+  description: If a device wipe has been requested by FindMy
+  type: boolean
   platforms:
   - macOS
   - Intel
-  description: If a device wipe has been requested by FindMy
-  name: fmm-mobileme-token-FMM-WipePending
 - name: force-upgrade-fail
 - name: gpu-policy
-- type: :boolean
+- name: gpu-power-prefs
+  description: Disable dGPU (I think only for older models)
+  type: boolean
   platforms:
   - macOS
   - Intel
-  description: Disable dGPU (I think only for older models)
-  name: gpu-power-prefs
   scopes:
   - FA4CE28D-B62F-4C99-9CC3-6815686E30F9
 - name: idle-off
-- platforms:
+- name: input-device
+  platforms:
   - macOS
   - PPC
-  name: input-device
-- platforms:
+- name: input-device-1
+  platforms:
   - macOS
   - PPC
-  name: input-device-1
 - name: ipaddr
 - name: is-tethered
 - name: kaslr-off
 - name: kaslr-slide
-- type: :boolean
+- name: little-endian?
+  description: If the CPU is a little endian architecture
+  type: boolean
   platforms:
   - macOS
   - PPC
-  description: If the CPU is a little endian architecture
-  name: little-endian?
 - name: load-base
 - name: loadaddr
-- type: :string
-  name: lts-persistance
+- name: lts-persistance
+  type: string
 - name: mca-info0
 - name: mouse-device
 - name: multiupdater-retry-limits
@@ -360,9 +361,9 @@
   scopes:
   - 36C28AB5-6566-4C50-9EBD-CBB920F83843
 - name: prev-lang-diags:kbd
-- type: :string
+- name: prev-lang:kbd
   description: Default keyboard layout
-  name: prev-lang:kbd
+  type: string
   scopes:
   - common
 - name: prevent-restores
@@ -374,12 +375,12 @@
 - name: ramrod-nvram-session
 - name: ramrod-nvram-shadow-path
 - name: rbdaddr0
-- type: :number
-  name: real-base
-- type: :boolean
-  name: real-base?
-- type: :number
-  name: real-size
+- name: real-base
+  type: number
+- name: real-base?
+  type: boolean
+- name: real-size
+  type: number
 - name: recovery-boot-mode
 - name: recovery-boot-setting
 - name: recoveryos-inited-update
@@ -405,19 +406,19 @@
 - name: restore-step-results
 - name: restore-step-warnings
 - name: root-live-fs
-- type: :number
-  name: screen-#columns
-- type: :number
-  name: screen-#rows
-- type: :string
+- name: screen-#columns
+  type: number
+- name: screen-#rows
+  type: number
+- name: security-mode
   description: "FireWire security mode \nSee IOFireWireController.cpp in IOFireWireFamily:
     https://github.com/apple-oss-distributions/IOFireWireFamily/blob/IOFireWireFamily-483/IOFireWireFamily.kmodproj/IOFireWireController.cpp#L4212\n"
-  name: security-mode
+  type: string
   scopes:
   - common
 - name: security-password
-- type: :number
-  name: selftest-#megs
+- name: selftest-#megs
+  type: number
 - name: serverip
 - name: soc-bin-offset
 - name: stress-rack

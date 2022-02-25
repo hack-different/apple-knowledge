@@ -1,29 +1,27 @@
 ---
 bootrom_exploits:
+  - alloc8
   - checkm8
 secondary_cores:
   homr:
-  isp:
-    name: isp
-    firmware_image: ispf
+  - name: isp
+    firmware_type: ispf
     description: Image Signal Processor
-  magg:
-    name: maggie
+  - name: maggie
     description: Ultra low power FPGA (iCE5LP4K) / Lattice iCEcube2
-  pmpf:
-    name: pmp
+    firmware_type: magg
+  - name: pmp
     description: Power Management Processor
-  rans:
-    name: AppleNandStorage
-  veridian:
-    name: Veridian
+    firmware_type: pmpf
+  - name: AppleNandStorage
+    firmware_type: rans
+  - name: Veridian
     type: arm7m
     is_rtkit: false
     stack_size: 0x6000
     ram_base: 0x20000000
     mmio_base: 0x40000000
-  vinyl:
-    name: Vinyl
+  - name: Vinyl
     description: >
       the eUICC or eSIM
       Contains a ZIP file with various hash specifiers, each containing two directories.  One `recovery` is
@@ -35,6 +33,7 @@ secondary_cores:
       These folders contain a number of "root keys" as defined in the eUICC spec.
     firmware_packing:
       - zip
+
 chip_ids:
   0x6000:
     name: t6000
@@ -48,6 +47,7 @@ chip_ids:
         product_name: MacBook Pro (M1 Pro, 16-inch, 2021)
         product_id: MacBookPro18,1
         board_name: j316sap
+
   0x6001:
     name: t6001
     description: M1 Max
@@ -60,9 +60,29 @@ chip_ids:
         product_name: MacBook Pro (M1 Max, 16-inch, 2021)
         product_id: MacBookPro18,2
         board_name: j316cap
+
   0x7000:
     name: t7000
     description: A8
+    architecture: arm64
+    revisions:
+      0x11:
+        security_epoch: 0x01
+        securerom_version: iBoot-1992.0.0.1.19
+    securerom:
+      nonce:
+        ap_length: 0x14
+        sep_length: 0x14
+      demotion_reg: 0x20e02a000
+      memory_layout:
+        rom: 0x100000000-0x80000+
+        sram: 0x180000000-0x400000+
+        dram: 0x800000000
+        dfu_image: 0x180380000
+        dfu_load: 0x180000000
+        recovery_image: 0x83D7F7000
+        recovery_load: 0x800000000
+        trampoline: 0x1800c0000
     boards:
       0x04:
         product_name: iPhone 6 Plus
@@ -96,6 +116,7 @@ chip_ids:
         product_name: HomePod
         product_id: AudioAccessory1,1
         board_name: b238aap
+
   0x7001:
     name: t7001
     description: A8X
@@ -108,6 +129,7 @@ chip_ids:
         product_name: iPad Air 2 (WiFi)
         product_id: iPad5,3
         board_name: j81ap
+
   0x7002:
     name: t7002
     description:
@@ -120,6 +142,7 @@ chip_ids:
         product_name: Apple Watch 42mm (1st gen)
         product_id: Watch1,2
         board_name: n28aap
+
   0x8000:
     name: t8000
     description: A9
@@ -144,6 +167,7 @@ chip_ids:
         product_name: iPad (5th gen, Cellular)
         product_id: iPad6,12
         board_name: j72sap
+
   0x8001:
     name: t8001
     description: A9X
@@ -164,6 +188,7 @@ chip_ids:
         product_name: iPad Pro 12.9-inch (1st gen, Cellular)
         product_id: iPad6,8
         board_name: j99aap
+
   0x8002:
     name: t8002
     descrioption: S1
@@ -184,6 +209,7 @@ chip_ids:
         product_name: Apple Watch Series 2 (42mm)
         product_id: Watch2,4
         board_name: n75ap
+
   0x8003:
     name: t8003
     description: A9
@@ -228,6 +254,7 @@ chip_ids:
         product_namw: Apple Watch Series 3 (42mm Cellular)
         product_id: Watch3,2
         board_name: n111bap
+
   0x8006:
     name: t8006
     description: S4
@@ -284,6 +311,7 @@ chip_ids:
         product_name: Apple Watch SE (44mm Cellular)
         product_id: Watch5,12
         board_name: n142bap
+
   0x8010:
     name: t8010
     description: A10
@@ -320,6 +348,7 @@ chip_ids:
         product_name: iPad (7th gen, Cellular)
         product_id: iPad7,12
         board_name: j172ap
+
   0x8011:
     name: t8011
     description: A10X
@@ -348,6 +377,7 @@ chip_ids:
         product_name: iPad Pro 12.9-inch (2nd gen, Cellular)
         product_id: iPad7,2
         board_name: j121ap
+
   0x8012:
     name: t8012
     description: T2
@@ -431,6 +461,7 @@ chip_ids:
         product_name: Apple T2 MacBookAir9,1 (j230k)
         product_id: iBridge2,15
         board_name: j230kap
+
   0x8015:
     name: t8015
     description: A12
@@ -459,6 +490,7 @@ chip_ids:
         product_name: iPhone X (GSM)
         product_id: iPhone10,6
         board_name: d221ap
+
   0x8020:
     name: t8020
     description: A13
@@ -507,6 +539,7 @@ chip_ids:
         product_name: iPad (8th gen, Celluar)
         product_id: iPad11,7
         board_name: j172aap
+
   0x8027:
     name: t8027
     description: A14X/Z
@@ -563,6 +596,7 @@ chip_ids:
         product_name: Developer Transition Kit (2020)
         product_id: ADP3,2
         board_name: j273aap
+
   0x8030:
     name: t8030
     description: A14
@@ -591,6 +625,7 @@ chip_ids:
         product_name: iPad (9th gen, Cellular)
         product_id: iPad12,2
         board_name: j182ap
+
   0x8101:
     name: t8101
     description: A14
@@ -623,6 +658,7 @@ chip_ids:
         product_name: iPod Touch (7th gen)
         product_id: iPod9,1
         board_name: n112ap
+
   0x8103:
     name: t8103
     description: M1
@@ -682,6 +718,7 @@ chip_ids:
         product_name: iMac 24-inch (M1, Four Ports, 2021)
         product_id: iMac21,2
         board_name: iMac21,2
+
   0x8110:
     name: t8110
     description: A15
@@ -710,6 +747,7 @@ chip_ids:
         product_name: iPhone 13 Pro Max
         product_id: iPhone14,3
         board_name: d64ap
+
   0x8301:
     name: t8301
     description: S6
@@ -746,6 +784,7 @@ chip_ids:
         product_name: Apple Watch Series 7 (45mm Cellular)
         product_id: Watch6,9
         board_name: n188bap
+
   0x8720:
     name: s5L8720
     description:
@@ -761,6 +800,7 @@ chip_ids:
         product_name: iPod Touch (2nd gen)
         product_id: iPod2,1
         board_name: n72ap
+
   0x8900:
     name: s5L8900
     securerom:
@@ -776,6 +816,7 @@ chip_ids:
         product_name: iPod Touch (1st gen)
         product_id: iPod1,1
         board_name: m45ap
+
   0x8920:
     name: s5l8920xsi
     description:
@@ -806,6 +847,7 @@ chip_ids:
         product_name: iPod Touch (3rd gen)
         product_id: iPod3,1
         board_name: n18ap
+
   0x8930:
     name: s8930
     description: A4
@@ -838,6 +880,7 @@ chip_ids:
         product_name: Apple TV 2
         product_id: AppleTV2,1
         board_name: k66ap
+
   0x8940:
     name: s5l8940xsi
     description: A5
@@ -862,6 +905,7 @@ chip_ids:
         product_name: iPhone 4s
         product_id: iPhone4,1
         board_name: n94ap
+
   0x8942:
     name:
     description:
@@ -890,6 +934,7 @@ chip_ids:
         product_name: iPad mini (Global)
         product_id: iPad2,7
         board_name: p107ap
+
   0x8945:
     name: s5l8945xsi
     description:
@@ -918,6 +963,7 @@ chip_ids:
         product_name: Apple TV 3 (2013)
         product_id: AppleTV3,2
         board_name: j33iap
+
   0x8950:
     name: s8950
     description: A6
@@ -942,6 +988,7 @@ chip_ids:
         product_name: iPhone 5c (Global)
         product_id: iPhone5,4
         board_name: n49ap
+
   0x8955:
     name: s5l8950xsi
     description:
@@ -970,10 +1017,11 @@ chip_ids:
         product_name: iPad Air (China)
         product_id: iPad4,3
         board_name: j73ap
+
   0x8960:
     name: s8960
     description: A7
-    board:
+    boards:
       0x00:
         product_name: iPhone 5s (GSM)
         product_id: iPhone6,1
