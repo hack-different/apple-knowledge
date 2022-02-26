@@ -216,8 +216,8 @@ chip_ids:
         board_name: j81ap
 
   0x7002:
-    name: t7002
-    description:
+    name: s7002
+    description: S1
     architecture:
 
     revisions:
@@ -255,7 +255,7 @@ chip_ids:
 
 
   0x8000:
-    name: t8000
+    name: s8000
     description: A9
     architecture:
 
@@ -304,7 +304,7 @@ chip_ids:
         board_name: j72sap
 
   0x8001:
-    name: t8001
+    name: s8001
     description: A9X
     architecture:
 
@@ -352,7 +352,7 @@ chip_ids:
 
   0x8002:
     name: t8002
-    description: S1
+    description: S2
     architecture:
 
     revisions:
@@ -398,7 +398,7 @@ chip_ids:
 
 
   0x8003:
-    name: t8003
+    name: s8003
     description: A9
     architecture:
 
@@ -679,10 +679,6 @@ chip_ids:
         product_name: iPad Pro 10.5-inch (Cellular)
         product_id: iPad7,4
         board_name: j208ap
-      0x08:
-        product_name: Apple TV 4K (2nd gen)
-        product_id: AppleTV11,1
-        board_name: j305ap
       0x0C:
         product_name: iPad Pro 12.9-inch (2nd gen, WiFi)
         product_id: iPad7,1
@@ -880,7 +876,7 @@ chip_ids:
 
     boards:
       0x08:
-        product_name:
+        product_name: Apple TV 4K (2nd gen)
         product_id: AppleTV11,1
         board_name: j305ap
       0x0A:
@@ -1517,7 +1513,7 @@ chip_ids:
         board_name: n94ap
 
   0x8942:
-    name:
+    name: S5L8942
     description:
     boards:
       0x00:
