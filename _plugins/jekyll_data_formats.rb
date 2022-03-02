@@ -2,6 +2,7 @@
 
 require 'jekyll/generator'
 require 'plist'
+require 'toml'
 
 # This plugin generates data files in the result for every format of data provided in the _data folder
 class JekyllDataFormatsPlugin < Jekyll::Generator
@@ -24,7 +25,8 @@ class JekyllDataFormatsPlugin < Jekyll::Generator
     {
       json: JSON.dump(data),
       yaml: data.to_yaml,
-      plist: data&.to_plist
+      plist: data&.to_plist,
+      toml: TOML::Generator.new(data).body
     }
   end
 
