@@ -54,3 +54,5 @@ group :development do
   gem 'sorbet'
   gem 'webrick'
 end
+
+gem 'toml', '~> 0.3.0'
