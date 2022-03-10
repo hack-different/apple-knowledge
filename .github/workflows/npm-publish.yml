@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: 16
           cache: yarn
+          cache-dependency-path: _packages/node/yarn.lock
       - working-directory: ./_packages/node
         run: |
           yarn install
@@ -31,7 +32,6 @@ jobs:
         with:
           node-version: 16
           cache: yarn
-          working-directory: ./_packages/node
           cache-dependency-path: _packages/node/yarn.lock
           registry-url: https://registry.npmjs.org/
       - name: Install dependencies

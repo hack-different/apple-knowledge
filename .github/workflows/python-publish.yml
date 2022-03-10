@@ -29,6 +29,7 @@ jobs:
       working-directory: ./_packages/python
       run: |
         python -m pip install --upgrade pip poetry
+        ./update_version.py
         poetry install
     - name: Build package
       working-directory: ./_packages/python
