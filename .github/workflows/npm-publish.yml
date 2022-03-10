@@ -4,8 +4,8 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [created]
+  push:
+    branches: [ main ]
 
 jobs:
   build:
@@ -15,27 +15,33 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-          cache: 'yarn'
-      - run: yarn install
-        working-directory: ./_packages/node
-      - run: yarn run build
-        working-directory: ./_packages/node
+          cache: yarn
+      - working-directory: ./_packages/node
+        run: |
+          yarn install
+          yarn run build
 
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
+    environment: node-push
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-          cache: 'yarn'
+          cache: yarn
           registry-url: https://registry.npmjs.org/
-      - run: yarn install
+      - name: Install dependencies
         working-directory: ./_packages/node
-      - run: yarn run build
+        run: |
+          yarn install
+      - name: Build package
         working-directory: ./_packages/node
-      - run: yarn publish
+        run: |
+          yarn run build
+      - name: Publish to PyPI
+        run: yarn publish
         working-directory: ./_packages/node
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
