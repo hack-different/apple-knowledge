@@ -1,6 +1,41 @@
 # frozen_string_literal: true
 
-desc 'build the data gem'
-task :default do
-  raise 'not implemented'
+require 'pathutil'
+require 'fileutils'
+
+RUBY_PACKAGE_ROOT = File.dirname(__FILE__)
+OUTPUT_ROOT = File.join(RUBY_PACKAGE_ROOT, 'share')
+REPO_ROOT = File.expand_path(File.join(RUBY_PACKAGE_ROOT, '../..'))
+DATA_ROOT = File.join(REPO_ROOT, '_data')
+DATA_FILES_GLOB = File.join(DATA_ROOT, '**', '*.yaml')
+DATA_PATH = Pathutil.new DATA_ROOT
+OUTPUT_PATH = Pathutil.new OUTPUT_ROOT
+
+desc 'set the version patch to the git main height'
+task :version do
+  repo_height = `git rev-list --count main`
+
+  version_file = %(# frozen_string_literal: true
+
+module AppleData
+  VERSION = '1.0.#{repo_height.chomp}'
 end
+)
+
+  File.write(File.join(RUBY_PACKAGE_ROOT, 'lib/apple_data/version.rb'), version_file)
+end
+
+desc 'copy data files'
+task :files do
+  Dir[DATA_FILES_GLOB].each do |path|
+    file_path = Pathutil.new path
+
+    rel_path = file_path.relative_path_from DATA_PATH
+    final_path = File.join(OUTPUT_ROOT, rel_path)
+    FileUtils.mkdir_p(File.dirname(final_path))
+    FileUtils.cp path, final_path
+  end
+end
+
+desc 'build the package'
+task default: %i[files version]
