@@ -22,7 +22,7 @@ gem 'sorbet-runtime'
 # RESOURCE: https://github.com/planetjekyll/awesome-jekyll-plugins
 group :jekyll_plugins do
   gem 'jekyll-coffeescript'
-  gem 'jekyll-commonmark-ghpages'
+  gem 'jekyll-commonmark'
   gem 'jekyll-default-layout'
   gem 'jekyll-gist'
   gem 'jekyll-github-metadata'

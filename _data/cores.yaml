@@ -1,29 +1,89 @@
-
 ---
+description: attributes about various Apple SoCs and Boards
+credits:
+templates:
+  - &checkm8_payload_arm64
+    payload_offset: 0x180
+    payload_size: 0x240
+  - &checkm8_payload_armv7
+    payload_offset: 0x180
+    payload_size: 0x140
+  - &usb_magic_32
+    exec_magic: 0x65786563
+    done_magic: 0x646F6E65
+    memc_magic: 0x6D656D63
+    mems_magic: 0x6D656D73
+  - &usb_magic_64
+    exec_magic: 0x6578656365786563
+    done_magic: 0x646F6E65646F6E65
+    memc_magic: 0x6D656D636D656D63
+    mems_magic: 0x6D656D736D656D73
+  - &dfu_load_s894x
+    dfu_image_base: 0x34000000
+    dfu_load_base: 0x9FF00000
+    recovery_image_base: 0x9FF00000
+    recovery_load_base: 0x80000000
+  - &dfu_load_s895x
+    dfu_image_base: 0x10000000
+    dfu_load_base: 0xBFF00000
+    recovery_image_base: 0xBFF00000
+    recovery_load_base: 0x80000000
+  - &dfu_load_t8002_t8004
+    dfu_image_base: 0x48818000
+    dfu_load_base: 0x80000000
+    recovery_image_base: 0x48818000
+    recovery_load_base: 0x80000000
+  - &dfu_load_t8010_t8011
+    dfu_image_base: 0x1800B0000
+    dfu_load_base: 0x800000000
+    recovery_image_base: 0x1800B0000
+    recovery_load_base: 0x800000000
+  - &dfu_load_t8012_t8015
+    dfu_image_base: 0x18001C000
+    dfu_load_base: 0x800000000
+    recovery_image_base: 0x18001C000
+    recovery_load_base: 0x800000000
+    heap_base: 0x1801E8000
+    heap_offset: 0x5000
+    trampoline_base: 0x180018000
+    trampoline_offset: 0x620
+    page_offset: 0x400
+  - &dfu_load_t800x
+    dfu_image_base: 0x180380000
+    dfu_load_base: 0x180000000
+    recovery_image_base: 0x83D7F7000
+    recovery_load_base: 0x800000000
+    trampoline_base: 0x00000001800c0000
+
+
 bootrom_exploits:
   - alloc8
   - checkm8
 
 
 secondary_cores:
-  homr:
   - name: isp
     firmware_type: ispf
     description: Image Signal Processor
+
   - name: maggie
     description: Ultra low power FPGA (iCE5LP4K) / Lattice iCEcube2
     firmware_type: magg
+
   - name: pmp
     description: Power Management Processor
     firmware_type: pmpf
+
   - name: AppleNandStorage
     firmware_type: rans
+
   - name: Veridian
     type: arm7m
     is_rtkit: false
     stack_size: 0x6000
     ram_base: 0x20000000
     mmio_base: 0x40000000
+
   - name: Vinyl
     description: >
       the eUICC or eSIM
