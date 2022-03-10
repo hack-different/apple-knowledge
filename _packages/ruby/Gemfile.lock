@@ -1,21 +1,17 @@
-PATH
-  remote: .
-  specs:
-    apple-data (1.0.375)
-
 GEM
   remote: https://rubygems.org/
   specs:
     forwardable-extended (2.6.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+    rake (13.0.6)
 
 PLATFORMS
   x86_64-darwin-21
 
 DEPENDENCIES
-  apple-data!
   pathutil
+  rake
 
 BUNDLED WITH
    2.3.6
