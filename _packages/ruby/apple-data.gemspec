@@ -8,9 +8,9 @@ Gem::Specification.new do |s|
   s.description = 'Much longer explanation of the example!'
   s.authors     = ['Ruby Coder']
   s.email       = 'rubycoder@example.com'
-  s.files       = ['lib/example.rb']
+  s.files       = Dir['share/**/*.yaml']
   s.homepage    = 'https://rubygems.org/gems/example'
-  s.required_ruby_version '>= 3.0'
+  s.required_ruby_version = '>= 3.0'
   s.metadata = { 'source_code_uri' => 'https://github.com/example/example',
                  'rubygems_mfa_required' => 'true' }
 end

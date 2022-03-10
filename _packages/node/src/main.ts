@@ -41,7 +41,7 @@ async function updateVersion() {
 async function main() {
     await updateVersion()
 
-    const dataPath = path.resolve(process.cwd(), '..', '..', '_data')
+    const dataPath = path.resolve(process.cwd(), '..', '..', 'share')
 
     const outputPath = path.resolve(process.cwd(), 'share')
 
