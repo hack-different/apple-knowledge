@@ -123,3 +123,6 @@ task :json do
     File.write(new_file, JSON.dump(data))
   end
 end
+
+desc 'default build task'
+task default: [:sort]
