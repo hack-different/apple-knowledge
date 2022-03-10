@@ -12,12 +12,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - uses: actions/setup-node@v2
         with:
           node-version: 16
           cache: yarn
           cache-dependency-path: _packages/node/yarn.lock
-      - working-directory: ./_packages/node
+
+      - name: Build node package
+        working-directory: ./_packages/node
         run: |
           yarn install
           yarn run build
@@ -28,20 +33,26 @@ jobs:
     environment: node-push
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - uses: actions/setup-node@v2
         with:
           node-version: 16
           cache: yarn
           cache-dependency-path: _packages/node/yarn.lock
           registry-url: https://registry.npmjs.org/
+
       - name: Install dependencies
         working-directory: ./_packages/node
         run: |
           yarn install
+
       - name: Build package
         working-directory: ./_packages/node
         run: |
           yarn run build
+
       - name: Publish to PyPI
         run: yarn publish
         working-directory: ./_packages/node
