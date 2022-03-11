@@ -115,7 +115,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [osy/AMFIExemption](https://github.com/osy/AMFIExemption)
 * [KTRR by Siguza](https://blog.siguza.net/KTRR/)
 * [Tick Tock by xerub](https://xerub.github.io/ios/kpp/2017/04/13/tick-tock.html)
-* [Casa de PPL by Levin](https://newosxbook.com/articles/CasaDePPL.html)
+* [Casa de PPL by Levin](http://newosxbook.com/articles/CasaDePPL.html)
 * [KTRW by Brandon Azad](https://googleprojectzero.blogspot.com/2019/10/ktrw-journey-to-build-debuggable-iphone.html)
 * [Qwertyoruiopz Attacking XNU: Part 1](https://web.archive.org/web/20160131061526/http://blog.qwertyoruiop.com/?p=38)
 * [Qwertyoruiopz Attacking XNU: Part 2](https://web.archive.org/web/20160131061526/http://blog.qwertyoruiop.com/?p=48)
@@ -220,7 +220,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ### Sandbox or 'Seatbelt'
 
-* [Levin's - The Apple Sandbox](https://newosxbook.com/files/HITSB.pdf)
+* [Levin's - The Apple Sandbox](http://newosxbook.com/files/HITSB.pdf)
 * [iBSparkles Breaking Entitlements](https://sparkes.zone/blog/ios/2018/04/06/diving-into-the-kernel-entitlements.html)
 * [stek29 Shenanigans Shenanigans](https://stek29.rocks/2018/12/11/shenanigans.html)
 * [argp vs com.apple.security.sandbox](https://census-labs.com/media/sandbox-argp-csw2019-public.pdf)
