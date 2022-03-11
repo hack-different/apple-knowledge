@@ -220,7 +220,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ### Sandbox or 'Seatbelt'
 
-* [Levin's - The Apple Sandbox](https://newosxbook.com/files/HITSB.pdf)
+* [Levin's - The Apple Sandbox](http://newosxbook.com/files/HITSB.pdf)
 * [iBSparkles Breaking Entitlements](https://sparkes.zone/blog/ios/2018/04/06/diving-into-the-kernel-entitlements.html)
 * [stek29 Shenanigans Shenanigans](https://stek29.rocks/2018/12/11/shenanigans.html)
 * [argp vs com.apple.security.sandbox](https://census-labs.com/media/sandbox-argp-csw2019-public.pdf)
