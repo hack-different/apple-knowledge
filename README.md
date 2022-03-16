@@ -248,6 +248,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [ARM Software Standards](https://developer.arm.com/architectures/system-architectures/software-standards)
   * [Siguza's ARM Bootcamp](https://github.com/Siguza/ios-resources/blob/master/bits/arm64.md)
 * Apple CPUs
+  * [Asahi: Introduction to Apple Silicon](https://github.com/AsahiLinux/docs/wiki/Introduction-to-Apple-Silicon)
   * [dougallj's applecpu](https://dougallj.github.io/applecpu/firestorm.html)
 * Compilers
   * [ARM Clang PAC ABI](https://github.com/apple/llvm-project/blob/apple/main/clang/docs/PointerAuthentication.rst)
