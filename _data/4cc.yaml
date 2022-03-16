@@ -11,88 +11,6 @@
   description:
   usage:
   - SysCfg
-- code: BNCH
-  description: Boot Nonce Hash
-  usage:
-  - APTicket
-- code: BNDL
-  description: Loadable Bundle (plugin)
-  usage:
-  - macOS
-- code: BORD
-  description: Board ID
-  usage:
-  - APTicket
-- code: CEPO
-  description: Certificate Epoch
-  usage:
-  - APTicket
-- code: CHIP
-  description: Chip ID
-  usage:
-  - APTicket
-- code: CLHS
-  description:
-  usage:
-  - SysCfg
-- code: CPRO
-  description: Chip Production Status
-  usage:
-  - Boot Policy
-- code: CPRV
-  description: Chip Revision
-  usage:
-  - APTicket
-- code: CSEC
-  description: Chip Security Mode
-  usage:
-  - APTicket
-- code: ECID
-  description: Exclusive Chip ID
-  usage:
-  - APTicket
-- code: EPRO
-  description: Effective Production Status
-  usage:
-  - APTicket
-- code: ESEC
-  description: Effective Security Status
-  usage:
-  - APTicket
-- code: MANB
-  description: Manifest Body
-  usage:
-  - APTicket
-- code: MANP
-  description: Manifest Properties
-  usage:
-  - APTicket
-- code: MOJO
-  description: Mojo Debug Flag
-  usage:
-  - SMC
-- code: Mod#
-  description: Model Number
-  usage:
-  - FDR
-  - SysCfg
-- code: Regn
-  description: Region
-  usage:
-  - FDR
-  - SysCfg
-- code: SDOM
-  description: Security Domain
-  usage:
-  - APTicket
-- code: SrNm
-  description: Serial Number
-  usage:
-  - SysCfg
-- code: WSKU
-  description:
-  usage:
-  - SysCfg
 - code: anef
   description: Apple Neural Engine Firmware
   usage:
@@ -129,15 +47,51 @@
   description: Audio / Video Encryption (DRM) Firmware
   usage:
   - Firmware
+- code: BNCH
+  description: Boot Nonce Hash
+  usage:
+  - APTicket
+- code: BNDL
+  description: Loadable Bundle (plugin)
+  usage:
+  - macOS
+- code: BORD
+  description: Board ID
+  usage:
+  - APTicket
 - code: bstc
   description:
   usage: []
+- code: CEPO
+  description: Certificate Epoch
+  usage:
+  - APTicket
+- code: CHIP
+  description: Chip ID
+  usage:
+  - APTicket
 - code: ciof
   description:
   usage:
   - Firmware
+- code: CLHS
+  description:
+  usage:
+  - SysCfg
 - code: coih
   description: CustomKC or fuOS Image4 Hash
+  usage:
+  - APTicket
+- code: CPRO
+  description: Chip Production Status
+  usage:
+  - Boot Policy
+- code: CPRV
+  description: Chip Revision
+  usage:
+  - APTicket
+- code: CSEC
+  description: Chip Security Mode
   usage:
   - APTicket
 - code: csys
@@ -162,6 +116,18 @@
   usage:
   - FDR
   - SysCfg
+- code: ECID
+  description: Exclusive Chip ID
+  usage:
+  - APTicket
+- code: EPRO
+  description: Effective Production Status
+  usage:
+  - APTicket
+- code: ESEC
+  description: Effective Security Status
+  usage:
+  - APTicket
 - code: fCfg
   description:
   usage: []
@@ -209,6 +175,23 @@
   usage:
   - Firmware
   - Boot Policy
+- code: MANB
+  description: Manifest Body
+  usage:
+  - APTicket
+- code: MANP
+  description: Manifest Properties
+  usage:
+  - APTicket
+- code: Mod#
+  description: Model Number
+  usage:
+  - FDR
+  - SysCfg
+- code: MOJO
+  description: Mojo Debug Flag
+  usage:
+  - SMC
 - code: nsih
   description: Next Stage Image4 Hash
   usage: []
@@ -216,6 +199,11 @@
   description: Power Management Processor Firmware
   usage:
   - Firmware
+- code: Regn
+  description: Region
+  usage:
+  - FDR
+  - SysCfg
 - code: rlg1
   description: Restore logo
   usage:
@@ -232,6 +220,10 @@
   description: Remote Policy Nonce Hash
   usage:
   - Boot Policy
+- code: SDOM
+  description: Security Domain
+  usage:
+  - APTicket
 - code: seal
   description:
   usage:
@@ -280,6 +272,10 @@
   description: Secure Enclave Processor Boot Nonce Hash
   usage:
   - APTicket
+- code: SrNm
+  description: Serial Number
+  usage:
+  - SysCfg
 - code: tCfg
   description:
   usage:
@@ -293,3 +289,7 @@
   description: Volume Group UUID
   usage:
   - Boot Policy
+- code: WSKU
+  description:
+  usage:
+  - SysCfg

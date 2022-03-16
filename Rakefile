@@ -36,9 +36,9 @@ def sort_yaml(file, key, property = nil)
   items = YAML.load_file path
 
   if property
-    items[property].sort_by! { |item| item[key.to_s] }
+    items[property].sort_by! { |item| item[key.to_s].downcase }
   else
-    items.sort_by! { |item| item[key.to_s] }
+    items.sort_by! { |item| item[key.to_s].downcase }
   end
 
   File.write(path, items.to_yaml)
@@ -112,16 +112,6 @@ task :credits do
   puts credits.inspect
 
   File.write(File.join(BASE_PATH, '_data', 'credits.yaml'), credits.to_yaml)
-end
-
-desc 'convert to JSON'
-task :json do
-  yaml_glob = File.join(BASE_PATH, '_data', '*.yaml')
-  Dir.glob(yaml_glob) do |file|
-    new_file = File.realdirpath(file).to_s.sub('.yaml', '.json')
-    data = YAML.load_file file
-    File.write(new_file, JSON.dump(data))
-  end
 end
 
 desc 'default build task'

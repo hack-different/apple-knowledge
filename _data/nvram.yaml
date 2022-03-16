@@ -1,85 +1,12 @@
 ---
 variables:
+- name: _csegbufsz_experiment
+- name: _libmalloc_experiment
 - name: AAPL,ignore
   platforms:
   - macOS
   - Intel
   - bridgeOS
-- name: ApChipID
-  scopes:
-  - 94b73556-2197-4702-82a8-3e1337dafbfb
-- name: AppleSecureBootWindowsPolicy
-  description: Controls trust in Microsoft's PCA 2011 cert for Apple Secure Boot
-  type: boolean
-  platforms:
-  - macOS
-  - Intel
-  - bridgeOS
-  scopes:
-  - 94b73556-2197-4702-82a8-3e1337dafbfb
-- name: BOSCatalogURL
-- name: BaseSystemAccessabiliityFeatures
-- name: BluetoothInfo
-- name: BluetoothUHEDevices
-- name: DClr_override
-- name: DebugBluetoothHIDShim
-- name: DefaultBackgroundColor
-  description: boot.efi background color. Stored as BGRA.
-  platforms:
-  - macOS
-  - Intel
-  scopes:
-  - 4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14
-- name: GPUROM
-- name: HW_BOOT_DATA
-- name: HardwareModel
-- name: IASCurrentInstallPhase
-- name: IASInstallPhaseList
-- name: IASUCatalogURL
-  description: This is the update url used for install / update.  Security issues
-    can occur when set to HTTP.  Typically managed through `seedutil`
-  type: string
-  platforms:
-  - macOS
-  - Intel
-- name: IDInstallerDataV2
-- name: IOBusyInterest
-- name: IODeviceMemory
-- name: IOPlatformActiveAction
-- name: IOPlatformHaltRestartAction
-- name: IOPlatformPanicAction
-- name: IOPlatformQuiensceAction
-- name: IOPlatformSleepAction
-- name: IOPlatformWakeAction
-- name: IORematchPersonality
-- name: LocationServicesEnabled
-- name: OTA-fsck-metrics
-- name: OTA-post-conversion
-- name: OTA-pre-conversion
-- name: OTA-sealvolume-metrics
-- name: PSFU_STATUS
-- name: SleepWakeFailurePanic
-- name: SleepWakeFailureString
-- name: StartupManagerPolicy
-  scopes:
-  - 5eeb160f-45fb-4ce9-b4e3-610359abf6f8
-- name: StartupMute
-  description: Mute startup chime
-  type: integer
-  scopes:
-  - default
-- name: SystemAudioVolume
-- name: SystemAudioVolumeExtension
-- name: SystemAudioVolumeSaved
-- name: UIScale
-  description: boot.efi interface scaling
-  platforms:
-  - macOS
-  - Intel
-  scopes:
-  - 4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14
-- name: _csegbufsz_experiment
-- name: _libmalloc_experiment
 - name: aapl,panic-info
 - name: aapl,pci
 - name: acc-cm-override-charger-count
@@ -97,6 +24,18 @@ variables:
   - Intel
 - name: allow-root-hash-mismatch
 - name: ane-type
+- name: ApChipID
+  scopes:
+  - 94b73556-2197-4702-82a8-3e1337dafbfb
+- name: AppleSecureBootWindowsPolicy
+  description: Controls trust in Microsoft's PCA 2011 cert for Apple Secure Boot
+  type: boolean
+  platforms:
+  - macOS
+  - Intel
+  - bridgeOS
+  scopes:
+  - 94b73556-2197-4702-82a8-3e1337dafbfb
 - name: aud-early-boot-critical
 - name: auto-boot
   description: If the device should `fsboot` upon power on
@@ -111,10 +50,13 @@ variables:
   - common
 - name: backlight-nits
 - name: base-system-path
+- name: BaseSystemAccessabiliityFeatures
 - name: battery-health
 - name: bluetoothActiveControllerInfo
 - name: bluetoothHostControllerSwitchBehaviour
+- name: BluetoothInfo
 - name: bluetoothInternalControllerInfo
+- name: BluetoothUHEDevices
 - name: board-id
 - name: boot-args
   description: String passed to the XNU kernel at boot (M1's do filter this though)
@@ -126,8 +68,22 @@ variables:
   type: string
 - name: boot-command
   type: string
+  values:
+  - alamo
+  - diags
+  - fsboot
+  - rbm
+  - recover
+  - recover-once
+  - recover-system
+  - rtos
+  - upgrade
 - name: boot-device
   type: string
+  values:
+  - nand0
+  - asp_nand0
+  - nvme_nand0
 - name: boot-file
 - name: boot-image
 - name: boot-partition
@@ -141,6 +97,7 @@ variables:
   description: Seconds to pause before autoboot
   type: number
   persistent: true
+- name: BOSCatalogURL
 - name: bt1addr
 - name: btaddr
 - name: build-style
@@ -172,12 +129,14 @@ variables:
   scopes:
   - 36C28AB5-6566-4C50-9EBD-CBB920F83843
 - name: darkboot
+- name: DClr_override
 - name: debug-gg
 - name: debug-soc
 - name: debug-uarts
   description: Bitfield of which UARTs to enable
   type: integer
   persistent: true
+- name: DebugBluetoothHIDShim
 - name: default-client-ip
 - name: default-gateway-ip
 - name: default-mac-address?
@@ -185,6 +144,13 @@ variables:
 - name: default-router-ip
 - name: default-server-ip
 - name: default-subnet-mask
+- name: DefaultBackgroundColor
+  description: boot.efi background color. Stored as BGRA.
+  platforms:
+  - macOS
+  - Intel
+  scopes:
+  - 4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14
 - name: device-material
 - name: diag-device
 - name: diag-file
@@ -195,6 +161,8 @@ variables:
 - name: display-color-space
 - name: display-rotation
 - name: display-timing
+- name: display-vsh-comp
+- name: dt-path
 - name: e75
 - name: efi-backup-boot-device
 - name: efi-backup-boot-device-data
@@ -251,6 +219,19 @@ variables:
   - Intel
   scopes:
   - FA4CE28D-B62F-4C99-9CC3-6815686E30F9
+- name: GPUROM
+- name: HardwareModel
+- name: HW_BOOT_DATA
+- name: IASCurrentInstallPhase
+- name: IASInstallPhaseList
+- name: IASUCatalogURL
+  description: This is the update url used for install / update.  Security issues
+    can occur when set to HTTP.  Typically managed through `seedutil`
+  type: string
+  platforms:
+  - macOS
+  - Intel
+- name: IDInstallerDataV2
 - name: idle-off
 - name: input-device
   platforms:
@@ -260,6 +241,15 @@ variables:
   platforms:
   - macOS
   - PPC
+- name: IOBusyInterest
+- name: IODeviceMemory
+- name: IOPlatformActiveAction
+- name: IOPlatformHaltRestartAction
+- name: IOPlatformPanicAction
+- name: IOPlatformQuiensceAction
+- name: IOPlatformSleepAction
+- name: IOPlatformWakeAction
+- name: IORematchPersonality
 - name: ipaddr
 - name: is-tethered
 - name: kaslr-off
@@ -272,6 +262,7 @@ variables:
   - PPC
 - name: load-base
 - name: loadaddr
+- name: LocationServicesEnabled
 - name: lts-persistance
   type: string
 - name: mca-info0
@@ -299,6 +290,7 @@ variables:
 - name: ota-conv-panic-indicator
 - name: ota-failure-reason
 - name: ota-forced-reset-uptime
+- name: OTA-fsck-metrics
 - name: ota-initial-breadcrumbs
 - name: ota-initial-result
 - name: ota-install-tonight
@@ -308,6 +300,8 @@ variables:
 - name: ota-os-version
 - name: ota-outcome
 - name: ota-perform-shutdown
+- name: OTA-post-conversion
+- name: OTA-pre-conversion
 - name: ota-reboot-retry-enabled
 - name: ota-reboot-retry-zone
 - name: ota-result
@@ -327,6 +321,7 @@ variables:
 - name: ota-retry-uptime
 - name: ota-retry-user-progress
 - name: ota-retry-warnings
+- name: OTA-sealvolume-metrics
 - name: ota-snapshot-update
 - name: ota-step-battery-level
 - name: ota-step-codes
@@ -360,6 +355,7 @@ variables:
 - name: preferred-networks
   scopes:
   - 36C28AB5-6566-4C50-9EBD-CBB920F83843
+- name: preserve-debuggability
 - name: prev-lang-diags:kbd
 - name: prev-lang:kbd
   description: Default keyboard layout
@@ -368,6 +364,7 @@ variables:
   - common
 - name: prevent-restores
 - name: previous-system-uuid
+- name: PSFU_STATUS
 - name: pwr-path
 - name: radio-error
 - name: ramdisk-size
@@ -383,6 +380,7 @@ variables:
   type: number
 - name: recovery-boot-mode
 - name: recovery-boot-setting
+- name: recovery-breadcrumbs
 - name: recoveryos-inited-update
 - name: recoveryos-passcode-blob
 - name: restore-child-failures
@@ -420,15 +418,36 @@ variables:
 - name: selftest-#megs
   type: number
 - name: serverip
+- name: SleepWakeFailurePanic
+- name: SleepWakeFailureString
 - name: soc-bin-offset
+- name: StartupManagerPolicy
+  scopes:
+  - 5eeb160f-45fb-4ce9-b4e3-610359abf6f8
+- name: StartupMute
+  description: Mute startup chime
+  type: integer
+  scopes:
+  - default
 - name: stress-rack
 - name: summit-panel-id
 - name: system-passcode-lock-blob
+- name: SystemAudioVolume
+- name: SystemAudioVolumeExtension
+- name: SystemAudioVolumeSaved
 - name: target-uuid
 - name: tbt-options
+- name: UIScale
+  description: boot.efi interface scaling
+  platforms:
+  - macOS
+  - Intel
+  scopes:
+  - 4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14
 - name: update-volume
 - name: upgrade-boot-volume
 - name: upgrade-fallback-boot-command
+- name: upgrade-retry
 - name: usb-enabled
 - name: use-generic?
 - name: use-nvramrc?

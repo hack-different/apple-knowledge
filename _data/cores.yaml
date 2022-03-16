@@ -2,22 +2,6 @@
 description: attributes about various Apple SoCs and Boards
 credits:
 templates:
-  - &checkm8_payload_arm64
-    payload_offset: 0x180
-    payload_size: 0x240
-  - &checkm8_payload_armv7
-    payload_offset: 0x180
-    payload_size: 0x140
-  - &usb_magic_32
-    exec_magic: 0x65786563
-    done_magic: 0x646F6E65
-    memc_magic: 0x6D656D63
-    mems_magic: 0x6D656D73
-  - &usb_magic_64
-    exec_magic: 0x6578656365786563
-    done_magic: 0x646F6E65646F6E65
-    memc_magic: 0x6D656D636D656D63
-    mems_magic: 0x6D656D736D656D73
   - &dfu_load_s894x
     dfu_image_base: 0x34000000
     dfu_load_base: 0x9FF00000
@@ -1395,7 +1379,7 @@ chip_ids:
       1:
         security_epoch: 0
         version: iBoot-240.5.1
-        ap_rom_url: http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8720xsi,%20iBoot-240.5.1
+        ap_rom_url: https://securerom.fun/resources/APROM/SecureROM%20for%20s5l8720xsi,%20iBoot-240.5.1
         ap_rom_sha256: cddedc17eb815cd94276469407e450a923db125b367cacd5139a12efdfcf2143
 
     securerom:
@@ -1487,7 +1471,7 @@ chip_ids:
       unknown:
         security_epoch:
         version: iBoot-359.5
-        ap_rom_url: http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8922xsi,%20iBoot-359.5
+        ap_rom_url: https://securerom.fun/resources/APROM/SecureROM%20for%20s5l8922xsi,%20iBoot-359.5
         ap_rom_sha256: 07b8a615f00961c5802451b5717c344db287b68c5f6d2331ac6ba7a6acdbac9d
 
     securerom:
@@ -1519,7 +1503,7 @@ chip_ids:
 
     securerom:
       - version: iBoot-574.4
-        url: http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8930xsi,%20iBoot-574.4
+        url: https://securerom.fun/resources/APROM/SecureROM%20for%20s5l8930xsi,%20iBoot-574.4
         hash: 4f34652a238a57ae0018b6e66c20a240cdbee8b4cca59a99407d09f83ea8082d
     boards:
       0x00:
