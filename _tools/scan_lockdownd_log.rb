@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# typed: ignore
+
 require_relative './b/_common'
 
 GET_VALUE_REGEX = /handle_get_value: (\w+) attempting to get \[([^\]]+)\]:\[([^\]]+)\]/

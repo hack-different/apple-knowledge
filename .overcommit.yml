@@ -16,6 +16,9 @@
 # Uncomment the following lines to make the configuration take effect.
 
 PreCommit:
+  ALL:
+    exclude: external/
+
   SpellCheck:
     enabled: true
 

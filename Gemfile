@@ -36,8 +36,17 @@ group :jekyll_plugins do
   gem 'jekyll-titles-from-headings'
 end
 
-group :development do
-  gem 'activesupport'
+group :sorbet do
+  gem 'email_reply_parser'
+  gem 'escape_utils'
+  gem 'gemoji'
+  gem 'RedCloth'
+  gem 'rinku'
+  gem 'sanitize'
+end
+
+group :development, :test do
+  gem 'activesupport', require: false
   gem 'bundle-audit'
   gem 'CFPropertyList'
   gem 'faraday'
