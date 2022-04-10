@@ -149,6 +149,9 @@ GEM
       tomlrb
     mixlib-shellout (3.2.7)
       chef-utils
+    mootool (0.1.2)
+      ruby-macho (~> 3)
+      sorbet-runtime
     multipart-post (2.1.1)
     nokogiri (1.13.3-x86_64-darwin)
       racc (~> 1.4)
@@ -246,6 +249,7 @@ DEPENDENCIES
   kramdown
   manpages
   mdl
+  mootool (~> 0.1.2)
   nokogiri
   octokit
   overcommit

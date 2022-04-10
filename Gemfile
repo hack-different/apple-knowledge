@@ -65,3 +65,5 @@ group :development, :test do
 end
 
 gem 'toml', '~> 0.3.0', github: 'rickmark/toml'
+
+gem 'mootool', '~> 0.1.2'
