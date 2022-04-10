@@ -57,9 +57,11 @@ keybags:
       ibec:
         filename: iBEC.d54p.RELEASE.im4p
         version: iBoot-7429.12.4.162.1
-        sha256: d8a0fb99cd3b77045e697c952fcb90b254e66cb3e2303eba99a243e148065cf6
         iv: 0a30f9a74429e5ae62e9cbcaab820000
         key: 7561cc9a560f0cb00d760e532c5990ad64415cc74e7d53fbdbdf8146b0288696
+        sha:
+          256: d8a0fb99cd3b77045e697c952fcb90b254e66cb3e2303eba99a243e148065cf6
+          384: a87b3d5f0c1fa0d619d7e22e549af63f0eacba864a86dedd6aeb25cf1e73a42b9eb0505f72792f832d8d6bdf5d912549
         keybags:
           - index: 1
             iv: ED6A6539EDDA1B669E0D79BAC7AC6995
@@ -70,9 +72,11 @@ keybags:
       ibdt:
         filename: iBootData.d54p.RELEASE.im4p
         version: iBoot-7429.12.4.162.1
-        sha256: b7b91d189a3fa02efe6c696aba84170914113e34a8418fba4a3001dbf19740f6
         iv: 12b3b21327cdde96ead01b3ee1605ee7
         key: b901fedd26fdee96ecfc8d9f7e1f825f9b9e995179b6c89b5c54eea0cbce7996
+        sha:
+          256: b7b91d189a3fa02efe6c696aba84170914113e34a8418fba4a3001dbf19740f6
+          384: f95fac4ba933ee56d7d38d572c5dc90f1131c04861c85120360bc80dbad29da02861c3f4482bce957b0894268e517944
         keybags:
           - index: 1
             iv: 5F28B1EC63319941FC45F37FB6CD5ACC
@@ -83,9 +87,11 @@ keybags:
       ibot:
         filename: iBoot.d54p.RELEASE.im4p
         version: iBoot-7429.12.4.162.1
-        sha256: 4b4deb6b7f47bb514cb5c8e3ffa74f37ecc6ecdfe2fb485de389e4626ce01305
         iv: 059f68f4e825628feb57de2fb098008a
         key: a7b73b08cab0e699b94eeb057ed7800241e8db7d1618fa45de68ef8448746444
+        sha:
+          256: 4b4deb6b7f47bb514cb5c8e3ffa74f37ecc6ecdfe2fb485de389e4626ce01305
+          384: a73944cbeadb16f62e272dabc705426fafa7b71f7ca87b1e94d0acd9b0586e00dd72f090410a19efc9d6ed7af59e8162
         keybags:
           - index: 1
             iv: 7C0A48E3FF037C87E2C0FBD04C9B2E62
@@ -96,9 +102,11 @@ keybags:
       illb:
         filename: LLB.d54p.RELEASE.im4p
         version: iBoot-7429.12.4.162.1
-        sha256: bf9d87ae45823b1fc61b06d87acbadce9b8907b6228155b74fd17ff7f28489c6
         iv: f2f56b0e53aface4c9ea237efca81517
         key: 165716a9b2d7e74e21db44aa7d06fc17b5098b93458e45ec0b561ed5dcad111a
+        sha:
+          256: bf9d87ae45823b1fc61b06d87acbadce9b8907b6228155b74fd17ff7f28489c6
+          384: eb2a9f63ad0c115f9ef6937eee07b0580ec12479f840ba83a5714e16539fbdf4be6d060bfbc5c05779f63616174a7a9d
         keybags:
           - index: 1
             iv: 351513ED467EE110B34975A55ED99ADF
@@ -109,9 +117,11 @@ keybags:
       ibss:
         filename:
         version: iBoot-7429.12.4.162.1
-        sha256: 462ac45417808d479a3e680811706f8b96e74f2bcabe199944f715307bd8f917
         iv: 6317d53b9cfd8a47e716c31ab52833c7
         key: d7b765a16da51caa74ba0dc1c4d1de420671ab7d6d047e89a6e2391c91cd6d9a
+        sha:
+          256: 462ac45417808d479a3e680811706f8b96e74f2bcabe199944f715307bd8f917
+          384: faec3de149f72b1c043de2846527c1ca4f75ff7d4e7840e729e44386e40c5c62f02a001f7c5007a56814228a6efbcf39
         keybags:
           - index: 1
             iv: 8FC9712B90EE6E39461EC26C460677FE
@@ -121,7 +131,9 @@ keybags:
             key: 9511ED5BE4BD1968ECC8C598DD7D74202DC22215295B6C9BB598999E510BE261
       sepi:
         filename: sep-firmware.d54p.RELEASE.im4p
-        sha256: e98ffb65fecd09759b820be22a23163e10f29f13c01eef341aadf562c06db1d4
+        sha:
+          256: e98ffb65fecd09759b820be22a23163e10f29f13c01eef341aadf562c06db1d4
+          384: b2a2fbbf02ff8c21e304098d89a804b9b7190b9216725634b258b4dc056b5da09567a2dd997844f112d8f604011fb29c
         keybags:
           - index: 1
             iv: C7F6A2EBD7B1E538251A583604871855
