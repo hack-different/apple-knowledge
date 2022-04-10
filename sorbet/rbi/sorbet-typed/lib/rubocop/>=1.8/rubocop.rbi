@@ -5,7 +5,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/edit/master/lib/rubocop/>=1.8/rubocop.rbi
 #
-# typed: true
+# typed: strict
 
 class RuboCop::RakeTask < ::Rake::TaskLib
   def initialize(name = :rubocop, *args, &task_block); end

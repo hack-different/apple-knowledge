@@ -1,3 +1,4 @@
+# typed: true
 # frozen_string_literal: true
 
 # Schema file for the `lockdownd.yaml` file

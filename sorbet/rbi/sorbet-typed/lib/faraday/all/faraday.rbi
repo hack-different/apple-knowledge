@@ -5,7 +5,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/edit/master/lib/faraday/all/faraday.rbi
 #
-# typed: true
+# typed: strict
 
 module Faraday
   def self.new(url = nil, options = nil, &block); end

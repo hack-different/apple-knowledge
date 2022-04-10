@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# typed: ignore
+
 require_relative 'lib/common'
 
 KERNEL_COLLECTION_DIR = '/System/Library/KernelCollections'

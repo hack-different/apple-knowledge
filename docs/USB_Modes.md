@@ -1,5 +1,14 @@
 # iDevice USB Modes
 
+## Disabling macOS from mastering devices
+
+```shell
+defaults write com.apple.iTunesHelper ignore-devices -bool YES
+defaults write com.apple.AMPDeviceDiscoveryAgent ignore-devices 1
+defaults write com.apple.AMPDeviceDiscoveryAgent reveal-devices 0
+defaults write -g ignore-devices -bool true
+```
+
 ## Modes as a function of SDOM
 
 SDOM is a two bit (2^2) value.  The value is a bitflag of SEC and PRO (CXXX and EXXX).

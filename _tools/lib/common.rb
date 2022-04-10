@@ -1,8 +1,9 @@
+# typed: true
 # frozen_string_literal: true
 
 require 'bundler/setup'
 
-require 'active_support/all'
+require 'active_support/core_ext'
 require 'cfpropertylist'
 require 'yaml'
 require 'set'

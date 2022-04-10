@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# typed: ignore
+
 require_relative 'lib/common'
 
 MOBILE_ASSETS_PATH = File.join(File.dirname(__FILE__), '../_data/mobile_assets.yaml')

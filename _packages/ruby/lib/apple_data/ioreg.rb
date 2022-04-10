@@ -1,3 +1,4 @@
+# typed: true
 # frozen_string_literal: true
 
 # Data file for the IOReg data

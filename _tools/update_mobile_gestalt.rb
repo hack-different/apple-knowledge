@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# typed: ignore
+
 require_relative 'lib/common'
 
 GESTALT_DATA_FILE = File.join(File.dirname(__FILE__), '../_data/mobile_gestalt.yaml')

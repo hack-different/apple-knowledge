@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# typed: ignore
+
 require '_common'
 
 if ARGV.length != 1

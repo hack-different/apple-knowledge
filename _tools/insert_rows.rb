@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# typed: ignore
+
 require 'yaml'
 
 DATA_FILE = ARGV[0]

@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# typed: ignore
+
 require_relative 'lib/common'
 
 OS_VERSION_PATHS = %w[System/Library/CoreServices/BridgeVersions.plist
