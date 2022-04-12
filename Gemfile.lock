@@ -153,7 +153,9 @@ GEM
       ruby-macho (~> 3)
       sorbet-runtime
     multipart-post (2.1.1)
-    nokogiri (1.13.3-x86_64-darwin)
+    nokogiri (1.13.4-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.13.4-x86_64-linux)
       racc (~> 1.4)
     octokit (4.22.0)
       faraday (>= 0.9)
@@ -211,6 +213,7 @@ GEM
       sorbet-static (= 0.5.9873)
     sorbet-runtime (0.5.9873)
     sorbet-static (0.5.9873-universal-darwin-21)
+    sorbet-static (0.5.9873-x86_64-linux)
     terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thor (1.2.1)
@@ -222,6 +225,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   CFPropertyList
