@@ -53,6 +53,7 @@ group :development, :test do
   gem 'kramdown'
   gem 'manpages'
   gem 'mdl'
+  gem 'mediawiki_api', '~> 0.7.1'
   gem 'nokogiri'
   gem 'octokit'
   gem 'overcommit'
