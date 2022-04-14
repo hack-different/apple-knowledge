@@ -36,15 +36,6 @@ group :jekyll_plugins do
   gem 'jekyll-titles-from-headings'
 end
 
-group :sorbet do
-  gem 'email_reply_parser'
-  gem 'escape_utils'
-  gem 'gemoji'
-  gem 'RedCloth'
-  gem 'rinku'
-  gem 'sanitize'
-end
-
 group :development, :test do
   gem 'activesupport', require: false
   gem 'bundle-audit'
@@ -53,7 +44,7 @@ group :development, :test do
   gem 'kramdown'
   gem 'manpages'
   gem 'mdl'
-  gem 'mediawiki_api', '~> 0.7.1'
+  gem 'mediawiki_api'
   gem 'nokogiri'
   gem 'octokit'
   gem 'overcommit'

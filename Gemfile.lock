@@ -10,7 +10,6 @@ GEM
   specs:
     CFPropertyList (3.0.5)
       rexml
-    RedCloth (4.3.2)
     activesupport (7.0.2.3)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
@@ -35,14 +34,11 @@ GEM
     colorator (1.1.0)
     commonmarker (0.23.4)
     concurrent-ruby (1.1.10)
-    crass (1.0.6)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
-    email_reply_parser (0.5.10)
-    escape_utils (1.2.1)
     eventmachine (1.2.7)
     execjs (2.8.1)
     faraday (0.17.5)
@@ -54,7 +50,6 @@ GEM
       faraday (>= 0.7.4, < 1.0)
     ffi (1.15.5)
     forwardable-extended (2.6.0)
-    gemoji (3.0.1)
     html-pipeline (2.14.1)
       activesupport (>= 2)
       nokogiri (>= 1.4)
@@ -173,7 +168,6 @@ GEM
       ffi (~> 1.0)
     regexp_parser (2.3.0)
     rexml (3.2.5)
-    rinku (2.0.6)
     rouge (3.28.0)
     rubocop (1.27.0)
       parallel (~> 1.10)
@@ -190,18 +184,15 @@ GEM
     ruby-progressbar (1.11.0)
     rubyzip (2.3.2)
     safe_yaml (1.0.5)
-    sanitize (6.0.0)
-      crass (~> 1.0.2)
-      nokogiri (>= 1.12.0)
     sassc (2.4.0)
       ffi (~> 1.9)
     sawyer (0.8.2)
       addressable (>= 2.3.5)
       faraday (> 0.8, < 2.0)
-    sorbet (0.5.9886)
-      sorbet-static (= 0.5.9886)
-    sorbet-runtime (0.5.9886)
-    sorbet-static (0.5.9886-universal-darwin-21)
+    sorbet (0.5.9889)
+      sorbet-static (= 0.5.9889)
+    sorbet-runtime (0.5.9889)
+    sorbet-static (0.5.9889-universal-darwin-21)
     terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thor (1.2.1)
@@ -219,13 +210,9 @@ PLATFORMS
 
 DEPENDENCIES
   CFPropertyList
-  RedCloth
   activesupport
   bundle-audit
-  email_reply_parser
-  escape_utils
   faraday
-  gemoji
   jekyll (~> 4.2)
   jekyll-coffeescript
   jekyll-commonmark
@@ -243,7 +230,7 @@ DEPENDENCIES
   kramdown
   manpages
   mdl
-  mediawiki_api (~> 0.7.1)
+  mediawiki_api
   mootool (~> 0.1.2)
   nokogiri
   octokit
@@ -251,10 +238,8 @@ DEPENDENCIES
   plist
   pry
   rake
-  rinku
   rubocop
   ruby-macho
-  sanitize
   sorbet
   sorbet-runtime
   toml (~> 0.3.0)!
