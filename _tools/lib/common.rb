@@ -3,7 +3,11 @@
 
 require 'bundler/setup'
 
+require 'active_support'
 require 'active_support/core_ext'
+require 'kramdown'
+require 'octokit'
+require 'json'
 require 'cfpropertylist'
 require 'yaml'
 require 'set'
