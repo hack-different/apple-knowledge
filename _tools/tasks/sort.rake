@@ -13,27 +13,10 @@ def sort_yaml(file, key, property = nil)
   File.write(path, items.to_yaml)
 end
 
-namespace :sort do
-  desc 'sort and unique all NVRAM variables'
-  task :nvram do
-    sort_yaml 'nvram', :name, 'variables'
-  end
-
-  desc 'sort and unique all LaunchD services'
-  task :services do
-    sort_yaml 'services', :name
-  end
-
-  desc 'sort and unique all MobileAsset URLs'
-  task :mobile_assets do
-    sort_yaml 'mobile_assets', :url
-  end
-
-  desc 'sort Apple 4CCs'
-  task :four_cc do
-    sort_yaml '4cc', :code
+desc 'sort everything'
+task :sort do
+  path = File.join(DATA_DIR, '**', '*.yaml')
+  Dir.glob(path) do |file|
+    YAML.load_file file
   end
 end
-
-desc 'sort everything'
-task sort: ['sort:nvram', 'sort:services', 'sort:mobile_assets', 'sort:four_cc']

@@ -1,1720 +1,1723 @@
 ---
+metadata:
+  description:
+  credits:
 kexts:
-- id: com.Areca.ArcMSR
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.AGDCPluginDisplayMetrics
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.AppleEthernetAquantiaAqtionFirmware
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.AppleFSCompression.AppleFSCompressionTypeDataless
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.AppleFSCompression.AppleFSCompressionTypeZlib
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.AppleGPUWrangler
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.AppleGraphicsDeviceControl
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.AppleSystemPolicy
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.BootCache
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.Dont_Steal_Mac_OS_X
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.UVCService
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.audio.TSNCaptureInterface
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.ACPI_SMC_PlatformPlugin
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AGDCBacklightControl
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AGPM
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AirPort.Brcm4360-MFG
-  description:
-- id: com.apple.driver.AirPort.BrcmNIC
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AirPort.BrcmNIC-MFG
-  description:
-- id: com.apple.driver.Apple16X50ACPI
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.Apple16X50Serial
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleACPIButtons
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleACPIEC
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleACPIPlatform
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleAHCIPort
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleAPIC
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleAVEBridge
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleActuatorDriver
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleAfterburner
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleAstrisGpioProbe
-  description:
-- id: com.apple.driver.AppleAudioClockLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleBCMWLANBusInterfacePCIeMac
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleBCMWLANCoreMac
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleBSDKextStarter
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleBSDKextStarterVPN
-  description:
-- id: com.apple.driver.AppleBacklight
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleBacklightExpert
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleBluetoothDebug
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleBluetoothDebugService
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleBluetoothHIDKeyboard
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleBluetoothHIDMouse
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleBluetoothModule
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleBluetoothMultitouch
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleBluetoothRemote
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleBridgeAudioController
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleBusPowerController
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleCameraInterface
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleConvergedIPCOLYBTControl
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleConvergedPCI
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleCredentialManager
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleDiskImages2
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleEFINVRAM
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleEFIRuntime
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleEffaceableBlockDevice
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleEffaceableNOR
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleEffaceableStorage
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleEffaceableTDM
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleEmbeddedOSSupportHost
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleEthernetAquantiaAqtion
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleEthernetMLX5
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleFDEKeyStore
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleFIVRDriver
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleFWAudio
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleFWOHCI
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleFileSystemDriver
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleFireWireStorage
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleFirmwareUpdateKext
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleGFXHDA
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleGraphicsControl
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleGraphicsDevicePolicy
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleHDA
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleHDAController
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleHDAHardwareConfigDriver
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleHIDALSService
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleHIDKeyboard
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleHIDMouse
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleHPET
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleHPM
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleHSBluetoothDriver
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleHSSPIHIDDriver
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleHSSPISupport
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleHV
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleHWAccess
-  description:
-- id: com.apple.driver.AppleHollywood
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleIPAppender
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIRController
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleInputDeviceSupport
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleIntel8254XEthernet
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleIntelBDWGraphics
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIntelBDWGraphicsFramebuffer
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIntelCFLGraphicsFramebuffer
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIntelCPUPowerManagement
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleIntelCPUPowerManagementClient
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleIntelCPUPowerManagementDriver
-  description:
-- id: com.apple.driver.AppleIntelFramebufferAzul
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIntelHD5000Graphics
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIntelI210Ethernet
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleIntelICLGraphics
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIntelICLLPGraphicsFramebuffer
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIntelKBLGraphics
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIntelKBLGraphicsFramebuffer
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIntelLpssDmac
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleIntelLpssGspi
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleIntelLpssI2C
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleIntelLpssI2CController
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleIntelLpssSpiController
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleIntelLpssUARTCommon
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIntelLpssUARTv0
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIntelLpssUARTv1
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIntelMCEReporter
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIntelPCHPMC
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIntelSKLGraphics
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIntelSKLGraphicsFramebuffer
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleIntelSlowAdaptiveClocking
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleKeyStore
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleLPC
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleLSIFusionMPT
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleMCCSControl
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleMCP89RootPortPM
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleMGPUPowerControl
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleMemorexCDROMDriver
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleMikeyDriver
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleMikeyHIDDriver
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleMobileFileIntegrity
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleMultiFunctionManagerMac
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleMultitouchDriver
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleMuxControl
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleMuxControl2
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleNVMePassThrough
-  description:
-- id: com.apple.driver.AppleOLYHALMac
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleOnboardSerial
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.ApplePIODMA
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.ApplePVPanic
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleParavirtGPU
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.ApplePlatformEnabler
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.ApplePolicyControl
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleRAID
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleRTC
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleSDXC
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleSEPManager
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleSMBIOS
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleSMBusController
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleSMBusPCI
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleSMC
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleSMCLMU
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleSMCPDRC
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleSMCRTC
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleSSE
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleSmartBatteryManager
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleThunderboltDPAdapterFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleThunderboltDPInAdapter
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleThunderboltDPOutAdapter
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleThunderboltEDMSink
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleThunderboltEDMSource
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleThunderboltIP
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleThunderboltNHI
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleThunderboltPCIDownAdapter
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleThunderboltPCIUpAdapter
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleThunderboltUTDM
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleTopCaseHIDEventDriver
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleUSBAudio
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleUSBCardReader
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleUSBComposite
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleUSBDisplays
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleUSBHIDMouse
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleUSBHostMergeProperties
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleUSBLegacyHub
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleUSBMassStorageInterfaceNub
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleUSBMergeNub
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleUSBMultitouch
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleUSBODD
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleUSBTCButtons
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleUSBTCKeyEventDriver
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleUSBTCKeyboard
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleUSBTDM
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleUSBTopCaseDriver
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleUpstreamUserClient
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleVirtIO
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleVirtualGraphics
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleVmxnet3Ethernet
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleWWANSupport
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.AppleWWANSupport1
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleWWANSupport2
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AppleXsanScheme
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.Apple_iSight
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.AudioAUUC
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.BCMWLANFirmware4355.Hashstore
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.BCMWLANFirmware4364.Hashstore
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.BCMWLANFirmware4377.Hashstore
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.BCMWLANFirmware4378.Hashstore
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.BCMWLANFirmware4387.Hashstore
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.BridgeAudioCommunication
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.CanonEOS1D
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.CoreStorage
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.CoreStorageFsck
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.DiskImages
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.DiskImages.CryptoEncoding
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.DiskImages.FileBackingStore
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.DiskImages.HTTPBackingStore
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.DiskImages.KernelBacked
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.DiskImages.RAMBackingStore
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.DiskImages.ReadWriteDiskImage
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.DiskImages.SparseDiskImage
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.DiskImages.UDIFDiskImage
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.DrizzlePlatformSupport
-  description:
-- id: com.apple.driver.DrizzleSMC
-  description:
-- id: com.apple.driver.DspFuncLib
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.FWPreferredProtocolSpeed
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.IO80211NetBooter
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.IOBluetoothHIDDriver
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.IOBluetoothHostControllerPCIeTransport
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.IOFireWireSerialBusProtocolSansPhysicalUnit
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.IOImageLoader
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.IOPlatformPluginFamily
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.IOPlatformPluginLegacy
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.IOSlaveProcessor
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.Intel82574LEthernet
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.KernelRelayHost
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.KernelRelayTesterHost
-  description:
-- id: com.apple.driver.LSI_FW_500
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.LuaHardwareAccess
-  description:
-- id: com.apple.driver.MEDetect
-  description:
-- id: com.apple.driver.MKE_LF_D211A
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.MKE_SR_8171
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.NVSMU
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.Oxford_Semi
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.PioneerSuperDrive
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.PlasmonUDO
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.QPSQueFire
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.SMCMotionSensor
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.SanyoIDShot
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.StorageLynx
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.VMPlatformPlugin
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.WriteProtectedMediaDriver
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.X86PlatformPlugin
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.X86PlatformShim
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.corecapture
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.driverkit.serial
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.eficheck
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.iPodDriver
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.iPodSBCDriver
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.initioFWBridge
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.mDNSOffloadUserClient
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.pmtelemetry
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBCommon
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBEHCI
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBEHCIPCI
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBHostBillboardDevice
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBHostCompositeDevice
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBHostPacketFilter
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBHub
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBKDP
-  description:
-- id: com.apple.driver.usb.AppleUSBOHCI
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBOHCIPCI
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBOpticalMouse
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBRecoveryHost
-  description:
-- id: com.apple.driver.usb.AppleUSBUHCI
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBUHCIPCI
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBUserHCI
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBVHCI
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBVHCIBCE
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBVHCICommon
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBVHCICommonBCE
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBVHCIRSM
-  description:
-- id: com.apple.driver.usb.AppleUSBXHCI
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBXHCIPCI
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.AppleUSBiBridge
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.IOUSBHostHIDDevice
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.cdc
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.cdc.acm
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.usb.cdc.dmm
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.usb.cdc.ecm
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.cdc.eem
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.usb.cdc.ncm
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.cdc.wcm
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.usb.ethernet.asix
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.networking
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.realtek8153patcher
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.driver.usb.serial
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.driver.watchdog
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.filesystems.acfs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.filesystems.acfsctl
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.filesystems.afpfs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.filesystems.apfs
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.filesystems.autofs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.filesystems.cd9660
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.filesystems.cddafs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.filesystems.exfat
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.filesystems.hfs.encodings.kext
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.filesystems.hfs.kext
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.filesystems.lifs
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.filesystems.msdosfs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.filesystems.ntfs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.filesystems.smbfs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.filesystems.tmpfs
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.filesystems.udf
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.filesystems.webdav
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.fileutil
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.fsplaceholder
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.AppleBCM5701Ethernet
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.BroadcomBluetooth20703USBTransport
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.CSRBluetoothHostControllerUSBTransport
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.CoreAnalyticsFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.EndpointSecurity
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IO80211Family
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IO80211FamilyLegacy
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOACPIFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOAHCIBlockStorage
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOAHCIFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOAHCISerialATAPI
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOATABlockStorage
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOATAFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOATAPIProtocolTransport
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOAVBFamily
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOAcceleratorFamily2
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOAudioFamily
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOBDStorageFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOBluetoothFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOBluetoothHostControllerTransport
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOBluetoothHostControllerUARTTransport
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOBluetoothHostControllerUSBTransport
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOBluetoothPacketLogger
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOBluetoothSerialManager
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOBufferCopyController
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOBufferCopyEngineFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOCDStorageFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IODVDStorageFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOEthernetAVBController
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOFireWireAVC
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOFireWireFamily
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOFireWireSBP2
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOFireWireSerialBusProtocolTransport
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOGPUFamily
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOGraphicsFamily
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOHDAFamily
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOHIDFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOKitRegistryCompatibility
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IONDRVSupport
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IONVMeFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IONetworkingFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOPCIFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOReportFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOSCSIArchitectureModelFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOSCSIBlockCommandsDevice
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOSCSIMultimediaCommandsDevice
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOSCSIParallelFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOSCSIReducedBlockCommandsDevice
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOSMBusFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOSerialFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOSkywalkFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOSlowAdaptiveClockingFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOStorageFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOStreamFamily
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOSurface
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOThunderboltFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOTimeSyncFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOUSBFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOUSBHIDDriver
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOUSBHIDDriverPM
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOUSBHostFamily
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOUSBMassStorageDriver
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOUSBUserClient
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.IOUserEthernet
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.IOVideoFamily
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.iokit.RUSBHostFamily
-  description:
-- id: com.apple.iokit.SCSITaskUserClient
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.iokit.fipscavs-kext-tool
-  description:
-- id: com.apple.kec.AppleEncryptedArchive
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.kec.Libm
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.kec.corecrypto
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.kec.pthread
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.kernel
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.kext.AMD10000Controller
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMD7000Controller
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMD8000Controller
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMD9000Controller
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMD9500Controller
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDFramebuffer
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonServiceManager
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX4000
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX4000HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX4000HWServices
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX4030HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX4050HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX4070HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX4100HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX4200HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX4400HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX4700HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX5000
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX5000HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX5000HWServices
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX5100HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX5200HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX5400HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX5700HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX6000
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX6000Framebuffer
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX6000HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX6000HWServices
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX6100HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX6200HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX6300HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX6700HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX6800HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDRadeonX6810HWLibs
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AMDSupport
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.AppleMatch
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.kext.CoreTrust
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.kext.HFS_MacCentralEurRoman
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.HFS_MacChineseSimp
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.HFS_MacChineseTrad
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.HFS_MacCyrillic
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.HFS_MacJapanese
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.HFS_MacKorean
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.MojoKDP
-  description:
-- id: com.apple.kext.OSvKernDSPLib
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.mcx.alr
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.kext.triggers
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.macos.driver.AppleUSBEthernetHost
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.nke.applicationfirewall
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.nke.asp_tcp
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.nke.l2tp
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.nke.ppp
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.nke.pppoe
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.nke.webcontentfilter
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.pae.driver.AppleQuaibridgePCIE
-  description:
-- id: com.apple.plugin.IOAVBControlPlugin
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.plugin.IOAVBDiscoveryPlugin
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.plugin.IOAVBStreamingPlugin
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.plugin.IOMRPPlugin
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.plugin.IOgPTPPlugin
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.private.KextAudit
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.security.AppleImage4
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.security.SecureRemotePassword
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.apple.security.quarantine
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.security.sandbox
-  description:
-  collections:
-  - BootKernelExtensions.kc
-- id: com.apple.vecLib.kext
-  description:
-  collections:
-  - SystemKernelExtensions.kc
-- id: com.promise.driver.stex
-  description:
-  collections:
-  - BootKernelExtensions.kc
+  com.Areca.ArcMSR:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.AGDCPluginDisplayMetrics:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.AppleEthernetAquantiaAqtionFirmware:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.AppleFSCompression.AppleFSCompressionTypeDataless:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.AppleFSCompression.AppleFSCompressionTypeZlib:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.AppleGPUWrangler:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.AppleGraphicsDeviceControl:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.AppleSystemPolicy:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.BootCache:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.Dont_Steal_Mac_OS_X:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.UVCService:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.audio.TSNCaptureInterface:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.ACPI_SMC_PlatformPlugin:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AGDCBacklightControl:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AGPM:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AirPort.Brcm4360-MFG:
+    description:
+  com.apple.driver.AirPort.BrcmNIC:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AirPort.BrcmNIC-MFG:
+    description:
+  com.apple.driver.Apple16X50ACPI:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.Apple16X50Serial:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleACPIButtons:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleACPIEC:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleACPIPlatform:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleAHCIPort:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleAPIC:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleAVEBridge:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleActuatorDriver:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleAfterburner:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleAstrisGpioProbe:
+    description:
+  com.apple.driver.AppleAudioClockLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleBCMWLANBusInterfacePCIeMac:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleBCMWLANCoreMac:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleBSDKextStarter:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleBSDKextStarterVPN:
+    description:
+  com.apple.driver.AppleBacklight:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleBacklightExpert:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleBluetoothDebug:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleBluetoothDebugService:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleBluetoothHIDKeyboard:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleBluetoothHIDMouse:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleBluetoothModule:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleBluetoothMultitouch:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleBluetoothRemote:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleBridgeAudioController:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleBusPowerController:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleCameraInterface:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleConvergedIPCOLYBTControl:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleConvergedPCI:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleCredentialManager:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleDiskImages2:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleEFINVRAM:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleEFIRuntime:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleEffaceableBlockDevice:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleEffaceableNOR:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleEffaceableStorage:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleEffaceableTDM:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleEmbeddedOSSupportHost:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleEthernetAquantiaAqtion:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleEthernetMLX5:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleFDEKeyStore:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleFIVRDriver:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleFWAudio:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleFWOHCI:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleFileSystemDriver:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleFireWireStorage:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleFirmwareUpdateKext:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleGFXHDA:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleGraphicsControl:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleGraphicsDevicePolicy:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleHDA:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleHDAController:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleHDAHardwareConfigDriver:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleHIDALSService:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleHIDKeyboard:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleHIDMouse:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleHPET:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleHPM:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleHSBluetoothDriver:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleHSSPIHIDDriver:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleHSSPISupport:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleHV:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleHWAccess:
+    description:
+  com.apple.driver.AppleHollywood:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleIPAppender:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIRController:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleInputDeviceSupport:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleIntel8254XEthernet:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleIntelBDWGraphics:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIntelBDWGraphicsFramebuffer:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIntelCFLGraphicsFramebuffer:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIntelCPUPowerManagement:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleIntelCPUPowerManagementClient:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleIntelCPUPowerManagementDriver:
+    description:
+  com.apple.driver.AppleIntelFramebufferAzul:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIntelHD5000Graphics:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIntelI210Ethernet:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleIntelICLGraphics:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIntelICLLPGraphicsFramebuffer:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIntelKBLGraphics:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIntelKBLGraphicsFramebuffer:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIntelLpssDmac:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleIntelLpssGspi:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleIntelLpssI2C:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleIntelLpssI2CController:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleIntelLpssSpiController:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleIntelLpssUARTCommon:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIntelLpssUARTv0:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIntelLpssUARTv1:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIntelMCEReporter:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIntelPCHPMC:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIntelSKLGraphics:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIntelSKLGraphicsFramebuffer:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIntelSlowAdaptiveClocking:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleKeyStore:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleLPC:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleLSIFusionMPT:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleMCCSControl:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleMCP89RootPortPM:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleMGPUPowerControl:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleMemorexCDROMDriver:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleMikeyDriver:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleMikeyHIDDriver:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleMobileFileIntegrity:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleMultiFunctionManagerMac:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleMultitouchDriver:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleMuxControl:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleMuxControl2:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleNVMePassThrough:
+    description:
+  com.apple.driver.AppleOLYHALMac:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleOnboardSerial:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.ApplePIODMA:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.ApplePVPanic:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleParavirtGPU:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.ApplePlatformEnabler:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.ApplePolicyControl:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleRAID:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleRTC:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleSDXC:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleSEPManager:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleSMBIOS:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleSMBusController:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleSMBusPCI:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleSMC:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleSMCLMU:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleSMCPDRC:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleSMCRTC:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleSSE:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleSmartBatteryManager:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleThunderboltDPAdapterFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleThunderboltDPInAdapter:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleThunderboltDPOutAdapter:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleThunderboltEDMSink:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleThunderboltEDMSource:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleThunderboltIP:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleThunderboltNHI:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleThunderboltPCIDownAdapter:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleThunderboltPCIUpAdapter:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleThunderboltUTDM:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleTopCaseHIDEventDriver:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleUSBAudio:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleUSBCardReader:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleUSBComposite:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleUSBDisplays:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleUSBHIDMouse:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleUSBHostMergeProperties:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleUSBLegacyHub:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleUSBMassStorageInterfaceNub:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleUSBMergeNub:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleUSBMultitouch:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleUSBODD:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleUSBTCButtons:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleUSBTCKeyEventDriver:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleUSBTCKeyboard:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleUSBTDM:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleUSBTopCaseDriver:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleUpstreamUserClient:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleVirtIO:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleVirtualGraphics:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleVmxnet3Ethernet:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleWWANSupport:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleWWANSupport1:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleWWANSupport2:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleXsanScheme:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.Apple_iSight:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AudioAUUC:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.BCMWLANFirmware4355.Hashstore:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.BCMWLANFirmware4364.Hashstore:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.BCMWLANFirmware4377.Hashstore:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.BCMWLANFirmware4378.Hashstore:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.BCMWLANFirmware4387.Hashstore:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.BridgeAudioCommunication:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.CanonEOS1D:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.CoreStorage:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.CoreStorageFsck:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.DiskImages:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.DiskImages.CryptoEncoding:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.DiskImages.FileBackingStore:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.DiskImages.HTTPBackingStore:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.DiskImages.KernelBacked:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.DiskImages.RAMBackingStore:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.DiskImages.ReadWriteDiskImage:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.DiskImages.SparseDiskImage:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.DiskImages.UDIFDiskImage:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.DrizzlePlatformSupport:
+    description:
+  com.apple.driver.DrizzleSMC:
+    description:
+  com.apple.driver.DspFuncLib:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.FWPreferredProtocolSpeed:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.IO80211NetBooter:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.IOBluetoothHIDDriver:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.IOBluetoothHostControllerPCIeTransport:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.IOFireWireSerialBusProtocolSansPhysicalUnit:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.IOImageLoader:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.IOPlatformPluginFamily:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.IOPlatformPluginLegacy:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.IOSlaveProcessor:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.Intel82574LEthernet:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.KernelRelayHost:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.KernelRelayTesterHost:
+    description:
+  com.apple.driver.LSI_FW_500:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.LuaHardwareAccess:
+    description:
+  com.apple.driver.MEDetect:
+    description:
+  com.apple.driver.MKE_LF_D211A:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.MKE_SR_8171:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.NVSMU:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.Oxford_Semi:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.PioneerSuperDrive:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.PlasmonUDO:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.QPSQueFire:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.SMCMotionSensor:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.SanyoIDShot:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.StorageLynx:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.VMPlatformPlugin:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.WriteProtectedMediaDriver:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.X86PlatformPlugin:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.X86PlatformShim:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.corecapture:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.driverkit.serial:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.eficheck:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.iPodDriver:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.iPodSBCDriver:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.initioFWBridge:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.mDNSOffloadUserClient:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.pmtelemetry:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBCommon:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBEHCI:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBEHCIPCI:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBHostBillboardDevice:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBHostCompositeDevice:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBHostPacketFilter:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBHub:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBKDP:
+    description:
+  com.apple.driver.usb.AppleUSBOHCI:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBOHCIPCI:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBOpticalMouse:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBRecoveryHost:
+    description:
+  com.apple.driver.usb.AppleUSBUHCI:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBUHCIPCI:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBUserHCI:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBVHCI:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBVHCIBCE:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBVHCICommon:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBVHCICommonBCE:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBVHCIRSM:
+    description:
+  com.apple.driver.usb.AppleUSBXHCI:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBXHCIPCI:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBiBridge:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.IOUSBHostHIDDevice:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.cdc:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.cdc.acm:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.usb.cdc.dmm:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.usb.cdc.ecm:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.cdc.eem:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.usb.cdc.ncm:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.cdc.wcm:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.usb.ethernet.asix:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.networking:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.realtek8153patcher:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.serial:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.watchdog:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.filesystems.acfs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.filesystems.acfsctl:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.filesystems.afpfs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.filesystems.apfs:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.filesystems.autofs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.filesystems.cd9660:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.filesystems.cddafs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.filesystems.exfat:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.filesystems.hfs.encodings.kext:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.filesystems.hfs.kext:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.filesystems.lifs:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.filesystems.msdosfs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.filesystems.ntfs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.filesystems.smbfs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.filesystems.tmpfs:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.filesystems.udf:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.filesystems.webdav:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.fileutil:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.fsplaceholder:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.AppleBCM5701Ethernet:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.BroadcomBluetooth20703USBTransport:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.CSRBluetoothHostControllerUSBTransport:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.CoreAnalyticsFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.EndpointSecurity:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IO80211Family:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IO80211FamilyLegacy:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOACPIFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOAHCIBlockStorage:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOAHCIFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOAHCISerialATAPI:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOATABlockStorage:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOATAFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOATAPIProtocolTransport:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOAVBFamily:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOAcceleratorFamily2:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOAudioFamily:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOBDStorageFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOBluetoothFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOBluetoothHostControllerTransport:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOBluetoothHostControllerUARTTransport:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOBluetoothHostControllerUSBTransport:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOBluetoothPacketLogger:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOBluetoothSerialManager:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOBufferCopyController:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOBufferCopyEngineFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOCDStorageFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IODVDStorageFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOEthernetAVBController:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOFireWireAVC:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOFireWireFamily:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOFireWireSBP2:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOFireWireSerialBusProtocolTransport:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOGPUFamily:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOGraphicsFamily:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOHDAFamily:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOHIDFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOKitRegistryCompatibility:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IONDRVSupport:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IONVMeFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IONetworkingFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOPCIFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOReportFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOSCSIArchitectureModelFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOSCSIBlockCommandsDevice:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOSCSIMultimediaCommandsDevice:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOSCSIParallelFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOSCSIReducedBlockCommandsDevice:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOSMBusFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOSerialFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOSkywalkFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOSlowAdaptiveClockingFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOStorageFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOStreamFamily:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOSurface:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOThunderboltFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOTimeSyncFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOUSBFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOUSBHIDDriver:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOUSBHIDDriverPM:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOUSBHostFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOUSBMassStorageDriver:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOUSBUserClient:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOUserEthernet:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOVideoFamily:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.RUSBHostFamily:
+    description:
+  com.apple.iokit.SCSITaskUserClient:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.fipscavs-kext-tool:
+    description:
+  com.apple.kec.AppleEncryptedArchive:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.kec.Libm:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.kec.corecrypto:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.kec.pthread:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.kernel:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.kext.AMD10000Controller:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMD7000Controller:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMD8000Controller:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMD9000Controller:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMD9500Controller:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDFramebuffer:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonServiceManager:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX4000:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX4000HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX4000HWServices:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX4030HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX4050HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX4070HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX4100HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX4200HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX4400HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX4700HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX5000:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX5000HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX5000HWServices:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX5100HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX5200HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX5400HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX5700HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX6000:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX6000Framebuffer:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX6000HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX6000HWServices:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX6100HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX6200HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX6300HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX6700HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX6800HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDRadeonX6810HWLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AMDSupport:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.AppleMatch:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.kext.CoreTrust:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.kext.HFS_MacCentralEurRoman:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.HFS_MacChineseSimp:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.HFS_MacChineseTrad:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.HFS_MacCyrillic:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.HFS_MacJapanese:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.HFS_MacKorean:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.MojoKDP:
+    description:
+  com.apple.kext.OSvKernDSPLib:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.mcx.alr:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.kext.triggers:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.macos.driver.AppleUSBEthernetHost:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.nke.applicationfirewall:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.nke.asp_tcp:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.nke.l2tp:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.nke.ppp:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.nke.pppoe:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.nke.webcontentfilter:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.pae.driver.AppleQuaibridgePCIE:
+    description:
+  com.apple.plugin.IOAVBControlPlugin:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.plugin.IOAVBDiscoveryPlugin:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.plugin.IOAVBStreamingPlugin:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.plugin.IOMRPPlugin:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.plugin.IOgPTPPlugin:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.private.KextAudit:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.security.AppleImage4:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.security.SecureRemotePassword:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.security.quarantine:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.security.sandbox:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.vecLib.kext:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.promise.driver.stex:
+    description:
+    collections:
+    - BootKernelExtensions.kc

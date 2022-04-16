@@ -19,20 +19,26 @@ require 'openssl'
 require 'base64'
 require 'digest'
 
-DATA_DIR = File.join(File.dirname(__FILE__), '..', '_data')
+DATA_DIR = File.realdirpath File.join(File.dirname(__FILE__), '..', '..', '_data')
 
 SCHEMAS_DIR = File.join(File.dirname(__FILE__), '..', '_schema')
 
 # Base class for all data files
 class DataFile
-  def initialize(file)
-    load_file file
+  def initialize(*parts)
+    @parts = parts
+    load_file(*parts)
+    ensure_metadata
   end
 
-  def load_file(filename)
-    @filename = File.join(DATA_DIR, filename)
-    @data = YAML.load_file @filename
+  def load_file(*parts)
+    parts[-1] = "#{parts[-1]}.yaml" unless parts[-1].ends_with? '.yaml'
+    @filename = File.join(DATA_DIR, File.join(*parts))
+    @data = {}
+    @data = YAML.load_file @filename if File.exist? @filename
   end
+
+  def ensure_metadata; end
 
   def save_data(data)
     File.write(@filename, data.to_yaml)

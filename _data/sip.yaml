@@ -1,5 +1,8 @@
 ---
-process_capabilities:
+metadata:
+  description:
+  credits:
+csr_process_capabilities:
   CSR_CAPABILITY_UNLIMITED:
     value: 1
     description: process is not restricted by SIP and may bypass
@@ -9,7 +12,7 @@ process_capabilities:
   CSR_CAPABILITY_APPLE_INTERNAL:
     value: 4
     description:
-flags:
+csr_flags:
   CSR_ALLOW_UNTRUSTED_KEXTS:
     value: 1
     description: allow loading kernel extensions that are not signed
