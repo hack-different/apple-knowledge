@@ -1,0 +1,3141 @@
+---
+metadata:
+  description:
+  credits: []
+keybag_boards:
+  2:
+    8A293:
+      components:
+        RootFS:
+          filename: '018-5530-583'
+          key: ec6eb0268c4e9f8ab9d003f601e8f4b36f4fc4311c61e5ebed07ce718424ffee7e7d924d
+        RootFSBeta:
+          filename: '018-7318-130'
+          key: ddd5c2872ca8e460acf1159940f198df43089176cd8d10adbef8fe4b79f4f4a030fe3e86
+        UpdateRamdisk:
+          filename: '018-6194-407'
+          iv: 4df6899367973ddf12b1fc22e53c2850
+          key: df01978babe7fdcbcbcbf98c920de278479eec488b4345f1ec997c10733eeede
+        RestoreRamdisk:
+          filename: '018-6307-378'
+          iv: 0b02c0daefed9ec93e52a20b9575b754
+          key: 8d9f400ee20e54947b143a64d0356c215800b83191fed8e73f3c0e84d1e32d37
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 603fe27dd408d7ef3813f5c9750431c1
+          key: 673eeb9ebca0c1cee531a3cc3934f034ce2e93d153d70e49ba97a1b9b8a06e62
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 9bec1adb1814757c0fdf540883dd05d2
+          key: 448a5766a4e7b1e1c0d8c395bdd7711f3f1c84015fffe39e4ef93bcb34adc223
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 535961778603efa6604719a3698f42f8
+          key: 73731f492e9a1e522b60301b39b1878d86c7064a0cc5cd956e2cc1c2a3fd9449
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: d21ec63d66efc4e803ccf2654df2b388
+          key: 4872dac0a8074c3725000db123cf2950660504d7e91ef6fcf8483342fbca1e74
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 9ddd4531a2ff482ce8110ecac44e0e6f
+          key: bfc66878e5e61be4a22ec94e59f0e8f8ad43f39c54afa5ac69f55d241bd21b56
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: c52bafcd768d959726d457c283ebc3d4
+          key: cdc36fd47f307064c81ff49222b4d451401f90b1c7246d6b7ebc4c8e1859af31
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 72adf47ae276b6a452ea8e3cbe742834
+          key: 40c35bc904e9e5806a372ac66594e0f9b3d46709a229c482e055c17cffa6f3fe
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: ec148598adfed07b96fed643c2a79017
+          key: 223058aeac0de5106a5b87fffd8389f927b1e2e4a2c9875e202e30d858aacc83
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 86c56c0304cb0976026313921f01f5b8
+          key: 1708371df3e3229e0d01c956c8dfa3a93ebb53f42cbe1f0eb674e1cefaf7ff07
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: a5313166c2a61a2bd3107fe6802f2849
+          key: 565b765c72282cf2934fee4a67945334dc7940dfeb5fde5ed90d715db2c2457d
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 76f6c7c97f02ae49fab0900904632c5a
+          key: e308cff77c8309067e1fb11f2b684481468b511fa87c71bad031fcc9dee56b7c
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 27c5becf5fea4936b44ab27f22ede19b
+          key: 2e9374bcf55a4d14495141eddfdb9cca039a7dc0913676586cb3e19bcde135db
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: a25717ffda39ee5619ed4d0b177cbd5b
+          key: bbdb9356910793c190253d46f2e5fe4a78d42276b3b36c921f7548fdf98cc083
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 851b78b326c7e2dfe4c088234198b485
+          key: a18e995ea6666805cea7501e82f2e6eba073c335439d722a6c1c4fb82ecec242
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: f611565e4f66dcaa02e7060e99b7dd7a
+          key: 4217222d61a593e5984a79c12f9fa2a1707f5798fc4ee3da17a6342019410c39
+    8A400:
+      components:
+        RootFS:
+          filename: '018-8106-012'
+          key: 4e164b7c39c8e0234787f7b9ae204adf1e3a66d472f1dce1db41e42ba87d1ff5722a7689
+        UpdateRamdisk:
+          filename: '018-8103-012'
+          iv: 69af18d6e4355f6ff3989db9e25a12ed
+          key: f6d2cdcccc2a56498a70361cf253a37629498d333e4d77ce668fddf6d24f0bec
+        RestoreRamdisk:
+          filename: '018-8095-012'
+          iv: 66fbf227d7a74cf39cbc149f0ebb3926
+          key: '0108ebb075ca534df759e849a47d79ad757f39a51a3352a9d3d760ce1c6609af'
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 603fe27dd408d7ef3813f5c9750431c1
+          key: 673eeb9ebca0c1cee531a3cc3934f034ce2e93d153d70e49ba97a1b9b8a06e62
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 9bec1adb1814757c0fdf540883dd05d2
+          key: 448a5766a4e7b1e1c0d8c395bdd7711f3f1c84015fffe39e4ef93bcb34adc223
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 535961778603efa6604719a3698f42f8
+          key: 73731f492e9a1e522b60301b39b1878d86c7064a0cc5cd956e2cc1c2a3fd9449
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: d21ec63d66efc4e803ccf2654df2b388
+          key: 4872dac0a8074c3725000db123cf2950660504d7e91ef6fcf8483342fbca1e74
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 9ddd4531a2ff482ce8110ecac44e0e6f
+          key: bfc66878e5e61be4a22ec94e59f0e8f8ad43f39c54afa5ac69f55d241bd21b56
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: c52bafcd768d959726d457c283ebc3d4
+          key: cdc36fd47f307064c81ff49222b4d451401f90b1c7246d6b7ebc4c8e1859af31
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 72adf47ae276b6a452ea8e3cbe742834
+          key: 40c35bc904e9e5806a372ac66594e0f9b3d46709a229c482e055c17cffa6f3fe
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: ec148598adfed07b96fed643c2a79017
+          key: 223058aeac0de5106a5b87fffd8389f927b1e2e4a2c9875e202e30d858aacc83
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 86c56c0304cb0976026313921f01f5b8
+          key: 1708371df3e3229e0d01c956c8dfa3a93ebb53f42cbe1f0eb674e1cefaf7ff07
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: a5313166c2a61a2bd3107fe6802f2849
+          key: 565b765c72282cf2934fee4a67945334dc7940dfeb5fde5ed90d715db2c2457d
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 76f6c7c97f02ae49fab0900904632c5a
+          key: e308cff77c8309067e1fb11f2b684481468b511fa87c71bad031fcc9dee56b7c
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 27c5becf5fea4936b44ab27f22ede19b
+          key: 2e9374bcf55a4d14495141eddfdb9cca039a7dc0913676586cb3e19bcde135db
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 92d0ec3c332719ba51e02f5f8050e118
+          key: eef0922ecbba2bab8ac9ccd123ac022c821c0ddf18d8a631bba521c808d43408
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 851b78b326c7e2dfe4c088234198b485
+          key: a18e995ea6666805cea7501e82f2e6eba073c335439d722a6c1c4fb82ecec242
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: f611565e4f66dcaa02e7060e99b7dd7a
+          key: 4217222d61a593e5984a79c12f9fa2a1707f5798fc4ee3da17a6342019410c39
+    7E18:
+      components:
+        RootFS:
+          filename: '018-6522-015'
+          key: 1402974cba4702e831fb821ef9090229f7bad6fd3084fa99bfc8a76de4d839f9bf4533eb
+        UpdateRamdisk:
+          filename: '018-6513-015'
+          iv: ba606fbd3cd095001aa345d6e62d1986
+          key: c3d3b8d9e01dfbf4460652b5216d4c66b39a276b96ce5cbee9c3ce90cd57c858
+        RestoreRamdisk:
+          filename: '018-6496-015'
+          iv: ed40b5cf7bc9f3eb2db62b8f11d86a7d
+          key: 4ef57007bebb68849b715bfdf37d53d73192b1f5c2228947268c1deb4cad689d
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: a47d5407fddde5cd91d6ae7130ee36fc
+          key: 4f130fada5567b6c48051a285df7d92df230a042710c1e5bb5a1f62fd91a3b7f
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: a406eac12fe8e074820c9d17cfa2b8be
+          key: 239adf7856029649cd0bc2f1d1fab2c0c5dcde710748fce63327a0af769c3e2b
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 5560121048851891d15b1dfe775057e6
+          key: 322ca6f29778d8a12d42b5a05bcadd49206cbb1bc3355c8d411af76e775a6ebc
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 3dd3a486d0db3263aabb545527323fbc
+          key: 1a003319155706f95912d5650184672369de867ba34ed8b45112aac89e5cceca
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 262ca24a13d25cfb721f77626f4c9cd4
+          key: 36c5b2973e9e7d8bfc137673bd859602c2095c8970e431dbd952ab57ebddfa50
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: fe4e90e70454a174bea93fb47f8aa07d
+          key: ac1e9414932bdc52ebe3a0d1a690eba3dcc586fbef3b40fe74ac62073dab8cb4
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 40ef90a1d2803f33a4cb4ac5162a1333
+          key: '0843e88375f0b58123eaa56d8a0503d1b46ebc260df8e34df5791af93519b82b'
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 0c123dc0821a0f81e312b88102f29a73
+          key: 0c3a5b5a19f41d19065e53343c19d8463bd5e2dc2d12ba64f0515f5c50db25b3
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: dbd4ec7ecf731c49e8f7605fbd38aac6
+          key: ec1845c8e6e851274b92fcfc665339952dff274f198c495f9652c3759dddb82f
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: bb9c1a821f702ef3a0594c635095ae2c
+          key: c281fa655aa3fbbda277c387b762dc83b7850e4d653d519159b14616a81b436f
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 4e70155527570d9e1921500da3fa7c4a
+          key: af4c51c6e241c6e3862bd83f41513bf0c0c69e5de58faed6146325fe836f75ea
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: cc884d83083849382cb33c59d61ca427
+          key: 1750aa8b05b8bf78c76d35784f690b3684bf5107485db09a17e284974fbd695a
+        Kernelcache:
+          filename: kernelcache.release.s5l8922x
+          iv: 5152a642caf5826d5ec2a41a3f534a28
+          key: 2a2fe89a63cf9f58f8b9af2337eaea7df0a53f9c063b3460f04ec08e9eaa44ab
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: b2b8e10df94539f01140074bc7616fcf
+          key: e146d220ae18697053b4e0e216f2626c292a201014b920d154ffcd8226397b6a
+        NeedService:
+          filename: needservice.s5l8922x.img3
+          iv: 87852e20c9003ebec6e280274e65118f
+          key: 177bf7b0b38473a7c8106a7874ac0d33fcd7839350ded3232405cc6beb1a6ce2
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 867e8fc0411416825f1a77c54f370d87
+          key: 21acd448cbaf85279c3a0c0b936f0b68fda871b79b762d0bfa55fa40833b9fb3
+    8B117:
+      components:
+        RootFS:
+          filename: '018-7116-114'
+          key: 69e2ca7a250765c95a703081d1195e681fbe82f31162b79fd2b70754629b0352694b9eda
+        UpdateRamdisk:
+          filename: '018-7108-078'
+          iv: 6800a52c8761b30b001327ea9b918653
+          key: 53e72495ea0d5dba53a1eae7529d6a95e8eb1d5d9185298c0f3323bc2c27f26f
+        RestoreRamdisk:
+          filename: '018-7081-078'
+          iv: 1edc4378f31ce728a2412ff93c78b8dd
+          key: 425f8a7bdac80a9678c78317a0ddbb91abb52a2fd1ff45f46c3e6db392155db9
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: ca973250685c36b6844616be183b5c60
+          key: 3bec85837804013e98dba2048e4bd281c613aa6dc783186da72f32415a1caa7f
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: df7b53a97bcf3b0079a9913905cb8a49
+          key: 8e5c2227e2ecac7e8f4349e183345b25f56da0b650d0c5de4b49c96ff87ba956
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: b0233888c6a516218e91fac719ffe48a
+          key: bab8666d9e35aa817d81320d026af61808074427e20f9866e5c37ab1acf64191
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 20215d738317bc19c0342886219a8754
+          key: 70fae7485f8b915f3c8e78f22856d6719379b5cda8894ca2c9291a428878701c
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 900a9c249ad3e950d301ff23dc075992
+          key: 8542b29ae98dff6d338553c931bacdf11d317d8ce5c67add981226acd4d12888
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 1d477cffd2586ec9e91ea2a7efd28c05
+          key: d20ad97303c311498899996a517d0bf06568b2fae0a001823bb2b3de5f06c928
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 9ccadfa97d5114393f43fbbb6c183f79
+          key: 7d470e30d349284359d10b315f3d83eebcf8fce839823ce95103ec402da8b61c
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 3ad1565b9d79e63007e85d4e1ccd0a47
+          key: eee8044a27d1f5333edba9c05f6e372afa7d856c8613a67af1a6c7452242ed1e
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: f9284641489473f96add1295cf1f1a37
+          key: 9285329196292488d30b1c1035543f467727ef4da88a7f94283b5e1d4705865a
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 38a8dc4f47766c8d4124aa5499530d86
+          key: 4b593a863a11961acfbccb5f3448506ac361113e3717cc03890628a071fec26c
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: e070842f5a94e22c5207b06797080618
+          key: 71eaa79911ba68270c4c2cb2df42d99e0aba2b26e54e27357c3871eadb255c40
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 45e620eb1cabe17cb5e25018e628160e
+          key: 1b45e1726a88d3e89a203a59544b853c531758dd3c6f15fd9fa24cfa4ebc949d
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: e37e3ff09da89fbc3e1be899df0cf45d
+          key: 2786c969cef8dfe1088f19f66c3f083c36a38401f80a2e493334af83f3dfa026
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: d3c29a93e8c8816fe5b1355675f39f68
+          key: 99962b8f8bacb9bc409a490316e46c5121462dfbe5829218f5aed2a5255ea023
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: e767de2c5c9bfef2efda9955e21ab757
+          key: 574584d7a7308c1f7abfe93bccf7553fa472ca48207c9a31c24a96fa37ee5c44
+    8C134:
+      components:
+        RootFS:
+          filename: '018-7798-161'
+          key: a9751de0d5c47c7c67244966714e9432cc08e3d81c3a1d94483d1df5d0712ce3e7562069
+        UpdateRamdisk:
+          filename: '018-7791-108'
+          iv: ad00dd6a5fefec731ba597ce03e7f32a
+          key: 7a07e58e82c5d47c11cab7ac31396ca7f3e9c87ab4e22e8f104bac615cbd0566
+        RestoreRamdisk:
+          filename: '018-7763-090'
+          iv: da59222236cd7293318e314a72838683
+          key: 45172b744f72b4b7a11a4113a6afa5fbf94427ae5abd55e462c13af764891aa8
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 7e04e5a857cb61e2cc0038d68fdf1a73
+          key: 91aeeb5b0e932480ad557c55d1c61221481b91918c5da8516ab8383d5bc60ea1
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: a4c1375bb158b08fbeef918ae9e4ba90
+          key: 42e7d0d97c442c26723471c5eaf28af3e2dcf59485f9677ee8a7afbd62441b43
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 5be4a8f373e36594c8f19b8a90ebda94
+          key: 4d4763deac3cf912d5d23c15260edfbc5f75a8005c8235c6d40f2cc1296280a9
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 1b58d3a8bfd299a39f5465c0df4ee564
+          key: f508f6547c02c671ae15d0beefe4b7e018f3ce1e155f1ae7cf9ef5aac35517b8
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: ebbc6c6c267367dba62b95ecbd41c2d4
+          key: ab8848b520391fbb8558129b473d08fcfa6924a6bf6de1e29f40b9a9e5480fa6
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 36b7097b3f539c3eb4c5605f338bd44f
+          key: 5afc4c06e0c02416bcd25e8d71111dc3043200eb2432d1efa7c763651590f499
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 279487a4411fbeef59c6a56f28034712
+          key: a0da3d6726a9dfda9de135959e31e693c23c3216c08f72a6e6768a08f3892976
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 3cb90a84e7be3fc872fbae60b9c300fa
+          key: fffdb6ced18e00bdf240f5aa7ac81144fe353c496225d14f983645a9660ca0c8
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: da21d8b49b66a8e1732f4f0df3724c09
+          key: 2e7c8703279208a80044b322d4ed914e71e65f3a2a4c2d9eecaa51ba2c05bb47
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: a37b98d9e465c60bcc59045d27654e78
+          key: ad80964c516a7f87bab8ce9214f8fece6a2cc83bca98b6e5679fe7aef7a77f1f
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 6d8082d05c8edd3d259bc004766d1e56
+          key: 45820b2a38c8e7ab8becde45a3e618ceafd32ab56c83fc9f09e183159cca6485
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 962cc5a04ef71269630fd05b7d43f0d6
+          key: f51e414ba2cb4bf68fcd1ea70d420207d4e269d048265b6480764e65af511904
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: a050dc4733839a08a2e489576ea8bdad
+          key: '059cf46103022fcfb95ba1baa4cfea16fc1a07c14ee2a249dc3b4bd6d744e0af'
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 7ca40a75fc54dcb3d07dcc0e290a4937
+          key: ebd73e7f4810a8a592ae3cd00830ceb38aace28ee3dc5661437ba7c3c3c10d38
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 1c9b8f01f4b1da66cf46eefdfee96359
+          key: d7a5126c00b60ec61a758ecfe5a9ca53fc64d2829613d5c59d099d3e8d426942
+    8C148:
+      components:
+        RootFS:
+          filename: '038-0061-002'
+          key: abd68f16920490865a09e559123db1f471ff19743ad15ea8b970a73e28f5efc6c6e76925
+        UpdateRamdisk:
+          filename: '038-0055-002'
+          iv: d7f909a6bace11ab7f7a606ed3afce70
+          key: 2b5bdeb344f4973e69ba5e5491ce052dcd67001729ec77585c5b8e86b4e7e99b
+        RestoreRamdisk:
+          filename: '038-0031-002'
+          iv: 9064ae28aef1db52cde6f7568c188766
+          key: 1229ee227f260b8746021d4a46366ec42f987c36d4910a4925e6ca0ce369f69f
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 7e04e5a857cb61e2cc0038d68fdf1a73
+          key: 91aeeb5b0e932480ad557c55d1c61221481b91918c5da8516ab8383d5bc60ea1
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: a4c1375bb158b08fbeef918ae9e4ba90
+          key: 42e7d0d97c442c26723471c5eaf28af3e2dcf59485f9677ee8a7afbd62441b43
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 5be4a8f373e36594c8f19b8a90ebda94
+          key: 4d4763deac3cf912d5d23c15260edfbc5f75a8005c8235c6d40f2cc1296280a9
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 1b58d3a8bfd299a39f5465c0df4ee564
+          key: f508f6547c02c671ae15d0beefe4b7e018f3ce1e155f1ae7cf9ef5aac35517b8
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: ebbc6c6c267367dba62b95ecbd41c2d4
+          key: ab8848b520391fbb8558129b473d08fcfa6924a6bf6de1e29f40b9a9e5480fa6
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 36b7097b3f539c3eb4c5605f338bd44f
+          key: 5afc4c06e0c02416bcd25e8d71111dc3043200eb2432d1efa7c763651590f499
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 279487a4411fbeef59c6a56f28034712
+          key: a0da3d6726a9dfda9de135959e31e693c23c3216c08f72a6e6768a08f3892976
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 3cb90a84e7be3fc872fbae60b9c300fa
+          key: fffdb6ced18e00bdf240f5aa7ac81144fe353c496225d14f983645a9660ca0c8
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: da21d8b49b66a8e1732f4f0df3724c09
+          key: 2e7c8703279208a80044b322d4ed914e71e65f3a2a4c2d9eecaa51ba2c05bb47
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: a37b98d9e465c60bcc59045d27654e78
+          key: ad80964c516a7f87bab8ce9214f8fece6a2cc83bca98b6e5679fe7aef7a77f1f
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 6d8082d05c8edd3d259bc004766d1e56
+          key: 45820b2a38c8e7ab8becde45a3e618ceafd32ab56c83fc9f09e183159cca6485
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 962cc5a04ef71269630fd05b7d43f0d6
+          key: f51e414ba2cb4bf68fcd1ea70d420207d4e269d048265b6480764e65af511904
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 6f0638cceb5b242e9cbd5c81a1904d95
+          key: 0aece5fc2836f6b75cc2363a178a3c0e91d50628ccd263319d0213669cbb25d1
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 7ca40a75fc54dcb3d07dcc0e290a4937
+          key: ebd73e7f4810a8a592ae3cd00830ceb38aace28ee3dc5661437ba7c3c3c10d38
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 1c9b8f01f4b1da66cf46eefdfee96359
+          key: d7a5126c00b60ec61a758ecfe5a9ca53fc64d2829613d5c59d099d3e8d426942
+    8C5115c:
+      components:
+        RootFS:
+          filename: '018-9702-005'
+          key: c21dd42a12cad2f5430c1ece6f7548e8b77ce1eca344b2bb24392ac45c303f42cd76d5de
+        UpdateRamdisk:
+          filename: '018-9698-004'
+          iv: c9cef509e7d25c40c94d0d00b751255c
+          key: da609eb4eb65a855b81b772cb685f76e5858c575ab658dce046f7c052f68751a
+        RestoreRamdisk:
+          filename: '018-9689-004'
+          iv: 39e56d3c0e2c44421f23d5ef4cb310c5
+          key: f338f82dcf7946b2cbee47cc708c12d2a7545fb45513d816af4fa4080a372e1e
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 2094cf7f4eed57320230c25e8f9dc2a0
+          key: 8946c9ef83208d98dbe2934936741a9ae6dd0c3cd764167f328e292654dc5290
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: f2e95c530f61e83132859a59c1c7691d
+          key: f570894980a8f54f53915cd5892791b880cc0121e9040d745f403cab94e8ed09
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: f41953d9e025b7e652509899df16c77b
+          key: 98fde0536e81d2e946d0fd9873e378e19ccc80064f7a30d33f0d2a3ed1e17ff8
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 9fb4301ecf397bfce2bacf1f50e22703
+          key: 2ae0203b1eeb7aaf770806307282a5fcfd4f6f72c368fd13472809b3d254a961
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: b7772e6d0e480e896e1463ee01530c3d
+          key: 9c73e88bdcac58aa58b584a4fb68e3f294356223e8766a4faa4b1ead462f608d
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 48d8518b0f938a23b63e53d1ff635ae1
+          key: 23042b7a83c066ed272c8d5e93bb892fb32ca74fa666c0b6d70cfb87cd019d1a
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 70e4b715836a3b734a680426ac87e731
+          key: 5bb9e837881f59da3b8356f4fc68297904268aebb045b06b61c36e879661a923
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 5608d7e95071c4bb39c7cfee0e1b65b6
+          key: f6249fa3c164c55711b394f5baa0ffb3a15b796f962338fcfc8e18978f34b389
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 898fc6350cc5c0a6aff144c017125ce6
+          key: 1841afb13ac138d63b3d14c9b4ef2461f8c7382dab356a1281831bb81666d60c
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: a2eca247adf30ba7a6acfad3a2472ecd
+          key: 4f1f5a7335159657daac38a4fec25d60eb93af346b8204bef7f4ec207ba554d4
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 249d3bcdf28f3902421078c8cf17a6ff
+          key: 2470263a1606daced31fd6c7fe657fde5b1fbd3b50b9bdc3ac0d3685e7d7000e
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: f2e4c63c10c0b01fa0434b4fcbea0020
+          key: e8448d98e00de995767d3bafad00e82a68bbfaec6e9ad1f3a56ae7f39a9f8295
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: b00a5b56c23fca92cf15c6948e69c47b
+          key: 13d686faa50ee530389a0f5c0461121bdceaf810912cdc3da339862738c080ef
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: ce6113e0e993bd0abb64ee2c72724343
+          key: c9e08a09927770183814a858ae67bc892d328c4a756073fe5e5c073929736938
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 8f49938d395c3f70582c61e9c226a72a
+          key: 120ba00cc71c6cbc415ae3314064bde54e8c621cbc4ae39e158c7f98843958e6
+    8A274b:
+      components:
+        RootFS:
+          filename: '018-7722-001'
+          key: e37aebb23cef6c2d4b43924722a03a44f8680591a1d29112fddf16da36a275996cdf8782
+        RestoreRamdisk:
+          filename: '018-7709-001'
+          iv: e531b8fa30db1c944a1c222bdec9c5d0
+          key: b01b118189e84fc42b8261c97d6124edff8b10ef4c3cfd6341622d558c5d6698
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 7e6036c5db195fb5d9ef2d05db42ed42
+          key: e8f9fe94be1ad138991dc32504f98401f326dcf3d7a9a27fce6cbeff1ab8e771
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 7c4bb69948fbccc3dcba69c4af449436
+          key: 865894287eef4e94aa8d7707997bcdde8fa9b73e81ebb79725d355ff26416e9f
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: d3bf1e2cdbb40fefb5a4ae735e21918f
+          key: f5533d58154c5c82d59dcf095fc9136b40e90a2d09f7ce0af94d3eb79e689745
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 637c4b224a7ff2bb219888183430119d
+          key: 3548e1be3b3582bdb07a10e09477126893f3098927c12423cacf4c95f5b4dc86
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: c7ac3669f3f52cbc0b833c5960ca6387
+          key: 01abf0c2a07b7ae5780bf3d6f955ac3f1133f9e65da4a2ee9cf33faefce70854
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: a199640b7577a97b6b8a2f071204eec0
+          key: 2bdd4b88c7d25eaeaf3d3465b7646c7b84d5c9b0ad6cb064d25ffc6bc91439f2
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 423cdcea70a1896c2353a281d546bbfb
+          key: 311ab17e7b9000125666f8c11534ef47a12dab57953cb55751f9f2af20b06a80
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 20e315f90a21d92a52648026b2e0bf42
+          key: 5ecd2b9250cf1a55517ac29eb13cdfb83cc9a4bae801358fa8a219ec1c6bcef2
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 11f8b4470b50f1c068fb54b981837436
+          key: 9aab5b73c22f0bee75c6847711ccd0ef195b4072de18300703d43ebd89c6b0e6
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 7b2d24a487aa0342e26bc51800c59496
+          key: 95793883e6eb9da863f06f7a6ffad3949b2bdcddde225c9544d6b8e3ee2734c2
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: f997ce671b5386fc3a33b0210d1fcbf6
+          key: 9d6a84e5bae761e51b48fa9a45f6f2395800fa090090120403fe44d57d630814
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 8826ed693d0292156400b7531d074a58
+          key: ccf1f84699581a0db688712b5d770a5753e7140f851c64c3594951c46d6b7b8f
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 75bea34ecef2e857f84bb411c1019622
+          key: f1bb5555829201df57c5d4c57db8be5b99f29a73ec41dd44b857f43bd19914fb
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: d85267b4d6347b4030366eb3b0a3afbc
+          key: 7a6171575edee4664f0cf64bd77573cbca2ef592680e020669dcb98f2b54d820
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 9efcbca9e856dc248c8afe9cf9e86063
+          key: cb9ac92cb7444c0277169bbc2f62fd6ec58e489eb00c3aaac8c2f7e4f7620ae3
+    7C146:
+      components:
+        RootFS:
+          filename: '018-6113-001'
+          key: 42a0805efff7352066541a54aaa6b0f525bf104386e8d5c14cde397453a8981f631261c0
+        UpdateRamdisk:
+          filename: '018-6110-001'
+          iv: e15cdfd21c429635234dfbe4b882ca42
+          key: 72c64888628ede4919e012b41ccf7b3152f1c12d53835a67b4438758e566dadc
+        RestoreRamdisk:
+          filename: '018-6115-001'
+          iv: ff66f40978686d64700dc0f6df469228
+          key: 55a880b0bd2decd4efb58439ce201bfd58c926795534f0b5fbb0a41d9f54e13f
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: a0477fb8cc00e9109b53b628370c3cdb
+          key: 944f693cea373bc909edf482a0a1f2f749c8cb7658e6b2e790678605dbddfce2
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: ed78c1f5719eca2b224712e0bdd53cd5
+          key: 45a47f8214984cafa9ca3ce530256f1b2f4fa705472efd1596c8ff285102352e
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 7134f507f84d6f1140bb160ae6e8ff01
+          key: bcd313d52a71523598fa0375e72a1b4e031ce8ce1738628f1ababe11ebe4cb72
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 505103c3b609d00d1c8de5b45503b9d7
+          key: 8b33cb8c07a17fbab7715fb8e80b401cb338e119a3402434d58f4452375ee3af
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 39153762baaf91c31e1904487489775f
+          key: d6354488064becb49967c71c34d4410713eb3c94398998bce84138794e8e8259
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 1942a9ca8230cb5682c1da7ea9082705
+          key: 35497eedd0582af981595c436e5ad0782b25219ce7d896caafb72b7a6603831f
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: eb6f0478ac0b4a902cce8bebf77afa8a
+          key: 65daafbec249d58f8f2d78589f66877113bb79e3ba912ccf18d9941bf0f64a74
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: de748f423df4a9a28539393c82c79238
+          key: 72894820c90967fd753c4fb5f1ab48dab389a5523b054c74dcd060bba4f706f9
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: cfde453f72e2d43f42e5fd9178820ea1
+          key: 98fa0f5098fe946dc922db89793b51ba422352435b02b04133d1a082230ac16c
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 374efd2b1db74214128b2e24891dbf6e
+          key: 2eb38a225e8c98a06f497def9dafa6f60ec2e094a8df77875070af162c109d5d
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 1c7cdfbf9b5756247cda6bfc3b774cf2
+          key: 9aaa525c265d8b1943354a366d229134222bb5b80df54a25eaf5601851133014
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: e1b99c5b491a6c9dc2ec421a10853b1e
+          key: 5685c34824a7873ef1dca42dec535efbf202e0e90915d2acc8c36a78283671b8
+        Kernelcache:
+          filename: kernelcache.release.s5l8922x
+          iv: 138ec4244b882938cf970101e6f89235
+          key: d677acce45933e12d2bbf180ab1c5a33d50ea6697cf2e0914897139f4b659909
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 98ee6dbdebd0b598ca1539b5e134f603
+          key: 99d615b96dc99b9a412b4d7c6516db0d62dc16262b9e11e966c529f52056b502
+        NeedService:
+          filename: needservice.s5l8922x.img3
+          iv: 416d3650c6a308e3d9a31d290a23a3fb
+          key: 63aefd20b318b1adc180de7c3de576fd8d3d11cc234b06645bdd7d607e75b3ac
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: e0700e566ce744ba973ed0fd05e1246d
+          key: 5a53e988413c366a2ffc550aa6f115ccbe6cc45e084e2d9be6396d55abe9da5c
+    8F190:
+      components:
+        RootFS:
+          filename: '018-8011-130'
+          key: cca43b420c4ffefb23a9b5e1605db40df1d89cb13d5951e22b7dda5a35a5cb2dcde85e4a
+        UpdateRamdisk:
+          filename: '018-7995-205'
+          iv: ef24131414f97970a183c7450bcd3f9d
+          key: 77ba1011bfc965775214dbce1ed5f997156193e8c36a728801e3944fcf4311d6
+        RestoreRamdisk:
+          filename: '018-7940-131'
+          iv: c4ddd3ed329d243488a99aa50f693d2e
+          key: 26082729ed2afb965b396cccc8f16dc44e0372a9b02095ebf523956edca40a4f
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 234bfca138ef6641bb4b7747269e881e
+          key: 52210dc087cd55a65955156748e592fb4c6c8bbfe4271c3adaeed1d45e79a4ab
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: ebf6b37787e93e048749aea213190f35
+          key: 278c5a9f0c8ca50b63861146996018d048b4de7dcd1a170758fd5b72003499ba
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 518bea251eb65716b3ba8edf37ede1c5
+          key: ff4241c34a9c4392b1db3c96c552a3d2a2c1de404a4993d0055e936d3cf4c9e4
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 430ca845b0dee951ee1d81e06a117828
+          key: 47a1201c0896e685ac51b0b8ec89883d89934a9802cfa282001ec17e1003a7a2
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 80be5b8fbafef0d069474e4da081d026
+          key: e79c8f1abc164864a73912223558e7df6b085596019ac2fe7a9b688fabb4c903
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 251f8addef5af2d9798f3e63d10ba38d
+          key: b04c5ae94c06c69df63d16948b3118311ecc59f1272c857051d5a6deb96404ed
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: e4af16412b0e257fb807220b429410da
+          key: 91050deead2a80a341660e373b06e883c4ac40f1332bcd2598fecec6cba0ca1f
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: '0782966f3700d97d95c0436876b6a2d9'
+          key: 3eed65321d376eccddf7ae80d77f63c09bc509a7897e73c33677654563974931
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: a58aa9c873c02f3232384cd0f31d27b2
+          key: 511411a3cadab76baddd0be09959dff465aef9744603e44657b73612fb693d5c
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 7f9375887ad4fedb5e7d04b58bd8b7c9
+          key: d28ee5b00d010a30e10ecb61cba95c25a152aa06fe81ebb314d4e25a85d3291d
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: e35b9c4239e27615675413fbee252345
+          key: d7083b381871e096ffdf4ff9b06a2a0c8aa2ecdd0dbcd7b97e34be673dc0a891
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 54774ea902fe56e59223b2b78d46b975
+          key: 7b2c0dcc0a9d4b0bcfe7946d5e4563f5516c69495daa65a13ad630471f453007
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 9e738351539ca20f76ccb67165400760
+          key: 9e4dbfdc8aff9dde060b7aaaf378db9a77c71fda9121c1cb9d0a140f01c48b32
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 9db7a7747ce0ceb3e967588b9601e350
+          key: 5ce0739e4420f1d94737b6322faf06ba30a1837356248534d317395d8c0aa438
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: a0a92cc9865ed69322b2754503ade019
+          key: 488e799714f77235807998a053c50003aa5fcf5a69a71576958454765556007e
+    8H7:
+      components:
+        RootFS:
+          filename: '038-1040-007'
+          key: 7085a2976bd57eceedcbbe88a270e1a5028133c288b8afb122c2f886830a9a641daf8bd4
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: a1a00217be79d8e6b8cf3406f66f2c67
+          key: 595dc4fa476e300c836d9b333933ac3f4426f5b41c5f0369142998d84cbd4c90
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 9ba36096d5296c3910caec40de3ac966
+          key: d9aba3b1b3f13d01953d3294fee992935b6416579aa74d60506c9f7323187db7
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 654b89fec9bd1ef374b41d7e983c6770
+          key: b37c6b545489f92d8bba0c4ffa5fca97451d95a5f5315bad92fd263857d4d3bf
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: b1430bd8503278df2811c7a66b406a21
+          key: 4fb91496f9a0a10fb656ac911580c0c389ec0dcb8df39af292f0880d82305a7f
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 90b6b968ca158188806dae8e98695960
+          key: 948f5429eada3fde73cb69fdc112310dca2b2631058eed6270f3dda40e1624a4
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 86841381f0a9ff544fcf51cbf9558093
+          key: 88f9abca05f05a52bc2a8f735d8c75d65302fc1f04418fb5b3c97b368eb98f92
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 712d28fd3a30ac18a63cb7bba06de78d
+          key: 609671e9f99ff38bdcdeee2975025be3641fb96b3c8a2a10fa9e47678896c344
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 9b57253ec61c06d5c6bba81a6300c5d5
+          key: 98104df2bbe56603469198167d92355fe0fa058c8d3fb156a4dda2585e8adaec
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 9faebba3b25378907840ca823f18f4d6
+          key: 78d7b5470d3532d3181acdc746ebb34e485386b4c7a88b5d58793460f9abb21c
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 07df45f769043f202b65fb76a2f19fe8
+          key: 1ab385acd6bed60cfc81796edcd408691170f1bea6ee6aa8a4cc17e168bc3b7a
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: f998a2e8e9f2364301e700b7416c6610
+          key: 36a7ff63c67c4ce69d9c6ba9ddc59d79740381f5ae27a53c75e6e8231e425bd9
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: a4ff016010ce6831cae2a7009113c16f
+          key: f7e6576f69cbcefbe96939efa39600cada2e13d12a6372499eff67f0566b86d2
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: d0e2f5db401a12369cc8554d01044595
+          key: 3ad2437485791116eb642e8048511a9ede80ce8b119f4d30c7673c922db95dad
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: b5f2e1e2b15e5044908a6e866d18ba20
+          key: 85271b231ad2c28510705d3e33ce4497825fbf4ab509720bb670f6ff9504d85f
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: a008cb07c9519ce90e11d1681492face
+          key: 11127ad8259aa5b7fb61894e9c7a5e041c8f9cf9dffa368d38b7cc8196393d93
+    8J2:
+      components:
+        RootFS:
+          filename: '038-1491-003'
+          key: affbe8f884694f4a3848097fa22a71bc1de24b070aa7e79f58a0880602dd21444cd559f2
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: a1a00217be79d8e6b8cf3406f66f2c67
+          key: 595dc4fa476e300c836d9b333933ac3f4426f5b41c5f0369142998d84cbd4c90
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 9ba36096d5296c3910caec40de3ac966
+          key: d9aba3b1b3f13d01953d3294fee992935b6416579aa74d60506c9f7323187db7
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 654b89fec9bd1ef374b41d7e983c6770
+          key: b37c6b545489f92d8bba0c4ffa5fca97451d95a5f5315bad92fd263857d4d3bf
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: b1430bd8503278df2811c7a66b406a21
+          key: 4fb91496f9a0a10fb656ac911580c0c389ec0dcb8df39af292f0880d82305a7f
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 90b6b968ca158188806dae8e98695960
+          key: 948f5429eada3fde73cb69fdc112310dca2b2631058eed6270f3dda40e1624a4
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 86841381f0a9ff544fcf51cbf9558093
+          key: 88f9abca05f05a52bc2a8f735d8c75d65302fc1f04418fb5b3c97b368eb98f92
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 712d28fd3a30ac18a63cb7bba06de78d
+          key: 609671e9f99ff38bdcdeee2975025be3641fb96b3c8a2a10fa9e47678896c344
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 9b57253ec61c06d5c6bba81a6300c5d5
+          key: 98104df2bbe56603469198167d92355fe0fa058c8d3fb156a4dda2585e8adaec
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 9faebba3b25378907840ca823f18f4d6
+          key: 78d7b5470d3532d3181acdc746ebb34e485386b4c7a88b5d58793460f9abb21c
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 07df45f769043f202b65fb76a2f19fe8
+          key: 1ab385acd6bed60cfc81796edcd408691170f1bea6ee6aa8a4cc17e168bc3b7a
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: f998a2e8e9f2364301e700b7416c6610
+          key: 36a7ff63c67c4ce69d9c6ba9ddc59d79740381f5ae27a53c75e6e8231e425bd9
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: a4ff016010ce6831cae2a7009113c16f
+          key: f7e6576f69cbcefbe96939efa39600cada2e13d12a6372499eff67f0566b86d2
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: ffc6303cbeda0840bb407c8d9a3a1c63
+          key: 9849f12535771109295f27e9d8fa6504b216f3f107fab8de2bed66472460b88d
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: b5f2e1e2b15e5044908a6e866d18ba20
+          key: 85271b231ad2c28510705d3e33ce4497825fbf4ab509720bb670f6ff9504d85f
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: a008cb07c9519ce90e11d1681492face
+          key: 11127ad8259aa5b7fb61894e9c7a5e041c8f9cf9dffa368d38b7cc8196393d93
+    8L1:
+      components:
+        RootFS:
+          filename: '038-2286-002'
+          key: 527d77b552fa1fa3708f5c3c2feff8641c7716a24df4dbb49613d0776a7afa3ab9cf95dd
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: f2b82e309b4086eab1ab45b8a33ac9f4
+          key: df1dbdcd3075dd849b7a2eaa327a0702e1f104e65c2e9f76178438144fd40f46
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: b6203dbc2cf01c1089846f3d6d30aeee
+          key: 13f99c4dcd3b930f4f31458d9296ccadc6e3e945eff4ccc989b33fd83206c004
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 784de2b4690795dc38db6b055717f6cc
+          key: abdcb2feecd129c04167e631b96bfa31c6a6c86125ea60d4a983d4f04e96f919
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 3665e85bc8664823fe32eccc11115a46
+          key: f42680dbb13268e767b52418de202946aedd5408492dfb5da4b88ecc3618958e
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 57c8957862c05e4ecc0b3687740d4405
+          key: 49b12936fc74fda7e040f78a87c5b9873dc9594707ec3f7eb5e43b9a7a7c6523
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 64e6cf6a1f0dfd4b0eb97ad4e2870000
+          key: fa6609af9d23cc721a00afde843973081366f1f6ea74b02e8853310da1b80d6c
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 34dea4f2279d5f855ae8ff3cb970507d
+          key: 437d75862e2e87de527a892ba98c55528481077bd52693b0030cfc210ca4af6f
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 7cee453f004e98ce95a0b1b7bdb08295
+          key: '0458c5a7751ebf66e292e7ad356909a0f4028366805d7171f79c064d44be6a72'
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: e6c6381c941903864f5083e650b776ad
+          key: 59c9cc86ba5f46c4b47492f54e0cb812010c81b160b81c6fb4b4341257729198
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: c3efcb6d90101edbb31767b7599306f7
+          key: 724ebc9eac25fb716c0efdfe21c8eb0bf805d5e27e7a756c12ede067977adf4b
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: d6e7f46fe4ea80c513c9e5330f0dc975
+          key: ef93c567b1858d540d857f40d8f985cc921f6959de4e000726c90db351156750
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: '0883a549b9d4e1bc0b6efd995e91ae20'
+          key: 8e01489f416ff819089b1a2027802ea96ca6100107164686fe4c1cbeaa138c3c
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: e95b30ff09aad7c5c065f66e64b57366
+          key: 97489b74ad1a935ab21f7e7bcf723d75b8b6389d60a3c5d4f7b423d1ebae6198
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: b7f122b0a7574e56b8129daf8669ed5c
+          key: 3726beb80b72b5b81b5a985bed11771a1adaf1a30993f2a1ead2f7b28338feb2
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 3ddbe01c93a75c1dfd0f3926c9fd7343
+          key: 1f54863b420a242f712e5a4cb1d228cb93b35b0fc82c23de4e664bde19933e46
+    9A5259f:
+      components:
+        RootFS:
+          filename: '038-2096-001'
+          key: 7e428a3eb0539eb0b24c0f9dc52b0ff1ca2381f5bc7a4981377541b8a92c4b6581303cd2
+        RestoreRamdisk:
+          filename: '038-2106-001'
+          iv: f5b665841db053a404782f5c7e1529ac
+          key: 3702072a3f62d907f7b7bcaa09953f678ca0559cbc89a978bf023017afbe4318
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: ee07533c8199c6aa7979f7e7f2b24c00
+          key: 3114908b9fd32a2d5fc2ad8ec52f7eb523fa00c4b752e57f478904fa1c92aa52
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 6e28f3824d0b5f59ff8bd7464d7ef350
+          key: a6d516a3ab7c568d90d14290f8c73a38caa8b8f79fdaaef7cf375c61bd1dddf5
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 6d346c2a41a5712249aef869bc75e11e
+          key: a31b7b0b3bbdbe131fa778c271210791197bffb50be100a38e3c780e66293c4f
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 03600aea4cf3ad075a240f7ab00c27f2
+          key: '090511f057cb66f4b88c6084a54cea70b6a96c0909781023c29505418e72f58b'
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 9fb9d81f7050a6f46169cfe0786db494
+          key: '0318a264081d6fa3095dd86d4e461b0acf6d6c37c4f457fb088e877e8fcc0d4b'
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 4274307e385853ed8dfbae23f580151b
+          key: 0fc1adcf69a2df6ad214d3711840f305b8adbc00825f81142228e1b54c5527fc
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: c6ac58f5e59b2b75f7fe0bc66698c6a7
+          key: 7791c9c1aa0245aa12463e94ca5b562edbd6c4049352451d4131ab56dae919d9
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: c967b2e0a5a8dd152be5ab8199822bea
+          key: 745cc22810ec2e2d9e94532b2ed1189430e9e9575384ea9cc462e172c4a7148d
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 8e56a412186ec037e7f603523b969d99
+          key: 990d1fafdf0143243b244d4f591ae06a2a6cff02132529b34717770c6e922f96
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 9800eba6ea60d5191ddde33bf6fe8fae
+          key: '0178c26323ef4739d87c3894c4289742f58b6c1c23102b28399fbe9eedc879ea'
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: f65fedc65a246dec73de6f92e653ab39
+          key: 80e2fe7721044a132c1da7ef19bc074a061495267d52af098a90465723f8f557
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 6d25e9a9b0e857b92da262c5c0343c1a
+          key: 9e4506b59bd5feeb83764e8386ef9ca6d7e534916d41a5f6713c26b045d6ce6f
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 4938e457ff7eaeb8d485966c0de72ba3
+          key: ea976afabdb8474efe2ae9e113cc947762a733bddbff0df3fbc2ca50210bc952
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 16ff6445aadf56aad412322884bebc15
+          key: cf85c2722ce69cd8585886e7c7c137b1abfbd9a1a1b0631effbd94be46868662
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: dbfd0c5c8a7bfdac001ce7c59c371eb1
+          key: 4d10e3e28af1fe24a81e093b32faf426c3a8fb51212798051647f17514954e70
+    9A5288d:
+      components:
+        RootFS:
+          filename: '038-2333-006'
+          key: 7e0fd860c3fd6daec23d840cbb0463d1027f5b356e55bea7bf7b3bc0e7f53271b1a4a5ad
+        RestoreRamdisk:
+          filename: '038-2329-007'
+          iv: 61e3b00e6b65a7ef36369e9a95ea3179
+          key: 74f7650e40e19ba06027f62c2081937817cd25034f647e9582b11408b95a311b
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 8e5665f8cb26511e8a3482e4b216779b
+          key: 25dd3d1a7ac639a408f7e9e25d4429fa99a64e2c66ed06b68317fced2e81d2f8
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 3566d5a6d85e89d4028a5b300c471ed1
+          key: ec8de66682365d33473600568bbcaf77eb683abd28cb2c0c5c16717811091f80
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 6c988d95cbb3e31da751feda5765853b
+          key: 301770db8a77c39f42487d96bd136586822f40e9693e9bdcf0da7979deea86c2
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 7a5f4333358851dec4990660f8793fbc
+          key: fa34890d26113c22f0e4d14e4da81ac5ff7a2f2031765853f22127007d8d8443
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 5f33e2c4872954fe45d06ffdc5a3ad8b
+          key: 307e312af399dc5c55056f4f436907578f1cac2c493cf351b34b51bbf919d09a
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 3e9e0f68f437f9f39d62a061b1baa854
+          key: b6112442353a414c97122f7474756aca6024acdca35f6c8bfcfbbafaacd51b82
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: beb216c0e6f8cd1b9571dafd20706559
+          key: b27e91aaae46e9b937e16bfd94047c484441d48329ab547fd09fc72ce91afec0
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 3f91becea95acff8652ce69588284261
+          key: '077588012558db16a2ac0fbe608b8e211ab5030480edf4f6fc40eb66b6418dba'
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 45e8c7dc78e2ba9e22396660185c09db
+          key: f59fe10816c5106c9b1596c1ae7f0b15df7f48d32711023466c1b7faf963ffc3
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 8d6c30cbf5e5ad3b88ea6693a188d9cd
+          key: 4e5fd1c421dfae4961cd6cf292fc4a7bbea405d63b9c42b6a298672c5f8bce33
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 108fd5d0d1e9fe52c79073aba45f232c
+          key: 7807d043d25f6198ef8e7e31a5e155f55850245b9dc6b4c67fa3ed458e81615f
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 2e07dceae88c583f5d3f7108281bc2a4
+          key: 9d36356dd84d6e71e2b0b16e31e32d298a435c28064b5ce2c33fae548fa2ff2c
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: e711f1b0a54fd4fe56f304dd81aac00b
+          key: b1bcb140c73438818d4572b75c9e12d4b3ab7849c4d9e5263f98b5e2868f0f85
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: e8edd934c95baa5d238d8bfe29b2dd14
+          key: e832d5e161d073b0137cd299217d57379936a3c8efc3e8e423f4aa26ec781be3
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 6b281f7278193de863121b0119dceb8a
+          key: ab1dcf20234e4f9afceba4ce8dcf3fddcb5b86ac2e34f9a55388518e33193d8b
+    9A5220p:
+      components:
+        RootFS:
+          filename: '038-1663-022'
+          key: a450072c20f4a07afec9d4c938a3dc08141aa86aa9073db5882313b09fd3098a90e0480e
+        RestoreRamdisk:
+          filename: '038-1677-020'
+          iv: 527d312d90b3a0f125b9d6708b544fb8
+          key: c3b74fc3a68d72b30ddfdb52f29fbe4a873cbfcd7364cf3b6826085c55e3a76d
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: d3b2ecb496130bfd78fa328c5b31fe19
+          key: e5128c126a247c347d58257b15367dd26699871641f7dcd8b8be3c9ac54f41ef
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 7a24fdc2e5742bff1a3c92401c0e0555
+          key: 83a39b1ed7bd4593ce0d071a4ac7eeedf611463de630d849f29c63b4c4174d71
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 400e03db16344a3e81a14d0400382095
+          key: 262ea66df76fb12865a77a32e10498d2edb38c28260adfa18053b3fd33227dcd
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: '0977f1c59f13bf1937b183e7b5eeeee3'
+          key: f5c1fd9a72e5d72d52c987b665af19a13e0c955680dfe4759cf3b6d436a839af
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: b4d93ab62520188dd1afeb498c53e8cf
+          key: 7b5fee1f3a98f3087048b010546c4ff5d3f12eb62fe093119d75c1fb5d0f0f3c
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 3283613ecd9648caea627c5e191dee5d
+          key: 0e7f9883e326bbbb0e26bbfecc93a337f530b95ce80367a10d841d6d8654f083
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: e32d0503cf765e767bcbf8ed206ddb8d
+          key: 965bbda77cbe88a4f7a49df26ac78282d631763a1e935d40b135ce4721be5bc6
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 8060a98e9c7ca9fbfe9eb775d6b69cc8
+          key: 47e2e6fa5fd6dce4ad7d8ee27ce11d47e6585d3bfd34d88014befecf19c56603
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 5f12bb64dcfddcda92251261a447bd76
+          key: 5a0b065c25e93e9a63c504686203ce8b427d31b44fe94115ba5780e40843e91a
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: c25db420f64f595c24c11558b191954a
+          key: a83ad15a571af2c4b9e6725dd9d261e545aee934031f18bb488155dda3541644
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 0eea0c6d8ab982eb6cb64548f3ad562c
+          key: ac79818a971a6d983e3bc58ca3e0b2625ea7cc1042b4aeb7e2dfc062324d3362
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 99bfc5d636e3b1096f595838517d98df
+          key: 641361a8fea8aa5cd3a58c7412385a018f883e7487a05d26058315355de0a060
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: a289799e09fd18bfd2f6570d4da48922
+          key: babe0fd2959215d2dd7d403028ad9ffb890fc833c0a3b457ce83f5adacc6d856
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: c0087c27a40f6dfdf5125a01d35878e4
+          key: 788742530db5218c10e9375ba9a63f434ad7b49e4d32e489e205a1ffb99fc43d
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: b2b782c194196c0dc4636bbaa2a6dc72
+          key: 69ed0a2ea1dc7d6876688a5c6e2b03d4ada81c9b3c7914e43d35739035d42ce3
+    9A5248d:
+      components:
+        RootFS:
+          filename: '038-2001-002'
+          key: 5cc718f5615d8a0caaef430d8589d3542b6b19aef95cc33de39e8c74b869f27781d492c7
+        RestoreRamdisk:
+          filename: '038-1993-002'
+          iv: 63e14af21507be538d9f003b47eb5fe5
+          key: f280dc96d9b33bb48a264c248c40d04086adf86a02f1f7cd74f3b292f0121f1b
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 9bad97610b25b8d30068482e3dae6702
+          key: d1d9028c41eef3a07ebfffc150242dc9f29c9eda7ed62091aafe8238f3e85f69
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: a033d1f153f09a23def40628c1f82a63
+          key: d724e76b80470ffc0034b78133a2757e44decc23eca1206f87ccda1fa095ffe5
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 9408de7eecf93f87875822187f53703b
+          key: 5afe9d0e4b7ef8169365ab7da14dec58216b55c6363ea153116d38e45eba2a52
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 137adbaaa407e2e9883e8b4966237e62
+          key: 525189c1b8533832eaf82af8fd060425884d496273f7df91ebda47bb06ce760d
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 24caa126e477dabab835b502674f45e1
+          key: 00577d79956072b87419de10b43a61386286c05be5185097e6479a111b148bb3
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 4da43c1b6b6172aa68f3390c8cd505bc
+          key: 8d2655694cf25f10a2ec0ad43c33f59bf31f4a747fd89178f9dc55c4d2ddbd7e
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: b10301a0fe8c6f4b4c57a0b95dcc2413
+          key: 164cdeb8ed9d0a73a64df46f00cc1aefc3433831f9c274fc07e62a788e7bc05f
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 48290b7f08c04de09504e894762c0943
+          key: 045d6d54dc6f7be7a5dc72c458055634478377eee7bb1f44ab8457d1def55e56
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: '00882fa543dc9770b513dd0bf7c6b360'
+          key: 5b39a14825bc40939d7083dd1d57a55095f9630b965ca301ea28f99b7887c3a4
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: dd8760565301caa38bfdc8ec4c48a032
+          key: 7b21d64a9ee45e205237a84dc8a99cf5c95ce005367d3ac1413f49b7a1b6ea23
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: d836a782535d9b249ef15f8cee47fcab
+          key: b063b661f8cf524e2e794a15d77e635515366a0ef223f8172572497019f166d1
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 4db6720db994530eb6bc0e2d4ce778d6
+          key: 0baa3dcd3e17ee8d7609e53b2b47f9f87a0f32f8174b449f8e22ef1ae1603ac4
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 1e94149b11e8421433939220fa155dcd
+          key: 555b31a00d89563cd0f8ca24a3fc13d11ec0b4a48e016b288fa668de092fadeb
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 385bd2d46f4b2b61ce923d8f06f84901
+          key: 4be206a8d674fa5b9ec16a05866a17e896ef56dc9d60037100372515c5aa9492
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: b4d07dc087ff274bc3ce2fc27e5f9659
+          key: f2644305c3f667993090397f83a1692b5f0d2f3daf5e78f28dc747f4be942d0d
+    9A5302b:
+      components:
+        RootFS:
+          filename: '038-2459-002'
+          key: d00f6ad8af035d5331c83d60409168b9dab471ea0c2bb73f4e3ec23c194467e54e644100
+        RestoreRamdisk:
+          filename: '038-2455-002'
+          iv: 0f2b81082cc33c6140cd2295ec243ff0
+          key: d5d4bbff981422ac6d74364f896884672079096d26c516f6b33a8132f1749672
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: b98b18c85fd6ceb2d43ee226668d2aa5
+          key: e5bacc9785a1e49225440ed5d3b059aae7d3def6c1ea1e28c9662cee0819cde6
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 17b63bfbaa03df1ff7866e9049282cd5
+          key: a9e60d4bc8c8d0f0e8817a9db1537811fd6e4d906a0fbfa60b2da703a06d90b5
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 4bcb2436636bd263a0cddea2e5ae7d88
+          key: 212f7afdbc94f8a2c542e384be58691c735fed73beafd0e59c643bfd9ad55714
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 237287900c04700a6ee11c5d3428066a
+          key: 5865c8b733d063a6df32ea6e60aecbd04a2b2c5a00e664e464e363674fac6d41
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 6ab05616baa4c6dde88f85b3faf211ad
+          key: 1ec936f92d0953c3960d66fe03d2d5dfaa5d9e70d16fae10aba9cff90ba19295
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 566481497c92cf09bf6366818a561077
+          key: 0ace0d4a5adae75d95504699bcca54f4fb83e45a55fcc4e0dc1bdf99c19ddca5
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 84404d9f991c9d15c5810d67eeaff797
+          key: 1df5b2160bc5ec6a2d072ddd2f2aba1ef07d9b2dc125733afa0880873962c309
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 024dbeda4052dbe7b9d851cf011b184d
+          key: 0da0db925f156b60be89d2695eac9d2a18bf855499ae95a828f3ae9a4777a66a
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 8078c731b003d9eff3a949eab0c26454
+          key: 01eab1a5c4f0d6fb91b03728e88d53211c0c4b757c9b2da8e9efc1c8ab16b5fd
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: fd7d18a4f02dfe936270d03790036b02
+          key: 9bc19ec2d88cd7c117bffe514b4e27e03746138137b62d42fd09f6e134f4dd62
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: ffa0d0f370576a425710b6b4a9d0e568
+          key: 9d897487f156c033d9b02b08870733c03599e66da6a1952f9e3b70b5edf7cfb2
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: c923cf3d72e12816e08b927cf1b734bf
+          key: e62943ab70d21d7fcf1a89f9cfac4e20978a1780bf17c3474e0766782275d5d8
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: d5dbd33cea6e8c8a3ff982153640dfc9
+          key: 1096e76cda18ce53fc874a390079024d8ab0a7cc765726e3f1286d5fbba08f52
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: b0ddb38a14f247b1012236afb9061e5a
+          key: 0dba52a218506e7cf5ccb705c8ad3ce779c61ea3311977b0035de18ff816ed2b
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 8efcbb1f98d2e955b0510737716a72bd
+          key: a1566a24332741a89be2a750b3730018699d28afc9c57051d83fd8ca952991bf
+    9A5313e:
+      components:
+        RootFS:
+          filename: '038-2566-006'
+          key: a1fab44f59d9b22e59ad7deaed305e0b14a55058f070c139087c19aff2b61420371edcb6
+        RestoreRamdisk:
+          filename: '038-2571-006'
+          iv: c0c59aecef8a6856a6fd231a1754ad70
+          key: 60a7c00b5fb15143b5615794e90e8bdda0709e03bcb554e67e581c8f6f32cb44
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 3499f342493c8c74fb5a7c91f32c3059
+          key: bb7627db35b349c79ce26215fb46741135cb92cc527f5b16bdc7454c65c46d45
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: d3246142176e7cf147c40630d6363bf7
+          key: 38067e05ee93713335b535d8b124b77547caa2a70b6955e7cf284b4a2837c52a
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 315249796c408af6da150e417cb382ee
+          key: 901037018582dbf2ead8e265235d3bc7fb2e0416b71ba8ea7f53cf054e583536
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 19aff0de7ff19c0478452f5cde957e37
+          key: 0cf672acf33c53b7d0fce9e08ee3575aca2189fc2afb2ec36dd3e6d42bcc9564
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 3b74733037398c73cd91a763970cf7e7
+          key: 439f0df5988c66c2e449b70eef7cda823c2e17e46f61ca48454a93295c7e44e4
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: acd5b3a3ecda3177329e4b0fb2e432ce
+          key: 98a9ad833c6450c86e2b4c7fc4d5dbfaeef31b76029e472697bb5b4d24b1dca9
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: e239ebb8700c8c2bc88fc00a5be0a8fd
+          key: 5273493696ada48ddd15f3c360ac5b972d5cf403f39da7ae0ad78e0387f9f9d4
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: c15e93f157a0dac6eb303be52ff06104
+          key: 6f308e70f22c2314e8575811e23c77cb447ded2eec31982c7fde0c92287ab240
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: b077533a39760a95c0b62f6f99645698
+          key: 64d4895b69ad04df31a0822bd6888decb0a49395b76782133695ef527c112da0
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: c432b826ea585e9f0390ef298374ce35
+          key: d648045f55beab7d39ef4b5c69565cbdfb7b1de45dba54c68a93d104b78b0e05
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 6227d7e0aae475bb9ee291ef3c9f3a6d
+          key: 9011d55c2cfe5e9acf4249c152b97725b53be40de873357cc149b81faf7e7a8e
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: a8ed598382f2aeab192954c02367540b
+          key: 15c206a098220388638f7c4c0b77e257fab827bd0de3c78e3dc5f5b352b14243
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 381c67c2dfc7babe83cce4bc0bb613b4
+          key: 9439b2d714e675b2980a11eae1f0191c583f31336113ad8819227fd50ada3b84
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: e0a46aca1145a9a7696b45b650278461
+          key: cee96a261696af08879eb699409aa5f4bf4a964a27caa7f79f9b76378dee91f5
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 4f474cdc56758f8678b5d2176ff46ab1
+          key: 4ac52017a41de8417cf3323884e5b7240a9ab0012ad270432c7de0a33acd5bc8
+    9A334:
+      components:
+        RootFS:
+          filename: '018-7994-366'
+          key: e77431d46dedd65cf73df82a823e32e131a76a7caa6d95112bcaede156eb566ce0e8a57d
+        RestoreRamdisk:
+          filename: '018-7921-345'
+          iv: 5630ab5a75440c57f80f42a41f2a86a1
+          key: 3ea246f2b53066f329b5f4b10c973c7b62d6736e2b8706cf396caf5e7ba364ca
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: c435e272dda369cc4b7092c62aadad1d
+          key: 4170df432022215513338d91f6eebb65eff9c7e420a3b1b62916747dabe09c89
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: dad577585717559a199eb3a59f059934
+          key: 230a35f83e25f535f8d4bc2a0616ad9c6d23b87d9c25c08b3bb143f01154d682
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 32264c585385e43df08d5e3994d607f9
+          key: 668f7b192a58cb75aa59ebd26269b857d5a89c37f2baa0d81a370dbcb792dc66
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: f7ac4e666a15c48c0447f6a58a2c5d0e
+          key: 8e5143aeb009377ecb9fd0d442d57893439906f1f09bb8277e5a5b16bafe4f9f
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 764778e8bdfe72bf16da9e75619568b4
+          key: b731c93ab5708c3a3f6ed2ea0e9e815d041288cdbeb141ec68eaf753f0983503
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 8deadfa4ade94eea15f7d6915f322528
+          key: 0c8edd208efb88bcba28078803bb5b1ddf61c58c5d42823a7db2a04131c4b75f
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: fc51113c448661583d5eb6cb87f2b9b4
+          key: c9b035d6193e38e70ec49ac1004ddef334fef24eedfdeea2467a8a2834ac291e
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: e0348a06d0904a24d8949c77009b1bf9
+          key: a8eae08be08bdf9dcd02b90009426e652990eda3baab82beebdccc6ea63a31ca
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: b35be3979ec54a0b4001d6d9ec71422e
+          key: 86cda7b3f7b77734276d7b0200f8d47b4c5ef819b88617262578d82ab7b908f3
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 55f413e7683fede0a383129fe195aa61
+          key: b47591cfda74819c1d1696bd0ba6b6ff047fe1a7eeb45635d652d8aadf48a21f
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: d990ace399dd3b499bc81716d432b161
+          key: 3611b223e881ee2debf0987fd379fdeb0221173b27d6656300cbf1334383169d
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 580904dfefa76c52185c1f06a6d7152b
+          key: fcd9b12b40b5b71c487fe464f67559678c1aea3bdc4de74e6eef236a98d3e3aa
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: d302fccd2f70f8f36f9dcf541ce4821d
+          key: cc578a9f47de9904d96cd6c9fa0ff138f8cb14841c082489abe0e4ae4b9ba327
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: fa7ef1f34e7229ca7767d0cd3df3c679
+          key: 7f6e801a1ab9d1e0ef2ff7b9ef2b0646154f2312fbadd2e02fa5cbadb310ca77
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 51cc5396f73508067312369d7fe0f235
+          key: e60948008314f580f0aac7ca5d81c3dd24e9374f0732768ca77a3f4902a50584
+    9A402:
+      components:
+        RootFS:
+          filename: '018-8026-211'
+          key: cab30867e4dcab9acdafb5965b29617ba366cb6850b0c81b4ae6bc699c641de8ae40bc9a
+        UpdateRamdisk:
+          filename: '018-7977-348'
+          iv: d58a4ca60f92e94af3756bd06571dfdb
+          key: 5d70486496e66808406c83a7b99b8e365f1351c89797e1d45cb89a948b809952
+        RestoreRamdisk:
+          filename: '038-3576-004'
+          iv: e53d36770fdb5644f2274d67e891657a
+          key: 5aa0d13d47533c44cdf7bd34009dbb48cb1612660787b27f7c324e890460a179
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 352cacc687042543c13be0385bdcbc54
+          key: 935d70c5168dd4ac1147b5711c24450cf571603e0367d37d4ae58ab4151ea202
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 1bb57932e21e661286ed16502bf02805
+          key: 4fc6ef61fe92c0c1cc01f13f865a459d7735d4bd4a556ce8b9fe9c24f2999a99
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: a691507572af9f0afa7c8cbfdd61c699
+          key: 82414459ae0f3fd305983291401abdb87f0512c953e5bf968c82a69707d88804
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 89d1a1dc45d1ce069f313960b43a42f1
+          key: 7115fc8a9c614a1ebcfeeb0fc65937043b00b2ae6ed7f63c8f9b52dc47eeda5d
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: b6daef994e1f8847f95e40c9a21233f8
+          key: b075b5c43c7160c2a51264c0795e95ae367200011414f21e5fcb713680bdc77c
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: e7decd5b667af6dbff6f19b28785d98b
+          key: b24146e085da6b9ec1012163293434a5353333f7eb23f5b2e1cbc461fbad0bb0
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 6981e721433d0df9d6046bd49450527f
+          key: e03c2627df71cbc34eafbcba21b34548be42fcc41e307b065b9b2eb36751383f
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: b318f879ca28f5fe5de07b20392167ea
+          key: f236a32601d500123265a7e28be0efedcc9c448b2c07e8c10b1b46db6bd8e236
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: b4d7dc17c5091e5771601dc8db69b664
+          key: 07632115a249238a1a5d4003c81c9f854760b19860de05d61668a87efa9aad82
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 13aa66280775171a598e6819612405ed
+          key: f2cf5c1e510399dab4930864a665d7e699e5aad6e513fbc85eec985d10831d9d
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: f77f697e2619d5cbb4a725bb62514aff
+          key: 593b0a1960b523ebd9ac29cd4efb627550e05e4a9a132b9ec8bc1e3585cc0e4b
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 1496a0dd40bc84ccbf5aa218585f0884
+          key: 13b0ac53c78df93d9c9306a11075ad3338b3f5bc52e62c80e3691e51fae4acf7
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: b7a7c9d00147306177ac4e69e4db88b3
+          key: 3d0117f8d30768977bc5f51d6f3a2d7c29a8be8957cc27339eb85979fb6b779c
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 83117e4f00865c82b3db971f72551d2d
+          key: 50c2416407e3a01f6b89308e95eff77ecab1e0bd1590ad60b5e17adfa8ddf320
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 53f8caeb44b8465ea20d5ea97ea97a3e
+          key: bb2eafb222aab2e2322ae2379aef87c45e1ade14485dbc79f5de270312575806
+    9A404:
+      components:
+        RootFS:
+          filename: '038-3636-002'
+          key: a83afeba7e2e51f4ebb40876a829bcc9fbcca86f38a07ab8cc8d767bfdcf1170913e270e
+        UpdateRamdisk:
+          filename: '038-3634-004'
+          iv: 96079f4ba4149f3889efba743ad7f56b
+          key: 45a3522dc56a9386e01e1baa360bb66f19e90154fae76cac2d1801396d8e809d
+        RestoreRamdisk:
+          filename: '038-3632-004'
+          iv: 2ad494ef97cc51bb6928d4f863aeae71
+          key: 38d733428edc2d277b895feea105abc39ee59357d1579097872aa74854308520
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 5ba188301df7d8057b2b9adbebd9b473
+          key: 1074308cff33c81ce3af0a329571fc77eedce590dbf566972dcb493da3b986fd
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 8b3c8792587b8dfe028da050c7c0b908
+          key: cb0f00f61276282c4e7e903169f04aea704a6daeeeb667c8ab21f50e484fa0bc
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: f2380993b42d4b60f374ce9e129add46
+          key: eabd42e43009f74924fbb2bb66573b061f89d66ef083a7aaa09a2da878e9cbfa
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 8a50287ae91ed60de7775aedc0cfe555
+          key: 5fad5868fdf24242315a7e4656e6a1f52df821f1c9503416108cf051f595139f
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 3126917ef5152bb543b40afda1ba3d75
+          key: 8ffe8fba7664424647c8f30571dd9f35c83ad91b4d67625ae8351476404e46d2
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 3f8f7da8009925776f992976a394fd2a
+          key: 97f722e3418385dd28eaccee391afb11caa3ae883a4af1f00513a5ebc305761d
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: '094e0cefa1722c9f2d15e55c0c3a177f'
+          key: 7dddd133ced0cb3d18ea218091719e890e10e3dcf0020bda354af5b2b4ee961c
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 980750989763955b3963727d8d47d78a
+          key: 5f1e7d003b3ad4eb505a9c3f7cc4ea7579705f6d6a69da6194330811d80f11cc
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: ba466333df50d11d0f14624d74e74f33
+          key: f99f7ee052905bca9b633936be2784f1d6e4023571dbf5d8854e8170fc7ad9e4
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: b9db93e06cdcc20ae46ded57e1356ded
+          key: 2faea9f60edaa820e93d707a7fc15f4aec3fc519d02754b5b0a07e07bf290d1b
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: f7a27ec10321a097205f2abfa18549ac
+          key: c72fb1a20bc8422d9a6f18d056d4e2e9b59c0b3d3f6543cd1140b07d07dd4313
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: e069af55f6d92d8f0a1a7678d799121a
+          key: 9d307bba8b9b2aa1a3777590c226397110f6c1dfc9ec0fd4397671691a2016d9
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 293790c6857e40ccdd1237dc381f1262
+          key: 9c1aad0bcfce80317719bcc67d48c8dac477e11a8622015f39ceb4273628ab12
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 613dca4c215732654fe713273d37a2eb
+          key: '084dd9417559b77253d3402f4f802aa48df75189fcf951af4774f8e86a93da45'
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 1a96203708183f2e1d3f645e24e3e287
+          key: a80f06b23539c9f9fde54452f6801f00fdb918df1d57d4de1be0561a89c1f766
+    9A405:
+      components:
+        RootFS:
+          filename: '038-3717-001'
+          key: 9890bc603e37b7ef74bc211cc9bfa09362c251c10c5abe9dcac43716e104cb717419e271
+        UpdateRamdisk:
+          filename: '038-3716-001'
+          iv: 57c6d5f686d43b3964543befc42adbca
+          key: 6f66a439d1e4c6af64a698bbe30fe79fa99cf0776705885061fbfc4f7298ece3
+        RestoreRamdisk:
+          filename: '038-3714-001'
+          iv: f91e451ab030e7a2eb219e51ef523c80
+          key: 2c5a60cd63f31e133c280dbc95c4640efdb39e70088d6f2de731ce6deb58f603
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 5ba188301df7d8057b2b9adbebd9b473
+          key: 1074308cff33c81ce3af0a329571fc77eedce590dbf566972dcb493da3b986fd
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 8b3c8792587b8dfe028da050c7c0b908
+          key: cb0f00f61276282c4e7e903169f04aea704a6daeeeb667c8ab21f50e484fa0bc
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: f2380993b42d4b60f374ce9e129add46
+          key: eabd42e43009f74924fbb2bb66573b061f89d66ef083a7aaa09a2da878e9cbfa
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 8a50287ae91ed60de7775aedc0cfe555
+          key: 5fad5868fdf24242315a7e4656e6a1f52df821f1c9503416108cf051f595139f
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 3126917ef5152bb543b40afda1ba3d75
+          key: 8ffe8fba7664424647c8f30571dd9f35c83ad91b4d67625ae8351476404e46d2
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 3f8f7da8009925776f992976a394fd2a
+          key: 97f722e3418385dd28eaccee391afb11caa3ae883a4af1f00513a5ebc305761d
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: '094e0cefa1722c9f2d15e55c0c3a177f'
+          key: 7dddd133ced0cb3d18ea218091719e890e10e3dcf0020bda354af5b2b4ee961c
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 980750989763955b3963727d8d47d78a
+          key: 5f1e7d003b3ad4eb505a9c3f7cc4ea7579705f6d6a69da6194330811d80f11cc
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: ba466333df50d11d0f14624d74e74f33
+          key: f99f7ee052905bca9b633936be2784f1d6e4023571dbf5d8854e8170fc7ad9e4
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: b9db93e06cdcc20ae46ded57e1356ded
+          key: 2faea9f60edaa820e93d707a7fc15f4aec3fc519d02754b5b0a07e07bf290d1b
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: f7a27ec10321a097205f2abfa18549ac
+          key: c72fb1a20bc8422d9a6f18d056d4e2e9b59c0b3d3f6543cd1140b07d07dd4313
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: e069af55f6d92d8f0a1a7678d799121a
+          key: 9d307bba8b9b2aa1a3777590c226397110f6c1dfc9ec0fd4397671691a2016d9
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 1dbda19ff48be1f08a0503b78fa1dc2b
+          key: '083588578634bea0cc134359a152119a18babf8b1ebeebb8c39cc6a84725dbec'
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 613dca4c215732654fe713273d37a2eb
+          key: '084dd9417559b77253d3402f4f802aa48df75189fcf951af4774f8e86a93da45'
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 1a96203708183f2e1d3f645e24e3e287
+          key: a80f06b23539c9f9fde54452f6801f00fdb918df1d57d4de1be0561a89c1f766
+    9B5117b:
+      components:
+        RootFS:
+          filename: '038-3057-006'
+          key: db47d825e5f4107b2612eb43befc106e9112c0ffdba8564e7e6bd847cb8d9b9fbbae6820
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: b3117ece85c370d4e8bd9022b42366cc
+          key: ae94596cae0ee142830cb7d25830d4aff16f44c852a34969266ce2ec596fb59c
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 041ba74d73daf1f9ecdcc8eb73d79acf
+          key: abd72fbdfc6f7034c07194892654e93d885de60a59fcc1819006cfa4770232b6
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 9af636760602e7e5cead0af70d78f8e1
+          key: 16f511d5b2edef81f3c988996f92120e3ebe665b8d15cc48444aaef1aae2fb21
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 7b25faf0081232a57be7e9cc171a8b5c
+          key: c2c1ec48e34fb07881292151dccaebfd802e58595a868f101f22d7b913456245
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 67e90ba9eba2522f7d68ac7070d1d4d2
+          key: dfbed715d6cdce320fe231346541d49f6205932a55d1dc9811b2ec20c66eb383
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 2d026c6ae5c66bf784fcf0f8166d8a1d
+          key: bbf118d4b0dcaf732cca9cfc7a6786e282b9b54ae4b6b455254bc5f139b8489a
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: ea45e6bc68f42a34458f6589a09166b5
+          key: feeb7ea56762e4b836477f2c01456b0ac36824315a3dc5a20255783c39900ef0
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: '0876bb84116a584219c18b1399a95110'
+          key: bb4ef4184502fe55ed03386ace0f73774bbd6cde9db806307eb002b3f5086598
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: fe0dd0c4788310ce31be74d98fa5cef3
+          key: 1df2ae1a0df95654a6b98a81ced91d7720816ec2c39cce960b3199f23560d571
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 2b0848610ffde187a71cbe25104b6690
+          key: a33da970a6cf6cfe0f433a67d4c0be16fc2c714f131f97bd5b7c1c29001148ae
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 5eed18bdb15d50f44656223801d0b86b
+          key: 92efd094cc781c0ac13b2cf9bd71f6629bb1ddf4db6a8c846335b712fe027f4e
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: acc15b444b8d2ee527ffa8bc319082e7
+          key: a324da6aa609b7f901e58ce09c07e00f1a0981fac3636deef949d87b3ddaad7a
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 82b5f16c0a04853e0797a5553ef60ff8
+          key: b859b889c9065a6d809ecc71b2f29ec97eb1180b01630aa166ca11ee33d06de3
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 9018b14a5ece42b097c9d174d6bab50c
+          key: 11622f86801fc303c551fa7e767ffc458fc348f5c496dae3752051457cd8b4bc
+        RecoveryMode:
+          filename: recoverymode~iphone.s5l8922x.img3
+          iv: cc6c8dde2830e910b26e73580e475daf
+          key: fd079a18052963f636a503271e0cf6bc896bf7e8f6bcaf84622ce0681b262bf9
+    8G4:
+      components:
+        RootFS:
+          filename: '038-0939-003'
+          key: f466f8ab4e9accb91ed1098ebda56b27b5dd06ddc62485394a53eb77bf190afd80274c02
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 8875c011197ae8c0294ad5effd62343e
+          key: b2e2d635139ee181528464a58d8caf7087113c9056e7d64989519a563a1e34e9
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 2e429036b4b2bef9ed015437723e6efd
+          key: b19ddbdf6cd93b45a33b6cc44aaadff06304c1b8fecba04c7472912fb9781210
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 06b432d2e9dc59cfb35f6e750f4cdde4
+          key: 95040341ab383bb9bcbd4bd50d51361d34ee7d694ba18b8534e4db0c7178d6a5
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 4b06aae8b62ed32138a9b19293600fef
+          key: b932262877f44ca6157bcc3a1e06f55b09d82b42865b1989e81b4b40f27d845c
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: cddb956ba9c8e237a6645f513c412d9c
+          key: ad7f5665291007cbabf7929e628c312fd3d02246cba891f52b0accee55577c60
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 6399da677c9a5560bd064ec5ae7bd261
+          key: 4db598655903d355ff0ae77e0e6851d7a322132f910ef60945ace8edb73cb2f7
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: e0c7a73052618a22aaf35f1158710ff6
+          key: 50eb4efb8042c98fa01965d7b8ba3dc2e6c3fce96f85b9f074b896baacad379e
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: c3e9de46dbfd135b1379f67e63bd4a17
+          key: b439895ab512cd2a1696e75d6468c99a23fdde5854d5618d135c7a174ac9a239
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 5117f7a9848ec912af844e681a380b68
+          key: 184354abc42e772e14ae3911f1bdc1acee07b87f01961eb2af86dc096861f2c5
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 02f699476ea169b67e102cf4f16b7cf2
+          key: 8750645f441c0385efb9ccb0f0cb6ed473dc747f6b97f9156ab7aa71ecef2968
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 99cf05ee5e0f29866535c1ada7dc6125
+          key: ffc79f1e2d86d46cc78bbba014cfcded3cbffa5eeca1489ec849b3fd3984630a
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 24bb9af0d82d9c22f864dcd408038d20
+          key: 1cacc4990ee4eca8a8ab800b00ab0951fd51c2b90bc8845c55101ce78665b52d
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 73a445f7f14a61fb13156f33732578ba
+          key: a7255e6cbb4f605cb737ca2ed69bb5bd8f07903cc67a9829335b57484020f74c
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: a644bf6685be61595ab549d554a4e7b5
+          key: b72ffc60b6ca4662245b06897b752de089f91472c97554992cfde88f4d672481
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 5e9c05a4b6a356b4287ecec602a20b00
+          key: 7fb3931722d2faa772c25c04ac1d2d21a94f7d66d324b9f1fc88f910ad987ef2
+    8K2:
+      components:
+        RootFS:
+          filename: '038-2188-001'
+          key: 49d6739cd5fcc1009756ed520fbeb4a5ffd4f7f460ffb5c6eb9e3d49932fe40cf7cf3e8c
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: f2b82e309b4086eab1ab45b8a33ac9f4
+          key: df1dbdcd3075dd849b7a2eaa327a0702e1f104e65c2e9f76178438144fd40f46
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: b6203dbc2cf01c1089846f3d6d30aeee
+          key: 13f99c4dcd3b930f4f31458d9296ccadc6e3e945eff4ccc989b33fd83206c004
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 784de2b4690795dc38db6b055717f6cc
+          key: abdcb2feecd129c04167e631b96bfa31c6a6c86125ea60d4a983d4f04e96f919
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 3665e85bc8664823fe32eccc11115a46
+          key: f42680dbb13268e767b52418de202946aedd5408492dfb5da4b88ecc3618958e
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 57c8957862c05e4ecc0b3687740d4405
+          key: 49b12936fc74fda7e040f78a87c5b9873dc9594707ec3f7eb5e43b9a7a7c6523
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 64e6cf6a1f0dfd4b0eb97ad4e2870000
+          key: fa6609af9d23cc721a00afde843973081366f1f6ea74b02e8853310da1b80d6c
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 34dea4f2279d5f855ae8ff3cb970507d
+          key: 437d75862e2e87de527a892ba98c55528481077bd52693b0030cfc210ca4af6f
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 7cee453f004e98ce95a0b1b7bdb08295
+          key: '0458c5a7751ebf66e292e7ad356909a0f4028366805d7171f79c064d44be6a72'
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: e6c6381c941903864f5083e650b776ad
+          key: 59c9cc86ba5f46c4b47492f54e0cb812010c81b160b81c6fb4b4341257729198
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: c3efcb6d90101edbb31767b7599306f7
+          key: 724ebc9eac25fb716c0efdfe21c8eb0bf805d5e27e7a756c12ede067977adf4b
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: d6e7f46fe4ea80c513c9e5330f0dc975
+          key: ef93c567b1858d540d857f40d8f985cc921f6959de4e000726c90db351156750
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: '0883a549b9d4e1bc0b6efd995e91ae20'
+          key: 8e01489f416ff819089b1a2027802ea96ca6100107164686fe4c1cbeaa138c3c
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: c455b9fe9a18b7a46f52fae5a351b4b4
+          key: 8179e20aee66a9f742010f40f05ef516d43b2bdbb0f987211a86a05df1a13d68
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: b7f122b0a7574e56b8129daf8669ed5c
+          key: 3726beb80b72b5b81b5a985bed11771a1adaf1a30993f2a1ead2f7b28338feb2
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 3ddbe01c93a75c1dfd0f3926c9fd7343
+          key: 1f54863b420a242f712e5a4cb1d228cb93b35b0fc82c23de4e664bde19933e46
+    9B206:
+      components:
+        RootFS:
+          filename: '038-4324-006'
+          key: 33148831d924a6ea1e9f1051cb0abfb15dc481a91617f37d950612de185c5f182d963a15
+        UpdateRamdisk:
+          filename: '038-4319-024'
+          iv: 1d11de247ed367e7d70090729cfdec84
+          key: 9c032ac5c164b4452d29cf057f6f80a14b2c6f6058a0db6ebe5f17f5c13bd33a
+        RestoreRamdisk:
+          filename: '038-4308-023'
+          iv: b05f288ccfce3f870f8572ccf9c939c5
+          key: 9a3b51af7076f4f93febbfae9d1a5388a161076c312732f9ef25ed4b8a0c0306
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: f18fae5e9e3d61526ca13418291fbbb0
+          key: 1d7d7d6f4bc2e275a1e5e80def296c5785042bf4c83b9d0eb72b1a2274f92fa1
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 13ea6ef48a59035d845cb441a26cccd1
+          key: d5c2e090b083dd3386cb1609b3255111b768beacc40c348ad6e6450db32e032e
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 80f8620cbc52be40c5f020ca453eae03
+          key: 6911bf8799159848fdf654a3b516d46902a654897f673a9b24003f7ef0de9de1
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 996a87a5022fa30c96ef2f4c41ae0271
+          key: 2c5c3302ae8ae465df738e1b9feaada3bb96b80996003cd31b8286daadf6ff63
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 99d0eed017c3d112224639ba3a9fbcaa
+          key: 7b2f86b3e642744f8b12cf8eb2b84d39e0987a1a9c19159a951e3a67f318b75e
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 106c84be086689d51a9e9d0cc88787fb
+          key: 90e29bb46b8a597b16268a0c76fb6cbad9dc7e3bfb22027880e86c3e5ba2e805
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: f5596138fe9a0d428648309504bcc130
+          key: 55f81e535541c1dcbdfa6eae4361cffa1c8930d79e40c98d5c1de27fd16946c8
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: b8738f4c7130946a49249f7209f7be61
+          key: 1c171849083401f86af53f2e9c9b071877d4b4dabc155635e086f9b068b56865
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: faf2757d5f34121235fa016e0736d217
+          key: 62d721ca6a4751fd89d34d837733f3460ca994fbcb1849f98ebf0b475ace469e
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: a160c55d4571b060bb82689e2f10d4ef
+          key: 457d910bc7fd0ef6b71d2714d20d9a70cbc741e863ae57883dba4568d29912d4
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: b9ba075ffe5960b7ef21b31b6d2d4209
+          key: 5ab9136a7f3059471c924304c4f62602860bd9b67f935d28134e679398517c3a
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: e803340e5c0ac2d1c898f6980285e67e
+          key: 406b5d2678c9292cf3c5af199ba962aa23db115a9d7160fa1bd09fd9932160d9
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 5d618983129f3b121ad032dc0a170ea9
+          key: 835138e000a3d9425cc1d0d57cacd55ea6a7e46a42fac59dd55f98cb80240fe3
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 282d2bee68f42e56dc91ba7057aef66d
+          key: 34c2f3c079f5347a3850a73d13dca92c01737836a6bb3c55f0fe2ae29ca40fdb
+        RecoveryMode:
+          filename: recoverymode~iphone.s5l8922x.img3
+          iv: b105a534de543d1f817d4adeccd87daf
+          key: 4a21622a47ce84484a60e7a1355125763d4aac9548a02d8815b4db7388fe7259
+    9B176:
+      components:
+        RootFS:
+          filename: '038-1853-167'
+          key: d399b1aa72b97fdab4e2124a1c165f291af7ccf7c6ac222c11ec205bb0a1a9108679b482
+        UpdateRamdisk:
+          filename: '038-1847-168'
+          iv: b8d1486d256eeab812cb065ed538e410
+          key: ab9429a4b17d9046761df84fbb5eb59ba69b15768a40506c8fc2a160497f9d90
+        RestoreRamdisk:
+          filename: '038-1812-149'
+          iv: 18c96b48f3246151eb93f18a8b1cbc2d
+          key: 61c74c9cf976f9d53f9590fe63d268463005451fe0a9f58e1c4ab5c25a0305b5
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: f18fae5e9e3d61526ca13418291fbbb0
+          key: 1d7d7d6f4bc2e275a1e5e80def296c5785042bf4c83b9d0eb72b1a2274f92fa1
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 13ea6ef48a59035d845cb441a26cccd1
+          key: d5c2e090b083dd3386cb1609b3255111b768beacc40c348ad6e6450db32e032e
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 80f8620cbc52be40c5f020ca453eae03
+          key: 6911bf8799159848fdf654a3b516d46902a654897f673a9b24003f7ef0de9de1
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 996a87a5022fa30c96ef2f4c41ae0271
+          key: 2c5c3302ae8ae465df738e1b9feaada3bb96b80996003cd31b8286daadf6ff63
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 99d0eed017c3d112224639ba3a9fbcaa
+          key: 7b2f86b3e642744f8b12cf8eb2b84d39e0987a1a9c19159a951e3a67f318b75e
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 106c84be086689d51a9e9d0cc88787fb
+          key: 90e29bb46b8a597b16268a0c76fb6cbad9dc7e3bfb22027880e86c3e5ba2e805
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: f5596138fe9a0d428648309504bcc130
+          key: 55f81e535541c1dcbdfa6eae4361cffa1c8930d79e40c98d5c1de27fd16946c8
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: b8738f4c7130946a49249f7209f7be61
+          key: 1c171849083401f86af53f2e9c9b071877d4b4dabc155635e086f9b068b56865
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: faf2757d5f34121235fa016e0736d217
+          key: 62d721ca6a4751fd89d34d837733f3460ca994fbcb1849f98ebf0b475ace469e
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: a160c55d4571b060bb82689e2f10d4ef
+          key: 457d910bc7fd0ef6b71d2714d20d9a70cbc741e863ae57883dba4568d29912d4
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: b9ba075ffe5960b7ef21b31b6d2d4209
+          key: 5ab9136a7f3059471c924304c4f62602860bd9b67f935d28134e679398517c3a
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: e803340e5c0ac2d1c898f6980285e67e
+          key: 406b5d2678c9292cf3c5af199ba962aa23db115a9d7160fa1bd09fd9932160d9
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: d3c0b021629216a3a6d27c17f4a76b95
+          key: 005bb4b3b4f8c49822ba5f2af8d0b846bf94641bf9d2706377eea7dff34d385d
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 282d2bee68f42e56dc91ba7057aef66d
+          key: 34c2f3c079f5347a3850a73d13dca92c01737836a6bb3c55f0fe2ae29ca40fdb
+        RecoveryMode:
+          filename: recoverymode~iphone.s5l8922x.img3
+          iv: b105a534de543d1f817d4adeccd87daf
+          key: 4a21622a47ce84484a60e7a1355125763d4aac9548a02d8815b4db7388fe7259
+    8A248c:
+      components:
+        RootFS:
+          filename: '018-7451-002'
+          key: 29f7969e65cad9341d5ca3dfb04a5158b206959e56399d86051ec86194938f3295e4835f
+        RestoreRamdisk:
+          filename: '018-7413-002'
+          iv: 71666ab6eee03fee782bcac1be743235
+          key: 636c5a73c35f5897f2c907497f62ae4f796377ebfb0396d07bd90bddefcba039
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: e4c82418d4173c54cc181ed098525eef
+          key: c1f93a488a6ef6aca8673ef708717db4107d6d7e70685ccda60b8d2b70a0bdd0
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 84043ca427715751f823cff7d2ceed0d
+          key: 6e2291c6f18eb1827c86de32eb8278f239ad8ac17b3ed1a9724229d544551706
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 239bf01bd82242dc790297d1157104ee
+          key: 8d196cd4af2e571cef3bc83147ccd49f1530b281c212350b5c0da83c6c94aef5
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 4cffe9183930c9ca7a888b1586574dbc
+          key: 0b8a2fb8e224389c7f7e648e6f63fc11720094cf0c50addd594b5a4fad3ebd89
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 9cc397fa15bed0f3511b2e94c3160a96
+          key: 8194d578c6b306e3e3fdd6ec9ee02bf3935dfb0070ba1a9ef03f952f7d9f2762
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 8cd2190d6b0fdd2c1d5aafdc42187add
+          key: 6a820465c8c0ccd01000ac9122ade44f1835e39e5662a8036a16dd9c226ea742
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 5e0169db697c5dc808c73ee6b3523903
+          key: 7a541ce6705faf6489863b47807042002fde2207c11dd8f80e47b982c2e5493a
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 8be5885f71b07eeb91e86ad74a0b83e5
+          key: 06e75a82b3d74cf36d133edd4b7f0c51e464bbbedef1b47fc22a284c05eb9688
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: ec66108da2a31ebf95082141dd1b0a98
+          key: b24f8a710d63cd0eedeba05098e99992fe486471ca0035ca74771f75de067c48
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 387e7ba0c556e817a73a4719a3100541
+          key: cd24f7d31df303b65dd28d8068881058765542caca39cbcd51e882c0658c5fcb
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 6171ad5e18f4e0774d92c4ff74273733
+          key: 21a615625007f9d3ed9cb5b9932cab30e4f49721a111c5f7d338f810cab2f01b
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 88eca8345c91d880fe1c37142fbaaebd
+          key: a68bbc8ef2bec861dec0d5c8e23b7c33cd2aafb02ff9ae8d300947dca321a95e
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 55c1add5c30670ff2c01fc810fa2c201
+          key: baf06b5d7170707d0204adde2d3de957422bb4f391c6d9e0223524081270168d
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: '094a9351b3c5e946ca01d08185a9a307'
+          key: b8d865de1d296496acce4c73df4c1b241f0693956f01ba87c514626c2ace3ed5
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: a284afd04a1d7b979cf373a5d2859872
+          key: 66be7c44dac17909dd935618481e3c679a5e9e15db9d2c7641d1c73144335e3f
+    8B5080c:
+      components:
+        RootFS:
+          filename: '018-8219-003'
+          key: 83755e7d1912a98e5aa69bff8e6be45818d91455a96959782c16f373f32075cf96bd1c88
+        UpdateRamdisk:
+          filename: '018-8193-003'
+          iv: 20d8b7be7eb645996314c381cf6d28d6
+          key: 30047d47d14e8a342c6982d79f6d7ed3481c3c2c92c421748f0b745ba183476e
+        RestoreRamdisk:
+          filename: '018-8165-003'
+          iv: 94c997b3084755dff5c1d1776d20452a
+          key: 57506d603fb32d19dc34a92a049ba39fe3ccf009e4bb7ca13d6a5107175405b2
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 62dc62d66b785f8d51bb272362d30488
+          key: 492cd15b2f4a53f0bb8560709f093e665f1faabf1adaf3bb0052ebecc87020f9
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: a1308cb3c305d0282f897d33a7e7b01d
+          key: e3720df31ce1a3ffbd8b6c1f3875f92391383b9aa03c7ffdf998bf503a6c4b87
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: c9e6f17c57b7d1184ba1a60222e29210
+          key: 44479da96fd7571372223f93e4d55689d48a3bf132d2a1109f595ba8664c0103
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 0d933a90d9a9b26d289100e0c0da223a
+          key: 9e83bd6c637e72ee733917c8e42713f170319fb0ee5126cfc728d424f1c8fb95
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: cc4f164914b907e5ce8be482245edd27
+          key: ea573f187307ec25ecbc5234ba0702e10b088cd79c3c72d4ea519aa292febcef
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 67c48443a7776b0ebd7d0cf5a59cf15a
+          key: d701799397da5b136cb1911117c1abb44924cf4dd032ff5160092821f3a7ada4
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: ac8dd6c6e24c3e43376180d8fd875e37
+          key: bcf7d534e74a2e2bf1314d8762d7aa4fa1f89bab2c39ccde6112edfc140a784b
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 9ac51a47ec89d8f09b5c6a9605afd42a
+          key: 6664b8c1f159d50e259c159aa37ea46347c8933863c6d74cbdc67ea6add48c5a
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 78fc95a0027b820bd8bfb5d14ca10df5
+          key: 47f0202f70e537a05ff0507493725cb24d25eac9c407319cac3ec5e78440bb8a
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: d34000172db5c5e5af55d0ef49d97cba
+          key: e6a4730b6080bd678c59c5f75649395839c5b5e000e76817baa887323f976d1f
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 9fd7a556c90b317f0be7d93dd777f26a
+          key: 4f3d7674012a40c95f6f49577f2e22bb67e3d80797f84a87c77a8a9a7aa6f002
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 013f5740b46798fb4acb3aee17523fa5
+          key: f0584eb418575e116829acc5158867a527a204c9eb02decf654ee5c058b84fed
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 7a8a228e3cd93b3f006f192797123df5
+          key: 68fe832f3931a16c3da02370beb817f6a2ef62261d433baaf828896578eadb1b
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 1ce8fd656990a9c5d4970e57c8910d55
+          key: 94f8e44f21bd7c9fa3f7a6784187a953c62f8a2f1303b8c541bda63c212c8df6
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: e0990a610280fc92f607c02e51468525
+          key: 83cbddf2d13cc061f310cd46364bcc5b1199af3544cf838f68dfc8aa1f38ab50
+    8C5091e:
+      components:
+        RootFS:
+          filename: '018-9166-004'
+          key: a0f5f66d40f6c6f053c47d628c89447632a2a55f412b97322c8eb10fadbed30b1f41d351
+        UpdateRamdisk:
+          filename: '018-8911-010'
+          iv: cd84a8948f0f3839a25c90d82a53672c
+          key: cf8a09be034aa0793b559b4714a9fbd397d2f53859fa914cfd2a279e581ff0ec
+        RestoreRamdisk:
+          filename: '018-8919-005'
+          iv: ab48905007b01624d3f53a6cd285314a
+          key: f2e2877a54a6f03e57bee198a22b1df70de703d2f937e5f7c5cb073678aae3b1
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: d016231628497c1f9858103c629168dd
+          key: f2d518f67f831e7cf049660d9b65130881763d5b93dd48351d439f19c1c2f4cd
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: cbe47d17f8f09634c12f716ad6a99499
+          key: 8eb5d64e8c82ae708de32cc7946abd1676bc2975a9d38b3947b240785b0b3b3f
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: bcaba0972c42133182b87eba7340b935
+          key: b8b0019034885307309e474eb303142b3cfd84482e8bb9a69b739c5c26bec398
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 70be2b0e3fe55f95efb09081db11f126
+          key: d59c0726b1ef3dd7c289be4de129ac0bc3356d58f307e4b654159c2c0370bd8e
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 2e6c520c0a72bcf47cade6a9784c410c
+          key: 625c0c53cd1d719357fab1ebe7b0184c53cc752932bf4dedb852a14babeee8b3
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: a1e7b1ddc1282fb312d109da06cfbee7
+          key: 465980ecd440ed3b81763af88c4e9e889ca40732d4cabb16327c40eba6d9f168
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 982fca7e77110129928bd0f1714411ea
+          key: a4fc67f3e15ec41028cdf6ba819b2693a935c132fddc8a7a41c919b126b0d142
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 01a012567e94ccad430cb8c6a972f153
+          key: 53d2c5479ef98fcc7baac7b8de127ce36d44e8ce7c6e51dc0224543477070d60
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 5726621bd01c79d7c874a4664d82883a
+          key: 87c4f00b5db99cff3840ab9c1320b2f9964b27f3d966f0c10734ffefb307971f
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: c53e701e1f924b940d7de1bd416e629c
+          key: 1a0ca25ecf242a509db008626221aa85446a6b2d4100f09cad87ccd308e089a5
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 5d038455f129be702b2d6c620249167f
+          key: e393eae647b5ab45db05515d5c47227a7a2ecbaf17bb9c1aba7bad7d559e27a9
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 53000edbbac1b85e64e2904f0c55f56a
+          key: f7f07d676d662e340285ceef9e04a7298c6f0ba93d93b1c312bed9e6915a61d4
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 8ca5841acbba3d017dbfb8f4d21cbcb7
+          key: f64ceb3ed321eb91e50dcac1f2da8848c5c065b18059fba766c879e69f4fbb48
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 1d551bed8ee65c84dc0ce018e432acee
+          key: 5330d38349fbfd15b1a4067d0d11aebd3dc4f083c085112353089399143d5379
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: cf959a9eb07bf9add4d793ce5bea1825
+          key: 717bbd8ebf07c1cbbe5c87196bea05057bec53678d430226cfc8b9ea16aaaf43
+    8C5101c:
+      components:
+        RootFS:
+          filename: '018-9495-003'
+          key: 6490c99e7466e973bc8c3b6504195df44590e590295d37e91196b4ed9fbd4a0e02b6a6e7
+        UpdateRamdisk:
+          filename: '018-9489-005'
+          iv: 22cd0fa93000281acc2d1c449575e7c0
+          key: 745cb6beb84feefcdf939464852ea3746d01af0c09424ec35760d043cac3c8c1
+        RestoreRamdisk:
+          filename: '018-9479-005'
+          iv: ed2b1fcb2e236a440a1daae6739b2c1f
+          key: 5f031c2cdedf9d9bca90f21be91776e81de2824ac85306d47bef748f7d3d160c
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: c1c317450b083427e432e03d7c81309b
+          key: c4a792accb56948d0f3ba9058d384fa74e6ba490336845033b892e7c51ab9fa2
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 1893461438605d5410b46187de59f3f5
+          key: 134535dfd9c655fa89aedd7ce2b0e490e4fd52fbdb4952f8deb754646e3b3401
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 2c76915681b91bb2442615e358196113
+          key: 25c41995992062c3a1e6a5ee78bcf7362e4f2f9cf8a81ce1c4faf58f08ef7b4c
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: d25552e85cb8d9d53a9cd457ab7b67db
+          key: 4045e949c42fb49569aa6be0be4e96886c3a0631d7924a231fe557deb50422ef
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: d360277eca4cdace3218628de1028f0b
+          key: 43cd8f1d8d439452f496178e13c71014732f9602dc4d07bc97533a22bbe0f6a9
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: b743c7ae027c6e76f48a75849b41566e
+          key: 69fd1836a9eecd11db1de205221e258f773eb319a66f512371ed70a0bde12029
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: a88f084c50e51d64c66c89aa572e80fd
+          key: ef3219279ddceaa916eb7f2e5edf1bb2549786372da801bd65621e95b4f5d67c
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 3c2c9a36592409c63f0f3affccc0c0bf
+          key: 3dd3aa0757aa552dbed07f84ab40f516bd268e90659124c696f2f89a01621ff0
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 18b2ca574a4368919f7b7be82e552ba4
+          key: 44d554de41020d50974ee8f7bca70ce618c1192d9d32514d85314635317398be
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: e53fa63e2da6868d1bc4ed4078216456
+          key: fddacad8a217eebae97ac37b4434ace14f27fd5d5135473c75ee58b378e1c81a
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: f8146ff72ceb5821d4d4bbea6cb70219
+          key: a9d76ef14412a01c233b89912708f8f49c9a0aeba3a3af8daa39f695c886ae96
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 34e6c1ff5ac7f68df35aeaf3fcededf5
+          key: 3e04ff31bc51bdb9c334dfa78bf711b6ff440fad85adc7ed69fc4f65c23689cd
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: '039ae5244f21fafc9fcc3c2a3883afa4'
+          key: 855a9952b4c901d8bcc4342aac7b5d6188afbf67ab0ea2e93209383fdb4855e7
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: a6b35037eb18306776443e0d574690fb
+          key: 1e96f423d44407dbe99243679b7285a6ddfcecb29362f985e3266f7538042f2f
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 84ccf684fdda14e311f468662727eb6a
+          key: 9331478319bc3a1fa30fe3aae599bc47b056c64c6b9e299019235d1fdde1eca4
+    8F5148b:
+      components:
+        RootFS:
+          filename: '038-0433-002'
+          key: a60bff903bf2ff86aeca862e0eee7197ac0e5bca355ee0f1de8815f706cc5e93c51c0f8c
+        UpdateRamdisk:
+          filename: '038-0423-002'
+          iv: b51efad2848030b45db85a9b340f76e7
+          key: f4034cd81a06810132622cdd4d78810c6d6e400cc3e41157e0583dede0fe67dd
+        RestoreRamdisk:
+          filename: '038-0407-002'
+          iv: 8bc06156fce0d67f2948a106829a64c0
+          key: 201a5f73a073d9982dfcdea764525830423d75ad0d5eaf73b76bd09546949d04
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: b6e55e8d32eb19a97a4b94b4c2f714b8
+          key: 46dee4630bc3e75779c108d801289940c3f7b2220da1a671c68cca1b2c207281
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 6d83b1e870e1332df2cc781965214d56
+          key: e52bff427c3e1b98e046189acadaadd97260bace238e2b000e49ea66167ca3d3
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 53ae3594693b64a7622110abe708edf2
+          key: 7778896c89fec3900674603e700c064e34eee2a1f2b4890a5e55bfd192d8eb06
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 37b0b2e7f4ba81d45e52cfc2c4213c8e
+          key: '0889e787f670349f313c81e54073e180de7f1f79434ad4abb8643e0f7c3edd5b'
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 93bf9f673662398d9231efe8a21ffa36
+          key: 9b5609b108b75b05536954de42585132f67ddcc154146072c891ef3ed420285e
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 5f744b87126f79ade119fe1f5ca18688
+          key: d4448156a8673cfdf4f3e3cec62567649e391f7d38aa08b2f60dba78610cbb3a
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 49b2b09848724fadfcb2e20f2a194668
+          key: 5292eb24f58915950f8330c0f323a0d96e72c789f6e913db16f460e2d081b75c
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: eb43f3d6eeaec8a53151469c921d3f8e
+          key: 95a63f66610ef5a0576f6e1c6b70b34e169a248d58f8009c11483882d16a9eb3
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: ea55176a3e0d3c197a7e10538af984c8
+          key: 26023a8709746bb3bf5f5e1b2aaa5677a5ee84df650d5026638ae7ae06df7139
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: ef3ecd79503abaa9442023effa9b88ff
+          key: a238af93e83c4122e198c9cc80ae75c2ac11e2925cdf750e18f3d4ef32e03418
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: d07709834c9b27cbd95cb87f8727eb0e
+          key: 5f68aa23f8ad60735dbcd501b033ac963832b7b64a883aa1305644b4f381b113
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 869ea175bda40eaec19eff62066b0488
+          key: 3c1378705c7bd07ce5c26573233d7143d1e4ee0d6744578d79ed9508268ee7d7
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: b71e144eef92a8aa325f894d975ff39f
+          key: 2bffec75523590c57cb7eb203cd5c750f9f15abac242b3880b0241c906bdc5bb
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: acbd633e679e50bcafc36cf78bf6b9f5
+          key: 8b5e78f6bf831b100797922d664c0fc02f504ab8dd89d945cc5ab67964782f5e
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: a5496bf955c5ccd53224f944d2bac39b
+          key: 25633786dfc89a41bb41770cdabc5af8f20c5a0ce8c857fc75297d5932e97d05
+    8F5153d:
+      components:
+        RootFS:
+          filename: '038-0499-006'
+          key: 015d8eaba5e191d33ef6c44d2a975f72074e4431929dcf129c6afe2b15d5eda1c9504253
+        UpdateRamdisk:
+          filename: '038-0495-006'
+          iv: 1e7988c418fe26736d89f781cef8d327
+          key: 2d54270b2d8e1ff3a7eab10148e82c653877d30604dddc83b4b4ba2a705608fd
+        RestoreRamdisk:
+          filename: '038-0489-006'
+          iv: 60bae1b6a5c7743c7dcdbbb9b80018f1
+          key: d90ecfbae912a7bb0653922c67585d50f89acf2c8db75b5e0220705632f8347c
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: c1b4a61f7c5493990eaeddb1100df1d1
+          key: d2e7d4004a4a5d0aa67f7879ba44e624044129f7779b5852e58e33156c584a00
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: bf29ef7fd1f864a668a164870d1f9704
+          key: e7e472a30c271275b31306b68b3230fec705534b0b5018ddf2fd483b26da1430
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: e922ca58a6866f3bd21d0b348cde3ffb
+          key: 9ecdc6fe128fcb48de735a204999edee06731f7f5db0c69f7fb5aef25e4b2f14
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 32d4ef8bbaf9a7d32d73527622bd85a1
+          key: 4c4ddcf36fc5fab3df8bdd2a778a8846ec20222be8934117fa15e2496e7f5571
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 8dbfd69556fc0f5c00b46b00610fbdea
+          key: 72628507b237ecfedbda3997d261c83fa34ffb4341880877ada5d2e32bea152b
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: f4142ba71c41320874798992811c2cdd
+          key: be110f44892df71e538295816bc48b2b38769b7103cd90708d0ba5fb44bb4368
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: '082ec6d63ce6d02d1b525265797af844'
+          key: cf262f9cf4c27d70ef804caec6b258f030dc4b86dd8b10905b52dd263b920d45
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 7e0bbfe759cfa6edae35cb5d5eae2ff1
+          key: b434965c9f9e6a50ea31e987c8a11132bc1ada449e33ede653cc75db2e9a4288
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 7c2005bece6ebbd38c3582ffabaaa623
+          key: e0bce559fcb157fd4dc9ba63cc2c2d116fc704c559c1d3fd48be99782ca2438b
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: be4b30de5ba1f54229a06fa921ed6aaa
+          key: 9f37de93077b6626346347bcd0b724289fb20d351dc4865e886a7e487073e9da
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: f6ab9791ea82c41382c54fce77ecd505
+          key: 55b44074053cdf12ae77ce712c58535fe54d10f51c8b8fdd17bf463615f8c94f
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 84832c6cec653e3bdc036fbb2c4f01de
+          key: 839b1a3867b35b759856758a0235e7e7c005979dfe4bb0bfd11e84125da8b885
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 6cf1de0b806c7b963de2af55eeb27cd8
+          key: 63658687ca97c6675c9c4cf4530ea9a2396836ad6f71c56f82ba597be4256c49
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: cd800d7d90d4bcffde667440ebe07bf5
+          key: 006b757eea45030c7e1b6422e23ef01aed65efbfda22d177b6bac09933e17dd9
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: eaad832d0b3c4319d328c3b89370c23b
+          key: 1fda03f1d4d5db0ba19a4ff2c267c397a80f8d7dc45abff8b920478243ff0cb3
+    8F5166b:
+      components:
+        RootFS:
+          filename: '038-0641-002'
+          key: c16c27aa557292bb5ef859a7539af3a407fb76ab432dd4c8b418ceb3e2bbdb6b09c8223a
+        UpdateRamdisk:
+          filename: '038-0637-002'
+          iv: 5dfab355ddecd0733de84fd3c3e81fdd
+          key: 4af123ba6d69897dc95695df866e9234a37b3ce32732c4cc63334e9f261c9068
+        RestoreRamdisk:
+          filename: '038-0631-002'
+          iv: e2900cc79806ee8c981500c2ae345f1e
+          key: cf7b88dc11f206ee46322641bf9b9213c35f19b7043bf68ce60935680927ba99
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 19320cd22e41de3eea66497dd58f54bd
+          key: 5fab3cfedebffb51377379e1540d39d306b1cf5d69e787e1c53febc7a9bb7689
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: c5a69e30ab0995cd62beb6cf5010e090
+          key: 0de3ccfb9da7de3a53e7eab073ac3a6c431793752211eafafd22fd8656a78c1a
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 6b57e56d7781dc525674380818b051e5
+          key: d8625fb798044a48a591fb4bdfa93994b3411927f9383d38fc978e116f259b25
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 98ab04c0617338717337f5167b0393f9
+          key: af83e67bbe666554f542205eb1471776598769834dc32d6bf647868740e8c139
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 87b9aff97151bfc3911475acc4185608
+          key: 8ecf78c936ea0bc6940628099dc670e1030eb976aa0e949a39870d9a117c69fc
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: e3c8ed96aa73c0a52eedff94948ce22f
+          key: e398f40fd79f6d1c9cb8673fc11113828261ecd1268596121290635349e8d24b
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: b214e4630d09e94a7d13fd000bb554b4
+          key: 1f9caaa7c51d3f21eef900b5e9b99d087515a45f02f3c1cfd98bb5822b985344
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 9f8196013bee8684df373580d9d720d9
+          key: 30df040deff39f90a652bb6ec7c89f8ba3e1ff58e70d49563f128eb8087a3d88
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 3e7f0a47969f978cf5a1fe5c1c193f66
+          key: 0a7bbfe9c259c4729e45965bd2c8c94d4780046b55e0427fa5e996e9e0d39658
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 4b11c4d6d9ebdd8008ae864730229998
+          key: ff1d8d3ea8d44f64173ae01293d3ac06cded92db00851d3a778aa8b55804820b
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: e9b91ed4bd619ede6047b054ec2cfcc6
+          key: 9e44c727b2c90379d1030c39d746fc54d7e17fa03c8271f4115594104404a6f8
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 50fcd2226f1ec832558fe42d1ea71160
+          key: 0cab385ade83440fdbff594bea92e5fb5dcd38d41bbe644c0cb65a67a5d74f4b
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: a1c389c46543330fc25f050762214729
+          key: 90f9c9a90736b72a909a9ac8fd8920bbba32739d4c8cb16c83707992f23146ff
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 4f7f948361862aab70edfe88e025c229
+          key: d6b9f210229b8ea34e6e4f8f56a31a627a11cf8e2682fa781e851451c69f49c9
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 713ac9071484d7e7cb6ca389a7197b87
+          key: 2204e74bd0904acad7341c82a4799fb1da78420475ba7e9258f18a9028ba5b85
+    9A5274d:
+      components:
+        RootFS:
+          filename: '038-2158-005'
+          key: 54b0393c60c62b3ea5335dd5fa5aff64f3d6c27b37aac9b0ea62508cb0245986c8b2c314
+        RestoreRamdisk:
+          filename: '038-2152-005'
+          iv: 23c006bb2219f6d0e65cb9e8557ac1ca
+          key: '0450183f18b4eef0a963c22bec4075423ac6fa93826082b61f7cfc35bb612097'
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 56059ddac9811a76e93e86dfcd0d89c7
+          key: 2a281972df6f886e8a1e323455b2a82087c76b0bfb9bc892dc08765748368bbf
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 518192c8f32720e24b30d2d721126d04
+          key: 9b6f6f05872da20d8a83062a5936de783bfcc36ff53193f565ceeeaad2b04b92
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 51be46b2fc66fada136bb8cc973bb325
+          key: 46f5d54eaf5e3dbe819051e0e7f3e43910c436b9c10461640c997880cff38a05
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 1508605eaff8b1f5300624bac59662b6
+          key: 3d0688a00bc17f9dc12a98f059f79c6f6b3229a4a98736943d42a84b0c8136ce
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 3ccabb9cb7c22927dd15d8b90b0e3f24
+          key: 8501574a4bbc1a25ba9abb0e99501f4b2e01e5ee3288e730c590762b610a2da4
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: dbddf920aa289740bf0bfabea29e79ff
+          key: d304fa32ff18d3bbc3fc2a537342f9c78a75f7c1441aaca98ffbf3b55e6469d9
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 782c8b6385c6e86f8213901f5fdcc0da
+          key: 4de8dd289750280ccb9c5efa4cfbe7a1bf50b7298a828c95c6b7df727356cf7b
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 4c2681b7b89e0bac0b805281f75568a0
+          key: '08d822b6246a1521fc67f155fc8f5ef7d6e19fc90e428e2dbc09d1e46b2f65e9'
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 33fa64a084d76f8be71f75bc06ea5170
+          key: 5287af92016b6d8a15f1964e3925ae59a8ddb2398837d46fd95c8e3ffcdbd402
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 3ea8eb57904645c575c1fdd8155f5944
+          key: 0d0f9729f70fbd6af5ae8dfcea14647d6222bee6d04e256a695a86e2f1b2935c
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: dabe9d4dea14f5ebd06ad1f1590d5386
+          key: 6608257a400ef4b89151697bc1e57d50be40027a2607dfdda98b27b6fcbbd9d6
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: f44b3f929e8a583aed1d9b302492373c
+          key: 5c8344f671719399a8f498e98614e42acb4d0444a3fa5f313445f4dc5f9015bd
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: e80ee0bd82c89023551dd3b79186c640
+          key: d13f06109a7284e4adf44f06e7509f994a7aa6a002b3b374f9d6837d70a328fe
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 065f3552241c7eea9d075d372f1209dc
+          key: 515494d35dac3c192faa446ca1895dda69dd31628bc6db3f3677dce74c2f6094
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 33b47597edf2ff947f7e4f58b1c3cf00
+          key: e84f58774f02c9f5210cad23fc3d4a1eb9df0cc7fe2c752a43c41d8f2ffb4774
+    9B5127c:
+      components:
+        RootFS:
+          filename: '038-3894-003'
+          key: 6d33acc0df1c34a2d924d673fb608ef4dd52df3129364efbdee2aea637a899a77fe44d37
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 2fc598b47bfd20275a54e798333e582a
+          key: a127fc63c66e9f85dcf5f9528402bbc56e85c7941044f0e0f68f8574adc092c7
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 68e3678ee69ae17d6d4ecd7c638fa35e
+          key: 535ebb58fae216ecdb82710d4d16bb03c7e54d9bf9b23325b673a93b9a857d98
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 15678a71b5eb5383aa59a2c5a8bc58e6
+          key: 9ce9ee6c89b2abcd8725b04438d5d4dc4372a38f01c097ea9bf79b5853a52906
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: e4cd78d764e3ac437d807c7c07f686e1
+          key: 1b767274ccef9046858c02d90a1c397cc8b5e502522bb19ff45bd4a770babb8b
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 8a1888f0cfa0ce629f4893789d0fb9c9
+          key: 1a3ba4e79c64f5103e1912b20c92440e1969df5caa2c750233906c43c4b4d809
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: e68716c51e7361e4a8443d1e2f74b2cc
+          key: 355b05eefc4a81c24482b3b4b8d8870a54cc5a83d63368b816e6c534cbc7f8a7
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 7df39019e27a92716e770f2460661071
+          key: 4a8871f500215d750ed9642ea43d04c61a8095e3ca27aacb2bfdac9e7669b022
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 24f36b3adcbab19d6e8bdb7fd5c8dc7a
+          key: 6fff9411e29541b34d3e5f98df42e4754fbf890445cfdd3d09f65d04409c1b69
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: d619f4ab24c351ce8b3269f731ba0fec
+          key: 1529d6384299f877cf14b6e870e07ac2c5f4e2b8cddf811e04ac04e618fa77e3
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: c3144885467fed61cf84da467289b0c5
+          key: fa3108ae84eaf66c6bd980634bcceeecbe2c7a056f4c2a7b1e5e6cb74e7656fa
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 351fc1eec90c7eeb1c42f1ad275099f6
+          key: a1dcf9fc6119abb307455bcb56cca41fa3fb7c46610f633135ff57d904bf2ea4
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 05b38cf38af656e6f6b72aaa629fa816
+          key: c20b85047e751407de660d59cd1cf5100ab5135fae4643aaae719a36573c33e3
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: b8dd36361d0d15d399d063c21800ed60
+          key: 7006b957d7ed045bb67ea9b733b9e8695099b16220721f24f3e206f9c6721360
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: cb260644c7de2ec806639d947ae24376
+          key: 5f7837a48de6ecd3053c48fcc4faa14042560d459dac01451e7d90ad16df439e
+        RecoveryMode:
+          filename: recoverymode~iphone.s5l8922x.img3
+          iv: 41c79aa0adab2717d7b04f17858afdaa
+          key: da51d4e6f5d24b1b5dc4acc28fbf9f4bbb688605aa151a4e4e380af392812b8b
+    9B5141a:
+      components:
+        RootFS:
+          filename: '038-4056-005'
+          key: 211ef87cbb3f58ba56c41268ffa79a31426849007240e8ebe3e7eba7803971f3ceb28052
+        UpdateRamdisk:
+          filename: '038-4031-002'
+          iv: 25eebceb1cae605d73b3d00760b53c8c
+          key: 2687126514225b481b6cf5a3f004b6fe223a350f6ee7679ec55cd76637240e66
+        RestoreRamdisk:
+          filename: '038-4030-002'
+          iv: 5d741c1fb5c2672fc240162f923c6b8a
+          key: e65313f4152cde680384caa681ab2da2744212877fbf96a2ad9b390bb2e1b398
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 4f2fa3af5b3d8b62238ead76acb5c814
+          key: f44742c4d7fa36c4007e151841338d9bf2a92d25b5ca88b9d1a643b979573ed3
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 76dae5e86695c5042c81e25540624fea
+          key: c62c587f1775eec02ff0b863868a7496d1a201aa7ea1558a0f3d8ac2a342ccd9
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 9d6807ec8778d421c56d95ea002cec05
+          key: e1cccbe0b2f4958da8e6305fbbcbb4e54a0ceffcf16d21a2ad3f0c6d7e11b9a7
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: ae2ab1ae01a40c9eddd6e56ef9a5b351
+          key: 3db391356b5d80010a93e808daeae8f250f5c3fae5ed950b9fc1e2123c706bb9
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: aac5579f108e2483af4b9896bc72f24c
+          key: fb8c3c2c4908dc1b232561a643b609e21613ccad61e5b130894ea56ce06e4c90
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 1cb0c1f9d87847775b9eb8838564d6c7
+          key: 645ce6be49b4edc7ec975da5410620f34d060000c889ca35fd046431d766224e
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: dd3b82ef5a90fc1c30a10c97f843c1fb
+          key: 92676e92defa645dac8275b8e97d4f23eacae029d7ef79c4fc0ff4d93a48a40e
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 497cd1306e635f748c86c887c6dd8ad7
+          key: e66964c6fcd0934bcdf94c66ada9b84d7cda62d211375f446584c7dca8062efa
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 64504c3f85404bd040ed79d21c2b5a9a
+          key: a396f9d6c1ff9bb0ff65d9bcfb94d626ee16672524016e575543d2cb47e3524d
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: cc2147706702259186a04519532bae60
+          key: 750fa38afd065f4fc1eab6869e8f44e4202afc312161ed04267ac3a35d67dae4
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: a63886fab835a8ffacc85c3787d2be19
+          key: 112d40570508433188f3717282b9c820e152656bf63939bee0cf29705cb9e507
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 8b8d98b968d856f4aa34d9ab87a5c8d8
+          key: de555802ab9da50c9b0a264641a8a2ab3c34e7fe97c0c6b9e6925cf140a71581
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 49a23ff84a63886a29fd75f4bd66da38
+          key: 4fdf507ea6a4ee4ee4f8aa635eb668707ab752b76da9d38488ecf8f980882999
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: c6c3e9ea89c0f4097149932ad21fd55e
+          key: 4a63c238ea90eede0c1c6e7b82b680ee6d5056bfecd986f1df0d1360b5d629d9
+        RecoveryMode:
+          filename: recoverymode~iphone.s5l8922x.img3
+          iv: 4b0820f4e4b983db1e218dac99ec5c5c
+          key: ea870fcfb5f2bf2046e72a4cd69b7670bad32501c3175549a86b14973a320b54
+    8A260b:
+      components:
+        RootFS:
+          filename: '018-7687-006'
+          key: 8eb710a932077f7f7f8eef4598fd55f70b4b5cbb8e08c874b767ed6f69ac19127c195a89
+        RestoreRamdisk:
+          filename: '018-7645-006'
+          iv: 9db49c52bb53886c2c739436e69f2381
+          key: dbde93cd0d71fd723f808c15fb7d32606b5e6284e753d47d3b5eddd205d1c36d
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 9d486dd4b29d0a9e380f102fd14ba6cd
+          key: 055dad41bd414a64ff407a0e2daa616b2f0c29a5758bf02dce43e5b01d16a313
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 31b874cc550d57ae54517cc27b3c69b2
+          key: 901c9e0bd6d762b251bd2d607c6064aee166fc9b6b831dfa0633abf80fc49967
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 122d9f9043d4c2029f0d99c6797ecf63
+          key: 710dbc4a8867e61bf26d39b3ffa1afc1adaa0f4bd918df44817e67bb17485e4c
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: fcb4ece4c10ba21841c353435ffe8409
+          key: b5214653e5127e82c090a7d7ec8afc9f928db437e4aa497f93c8b0369c61e0f1
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 58e5e41a6a0873b3928bf06c7961cd5a
+          key: 2aa3f09d7f4a0c652aa4fdd342e588c296f0992304f4f290278de0debfc35de6
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 98880ca4a8364630db559e740b4b3b8d
+          key: 0fdb42e5a2d894841bbc58af57a2db6d498ee1a3b0eb5514fdfb8093bbc7c996
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 979fe9d2a87e3513cfb4af48a5915edf
+          key: 02f7f95a5a83fb605f3095771601692a3a54b849c59305388df6bc4160eae7cb
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: a8f71e195ae6c8e1f438a64a335c42aa
+          key: aaefd6f8d4a204c542d540092c58aa327fa9fc92bba65ad9994c6013a854de71
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 5fce09f66c52ac5c0a777f7ca1e15b84
+          key: 5681a505cc4f39309986a17d01cf22b4240da0683346ba4f51fc52fc6d396dea
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: bc9c43f55ad8f8af12f1672aa0c52e46
+          key: 6058b3be5707e6b4dcabc81a9a8114057d3540cc3289bf20f7b82cb9925febe4
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: e2eac8e543d567fd622968e90e6a11db
+          key: b9b6965a3b251cfd40af0a706cfa4749d8e74e3c443db2c4a0d0a9bf3e234f98
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: ce95db58e332708be80b5718489b01bb
+          key: dfb4cfd4c5271d7f3e50eeefd15b60cd730d408d3ee4a4a7dc1d54ec9ff2cac6
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 47a0ad9cc374c66d08f298f4598fdbdd
+          key: 7c557e826d3f506c58665458ed07739747d5a04829098e2df442274de53658df
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 2526e8b1f4e000e6941dcabae4e65bd4
+          key: 8f741c8fc11cf4988de09058e8faa1da9b61a493e6db3498afde8be82695baf3
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: b4327e8c50ad8984fc0edd3790a18c79
+          key: 5ebb95e616f9e28f06d1b6bb941fbc347be9e6cedd8ca80dce587951d7f7794d
+    8B5091b:
+      components:
+        RootFS:
+          filename: '018-8276-002'
+          key: de1d547ed77ef10d18e653b2770258d5815ad40eb8470cc96caa0b5e17d0f0294b5ff27f
+        UpdateRamdisk:
+          filename: '018-8273-002'
+          iv: 914705fc3c639bf2b2c0dad0a1813cbc
+          key: a35e780b7f7860a97ecc55cf84a2e3a2bde4839c2e39cef56fe880ed650ad3cc
+        RestoreRamdisk:
+          filename: '018-8264-002'
+          iv: 0b85954dde77371c7eafe77f70364099
+          key: 30dab94645958bd290e892b11097575e09cfb187e2221ef07e7be42b2e9a222e
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: c209ba2510b5d9e9da8e42a4a450e270
+          key: 6fda3f70b4cc9a0a59d282e4fa72a6fc615954840249df6d927bed54bf909abe
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 5bb81c2578fde2fbfd2dd835a7a24058
+          key: 6ed839e4a1bb963c1ec8545916cbef4a60c3312b0bd2468a0ceb56a0a1fda123
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: f3228642d5acfeed918d3201eb6986c0
+          key: 0a9377c3f10ddbeff084c63ee54a8c133a17eb78f9f035fe859db00730d0b01d
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: dcd68f6a057f2641e7482b7fb7c879d7
+          key: 002c3db36154a6b509099dfced3e2c78ce3d905e5ed80e785a76e5f05740f4dd
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 57bb847d16a3c9ae4647267c596311a5
+          key: 200e0c86e31d093d7e8512df4f70a33d911745a5ecd59e6fd6558f659ec5ca28
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 74b951e1967d320908cc4dfb4758fcad
+          key: a8b6ab99f880f52c3cd0c783a4aa541da73149a79da467cd2174606af300cfd1
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 5e2bcbc8b8f0981dd37f5806f07be0f2
+          key: 9579ec27543bfe95c2c1e9643ea0da035ee6ff2b0f659d30e3be081564b42ef0
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: e56847f3076539c0ee22772fd8a0a28f
+          key: 32d1d72bb01f56b5b8d99eecbfed950ffc7901c61bdc6a349cb0999d271b67b9
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: a4dbb48c34c4e99ac839f30373c47f84
+          key: 02abd579d802b331f37d0267b4c7c74e6cdbb1ef4d375b1e9caf3152f64ff895
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: ec1f7bad90d496adf7f2863ecddce0f2
+          key: 90d59b5a1678339d59fcd9716458443e780019983c922a0e5643fc780807ce86
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 21e18c751d462dad367d4f33c5258593
+          key: 46f512200a6bba38f0e451c30628f0de6e72adb06799dcac5dc9f88fbf67645d
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 685529b5e2fb3e8aa773755c52784b39
+          key: 871764497349ad9bf3658086b4d3629f60b101194f0150011f0b9ced25f3e7ad
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: ef80392328d61e207e6161e20f52f168
+          key: ba0efbe1b1f0c9073f6a9a43eea313c9e992c4a0bb20be502a3e7536704afe9c
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 662ef6abf16b53019391585c4a51a474
+          key: 4e11fde4ba3db40d02fbd43e290488049cc4d4a7fd11589da9b34a485a0c6bd0
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: b300c7593020bbc9b10867b763fdf274
+          key: 82e4d764e27f863222723c15df79b09e0e347bcb8d77d6ffcffbbb4892b36fd1
+    8B5097d:
+      components:
+        RootFS:
+          filename: '018-8350-005'
+          key: 17d7c49a8a87333cbf635fe6982ffbd9e100ad17111690b92ec4d0136a0f9ccda56d9ce5
+        UpdateRamdisk:
+          filename: '018-8334-005'
+          iv: 511e47ef16ce2478798010848ac30fbb
+          key: 4a59c39de4049c9881f2f7ebd8dff9af6fe2b07f7871cae1c1881dd6e0e92fca
+        RestoreRamdisk:
+          filename: '018-8311-005'
+          iv: 0a043e28b21862b0309b6206b6e7efa0
+          key: 20119a6b77cd9ba148a2e58f60dde3865a9e11d155e60e35b181a03e5ec689f5
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 8b57fc464dfcd0713826ec9fce37ce55
+          key: 4d7bf605300d54caf82e820ae62a196c6ed7a0e0b4319250b5224441dbcbda27
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: cde35b329a07f5861be11b4de17b8951
+          key: 782a40002d908abb0340d16c51d4276016fa007ead73c053baf4798ff04c9285
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 973eb84cb6de314ec134a881d99fff4b
+          key: 4e362b3f9133095118fa87a3ec73583b4895c5bcdd4b9bcf354a774131ad62c2
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 9eadf4cddeb9739b9d93a70dccf1700d
+          key: 4d65d89f23044cf8666d5957c211f7430018b1302b72d0600d57c2604ceaed98
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 39c0a61365251345a1f6451599d921cd
+          key: 5e0528c924d72e417a2162db4a59aa8b0c395addab9defe603b78231be4c9d71
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: a7a07c97110ef06cc4964c699a26cc8b
+          key: 59bdffe50cb5f01702aabd556e310edca05298227e36aae0ca99a44639ba3422
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: b51883018ff4db06184bad8e465e2513
+          key: fe4baa517c4b53d21a39fdc810396687cfa9fbfb649a025589fb463479a65272
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: 81a4088956bec2d0501ffe4370184a86
+          key: d3b287364891d6387a12a8d525842cb2b5d65bec3adfb5320d0568cd39a5a9f0
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 1018c39d91f6c8d483719bbf22a5bb3b
+          key: 2b130acd0f8cbd2d4059dfcaf0a93f8db71fb94aca7409ad55115f627a31dfb6
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: f4e5a45c8ea2ed1d23d43c365e4d7b17
+          key: 3e431ee73669cc72c56add66cf174270fa0b77f9e76049d8d410c424beabea24
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 7976ccac6236fdc2af9c460b63a87c22
+          key: 062c48ae0d3ae8d573a28b3860def2df3c0e05168e9d376086ac6aa2aecc75da
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: b8da3baecd3c9b80e809c1d0cdc6b378
+          key: da1e836c7bdd5dd42e490c4acb77c1364c9d99bcc4fc92f05afdfeac54face0a
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 1ef15e4e8727988073b9a15cdce88640
+          key: c2c58e7b75e7f5eaae408813fe417350b2583237746ac1354f3e0b167d7a6036
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 435f230238b8e24c6323693a75b01448
+          key: 4737df8f7e1ef418d9350a5ac3968d6ac026e243d29d8be3de0550d587927649
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: ec99aeed129f578d2c382c41b24b7390
+          key: 126c67663a306cdf3e8ad7770b0593161ac9bb8dee9f95577fed2124f0f60eb2
+    7C145:
+      components:
+        RootFS:
+          filename: '018-6030-001'
+          key: de14c16e21ad5bb12fe572ca9400d29a4443ff208ec49c120ad72d6c3269fd5553047cdd
+        UpdateRamdisk:
+          filename: '018-6045-001'
+          iv: 663139ba9ff0d04dbbd68534629994b7
+          key: 7345a9977b97937c4fca2f53a1475aff8d5d39e3b91191110b233be4be7d281c
+        RestoreRamdisk:
+          filename: '018-6044-001'
+          iv: 8d41dc41fbf2ce35f7f39379db9da6dc
+          key: f6d8841f668c6b16c51b9a8862889b831f638326116b46444f8120f914b36437
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: a0477fb8cc00e9109b53b628370c3cdb
+          key: 944f693cea373bc909edf482a0a1f2f749c8cb7658e6b2e790678605dbddfce2
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: ed78c1f5719eca2b224712e0bdd53cd5
+          key: 45a47f8214984cafa9ca3ce530256f1b2f4fa705472efd1596c8ff285102352e
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: 7134f507f84d6f1140bb160ae6e8ff01
+          key: bcd313d52a71523598fa0375e72a1b4e031ce8ce1738628f1ababe11ebe4cb72
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 505103c3b609d00d1c8de5b45503b9d7
+          key: 8b33cb8c07a17fbab7715fb8e80b401cb338e119a3402434d58f4452375ee3af
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 39153762baaf91c31e1904487489775f
+          key: d6354488064becb49967c71c34d4410713eb3c94398998bce84138794e8e8259
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 1942a9ca8230cb5682c1da7ea9082705
+          key: 35497eedd0582af981595c436e5ad0782b25219ce7d896caafb72b7a6603831f
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: eb6f0478ac0b4a902cce8bebf77afa8a
+          key: 65daafbec249d58f8f2d78589f66877113bb79e3ba912ccf18d9941bf0f64a74
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: de748f423df4a9a28539393c82c79238
+          key: 72894820c90967fd753c4fb5f1ab48dab389a5523b054c74dcd060bba4f706f9
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: cfde453f72e2d43f42e5fd9178820ea1
+          key: 98fa0f5098fe946dc922db89793b51ba422352435b02b04133d1a082230ac16c
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 374efd2b1db74214128b2e24891dbf6e
+          key: 2eb38a225e8c98a06f497def9dafa6f60ec2e094a8df77875070af162c109d5d
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 1c7cdfbf9b5756247cda6bfc3b774cf2
+          key: 9aaa525c265d8b1943354a366d229134222bb5b80df54a25eaf5601851133014
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: e1b99c5b491a6c9dc2ec421a10853b1e
+          key: 5685c34824a7873ef1dca42dec535efbf202e0e90915d2acc8c36a78283671b8
+        Kernelcache:
+          filename: kernelcache.release.s5l8922x
+          iv: faa718b1c6dc3319fa0df19c3c41e880
+          key: b5cad03239fb583c706b685d331a0b614df85803dc63fb1d68580b510577f1eb
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: 98ee6dbdebd0b598ca1539b5e134f603
+          key: 99d615b96dc99b9a412b4d7c6516db0d62dc16262b9e11e966c529f52056b502
+        NeedService:
+          filename: needservice.s5l8922x.img3
+          iv: 416d3650c6a308e3d9a31d290a23a3fb
+          key: 63aefd20b318b1adc180de7c3de576fd8d3d11cc234b06645bdd7d607e75b3ac
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: e0700e566ce744ba973ed0fd05e1246d
+          key: 5a53e988413c366a2ffc550aa6f115ccbe6cc45e084e2d9be6396d55abe9da5c
+    7D11:
+      components:
+        RootFS:
+          filename: '018-6152-014'
+          key: 1e05ef21821280869d4029a2328836b9f60bc63907c6e951c0f1c80c2d8c66aef5c39a44
+        UpdateRamdisk:
+          filename: '018-6145-014'
+          iv: ac6b46056dd6dd6521eaa45b13dbb644
+          key: efa9ee796d6d6f92fc79653815f9232ee1f38120e8380b63d85add8f317e5540
+        RestoreRamdisk:
+          filename: '018-6155-014'
+          iv: 1a388bbc8ceed19a46474af07d58480b
+          key: e6361c6c999807f6069871b43b2421841057dc200f5543277bf8a7e07c68f400
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: ce865926395b4a1ee6a0e7ec4f2afbba
+          key: 6abc741203d55013fd1b20f09c14aed5ba961942ba70118fc44cab65b0d83afc
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: f7087009bc7d875272155b62738decbd
+          key: 0463d0764bd5c34659f1fb4e771839b1741555814b440feebec3d8a6a5803b68
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: d95884af4c41399ee5f5d494ddfc440d
+          key: 64b0ec1a5be267adec60669ee6ff911b2625703666ea04b47db78eae1c64c37c
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: d01fc60cdb764ead693239cad4f3e3d5
+          key: 010d828d6fb804d8b6c03c5647ada5da2fddb042a2a753ffc979d7acc0e27019
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: c0d50711595fdb0dbbae8e5c093f54d6
+          key: 88fb40d1d2cab136fc80e6d22aede727d55ff212773095af5ed505c871f55007
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: a083c415e64612f62192614ba7782adf
+          key: cf54e5b50f27c587a19d2cc7baed2c6b6a7d6dc9bf9e8061da99ec6d99ffd976
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 400b07fa2b9ee248d6df9f4bd932a903
+          key: c592a3dd1af8bc4deab85736a844b649f8307033fadf0b90282d1d62900cfb44
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: c5d5ee775e684e43dd36bc203baeb3f7
+          key: 299d78991fca49c5526c9c2655bb39c0c81aa82f133e78038f4f09f24cbe26aa
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: 279791c8ece1d1a67ec7678c153c87bd
+          key: 6f919e91ebf93c1c16714a28cabcf24ec15f1bfff7b8c7045a1423c9c9be4025
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: e636a1e3925f58351d563ccf71504026
+          key: e1f375e17971dce72ca96a64564a9575e82828735a4ebf70d6a473696536ba19
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 6e7dc46c6a9cf573dda9af515c1b50ac
+          key: eabfe2fc4bad7f97c090ed021e7fd80a7463251c4919a3c637d2a0c529b79d5a
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 8caeaf0aac65bbf6f3f345f7a0c95f76
+          key: 891747c374707b5cc6f5d4ffe9f0f24cc166858affc15f34d4bd0f41cb3077a0
+        Kernelcache:
+          filename: kernelcache.release.s5l8922x
+          iv: 3dafb6426b7e90ff90965761a02ca222
+          key: 94e4a81c4d09e0cd0dbace483fbfd30a6ea542c58eb35cedbca9d82f44425f88
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: e738ea3c74c078d6d5252b37444fc184
+          key: 3ea1765385315e7cfab4556a39d7528ffbd1621a90e7928327f3f86169fa42da
+        NeedService:
+          filename: needservice.s5l8922x.img3
+          iv: 0f75b2e0360cdedf6858fc2e45415d91
+          key: 31232aa190d57259750e474d040d2c50c82fb53df7e77bf14b4776a6bc6a9ace
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 165912a35556e44c3e13410fc32ae5a1
+          key: 7563feca369350c9cc0c40eee4fe9a9aba754673af8bfd2e548c35a17ca2517b
+    8A230m:
+      components:
+        RootFS:
+          filename: '018-7339-030'
+          key: 382dee11b9d80387b16ac2030ee1e903b78d9743a31a18bcafc922b7921eca85ab0aebf7
+        UpdateRamdisk:
+          filename: '018-7291-032'
+          iv: 661fc430ba68c41763f4d05ca2955ae0
+          key: b91529e74c531b3fc7f6299f5b6d11c1570caa1687248123092343ed49c5fb0a
+        RestoreRamdisk:
+          filename: '018-7264-033'
+          iv: f1b5adbe2e2fbdce41403121277a2966
+          key: 4dd647b342c87b3732df470e9a1356cff928e48ac63feb3de1efb49f94cb2250
+        AppleLogo:
+          filename: applelogo.s5l8922x.img3
+          iv: 9becc5e5d4ecc32e37e0e7ac904c5f8e
+          key: b05324bc95b42fa265b059548c5d5e7eef0f85941ad223a38f49dee02f858fa3
+        BatteryCharging0:
+          filename: batterycharging0.s5l8922x.img3
+          iv: 7e4adad552c2d4ff163c0237631b29ee
+          key: 30abb370bc394f0e22fb718623962e4bcf9bcbb2cd08b2783ab3b8daca8116b1
+        BatteryCharging1:
+          filename: batterycharging1.s5l8922x.img3
+          iv: eb1106ef9ea00edbe52fca28d8cfec17
+          key: e2d1632407ab04de3922bb2649cd6aa182bed02168ba96a2ff3028cd537869ee
+        BatteryFull:
+          filename: batteryfull.s5l8922x.img3
+          iv: 65934ad512d2abb45b8cf5ebd9802866
+          key: 2b557e0bd9fba6e51294cf9364b2880120260be8c106d2c4602ae9636a6f9d5e
+        BatteryLow0:
+          filename: batterylow0.s5l8922x.img3
+          iv: 750cd99993427d1cda81f90a884ef258
+          key: f3b988714b8486e84b8499d53688d8c85350fc8fd2ad19ac63595f939cec9844
+        BatteryLow1:
+          filename: batterylow1.s5l8922x.img3
+          iv: 3e16091376d867ce79e0d4d137812e3f
+          key: c6acec9e2bd7487f743be5168c884603c658a373f0f84fa3caebcfb0f1b33854
+        DeviceTree:
+          filename: DeviceTree.n18ap.img3
+          iv: 6a0ab956ab3da8e3c2c035d7a8981ac0
+          key: 36e2e170b5019705f32f06bb73c3a67a6e3c4e7b65d16eca7bfaa225b3e99850
+        GlyphCharging:
+          filename: glyphcharging.s5l8922x.img3
+          iv: bb359c6256f07d1dd6671936b9737052
+          key: 1a2dc5138a088a6ce5f8ce7d51802ab1dc0f4dee985040f597606ad678fe8df6
+        GlyphPlugin:
+          filename: glyphplugin.s5l8922x.img3
+          iv: a88e6850b2e979cbbe3afd288d790709
+          key: e14bd1d0c566216d52614a82bf7f186d09b49073ecbca753953a94b40774fbbd
+        iBEC:
+          filename: iBEC.n18ap.RELEASE.dfu
+          iv: 6d7323e911c6a8c43f046bf138d94217
+          key: 374dd2a4467099698f71e128e3ed18d3706fff3f6f632f031d5ed3e090d19602
+        iBoot:
+          filename: iBoot.n18ap.RELEASE.img3
+          iv: 21b12fb37caa0f07baff9059e10e93cf
+          key: 777d13c2b2298005d65652cf3ae33500b40053cdfa19624bbf711b0f6a7f1ea3
+        iBSS:
+          filename: iBSS.n18ap.RELEASE.dfu
+          iv: 369655853e539481c07dbe22e92e88ba
+          key: ce00470661f2a29c865b085291bfce2c13ec51eb171c0066875d5b16f783798a
+        Kernelcache:
+          filename: kernelcache.release.n18
+          iv: 0b458d08d7459a93d5583e1cb218b687
+          key: d1b0fea40f7fba17ce97b22ce3a4c2a53daff84e4d3f6cdfe7ab86c76cf3c7e2
+        LLB:
+          filename: LLB.n18ap.RELEASE.img3
+          iv: beec9f598c04464ebca346836fd2498b
+          key: 7d14d252a9de202176b9db8e566909bfaf0486b14dee62115ac1c479786f3c5f
+        NeedService:
+          filename: needservice.s5l8922x.img3
+          iv: 2888bee141c885a8d8dfae45b7aeeeac
+          key: 4dc0ab6933ad23ff23a29a1009588dcb53f878e46f7b43be7ac9c6dcc8634f31
+        RecoveryMode:
+          filename: recoverymode.s5l8922x.img3
+          iv: 5fc05008544b3818212bcf39696982bd
+          key: eacf3ac1516bedec5e815c4e138ced65989815a8c2e3656882209524734b8675

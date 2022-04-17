@@ -1,0 +1,65 @@
+---
+metadata:
+  description:
+  credits: []
+keybag_boards:
+  2:
+    18R5552f:
+      components:
+        iBEC:
+          filename: iBEC.n142b.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: 237c0e9baf8c2b559beb08f99fd673b371df67e56f487862d876a49184d27ff3
+              encrypted_key: 75e35658d31c425b66eb23d338523caa
+        iBoot:
+          filename: iBoot.n142b.RELEASE.im4p
+          iv: 0326ae34313ae82061261b1cfe1b2332
+          key: 1631a6eff46189ab25534b9739fb5005d4dceeaac27c422504bf540048a16068
+        iBSS:
+          filename: iBSS.n142b.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: 1edd4f831aa9f8637ab3ed7ffd261c06a8d2694b67ae68cd70a60096fdea77c4
+              encrypted_key: d2dc8ffd28592095636c9852e0ac739f
+        LLB:
+          filename: LLB.n142b.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: ce76d29ab481a993e6a426974a317ba13fce4822d2571e900fb3809bcb3540e7
+              encrypted_key: 9246845bb7f5f90809588d8b0db38fd3
+        SEPFirmware:
+          filename: sep-firmware.n142b.RELEASE.im4p
+          iv: 668a4ec73c4b8c6f35e57c0815476bf4
+          key: f593d248c232f16de2d0957cf9641c3c049028e37687939db35dee3766483658
+  0:
+    19R5559e:
+      components:
+        iBEC:
+          filename: iBEC.n131b.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: 7bf001234a5866d7219a552bfdbccbc3e30810f63e782aed4eac552871ea81cc
+              encrypted_key: 972da0b0fc6dee164d41ef3338710772
+        iBoot:
+          filename: iBoot.n131b.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: 527491087f94ab1bcb7037237a2c55bad2a0d3827ca1aea5bec20db2bfab18d1
+              encrypted_key: a80a03ed9d6849001991fc5d0c29f9de
+        iBSS:
+          filename: iBSS.n131b.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: 92a19442092d66f2a22869cf2ced0ed896046693aeecf8b0699e22d7766fd885
+              encrypted_key: ad30c9f1c4c58a87ee2ec679865fb9b9
+        LLB:
+          filename: LLB.n131b.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: cce8160e2b32a5aa5d4750867d113874b6b06b1485347a1db2d35025c3a404ca
+              encrypted_key: 399ff725f00c92feabc32a5737550ad6
+        SEPFirmware:
+          filename: sep-firmware.n131b.RELEASE.im4p
+          iv: cb9076b542287eb5f20cd40dd8dc1b47
+          key: 1fc06050e221491c61ad3be717efd95a2f4589a3c3bf77ed7a5ce9a8e79c25a9
