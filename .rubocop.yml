@@ -23,3 +23,6 @@ Gemspec/RequireMFA:
 
 Metrics/BlockLength:
   Max: 35
+  IgnoredMethods:
+    - namespace
+    - task

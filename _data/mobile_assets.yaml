@@ -192,7 +192,7 @@ mobile_assets:
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_MediaSupport/com_apple_MobileAsset_MediaSupport.xml
   asset_type: com.apple.MobileAsset.MediaSupport
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_MobileAccessoryUpdate_A1422_EA/com_apple_MobileAsset_MobileAccessoryUpdate_A1422_EA.xml
-  asset_type:
+  asset_type: com.apple.MobileAsset.MobileAccessoryUpdate.A1422.EA
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_MobileAccessoryUpdate_A1450_EA/com_apple_MobileAsset_MobileAccessoryUpdate_A1450_EA.xml
   asset_type:
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_MobileAccessoryUpdate_A1468_EA/com_apple_MobileAsset_MobileAccessoryUpdate_A1468_EA.xml
@@ -765,8 +765,6 @@ mobile_assets:
   asset_type: com.apple.MobileAsset.VoiceServicesVocalizerVoice
 - url: https://mesu.apple.com/assets/tvOS11DeveloperSeed/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain.xml
   asset_type: com.apple.MobileAsset.MobileSoftwareUpdate.UpdateBrain
-- url: https://mesu.apple.com/assets/tvOS11DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-  asset_type:
 - url: https://mesu.apple.com/assets/tvOS11PublicSeed/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain.xml
   asset_type: com.apple.MobileAsset.MobileSoftwareUpdate.UpdateBrain
 - url: https://mesu.apple.com/assets/tvOS11PublicSeed/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
@@ -817,12 +815,8 @@ mobile_assets:
   asset_type: com.apple.MobileAsset.RecoveryOSUpdate
 - url: https://mesu.apple.com/assets/tvOS14PublicSeed/com_apple_MobileAsset_RecoveryOSUpdateBrain/com_apple_MobileAsset_RecoveryOSUpdateBrain.xml
   asset_type: com.apple.MobileAsset.RecoveryOSUpdateBrain
-- url: https://mesu.apple.com/assets/tvOS14PublicSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-  asset_type:
 - url: https://mesu.apple.com/assets/tvOSDeveloperSeed/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain.xml
   asset_type: com.apple.MobileAsset.MobileSoftwareUpdate.UpdateBrain
-- url: https://mesu.apple.com/assets/tvOSDeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-  asset_type:
 - url: https://mesu.apple.com/assets/watch/com_apple_MobileAsset_Activity_Achievements/com_apple_MobileAsset_Activity_Achievements.xml
   asset_type: com.apple.MobileAsset.Activity.Achievements
 - url: https://mesu.apple.com/assets/watch/com_apple_MobileAsset_ActivityChallengeAssets/com_apple_MobileAsset_ActivityChallengeAssets.xml
@@ -873,8 +867,6 @@ mobile_assets:
   asset_type: com.apple.MobileAsset.ProactiveEventTrackerAssets
 - url: https://mesu.apple.com/assets/watch/com_apple_MobileAsset_RaiseToSpeakAssets/com_apple_MobileAsset_RaiseToSpeakAssets.xml
   asset_type: com.apple.MobileAsset.RaiseToSpeakAssets
-- url: https://mesu.apple.com/assets/watch/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
-  asset_type:
 - url: https://mesu.apple.com/assets/watch/com_apple_MobileAsset_RecoveryOSUpdateBrain/com_apple_MobileAsset_RecoveryOSUpdateBrain.xml
   asset_type: com.apple.MobileAsset.RecoveryOSUpdateBrain
 - url: https://mesu.apple.com/assets/watch/com_apple_MobileAsset_routined_defaults/com_apple_MobileAsset_routined_defaults.xml
@@ -907,62 +899,52 @@ mobile_assets:
   asset_type: com.apple.MobileAsset.WatchSoftwareUpdateDocumentation
 - url: https://mesu.apple.com/assets/watchOS4DeveloperSeed/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain.xml
   asset_type: com.apple.MobileAsset.MobileSoftwareUpdate.UpdateBrain
-- url: https://mesu.apple.com/assets/watchOS4DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-  asset_type:
 - url: https://mesu.apple.com/assets/watchOS5DeveloperSeed/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain.xml
   asset_type: com.apple.MobileAsset.MobileSoftwareUpdate.UpdateBrain
-- url: https://mesu.apple.com/assets/watchOS5DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-  asset_type:
 - url: https://mesu.apple.com/assets/watchOS6AppleSeed/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain.xml
   asset_type: com.apple.MobileAsset.MobileSoftwareUpdate.UpdateBrain
-- url: https://mesu.apple.com/assets/watchOS6AppleSeed/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
-  asset_type:
 - url: https://mesu.apple.com/assets/watchOS6AppleSeed/com_apple_MobileAsset_RecoveryOSUpdateBrain/com_apple_MobileAsset_RecoveryOSUpdateBrain.xml
   asset_type: com.apple.MobileAsset.RecoveryOSUpdateBrain
-- url: https://mesu.apple.com/assets/watchOS6AppleSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-  asset_type:
 - url: https://mesu.apple.com/assets/watchOS6DeveloperSeed/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain.xml
   asset_type: com.apple.MobileAsset.MobileSoftwareUpdate.UpdateBrain
-- url: https://mesu.apple.com/assets/watchOS6DeveloperSeed/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
-  asset_type:
 - url: https://mesu.apple.com/assets/watchOS6DeveloperSeed/com_apple_MobileAsset_RecoveryOSUpdateBrain/com_apple_MobileAsset_RecoveryOSUpdateBrain.xml
   asset_type: com.apple.MobileAsset.RecoveryOSUpdateBrain
-- url: https://mesu.apple.com/assets/watchOS6DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-  asset_type:
 - url: https://mesu.apple.com/assets/watchOS7DeveloperSeed/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain.xml
   asset_type: com.apple.MobileAsset.MobileSoftwareUpdate.UpdateBrain
 - url: https://mesu.apple.com/assets/watchOS7DeveloperSeed/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
   asset_type: com.apple.MobileAsset.RecoveryOSUpdate
 - url: https://mesu.apple.com/assets/watchOS7DeveloperSeed/com_apple_MobileAsset_RecoveryOSUpdateBrain/com_apple_MobileAsset_RecoveryOSUpdateBrain.xml
   asset_type: com.apple.MobileAsset.RecoveryOSUpdateBrain
-- url: https://mesu.apple.com/assets/watchOS7DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-  asset_type:
 - url: https://mesu.apple.com/assets/watchOS7PublicSeed/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain.xml
   asset_type: com.apple.MobileAsset.MobileSoftwareUpdate.UpdateBrain
 - url: https://mesu.apple.com/assets/watchOS7PublicSeed/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
   asset_type: com.apple.MobileAsset.RecoveryOSUpdate
 - url: https://mesu.apple.com/assets/watchOS7PublicSeed/com_apple_MobileAsset_RecoveryOSUpdateBrain/com_apple_MobileAsset_RecoveryOSUpdateBrain.xml
   asset_type: com.apple.MobileAsset.RecoveryOSUpdateBrain
-- url: https://mesu.apple.com/assets/watchOS7PublicSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-  asset_type:
 - url: https://mesu.apple.com/assets/watchOSDeveloperSeed/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain.xml
   asset_type: com.apple.MobileAsset.MobileSoftwareUpdate.UpdateBrain
-- url: https://mesu.apple.com/assets/watchOSDeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-  asset_type:
-- url: https://mesu.apple.com/carrierseedios7/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-  asset_type:
-- url: https://mesu.apple.com/carrierseedios7/assets/com_apple_MobileAsset_SoftwareUpdateDocumentation/com_apple_MobileAsset_SoftwareUpdateDocumentation.xml
-  asset_type:
-- url: https://mesu.apple.com/carrierseedios8/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-  asset_type:
-- url: https://mesu.apple.com/carrierseedios8/assets/com_apple_MobileAsset_SoftwareUpdateDocumentation/com_apple_MobileAsset_SoftwareUpdateDocumentation.xml
-  asset_type:
-- url: https://mesu.apple.com/ios5carrierseed/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-  asset_type:
-- url: https://mesu.apple.com/ios5carrierseed/assets/com_apple_MobileAsset_SoftwareUpdateDocumentation/com_apple_MobileAsset_SoftwareUpdateDocumentation.xml
-  asset_type:
-- url: https://mesu.apple.com/iossixcarrierseed/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-  asset_type:
-- url: https://mesu.apple.com/iossixcarrierseed/assets/com_apple_MobileAsset_SoftwareUpdateDocumentation/com_apple_MobileAsset_SoftwareUpdateDocumentation.xml
-  asset_type:
-- url: https://mesu.apple.com/systemassets/{build_id}/{system_image_id}/com_apple_MobileAsset_SystemApp/com_apple_MobileAsset_SystemApp.xml
+without_asset_type:
+- https://mesu.apple.com/assets/watchOS7PublicSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+- https://mesu.apple.com/assets/watchOS6AppleSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+- https://mesu.apple.com/assets/watchOS4DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+- https://mesu.apple.com/assets/watch/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
+- https://mesu.apple.com/assets/tvOSDeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+- https://mesu.apple.com/assets/watchOS5DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+- https://mesu.apple.com/assets/watchOS6AppleSeed/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
+- https://mesu.apple.com/assets/tvOS14PublicSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+- https://mesu.apple.com/assets/watchOS6DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+- https://mesu.apple.com/assets/watchOS6DeveloperSeed/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
+- https://mesu.apple.com/assets/watchOS7DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+- https://mesu.apple.com/assets/watchOSDeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+- https://mesu.apple.com/carrierseedios7/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+- https://mesu.apple.com/carrierseedios7/assets/com_apple_MobileAsset_SoftwareUpdateDocumentation/com_apple_MobileAsset_SoftwareUpdateDocumentation.xml
+- https://mesu.apple.com/carrierseedios8/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+- https://mesu.apple.com/carrierseedios8/assets/com_apple_MobileAsset_SoftwareUpdateDocumentation/com_apple_MobileAsset_SoftwareUpdateDocumentation.xml
+- https://mesu.apple.com/ios5carrierseed/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+- https://mesu.apple.com/ios5carrierseed/assets/com_apple_MobileAsset_SoftwareUpdateDocumentation/com_apple_MobileAsset_SoftwareUpdateDocumentation.xml
+- https://mesu.apple.com/iossixcarrierseed/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+- https://mesu.apple.com/assets/tvOS11DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+- https://mesu.apple.com/iossixcarrierseed/assets/com_apple_MobileAsset_SoftwareUpdateDocumentation/com_apple_MobileAsset_SoftwareUpdateDocumentation.xml
+template_assets:
+  com_apple_MobileAsset_SystemApp:
+    tempalte_url: https://mesu.apple.com/systemassets/{build_id}/{system_image_id}/com_apple_MobileAsset_SystemApp/com_apple_MobileAsset_SystemApp.xml

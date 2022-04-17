@@ -39,4 +39,28 @@ namespace :tipw do
       TIPW::SYNC_DATAFILE.save
     end
   end
+
+  desc 'update keybags from TIPW pages in tmp/tipw/firmware_keys'
+  task :keys do
+    input_key_files = File.join(TMP_DIR, 'tipw', 'tipw_firmware_keys', '*.page')
+    keys = Dir.glob(input_key_files).map do |keyfile|
+      TIPW::TIPWKeyPage.new(File.read(keyfile))
+    rescue StandardError => e
+      puts "Error parsing #{keyfile}\n\n#{e}"
+      raise
+    end
+
+    keys = keys.compact.map(&:to_h).group_by { |key| key['device'] }
+    keys = keys.map do |key, collection|
+      [key, collection.group_by { |item| item['build'] }]
+    end
+
+    output_file = File.join(TMP_DIR, 'tipw', 'keydb.yaml')
+    File.write(output_file, keys.to_h.to_yaml)
+  end
+
+  desc 'update firmware codenames from TIPW'
+  task :codenames do
+    TIPW::TIPWCodenames.new
+  end
 end

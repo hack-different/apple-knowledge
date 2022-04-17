@@ -39,8 +39,8 @@ class DataFileCollection
     @data_file.data[@collection_name] = @collection_data
   end
 
-  def each(&block)
-    @collection_data.each(block)
+  def each(&)
+    @collection_data.each(&)
   end
 
   def ensure_key(key, description: true)
