@@ -35,14 +35,32 @@ class DataFileCollection
   end
 
   def sort
-    @collection_data = @collection_data.sort_by { |key, value| key.downcase }.to_h
+    @collection_data = @collection_data.sort_by { |key, _value| to_sort_key(key) }.to_h
     @data_file.data[@collection_name] = @collection_data
   end
 
-  def ensure_key(key)
-    value = @collection_data[key.to_s] ||= {}
-    value['description'] ||= nil
+  def each(&block)
+    @collection_data.each(block)
+  end
+
+  def ensure_key(key, description: true)
+    key = key.to_s if key.is_a? Symbol
+    value = @collection_data[key] ||= {}
+    value['description'] ||= nil if description
     value
+  end
+
+  private
+
+  def to_sort_key(key)
+    case key
+    when Symbol
+      key.to_s.downcase
+    when String
+      key.downcase
+    else
+      key
+    end
   end
 end
 
@@ -93,3 +111,15 @@ SCHEMAS = File.join(SCHEMAS_DIR, '*.rb')
 Dir.glob(SCHEMAS).each do |schema|
   require schema
 end
+
+def find_chip_board(product_id)
+  CORES_DATA['chip_ids'].each do |chip_id, chip|
+    chip['boards'].each do |board_id, board|
+      return { chip: '%04X'.format(chip_id), board: '%02X'.format(board_id) } if board['product_id'] == product_id
+    end
+  end
+
+  nil
+end
+
+CORES_DATA = DataFile.new 'cores'

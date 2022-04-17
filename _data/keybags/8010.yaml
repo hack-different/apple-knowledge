@@ -1,6 +1,11 @@
 ---
-boards:
-  n112:
+metadata:
+  description:
+  credits:
+constants:
+  chip_id: 8010
+keybag_boards:
+  0x16:
     18H17:
       ibec:
         filename: iBEC.n112.RELEASE.im4p

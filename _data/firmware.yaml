@@ -3,29 +3,33 @@ metadata:
   description: Listing of known firmware types included in a restore package
   credits:
 firmware_types:
-  ACIBTFirmware:
-  ACIWiFiFirmware:
-  ADCPetra:
   ANE:
+    description: Apple Neural Engine
     type: anef
-  ANSF:
+  ANS:
     description: Apple NAND Storage
     type: ansf
+    tipw_key_name: ANSF
   AOP:
     description:
-    type:
+    type: aopf
+    tipw_key_name: AOPFirmware
     filenames:
     - aopfw.im4p
     - aopfw-s8000aop.im4p
     - aopfw-ipad6faop.im4p
     - aopfw-ipad7aop.im4p
-  AOPFirmware:
-    type: aopf
-  AppleAVE:
-    type: avef
+  Ap,HapticAssets:
+    description:
+    type:
+    tipw_key_name: HapticAssets
+  Ap,Scorpius:
+    description:
+    type:
+    tipw_key_name: MConnector
   AppleLogo:
     type: logo
-    description:
+    description: The Apple Logo
     filenames:
     - applelogo@2x~iphone.s5l8950x.img3
     - applelogo@2x~iphone.s8003.im4p
@@ -40,6 +44,7 @@ firmware_types:
     - applelogo@3x~iphone.s8000.im4p
     - applelogo@2x~iphone.t7000.im4p
     - applelogo@2x~ipad.s8000.im4p
+    - applelogo@2x~ipad.s8000.im4p
     - applelogo@2x~ipad.s8003.im4p
     - applelogo~appletv.im4p
     - applelogo@2732~ipad.im4p
@@ -47,12 +52,18 @@ firmware_types:
     - applelogo@2732~ipad.t8011.im4p
     - applelogo@2224~ipad.t8011.im4p
   AppleMaggie:
+    description:
     type: magg
-  ARMFW:
   AudioCodecFirmware:
-  BasebandFirmware:
     description:
     type:
+  AVE:
+    description: Audio/Video Encryption
+    type: avef
+    tipw_key_name: AppleAVE
+  BasebandFirmware:
+    description: Baseband (Radios)
+    type: bbfw
     filenames:
     - Mav5-11.51.00.Release.bbfw
     - Mav7Mav8-7.51.00.Release.bbfw
@@ -259,11 +270,10 @@ firmware_types:
     - glyphplugin@2224~ipad-lightning.im4p
     - glyphplugin@2732~ipad-lightning.t8011.im4p
     - glyphplugin@2224~ipad-lightning.t8011.im4p
-  Dali:
-  DCP:
+
   DeviceTree:
+    description: Normal mode device tree
     type: dtre
-    description:
     filenames:
     - DeviceTree.n42ap.img3
     - DeviceTree.n49ap.img3
@@ -308,15 +318,15 @@ firmware_types:
   ftap:
     description:
     type:
-    filenames: []
   ftsp:
     description:
     type:
-    filenames: []
-  GlyphCharging:
-  GlyphPlugin:
-  HapticAssets:
+  GFX:
+    description: Graphics Firmware
+    type:
+    tipw_key_name: ARMFW
   Homer:
+    description:
     type: homr
   iBEC:
     description: iBoot Epoch Change
@@ -413,7 +423,8 @@ firmware_types:
     - iBSS.j207.RELEASE.im4p
   KernelCache:
     description:
-    type:
+    type: krnl
+    tipw_key_name: Kernelcache
     filenames:
     - kernelcache.release.iphone5
     - kernelcache.release.iphone5b
@@ -440,9 +451,10 @@ firmware_types:
     - kernelcache.release.n102
     - kernelcache.release.j42d
     - kernelcache.release.ipad7
-  Kernelcache:
-  LeapHaptics:
-  LiquidDetect:
+  Liquid:
+    description:
+    type:
+    tipw_key_name: LiquidDetect
   LLB:
     description: Low Level Boot (iBoot)
     type: illb
@@ -473,14 +485,18 @@ firmware_types:
     - LLB.j42d.RELEASE.im4p
     - LLB.j120.RELEASE.im4p
     - LLB.j207.RELEASE.im4p
-  LowPowerFindMyMode:
-  LowPowerMode:
-  MConnector:
-  Multitouch:
-  NeedService:
+  LowPowerWallet0:
+    description:
+    type:
+    tipw_key_name: LowPowerMode
+  LowPowerWallet1:
+    description:
+    type:
+    tipw_key_name: LowPowerFindMyMode
   OS:
     description:
     type:
+    tipw_key_name: RootFS
     filenames:
     - '058-73953-011.dmg'
     - '058-74314-014.dmg'
@@ -868,8 +884,6 @@ firmware_types:
     - '058-88752-046.dmg'
     - '058-88752-045.dmg'
     - '058-88752-043.dmg'
-  PMP:
-  RANS:
   RecoveryMode:
     description:
     type:
@@ -897,6 +911,10 @@ firmware_types:
     - recoverymode@2224~ipad-lightning.im4p
     - recoverymode@2732~ipad-lightning.t8011.im4p
     - recoverymode@2224~ipad-lightning.t8011.im4p
+  RestoreANS:
+    description: Restore Apple NAND Storage
+    type: rans
+    tipw_key_name: RANS
   RestoreDeviceTree:
     description:
     type:
@@ -996,6 +1014,7 @@ firmware_types:
   RestoreRamDisk:
     description:
     type:
+    tipw_key_name: RestoreRamdisk
     filenames:
     - '058-68591-063.dmg'
     - '058-68402-063.dmg'
@@ -1187,10 +1206,9 @@ firmware_types:
     - '058-85048-098.dmg'
     - '058-70513-087.dmg'
     - '058-70359-087.dmg'
-  RestoreRamdisk:
   RestoreSEP:
     description:
-    type:
+    type: rsep
     filenames:
     - sep-firmware.n69.RELEASE.im4p
     - sep-firmware.n53.RELEASE.im4p
@@ -1239,11 +1257,10 @@ firmware_types:
     description:
     type:
     filenames: []
-  RootFS:
-  RTPFirmware:
   SEP:
-    description:
-    type:
+    description: Secure Enclave Processor firmware (SEPOS)
+    type: sepi
+    tipw_key_name: SEPFirmware
     filenames:
     - sep-firmware.n69.RELEASE.im4p
     - sep-firmware.n53.RELEASE.im4p
@@ -1278,16 +1295,14 @@ firmware_types:
     - sep-firmware.j121.RELEASE.im4p
     - sep-firmware.j207.RELEASE.im4p
     - sep-firmware.j208.RELEASE.im4p
-  SEPFirmware:
-    description: Secure Enclave Processor firmware (SEPOS)
-    type: sepi
-  SmartIOFirmware:
+  SIO:
+    description: SmartIO Firmware (iPad smart-case)
     type: siof
+    tipw_key_name: SmartIOFirmware
   StaticTrustCache:
     description:
     type:
     filenames:
     - '048-95869-019.dmg.trustcache'
-  UpdateRamdisk:
-  UpdateRamdiskOTA:
-  WirelessPower:
+  WCHFirmwareUpdater:
+    tipw_key_name: WirelessPower

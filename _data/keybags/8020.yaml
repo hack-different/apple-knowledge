@@ -1,6 +1,11 @@
 ---
-boards:
-  d321ap:
+metadata:
+  description:
+  credits:
+constants:
+  chip_id: 8020
+keybag_boards:
+  0x0E:
     18B92:
       sepi:
         iv: aa0684897a2a372e7bcb0f26625a7014
@@ -93,7 +98,7 @@ boards:
       sepi:
         iv: 870722f12cd825bb1c874ff0c3b3f6b6
         key: c4844055253faac545b48504c4a543c3a2d7dd817fab4aa26e91b91641d31b0e
-  d331ap:
+  0x0A:
     18D70:
       sepi:
         iv: fb943567376e4e512a896d85bd629f31
@@ -190,7 +195,7 @@ boards:
       sepi:
         iv: 8d9423525ea3fe1f14e5e0143030ee7a
         key: 5969aa9dbe134b89759cdca1701e4fc2ab912c0e3cc8adf9db6d0f03096a9a31
-  n841ap:
+  0x0C:
     18D70:
       sepi:
         iv: ffdd9b965a918ef9c58df2e1a787fe97

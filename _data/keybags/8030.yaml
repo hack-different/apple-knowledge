@@ -1,7 +1,11 @@
 ---
-description: Decrypted keybags for the A13
-boards:
-  d421:
+metadata:
+  description:
+  credits:
+constants:
+  chip_id: 8030
+keybag_boards:
+  0x06:
     17A577:
       ibss:
         iv: 049e970a6686f8dd015d3dedcfa8a020
@@ -15,7 +19,7 @@ boards:
       ibot:
         iv: 842908a1d2dbbd24a6ad304600fa9e7b
         key: 23e515c2ee7ecf97890d794f14e912163a6f32f3fe330fc37e1b110cafec3fca
-  d431:
+  0x02:
     17A577:
       ibec:
         iv: 948f16ffa472e3e99e6f75de69de0882
@@ -29,7 +33,7 @@ boards:
       ibot:
         iv: 5e3dc0bc25cc63ba2adc40180e605ca6
         key: cefa0dd9fcecbc0f10efb08c999d3cab96fe77989be3f7e4fadfa0dc6d74e67b
-  n104:
+  0x04:
     17A577:
       ibss:
         iv: 97fe4e0703100c742384e847aa3a4bc0

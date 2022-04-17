@@ -1,7 +1,11 @@
 ---
-description: Decrypted keybags for the A12X/A12Z
-boards:
-  j273a:
+metadata:
+  description:
+  credits:
+constants:
+  chip_id: 8010
+keybag_boards:
+  0x42:
     20A5299w:
       illb:
         iv: c5f6468e00f8b5346af56fc04647a1e7
@@ -18,7 +22,7 @@ boards:
       sepi:
         iv: b256110697b8353467de0ebb99bbfa6b
         key: e824615720d52d61333ae8a7cac441821625808588f24fee502600e86e8ea509
-  t485:
+  0x24:
     20A5299w:
       illb:
         iv: d7c5c4eab25c3480ac513a7e732c8b5e

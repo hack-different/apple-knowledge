@@ -1,7 +1,11 @@
 ---
-description: Decrypted keybags for the A14
-boards:
-  d54p:
+metadata:
+  description:
+  credits:
+constants:
+  chip_id: 8101
+keybag_boards:
+  0x08:
     18G82:
     19A5325f:
       ibec:
@@ -91,7 +95,7 @@ boards:
           development:
             encrypted_iv: E6A6828811C6D5730B4AFCC534B6FAC1
             encrypted_key: 4502ABC0C190EB4A5DC590D9045483FA7604F4D1FC05EA6D195CF1056B59CCA0
-  j308:
+  0x06:
     19A5325f:
       ibec:
         filename: iBEC.j308.RELEASE.im4p
