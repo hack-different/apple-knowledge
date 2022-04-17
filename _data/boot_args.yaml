@@ -4,8 +4,7 @@ metadata:
   credits:
 boot_args:
   "-arm64e_preview_abi":
-    description: Enable pointer-authenticaton-codes and tagging (arm64e) features for
-      non-platform binaries
+    description:
   "-bsdmgroot":
     description:
   "-corpse_threshold_system_limit":
@@ -13,7 +12,7 @@ boot_args:
   "-cpuid":
     description:
   "-disable_aslr":
-    description: Disable user mode address space layout randomization
+    description:
   "-disable_atm":
     description:
   "-disable_cseg_write_protection":
@@ -27,11 +26,11 @@ boot_args:
   "-disable_syscallfilter":
     description:
   "-disable_x86_64h":
-    description: Disable Haswell x86_64 optimization / instructions
+    description:
   "-enable_kprintf_spam":
     description:
   "-enable_x86_64h":
-    description: Enable Haswell x86_64 optimization / instructions
+    description:
   "-fp_exceptions":
     description:
   "-gzalloc_mode":
@@ -601,7 +600,7 @@ boot_args:
   qos_override_mode:
     description:
   rd:
-    description: The "root device"
+    description:
   rlog:
     description:
   rootdev:
@@ -857,4 +856,6 @@ boot_args:
   zs:
     description:
   zsize:
+    description:
+  zc_mag_size():
     description:
