@@ -20,3 +20,9 @@ task :sort do
     YAML.load_file file
   end
 end
+
+desc 'sort single collection in data file'
+task :sort_collection, [:data_file] do |_task, args|
+  data_file = DataFile.new args[:data_file]
+  data_file.save
+end
