@@ -18,14 +18,6 @@ def find_chip_board(product_id)
   nil
 end
 
-TYPE_MAP = {
-  'LLB' => 'illb',
-  'SEPFirmware' => 'sepi',
-  'iBEC' => 'ibec',
-  'iBoot' => 'ibot',
-  'iBSS' => 'ibss'
-}.freeze
-
 DESCRIPTORS = %w[Version Build Device Codename Baseband DownloadURL].freeze
 
 IGNORE_VALUES = ['Not Encrypted', 'Unknown'].freeze

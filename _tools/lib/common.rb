@@ -21,7 +21,7 @@ require 'digest'
 
 DATA_DIR = File.realdirpath File.join(File.dirname(__FILE__), '..', '..', '_data')
 
-SCHEMAS_DIR = File.join(File.dirname(__FILE__), '..', '_schema')
+SCHEMAS_DIR = File.join(File.dirname(__FILE__), '..', '..', '_schema')
 
 # Represents a DataFile element collection, which is a hash of uniquely identified entries with a hash for a value.
 # The hash will contain 'description' as a first element for human annotation
