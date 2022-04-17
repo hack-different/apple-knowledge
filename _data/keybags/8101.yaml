@@ -8,118 +8,120 @@ keybag_boards:
   0x08:
     18G82:
     19A5325f:
-      ibec:
-        filename: iBEC.d54p.RELEASE.im4p
-        version: iBoot-7429.12.4.162.1
-        iv: 0a30f9a74429e5ae62e9cbcaab820000
-        key: 7561cc9a560f0cb00d760e532c5990ad64415cc74e7d53fbdbdf8146b0288696
-        sha:
-          256: d8a0fb99cd3b77045e697c952fcb90b254e66cb3e2303eba99a243e148065cf6
-          384: a87b3d5f0c1fa0d619d7e22e549af63f0eacba864a86dedd6aeb25cf1e73a42b9eb0505f72792f832d8d6bdf5d912549
-        keybags:
-          production:
-            encrypted_iv: ED6A6539EDDA1B669E0D79BAC7AC6995
-            encrypted_key: 700494F34EDD2D05FA01286D6E0F1D18DDA96CA32D14884EE4CD2A5E5968D17A
-          development:
-            encrypted_iv: 4C03D556F9492D158426684B5030CBCC
-            encrypted_key: 02617C9AB5E35A6650517A2D2BB356EE13CD4A79E5D2E81436A98DC2C4B34424
-      ibdt:
-        filename: iBootData.d54p.RELEASE.im4p
-        version: iBoot-7429.12.4.162.1
-        iv: 12b3b21327cdde96ead01b3ee1605ee7
-        key: b901fedd26fdee96ecfc8d9f7e1f825f9b9e995179b6c89b5c54eea0cbce7996
-        sha:
-          256: b7b91d189a3fa02efe6c696aba84170914113e34a8418fba4a3001dbf19740f6
-          384: f95fac4ba933ee56d7d38d572c5dc90f1131c04861c85120360bc80dbad29da02861c3f4482bce957b0894268e517944
-        keybags:
-          production:
-            encrypted_iv: 5F28B1EC63319941FC45F37FB6CD5ACC
-            encrypted_key: 1C34099B106C39FECB0DD905434EB35C5FEBC25A26DF9061F0BA29949F07B710
-          development:
-            encrypted_iv: FEBDE49AFC7D6F049984E2799FE28444
-            encrypted_key: BA20814DA519F4545A1FF4034AECE5847ED95EA85D98D1E8B3E4747790285F65
-      ibot:
-        filename: iBoot.d54p.RELEASE.im4p
-        version: iBoot-7429.12.4.162.1
-        iv: 059f68f4e825628feb57de2fb098008a
-        key: a7b73b08cab0e699b94eeb057ed7800241e8db7d1618fa45de68ef8448746444
-        sha:
-          256: 4b4deb6b7f47bb514cb5c8e3ffa74f37ecc6ecdfe2fb485de389e4626ce01305
-          384: a73944cbeadb16f62e272dabc705426fafa7b71f7ca87b1e94d0acd9b0586e00dd72f090410a19efc9d6ed7af59e8162
-        keybags:
-          production:
-            encrypted_iv: 7C0A48E3FF037C87E2C0FBD04C9B2E62
-            encrypted_key: E59D27779A1DDB2663155FD44A04009886E9CB2FB9F1D95C5A14DA0F65089314
-          development:
-            encrypted_iv: 53895A46806F1F71B4A886BAD948C96D
-            encrypted_key: FE351B586DCE9F555B122C98BCC3A00F010769916670F74D0748CA5920669BC8
-      illb:
-        filename: LLB.d54p.RELEASE.im4p
-        version: iBoot-7429.12.4.162.1
-        iv: f2f56b0e53aface4c9ea237efca81517
-        key: 165716a9b2d7e74e21db44aa7d06fc17b5098b93458e45ec0b561ed5dcad111a
-        sha:
-          256: bf9d87ae45823b1fc61b06d87acbadce9b8907b6228155b74fd17ff7f28489c6
-          384: eb2a9f63ad0c115f9ef6937eee07b0580ec12479f840ba83a5714e16539fbdf4be6d060bfbc5c05779f63616174a7a9d
-        keybags:
-          production:
-            encrypted_iv: 351513ED467EE110B34975A55ED99ADF
-            encrypted_key: 850A0759202C59C2CFEF35117C1AA12BF1FC74763CA69B97D9A5EE93B611224B
-          development:
-            encrypted_iv: 64664E3A16FC44EF0C6CF7647DBBC5CC
-            encrypted_key: 9ABBC8C78D18AD3453C2BCEB2780073C3214A0AE890D0B8B04250592EF7FD73D
-      ibss:
-        filename: iBSS.d54p.RELEASE.im4p
-        version: iBoot-7429.12.4.162.1
-        iv: 6317d53b9cfd8a47e716c31ab52833c7
-        key: d7b765a16da51caa74ba0dc1c4d1de420671ab7d6d047e89a6e2391c91cd6d9a
-        sha:
-          256: 462ac45417808d479a3e680811706f8b96e74f2bcabe199944f715307bd8f917
-          384: faec3de149f72b1c043de2846527c1ca4f75ff7d4e7840e729e44386e40c5c62f02a001f7c5007a56814228a6efbcf39
-        keybags:
-          production:
-            encrypted_iv: 8FC9712B90EE6E39461EC26C460677FE
-            encrypted_key: 6B403617B54B25BA0ED61EE2188C687516CD1E835AD28E670C439D13C110701D
-          development:
-            encrypted_iv: 57FDA83ABD46CF01D6BE54B91F79CBED
-            encrypted_key: 9511ED5BE4BD1968ECC8C598DD7D74202DC22215295B6C9BB598999E510BE261
-      sepi:
-        filename: sep-firmware.d54p.RELEASE.im4p
-        sha:
-          256: e98ffb65fecd09759b820be22a23163e10f29f13c01eef341aadf562c06db1d4
-          384: b2a2fbbf02ff8c21e304098d89a804b9b7190b9216725634b258b4dc056b5da09567a2dd997844f112d8f604011fb29c
-        keybags:
-          production:
-            encrypted_iv: C7F6A2EBD7B1E538251A583604871855
-            encrypted_key: 8EAAFD85BA88A03184ABCEF974254F446D3373711847A3CBB17F6A14CACF0AF3
-          development:
-            encrypted_iv: E6A6828811C6D5730B4AFCC534B6FAC1
-            encrypted_key: 4502ABC0C190EB4A5DC590D9045483FA7604F4D1FC05EA6D195CF1056B59CCA0
+      components:
+        ibec:
+          filename: iBEC.d54p.RELEASE.im4p
+          version: iBoot-7429.12.4.162.1
+          iv: 0a30f9a74429e5ae62e9cbcaab820000
+          key: 7561cc9a560f0cb00d760e532c5990ad64415cc74e7d53fbdbdf8146b0288696
+          sha:
+            256: d8a0fb99cd3b77045e697c952fcb90b254e66cb3e2303eba99a243e148065cf6
+            384: a87b3d5f0c1fa0d619d7e22e549af63f0eacba864a86dedd6aeb25cf1e73a42b9eb0505f72792f832d8d6bdf5d912549
+          keybags:
+            production:
+              encrypted_iv: ED6A6539EDDA1B669E0D79BAC7AC6995
+              encrypted_key: 700494F34EDD2D05FA01286D6E0F1D18DDA96CA32D14884EE4CD2A5E5968D17A
+            development:
+              encrypted_iv: 4C03D556F9492D158426684B5030CBCC
+              encrypted_key: 02617C9AB5E35A6650517A2D2BB356EE13CD4A79E5D2E81436A98DC2C4B34424
+        ibdt:
+          filename: iBootData.d54p.RELEASE.im4p
+          version: iBoot-7429.12.4.162.1
+          iv: 12b3b21327cdde96ead01b3ee1605ee7
+          key: b901fedd26fdee96ecfc8d9f7e1f825f9b9e995179b6c89b5c54eea0cbce7996
+          sha:
+            256: b7b91d189a3fa02efe6c696aba84170914113e34a8418fba4a3001dbf19740f6
+            384: f95fac4ba933ee56d7d38d572c5dc90f1131c04861c85120360bc80dbad29da02861c3f4482bce957b0894268e517944
+          keybags:
+            production:
+              encrypted_iv: 5F28B1EC63319941FC45F37FB6CD5ACC
+              encrypted_key: 1C34099B106C39FECB0DD905434EB35C5FEBC25A26DF9061F0BA29949F07B710
+            development:
+              encrypted_iv: FEBDE49AFC7D6F049984E2799FE28444
+              encrypted_key: BA20814DA519F4545A1FF4034AECE5847ED95EA85D98D1E8B3E4747790285F65
+        ibot:
+          filename: iBoot.d54p.RELEASE.im4p
+          version: iBoot-7429.12.4.162.1
+          iv: 059f68f4e825628feb57de2fb098008a
+          key: a7b73b08cab0e699b94eeb057ed7800241e8db7d1618fa45de68ef8448746444
+          sha:
+            256: 4b4deb6b7f47bb514cb5c8e3ffa74f37ecc6ecdfe2fb485de389e4626ce01305
+            384: a73944cbeadb16f62e272dabc705426fafa7b71f7ca87b1e94d0acd9b0586e00dd72f090410a19efc9d6ed7af59e8162
+          keybags:
+            production:
+              encrypted_iv: 7C0A48E3FF037C87E2C0FBD04C9B2E62
+              encrypted_key: E59D27779A1DDB2663155FD44A04009886E9CB2FB9F1D95C5A14DA0F65089314
+            development:
+              encrypted_iv: 53895A46806F1F71B4A886BAD948C96D
+              encrypted_key: FE351B586DCE9F555B122C98BCC3A00F010769916670F74D0748CA5920669BC8
+        illb:
+          filename: LLB.d54p.RELEASE.im4p
+          version: iBoot-7429.12.4.162.1
+          iv: f2f56b0e53aface4c9ea237efca81517
+          key: 165716a9b2d7e74e21db44aa7d06fc17b5098b93458e45ec0b561ed5dcad111a
+          sha:
+            256: bf9d87ae45823b1fc61b06d87acbadce9b8907b6228155b74fd17ff7f28489c6
+            384: eb2a9f63ad0c115f9ef6937eee07b0580ec12479f840ba83a5714e16539fbdf4be6d060bfbc5c05779f63616174a7a9d
+          keybags:
+            production:
+              encrypted_iv: 351513ED467EE110B34975A55ED99ADF
+              encrypted_key: 850A0759202C59C2CFEF35117C1AA12BF1FC74763CA69B97D9A5EE93B611224B
+            development:
+              encrypted_iv: 64664E3A16FC44EF0C6CF7647DBBC5CC
+              encrypted_key: 9ABBC8C78D18AD3453C2BCEB2780073C3214A0AE890D0B8B04250592EF7FD73D
+        ibss:
+          filename: iBSS.d54p.RELEASE.im4p
+          version: iBoot-7429.12.4.162.1
+          iv: 6317d53b9cfd8a47e716c31ab52833c7
+          key: d7b765a16da51caa74ba0dc1c4d1de420671ab7d6d047e89a6e2391c91cd6d9a
+          sha:
+            256: 462ac45417808d479a3e680811706f8b96e74f2bcabe199944f715307bd8f917
+            384: faec3de149f72b1c043de2846527c1ca4f75ff7d4e7840e729e44386e40c5c62f02a001f7c5007a56814228a6efbcf39
+          keybags:
+            production:
+              encrypted_iv: 8FC9712B90EE6E39461EC26C460677FE
+              encrypted_key: 6B403617B54B25BA0ED61EE2188C687516CD1E835AD28E670C439D13C110701D
+            development:
+              encrypted_iv: 57FDA83ABD46CF01D6BE54B91F79CBED
+              encrypted_key: 9511ED5BE4BD1968ECC8C598DD7D74202DC22215295B6C9BB598999E510BE261
+        sepi:
+          filename: sep-firmware.d54p.RELEASE.im4p
+          sha:
+            256: e98ffb65fecd09759b820be22a23163e10f29f13c01eef341aadf562c06db1d4
+            384: b2a2fbbf02ff8c21e304098d89a804b9b7190b9216725634b258b4dc056b5da09567a2dd997844f112d8f604011fb29c
+          keybags:
+            production:
+              encrypted_iv: C7F6A2EBD7B1E538251A583604871855
+              encrypted_key: 8EAAFD85BA88A03184ABCEF974254F446D3373711847A3CBB17F6A14CACF0AF3
+            development:
+              encrypted_iv: E6A6828811C6D5730B4AFCC534B6FAC1
+              encrypted_key: 4502ABC0C190EB4A5DC590D9045483FA7604F4D1FC05EA6D195CF1056B59CCA0
   0x06:
     19A5325f:
-      ibec:
-        filename: iBEC.j308.RELEASE.im4p
-        iv: 2a221f5dac06ab65c54e5134e279689c
-        key: 9b81bcb3919b281c15b6dbe72c8d5f5fa11ab013a4c47f5bf6cd0c63718f5d12
-      ibot:
-        filename: iBoot.j308.RELEASE.im4p
-        iv: 98a813551207596720e556dd23b70d10
-        key: 1315423d2adf20e0c5eb57ee4be013fb7857133726bfdabbfd5238266d8382dd
-      ibdt:
-        fileanme: iBootData.j308.RELEASE.im4p
-        iv: efa0b13fe13c5634cc2f2bf51eb8d2f6
-        key: 9dabe1d03ff4e259c996d4431d8db294a8f48a96714b5b1dee9ddc5535870233
-      ibss:
-        filename: iBSS.j308.RELEASE.im4p
-        iv: 88712a576be14dc30dadb30319b68d02
-        key: ce718e8f01f7dbf04d5fb81b961302c3e9cdeee2b90ce52124e2cd29e4002d59
-      illb:
-        filename: LLB.j308.RELEASE.im4p
-        iv: ce8fc890762e6a65463a1919e1380b6b
-        key: 546c59a2f2aaaae181bd4d4cfbcef46d990c25c23ee539864f3e9a0d236537a9
-      sepi:
-        filename: sep-firmware.j308.RELEASE.im4p
-        keybags:
-          - type: production
-            encrypted_iv: ce67937935b521e94986c3d2d93c17a6
-            encrypted_key: 83b605f8a88fad49c785eb1836bf45ecff85a42a2d35ea1945e2b1f024387fff
+      components:
+        ibec:
+          filename: iBEC.j308.RELEASE.im4p
+          iv: 2a221f5dac06ab65c54e5134e279689c
+          key: 9b81bcb3919b281c15b6dbe72c8d5f5fa11ab013a4c47f5bf6cd0c63718f5d12
+        ibot:
+          filename: iBoot.j308.RELEASE.im4p
+          iv: 98a813551207596720e556dd23b70d10
+          key: 1315423d2adf20e0c5eb57ee4be013fb7857133726bfdabbfd5238266d8382dd
+        ibdt:
+          fileanme: iBootData.j308.RELEASE.im4p
+          iv: efa0b13fe13c5634cc2f2bf51eb8d2f6
+          key: 9dabe1d03ff4e259c996d4431d8db294a8f48a96714b5b1dee9ddc5535870233
+        ibss:
+          filename: iBSS.j308.RELEASE.im4p
+          iv: 88712a576be14dc30dadb30319b68d02
+          key: ce718e8f01f7dbf04d5fb81b961302c3e9cdeee2b90ce52124e2cd29e4002d59
+        illb:
+          filename: LLB.j308.RELEASE.im4p
+          iv: ce8fc890762e6a65463a1919e1380b6b
+          key: 546c59a2f2aaaae181bd4d4cfbcef46d990c25c23ee539864f3e9a0d236537a9
+        sepi:
+          filename: sep-firmware.j308.RELEASE.im4p
+          keybags:
+            - type: production
+              encrypted_iv: ce67937935b521e94986c3d2d93c17a6
+              encrypted_key: 83b605f8a88fad49c785eb1836bf45ecff85a42a2d35ea1945e2b1f024387fff
