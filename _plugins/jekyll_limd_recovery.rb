@@ -23,7 +23,7 @@ class JekyllLIMDRecoveryPlugin < Jekyll::Generator
 
   def generate(site)
     result = {
-      'env_vars' => site.site_data['nvram']['variables'].map { |var| var['name'] },
+      'env_vars' => site.site_data['nvram']['nvram_variables'].keys,
       'devices' => get_devices(site)
     }
 

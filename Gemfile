@@ -54,6 +54,7 @@ group :development, :test do
   gem 'ruby-macho'
   gem 'sorbet'
   gem 'webrick'
+  gem 'wikicloth'
 end
 
 gem 'toml', '~> 0.3.0', github: 'rickmark/toml'

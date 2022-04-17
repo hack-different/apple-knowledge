@@ -1,295 +1,299 @@
 ---
-- code: 0Cfg
+metadata:
   description:
-  usage:
-  - SysCfg
-- code: AAPL
-  description: Generic 4CC for Apple, often Creator Code
-  usage:
-  - Everywhere
-- code: ADDA
-  description:
-  usage:
-  - SysCfg
-- code: anef
-  description: Apple Neural Engine Firmware
-  usage:
-  - Firmware
-- code: ansf
-  description: Apple NAND Storage Firmware
-  usage:
-  - Firmware
-- code: aopf
-  description: Always-on-Processor Firmware
-  usage:
-  - Firmware
-- code: appv
-  description:
-  usage:
-  - FDR
-  - SysCfg
-- code: aubt
-  description:
-  usage: []
-- code: auxi
-  description: Auxiliary Kernel Cache Image4 Hash
-  usage:
-  - Boot Policy
-- code: auxp
-  description: User Authorized Kext List Hash
-  usage:
-  - Boot Policy
-- code: auxr
-  description: Kext Receipt Hash
-  usage:
-  - Boot Policy
-- code: avef
-  description: Audio / Video Encryption (DRM) Firmware
-  usage:
-  - Firmware
-- code: BNCH
-  description: Boot Nonce Hash
-  usage:
-  - APTicket
-- code: BNDL
-  description: Loadable Bundle (plugin)
-  usage:
-  - macOS
-- code: BORD
-  description: Board ID
-  usage:
-  - APTicket
-- code: bstc
-  description:
-  usage: []
-- code: CEPO
-  description: Certificate Epoch
-  usage:
-  - APTicket
-- code: CHIP
-  description: Chip ID
-  usage:
-  - APTicket
-- code: ciof
-  description:
-  usage:
-  - Firmware
-- code: CLHS
-  description:
-  usage:
-  - SysCfg
-- code: coih
-  description: CustomKC or fuOS Image4 Hash
-  usage:
-  - APTicket
-- code: CPRO
-  description: Chip Production Status
-  usage:
-  - Boot Policy
-- code: CPRV
-  description: Chip Revision
-  usage:
-  - APTicket
-- code: CSEC
-  description: Chip Security Mode
-  usage:
-  - APTicket
-- code: csys
-  description:
-  usage: []
-- code: dCfg
-  description:
-  usage:
-  - FDR
-- code: dcp2
-  description:
-  usage: []
-- code: dcpf
-  description:
-  usage: []
-- code: dtre
-  description: Device Tree
-  usage:
-  - Firmware
-- code: eCfg
-  description:
-  usage:
-  - FDR
-  - SysCfg
-- code: ECID
-  description: Exclusive Chip ID
-  usage:
-  - APTicket
-- code: EPRO
-  description: Effective Production Status
-  usage:
-  - APTicket
-- code: ESEC
-  description: Effective Security Status
-  usage:
-  - APTicket
-- code: fCfg
-  description:
-  usage: []
-- code: gfxf
-  description: Graphics Firmware
-  usage:
-  - Firmware
-- code: ibdt
-  description: iBoot Data
-  usage:
-  - Firmware
-- code: ibot
-  description: iBoot
-  usage:
-  - Firmware
-- code: ispf
-  description: Image Signal Processor Firmware
-  usage:
-  - Firmware
-- code: krnl
-  description: XNU Kernel
-  usage:
-  - Firmware
-- code: ksku
-  description:
-  usage: []
-- code: kuid
-  description: Key Exchange Key Group UUID
-  usage:
-  - Boot Policy
-- code: logo
-  description: iBoot Apple Logo
-  usage:
-  - Firmware
-- code: love
-  description: OS Version
-  usage:
-  - Boot Policy
-- code: lpnh
-  description: Local Policy Nonce Hash
-  usage:
-  - Boot Policy
-- code: lpol
-  description: Local Policy
-  usage:
-  - Firmware
-  - Boot Policy
-- code: MANB
-  description: Manifest Body
-  usage:
-  - APTicket
-- code: MANP
-  description: Manifest Properties
-  usage:
-  - APTicket
-- code: Mod#
-  description: Model Number
-  usage:
-  - FDR
-  - SysCfg
-- code: MOJO
-  description: Mojo Debug Flag
-  usage:
-  - SMC
-- code: nsih
-  description: Next Stage Image4 Hash
-  usage: []
-- code: pmpf
-  description: Power Management Processor Firmware
-  usage:
-  - Firmware
-- code: Regn
-  description: Region
-  usage:
-  - FDR
-  - SysCfg
-- code: rlg1
-  description: Restore logo
-  usage:
-  - Firmware
-- code: rlg2
-  description: Restore logo
-  usage:
-  - Firmware
-- code: ronh
-  description: RecoveryOS Policy Nonce Hash
-  usage:
-  - Boot Policy
-- code: rpnh
-  description: Remote Policy Nonce Hash
-  usage:
-  - Boot Policy
-- code: SDOM
-  description: Security Domain
-  usage:
-  - APTicket
-- code: seal
-  description:
-  usage:
-  - FDR
-- code: siof
-  description: Smart-IO Firmware
-  usage:
-  - Firmware
-- code: sip0
-  description: System Integrity Protection (SIP Status)
-  usage:
-  - Boot Policy
-- code: sip1
-  description: System Integrity Protection (Signed System Volume Status)
-  usage:
-  - Boot Policy
-- code: sip2
-  description: System Integrity Protection (Kernel CTRR Status)
-  usage:
-  - Boot Policy
-- code: sip3
-  description: System Integrity Protection (Boot Args Filtering Status)
-  usage:
-  - Boot Policy
-- code: smb0
-  description: Secure Multi-Boot (Security Mode)
-  usage:
-  - Boot Policy
-- code: smb1
-  description: Secure Multi-Boot
-  usage:
-  - Boot Policy
-- code: smb2
-  description: Secure Multi-Boot (3rd Party Kexts Status)
-  usage:
-  - Boot Policy
-- code: smb3
-  description: Secure Multi-Boot (User-allowed MDM Control)
-  usage:
-  - Boot Policy
-- code: smb4
-  description: Secure Multi-Boot (DEP-allowed MDM Control)
-  usage:
-  - Boot Policy
-- code: snon
-  description: Secure Enclave Processor Boot Nonce Hash
-  usage:
-  - APTicket
-- code: SrNm
-  description: Serial Number
-  usage:
-  - SysCfg
-- code: tCfg
-  description:
-  usage:
-  - FDR
-  - SysCfg
-- code: tmuf
-  description:
-  usage:
-  - Firmware
-- code: vuid
-  description: Volume Group UUID
-  usage:
-  - Boot Policy
-- code: WSKU
-  description:
-  usage:
-  - SysCfg
+  credits:
+codes:
+  0Cfg:
+    description:
+    usage:
+    - SysCfg
+  AAPL:
+    description: Generic 4CC for Apple, often Creator Code
+    usage:
+    - Everywhere
+  ADDA:
+    description:
+    usage:
+    - SysCfg
+  anef:
+    description: Apple Neural Engine Firmware
+    usage:
+    - Firmware
+  ansf:
+    description: Apple NAND Storage Firmware (non-remote)
+    usage:
+    - Firmware
+  aopf:
+    description: Always-on-Processor Firmware
+    usage:
+    - Firmware
+  appv:
+    description:
+    usage:
+    - FDR
+    - SysCfg
+  aubt:
+    description:
+    usage: []
+  auxi:
+    description: Auxiliary Kernel Cache Image4 Hash
+    usage:
+    - Boot Policy
+  auxp:
+    description: User Authorized Kext List Hash
+    usage:
+    - Boot Policy
+  auxr:
+    description: Kext Receipt Hash
+    usage:
+    - Boot Policy
+  avef:
+    description: Audio / Video Encryption (DRM) Firmware
+    usage:
+    - Firmware
+  BNCH:
+    description: Boot Nonce Hash
+    usage:
+    - APTicket
+  BNDL:
+    description: Loadable Bundle (plugin)
+    usage:
+    - macOS
+  BORD:
+    description: Board ID
+    usage:
+    - APTicket
+  bstc:
+    description:
+    usage: []
+  CEPO:
+    description: Certificate Epoch
+    usage:
+    - APTicket
+  CHIP:
+    description: Chip ID
+    usage:
+    - APTicket
+  ciof:
+    description:
+    usage:
+    - Firmware
+  CLHS:
+    description:
+    usage:
+    - SysCfg
+  coih:
+    description: CustomKC or fuOS Image4 Hash
+    usage:
+    - APTicket
+  CPRO:
+    description: Chip Production Status
+    usage:
+    - Boot Policy
+  CPRV:
+    description: Chip Revision
+    usage:
+    - APTicket
+  CSEC:
+    description: Chip Security Mode
+    usage:
+    - APTicket
+  csys:
+    description:
+    usage: []
+  dCfg:
+    description:
+    usage:
+    - FDR
+  dcp2:
+    description:
+    usage: []
+  dcpf:
+    description:
+    usage: []
+  dtre:
+    description: Device Tree
+    usage:
+    - Firmware
+  eCfg:
+    description:
+    usage:
+    - FDR
+    - SysCfg
+  ECID:
+    description: Exclusive Chip ID
+    usage:
+    - APTicket
+  EPRO:
+    description: Effective Production Status
+    usage:
+    - APTicket
+  ESEC:
+    description: Effective Security Status
+    usage:
+    - APTicket
+  fCfg:
+    description:
+    usage: []
+  gfxf:
+    description: Graphics Firmware
+    usage:
+    - Firmware
+  iBootData:
+    description: iBoot Data
+    usage:
+    - Firmware
+  iBoot:
+    description: iBoot
+    usage:
+    - Firmware
+  ispf:
+    description: Image Signal Processor Firmware
+    usage:
+    - Firmware
+  krnl:
+    description: XNU Kernel
+    usage:
+    - Firmware
+  ksku:
+    description:
+    usage: []
+  kuid:
+    description: Key Exchange Key Group UUID
+    usage:
+    - Boot Policy
+  logo:
+    description: iBoot Apple Logo
+    usage:
+    - Firmware
+  love:
+    description: OS Version
+    usage:
+    - Boot Policy
+  lpnh:
+    description: Local Policy Nonce Hash
+    usage:
+    - Boot Policy
+  lpol:
+    description: Local Policy
+    usage:
+    - Firmware
+    - Boot Policy
+  MANB:
+    description: Manifest Body
+    usage:
+    - APTicket
+  MANP:
+    description: Manifest Properties
+    usage:
+    - APTicket
+  Mod#:
+    description: Model Number
+    usage:
+    - FDR
+    - SysCfg
+  MOJO:
+    description: Mojo Debug Flag
+    usage:
+    - SMC
+  nsih:
+    description: Next Stage Image4 Hash
+    usage: []
+  pmpf:
+    description: Power Management Processor Firmware
+    usage:
+    - Firmware
+  Regn:
+    description: Region
+    usage:
+    - FDR
+    - SysCfg
+  rlg1:
+    description: Restore logo
+    usage:
+    - Firmware
+  rlg2:
+    description: Restore logo
+    usage:
+    - Firmware
+  ronh:
+    description: RecoveryOS Policy Nonce Hash
+    usage:
+    - Boot Policy
+  rpnh:
+    description: Remote Policy Nonce Hash
+    usage:
+    - Boot Policy
+  SDOM:
+    description: Security Domain
+    usage:
+    - APTicket
+  seal:
+    description:
+    usage:
+    - FDR
+  siof:
+    description: Smart-IO Firmware
+    usage:
+    - Firmware
+  sip0:
+    description: System Integrity Protection (SIP Status)
+    usage:
+    - Boot Policy
+  sip1:
+    description: System Integrity Protection (Signed System Volume Status)
+    usage:
+    - Boot Policy
+  sip2:
+    description: System Integrity Protection (Kernel CTRR Status)
+    usage:
+    - Boot Policy
+  sip3:
+    description: System Integrity Protection (Boot Args Filtering Status)
+    usage:
+    - Boot Policy
+  smb0:
+    description: Secure Multi-Boot (Security Mode)
+    usage:
+    - Boot Policy
+  smb1:
+    description: Secure Multi-Boot
+    usage:
+    - Boot Policy
+  smb2:
+    description: Secure Multi-Boot (3rd Party Kexts Status)
+    usage:
+    - Boot Policy
+  smb3:
+    description: Secure Multi-Boot (User-allowed MDM Control)
+    usage:
+    - Boot Policy
+  smb4:
+    description: Secure Multi-Boot (DEP-allowed MDM Control)
+    usage:
+    - Boot Policy
+  snon:
+    description: Secure Enclave Processor Boot Nonce Hash
+    usage:
+    - APTicket
+  SrNm:
+    description: Serial Number
+    usage:
+    - SysCfg
+  tCfg:
+    description:
+    usage:
+    - FDR
+    - SysCfg
+  tmuf:
+    description:
+    usage:
+    - Firmware
+  vuid:
+    description: Volume Group UUID
+    usage:
+    - Boot Policy
+  WSKU:
+    description:
+    usage:
+    - SysCfg

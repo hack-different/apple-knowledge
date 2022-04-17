@@ -1,49 +1,25 @@
-services:
-  - service: adisk
+---
+metadata:
+  description:
+  credits:
+dnssd_services:
+  adisk:
     transport: tcp
     name: Time Capsule Backups / Auto Disk Discovery
     properties:
       sys:
       dkX:
-  - service: afpovertcp
+  afpovertcp:
     transport: tcp
     name: Apple Filing Protocol
     properties:
       u: Username
       p: Password
       path: Path
-  - service: apple-midi
-    transport: udp
-    name: Apple MIDI
-  - service: applerdbg
-    name: Apple Remote Debug Services (OpenGL Profiler)
-  - service: appletv
-    name: Apple TV
-    properties:
-      txtvers:
-      PrVs:
-      OSsi:
-      MniT:
-  - service: parentcontrol
-  - service: pcast
-    name: Apple Podcast Producer
-  - service: presence
-    name: eXtensable Message and Presence Protocol (Jabber)
-  - service: xgrid
-  - service: appletv-itunes
-    name: Apple TV discovery of iTunes
-  - service: airdrop
+  airdrop:
     transport: tcp
     name: AirDrop
-  - service: appletv-pair
-    name: Apple TV Pairing
-    properties:
-      txtvers:
-  - service: asr
-    name: Apple Software Restore
-    properties:
-      image: HTTP URL of disk image
-  - service: airplay
+  airplay:
     transport: tcp
     name: AirPlay
     properties:
@@ -73,10 +49,46 @@ services:
       srcvers:
       osvers:
       vv:
-  - service: airport
+  airport:
     transport: tcp
     name: AirPort Base Station
-  - service: companion-link
+  amzn-wplay:
+    transport: tcp
+  apple-midi:
+    transport: udp
+    name: Apple MIDI
+  apple-mobdev2:
+    transport: tcp
+    name: iTunes Wi-Fi Sync
+  apple-sasl:
+    transport: tcp
+    name: Apple Password Server
+  applerdbg:
+    name: Apple Remote Debug Services (OpenGL Profiler)
+  appletv:
+    name: Apple TV
+    properties:
+      txtvers:
+      PrVs:
+      OSsi:
+      MniT:
+  appletv-itunes:
+    name: Apple TV discovery of iTunes
+  appletv-pair:
+    name: Apple TV Pairing
+    properties:
+      txtvers:
+  appletv-v2:
+    transport: tcp
+    name: Apple TV Home Sharing
+  asr:
+    name: Apple Software Restore
+    properties:
+      image: HTTP URL of disk image
+  atc:
+    transport: tcp
+    name: iTunes Shared Library
+  companion-link:
     transport: tcp
     properties:
       rpMac:
@@ -87,10 +99,38 @@ services:
       rpAD:
       rpHI:
       rpBA:
-  - service: dacp
+  daap:
+    transport: tcp
+    name: Digital Audio Access Protocol
+    properties:
+  dacp:
     transport: tcp
     name: Digital Audio Control Protocol
-  - service: hap
+  device-info:
+    transport: tcp
+    name: macOS Device Infrormation Protocol
+  distcc:
+    transport: tcp
+    name: Xcode Distributed Compiler
+  dns-llq:
+    name: DNS-SD Long Lievd Queries
+    urls:
+    - http://files.dns-sd.org/draft-sekar-dns-llq.txt
+  dns-update:
+    name: DNS Dynamic Update Service
+    urls:
+    - http://www.ietf.org/rfc/rfc2136.txt
+    - http://www.ietf.org/rfc/rfc3007.txt
+  dpap:
+    transport: tcp
+    name: Digital Photo Access Protocol
+  eppc:
+    transport: tcp
+    name: Remote Apple Events
+  ftp:
+    transport: tcp
+    name: File Transport Protocol
+  hap:
     transport: tcp
     name: HomeKit Accessory Protocol
     properties:
@@ -102,20 +142,59 @@ services:
       sf:
       s#:
       ci:
-  - service: homekit
+  home-sharing:
+    transport: tcp
+    name: iTunes Home Sharing
+    properties:
+      txtvers:
+      hQ:
+      dmb:
+      OSci:
+      hG:
+      hC:
+  homekit:
     transport: tcp
     properties:
       si:
-  - service: hue
+  http:
+    transport: tcp
+    name: Hyper Text Transfer Protocol
+  hue:
     transport: tcp
     name: Phillips Hue
-  - service: ieee1588
+  ica-networking:
+    transport: tcp
+    name: Image Capture Sharing
+  ichat:
+    transport: tcp
+    name: iChat Instant Messaging Protocol
+  ieee1588:
     transport: udp
     name: Precision Time Protocol
     properties:
       domain:
       server-id:
-  - service: meshcop
+  ipp:
+    transport: tcp
+    name: Internet Printing Protocol
+    subresource:
+      print:
+  ipps:
+    transport: tcp
+    name: Internet Printing Protocol (Secure)
+    subresource:
+      print: AirPrint
+      cups: Common Unix Printing System
+  KeynoteControl:
+    transport: tcp
+    name: Keynote Remote
+  keynotepair:
+    transport: tcp
+    name: Keynote Remote Pairing
+  mediaremotetv:
+    transport: tcp
+    name: Apple TV Media Remote
+  meshcop:
     transport: udp
     name: Thread Mesh Commissioning
     properties:
@@ -125,7 +204,28 @@ services:
       sb:
       tv:
       xa:
-  - service: raop
+  net-assistant:
+  netrestore:
+  nfs:
+    transport: tcp
+    name: Network File System (NFS)
+  nssocketport:
+  od-master:
+    name: OpenDirectory Master
+  odisk:
+    name: Optical Disk Sharing
+  parentcontrol:
+  pcast:
+    name: Apple Podcast Producer
+  pdl-datastream:
+    transport: tcp
+    name: Page Description Language (PDL) Data Stream
+  presence:
+    name: eXtensable Message and Presence Protocol (Jabber)
+  printer:
+    transport: tcp
+    name: Line Printer Daemon
+  raop:
     transport: tcp
     name: Remote Audio Output Protocol (AirPlay2)
     properties:
@@ -142,148 +242,53 @@ services:
       vs: Version
       ov: OS Version
       vv:
-  - service: sleep-proxy
+  rfb:
+    transport: tcp
+    name: Remote Framebuffer - macOS Screen Sharing
+  riousbprint:
+    transport: tcp
+    name: Remote I/O USB Printer Protocol
+  scanner:
+    transport: tcp
+    name: Remote Scanning Protocol
+  servermgr:
+    transport: tcp
+    name: macOS Server Remote Administration
+  sftp-ssh:
+    transport: tcp
+    name: Secure File Transport Protocol (SFTP)
+  sleep-proxy:
     transport: udp
     name: Sleep Proxy Server
-    description: Protocol used by Apple Products to advratise devices capiable of WoL or WWoL
+    description: Protocol used by Apple Products to advratise devices capiable of
+      WoL or WWoL
     properties:
-  - service: srpl-tls
+  smb:
+    transport: tcp
+    name: Server Message Block (SMB) / Common Internet File System (CIFS)
+  srpl-tls:
     transport: tcp
     name: Service Registration Protocol - Replication over TLS
     properties:
       domain:
       server-id:
-  - service: amzn-wplay
-    transport: tcp
-  - service: apple-mobdev2
-    transport: tcp
-    name: iTunes Wi-Fi Sync
-  - service: apple-sasl
-    transport: tcp
-    name: Apple Password Server
-  - service: appletv-v2
-    transport: tcp
-    name: Apple TV Home Sharing
-  - service: atc
-    transport: tcp
-    name: iTunes Shared Library
-  - service: daap
-    transport: tcp
-    name: Digital Audio Access Protocol
-    properties:
-  - service: dns-llq
-    name: DNS-SD Long Lievd Queries
-    urls:
-      - http://files.dns-sd.org/draft-sekar-dns-llq.txt
-  - service: dns-update
-    name: DNS Dynamic Update Service
-    urls:
-      - http://www.ietf.org/rfc/rfc2136.txt
-      - http://www.ietf.org/rfc/rfc3007.txt
-  - service: device-info
-    transport: tcp
-    name: macOS Device Infrormation Protocol
-  - service: distcc
-    transport: tcp
-    name: Xcode Distributed Compiler
-  - service: dpap
-    transport: tcp
-    name: Digital Photo Access Protocol
-  - service: eppc
-    transport: tcp
-    name: Remote Apple Events
-  - service: ftp
-    transport: tcp
-    name: File Transport Protocol
-  - service: home-sharing
-    transport: tcp
-    name: iTunes Home Sharing
-    properties:
-      txtvers:
-      hQ:
-      dmb:
-      OSci:
-      hG:
-      hC:
-  - service: net-assistant
-  - service: netrestore
-  - service: nssocketport
-  - service: od-master
-    name: OpenDirectory Master
-  - service: odisk
-    name: Optical Disk Sharing
-  - service: http
-    transport: tcp
-    name: Hyper Text Transfer Protocol
-  - service: ica-networking
-    transport: tcp
-    name: Image Capture Sharing
-  - service: ichat
-    transport: tcp
-    name: iChat Instant Messaging Protocol
-  - service: ipp
-    transport: tcp
-    name: Internet Printing Protocol
-    subresource:
-      - service: print
-  - service: ipps
-    transport: tcp
-    name: Internet Printing Protocol (Secure)
-    subresource:
-      print: AirPrint
-      cups: Common Unix Printing System
-  - service: KeynoteControl
-    transport: tcp
-    name: Keynote Remote
-  - service: keynotepair
-    transport: tcp
-    name: Keynote Remote Pairing
-  - service: mediaremotetv
-    transport: tcp
-    name: Apple TV Media Remote
-  - service: nfs
-    transport: tcp
-    name: Network File System (NFS)
-  - service: pdl-datastream
-    transport: tcp
-    name: Page Description Language (PDL) Data Stream
-  - service: printer
-    transport: tcp
-    name:  Line Printer Daemon
-  - service: rfb
-    transport: tcp
-    name: Remote Framebuffer - macOS Screen Sharing
-  - service: riousbprint
-    transport: tcp
-    name: Remote I/O USB Printer Protocol
-  - service: scanner
-    transport: tcp
-    name: Remote Scanning Protocol
-  - service: servermgr
-    transport: tcp
-    name: macOS Server Remote Administration
-  - service: sftp-ssh
-    transport: tcp
-    name: Secure File Transport Protocol (SFTP)
-  - service: smb
-    transport: tcp
-    name: Server Message Block (SMB) / Common Internet File System (CIFS)
-  - service: ssh
+  ssh:
     transport: tcp
     name: Secure Shell
-  - service: telnet
+  telnet:
     transport: tcp
     name: Telnet
-  - service: touch-able
+  touch-able:
     transport: tcp
     name: Apple TV Remote App (iOS devices)
-  - service: workstation
+  workstation:
     transport: tcp
     name: Apple Workgroup Manager
-  - service: xsanserver
-  - service: xasnclient
-  - service: xserverraid
-  - service: xsync
-  - service: xserveraid
+  xasnclient:
+  xgrid:
+  xsanserver:
+  xserveraid:
     transport: tcp
     name: Xserve RAID
+  xserverraid:
+  xsync:

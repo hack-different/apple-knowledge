@@ -1,37 +1,43 @@
 ---
-description: Decrypted keybags for the A12X/A12Z
-boards:
-  j273a:
+metadata:
+  description:
+  credits:
+constants:
+  chip_id: 8010
+keybag_boards:
+  0x42:
     20A5299w:
-      illb:
-        iv: c5f6468e00f8b5346af56fc04647a1e7
-        key: ff5bdbb63ea0a91560d8b279b4b0f02621a19a2ff84b47c6d1ddd1bc7490b9ed
-      ibot:
-        iv: f05a9391411909bf709eab96f23a2779
-        key: 3767b17325c3e06db0c9242f2585fbece5e2953af0b2e40e464d95051088aa98
-      ibss:
-        iv: 12d88ba672c0dfd74637065b60967f49
-        key: a67fd7144bf756693efaf1823a996eafe50b9e6e828aab52987d74ad817a4078
-      ibec:
-        iv: b256110697b8353467de0ebb99bbfa6b
-        key: e824615720d52d61333ae8a7cac441821625808588f24fee502600e86e8ea509
-      sepi:
-        iv: b256110697b8353467de0ebb99bbfa6b
-        key: e824615720d52d61333ae8a7cac441821625808588f24fee502600e86e8ea509
-  t485:
+      components:
+        LLB:
+          iv: c5f6468e00f8b5346af56fc04647a1e7
+          key: ff5bdbb63ea0a91560d8b279b4b0f02621a19a2ff84b47c6d1ddd1bc7490b9ed
+        iBoot:
+          iv: f05a9391411909bf709eab96f23a2779
+          key: 3767b17325c3e06db0c9242f2585fbece5e2953af0b2e40e464d95051088aa98
+        iBSS:
+          iv: 12d88ba672c0dfd74637065b60967f49
+          key: a67fd7144bf756693efaf1823a996eafe50b9e6e828aab52987d74ad817a4078
+        iBEC:
+          iv: b256110697b8353467de0ebb99bbfa6b
+          key: e824615720d52d61333ae8a7cac441821625808588f24fee502600e86e8ea509
+        sepi:
+          iv: b256110697b8353467de0ebb99bbfa6b
+          key: e824615720d52d61333ae8a7cac441821625808588f24fee502600e86e8ea509
+  0x24:
     20A5299w:
-      illb:
-        iv: d7c5c4eab25c3480ac513a7e732c8b5e
-        key: 72fdb949f9c0a3510a624f2a8a5f7e36f605566efab6ce77951de5c6a866dcf5
-      ibot:
-        iv: eb2864b7559f6a3c6cbdd88299275833
-        key: dc180d11cdc5571194c86f96956c739fbc959e7aa8a3e28ba6f64e69a3c13011
-      ibss:
-        iv: dec74da1183e1920ea6b102800b63eb5
-        key: 238feed6a45a3b56f6e4e3e2eaa105fbd4b030c04db3601398bf0ff9acfefef9
-      ibec:
-        iv: 700ba91eb0d64969ece1cc07354c6959
-        key: cc590422374751b38fca1178aeeb125ac3890abf993ffd13cee3f40d8fc3de5f
-      sepi:
-        iv: 2cd0364d3145ba5d70f5079ab483eb74
-        key: 1f982a0648791bd316390153b6f9c16c7bab7ec8995c55d4aa4b18c5f5363560
+      components:
+        LLB:
+          iv: d7c5c4eab25c3480ac513a7e732c8b5e
+          key: 72fdb949f9c0a3510a624f2a8a5f7e36f605566efab6ce77951de5c6a866dcf5
+        iBoot:
+          iv: eb2864b7559f6a3c6cbdd88299275833
+          key: dc180d11cdc5571194c86f96956c739fbc959e7aa8a3e28ba6f64e69a3c13011
+        iBSS:
+          iv: dec74da1183e1920ea6b102800b63eb5
+          key: 238feed6a45a3b56f6e4e3e2eaa105fbd4b030c04db3601398bf0ff9acfefef9
+        iBEC:
+          iv: 700ba91eb0d64969ece1cc07354c6959
+          key: cc590422374751b38fca1178aeeb125ac3890abf993ffd13cee3f40d8fc3de5f
+        sepi:
+          iv: 2cd0364d3145ba5d70f5079ab483eb74
+          key: 1f982a0648791bd316390153b6f9c16c7bab7ec8995c55d4aa4b18c5f5363560

@@ -1,30 +1,56 @@
 ---
+metadata:
+  description:
+  credits:
 pmu_errors:
-  - name: rst
-  - name: wdog
-    description: watchdog timer
-  - name: timeout,dblclick_timeout
-  - name: sochot,reset_in_3
-  - name: sstate,wallet_crash_seq
-  - name: por
-    description: power-on reset
-  - name: otp_crc
-  - name: uv,vddmain_uvlo_hold
-  - name: sochot,reset_in_3
-  - name: ot,overtemp
-  - name: timeout,watchdog_timeout
-  - name: uv,vddmain_uvlo
-    description: under-voltage
-  - name: ov,vddmain_ovlo
+  btn_rst:
+    subtypes:
+      two_finger_rst:
+      btn_seq_reset:
+  btn_shdn:
+  crash:
+    subtypes:
+      crash_in:
+  dbg_rst:
+    description: debug based reset
+    subtypes:
+      reset_in_2:
+  ntc_shdn:
+  ot:
+    description: over-temprature
+    subtypes:
+      overtemp:
+  otp_crc:
+    description: one-type-passcode, cyclic redundancy check
+  ov:
     description: over-voltage
-  - name: btn_shdn
-  - name: sstate,btn_dfu_recover
-  - name: btn_rst,two_finger_rst
-  - name: uv,vdd_boost_uvlo
-  - name: crash,crash_in
-  - name: btn_rst,btn_seq_reset
-  - name: spmi,spmi_fault
-  - name: wdog,reset_in_1
-  - name: dbg_rst,reset_in_2
-  - name: ntc_shdn
-  - name: timeout,dblclick_timeout
+    subtypes:
+      vddmain_ovlo:
+  por:
+    description: power-on reset
+  rst:
+    description: reset
+  sochot:
+    subtypes:
+      reset_in_3:
+  spmi:
+    subtypes:
+      spmi_fault:
+  sstate:
+    subtypes:
+      wallet_crash_seq:
+      btn_dfu_recover:
+  timeout:
+    subytpes:
+      watchdog_timeout:
+      dblclick_timeout:
+  uv:
+    description: under-voltage
+    subtypes:
+      vddmain_uvlo:
+      vddmain_uvlo_hold:
+      vdd_boost_uvlo:
+  wdog:
+    description: watchdog timer
+    subtypes:
+      reset_in_1:

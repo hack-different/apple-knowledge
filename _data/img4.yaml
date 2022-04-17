@@ -1,456 +1,457 @@
 ---
-tags:
-- name: acfw
+metadata:
   description:
-- name: ache
-  description:
-- name: acib
-  description:
-- name: aciw
-  description:
-- name: ader
-  description:
-- name: agfi
-  description:
-- name: almo
-  description:
-- name: AMNM
-  description:
-- name: anef
-  description:
-- name: anrd
-  description:
-- name: aofi
-  description:
-- name: aopf
-  description:
-- name: apmv
-  description:
-- name: ater
-  description:
-- name: atkh
-  description:
-- name: auac
-  description:
-- name: aubt
-  description:
-- name: augs
-  description:
-- name: aupr
-  description:
-- name: auxi
-  description:
-- name: auxk
-  description: Auxilary Kernel Cache
-- name: auxp
-  description:
-- name: auxr
-  description:
-- name: avef
-  description:
-- name: bat0
-  description: battery image 0
-- name: bat1
-  description: battery image 1
-- name: batf
-  description: battery full image
-- name: BLDS
-  description:
-- name: bles
-  description:
-- name: BNCH
-  description:
-- name: BNCN
-  description:
-- name: BORD
-  description: |-
-    The board the chip is attached to.  With iPhones/iPads this is the variation between device sizes (occasionally
-    also used for low cost devices like the SE/XR).
+  credits:
+img4_tags:
+  acfw:
+    description:
+  ache:
+    description:
+  acib:
+    description:
+  aciw:
+    description:
+  ader:
+    description:
+  agfi:
+    description:
+  almo:
+    description:
+  AMNM:
+    description:
+  anef:
+    description:
+  anrd:
+    description:
+  aofi:
+    description:
+  aopf:
+    description:
+  apmv:
+    description:
+  ater:
+    description:
+  atkh:
+    description:
+  auac:
+    description:
+  aubt:
+    description:
+  augs:
+    description:
+  aupr:
+    description:
+  auxi:
+    description:
+  auxk:
+    description: Auxilary Kernel Cache
+  auxp:
+    description:
+  auxr:
+    description:
+  avef:
+    description:
+  bat0:
+    description: battery image 0
+  bat1:
+    description: battery image 1
+  batf:
+    description: battery full image
+  BLDS:
+    description:
+  bles:
+    description:
+  BNCH:
+    description:
+  BNCN:
+    description:
+  BORD:
+    description: |-
+      The board the chip is attached to.  With iPhones/iPads this is the variation between device sizes (occasionally
+      also used for low cost devices like the SE/XR).
 
-    With the T2 this value is unique to all MacBooks with the T2
-- name: bstc
-  description:
-- name: bsys
-  description:
-- name: CEPO
-  description: |-
-    Certificate Epoch.  This is a unit of roll-forward time (monotonic) that allows for any security issues
-    in the prior epoch to be fixed by a anti-rollback scheme.
-- name: cfel
-  description:
-- name: chg0
-  description:
-- name: chg1
-  description:
-- name: CHIP
-  description: Unique identifier for a single Apple designed application processor
-    sharing the same GID key
-  width: 2
-- name: CHMH
-  description:
-- name: cker
-  description:
-- name: ckih
-  description:
-- name: cmsv
-  description:
-- name: coih
-  description:
-- name: CPRO
-  description:
-- name: CSEC
-  description: Burned-in chip security mode
-- name: csys
-  description:
-- name: dali
-  description:
-- name: data
-  description:
-- name: DGST
-  description:
-- name: diag
-  description:
-- name: disk
-  description:
-- name: DPRO
-  description:
-- name: DSEC
-  description:
-- name: dtre
-  description: device tree
-- name: dtrs
-  description: device tree for recovery
-- name: ECID
-  description: Exclusive chip identifier.  This is burned into an eFuse at time of
-    manufacture and unique across all devices sharing the same CHIP
-  width: 8
-- name: efib
-  description:
-- name: eg0n
-  description:
-- name: eg0t
-  description:
-- name: eg1n
-  description:
-- name: eg1n
-  description:
-- name: eg1t
-  description:
-- name: eg3n
-  description:
-- name: eg3t
-  description:
-- name: EKEY
-  description:
-- name: EPRO
-  description:
-- name: esca
-  description:
-- name: esdm
-  description:
-- name: ESEC
-  description: Effective security mode
-- name: euou
-  description:
-- name: fdrs
-  description:
-- name: fdrt
-  description:
-- name: file
-  description:
-- name: fpgt
-  description:
-- name: ftap
-  description:
-- name: ftot
-  description:
-- name: ftsp
-  description:
-- name: fuos
-  description:
-- name: gfxf
-  description:
-- name: ging
-  description:
-- name: glyc
-  description:
-- name: glyp
-  description:
-- name: hash
-  description:
-- name: hclo
-  description:
-- name: hime
-  description:
-- name: hmmr
-  description:
-- name: homr
-  description:
-- name: hrlp
-  description:
-- name: hypr
-  description:
-- name: ibec
-  description:
-- name: ibot
-  description:
-- name: ibss
-  description:
-- name: ienv
-  description:
-- name: illb
-  description:
-- name: IM4M
-  description:
-- name: IM4P
-  description:
-- name: IM4R
-  description:
-- name: IMG4
-  description:
-- name: ipdf
-  description:
-- name: isor
-  description:
-- name: ispf
-  description:
-- name: isys
-  description:
-- name: itst
-  description:
-- name: iuob
-  description:
-- name: iuos
-  description:
-- name: iuou
-  description:
-- name: kdlv
-  description:
-- name: krnl
-  description:
-- name: kuid
-  description:
-- name: lamo
-  description:
-- name: lckr
-  description:
-- name: LNCH
-  description:
-- name: lobo
-  description:
-- name: logo
-  description:
-- name: love
-  description:
-- name: lphp
-  description:
-- name: lpnh
-  description: LocalPolicy nonce hash
-- name: lpol
-  descrioption: LocalPolicy
-  description:
-- name: ltrs
-  description:
-- name: magg
-  description:
-- name: MANB
-  description:
-- name: MANP
-  description:
-- name: manx
-  description:
-- name: mefi
-  description:
-- name: ment
-  description:
-- name: mmap
-  description:
-- name: mmer
-  description:
-- name: mmsv
-  description:
-- name: mpro
-  description:
-- name: msec
-  description:
-- name: msys
-  description:
-- name: mtfw
-  description:
-- name: name
-  description:
-- name: nrde
-  description:
-- name: nsih
-  description:
-- name: nsrv
-  description:
-- name: OBJP
-  description:
-- name: omer
-  description:
-- name: ooth
-  description:
-- name: osev
-  description:
-- name: osrd
-  description:
-- name: otes
-  description:
-- name: owns
-  description:
-- name: PAYP
-  description:
-- name: pcrp
-  description:
-- name: pdmg
-  description:
-- name: pert
-  description:
-- name: pfle
-  description:
-- name: pflp
-  description:
-- name: phlt
-  description:
-- name: pmpf
-  description:
-- name: pndp
-  description:
-- name: prot
-  description:
-- name: rbmt
-  description:
-- name: rddg
-  description:
-- name: rdsk
-  description:
-- name: rdtr
-  description:
-- name: recm
-  description:
-- name: rfta
-  description:
-- name: rfts
-  description:
-- name: rkrn
-  description:
-- name: rlgo
-  description:
-- name: RNCH
-  description:
-- name: rolp
-  description:
-- name: ronh
-  description: recoveryOS nonce hash
-- name: rosi
-  description:
-- name: rpnh
-  description: RemotePolicy nonce hash
-- name: RSCH
-  description:
-- name: rsep
-  description:
-- name: rso0
-  description:
-- name: rso1
-  description:
-- name: rso2
-  description:
-- name: rso3
-  description:
-- name: rtpf
-  description:
-- name: rtsc
-  description:
-- name: scef
-  description:
-- name: SDOM
-  description: |-
-    Security domain, or which set of certificates govern device security.
+      With the T2 this value is unique to all MacBooks with the T2
+  bstc:
+    description:
+  bsys:
+    description:
+  CEPO:
+    description: |-
+      Certificate Epoch.  This is a unit of roll-forward time (monotonic) that allows for any security issues
+      in the prior epoch to be fixed by a anti-rollback scheme.
+  cfel:
+    description:
+  chg0:
+    description:
+  chg1:
+    description:
+  CHIP:
+    description: Unique identifier for a single Apple designed application processor
+      sharing the same GID key
+    width: 2
+  CHMH:
+    description:
+  cker:
+    description:
+  ckih:
+    description:
+  cmsv:
+    description:
+  coih:
+    description:
+  CPRO:
+    description:
+  CSEC:
+    description: Burned-in chip security mode
+  csys:
+    description:
+  dali:
+    description:
+  data:
+    description:
+  DGST:
+    description:
+  diag:
+    description:
+  disk:
+    description:
+  DPRO:
+    description:
+  DSEC:
+    description:
+  dtre:
+    description: device tree
+  dtrs:
+    description: device tree for recovery
+  ECID:
+    description: Exclusive chip identifier.  This is burned into an eFuse at time
+      of manufacture and unique across all devices sharing the same CHIP
+    width: 8
+  efib:
+    description:
+  eg0n:
+    description:
+  eg0t:
+    description:
+  eg1n:
+    description:
+  eg1t:
+    description:
+  eg3n:
+    description:
+  eg3t:
+    description:
+  EKEY:
+    description:
+  EPRO:
+    description:
+  esca:
+    description:
+  esdm:
+    description:
+  ESEC:
+    description: Effective security mode
+  euou:
+    description:
+  fdrs:
+    description:
+  fdrt:
+    description:
+  file:
+    description:
+  fpgt:
+    description:
+  ftap:
+    description:
+  ftot:
+    description:
+  ftsp:
+    description:
+  fuos:
+    description:
+  gfxf:
+    description:
+  ging:
+    description:
+  glyc:
+    description:
+  glyp:
+    description:
+  hash:
+    description:
+  hclo:
+    description:
+  hime:
+    description:
+  hmmr:
+    description:
+  homr:
+    description:
+  hrlp:
+    description:
+  hypr:
+    description:
+  iBEC:
+    description:
+  iBoot:
+    description:
+  iBSS:
+    description:
+  ienv:
+    description:
+  LLB:
+    description:
+  IM4M:
+    description:
+  IM4P:
+    description:
+  IM4R:
+    description:
+  IMG4:
+    description:
+  ipdf:
+    description:
+  isor:
+    description:
+  ispf:
+    description:
+  isys:
+    description:
+  itst:
+    description:
+  iuob:
+    description:
+  iuos:
+    description:
+  iuou:
+    description:
+  kdlv:
+    description:
+  krnl:
+    description:
+  kuid:
+    description:
+  lamo:
+    description:
+  lckr:
+    description:
+  LNCH:
+    description:
+  lobo:
+    description:
+  logo:
+    description:
+  love:
+    description:
+  lphp:
+    description:
+  lpnh:
+    description: LocalPolicy nonce hash
+  lpol:
+    descrioption: LocalPolicy
+    description:
+  ltrs:
+    description:
+  magg:
+    description:
+  MANB:
+    description:
+  MANP:
+    description:
+  manx:
+    description:
+  mefi:
+    description:
+  ment:
+    description:
+  mmap:
+    description:
+  mmer:
+    description:
+  mmsv:
+    description:
+  mpro:
+    description:
+  msec:
+    description:
+  msys:
+    description:
+  mtfw:
+    description:
+  name:
+    description:
+  nrde:
+    description:
+  nsih:
+    description:
+  nsrv:
+    description:
+  OBJP:
+    description:
+  omer:
+    description:
+  ooth:
+    description:
+  osev:
+    description:
+  osrd:
+    description:
+  otes:
+    description:
+  owns:
+    description:
+  PAYP:
+    description:
+  pcrp:
+    description:
+  pdmg:
+    description:
+  pert:
+    description:
+  pfle:
+    description:
+  pflp:
+    description:
+  phlt:
+    description:
+  pmpf:
+    description:
+  pndp:
+    description:
+  prot:
+    description:
+  rbmt:
+    description:
+  rddg:
+    description:
+  rdsk:
+    description:
+  rdtr:
+    description:
+  recm:
+    description:
+  rfta:
+    description:
+  rfts:
+    description:
+  rkrn:
+    description:
+  rlgo:
+    description:
+  RNCH:
+    description:
+  rolp:
+    description:
+  ronh:
+    description: recoveryOS nonce hash
+  rosi:
+    description:
+  rpnh:
+    description: RemotePolicy nonce hash
+  RSCH:
+    description:
+  rsep:
+    description:
+  rso0:
+    description:
+  rso1:
+    description:
+  rso2:
+    description:
+  rso3:
+    description:
+  rtpf:
+    description:
+  rtsc:
+    description:
+  scef:
+    description:
+  SDOM:
+    description: |-
+      Security domain, or which set of certificates govern device security.
 
-    Known values:
-      0x01 - Main Production certificates
-  width: 2
-- name: SECM
-  description:
-- name: seid
-  description:
-- name: sepi
-  description:
-- name: sika
-  description:
-- name: siof
-  description:
-- name: sip0
-  description:
-- name: sip1
-  description:
-- name: sip2
-  description:
-- name: sip3
-  description:
-- name: slvn
-  description:
-- name: smb0
-  description:
-- name: smb1
-  description:
-- name: smb2
-  description:
-- name: smb3
-  description:
-- name: smb4
-  description:
-- name: SNON
-  description:
-- name: snon
-  description:
-- name: snuf
-  description:
-- name: srnm
-  description:
-- name: ster
-  description:
-- name: svrn
-  description: Server nonce
-- name: tbmr
-  description:
-- name: tbms
-  description:
-- name: tery
-  description:
-- name: test
-  description:
-- name: tics
-  description:
-- name: trst
-  description:
-- name: tsys
-  description:
-- name: type
-  description:
-- name: ucer
-  description:
-- name: ucon
-  description:
-- name: udid
-  description:
-- name: uidm
-  description:
-- name: vice
-  description:
-- name: vkdl
-  description:
-- name: vuid
-  description:
-- name: ware
-  description:
-- name: wchf
-  description:
-- name: xbtc
-  description:
-- name: xsys
-  description:
-- name: xugs
-  description:
+      Known values:
+        0x01 - Main Production certificates
+    width: 2
+  SECM:
+    description:
+  seid:
+    description:
+  sepi:
+    description:
+  sika:
+    description:
+  siof:
+    description:
+  sip0:
+    description:
+  sip1:
+    description:
+  sip2:
+    description:
+  sip3:
+    description:
+  slvn:
+    description:
+  smb0:
+    description:
+  smb1:
+    description:
+  smb2:
+    description:
+  smb3:
+    description:
+  smb4:
+    description:
+  SNON:
+    description:
+  snon:
+    description:
+  snuf:
+    description:
+  srnm:
+    description:
+  ster:
+    description:
+  svrn:
+    description: Server nonce
+  tbmr:
+    description:
+  tbms:
+    description:
+  tery:
+    description:
+  test:
+    description:
+  tics:
+    description:
+  trst:
+    description:
+  tsys:
+    description:
+  type:
+    description:
+  ucer:
+    description:
+  ucon:
+    description:
+  udid:
+    description:
+  uidm:
+    description:
+  vice:
+    description:
+  vkdl:
+    description:
+  vuid:
+    description:
+  ware:
+    description:
+  wchf:
+    description:
+  xbtc:
+    description:
+  xsys:
+    description:
+  xugs:
+    description:
