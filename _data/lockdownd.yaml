@@ -3,13 +3,13 @@ metadata:
   description:
   credits:
 clients:
-  - AMPDeviceDiscoveryAgent
-  - Safari
-  - SpringBoard
-  - accountsd
-  - atwakeup
-  - backupd
-domains:
+- AMPDeviceDiscoveryAgent
+- Safari
+- SpringBoard
+- accountsd
+- atwakeup
+- backupd
+lockdownd_domains:
   com.apple.Accessibility:
     description:
     properties:
@@ -19,12 +19,6 @@ domains:
     - SpeakAutoCorrectionsEnabledByiTunes
     - VoiceOverTouchEnabledByiTunes
     - ZoomTouchEnabledByiTunes
-  com.apple.MobileDeviceCrashCopy:
-    description:
-    properties: []
-  com.apple.TerminalFlashr:
-    description:
-    properties: []
   com.apple.mobile.backup:
     description:
     properties:
@@ -71,11 +65,17 @@ domains:
     properties:
     - EnableWifiConnections
     - EnableWifiDebugging
+  com.apple.MobileDeviceCrashCopy:
+    description:
+    properties: []
   com.apple.purplebuddy:
     description:
     properties:
     - RestoreState
     - SetupState
+  com.apple.TerminalFlashr:
+    description:
+    properties: []
   com.apple.xcode.developerdomain:
     description:
     properties:

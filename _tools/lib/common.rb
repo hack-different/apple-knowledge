@@ -28,8 +28,15 @@ SCHEMAS_DIR = File.join(BASE_PATH, '_schema')
 # The hash will contain 'description' as a first element for human annotation
 class DataFileCollection
   def initialize(data_file, collection_name)
-    data_file.data[collection_name.to_s] ||= {}
-    @collection_data = data_file.data[collection_name.to_s]
+    @data_file = data_file
+    @collection_name = collection_name.to_s
+    @data_file.data[@collection_name] ||= {}
+    @collection_data = data_file.data[@collection_name]
+  end
+
+  def sort
+    @collection_data = @collection_data.sort_by { |key, value| key.downcase }.to_h
+    @data_file.data[@collection_name] = @collection_data
   end
 
   def ensure_key(key)

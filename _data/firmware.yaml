@@ -3,301 +3,26 @@ metadata:
   description: Listing of known firmware types included in a restore package
   credits:
 firmware_types:
+  ACIBTFirmware:
+  ACIWiFiFirmware:
   ADCPetra:
-  RootFS:
-  UpdateRamdisk:
-  UpdateRamdiskOTA:
-  LLB:
-    description: Low Level Boot (iBoot)
-    type: illb
-    filenames:
-    - LLB.iphone5.RELEASE.img3
-    - LLB.iphone5b.RELEASE.img3
-    - LLB.n69.RELEASE.im4p
-    - LLB.iphone6.RELEASE.im4p
-    - LLB.n69u.RELEASE.im4p
-    - LLB.ipad4b.RELEASE.im4p
-    - LLB.ipad4.RELEASE.im4p
-    - LLB.ipad4bm.RELEASE.im4p
-    - LLB.ipad5b.RELEASE.im4p
-    - LLB.ipad5.RELEASE.im4p
-    - LLB.p102.RELEASE.img3
-    - LLB.p103.RELEASE.img3
-    - LLB.p101.RELEASE.img3
-    - LLB.n71m.RELEASE.im4p
-    - LLB.n71.RELEASE.im4p
-    - LLB.n61.RELEASE.im4p
-    - LLB.n66m.RELEASE.im4p
-    - LLB.n66.RELEASE.im4p
-    - LLB.n56.RELEASE.im4p
-    - LLB.ipad6f.RELEASE.im4p
-    - LLB.j72t.RELEASE.im4p
-    - LLB.j71t.RELEASE.im4p
-    - LLB.n102.RELEASE.im4p
-    - LLB.j42d.RELEASE.im4p
-    - LLB.j120.RELEASE.im4p
-    - LLB.j207.RELEASE.im4p
-  SEPFirmware:
-    description: Secure Enclave Processor firmware (SEPOS)
-    type: sepi
-  iBEC:
-    description: iBoot Epoch Change
-    type: ibec
-    filenames:
-    - iBEC.iphone5.RELEASE.dfu
-    - iBEC.iphone5b.RELEASE.dfu
-    - iBEC.n69.RELEASE.im4p
-    - iBEC.iphone6.RELEASE.im4p
-    - iBEC.n69u.RELEASE.im4p
-    - iBEC.ipad4b.RELEASE.im4p
-    - iBEC.ipad4.RELEASE.im4p
-    - iBEC.ipad4bm.RELEASE.im4p
-    - iBEC.ipad5b.RELEASE.im4p
-    - iBEC.ipad5.RELEASE.im4p
-    - iBEC.p102.RELEASE.dfu
-    - iBEC.p103.RELEASE.dfu
-    - iBEC.p101.RELEASE.dfu
-    - iBEC.n71m.RELEASE.im4p
-    - iBEC.n71.RELEASE.im4p
-    - iBEC.n61.RELEASE.im4p
-    - iBEC.n66m.RELEASE.im4p
-    - iBEC.n66.RELEASE.im4p
-    - iBEC.n56.RELEASE.im4p
-    - iBEC.ipad6f.RELEASE.im4p
-    - iBEC.j72t.RELEASE.im4p
-    - iBEC.j71t.RELEASE.im4p
-    - iBEC.n102.RELEASE.im4p
-    - iBEC.j42d.RELEASE.im4p
-    - iBEC.j120.RELEASE.im4p
-    - iBEC.j207.RELEASE.im4p
-  iBoot:
-    description: iBoot
-    type: ibot
-    filenames:
-    - iBoot.iphone5.RELEASE.img3
-    - iBoot.iphone5b.RELEASE.img3
-    - iBoot.n69.RELEASE.im4p
-    - iBoot.iphone6.RELEASE.im4p
-    - iBoot.n69u.RELEASE.im4p
-    - iBoot.ipad4b.RELEASE.im4p
-    - iBoot.ipad4.RELEASE.im4p
-    - iBoot.ipad4bm.RELEASE.im4p
-    - iBoot.ipad5b.RELEASE.im4p
-    - iBoot.ipad5.RELEASE.im4p
-    - iBoot.p102.RELEASE.img3
-    - iBoot.p103.RELEASE.img3
-    - iBoot.p101.RELEASE.img3
-    - iBoot.n71m.RELEASE.im4p
-    - iBoot.n71.RELEASE.im4p
-    - iBoot.n61.RELEASE.im4p
-    - iBoot.n66m.RELEASE.im4p
-    - iBoot.n66.RELEASE.im4p
-    - iBoot.n56.RELEASE.im4p
-    - iBoot.ipad6f.RELEASE.im4p
-    - iBoot.j72t.RELEASE.im4p
-    - iBoot.j71t.RELEASE.im4p
-    - iBoot.n102.RELEASE.im4p
-    - iBoot.j42d.RELEASE.im4p
-    - iBoot.j120.RELEASE.im4p
-    - iBoot.j207.RELEASE.im4p
-  iBSS:
-    description: iBoot Second Stage
-    type: ibss
-    filenames:
-    - iBSS.iphone5.RELEASE.dfu
-    - iBSS.iphone5b.RELEASE.dfu
-    - iBSS.n69.RELEASE.im4p
-    - iBSS.iphone6.RELEASE.im4p
-    - iBSS.n69u.RELEASE.im4p
-    - iBSS.ipad4b.RELEASE.im4p
-    - iBSS.ipad4.RELEASE.im4p
-    - iBSS.ipad4bm.RELEASE.im4p
-    - iBSS.ipad5b.RELEASE.im4p
-    - iBSS.ipad5.RELEASE.im4p
-    - iBSS.p102.RELEASE.dfu
-    - iBSS.p103.RELEASE.dfu
-    - iBSS.p101.RELEASE.dfu
-    - iBSS.n71m.RELEASE.im4p
-    - iBSS.n71.RELEASE.im4p
-    - iBSS.n61.RELEASE.im4p
-    - iBSS.n66m.RELEASE.im4p
-    - iBSS.n66.RELEASE.im4p
-    - iBSS.n56.RELEASE.im4p
-    - iBSS.ipad6f.RELEASE.im4p
-    - iBSS.j72t.RELEASE.im4p
-    - iBSS.j71t.RELEASE.im4p
-    - iBSS.n102.RELEASE.im4p
-    - iBSS.j42d.RELEASE.im4p
-    - iBSS.j120.RELEASE.im4p
-    - iBSS.j207.RELEASE.im4p
-  iBootData:
-    description: iBoot Data
-    type: ibdt
-  WirelessPower:
-  Homer:
-    type: homr
-  HapticAssets:
-  GlyphPlugin:
-  GlyphCharging:
-  DeviceTree:
-    type: dtre
-    description:
-    filenames:
-    - DeviceTree.n42ap.img3
-    - DeviceTree.n49ap.img3
-    - DeviceTree.n41ap.img3
-    - DeviceTree.n48ap.img3
-    - DeviceTree.n69ap.im4p
-    - DeviceTree.n53ap.im4p
-    - DeviceTree.n51ap.im4p
-    - DeviceTree.n69uap.im4p
-    - DeviceTree.j85ap.im4p
-    - DeviceTree.j73ap.im4p
-    - DeviceTree.j72ap.im4p
-    - DeviceTree.j71ap.im4p
-    - DeviceTree.j87ap.im4p
-    - DeviceTree.j86ap.im4p
-    - DeviceTree.j86map.im4p
-    - DeviceTree.j82ap.im4p
-    - DeviceTree.j81ap.im4p
-    - DeviceTree.j85map.im4p
-    - DeviceTree.j97ap.im4p
-    - DeviceTree.j87map.im4p
-    - DeviceTree.j96ap.im4p
-    - DeviceTree.p102ap.img3
-    - DeviceTree.p103ap.img3
-    - DeviceTree.p101ap.img3
-    - DeviceTree.n71map.im4p
-    - DeviceTree.n71ap.im4p
-    - DeviceTree.n61ap.im4p
-    - DeviceTree.n66map.im4p
-    - DeviceTree.n66ap.im4p
-    - DeviceTree.n56ap.im4p
-    - DeviceTree.j72sap.im4p
-    - DeviceTree.j71sap.im4p
-    - DeviceTree.j72tap.im4p
-    - DeviceTree.j71tap.im4p
-    - DeviceTree.n102ap.im4p
-    - DeviceTree.j42dap.im4p
-    - DeviceTree.j120ap.im4p
-    - DeviceTree.j121ap.im4p
-    - DeviceTree.j207ap.im4p
-    - DeviceTree.j208ap.im4p
-  DCP:
-  Dali:
-  BatteryLow1:
+  ANE:
+    type: anef
+  ANSF:
+    description: Apple NAND Storage
+    type: ansf
+  AOP:
     description:
     type:
     filenames:
-    - batterylow1@2x~iphone.s5l8950x.img3
-    - batterylow1@2x~iphone.s8003.im4p
-    - batterylow1@2x~iphone.s5l8960x.im4p
-    - batterylow1@2x~iphone.s8000.im4p
-    - batterylow1@2x~ipad.im4p
-    - batterylow1@2x~iphone.im4p
-    - batterylow1@2x~ipad.s5l8955x.img3
-    - batterylow1@3x~iphone.im4p
-    - batterylow1@3x~iphone.t7000.im4p
-    - batterylow1@3x~iphone.s8003.im4p
-    - batterylow1@3x~iphone.s8000.im4p
-    - batterylow1@2x~iphone.t7000.im4p
-    - batterylow1@2x~ipad.s8000.im4p
-    - batterylow1@2x~ipad.s8003.im4p
-    - batterylow1@2732~ipad.im4p
-    - batterylow1@2224~ipad.im4p
-    - batterylow1@2732~ipad.t8011.im4p
-    - batterylow1@2224~ipad.t8011.im4p
-  BatteryLow0:
-    description:
-    type:
-    filenames:
-    - batterylow0@2x~iphone.s5l8950x.img3
-    - batterylow0@2x~iphone.s8003.im4p
-    - batterylow0@2x~iphone.s5l8960x.im4p
-    - batterylow0@2x~iphone.s8000.im4p
-    - batterylow0@2x~ipad.im4p
-    - batterylow0@2x~iphone.im4p
-    - batterylow0@2x~ipad.s5l8955x.img3
-    - batterylow0@3x~iphone.im4p
-    - batterylow0@3x~iphone.t7000.im4p
-    - batterylow0@3x~iphone.s8003.im4p
-    - batterylow0@3x~iphone.s8000.im4p
-    - batterylow0@2x~iphone.t7000.im4p
-    - batterylow0@2x~ipad.s8000.im4p
-    - batterylow0@2x~ipad.s8003.im4p
-    - batterylow0@2732~ipad.im4p
-    - batterylow0@2224~ipad.im4p
-    - batterylow0@2732~ipad.t8011.im4p
-    - batterylow0@2224~ipad.t8011.im4p
-  BatteryFull:
-    description:
-    type:
-    filenames:
-    - batteryfull@2x~iphone.s5l8950x.img3
-    - batteryfull@2x~iphone.s8003.im4p
-    - batteryfull@2x~iphone.s5l8960x.im4p
-    - batteryfull@2x~iphone.s8000.im4p
-    - batteryfull@2x~ipad.im4p
-    - batteryfull@2x~iphone.im4p
-    - batteryfull@2x~ipad.s5l8955x.img3
-    - batteryfull@3x~iphone.im4p
-    - batteryfull@3x~iphone.t7000.im4p
-    - batteryfull@3x~iphone.s8003.im4p
-    - batteryfull@3x~iphone.s8000.im4p
-    - batteryfull@2x~iphone.t7000.im4p
-    - batteryfull@2x~ipad.s8000.im4p
-    - batteryfull@2x~ipad.s8003.im4p
-    - batteryfull@2732~ipad.im4p
-    - batteryfull@2224~ipad.im4p
-    - batteryfull@2732~ipad.t8011.im4p
-    - batteryfull@2224~ipad.t8011.im4p
-  BatteryCharging1:
-    description:
-    type:
-    filenames:
-    - batterycharging1@2x~iphone.s5l8950x.img3
-    - batterycharging1@2x~iphone.s8003.im4p
-    - batterycharging1@2x~iphone.s5l8960x.im4p
-    - batterycharging1@2x~iphone.s8000.im4p
-    - batterycharging1@2x~ipad.im4p
-    - batterycharging1@2x~iphone.im4p
-    - batterycharging1@2x~ipad.s5l8955x.img3
-    - batterycharging1@3x~iphone.im4p
-    - batterycharging1@3x~iphone.t7000.im4p
-    - batterycharging1@3x~iphone.s8003.im4p
-    - batterycharging1@3x~iphone.s8000.im4p
-    - batterycharging1@2x~iphone.t7000.im4p
-    - batterycharging1@2x~ipad.s8000.im4p
-    - batterycharging1@2x~ipad.s8003.im4p
-    - batterycharging1@2732~ipad.im4p
-    - batterycharging1@2224~ipad.im4p
-    - batterycharging1@2732~ipad.t8011.im4p
-    - batterycharging1@2224~ipad.t8011.im4p
-  BatteryCharging0:
-    description:
-    type:
-    filenames:
-    - batterycharging0@2x~iphone.s5l8950x.img3
-    - batterycharging0@2x~iphone.s8003.im4p
-    - batterycharging0@2x~iphone.s5l8960x.im4p
-    - batterycharging0@2x~iphone.s8000.im4p
-    - batterycharging0@2x~ipad.im4p
-    - batterycharging0@2x~iphone.im4p
-    - batterycharging0@2x~ipad.s5l8955x.img3
-    - batterycharging0@3x~iphone.im4p
-    - batterycharging0@3x~iphone.t7000.im4p
-    - batterycharging0@3x~iphone.s8003.im4p
-    - batterycharging0@3x~iphone.s8000.im4p
-    - batterycharging0@2x~iphone.t7000.im4p
-    - batterycharging0@2x~ipad.s8000.im4p
-    - batterycharging0@2x~ipad.s8003.im4p
-    - batterycharging0@2732~ipad.im4p
-    - batterycharging0@2224~ipad.im4p
-    - batterycharging0@2732~ipad.t8011.im4p
-    - batterycharging0@2224~ipad.t8011.im4p
-  AudioCodecFirmware:
-  AppleMaggie:
-    type: magg
+    - aopfw.im4p
+    - aopfw-s8000aop.im4p
+    - aopfw-ipad6faop.im4p
+    - aopfw-ipad7aop.im4p
+  AOPFirmware:
+    type: aopf
+  AppleAVE:
+    type: avef
   AppleLogo:
     type: logo
     description:
@@ -321,59 +46,10 @@ firmware_types:
     - applelogo@2224~ipad.im4p
     - applelogo@2732~ipad.t8011.im4p
     - applelogo@2224~ipad.t8011.im4p
-  AppleAVE:
-    type: avef
-  AOPFirmware:
-    type: aopf
-  ANE:
-    type: anef
-  ANSF:
-    description: Apple NAND Storage
-    type: ansf
+  AppleMaggie:
+    type: magg
   ARMFW:
-  SmartIOFirmware:
-    type: siof
-  ACIWiFiFirmware:
-  ACIBTFirmware:
-  RestoreRamdisk:
-  RecoveryMode:
-    description:
-    type:
-    filenames:
-    - recoverymode@1136~iphone-lightning.s5l8950x.img3
-    - recoverymode@1136~iphone-lightning.s8003.im4p
-    - recoverymode@1136~iphone-lightning.s5l8960x.im4p
-    - recoverymode@1136~iphone-lightning.s8000.im4p
-    - recoverymode@2x~ipad-lightning.im4p
-    - recoverymode@1136~iphone-lightning.im4p
-    - recoverymode@2x~ipad-lightning.s5l8955x.img3
-    - recoverymode@1334~iphone-lightning.im4p
-    - recoverymode@1920~iphone-lightning.im4p
-    - recoverymode@1920~iphone-lightning.t7000.im4p
-    - recoverymode@1920~iphone-lightning.s8003.im4p
-    - recoverymode@1920~iphone-lightning.s8000.im4p
-    - recoverymode@1334~iphone-lightning.t7000.im4p
-    - recoverymode@1334~iphone-lightning.s8003.im4p
-    - recoverymode@1334~iphone-lightning.s8000.im4p
-    - recoverymode@2x~ipad-lightning.s8000.im4p
-    - recoverymode@2x~ipad-lightning.s8003.im4p
-    - recoverymode@1136~ipod-lightning.im4p
-    - recoverymode@1080~appletv5.im4p
-    - recoverymode@2732~ipad-lightning.im4p
-    - recoverymode@2224~ipad-lightning.im4p
-    - recoverymode@2732~ipad-lightning.t8011.im4p
-    - recoverymode@2224~ipad-lightning.t8011.im4p
-  RTPFirmware:
-  RANS:
-  PMP:
-  NeedService:
-  Multitouch:
-  MConnector:
-  LowPowerFindMyMode:
-  LowPowerMode:
-  LiquidDetect:
-  LeapHaptics:
-  Kernelcache:
+  AudioCodecFirmware:
   BasebandFirmware:
     description:
     type:
@@ -448,6 +124,116 @@ firmware_types:
     - Mav16-3.00.00.Release.bbfw
     - Mav16-1.91.00.Release.bbfw
     - Mav16-1.81.01.Release.bbfw
+  BatteryCharging0:
+    description:
+    type:
+    filenames:
+    - batterycharging0@2x~iphone.s5l8950x.img3
+    - batterycharging0@2x~iphone.s8003.im4p
+    - batterycharging0@2x~iphone.s5l8960x.im4p
+    - batterycharging0@2x~iphone.s8000.im4p
+    - batterycharging0@2x~ipad.im4p
+    - batterycharging0@2x~iphone.im4p
+    - batterycharging0@2x~ipad.s5l8955x.img3
+    - batterycharging0@3x~iphone.im4p
+    - batterycharging0@3x~iphone.t7000.im4p
+    - batterycharging0@3x~iphone.s8003.im4p
+    - batterycharging0@3x~iphone.s8000.im4p
+    - batterycharging0@2x~iphone.t7000.im4p
+    - batterycharging0@2x~ipad.s8000.im4p
+    - batterycharging0@2x~ipad.s8003.im4p
+    - batterycharging0@2732~ipad.im4p
+    - batterycharging0@2224~ipad.im4p
+    - batterycharging0@2732~ipad.t8011.im4p
+    - batterycharging0@2224~ipad.t8011.im4p
+  BatteryCharging1:
+    description:
+    type:
+    filenames:
+    - batterycharging1@2x~iphone.s5l8950x.img3
+    - batterycharging1@2x~iphone.s8003.im4p
+    - batterycharging1@2x~iphone.s5l8960x.im4p
+    - batterycharging1@2x~iphone.s8000.im4p
+    - batterycharging1@2x~ipad.im4p
+    - batterycharging1@2x~iphone.im4p
+    - batterycharging1@2x~ipad.s5l8955x.img3
+    - batterycharging1@3x~iphone.im4p
+    - batterycharging1@3x~iphone.t7000.im4p
+    - batterycharging1@3x~iphone.s8003.im4p
+    - batterycharging1@3x~iphone.s8000.im4p
+    - batterycharging1@2x~iphone.t7000.im4p
+    - batterycharging1@2x~ipad.s8000.im4p
+    - batterycharging1@2x~ipad.s8003.im4p
+    - batterycharging1@2732~ipad.im4p
+    - batterycharging1@2224~ipad.im4p
+    - batterycharging1@2732~ipad.t8011.im4p
+    - batterycharging1@2224~ipad.t8011.im4p
+  BatteryFull:
+    description:
+    type:
+    filenames:
+    - batteryfull@2x~iphone.s5l8950x.img3
+    - batteryfull@2x~iphone.s8003.im4p
+    - batteryfull@2x~iphone.s5l8960x.im4p
+    - batteryfull@2x~iphone.s8000.im4p
+    - batteryfull@2x~ipad.im4p
+    - batteryfull@2x~iphone.im4p
+    - batteryfull@2x~ipad.s5l8955x.img3
+    - batteryfull@3x~iphone.im4p
+    - batteryfull@3x~iphone.t7000.im4p
+    - batteryfull@3x~iphone.s8003.im4p
+    - batteryfull@3x~iphone.s8000.im4p
+    - batteryfull@2x~iphone.t7000.im4p
+    - batteryfull@2x~ipad.s8000.im4p
+    - batteryfull@2x~ipad.s8003.im4p
+    - batteryfull@2732~ipad.im4p
+    - batteryfull@2224~ipad.im4p
+    - batteryfull@2732~ipad.t8011.im4p
+    - batteryfull@2224~ipad.t8011.im4p
+  BatteryLow0:
+    description:
+    type:
+    filenames:
+    - batterylow0@2x~iphone.s5l8950x.img3
+    - batterylow0@2x~iphone.s8003.im4p
+    - batterylow0@2x~iphone.s5l8960x.im4p
+    - batterylow0@2x~iphone.s8000.im4p
+    - batterylow0@2x~ipad.im4p
+    - batterylow0@2x~iphone.im4p
+    - batterylow0@2x~ipad.s5l8955x.img3
+    - batterylow0@3x~iphone.im4p
+    - batterylow0@3x~iphone.t7000.im4p
+    - batterylow0@3x~iphone.s8003.im4p
+    - batterylow0@3x~iphone.s8000.im4p
+    - batterylow0@2x~iphone.t7000.im4p
+    - batterylow0@2x~ipad.s8000.im4p
+    - batterylow0@2x~ipad.s8003.im4p
+    - batterylow0@2732~ipad.im4p
+    - batterylow0@2224~ipad.im4p
+    - batterylow0@2732~ipad.t8011.im4p
+    - batterylow0@2224~ipad.t8011.im4p
+  BatteryLow1:
+    description:
+    type:
+    filenames:
+    - batterylow1@2x~iphone.s5l8950x.img3
+    - batterylow1@2x~iphone.s8003.im4p
+    - batterylow1@2x~iphone.s5l8960x.im4p
+    - batterylow1@2x~iphone.s8000.im4p
+    - batterylow1@2x~ipad.im4p
+    - batterylow1@2x~iphone.im4p
+    - batterylow1@2x~ipad.s5l8955x.img3
+    - batterylow1@3x~iphone.im4p
+    - batterylow1@3x~iphone.t7000.im4p
+    - batterylow1@3x~iphone.s8003.im4p
+    - batterylow1@3x~iphone.s8000.im4p
+    - batterylow1@2x~iphone.t7000.im4p
+    - batterylow1@2x~ipad.s8000.im4p
+    - batterylow1@2x~ipad.s8003.im4p
+    - batterylow1@2732~ipad.im4p
+    - batterylow1@2224~ipad.im4p
+    - batterylow1@2732~ipad.t8011.im4p
+    - batterylow1@2224~ipad.t8011.im4p
   BatteryPlugin:
     description:
     type:
@@ -473,6 +259,158 @@ firmware_types:
     - glyphplugin@2224~ipad-lightning.im4p
     - glyphplugin@2732~ipad-lightning.t8011.im4p
     - glyphplugin@2224~ipad-lightning.t8011.im4p
+  Dali:
+  DCP:
+  DeviceTree:
+    type: dtre
+    description:
+    filenames:
+    - DeviceTree.n42ap.img3
+    - DeviceTree.n49ap.img3
+    - DeviceTree.n41ap.img3
+    - DeviceTree.n48ap.img3
+    - DeviceTree.n69ap.im4p
+    - DeviceTree.n53ap.im4p
+    - DeviceTree.n51ap.im4p
+    - DeviceTree.n69uap.im4p
+    - DeviceTree.j85ap.im4p
+    - DeviceTree.j73ap.im4p
+    - DeviceTree.j72ap.im4p
+    - DeviceTree.j71ap.im4p
+    - DeviceTree.j87ap.im4p
+    - DeviceTree.j86ap.im4p
+    - DeviceTree.j86map.im4p
+    - DeviceTree.j82ap.im4p
+    - DeviceTree.j81ap.im4p
+    - DeviceTree.j85map.im4p
+    - DeviceTree.j97ap.im4p
+    - DeviceTree.j87map.im4p
+    - DeviceTree.j96ap.im4p
+    - DeviceTree.p102ap.img3
+    - DeviceTree.p103ap.img3
+    - DeviceTree.p101ap.img3
+    - DeviceTree.n71map.im4p
+    - DeviceTree.n71ap.im4p
+    - DeviceTree.n61ap.im4p
+    - DeviceTree.n66map.im4p
+    - DeviceTree.n66ap.im4p
+    - DeviceTree.n56ap.im4p
+    - DeviceTree.j72sap.im4p
+    - DeviceTree.j71sap.im4p
+    - DeviceTree.j72tap.im4p
+    - DeviceTree.j71tap.im4p
+    - DeviceTree.n102ap.im4p
+    - DeviceTree.j42dap.im4p
+    - DeviceTree.j120ap.im4p
+    - DeviceTree.j121ap.im4p
+    - DeviceTree.j207ap.im4p
+    - DeviceTree.j208ap.im4p
+  ftap:
+    description:
+    type:
+    filenames: []
+  ftsp:
+    description:
+    type:
+    filenames: []
+  GlyphCharging:
+  GlyphPlugin:
+  HapticAssets:
+  Homer:
+    type: homr
+  iBEC:
+    description: iBoot Epoch Change
+    type: ibec
+    filenames:
+    - iBEC.iphone5.RELEASE.dfu
+    - iBEC.iphone5b.RELEASE.dfu
+    - iBEC.n69.RELEASE.im4p
+    - iBEC.iphone6.RELEASE.im4p
+    - iBEC.n69u.RELEASE.im4p
+    - iBEC.ipad4b.RELEASE.im4p
+    - iBEC.ipad4.RELEASE.im4p
+    - iBEC.ipad4bm.RELEASE.im4p
+    - iBEC.ipad5b.RELEASE.im4p
+    - iBEC.ipad5.RELEASE.im4p
+    - iBEC.p102.RELEASE.dfu
+    - iBEC.p103.RELEASE.dfu
+    - iBEC.p101.RELEASE.dfu
+    - iBEC.n71m.RELEASE.im4p
+    - iBEC.n71.RELEASE.im4p
+    - iBEC.n61.RELEASE.im4p
+    - iBEC.n66m.RELEASE.im4p
+    - iBEC.n66.RELEASE.im4p
+    - iBEC.n56.RELEASE.im4p
+    - iBEC.ipad6f.RELEASE.im4p
+    - iBEC.j72t.RELEASE.im4p
+    - iBEC.j71t.RELEASE.im4p
+    - iBEC.n102.RELEASE.im4p
+    - iBEC.j42d.RELEASE.im4p
+    - iBEC.j120.RELEASE.im4p
+    - iBEC.j207.RELEASE.im4p
+  iBoot:
+    description: iBoot
+    type: ibot
+    filenames:
+    - iBoot.iphone5.RELEASE.img3
+    - iBoot.iphone5b.RELEASE.img3
+    - iBoot.n69.RELEASE.im4p
+    - iBoot.iphone6.RELEASE.im4p
+    - iBoot.n69u.RELEASE.im4p
+    - iBoot.ipad4b.RELEASE.im4p
+    - iBoot.ipad4.RELEASE.im4p
+    - iBoot.ipad4bm.RELEASE.im4p
+    - iBoot.ipad5b.RELEASE.im4p
+    - iBoot.ipad5.RELEASE.im4p
+    - iBoot.p102.RELEASE.img3
+    - iBoot.p103.RELEASE.img3
+    - iBoot.p101.RELEASE.img3
+    - iBoot.n71m.RELEASE.im4p
+    - iBoot.n71.RELEASE.im4p
+    - iBoot.n61.RELEASE.im4p
+    - iBoot.n66m.RELEASE.im4p
+    - iBoot.n66.RELEASE.im4p
+    - iBoot.n56.RELEASE.im4p
+    - iBoot.ipad6f.RELEASE.im4p
+    - iBoot.j72t.RELEASE.im4p
+    - iBoot.j71t.RELEASE.im4p
+    - iBoot.n102.RELEASE.im4p
+    - iBoot.j42d.RELEASE.im4p
+    - iBoot.j120.RELEASE.im4p
+    - iBoot.j207.RELEASE.im4p
+  iBootData:
+    description: iBoot Data
+    type: ibdt
+  iBSS:
+    description: iBoot Second Stage
+    type: ibss
+    filenames:
+    - iBSS.iphone5.RELEASE.dfu
+    - iBSS.iphone5b.RELEASE.dfu
+    - iBSS.n69.RELEASE.im4p
+    - iBSS.iphone6.RELEASE.im4p
+    - iBSS.n69u.RELEASE.im4p
+    - iBSS.ipad4b.RELEASE.im4p
+    - iBSS.ipad4.RELEASE.im4p
+    - iBSS.ipad4bm.RELEASE.im4p
+    - iBSS.ipad5b.RELEASE.im4p
+    - iBSS.ipad5.RELEASE.im4p
+    - iBSS.p102.RELEASE.dfu
+    - iBSS.p103.RELEASE.dfu
+    - iBSS.p101.RELEASE.dfu
+    - iBSS.n71m.RELEASE.im4p
+    - iBSS.n71.RELEASE.im4p
+    - iBSS.n61.RELEASE.im4p
+    - iBSS.n66m.RELEASE.im4p
+    - iBSS.n66.RELEASE.im4p
+    - iBSS.n56.RELEASE.im4p
+    - iBSS.ipad6f.RELEASE.im4p
+    - iBSS.j72t.RELEASE.im4p
+    - iBSS.j71t.RELEASE.im4p
+    - iBSS.n102.RELEASE.im4p
+    - iBSS.j42d.RELEASE.im4p
+    - iBSS.j120.RELEASE.im4p
+    - iBSS.j207.RELEASE.im4p
   KernelCache:
     description:
     type:
@@ -502,6 +440,44 @@ firmware_types:
     - kernelcache.release.n102
     - kernelcache.release.j42d
     - kernelcache.release.ipad7
+  Kernelcache:
+  LeapHaptics:
+  LiquidDetect:
+  LLB:
+    description: Low Level Boot (iBoot)
+    type: illb
+    filenames:
+    - LLB.iphone5.RELEASE.img3
+    - LLB.iphone5b.RELEASE.img3
+    - LLB.n69.RELEASE.im4p
+    - LLB.iphone6.RELEASE.im4p
+    - LLB.n69u.RELEASE.im4p
+    - LLB.ipad4b.RELEASE.im4p
+    - LLB.ipad4.RELEASE.im4p
+    - LLB.ipad4bm.RELEASE.im4p
+    - LLB.ipad5b.RELEASE.im4p
+    - LLB.ipad5.RELEASE.im4p
+    - LLB.p102.RELEASE.img3
+    - LLB.p103.RELEASE.img3
+    - LLB.p101.RELEASE.img3
+    - LLB.n71m.RELEASE.im4p
+    - LLB.n71.RELEASE.im4p
+    - LLB.n61.RELEASE.im4p
+    - LLB.n66m.RELEASE.im4p
+    - LLB.n66.RELEASE.im4p
+    - LLB.n56.RELEASE.im4p
+    - LLB.ipad6f.RELEASE.im4p
+    - LLB.j72t.RELEASE.im4p
+    - LLB.j71t.RELEASE.im4p
+    - LLB.n102.RELEASE.im4p
+    - LLB.j42d.RELEASE.im4p
+    - LLB.j120.RELEASE.im4p
+    - LLB.j207.RELEASE.im4p
+  LowPowerFindMyMode:
+  LowPowerMode:
+  MConnector:
+  Multitouch:
+  NeedService:
   OS:
     description:
     type:
@@ -892,6 +868,35 @@ firmware_types:
     - '058-88752-046.dmg'
     - '058-88752-045.dmg'
     - '058-88752-043.dmg'
+  PMP:
+  RANS:
+  RecoveryMode:
+    description:
+    type:
+    filenames:
+    - recoverymode@1136~iphone-lightning.s5l8950x.img3
+    - recoverymode@1136~iphone-lightning.s8003.im4p
+    - recoverymode@1136~iphone-lightning.s5l8960x.im4p
+    - recoverymode@1136~iphone-lightning.s8000.im4p
+    - recoverymode@2x~ipad-lightning.im4p
+    - recoverymode@1136~iphone-lightning.im4p
+    - recoverymode@2x~ipad-lightning.s5l8955x.img3
+    - recoverymode@1334~iphone-lightning.im4p
+    - recoverymode@1920~iphone-lightning.im4p
+    - recoverymode@1920~iphone-lightning.t7000.im4p
+    - recoverymode@1920~iphone-lightning.s8003.im4p
+    - recoverymode@1920~iphone-lightning.s8000.im4p
+    - recoverymode@1334~iphone-lightning.t7000.im4p
+    - recoverymode@1334~iphone-lightning.s8003.im4p
+    - recoverymode@1334~iphone-lightning.s8000.im4p
+    - recoverymode@2x~ipad-lightning.s8000.im4p
+    - recoverymode@2x~ipad-lightning.s8003.im4p
+    - recoverymode@1136~ipod-lightning.im4p
+    - recoverymode@1080~appletv5.im4p
+    - recoverymode@2732~ipad-lightning.im4p
+    - recoverymode@2224~ipad-lightning.im4p
+    - recoverymode@2732~ipad-lightning.t8011.im4p
+    - recoverymode@2224~ipad-lightning.t8011.im4p
   RestoreDeviceTree:
     description:
     type:
@@ -1182,14 +1187,7 @@ firmware_types:
     - '058-85048-098.dmg'
     - '058-70513-087.dmg'
     - '058-70359-087.dmg'
-  AOP:
-    description:
-    type:
-    filenames:
-    - aopfw.im4p
-    - aopfw-s8000aop.im4p
-    - aopfw-ipad6faop.im4p
-    - aopfw-ipad7aop.im4p
+  RestoreRamdisk:
   RestoreSEP:
     description:
     type:
@@ -1227,6 +1225,22 @@ firmware_types:
     - sep-firmware.j121.RELEASE.im4p
     - sep-firmware.j207.RELEASE.im4p
     - sep-firmware.j208.RELEASE.im4p
+  RestoreTrustCache:
+    description:
+    type:
+    filenames:
+    - '048-95747-019.dmg.trustcache'
+    - '048-95940-019.dmg.trustcache'
+  rfta:
+    description:
+    type:
+    filenames: []
+  rfts:
+    description:
+    type:
+    filenames: []
+  RootFS:
+  RTPFirmware:
   SEP:
     description:
     type:
@@ -1264,30 +1278,16 @@ firmware_types:
     - sep-firmware.j121.RELEASE.im4p
     - sep-firmware.j207.RELEASE.im4p
     - sep-firmware.j208.RELEASE.im4p
-  ftap:
-    description:
-    type:
-    filenames: []
-  ftsp:
-    description:
-    type:
-    filenames: []
-  rfta:
-    description:
-    type:
-    filenames: []
-  rfts:
-    description:
-    type:
-    filenames: []
-  RestoreTrustCache:
-    description:
-    type:
-    filenames:
-    - '048-95747-019.dmg.trustcache'
-    - '048-95940-019.dmg.trustcache'
+  SEPFirmware:
+    description: Secure Enclave Processor firmware (SEPOS)
+    type: sepi
+  SmartIOFirmware:
+    type: siof
   StaticTrustCache:
     description:
     type:
     filenames:
     - '048-95869-019.dmg.trustcache'
+  UpdateRamdisk:
+  UpdateRamdiskOTA:
+  WirelessPower:

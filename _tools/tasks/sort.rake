@@ -22,7 +22,10 @@ task :sort do
 end
 
 desc 'sort single collection in data file'
-task :sort_collection, [:data_file] do |_task, args|
+task :sort_collection, [:data_file, :collection] do |_task, args|
+  args[:collection] ||= args[:data_file]
   data_file = DataFile.new args[:data_file]
+  collection = data_file.collection args[:collection]
+  collection.sort
   data_file.save
 end

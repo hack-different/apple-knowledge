@@ -206,8 +206,8 @@ launchd_services:
   com.apple.facebook.xpc:
     description: Facebook account handler
   com.apple.fairplay.H2:
-    description: FairPlay is the DRM (digital rights management) system for Apple -
-      research in this area is dangorous
+    description: FairPlay is the DRM (digital rights management) system for Apple
+      - research in this area is dangorous
     danger: true
   com.apple.familycircled:
     description: iCloud Family Management
@@ -266,8 +266,8 @@ launchd_services:
   com.apple.icloud.fmflocatord:
     description: Find my friends
   com.apple.icloud.searchpartyd:
-    description: The searching component looking for offline devices broadcasging for
-      FindMy and sending to Apple
+    description: The searching component looking for offline devices broadcasging
+      for FindMy and sending to Apple
   com.apple.iconservices.iconservicesagent:
   com.apple.idamd:
     binary: "/usr/libexec/idamd"
@@ -432,12 +432,12 @@ launchd_services:
   com.apple.pipelined:
   com.apple.pluginkit.pkd:
     binary: "/usr/libexec/pkd"
-    description: pkd manages plug-ins for the PlugInKit subsystem. It is a classic launch
-      agent managed by launchd.
+    description: pkd manages plug-ins for the PlugInKit subsystem. It is a classic
+      launch agent managed by launchd.
     platforms:
-      - macOS Intel
+    - macOS Intel
     endpoints:
-      - com.apple.pluginkit.pkd
+    - com.apple.pluginkit.pkd
   com.apple.pluginkit.pkreporter:
   com.apple.PointerUI.pointeruid:
   com.apple.powerd:
@@ -485,7 +485,7 @@ launchd_services:
   com.apple.safarifetcherd:
   com.apple.SCHelper:
     platforms:
-      - macOS
+    - macOS
     description: Smart Card helper
   com.apple.screensharingserver:
     description: AirPlay

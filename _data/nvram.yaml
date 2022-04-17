@@ -199,8 +199,8 @@ nvram_variables:
     - common
   fmm-mobileme-token-FMM:
   fmm-mobileme-token-FMM-BridgeHasAccount:
-    description: If this value is true FMM is handled by the T2 coprocessor.  This is
-      always false on Apple Silicon as there is no bridgeOS device
+    description: If this value is true FMM is handled by the T2 coprocessor.  This
+      is always false on Apple Silicon as there is no bridgeOS device
     type: boolean
     platforms:
     - macOS

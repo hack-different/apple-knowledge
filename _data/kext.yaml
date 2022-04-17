@@ -3,10 +3,6 @@ metadata:
   description:
   credits:
 kexts:
-  com.Areca.ArcMSR:
-    description:
-    collections:
-    - BootKernelExtensions.kc
   com.apple.AGDCPluginDisplayMetrics:
     description:
     collections:
@@ -35,6 +31,10 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
+  com.apple.audio.TSNCaptureInterface:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
   com.apple.BootCache:
     description:
     collections:
@@ -43,14 +43,6 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.UVCService:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
-  com.apple.audio.TSNCaptureInterface:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
   com.apple.driver.ACPI_SMC_PlatformPlugin:
     description:
     collections:
@@ -79,6 +71,10 @@ kexts:
     description:
     collections:
     - SystemKernelExtensions.kc
+  com.apple.driver.Apple_iSight:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
   com.apple.driver.AppleACPIButtons:
     description:
     collections:
@@ -91,18 +87,6 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.driver.AppleAHCIPort:
-    description:
-    collections:
-    - BootKernelExtensions.kc
-  com.apple.driver.AppleAPIC:
-    description:
-    collections:
-    - BootKernelExtensions.kc
-  com.apple.driver.AppleAVEBridge:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
   com.apple.driver.AppleActuatorDriver:
     description:
     collections:
@@ -111,9 +95,29 @@ kexts:
     description:
     collections:
     - SystemKernelExtensions.kc
+  com.apple.driver.AppleAHCIPort:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleAPIC:
+    description:
+    collections:
+    - BootKernelExtensions.kc
   com.apple.driver.AppleAstrisGpioProbe:
     description:
   com.apple.driver.AppleAudioClockLibs:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleAVEBridge:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleBacklight:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleBacklightExpert:
     description:
     collections:
     - SystemKernelExtensions.kc
@@ -125,20 +129,6 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.driver.AppleBSDKextStarter:
-    description:
-    collections:
-    - BootKernelExtensions.kc
-  com.apple.driver.AppleBSDKextStarterVPN:
-    description:
-  com.apple.driver.AppleBacklight:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
-  com.apple.driver.AppleBacklightExpert:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
   com.apple.driver.AppleBluetoothDebug:
     description:
     collections:
@@ -171,6 +161,12 @@ kexts:
     description:
     collections:
     - SystemKernelExtensions.kc
+  com.apple.driver.AppleBSDKextStarter:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleBSDKextStarterVPN:
+    description:
   com.apple.driver.AppleBusPowerController:
     description:
     collections:
@@ -195,14 +191,6 @@ kexts:
     description:
     collections:
     - SystemKernelExtensions.kc
-  com.apple.driver.AppleEFINVRAM:
-    description:
-    collections:
-    - BootKernelExtensions.kc
-  com.apple.driver.AppleEFIRuntime:
-    description:
-    collections:
-    - BootKernelExtensions.kc
   com.apple.driver.AppleEffaceableBlockDevice:
     description:
     collections:
@@ -216,6 +204,14 @@ kexts:
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.AppleEffaceableTDM:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleEFINVRAM:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleEFIRuntime:
     description:
     collections:
     - BootKernelExtensions.kc
@@ -235,18 +231,6 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.driver.AppleFIVRDriver:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
-  com.apple.driver.AppleFWAudio:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
-  com.apple.driver.AppleFWOHCI:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
   com.apple.driver.AppleFileSystemDriver:
     description:
     collections:
@@ -256,6 +240,18 @@ kexts:
     collections:
     - SystemKernelExtensions.kc
   com.apple.driver.AppleFirmwareUpdateKext:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleFIVRDriver:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleFWAudio:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleFWOHCI:
     description:
     collections:
     - SystemKernelExtensions.kc
@@ -295,6 +291,10 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
+  com.apple.driver.AppleHollywood:
+    description:
+    collections:
+    - BootKernelExtensions.kc
   com.apple.driver.AppleHPET:
     description:
     collections:
@@ -321,18 +321,6 @@ kexts:
     - SystemKernelExtensions.kc
   com.apple.driver.AppleHWAccess:
     description:
-  com.apple.driver.AppleHollywood:
-    description:
-    collections:
-    - BootKernelExtensions.kc
-  com.apple.driver.AppleIPAppender:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
-  com.apple.driver.AppleIRController:
-    description:
-    collections:
-    - BootKernelExtensions.kc
   com.apple.driver.AppleInputDeviceSupport:
     description:
     collections:
@@ -443,6 +431,14 @@ kexts:
     description:
     collections:
     - SystemKernelExtensions.kc
+  com.apple.driver.AppleIPAppender:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.AppleIRController:
+    description:
+    collections:
+    - BootKernelExtensions.kc
   com.apple.driver.AppleKeyStore:
     description:
     collections:
@@ -463,14 +459,14 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.driver.AppleMGPUPowerControl:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
   com.apple.driver.AppleMemorexCDROMDriver:
     description:
     collections:
     - BootKernelExtensions.kc
+  com.apple.driver.AppleMGPUPowerControl:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
   com.apple.driver.AppleMikeyDriver:
     description:
     collections:
@@ -509,23 +505,23 @@ kexts:
     description:
     collections:
     - SystemKernelExtensions.kc
-  com.apple.driver.ApplePIODMA:
-    description:
-    collections:
-    - BootKernelExtensions.kc
-  com.apple.driver.ApplePVPanic:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
   com.apple.driver.AppleParavirtGPU:
     description:
     collections:
     - SystemKernelExtensions.kc
+  com.apple.driver.ApplePIODMA:
+    description:
+    collections:
+    - BootKernelExtensions.kc
   com.apple.driver.ApplePlatformEnabler:
     description:
     collections:
     - SystemKernelExtensions.kc
   com.apple.driver.ApplePolicyControl:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.ApplePVPanic:
     description:
     collections:
     - SystemKernelExtensions.kc
@@ -542,6 +538,10 @@ kexts:
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.AppleSEPManager:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.AppleSmartBatteryManager:
     description:
     collections:
     - BootKernelExtensions.kc
@@ -574,10 +574,6 @@ kexts:
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.AppleSSE:
-    description:
-    collections:
-    - BootKernelExtensions.kc
-  com.apple.driver.AppleSmartBatteryManager:
     description:
     collections:
     - BootKernelExtensions.kc
@@ -625,6 +621,10 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
+  com.apple.driver.AppleUpstreamUserClient:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
   com.apple.driver.AppleUSBAudio:
     description:
     collections:
@@ -673,11 +673,11 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.driver.AppleUSBTCKeyEventDriver:
+  com.apple.driver.AppleUSBTCKeyboard:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.driver.AppleUSBTCKeyboard:
+  com.apple.driver.AppleUSBTCKeyEventDriver:
     description:
     collections:
     - BootKernelExtensions.kc
@@ -689,10 +689,6 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.driver.AppleUpstreamUserClient:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
   com.apple.driver.AppleVirtIO:
     description:
     collections:
@@ -721,10 +717,6 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.driver.Apple_iSight:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
   com.apple.driver.AudioAUUC:
     description:
     collections:
@@ -757,6 +749,10 @@ kexts:
     description:
     collections:
     - SystemKernelExtensions.kc
+  com.apple.driver.corecapture:
+    description:
+    collections:
+    - BootKernelExtensions.kc
   com.apple.driver.CoreStorage:
     description:
     collections:
@@ -801,6 +797,10 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
+  com.apple.driver.driverkit.serial:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
   com.apple.driver.DrizzlePlatformSupport:
     description:
   com.apple.driver.DrizzleSMC:
@@ -809,10 +809,22 @@ kexts:
     description:
     collections:
     - SystemKernelExtensions.kc
+  com.apple.driver.eficheck:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
   com.apple.driver.FWPreferredProtocolSpeed:
     description:
     collections:
     - SystemKernelExtensions.kc
+  com.apple.driver.initioFWBridge:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.Intel82574LEthernet:
+    description:
+    collections:
+    - BootKernelExtensions.kc
   com.apple.driver.IO80211NetBooter:
     description:
     collections:
@@ -845,7 +857,11 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.driver.Intel82574LEthernet:
+  com.apple.driver.iPodDriver:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.iPodSBCDriver:
     description:
     collections:
     - BootKernelExtensions.kc
@@ -861,6 +877,10 @@ kexts:
     - SystemKernelExtensions.kc
   com.apple.driver.LuaHardwareAccess:
     description:
+  com.apple.driver.mDNSOffloadUserClient:
+    description:
+    collections:
+    - BootKernelExtensions.kc
   com.apple.driver.MEDetect:
     description:
   com.apple.driver.MKE_LF_D211A:
@@ -887,11 +907,11 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.driver.QPSQueFire:
+  com.apple.driver.pmtelemetry:
     description:
     collections:
     - SystemKernelExtensions.kc
-  com.apple.driver.SMCMotionSensor:
+  com.apple.driver.QPSQueFire:
     description:
     collections:
     - SystemKernelExtensions.kc
@@ -899,55 +919,11 @@ kexts:
     description:
     collections:
     - SystemKernelExtensions.kc
+  com.apple.driver.SMCMotionSensor:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
   com.apple.driver.StorageLynx:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
-  com.apple.driver.VMPlatformPlugin:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
-  com.apple.driver.WriteProtectedMediaDriver:
-    description:
-    collections:
-    - BootKernelExtensions.kc
-  com.apple.driver.X86PlatformPlugin:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
-  com.apple.driver.X86PlatformShim:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
-  com.apple.driver.corecapture:
-    description:
-    collections:
-    - BootKernelExtensions.kc
-  com.apple.driver.driverkit.serial:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
-  com.apple.driver.eficheck:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
-  com.apple.driver.iPodDriver:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
-  com.apple.driver.iPodSBCDriver:
-    description:
-    collections:
-    - BootKernelExtensions.kc
-  com.apple.driver.initioFWBridge:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
-  com.apple.driver.mDNSOffloadUserClient:
-    description:
-    collections:
-    - BootKernelExtensions.kc
-  com.apple.driver.pmtelemetry:
     description:
     collections:
     - SystemKernelExtensions.kc
@@ -976,6 +952,10 @@ kexts:
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.usb.AppleUSBHub:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBiBridge:
     description:
     collections:
     - BootKernelExtensions.kc
@@ -1033,14 +1013,6 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.driver.usb.AppleUSBiBridge:
-    description:
-    collections:
-    - BootKernelExtensions.kc
-  com.apple.driver.usb.IOUSBHostHIDDevice:
-    description:
-    collections:
-    - BootKernelExtensions.kc
   com.apple.driver.usb.cdc:
     description:
     collections:
@@ -1073,6 +1045,10 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
+  com.apple.driver.usb.IOUSBHostHIDDevice:
+    description:
+    collections:
+    - BootKernelExtensions.kc
   com.apple.driver.usb.networking:
     description:
     collections:
@@ -1085,10 +1061,26 @@ kexts:
     description:
     collections:
     - SystemKernelExtensions.kc
+  com.apple.driver.VMPlatformPlugin:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
   com.apple.driver.watchdog:
     description:
     collections:
     - BootKernelExtensions.kc
+  com.apple.driver.WriteProtectedMediaDriver:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.X86PlatformPlugin:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.driver.X86PlatformShim:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
   com.apple.filesystems.acfs:
     description:
     collections:
@@ -1177,18 +1169,20 @@ kexts:
     description:
     collections:
     - SystemKernelExtensions.kc
-  com.apple.iokit.CSRBluetoothHostControllerUSBTransport:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
   com.apple.iokit.CoreAnalyticsFamily:
     description:
     collections:
     - BootKernelExtensions.kc
+  com.apple.iokit.CSRBluetoothHostControllerUSBTransport:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
   com.apple.iokit.EndpointSecurity:
     description:
     collections:
     - BootKernelExtensions.kc
+  com.apple.iokit.fipscavs-kext-tool:
+    description:
   com.apple.iokit.IO80211Family:
     description:
     collections:
@@ -1197,6 +1191,10 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
+  com.apple.iokit.IOAcceleratorFamily2:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
   com.apple.iokit.IOACPIFamily:
     description:
     collections:
@@ -1225,15 +1223,11 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.iokit.IOAVBFamily:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
-  com.apple.iokit.IOAcceleratorFamily2:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
   com.apple.iokit.IOAudioFamily:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.iokit.IOAVBFamily:
     description:
     collections:
     - SystemKernelExtensions.kc
@@ -1325,11 +1319,11 @@ kexts:
     description:
     collections:
     - SystemKernelExtensions.kc
-  com.apple.iokit.IONVMeFamily:
+  com.apple.iokit.IONetworkingFamily:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.iokit.IONetworkingFamily:
+  com.apple.iokit.IONVMeFamily:
     description:
     collections:
     - BootKernelExtensions.kc
@@ -1361,10 +1355,6 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.iokit.IOSMBusFamily:
-    description:
-    collections:
-    - BootKernelExtensions.kc
   com.apple.iokit.IOSerialFamily:
     description:
     collections:
@@ -1374,6 +1364,10 @@ kexts:
     collections:
     - BootKernelExtensions.kc
   com.apple.iokit.IOSlowAdaptiveClockingFamily:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.iokit.IOSMBusFamily:
     description:
     collections:
     - BootKernelExtensions.kc
@@ -1435,17 +1429,15 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.iokit.fipscavs-kext-tool:
-    description:
   com.apple.kec.AppleEncryptedArchive:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.kec.Libm:
+  com.apple.kec.corecrypto:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.kec.corecrypto:
+  com.apple.kec.Libm:
     description:
     collections:
     - BootKernelExtensions.kc
@@ -1629,13 +1621,13 @@ kexts:
     description:
     collections:
     - SystemKernelExtensions.kc
-  com.apple.kext.MojoKDP:
-    description:
-  com.apple.kext.OSvKernDSPLib:
+  com.apple.kext.mcx.alr:
     description:
     collections:
     - SystemKernelExtensions.kc
-  com.apple.kext.mcx.alr:
+  com.apple.kext.MojoKDP:
+    description:
+  com.apple.kext.OSvKernDSPLib:
     description:
     collections:
     - SystemKernelExtensions.kc
@@ -1685,11 +1677,11 @@ kexts:
     description:
     collections:
     - SystemKernelExtensions.kc
-  com.apple.plugin.IOMRPPlugin:
+  com.apple.plugin.IOgPTPPlugin:
     description:
     collections:
     - SystemKernelExtensions.kc
-  com.apple.plugin.IOgPTPPlugin:
+  com.apple.plugin.IOMRPPlugin:
     description:
     collections:
     - SystemKernelExtensions.kc
@@ -1701,10 +1693,6 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.security.SecureRemotePassword:
-    description:
-    collections:
-    - SystemKernelExtensions.kc
   com.apple.security.quarantine:
     description:
     collections:
@@ -1713,10 +1701,22 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
+  com.apple.security.SecureRemotePassword:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
+  com.apple.UVCService:
+    description:
+    collections:
+    - SystemKernelExtensions.kc
   com.apple.vecLib.kext:
     description:
     collections:
     - SystemKernelExtensions.kc
+  com.Areca.ArcMSR:
+    description:
+    collections:
+    - BootKernelExtensions.kc
   com.promise.driver.stex:
     description:
     collections:

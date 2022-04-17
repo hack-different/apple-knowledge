@@ -5,144 +5,188 @@ metadata:
 local_properties:
   AppleInternal:
     description:
-  CPUArchitecture:
-    description:
-  EffectiveProductionStatusSEP:
-    description:
-  HWModel:
-    description:
-  HasSEP:
-    description:
-    type: boolean
-  IsUIBuild:
-    description:
-    type: boolean
-  DeviceSupportsLockdown:
-    description:
-    type: boolean
-  EffectiveSecurityModeAp:
-    description:
-  SigningFuse:
-    description:
-  BuildVersion:
-    description:
-  OSVersion:
+  BootSessionUUID:
     description:
   BridgeVersion:
     description:
-  SensitivePropertiesVisible:
-    description:
-  ProductName:
-    description:
-  ProductType:
-    description:
-  SerialNumber:
-    description:
-  BootSessionUUID:
-    description:
-  DeviceColor:
-    description:
-  EffectiveProductionStatusAp:
-    description:
-  EffectiveSecurityModeSEP:
-    description:
-  UniqueChipID:
-    description:
-  UniqueDeviceID:
-    description:
-  RemoteXPCVersionFlags:
+  BuildVersion:
     description:
   CertificateProductionStatus:
     description:
   CertificateSecurityMode:
     description:
+  CPUArchitecture:
+    description:
   DeviceClass:
+    description:
+  DeviceColor:
     description:
   DeviceEnclosureColor:
     description:
-  SecurityDomain:
+  DeviceSupportsLockdown:
     description:
-  OSInstallEnvironment:
+    type: boolean
+  EffectiveProductionStatusAp:
+    description:
+  EffectiveProductionStatusSEP:
+    description:
+  EffectiveSecurityModeAp:
+    description:
+  EffectiveSecurityModeSEP:
+    description:
+  HasSEP:
+    description:
+    type: boolean
+  HWModel:
     description:
   Image4Supported:
+    description:
+  IsUIBuild:
+    description:
+    type: boolean
+  OSInstallEnvironment:
+    description:
+  OSVersion:
+    description:
+  ProductName:
+    description:
+  ProductType:
+    description:
+  RemoteXPCVersionFlags:
+    description:
+  SecurityDomain:
+    description:
+  SensitivePropertiesVisible:
+    description:
+  SerialNumber:
+    description:
+  SigningFuse:
+    description:
+  UniqueChipID:
+    description:
+  UniqueDeviceID:
     description:
 local_services:
   com.apple.corecaptured.remoteservice:
     description:
-  com.apple.remote.installcoordination_proxy:
-    description:
-  om.apple.mobile.storage_mounter_proxy.bridge.macOS:
-    description:
-  com.apple.osanalytics.logRelay:
-    description:
   com.apple.CSCSupportd:
-    description:
-  com.apple.mobile.storage_mounter_proxy.bridge:
-    description:
-  com.apple.sysdiagnose.remote:
     description:
   com.apple.mobile.notification_proxy.remote:
     description:
+  com.apple.mobile.storage_mounter_proxy.bridge:
+    description:
+  com.apple.osanalytics.logRelay:
+    description:
+  com.apple.remote.installcoordination_proxy:
+    description:
+  com.apple.sysdiagnose.remote:
+    description:
+  om.apple.mobile.storage_mounter_proxy.bridge.macOS:
+    description:
 remote_properties:
   AppleInternal:
-  CPUArchitecture:
-  ChipID:
-  EffectiveProductionStatusSEP:
-  HWModel:
-  HasSEP:
-  LocationID:
-  IsUIBuild:
-  RegionInfo:
-  DeviceSupportsLockdown:
-  EffectiveSecurityModeAp:
-  SigningFuse:
-  BuildVersion:
-  OSVersion:
-  BridgeVersion:
-  SensitivePropertiesVisible:
-  BoardRevision:
-  Image4CryptoHashMethod:
-  MobileDeviceMinimumVersion:
-  ProductName:
-  ProductType:
-  SerialNumber:
-  BootSessionUUID:
   BoardId:
-  DeviceColor:
-  EffectiveProductionStatusAp:
-  EffectiveSecurityModeSEP:
-  UniqueChipID:
-  UniqueDeviceID:
-  RemoteXPCVersionFlags:
+  BoardRevision:
+  BootSessionUUID:
+  BridgeVersion:
+  BuildVersion:
   CertificateProductionStatus:
   CertificateSecurityMode:
+  ChipID:
+  CPUArchitecture:
   DeviceClass:
+  DeviceColor:
   DeviceEnclosureColor:
-  ModelNumber:
-  SecurityDomain:
-  OSInstallEnvironment:
-  InterfaceIndex:
+  DeviceSupportsLockdown:
+  EffectiveProductionStatusAp:
+  EffectiveProductionStatusSEP:
+  EffectiveSecurityModeAp:
+  EffectiveSecurityModeSEP:
   HardwarePlatform:
+  HasSEP:
+  HWModel:
+  Image4CryptoHashMethod:
   Image4Supported:
+  InterfaceIndex:
+  IsUIBuild:
+  LocationID:
+  MobileDeviceMinimumVersion:
+  ModelNumber:
+  OSInstallEnvironment:
+  OSVersion:
+  ProductName:
+  ProductType:
+  RegionInfo:
+  RemoteXPCVersionFlags:
+  SecurityDomain:
+  SensitivePropertiesVisible:
+  SerialNumber:
+  SigningFuse:
+  UniqueChipID:
+  UniqueDeviceID:
 remote_services:
+  com.apple.aveservice:
+    properties:
+      UsesRemoteXPC: true
+  com.apple.bridgeOSUpdated:
+    properties:
+      UsesRemoteXPC: true
+  com.apple.corecaptured.remoteservice:
+    properties:
+      UsesRemoteXPC: true
+  com.apple.CoreKDL.remoteXPC:
+    description:
+  com.apple.corespeech.xpc.remote.control:
+    properties:
+      UsesRemoteXPC: true
+  com.apple.corespeech.xpc.remote.record:
+    properties:
+      UsesRemoteXPC: true
   com.apple.eos.BiometricKit:
     properties:
       UsesRemoteXPC: false
   com.apple.eos.LASecureIO:
-  com.apple.corecaptured.remoteservice:
+  com.apple.icloud.findmydeviced.bridge:
+    version: 1
     properties:
-      UsesRemoteXPC: true
-  com.apple.nfcd.relay.control:
-    properties:
-      UsesBridgeXPC: false
-  com.apple.xpc.remote.mobile_obliteration:
-    properties:
-      UsesRemoteXPC: true
-  com.apple.TrustedAccessoryController:
-    properties:
+      ServiceVersion: 1
       UsesRemoteXPC: true
   com.apple.internal.xpc.remote.kext_audit:
     properties:
+      UsesRemoteXPC: true
+  com.apple.lskdd:
+    properties:
+      UsesRemoteXPC: 1
+  com.apple.mobileactivationd.bridge:
+    version: 1
+    properties:
+      ServiceVersion: 1
+      UsesRemoteXPC: true
+  com.apple.multiverse.remote.bridgetime:
+  com.apple.nfcd.relay.control:
+    properties:
+      UsesBridgeXPC: false
+  com.apple.nfcd.relay.uart:
+    properties:
+      UsesBridgeXPC: false
+  com.apple.osanalytics.logTransfer:
+    properties:
+      UsesRemoteXPC: true
+  com.apple.powerchime.remote:
+    properties:
+      UsesRemoteXPC: true
+  com.apple.private.avvc.xpc.remote:
+    properties:
+      UsesRemoteXPC: true
+  com.apple.recoverylogd.bridge:
+    version: 1
+    properties:
+      ServiceVersion: 1
+      UsesRemoteXPC: true
+  com.apple.RestoreRemoteServices.restoreserviced:
+    version: 2
+    properties:
+      ServiceVersion: 2
       UsesRemoteXPC: true
   com.apple.sysdiagnose.remote:
     properties:
@@ -150,59 +194,15 @@ remote_services:
   com.apple.sysdiagnose.stackshot.remote:
     properties:
       UsesRemoteXPC: true
-  com.apple.powerchime.remote:
-    properties:
-      UsesRemoteXPC: true
-  com.apple.bridgeOSUpdated:
-    properties:
-      UsesRemoteXPC: true
-  com.apple.xpc.remote.multiboot:
-    properties:
-      UsesRemoteXPC: true
-  com.apple.corespeech.xpc.remote.control:
-    properties:
-      UsesRemoteXPC: true
-  com.apple.private.avvc.xpc.remote:
-    properties:
-      UsesRemoteXPC: true
-  com.apple.corespeech.xpc.remote.record:
+  com.apple.TrustedAccessoryController:
     properties:
       UsesRemoteXPC: true
   com.apple.videoprocessingd.encode.remote:
     properties:
       UsesRemoteXPC: true
-  com.apple.multiverse.remote.bridgetime:
-  com.apple.recoverylogd.bridge:
-    version: 1
-    properties:
-      ServiceVersion: 1
-      UsesRemoteXPC: true
-  com.apple.mobileactivationd.bridge:
-    version: 1
-    properties:
-      ServiceVersion: 1
-      UsesRemoteXPC: true
-  com.apple.nfcd.relay.uart:
-    properties:
-      UsesBridgeXPC: false
-  com.apple.osanalytics.logTransfer:
+  com.apple.xpc.remote.mobile_obliteration:
     properties:
       UsesRemoteXPC: true
-  com.apple.CoreKDL.remoteXPC:
-    description:
-  com.apple.icloud.findmydeviced.bridge:
-    version: 1
+  com.apple.xpc.remote.multiboot:
     properties:
-      ServiceVersion: 1
-      UsesRemoteXPC: true
-  com.apple.lskdd:
-    properties:
-      UsesRemoteXPC: 1
-  com.apple.aveservice:
-    properties:
-      UsesRemoteXPC: true
-  com.apple.RestoreRemoteServices.restoreserviced:
-    version: 2
-    properties:
-      ServiceVersion: 2
       UsesRemoteXPC: true

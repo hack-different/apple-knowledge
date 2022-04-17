@@ -2537,7 +2537,8 @@ iokit_classes:
     known_names:
     - AppleSEPManager
   AppleSEPXARTService:
-    description: Secure Enclave Processor - xART or eXtenable Anti-Replay Tokens, (GigaLocker)
+    description: Secure Enclave Processor - xART or eXtenable Anti-Replay Tokens,
+      (GigaLocker)
     parents:
     - AppleSEPEndpointService
     - IOService
@@ -5644,3 +5645,4 @@ iokit_classes:
     - IORegistryEntry
     known_names:
     - X86PlatformShim
+ioreg_classes: {}

@@ -7,17 +7,23 @@ environment_variables:
     type: string
   __CFPREFERENCES_AVOID_DAEMON:
     type: boolean
-    values: [ 0, 1 ]
+    values:
+    - 0
+    - 1
   __CF_USER_TEXT_ENCODING:
     examples:
-      - 0x0:0:0
-      - 0x1F5:0x0:0x0
+    - 0x0:0:0
+    - 0x1F5:0x0:0x0
   ASL_DISABLE:
     type: boolean
-    values: [ 0, 1 ]
+    values:
+    - 0
+    - 1
   CA_ASSERT_MAIN_THREAD_TRANSACTIONS:
     type: boolean
-    values: [ 0, 1 ]
+    values:
+    - 0
+    - 1
   CA_DEBUG_TRANSACTIONS:
     description: debug core animation transactions
     type: boolean
@@ -25,30 +31,38 @@ environment_variables:
     type: string
     format: path
     examples:
-      - /tmp
+    - "/tmp"
   CFNETWORK_STORAGED_TIMERELOFF:
     type: boolean
-    values: [ NO, YES ]
+    values:
+    - false
+    - true
   CHECK_IN:
     type: boolean
-    values: [ 0, 1 ]
+    values:
+    - 0
+    - 1
   CLEAN_FILES_OLDER_THAN_DAYS:
     type: integer
-  "com.apple.CoreData.CloudKitDebug":
+  com.apple.CoreData.CloudKitDebug:
     type: boolean
-    values: [ 0, 1 ]
-  "com.apple.CoreData.XPCDebug":
+    values:
+    - 0
+    - 1
+  com.apple.CoreData.XPCDebug:
     type: boolean
-    values: [ 0, 1 ]
+    values:
+    - 0
+    - 1
   COMMAND_MODE:
     type: string
     examples:
-      - unix2003
+    - unix2003
   CUPS_DEBUG_FILTER:
     type: string
     format: regex
     examples:
-      - ^(cupsDo|cupsGet|cupsMake|cupsSet|http|_http|ipp|_ipp|mime).*
+    - "^(cupsDo|cupsGet|cupsMake|cupsSet|http|_http|ipp|_ipp|mime).*"
   CUPS_DEBUG_LEVEL:
     type: integer
   CUPS_DEBUG_LOG:
@@ -58,34 +72,34 @@ environment_variables:
     type: array
     seperator: ","
     values:
-      - all
-      - -policy-node
-      - policy-set
-      - policy
-      - alloc
-      - trust
-      - bind
-      - profile
-      - trace
-      - dbconn
-      - OTR
-      - serverxpc
-      - sqlite3
-      - error_thee_well
-      - ringSigning
+    - all
+    - "-policy-node"
+    - policy-set
+    - policy
+    - alloc
+    - trust
+    - bind
+    - profile
+    - trace
+    - dbconn
+    - OTR
+    - serverxpc
+    - sqlite3
+    - error_thee_well
+    - ringSigning
   DEFAULT_NETWORK_PRIVACY_LEVEL:
     type: string
     values:
-      - public
+    - public
   DYLD_BIND_AT_LAUNCH:
   DYLD_DISABLE_DOFS:
   DYLD_FALLBACK_FRAMEWORK_PATH:
-    description:
-      This is a colon separated list of directories that contain frameworks.  If a framework is not found at its
-      install path, dyld uses this as a list of directories to search for the framework.
+    description: This is a colon separated list of directories that contain frameworks.  If
+      a framework is not found at its install path, dyld uses this as a list of directories
+      to search for the framework.
     type: array
     seperator: ":"
-    default: /Library/Frameworks:/System/Library/Frameworks
+    default: "/Library/Frameworks:/System/Library/Frameworks"
   DYLD_FALLBACK_LIBRARY_PATH:
     description: |
       This is a colon separated list of directories that contain libraries.  If a dylib is not found at its install
@@ -93,10 +107,11 @@ environment_variables:
       to /usr/local/lib:/usr/lib.
     type: array
     seperator: ":"
-    default: /usr/local/lib:/usr/lib
+    default: "/usr/local/lib:/usr/lib"
   DYLD_FORCE_FLAT_NAMESPACE:
-    description: |
-      Disable two level namespaces
+    description: 'Disable two level namespaces
+
+      '
   DYLD_FRAMEWORK_PATH:
     description: |
       This is a colon separated list of directories that contain frameworks.  The dynamic linker searches these
@@ -142,15 +157,21 @@ environment_variables:
     seperator: ":"
   DYLD_NO_FIX_PREBINDING:
   DYLD_PRINT_APIS:
-    description: |
-      If set, causes dyld to print a line whenever a dyld API is called (e.g. `dlopen()`).
+    description: 'If set, causes dyld to print a line whenever a dyld API is called
+      (e.g. `dlopen()`).
+
+      '
   DYLD_PRINT_BINDINGS:
-    description: |
-      If set, causes dyld to print a line each time a symbolic name is bound.
+    description: 'If set, causes dyld to print a line each time a symbolic name is
+      bound.
+
+      '
   DYLD_PRINT_DOFS:
   DYLD_PRINT_ENV:
-    description: |
-      If set, causes dyld to print a line of key=valule for each enviroment variable in the process.
+    description: 'If set, causes dyld to print a line of key=valule for each enviroment
+      variable in the process.
+
+      '
     type: presence
   DYLD_PRINT_INITIALIZERS:
     description: |
@@ -173,8 +194,10 @@ environment_variables:
   DYLD_PRINT_REBASINGS:
   DYLD_PRINT_RPATHS:
   DYLD_PRINT_SEARCHING:
-    description: |
-      If set, causes dyld to print a line about each file system path checked when searching for an image to load.
+    description: 'If set, causes dyld to print a line about each file system path
+      checked when searching for an image to load.
+
+      '
     type: presence
   DYLD_PRINT_SEGMENTS:
     description: |
@@ -213,7 +236,7 @@ environment_variables:
       number supplied when the framework was created.
     type: array
     seperator: ":"
-    default: /Library/Frameworks:/System/Library/Frameworks
+    default: "/Library/Frameworks:/System/Library/Frameworks"
   DYLD_VERSIONED_LIBRARY_PATH:
     description: |
       This is a colon separated list of directories that contain potential override libraries.  The dynamic linker
@@ -228,7 +251,9 @@ environment_variables:
   LAUNCHD_SOCKET:
   LIBDISPATCH_STRICT:
     type: boolean
-    values: [ NO, YES ]
+    values:
+    - false
+    - true
   LOGNAME:
     type: string
     format: username
@@ -237,56 +262,76 @@ environment_variables:
     format: UUID
   MallocCorruptionAbort:
     type: boolean
-    values: [ 0, 1 ]
+    values:
+    - 0
+    - 1
   MallocMaxMagazines:
     type: integer
   MallocNanoZone:
     type: boolean
-    values: [ 0, 1 ]
+    values:
+    - 0
+    - 1
   MallocSpaceEfficient:
     type: boolean
-    values: [ 0, 1 ]
+    values:
+    - 0
+    - 1
   MallocStackLoggingDirectory:
     type: string
     format: path
   NSRunningFromLaunchd:
     type: boolean
-    values: [ 0, 1 ]
+    values:
+    - 0
+    - 1
   NSZombieEnabled:
     type: boolean
-    values: [ NO, YES ]
+    values:
+    - false
+    - true
   PATH:
     type: array
     seperator: ":"
     default:
-      - /usr/bin
-      - /bin
-      - /usr/sbin
-      - /sbin
+    - "/usr/bin"
+    - "/bin"
+    - "/usr/sbin"
+    - "/sbin"
   PRINTTOOL_MODE:
     type: string
     examples:
-      - agent
-      - daemon
+    - agent
+    - daemon
   PRODUCT_INFO_FILTER_DISABLE:
   OS_ACTIVITY_MODE:
     type: boolean
-    values: [ disable, enable ]
+    values:
+    - disable
+    - enable
   PWD:
     type: string
     format: path
   REACH_DARK_WAKE_CONTROL:
     type: boolean
-    values: [ TRUE, FALSE ]
+    values:
+    - true
+    - false
   REACH_DARK_WAKE_NOTIFY:
     type: boolean
-    values: [ TRUE, FALSE ]
+    values:
+    - true
+    - false
   RPC_DEBUG:
     type: boolean
-    values: [ 0, 1 ]
+    values:
+    - 0
+    - 1
   RUN_WITH_LAUNCHD:
     type: boolean
-    values: [ 0, 1 ]
+    values:
+    - 0
+    - 1
   SSH_AUTH_SOCK:
     type: string
     format: path
@@ -295,10 +340,15 @@ environment_variables:
     format: path
   WAIT4DEBUGGER:
     type: boolean
-    values: [ NO, YES ]
+    values:
+    - false
+    - true
   XPC_FLAGS:
   XPC_NULL_BOOTSTRAP:
     type: boolean
-    values: [ 0, 1 ]
+    values:
+    - 0
+    - 1
   XPC_SERVICE_NAME:
     type: string
+

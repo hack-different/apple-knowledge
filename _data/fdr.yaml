@@ -2,15 +2,15 @@
 metadata:
   description:
   credits:
-properties:
+fdr_properties:
   AlsH:
     description:
   appv:
     description:
     contexts:
-      - base
-      - mandev
-  "arc#":
+    - base
+    - mandev
+  arc#:
     description:
   bbcl:
     description: Baseband
@@ -27,43 +27,42 @@ properties:
   dCfg:
     description:
     contexts:
-      - base
-      - mansta
+    - base
+    - mansta
   dcrt:
-    description:
-      bputil certificate from BAA Certification / Basic Attestation User Sub CA2
-      seems related to "key recovery assistant" as this is device level so for all
-      iCloud users (KeyRecoveryAssistant_dcrt_baa_request/response)
-  "drp#":
+    description: bputil certificate from BAA Certification / Basic Attestation User
+      Sub CA2 seems related to "key recovery assistant" as this is device level so
+      for all iCloud users (KeyRecoveryAssistant_dcrt_baa_request/response)
+  drp#:
     description:
   eeid:
     description: eSIM Embedded ID (EID)
   fCfg:
     description:
     contexts:
-      - base
-      - mandev
-      - mansta
+    - base
+    - mandev
+    - mansta
   FSCl:
     description:
     contexts:
-      - mandev
-      - mansta
+    - mandev
+    - mansta
   GpC2:
     description:
   HmCA:
     description:
     contexts:
-      - base
-      - mansta
+    - base
+    - mansta
   HmCl:
     description:
   hop0:
     description:
     contexts:
-      - base
-      - mandev
-      - mansta
+    - base
+    - mandev
+    - mansta
   IfCl:
     description:
   ime2:
@@ -89,19 +88,19 @@ properties:
   lcrt:
     description:
     contexts:
-      - base
-      - mansta
+    - base
+    - mansta
   meid:
     description: Mobile Equipment Identifier (CMDA)
-  "mlb#":
+  mlb#:
     description: Main Logic Board Serial Number
   nuid:
     description:
   NvMR:
     description:
     contexts:
-      - mandev
-      - mansta
+    - mandev
+    - mansta
   pbas:
     description:
   pcic:
@@ -111,7 +110,7 @@ properties:
   pcrt:
     description:
     contexts:
-      - base
+    - base
   pcvc:
     description:
   pcve:
@@ -145,13 +144,13 @@ properties:
   scrt:
     description:
     contexts:
-      - base
+    - base
   SDOM:
     description: Security Domain
   seal:
     description:
     contexts:
-      - base
+    - base
   seid:
     description: Secure Element ID (for NFC / Payments)
   ShMC:
@@ -163,7 +162,7 @@ properties:
   tCfg:
     description:
     contexts:
-      - mansta
+    - mansta
   tcrt:
     description:
   tsid:
