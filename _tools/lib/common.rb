@@ -113,9 +113,9 @@ Dir.glob(SCHEMAS).each do |schema|
 end
 
 def find_chip_board(product_id)
-  CORES_DATA['chip_ids'].each do |chip_id, chip|
+  CORES_DATA.collection(:chip_ids).each do |chip_id, chip|
     chip['boards'].each do |board_id, board|
-      return { chip: '%04X'.format(chip_id), board: '%02X'.format(board_id) } if board['product_id'] == product_id
+      return [format('%04X', chip_id), format('%02X', board_id)] if board['product_id'] == product_id
     end
   end
 

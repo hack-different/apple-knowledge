@@ -41,7 +41,7 @@ namespace :tipw do
   end
 
   desc 'update keybags from TIPW pages in tmp/tipw/firmware_keys'
-  task :keys do
+  task :keydb do
     input_key_files = File.join(TMP_DIR, 'tipw', 'tipw_firmware_keys', '*.page')
     keys = Dir.glob(input_key_files).map do |keyfile|
       TIPW::TIPWKeyPage.new(File.read(keyfile))
@@ -62,5 +62,20 @@ namespace :tipw do
   desc 'update firmware codenames from TIPW'
   task :codenames do
     TIPW::TIPWCodenames.new
+  end
+
+  desc 'update keybags from keydb'
+  task :keys do
+    keydb = YAML.load_file(File.join(TMP_DIR, 'tipw', 'keydb.yaml'))
+    keydb.each do |product, builds|
+      chip, board = find_chip_board(product)
+      chip_keybag = AppleData::GIDKeyBag[chip]
+      board_keybag = chip_keybag.get_board board
+      builds.each do |build_id, build_list|
+        build_list.each { |build| board_keybag.merge_keydb_build(build_id, build) }
+      end
+    end
+
+    AppleData::GIDKeyBag.save_all
   end
 end

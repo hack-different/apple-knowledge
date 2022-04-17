@@ -36,9 +36,7 @@ module TIPW
   def self.get_page_content(title)
     CLIENT.get_wikitext(title).body
   end
-end
 
-module TIPW
   # A object representing a parsed TIPW firmware key page
   class TIPWKeyPage
     KEY_TEMPLATE_REGEX = /\{\{keys(.*)\}\}/m
@@ -49,7 +47,7 @@ module TIPW
       key_match = KEY_TEMPLATE_REGEX.match(content)[1]
       @descriptors = {}
       @keybags = {}
-      process_pairs key_match.scan(KEY_VALUE_PAIR)
+      process_pairs(key_match.scan(KEY_VALUE_PAIR).to_h { |match| [match[0], match[1]] })
       cleanup_useless
     end
 
@@ -105,7 +103,6 @@ module TIPW
     end
 
     def process_pairs(pairs)
-      pairs = pairs.to_h { |match| [match[0], match[1]] }
       pairs.each do |key, value|
         case key
         when *DESCRIPTORS
@@ -116,7 +113,7 @@ module TIPW
           append_key Regexp.last_match(1), Regexp.last_match(2), value
         else
           @keybags[key] ||= {}
-          @keybags[key]['filename'] = value
+          @keybags[key]['filename'] = value.strip if value
         end
       end
     end
