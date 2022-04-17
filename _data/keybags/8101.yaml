@@ -9,7 +9,7 @@ keybag_boards:
     18G82:
     19A5325f:
       components:
-        ibec:
+        iBEC:
           filename: iBEC.d54p.RELEASE.im4p
           version: iBoot-7429.12.4.162.1
           iv: 0a30f9a74429e5ae62e9cbcaab820000
@@ -24,7 +24,7 @@ keybag_boards:
             development:
               encrypted_iv: 4C03D556F9492D158426684B5030CBCC
               encrypted_key: 02617C9AB5E35A6650517A2D2BB356EE13CD4A79E5D2E81436A98DC2C4B34424
-        ibdt:
+        iBootData:
           filename: iBootData.d54p.RELEASE.im4p
           version: iBoot-7429.12.4.162.1
           iv: 12b3b21327cdde96ead01b3ee1605ee7
@@ -39,7 +39,7 @@ keybag_boards:
             development:
               encrypted_iv: FEBDE49AFC7D6F049984E2799FE28444
               encrypted_key: BA20814DA519F4545A1FF4034AECE5847ED95EA85D98D1E8B3E4747790285F65
-        ibot:
+        iBoot:
           filename: iBoot.d54p.RELEASE.im4p
           version: iBoot-7429.12.4.162.1
           iv: 059f68f4e825628feb57de2fb098008a
@@ -54,7 +54,7 @@ keybag_boards:
             development:
               encrypted_iv: 53895A46806F1F71B4A886BAD948C96D
               encrypted_key: FE351B586DCE9F555B122C98BCC3A00F010769916670F74D0748CA5920669BC8
-        illb:
+        LLB:
           filename: LLB.d54p.RELEASE.im4p
           version: iBoot-7429.12.4.162.1
           iv: f2f56b0e53aface4c9ea237efca81517
@@ -69,7 +69,7 @@ keybag_boards:
             development:
               encrypted_iv: 64664E3A16FC44EF0C6CF7647DBBC5CC
               encrypted_key: 9ABBC8C78D18AD3453C2BCEB2780073C3214A0AE890D0B8B04250592EF7FD73D
-        ibss:
+        iBSS:
           filename: iBSS.d54p.RELEASE.im4p
           version: iBoot-7429.12.4.162.1
           iv: 6317d53b9cfd8a47e716c31ab52833c7
@@ -99,23 +99,23 @@ keybag_boards:
   0x06:
     19A5325f:
       components:
-        ibec:
+        iBEC:
           filename: iBEC.j308.RELEASE.im4p
           iv: 2a221f5dac06ab65c54e5134e279689c
           key: 9b81bcb3919b281c15b6dbe72c8d5f5fa11ab013a4c47f5bf6cd0c63718f5d12
-        ibot:
+        iBoot:
           filename: iBoot.j308.RELEASE.im4p
           iv: 98a813551207596720e556dd23b70d10
           key: 1315423d2adf20e0c5eb57ee4be013fb7857133726bfdabbfd5238266d8382dd
-        ibdt:
+        iBootData:
           fileanme: iBootData.j308.RELEASE.im4p
           iv: efa0b13fe13c5634cc2f2bf51eb8d2f6
           key: 9dabe1d03ff4e259c996d4431d8db294a8f48a96714b5b1dee9ddc5535870233
-        ibss:
+        iBSS:
           filename: iBSS.j308.RELEASE.im4p
           iv: 88712a576be14dc30dadb30319b68d02
           key: ce718e8f01f7dbf04d5fb81b961302c3e9cdeee2b90ce52124e2cd29e4002d59
-        illb:
+        LLB:
           filename: LLB.j308.RELEASE.im4p
           iv: ce8fc890762e6a65463a1919e1380b6b
           key: 546c59a2f2aaaae181bd4d4cfbcef46d990c25c23ee539864f3e9a0d236537a9
