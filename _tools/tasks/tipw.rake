@@ -78,4 +78,38 @@ namespace :tipw do
 
     AppleData::GIDKeyBag.save_all
   end
+
+  desc 'update IPSWs from downloaded TIPW pages'
+  task :ipsws do
+    data_file = DataFile.new 'ipsw'
+    files_collection = data_file.collection :ipsw_files
+    input_files = File.join(TMP_DIR, 'tipw', '**', '*.page')
+    urls = Dir.glob(input_files).flat_map do |file|
+      URI.extract(File.read(file))
+    end
+
+    ipsw_urls = urls.filter_map do |url|
+      uri = URI.parse url
+      uri if uri && %w[http https].include?(uri.scheme) && uri.path.ends_with?('.ipsw')
+
+    rescue URI::InvalidURIError
+      nil
+    end
+
+    uri_map = ipsw_urls.uniq.group_by do |uri|
+      URI.decode_www_form_component File.basename(uri.path)
+    end
+
+    uri_map.each do |file, file_urls|
+      single_file = files_collection.ensure_key file
+      single_file['urls'] ||= []
+      single_file['urls'] << single_file.delete('url') if single_file.key? 'url'
+
+      file_urls.map(&:to_s).each do |url|
+        single_file['urls'] << url unless single_file['urls'].include?(url)
+      end
+    end
+
+    data_file.save
+  end
 end
