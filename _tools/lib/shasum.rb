@@ -8,6 +8,8 @@ class SHASum
     case input.length
     when 40
       'sha1'
+    when 48
+      'sha2-224'
     when 64
       'sha2-256'
     when 96
