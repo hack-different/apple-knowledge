@@ -65,7 +65,7 @@ kexts:
     collections:
     - BootKernelExtensions.kc
   com.apple.Dont_Steal_Mac_OS_X:
-    description:
+    description: Used to provide encryption for key binaries like Finder.app to protect Apple copyright
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.ACPI_SMC_PlatformPlugin:
@@ -82,12 +82,14 @@ kexts:
     - SystemKernelExtensions.kc
   com.apple.driver.AirPort.Brcm4360-MFG:
     description:
+    internal: probably
   com.apple.driver.AirPort.BrcmNIC:
     description:
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.AirPort.BrcmNIC-MFG:
     description:
+    internal: probably
   com.apple.driver.Apple16X50ACPI:
     description:
     collections:
@@ -129,7 +131,8 @@ kexts:
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.AppleAstrisGpioProbe:
-    description:
+    description: Something about debug lines on iDevices
+    internal: yes
   com.apple.driver.AppleAudioClockLibs:
     description:
     collections:
@@ -191,7 +194,8 @@ kexts:
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.AppleBSDKextStarterVPN:
-    description:
+    description: Why would you want a VPN here?
+    internal: probably
   com.apple.driver.AppleBusPowerController:
     description:
     collections:
@@ -346,6 +350,7 @@ kexts:
     - SystemKernelExtensions.kc
   com.apple.driver.AppleHWAccess:
     description:
+    internal: probably
   com.apple.driver.AppleInputDeviceSupport:
     description:
     collections:
@@ -375,7 +380,8 @@ kexts:
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.AppleIntelCPUPowerManagementDriver:
-    description:
+    description: ... SMBus/ACPI/AML bytecode? (see darkwake exploits)
+    internal: probably
   com.apple.driver.AppleIntelFramebufferAzul:
     description:
     collections:
@@ -521,7 +527,8 @@ kexts:
     collections:
     - SystemKernelExtensions.kc
   com.apple.driver.AppleNVMePassThrough:
-    description:
+    description: Pass through NVMe commands - to where?
+    internal: probably
   com.apple.driver.AppleOLYHALMac:
     description:
     collections:
@@ -828,14 +835,16 @@ kexts:
     - SystemKernelExtensions.kc
   com.apple.driver.DrizzlePlatformSupport:
     description:
+    internal: maybe
   com.apple.driver.DrizzleSMC:
     description:
+    internal: maybe
   com.apple.driver.DspFuncLib:
     description:
     collections:
     - SystemKernelExtensions.kc
   com.apple.driver.eficheck:
-    description:
+    description: Kernel mode driver supporting `eficheck` binary to scan T1 and prior system's EFI for malware
     collections:
     - SystemKernelExtensions.kc
   com.apple.driver.FWPreferredProtocolSpeed:
@@ -896,18 +905,21 @@ kexts:
     - BootKernelExtensions.kc
   com.apple.driver.KernelRelayTesterHost:
     description:
+    internal: probably
   com.apple.driver.LSI_FW_500:
     description:
     collections:
     - SystemKernelExtensions.kc
   com.apple.driver.LuaHardwareAccess:
-    description:
+    description: Who doesn't want a scripting language in kernel mode?
+    internal: probably
   com.apple.driver.mDNSOffloadUserClient:
     description:
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.MEDetect:
-    description:
+    description: Related to Intel Management Engine
+    internal: probably
   com.apple.driver.MKE_LF_D211A:
     description:
     collections:
@@ -925,7 +937,7 @@ kexts:
     collections:
     - SystemKernelExtensions.kc
   com.apple.driver.PioneerSuperDrive:
-    description:
+    description: Apple's USB SuperDrive driver (mostly to configure required power draw)
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.PlasmonUDO:
@@ -949,7 +961,7 @@ kexts:
     collections:
     - SystemKernelExtensions.kc
   com.apple.driver.StorageLynx:
-    description:
+    description: Apple SEP persistent storage / public key component
     collections:
     - SystemKernelExtensions.kc
   com.apple.driver.usb.AppleUSBCommon:
@@ -964,7 +976,7 @@ kexts:
     description:
     collections:
     - BootKernelExtensions.kc
-  com.apple.driver.usb.AppleUSBHostBLLB:oardDevice:
+  com.apple.driver.usb.AppleUSBHostBLLBoardDevice:
     description:
     collections:
     - BootKernelExtensions.kc
@@ -985,7 +997,8 @@ kexts:
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.usb.AppleUSBKDP:
-    description:
+    description: USB based kernel debug port
+    internal: probably
   com.apple.driver.usb.AppleUSBOHCI:
     description:
     collections:
@@ -999,7 +1012,9 @@ kexts:
     collections:
     - SystemKernelExtensions.kc
   com.apple.driver.usb.AppleUSBRecoveryHost:
-    description:
+    description: Seems to be from a point where Apple was considering allowing Intel/T2 to be restored in the
+      same style as M1s via UniversalMac (this is why IPSWs contain x64 bits)
+    internal: probably
   com.apple.driver.usb.AppleUSBUHCI:
     description:
     collections:
@@ -1013,7 +1028,7 @@ kexts:
     collections:
     - SystemKernelExtensions.kc
   com.apple.driver.usb.AppleUSBVHCI:
-    description:
+    description: Apple Virtual Host Controller Interface (used to communicate to the T2 via USB over PCIe)
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.usb.AppleUSBVHCIBCE:
@@ -1067,7 +1082,7 @@ kexts:
     collections:
     - SystemKernelExtensions.kc
   com.apple.driver.usb.ethernet.asix:
-    description:
+    description: ASIX based USB ethernet driver (Apple USB Ethernet dongle)
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.usb.IOUSBHostHIDDevice:
@@ -1075,7 +1090,7 @@ kexts:
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.usb.networking:
-    description:
+    description: USB CDC (communications class) driver
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.usb.realtek8153patcher:
@@ -1083,7 +1098,7 @@ kexts:
     collections:
     - BootKernelExtensions.kc
   com.apple.driver.usb.serial:
-    description:
+    description: Generic USB FTDI kernel mode driver (supplanted by DriverKit version)
     collections:
     - SystemKernelExtensions.kc
   com.apple.driver.VMPlatformPlugin:
@@ -1107,7 +1122,7 @@ kexts:
     collections:
     - SystemKernelExtensions.kc
   com.apple.filesystems.acfs:
-    description:
+    description: https://en.wikipedia.org/wiki/Oracle_Cloud_File_System?
     collections:
     - SystemKernelExtensions.kc
   com.apple.filesystems.acfsctl:
@@ -1115,11 +1130,11 @@ kexts:
     collections:
     - SystemKernelExtensions.kc
   com.apple.filesystems.afpfs:
-    description:
+    description: Apple Filing Protocol (network AFP) kernel mode driver
     collections:
     - SystemKernelExtensions.kc
   com.apple.filesystems.apfs:
-    description:
+    description: Apple Filesystem (APFS) kernel mode driver
     collections:
     - BootKernelExtensions.kc
   com.apple.filesystems.autofs:
@@ -1127,35 +1142,35 @@ kexts:
     collections:
     - SystemKernelExtensions.kc
   com.apple.filesystems.cd9660:
-    description:
+    description: ISO9660 kernel mode filesystem driver
     collections:
     - SystemKernelExtensions.kc
   com.apple.filesystems.cddafs:
-    description:
+    description: CD-ROM (DA=Data) kernel mode filesystem driver
     collections:
     - SystemKernelExtensions.kc
   com.apple.filesystems.exfat:
-    description:
+    description: ExFAT kernel mode filesystem driver
     collections:
     - SystemKernelExtensions.kc
   com.apple.filesystems.hfs.encodings.kext:
-    description:
+    description: Filesystem driver to handle multiple codepages (pre unicode concept)
     collections:
     - BootKernelExtensions.kc
   com.apple.filesystems.hfs.kext:
-    description:
+    description: HFS/HFS+ kernel mode filesystem driver
     collections:
     - BootKernelExtensions.kc
   com.apple.filesystems.lifs:
-    description:
+    description: https://storageconference.us/2006/Presentations/09Ames.pdf?
     collections:
     - BootKernelExtensions.kc
   com.apple.filesystems.msdosfs:
-    description:
+    description: FAT kernel mode filesystem driver
     collections:
     - SystemKernelExtensions.kc
   com.apple.filesystems.ntfs:
-    description:
+    description: Windows NTFS kernel mode filesystem driver
     collections:
     - SystemKernelExtensions.kc
   com.apple.filesystems.smbfs:
@@ -1163,7 +1178,7 @@ kexts:
     collections:
     - SystemKernelExtensions.kc
   com.apple.filesystems.tmpfs:
-    description:
+    description: Provide ephemeral temp filesystem that's key is wiped on each boot
     collections:
     - BootKernelExtensions.kc
   com.apple.filesystems.udf:
@@ -1207,7 +1222,8 @@ kexts:
     collections:
     - BootKernelExtensions.kc
   com.apple.iokit.fipscavs-kext-tool:
-    description:
+    description: FIPS test mode (breaks most encryption by using fixed values)
+    internal: probably
   com.apple.iokit.IO80211Family:
     description:
     collections:
@@ -1449,7 +1465,8 @@ kexts:
     collections:
     - SystemKernelExtensions.kc
   com.apple.iokit.RUSBHostFamily:
-    description:
+    description: Remote USB functionality
+    internal: probably
   com.apple.iokit.SCSITaskUserClient:
     description:
     collections:
@@ -1463,7 +1480,7 @@ kexts:
     collections:
     - BootKernelExtensions.kc
   com.apple.kec.Libm:
-    description:
+    description: Math library for kernel mode
     collections:
     - BootKernelExtensions.kc
   com.apple.kec.pthread:
@@ -1652,6 +1669,7 @@ kexts:
     - SystemKernelExtensions.kc
   com.apple.kext.MojoKDP:
     description:
+    internal: probably
   com.apple.kext.OSvKernDSPLib:
     description:
     collections:
@@ -1690,6 +1708,7 @@ kexts:
     - SystemKernelExtensions.kc
   com.apple.pae.driver.AppleQuaibridgePCIE:
     description:
+    internal: probably
   com.apple.plugin.IOAVBControlPlugin:
     description:
     collections:
