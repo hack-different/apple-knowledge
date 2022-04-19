@@ -38,6 +38,7 @@ end
 
 group :development, :test do
   gem 'activesupport', require: false
+  gem 'awesome_print'
   gem 'bundle-audit'
   gem 'CFPropertyList'
   gem 'faraday'

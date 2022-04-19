@@ -26,3 +26,7 @@ Metrics/BlockLength:
   IgnoredMethods:
     - namespace
     - task
+
+Metrics/AbcSize:
+  CountRepeatedAttributes: false
+  Max: 25
