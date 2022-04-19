@@ -32,7 +32,9 @@ but not enough data yet.
 ### com.apple.driver.AppleAstrisGpioProbe
 
 Astris is a debug system for iDevices, partially documented elsewhere.  Just assume used to
-do evil things to a iDevice restored on the computer.
+do evil things to a iDevice restored on the computer.  GPIO implies general purpose IO pins.
+This may provide a probed devices PMGR/`force_dfu` pins for iDevice restore avoidance or
+re-infection.
 
 ### com.apple.driver.AppleBSDKextStarterVPN
 
@@ -55,6 +57,11 @@ bridgeOS firmware, SysCfg, NVRAM, etc.  (oh and whatever AppleEAN is?)
 ### com.apple.driver.AppleRSM
 
 ### com.apple.driver.DrizzlePlatformSupport
+
+Some god awful mashup of the SMC, bluetooth and 8254X ethernet...
+
+Wonder if it can be tripped explicitly based on conditions even if intended to be used
+via VMware to give a legit use case.
 
 ### com.apple.driver.DrizzleSMC
 
@@ -89,12 +96,27 @@ to it.
 
 ### com.apple.driver.MEDetect
 
+This appears to be a tool to detect and correct "neuter" Intel management engines.  This process is
+acomplised one of two ways, by setting an undocumented "HAP" or high assurance profile bit that
+disables the bulk of the ME functionality, crippling the boot code causing the ME to hang, or both.
+This should only be applicable for T1 and prior as the MacEFI binary comes from the T2 later on.
+The Intel ME is not generally used in the macOS platform, so (warning conjecture) this seems
+to be primarily to ensure the device's ME / AMT / CSME is enabled for SigInt.
+
+It is detection only as only the Intel ME can update its code, therefore it cannot be repaired
+barring some non-standard method.  See also `eficheck`.
+
 Boot Arguments:
 
 * `no_medetect`
 * `medetect_panic`
 
 ### com.apple.driver.kis.AppleKIS
+
+Second hand knowledge says this is related to the Kanzi internal debug cable.  This would be needed
+for demoting a device during restore.  I'm strongly starting to wonder if USB-C cables plumb through
+pins that could be used for this purpose, or if it is used with a form of remote USB to tunnel over
+other transits.
 
 ### com.apple.driver.usb.AppleUSBKDP
 
