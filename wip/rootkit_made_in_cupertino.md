@@ -20,6 +20,22 @@ Two Possibilities:
   builds which have powerful debug capabilities that break the security model.
   * Seems this might be related to SMC `MOJO` key for switching to non-production builds.
 
+## The AuxKC generation process and `elides`
+
+When the AuxKC (auxiliary KC), or kernel extensions approved on Intel systems, is generated the system works by
+rebooting to a recovery environment (this prevents tampering with the KC during generation).  A system then
+enumerates all kernel extensions loaded and approved and builds the AuxKC as those that are approved and/or loaded
+(loading being a proxy for approved in this case) combining all the kext bundles into a single Mach-O file.
+The file `elides` eliminates the display or error for kexts that are to be included, yet do not have backing
+on disk, implying that these kernel extensions can be loaded from DMA or a kernel debug session, which is the only
+reason that they would not be present on disk  (yet still valid signed by `@apple`).  This further implies that this
+is a list of kernel extensions that Apple knows may be loaded by other means but should silently ignore failures on.
+
+The most interesting fact about the `elides` list is that it is a subset of the total number of extensions that
+are present internally, so is an explicit carve out, one that lists those useful for backdoor, privileged hardware or
+signals intelligence.  This seems to be an extension of MojoKDP, whereby the author is at a loss to explain this
+behavior other than Apple's explicit support for the signal's intelligence community.
+
 ## Leveraged Kernel Extensions
 
 ### com.apple.driver.AirPort.Brcm4360-MFG
@@ -54,7 +70,22 @@ NVMe controller.
 Dangerous on Apple products as NVMe uses namespaces to store / read things like bridgeOS root filesystem
 bridgeOS firmware, SysCfg, NVRAM, etc.  (oh and whatever AppleEAN is?)
 
-### com.apple.driver.AppleRSM
+### com.apple.driver.AppleIntelTGLGraphicsFramebuffer
+
+### com.apple.driver.usb.AppleUSBRecoveryHost
+
+Originally designed to support restoring a macOS install on the T2 from `UniversalMac` which for some reason never
+saw completion.  Probably too disruptive to existing SI investments.
+
+For the Intel design, internet recovery suffers from a yet unsolved downgrade/upgrade problem.  Internet recovery will
+accept any valid signed `BaseSystem.dmg` without rollback or timestamped signatures, making anyone in the IP path
+capable of pushing any build they like, including internal ones containing `MojoKDP.kext`.  This, with the `MOJO`
+SMC key set, allows for an attacker to enable an unauthenticated kernel debug port whereby full control of the device
+is possible using `lldb`.
+
+### com.apple.driver.AppleRSM / com.apple.driver.usb.AppleUSBVHCIRSM
+
+`USBVHCI` is the T2's virtual USB over PCIe controller.
 
 ### com.apple.driver.DrizzlePlatformSupport
 
