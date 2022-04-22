@@ -45,6 +45,12 @@ class DataFileCollection
     @collection_data.each(&)
   end
 
+  def map
+    @collection_data.keys.map do |key|
+      yield key, @collection_data[key]
+    end
+  end
+
   def ensure_key(key, description: true)
     key = key.to_s if key.is_a? Symbol
     value = @collection_data[key] ||= {}

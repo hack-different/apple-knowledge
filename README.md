@@ -99,7 +99,13 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 ## Devices
 
 * [Device List](docs/Devices)
-* [T2 Dev Team: `t8012` / Apple T2 / bridgeOS](https://t8012.dev)
+* [T2]
+  * [T2 Dev Team: `t8012` / Apple T2 / bridgeOS](https://t8012.dev)
+  * [Duo Labs: Apple T2 XPC](https://duo.com/labs/research/apple-t2-xpc)
+  * [`t2linux/apple-bce-drv`](https://github.com/t2linux/apple-bce-drv)
+* Wi-Fi / Bluetooth
+  * [`seemoo-lab/frankenstein`](https://github.com/seemoo-lab/frankenstein)
+  * [`seemoo-lab/internalblue`](https://github.com/seemoo-lab/internalblue)
 * [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Main_Page)
 * SMC (System Management Controller) for pre-T2
   * [acidanthera/VirtualSMC](https://github.com/acidanthera/VirtualSMC)
