@@ -36,10 +36,10 @@ namespace :data do
         puts "Writing to download files with batch size of #{batch_size}"
         urls.compact.each_slice(batch_size).each_with_index do |url_list, index|
           file_path = File.join(TMP_DIR, 'ipsw', 'urls', "batch_#{index}.txt")
-          puts "Writing group #{index} to #{File.realpath(file_path)}"
+          puts "Writing group #{index} to #{file_path}"
           File.open(file_path, 'w') do |file|
             url_list.each do |url|
-              file.write url
+              file.puts url
             end
           end
         end
