@@ -271,6 +271,19 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * <https://developer.apple.com/documentation/hypervisor>
   * <https://developer.apple.com/documentation/hypervisor/apple_silicon>
 
+## Baseband
+
+* `baseband.yaml` in Data Files
+* Qualcomm
+  * [`hack-different/apple-baseband`](https://github.com/hack-different/apple-baseband)
+  * Hexagon DSP
+    * [Hexagon SDK](https://developer.qualcomm.com/software/hexagon-dsp-sdk)
+    * [Hexagon QEMU](https://github.com/Comsecuris/qemu-hexagon)
+    * [Binary Ninja Hexagon](https://github.com/google/binja-hexagon)
+    * [Hexag00n](https://github.com/programa-stic/hexag00n)
+    * [IDA Hexagon](https://github.com/gsmk/hexagon)
+    * [idp_heaxagon](https://github.com/n-o-o-n/idp_hexagon)
+
 ### Coprocessors
 
 * [hollance/neural-engine](https://github.com/hollance/neural-engine)
