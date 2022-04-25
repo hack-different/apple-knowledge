@@ -39,16 +39,19 @@ iPhone5,4_9.2.1_13D15_Restore.ipsw/
 
 All of these files can be extracted using keys and xpwn.
 
-Firmware keys are posted on
-- https://theiphonewiki.com/wiki/Firmware_Keys 
-- https://ipsw.me/keys
-- https://ipswcentral.com//keys
+Firmware keys are posted on:
+
+- <https://theiphonewiki.com/wiki/Firmware_Keys>
+- <https://ipsw.me/keys>
+- <https://ipswcentral.com//keys>
 
 For the kernelcache, run:
 
 `xpwntool path/to/cache /path/to/output -k KEY -iv IV -decrypt`
 
-The root filesystem is in the largest DMG file of the .ipsw. To extract it, download dmg ([OS X](http://www.ifans.com/forums/attachments/dmg-zip.68330/), [Windows](https://intdev.googlecode.com/files/dmg.exe)). Make sure dmg or dmg.exe is in your path and execute one of the following:
+The root filesystem is in the largest DMG file of the .ipsw. To extract it, download dmg
+([OS X](http://www.ifans.com/forums/attachments/dmg-zip.68330/), [Windows](https://intdev.googlecode.com/files/dmg.exe)).\
+Make sure dmg or dmg.exe is in your path and execute one of the following:
 
 `./dmg input.dmg output.dmg -k KEY` (OS X)
 
