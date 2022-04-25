@@ -2,52 +2,335 @@
 metadata:
   description: various components of the UTRAN radio system
   credits:
-
 esim:
   root_keys:
-
 basebands:
   Mav20:
     description: Qualcomm X55 (SDX55M)
     versions:
     - 1.00.03-5
-    - "1.14.04"
-    - "1.14.05"
-    - "1.14.06"
-    - "1.31.02"
+    - 1.14.04
+    - 1.14.05
+    - 1.14.06
+    - 1.31.02
     - 1.31.03-4
     - 1.31.03-5
-    - "1.41.00"
-    - "1.42.02"
-    - "1.42.03"
-    - "1.57.02"
-    - "1.60.01-2"
-    - "1.62.02"
-    - "1.62.09"
-    - "1.62.11"
-    - "1.70.03"
-    - "1.71.00"
-    - "1.71.01"
-    - "1.70.03"
-    - "1.80.00"
-    - "1.80.01"
-    - "1.80.02"
-    - "2.03.01"
-    - "2.06.00"
-    - "2.07.01"
-    - "2.08.01"
-    - "2.09.05"
-    - "2.09.10"
-    - "2.10.00"
-    - "2.11.01"
-    - "2.11.02"
-    - "2.11.04"
-    - "2.21.01"
-    - "2.22.00"
-    - "2.23.02"
-    - "2.22.02"
-    - "2.23.02"
-    - "2.51.01"
-    - "2.52.00-1"
-    - "2.53.01"
-    - "2.52.02"
+    - 1.41.00
+    - 1.42.02
+    - 1.42.03
+    - 1.57.02
+    - 1.60.01-2
+    - 1.62.02
+    - 1.62.09
+    - 1.62.11
+    - 1.70.03
+    - 1.71.00
+    - 1.71.01
+    - 1.70.03
+    - 1.80.00
+    - 1.80.01
+    - 1.80.02
+    - 2.03.01
+    - 2.06.00
+    - 2.07.01
+    - 2.08.01
+    - 2.09.05
+    - 2.09.10
+    - 2.10.00
+    - 2.11.01
+    - 2.11.02
+    - 2.11.04
+    - 2.21.01
+    - 2.22.00
+    - 2.23.02
+    - 2.22.02
+    - 2.23.02
+    - 2.51.01
+    - 2.52.00-1
+    - 2.53.01
+    - 2.52.02
+products: {}
+product_basebands:
+  Watch3,1:
+    baseband_certificate_id: 3840149528
+    baseband_serial_length: 4
+  Watch3,2:
+    baseband_certificate_id: 3840149528
+    baseband_serial_length: 4
+  Watch4,3:
+    baseband_certificate_id: 744114402
+    baseband_serial_length: 12
+  Watch4,4:
+    baseband_certificate_id: 744114402
+    baseband_serial_length: 12
+  Watch5,11:
+    baseband_certificate_id: 744114402
+    baseband_serial_length: 12
+  Watch5,12:
+    baseband_certificate_id: 744114402
+    baseband_serial_length: 12
+  Watch5,3:
+    baseband_certificate_id: 744114402
+    baseband_serial_length: 12
+  Watch5,4:
+    baseband_certificate_id: 744114402
+    baseband_serial_length: 12
+  Watch6,3:
+    baseband_certificate_id: 744114402
+    baseband_serial_length: 12
+  Watch6,4:
+    baseband_certificate_id: 744114402
+    baseband_serial_length: 12
+  Watch6,8:
+    baseband_certificate_id: 744114402
+    baseband_serial_length: 12
+  Watch6,9:
+    baseband_certificate_id: 744114402
+    baseband_serial_length: 12
+  iPad11,2:
+    baseband_certificate_id: 165673526
+    baseband_serial_length: 12
+  iPad11,4:
+    baseband_certificate_id: 165673526
+    baseband_serial_length: 12
+  iPad11,7:
+    baseband_certificate_id: 165673526
+    baseband_serial_length: 12
+  iPad12,2:
+    baseband_certificate_id: 165673526
+    baseband_serial_length: 12
+  iPad13,10:
+    baseband_certificate_id: 3095201109
+    baseband_serial_length: 4
+  iPad13,11:
+    baseband_certificate_id: 3095201109
+    baseband_serial_length: 4
+  iPad13,17:
+    baseband_certificate_id: 495958265
+    baseband_serial_length: 4
+  iPad13,2:
+    baseband_certificate_id: 524245983
+    baseband_serial_length: 12
+  iPad13,6:
+    baseband_certificate_id: 3095201109
+    baseband_serial_length: 4
+  iPad13,7:
+    baseband_certificate_id: 3095201109
+    baseband_serial_length: 4
+  iPad14,2:
+    baseband_certificate_id: 495958265
+    baseband_serial_length: 4
+  iPad2,2:
+    baseband_certificate_id: 257
+    baseband_serial_length: 12
+  iPad2,3:
+    baseband_certificate_id: 257
+    baseband_serial_length: 12
+  iPad2,6:
+    baseband_certificate_id: 3255536192
+    baseband_serial_length: 4
+  iPad2,7:
+    baseband_certificate_id: 3255536192
+    baseband_serial_length: 4
+  iPad3,2:
+    baseband_certificate_id: 4
+    baseband_serial_length: 4
+  iPad3,3:
+    baseband_certificate_id: 4
+    baseband_serial_length: 4
+  iPad3,5:
+    baseband_certificate_id: 3255536192
+    baseband_serial_length: 4
+  iPad3,6:
+    baseband_certificate_id: 3255536192
+    baseband_serial_length: 4
+  iPad4,2:
+    baseband_certificate_id: 3554301762
+    baseband_serial_length: 4
+  iPad4,3:
+    baseband_certificate_id: 3554301762
+    baseband_serial_length: 4
+  iPad4,5:
+    baseband_certificate_id: 3554301762
+    baseband_serial_length: 4
+  iPad4,6:
+    baseband_certificate_id: 3554301762
+    baseband_serial_length: 4
+  iPad4,8:
+    baseband_certificate_id: 3554301762
+    baseband_serial_length: 4
+  iPad4,9:
+    baseband_certificate_id: 3554301762
+    baseband_serial_length: 4
+  iPad5,2:
+    baseband_certificate_id: 3840149528
+    baseband_serial_length: 4
+  iPad5,4:
+    baseband_certificate_id: 3840149528
+    baseband_serial_length: 4
+  iPad6,12:
+    baseband_certificate_id: 3840149528
+    baseband_serial_length: 4
+  iPad6,4:
+    baseband_certificate_id: 3840149528
+    baseband_serial_length: 4
+  iPad6,8:
+    baseband_certificate_id: 3840149528
+    baseband_serial_length: 4
+  iPad7,12:
+    baseband_certificate_id: 165673526
+    baseband_serial_length: 12
+  iPad7,2:
+    baseband_certificate_id: 2315222105
+    baseband_serial_length: 4
+  iPad7,4:
+    baseband_certificate_id: 2315222105
+    baseband_serial_length: 4
+  iPad7,6:
+    baseband_certificate_id: 3840149528
+    baseband_serial_length: 4
+  iPad8,10:
+    baseband_certificate_id: 524245983
+    baseband_serial_length: 12
+  iPad8,12:
+    baseband_certificate_id: 524245983
+    baseband_serial_length: 12
+  iPad8,3:
+    baseband_certificate_id: 165673526
+    baseband_serial_length: 12
+  iPad8,4:
+    baseband_certificate_id: 165673526
+    baseband_serial_length: 12
+  iPad8,7:
+    baseband_certificate_id: 165673526
+    baseband_serial_length: 12
+  iPad8,8:
+    baseband_certificate_id: 165673526
+    baseband_serial_length: 12
+  iPhone10,1:
+    baseband_certificate_id: 2315222105
+    baseband_serial_length: 4
+  iPhone10,2:
+    baseband_certificate_id: 2315222105
+    baseband_serial_length: 4
+  iPhone10,3:
+    baseband_certificate_id: 2315222105
+    baseband_serial_length: 4
+  iPhone10,4:
+    baseband_certificate_id: 524245983
+    baseband_serial_length: 12
+  iPhone10,5:
+    baseband_certificate_id: 524245983
+    baseband_serial_length: 12
+  iPhone10,6:
+    baseband_certificate_id: 524245983
+    baseband_serial_length: 12
+  iPhone11,2:
+    baseband_certificate_id: 165673526
+    baseband_serial_length: 12
+  iPhone11,4:
+    baseband_certificate_id: 165673526
+    baseband_serial_length: 12
+  iPhone11,6:
+    baseband_certificate_id: 165673526
+    baseband_serial_length: 12
+  iPhone11,8:
+    baseband_certificate_id: 165673526
+    baseband_serial_length: 12
+  iPhone12,1:
+    baseband_certificate_id: 524245983
+    baseband_serial_length: 12
+  iPhone12,3:
+    baseband_certificate_id: 524245983
+    baseband_serial_length: 12
+  iPhone12,5:
+    baseband_certificate_id: 524245983
+    baseband_serial_length: 12
+  iPhone12,8:
+    baseband_certificate_id: 524245983
+    baseband_serial_length: 12
+  iPhone13,1:
+    baseband_certificate_id: 3095201109
+    baseband_serial_length: 4
+  iPhone13,2:
+    baseband_certificate_id: 3095201109
+    baseband_serial_length: 4
+  iPhone13,3:
+    baseband_certificate_id: 3095201109
+    baseband_serial_length: 4
+  iPhone13,4:
+    baseband_certificate_id: 3095201109
+    baseband_serial_length: 4
+  iPhone14,2:
+    baseband_certificate_id: 495958265
+    baseband_serial_length: 4
+  iPhone14,3:
+    baseband_certificate_id: 495958265
+    baseband_serial_length: 4
+  iPhone14,4:
+    baseband_certificate_id: 495958265
+    baseband_serial_length: 4
+  iPhone14,5:
+    baseband_certificate_id: 495958265
+    baseband_serial_length: 4
+  iPhone14,6:
+    baseband_certificate_id: 2241363181
+    baseband_serial_length: 4
+  iPhone3,1:
+    baseband_certificate_id: 257
+    baseband_serial_length: 12
+  iPhone3,2:
+    baseband_certificate_id: 257
+    baseband_serial_length: 12
+  iPhone3,3:
+    baseband_certificate_id: 2
+    baseband_serial_length: 4
+  iPhone4,1:
+    baseband_certificate_id: 2
+    baseband_serial_length: 4
+  iPhone5,1:
+    baseband_certificate_id: 3255536192
+    baseband_serial_length: 4
+  iPhone5,2:
+    baseband_certificate_id: 3255536192
+    baseband_serial_length: 4
+  iPhone5,3:
+    baseband_certificate_id: 3554301762
+    baseband_serial_length: 4
+  iPhone5,4:
+    baseband_certificate_id: 3554301762
+    baseband_serial_length: 4
+  iPhone6,1:
+    baseband_certificate_id: 3554301762
+    baseband_serial_length: 4
+  iPhone6,2:
+    baseband_certificate_id: 3554301762
+    baseband_serial_length: 4
+  iPhone7,1:
+    baseband_certificate_id: 3840149528
+    baseband_serial_length: 4
+  iPhone7,2:
+    baseband_certificate_id: 3840149528
+    baseband_serial_length: 4
+  iPhone8,1:
+    baseband_certificate_id: 3840149528
+    baseband_serial_length: 4
+  iPhone8,2:
+    baseband_certificate_id: 3840149528
+    baseband_serial_length: 4
+  iPhone8,4:
+    baseband_certificate_id: 3840149528
+    baseband_serial_length: 4
+  iPhone9,1:
+    baseband_certificate_id: 2315222105
+    baseband_serial_length: 4
+  iPhone9,2:
+    baseband_certificate_id: 2315222105
+    baseband_serial_length: 4
+  iPhone9,3:
+    baseband_certificate_id: 1421084145
+    baseband_serial_length: 12
+  iPhone9,4:
+    baseband_certificate_id: 1421084145
+    baseband_serial_length: 12
+

@@ -287,7 +287,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 ### Coprocessors
 
 * [hollance/neural-engine](https://github.com/hollance/neural-engine)
-* [19h/ftab-dump](https://github.com/19h/ftab-dump)
+* RTKit - "Realtime" Kit
+  * [19h/ftab-dump](https://github.com/19h/ftab-dump)
 
 ### USB / Wired Protocols / Low Level Hardware
 
