@@ -7,9 +7,26 @@ is a starting point for those who wish to continue this area of work.
 
 Guesswork structs from work on MagSafe Charger and Beats Studio Buds.
 
-Versions appear to follow the format `major.minor.release.build`. An example of a build version is `100.7916.1052884864.1` or `247.0.0.0`.
+Versions appear to follow the format `major.minor.release.build`. An example of a build version is
+`100.7916.1052884864.1` or `247.0.0.0`.
 
 ```c
+typedef enum {
+    kPayloadFOTA = 'FOTA', // Firmware Over the Air
+    kPayloadP1FW = 'P1FW', // PROTO1?
+    kPayloadP2FW = 'P2FW', // PROTO2?
+    kPayloadEVTF = 'EVTF', // Engineering Validation Test
+    kPayloadPVTF = 'PVTF', // Production Validation Test
+    kPayloadMPFW = 'MPFW', // Mainline Production Firmware
+    kPayloadSTFW = 'STFW', // Storage Firmware?
+    kPayloadDTTX = 'DTTX', // Data? Transmit
+    kPayloadDTRX = 'DTRX', // Data? Receive
+    kPayloadDMTP = 'DMTP', // Test Point?
+    kPayloadPDFW = 'PDFW', // USB-C Power Delivery
+    kPayloadULPD = 'ULPD', // Upload? Possibly the updater
+    kPayloadCHDR = 'CHDR', // Charge Direction?
+} t_payoad_type;
+
 typedef struct {
     uint32_t version; // BE, == 2
     uint32_t size; // Version 2 header size == 0x2C
@@ -26,7 +43,7 @@ typedef struct {
 
 typedef struct {
     uint32_t row_size = 0x28;
-    uint32_t magic = 'FOTA';
+    t_payload_type payload_type;  // For example 'FOTA';
     uint32_t major_version; // All versions within rows appear to match the binary header.
     uint32_t minor_version;
     uint32_t release_version;
