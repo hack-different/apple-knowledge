@@ -5,34 +5,36 @@ is a starting point for those who wish to continue this area of work.
 
 ## UARP - Universal Accessory Restore Protocol
 
-Guesswork Structs - Beats Update
+Guesswork structs from work on MagSafe Charger and Beats Studio Buds.
+
+Versions appear to follow the format `major.minor.release.build`. An example of a build version is `100.7916.1052884864.1` or `247.0.0.0`.
 
 ```c
 typedef struct {
     uint32_t version; // BE, == 2
     uint32_t size; // Version 2 header size == 0x2C
-    uint32_t file_size; // Length of the file
-    uint32_t alignment; // Unsure, 64
-    uint32_t checksum; // Unsure, CRC32? Adler32?
-    uint32_t flash_size; // Little endian (likely device endian)
-    uint32_t images; // 1, number of "rows" that follow
-    uint32_t total_header_size; // 54 (equal to size + images * row_size)
-    uint32_t reserved; // 0
-    uint32_t header_size; // Also 0x2C
-    uint32_t row_size = 0x28;
+    uint32_t binary_size; // Length of the binary. Metadata plist follows immediately after.
+    uint32_t major_version; // 100 in '100.7916.1052884864.1'.
+    uint32_t minor_version; // 7916 in '100.7916.1052884864.1'.
+    uint32_t release_version; // 1052884864 in '100.7916.1052884864.1'.
+    uint32_t build_version; // 1 in '100.7916.1052884864.1'.
+    uint32_t metadata_offset; // Typically present after the full header.
+    uint32_t metadata_length; // Note that metadata can be 0 in length.
+    uint32_t row_offset = 0x2c; // Immediately follows UARP header.
+    uint32_t row_length; // Divide by row size (0x28) to determine. 0xC8 defines five.
 } uarp_header;
 
 typedef struct {
-    uint32_t size = 0x28;
+    uint32_t row_size = 0x28;
     uint32_t magic = 'FOTA';
-    uint32_t alignment = 64;
-    uint32_t checksum;
-    uint32_t flash_size; // BE CAB8B9
-    uint32_t unk1; // index or flags?
-    uint32_t next_entry = 0x54;
-    uint32_t reserved;
-    uint32_t file_offset;
-    uint32_t file_size; // Less then the size of the region 1A14B3
+    uint32_t major_version; // All versions within rows appear to match the binary header.
+    uint32_t minor_version;
+    uint32_t release_version;
+    uint32_t build_version;
+    uint32_t metadata_offset; // Both offset/length typically match the UARP header.
+    uint32_t metadata_length;
+    uint32_t payload_offset; // Offset within file.
+    uint32_t payload_length; // Should never exceed binary size.
 } uarp_row;
 ```
 
