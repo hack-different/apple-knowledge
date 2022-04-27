@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../lib/common'
+require_relative '../lib/baseband'
 
 QUALCOMM_BBCFG_HEADER = 'a4L<L<L<QQQa8'
 
@@ -46,11 +47,15 @@ namespace :data do
           content = blob.value[1].value
 
           if content[0..3] == 'MAVZ'
+            print("Found MAVZ compressed file with hash #{hash}\n")
             output_file = File.join(extracted_dir, "#{hash}.bin")
             File.write(output_file, Zlib.inflate(content[8..]))
           else
+            print("Found ASN1 coded patch file with hash #{hash}\n")
             output_file = File.join(extracted_dir, "#{hash}.stream")
             File.write(output_file, blob.value[1].value)
+            print("Enumerating files in patch file:\n\n")
+            print_files_in_patch(output_file)
           end
         end
       end

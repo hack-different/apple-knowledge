@@ -21,6 +21,8 @@ require 'base64'
 require 'digest'
 require 'awesome_print'
 require 'zlib'
+require 'byebug'
+require 'pry'
 
 DATA_DIR = File.realdirpath File.join(BASE_PATH, '_data')
 TMP_DIR = File.join(BASE_PATH, 'tmp')

@@ -43,6 +43,7 @@ group :development, :test do
   gem 'activesupport', require: false
   gem 'awesome_print'
   gem 'bundle-audit'
+  gem 'byebug'
   gem 'CFPropertyList'
   gem 'faraday'
   gem 'kramdown'

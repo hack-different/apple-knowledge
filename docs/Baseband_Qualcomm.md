@@ -117,3 +117,67 @@ typedef struct {
   uint16_t unknown2; // 0000
 } mavz_file_heaeder_t
 ```
+
+## xbl_cfg
+
+Signed ELF (MBN) file with a CFGL header and payloads for each entry.
+
+Example files from manifest:
+
+* /6013_0100_0_dcb.bin
+* /6013_0100_1_dcb.bin
+* /6013_0200_1_dcb.bin
+
+Each of which appear to be machine code as evidenced by the constant string areas:
+
+File contains a number of unicode (wide char) 8 byte full caps magic values:
+
+* `0000`
+* `DEFG`
+* `ABVW`
+* `HIJK`
+
+### CFGL
+
+```c
+typedef struct {
+  uint32_t magic = 'CFGL';
+  uint32_t
+  uint32_t size;
+} cfgl_header_t;
+
+typedef struct {
+  uint32_t unknown1; // 0
+  uint32_t file_offset;
+  uint32_t unknown2; // 04340000
+  uint32_t file_name_length; // In examples 0x14
+  char[file_name_length] = "/6013_0100_0_dcb.bin";
+  uint32_t unknown3;
+} cfgl_row_t;
+```
+
+## QHEE
+
+### Devices in `hyp.mbn`
+
+Suspicion - `$` are serviced by the TrustZone
+
+* `IORT`
+* `QCOM`
+* `2KDEMOCQ`
+* `MOCQ`
+* `$AOSS`
+* `$BLSP`
+* `$CRYPTO`
+* `$DAP`
+* `$DCC`
+* `$ECATS_TEST`
+* `$IPA`
+* `$LPASS`
+* `$PCIE0`
+* `$QPIC`
+* `$SDC2`
+* `$SPDM`
+* `$SPMI`
+* `$TIC`
+* `$USB0`
