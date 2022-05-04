@@ -14,6 +14,242 @@ Zip package containing:
 * `restoresbl1.mbn` - Secondary program loader (bootloader) for baseband recovery
 * `acdb.mbn` - Accessory Calibration Database (seems to be initial)
 
+## MBN Signature Format
+
+Contains a C struct styled header, followed by hashes, a signature and a certificate chain.
+
+MBNs are ill-designed because the ELF header contains the offset to the signature region, which signs the ELF header
+creating a circular dependency.
+
+### Header Region
+
+```c
+// Likely depends on hash type - samples found stated PK algorithm scep384r1 having a signature size of 384 - deterministic noncing?
+// does this lead to a potential leak of private key with double nonce values?
+typedef struct {
+  char* hash[HASH_TYPE_SIZE]; // Unfortuantly they used all zeros to encode an empty region instead of hash of zeros...
+                              // This seems to always be true of the signature area (b01) but also of other regions?
+} mbn_hash_row_t;
+
+
+typedef struct {
+  uint32_t signature type? // Number of hash rows - samples with 0 have hashes but no signature... and 0xFFFFFFFF for
+                           // pk_hash.  It also has hash rows, perhaps its a problem via multiple verification paths?
+  uint32_t // 6 - SHA2-384?
+  uint32_t = 0
+  uint32_t = 0
+  uint32_t // signed size?
+  uint32_t // file size? (larger then prior value in some cases)
+  uint32_t pk_hash_one? = 0xFFFFFFFF / 0x00
+  uint32_t signature_size; // Size of ASN.1 signature following hash list
+  uint32_t pk_hash_two? = 0xFFFFFFFF / 0x00 // Usually matches pk_hash_one
+  uint32_t some_size;  // Some header item size or possibly align value?
+  uint32_t = 0;
+  uint32_t extra_size; // Seems to be 0x78 bytes long... 64bit extension?
+  char* extra[extra_size];
+  mbn_hash_row_t hashes[];
+} mbn_header_t;
+```
+
+#### Examples of headers
+
+```text
+restoresbl1.b01
+00000000 06000000 00000000 00000000 A8120000 40020000 FFFFFFFF 68000000 FFFFFFFF 00100000 00000000 78000000
+00000000 00000000 00000000 E1401400 00000000 00000000 00000000 04000000 00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 B7EB6FD8 00000000 00000000 00000000
+00000000 00000000 00000000 00000000 00000000 00000000
+```
+
+```text
+qdsp06sw.b01
+0C000000 06000000 00000000 00000000 40050000 40050000 A803708F 00000000 A803708F 00000000 00000000 00000000
+```
+
+```text
+multi_image.b01
+00000000 06000000 00000000 00000000 F8100000 90000000 FFFFFFFF 68000000 FFFFFFFF 00100000 00000000 78000000
+00000000 00000000 22000000 E1401400 00000000 00000000 00000000 04000000 00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 B7EB6FD8 00000000 00000000 00000000
+00000000 00000000 00000000 00000000 00000000 00000000
+```
+
+```text
+hyp.b01
+00000000 06000000 00000000 00000000 C0000000 C0000000 FFFFFFFF 00000000 FFFFFFFF 00000000 00000000 00000000
+```
+
+```text
+devcfg.b01
+00000000 06000000 00000000 00000000 C0000000 C0000000 FFFFFFFF 00000000 FFFFFFFF 00000000 00000000 00000000
+```
+
+```text
+apps.b01
+04000000 06000000 00000000 00000000 70020000 70020000 C821F980 00000000 C821F980 00000000 00000000 00000000
+```
+
+```text
+aop.b01
+00000000 06000000 00000000 00000000 F0000000 F0000000 C880E08F 00000000 C880E08F 00000000 00000000 00000000
+```
+
+### ASN.1 Encoded Signature
+
+```text
+9062 // ASN1 string header
+
+// SHA2-384 of the data to sign
+BCD8BE0C F9D0C2FD 4B19F174 CCEB6387 C3B05F17 1BAFA3D1 3DD12AC1 067E2B17 4424C5B4 9DC318C5 5E45C5F9 9E703066
+
+02 // Type?
+31 // Length
+00 // Compression of point? (possible non-standard 0/1 instead of 03/04)
+C0BA9832 B6F45BA2 AB8D411E E1C719F6 42342B86 2D4D3623 C7252D13 507339D7 C7EDAF53 5C84C3FA 1D14ABE4 BA1048A4
+
+02 // Type?
+31 // Length
+00 // Compression of point?
+8A8598AD B921E977 1276DACC 6FCEAA7A DEA4E971 EABAFEEB 61FF5F55 11AAB378 48C91884 8C6CE7E4 BABC4907 05F1E36F
+```
+
+### ASN.1 Encoded Certificate Chain
+
+```text
+SEQUENCE (3 elem)
+  SEQUENCE (8 elem)
+    [0] (1 elem)
+      INTEGER 2
+    INTEGER (63 bit) 5102134721289033247
+    SEQUENCE (1 elem)
+      OBJECT IDENTIFIER 1.2.840.10045.4.3.3 ecdsaWithSHA384 (ANSI X9.62 ECDSA algorithm with SHA384)
+    SEQUENCE (3 elem)
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.3 commonName (X.520 DN component)
+          UTF8String Test Eureka SOC Root CA 35
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.10 organizationName (X.520 DN component)
+          UTF8String Apple Inc.
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.8 stateOrProvinceName (X.520 DN component)
+          UTF8String California
+    SEQUENCE (2 elem)
+      UTCTime 2018-05-15 22:12:28 UTC
+      UTCTime 2018-05-16 22:12:28 UTC
+    SEQUENCE (2 elem)
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.3 commonName (X.520 DN component)
+          UTF8String Test Eureka SOC Root CA 35 Leaf
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.10 organizationName (X.520 DN component)
+          UTF8String Apple Inc.
+    SEQUENCE (2 elem)
+      SEQUENCE (2 elem)
+        OBJECT IDENTIFIER 1.2.840.10045.2.1 ecPublicKey (ANSI X9.62 public key type)
+        OBJECT IDENTIFIER 1.3.132.0.34 secp384r1 (SECG (Certicom) named elliptic curve)
+      BIT STRING (776 bit) 0000010011101011000011110010001100011110100010100110000000100001100000…
+    [3] (1 elem)
+      SEQUENCE (4 elem)
+        SEQUENCE (3 elem)
+          OBJECT IDENTIFIER 2.5.29.19 basicConstraints (X.509 extension)
+          BOOLEAN true
+          OCTET STRING (2 byte) 3000
+            SEQUENCE (0 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.29.35 authorityKeyIdentifier (X.509 extension)
+          OCTET STRING (24 byte) 301680140C64EDABDEA076FCCBB4F49FBDB75D46F597AF32
+            SEQUENCE (1 elem)
+              [0] (20 byte) 0C64EDABDEA076FCCBB4F49FBDB75D46F597AF32
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.29.14 subjectKeyIdentifier (X.509 extension)
+          OCTET STRING (22 byte) 0414DD5C0F80952FB597AB60DD9282EA70B80EEA0E7A
+            OCTET STRING (20 byte) DD5C0F80952FB597AB60DD9282EA70B80EEA0E7A
+        SEQUENCE (3 elem)
+          OBJECT IDENTIFIER 2.5.29.15 keyUsage (X.509 extension)
+          BOOLEAN true
+          OCTET STRING (4 byte) 03020780
+            BIT STRING (1 bit) 1
+  SEQUENCE (1 elem)
+    OBJECT IDENTIFIER 1.2.840.10045.4.3.3 ecdsaWithSHA384 (ANSI X9.62 ECDSA algorithm with SHA384)
+  BIT STRING (816 bit) 0011000001100100000000100011000000110100111101101000100011111010111100…
+    SEQUENCE (2 elem)
+      INTEGER (382 bit) 8151756030331056487823161874997707277988121415666908648513990112722474…
+      INTEGER (383 bit) 1281400542485460847206440091939968328867920960916542938903846231152859…
+```
+
+```text
+SEQUENCE (3 elem)
+  SEQUENCE (8 elem)
+    [0] (1 elem)
+      INTEGER 2
+    INTEGER (61 bit) 1625249655888498160
+    SEQUENCE (1 elem)
+      OBJECT IDENTIFIER 1.2.840.10045.4.3.3 ecdsaWithSHA384 (ANSI X9.62 ECDSA algorithm with SHA384)
+    SEQUENCE (3 elem)
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.3 commonName (X.520 DN component)
+          UTF8String Test Eureka SOC Root CA 35
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.10 organizationName (X.520 DN component)
+          UTF8String Apple Inc.
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.8 stateOrProvinceName (X.520 DN component)
+          UTF8String California
+    SEQUENCE (2 elem)
+      UTCTime 2018-05-15 21:55:08 UTC
+      UTCTime 2038-05-10 21:55:08 UTC
+    SEQUENCE (3 elem)
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.3 commonName (X.520 DN component)
+          UTF8String Test Eureka SOC Root CA 35
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.10 organizationName (X.520 DN component)
+          UTF8String Apple Inc.
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.8 stateOrProvinceName (X.520 DN component)
+          UTF8String California
+    SEQUENCE (2 elem)
+      SEQUENCE (2 elem)
+        OBJECT IDENTIFIER 1.2.840.10045.2.1 ecPublicKey (ANSI X9.62 public key type)
+        OBJECT IDENTIFIER 1.3.132.0.34 secp384r1 (SECG (Certicom) named elliptic curve)
+      BIT STRING (776 bit) 0000010001111010111101000100010110101111010000000101100101000010110101…
+    [3] (1 elem)
+      SEQUENCE (3 elem)
+        SEQUENCE (3 elem)
+          OBJECT IDENTIFIER 2.5.29.19 basicConstraints (X.509 extension)
+          BOOLEAN true
+          OCTET STRING (8 byte) 30060101FF020100
+            SEQUENCE (2 elem)
+              BOOLEAN true
+              INTEGER 0
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.29.14 subjectKeyIdentifier (X.509 extension)
+          OCTET STRING (22 byte) 04140C64EDABDEA076FCCBB4F49FBDB75D46F597AF32
+            OCTET STRING (20 byte) 0C64EDABDEA076FCCBB4F49FBDB75D46F597AF32
+        SEQUENCE (3 elem)
+          OBJECT IDENTIFIER 2.5.29.15 keyUsage (X.509 extension)
+          BOOLEAN true
+          OCTET STRING (4 byte) 03020204
+            BIT STRING (6 bit) 000001
+  SEQUENCE (1 elem)
+    OBJECT IDENTIFIER 1.2.840.10045.4.3.3 ecdsaWithSHA384 (ANSI X9.62 ECDSA algorithm with SHA384)
+  BIT STRING (832 bit) 0011000001100110000000100011000100000000111101001001010000001111111011…
+    SEQUENCE (2 elem)
+      INTEGER (384 bit) 3764405614543861553181393903194413274471521338802557327047703229534942…
+      INTEGER (384 bit) 2942036852031372040337745727030783615133201264286154596397242159682249…
+```
+
 ## Sahara Protocol
 
 Based on a public gitlab copy of msm8974 headers
