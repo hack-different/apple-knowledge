@@ -31,24 +31,30 @@ typedef struct {
                               // This seems to always be true of the signature area (b01) but also of other regions?
 } mbn_hash_row_t;
 
+typedef enum {
+  kSHA2_384 = 0x06;
+} mbn_hash_type_t;
 
 typedef struct {
-  uint32_t signature type? // Number of hash rows - samples with 0 have hashes but no signature... and 0xFFFFFFFF for
-                           // pk_hash.  It also has hash rows, perhaps its a problem via multiple verification paths?
-  uint32_t // 6 - SHA2-384?
+  uint32_t hash_rows;         // Number of hash rows - samples with 0 have hashes but no signature... and 0xFFFFFFFF for
+                              // pk_hash.  It also has hash rows, perhaps its a problem via multiple verification paths?
+  mbn_hash_type_t hash_type;  // 6 - SHA2-384?
   uint32_t = 0
   uint32_t = 0
-  uint32_t // signed size?
-  uint32_t // file size? (larger then prior value in some cases)
-  uint32_t pk_hash_one? = 0xFFFFFFFF / 0x00
+  uint32_t hash_and_signature_size; // Little endian - data following header and extra
+  uint32_t hash_size; // size in bytes of hash type row size * rows - signature follows
+  uint32_t pk_hash_one? = 0xFFFFFFFF / 0xA803708F
   uint32_t signature_size; // Size of ASN.1 signature following hash list
-  uint32_t pk_hash_two? = 0xFFFFFFFF / 0x00 // Usually matches pk_hash_one
+  uint32_t pk_hash_two? = 0xFFFFFFFF / 0xA803708F // Usually matches pk_hash_one
   uint32_t some_size;  // Some header item size or possibly align value?
   uint32_t = 0;
   uint32_t extra_size; // Seems to be 0x78 bytes long... 64bit extension?
   char* extra[extra_size];
-  mbn_hash_row_t hashes[];
+  mbn_hash_row_t hashes[hash_rows];
 } mbn_header_t;
+
+typedef struct {
+
 ```
 
 #### Examples of headers
@@ -95,6 +101,8 @@ aop.b01
 ```
 
 ### ASN.1 Encoded Signature
+
+#### ECDSA scep384r1
 
 ```text
 9062 // ASN1 string header
