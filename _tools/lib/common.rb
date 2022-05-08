@@ -14,10 +14,15 @@ require 'set'
 require 'macho'
 require 'faraday'
 require 'plist'
+require 'uri'
 require 'zip'
 require 'openssl'
 require 'base64'
 require 'digest'
+require 'awesome_print'
+require 'zlib'
+require 'byebug'
+require 'pry'
 
 DATA_DIR = File.realdirpath File.join(BASE_PATH, '_data')
 TMP_DIR = File.join(BASE_PATH, 'tmp')
@@ -41,6 +46,12 @@ class DataFileCollection
 
   def each(&)
     @collection_data.each(&)
+  end
+
+  def map
+    @collection_data.keys.map do |key|
+      yield key, @collection_data[key]
+    end
   end
 
   def ensure_key(key, description: true)

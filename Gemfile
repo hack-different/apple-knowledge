@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
+
+ruby '3.1.2'
+
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
 # file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
@@ -38,7 +41,9 @@ end
 
 group :development, :test do
   gem 'activesupport', require: false
+  gem 'awesome_print'
   gem 'bundle-audit'
+  gem 'byebug'
   gem 'CFPropertyList'
   gem 'faraday'
   gem 'kramdown'
@@ -54,7 +59,6 @@ group :development, :test do
   gem 'ruby-macho'
   gem 'sorbet'
   gem 'webrick'
-  gem 'wikicloth'
 end
 
 gem 'toml', '~> 0.3.0', github: 'rickmark/toml'

@@ -77,6 +77,11 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [`AllsafeCyberSecurity/awesome-ghidra`](https://github.com/AllsafeCyberSecurity/awesome-ghidra)
   * [`0x36/ghidra_kernelcache`](https://github.com/0x36/ghidra_kernelcache)
 * [Hopper Disassembler](https://www.hopperapp.com)
+* [Capstone Engine](https://github.com/aquynh/capstone)
+* [Unicorn Engine](https://github.com/unicorn-engine/unicorn)
+* [QEMU](https://qemu.readthedocs.io/en/latest/)
+  * [QEMU Apple Branch](https://github.com/TrungNguyen1909/qemu-t8030)
+  * [`geohot/qira`](https://github.com/geohot/qira)
 * [`blacktop/ipsw`](https://github.com/blacktop/ipsw)
 * [jtool2](https://www.newosxbook.com/tools/jtool.html)
 * [frida](https://frida.re)
@@ -99,7 +104,13 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 ## Devices
 
 * [Device List](docs/Devices)
-* [T2 Dev Team: `t8012` / Apple T2 / bridgeOS](https://t8012.dev)
+* [T2]
+  * [T2 Dev Team: `t8012` / Apple T2 / bridgeOS](https://t8012.dev)
+  * [Duo Labs: Apple T2 XPC](https://duo.com/labs/research/apple-t2-xpc)
+  * [`t2linux/apple-bce-drv`](https://github.com/t2linux/apple-bce-drv)
+* Wi-Fi / Bluetooth
+  * [`seemoo-lab/frankenstein`](https://github.com/seemoo-lab/frankenstein)
+  * [`seemoo-lab/internalblue`](https://github.com/seemoo-lab/internalblue)
 * [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Main_Page)
 * SMC (System Management Controller) for pre-T2
   * [acidanthera/VirtualSMC](https://github.com/acidanthera/VirtualSMC)
@@ -221,6 +232,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 ### Sandbox or 'Seatbelt'
 
 * [Levin's - The Apple Sandbox](http://newosxbook.com/files/HITSB.pdf)
+* [Apple Sandbox Guide v1.0](https://reverse.put.as/wp-content/uploads/2011/09/Apple-Sandbox-Guide-v1.0.pdf)
+* [OWASP - Reversing the Apple Sandbox](https://owasp.org/www-pdf-archive/OWASP_-_EEE_2015_-_Reversing_the_Apple_Sandbox.pdf)
 * [iBSparkles Breaking Entitlements](https://sparkes.zone/blog/ios/2018/04/06/diving-into-the-kernel-entitlements.html)
 * [stek29 Shenanigans Shenanigans](https://stek29.rocks/2018/12/11/shenanigans.html)
 * [argp vs com.apple.security.sandbox](https://census-labs.com/media/sandbox-argp-csw2019-public.pdf)
@@ -263,10 +276,24 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * <https://developer.apple.com/documentation/hypervisor>
   * <https://developer.apple.com/documentation/hypervisor/apple_silicon>
 
+## Baseband
+
+* `baseband.yaml` in Data Files
+* Qualcomm
+  * [`hack-different/apple-baseband`](https://github.com/hack-different/apple-baseband)
+  * Hexagon DSP
+    * [Hexagon SDK](https://developer.qualcomm.com/software/hexagon-dsp-sdk)
+    * [Hexagon QEMU](https://github.com/Comsecuris/qemu-hexagon)
+    * [Binary Ninja Hexagon](https://github.com/google/binja-hexagon)
+    * [Hexag00n](https://github.com/programa-stic/hexag00n)
+    * [IDA Hexagon](https://github.com/gsmk/hexagon)
+    * [idp_heaxagon](https://github.com/n-o-o-n/idp_hexagon)
+
 ### Coprocessors
 
 * [hollance/neural-engine](https://github.com/hollance/neural-engine)
-* [19h/ftab-dump](https://github.com/19h/ftab-dump)
+* RTKit - "Realtime" Kit
+  * [19h/ftab-dump](https://github.com/19h/ftab-dump)
 
 ### USB / Wired Protocols / Low Level Hardware
 

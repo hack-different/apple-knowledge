@@ -5,5 +5,11 @@ description = "Static data from https://docs.hackdiffe.rent"
 readme = "README.md"
 
 authors = ["Rick Mark <rickmark@outlook.com>"]
-
 include = ['share/**/*']
+build = "build.py"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.1"

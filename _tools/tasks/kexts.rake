@@ -3,6 +3,7 @@
 # typed: ignore
 
 require_relative '../lib/common'
+require_relative '../lib/kext'
 
 KERNEL_COLLECTION_DIR = '/System/Library/KernelCollections'
 
@@ -39,5 +40,41 @@ namespace :data do
     result.sort_by! { |entry| entry['id'] }
 
     File.write(KEXT_DATA_FILE, result.to_yaml)
+  end
+
+  namespace :kexts do
+    desc 'handle dumpstate'
+    task :dumpstate do
+      state = KextStatDumpState.new $stdin.read
+
+      data_file = DataFile.new 'kext'
+      kexts = data_file.collection :kexts
+      state.entries.each do |entry|
+        kext = kexts.ensure_key entry.id
+        case entry
+        when KextStatDumpState::KextBundle
+          kext['path'] = entry.path
+          kext['signer'] = entry.signer
+          unless entry.uuid.blank?
+            kext['uuids'] ||= []
+            kext['uuids'] << entry.uuid unless kext['uuids'].include?(entry.uuid)
+          end
+          kext['type'] = entry.type
+          kext['codeless'] = true if entry.codeless
+        when KextStatDumpState::KextEntry
+          kext['codeless'] if entry.codeless
+          kext['signer'] = entry.signer if entry.signer
+          unless entry.uuid.blank?
+            kext['uuids'] ||= []
+            kext['uuids'] << entry.uuid unless kext['uuids'].include?(entry.uuid)
+          end
+          kext['collections'] = []
+          kext['collections'] << entry.collection unless kext['collections'].include?(entry.collection)
+        end
+      end
+      kexts.sort
+
+      data_file.save
+    end
   end
 end

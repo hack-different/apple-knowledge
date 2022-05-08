@@ -3,7 +3,6 @@
 
 require_relative 'common'
 require 'mediawiki_api'
-require 'wikicloth'
 
 # Module for interacting with theiphonewiki.com
 module TIPW

@@ -31,7 +31,7 @@ task :credits do
 
   links.delete 'papers-we-love/papers-we-love'
 
-  github = Octokit::Client.new(access_token: ENV['HOMEBREW_GITHUB_API_TOKEN'])
+  github = Octokit::Client.new(access_token: ENV.fetch('HOMEBREW_GITHUB_API_TOKEN', nil))
   credits = {}
 
   links.each do |repo|
