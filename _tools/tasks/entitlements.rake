@@ -12,8 +12,11 @@ namespace :data do
         print("Reading Data File: #{plist}\n")
         elist = CFPropertyList::List.new file: plist
 
-        elist.value.value.each do |key, _value|
-          def_elist.ensure_key key
+        elist.value.value.each do |key, value|
+          entry = def_elist.ensure_key key
+          entry['types'] ||= []
+          entry['types'] << 'boolean' if !entry['types'].include?('boolean') && [true, false].include?(value.value)
+          entry['types'] << 'array' if !entry['types'].include?('array') && value.value.is_a?(Array)
         end
       rescue StandardError
       end
