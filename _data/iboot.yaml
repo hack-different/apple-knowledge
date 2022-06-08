@@ -20,6 +20,13 @@ commands:
   - reboot
   - setenvnp
   - clearenvp
+  - alamo
+  - rtos
+  - diags
+  - fsboot
+  - upgrade
+  - recover
+  - recover-once
 obfuscated_hashes:
   0x05B0E165A161BD9: arch/arm64/cpu.c
   0x0A1D0368C9207C1: drivers/usb/usb_controller.c
@@ -110,3 +117,28 @@ obfuscated_hashes:
   0xF44C5811D66EAF6: lib/huffman/huffman.c
   0xFA351F01526260A: lib/mib/mib.c
   0xFCE311CF62F0C0E: target/iphone11/init.c
+environment_vars:
+  - auto-boot
+  - boot-args
+  - debug-uarts
+  - filesize
+  - pw-path
+  - auto-boot
+  - backlight-level
+  - boot-command
+  - com.apple.System.boot-nonce
+  - device-material
+  - display-rotation
+  - display-vsh-comp
+  - idle-off
+  - is-tethered
+  - darkboot
+  - ota-breadcrumbs
+  - boot-breadcrumbs
+  - recovery-breadcrumbs
+  - com.apple.System.tz0-size
+  - com.apple.System.rtc-offset
+  - pwr-path
+  - upgrade-retry
+  - preserve-debuggability
+>>>>>>> 80039e0c (Added iboot commands and vars)
