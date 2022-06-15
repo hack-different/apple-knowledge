@@ -141,16 +141,20 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ### Bootloader Related
 
-* [`EFI`](docs/EFI)
+* EFI
+  * [`EFI`](docs/EFI)
 * [`NVRAM`](docs/NVRAM)
   * [NVRAM unlock](https://stek29.rocks/2018/06/26/nvram.html)
 * [`SEP_memmap`](docs/SEP_memmap)
-* [`apple/darwin-xnu`](https://github.com/apple/darwin-xnu)
-* [`Factory_Firmware_Payloads`](docs/Factory_Firmware_Payloads)
-* [`OpenJailbreak/iBootRE``](https://github.com/OpenJailbreak/iBootRE)
 * [All About Kernels](docs/Kernels)
-* [*OS iBoot](https://newosxbook.com/bonus/iBoot.pdf)
-* [SecureROM Binaries](https://github.com/hekapooios/hekapooios.github.io/tree/master/resources/APROM)
+  * [`apple/darwin-xnu`](https://github.com/apple/darwin-xnu)
+* [`Factory_Firmware_Payloads`](docs/Factory_Firmware_Payloads)
+* iBoot
+  * [iBoot Firebloom](https://saaramar.github.io/iBoot_firebloom/)
+  * [`OpenJailbreak/iBootRE``](https://github.com/OpenJailbreak/iBootRE)
+  * [*OS iBoot](https://newosxbook.com/bonus/iBoot.pdf)
+* SecureROM
+  * [SecureROM Binaries](https://github.com/hekapooios/hekapooios.github.io/tree/master/resources/APROM)
 
 ### Archive / Disk Formats
 

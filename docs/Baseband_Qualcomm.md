@@ -5,14 +5,19 @@
 Zip package containing:
 
 * `sbl1.mbn` - Secondary Bootloader (after ROM PBL)
-* `Info.plist`
-* `Options.plist` - Zero?
-* `qdsp6sw.mbn` - Qualcomm Hexagon Digital Signal Processor
+* `Info.plist` - Apple update information
+* `Options.plist` - Zero? Seems in error? (Even empty plists have length)
+* `qdsp6sw.mbn` - Qualcomm Hexagon Digital Signal Processor (non-ARM core)
 * `tz.mbn` - Qualcomm TrustZone Implementation - QSEE
 * `hyp.mbn` - Qualcomm Hypervisor Execution Environment - QHEE - EL2
 * `xbl_cfg.mbn` - For XBL (eXtensible Boot Loader) or EFI based SPL signed static data
 * `restoresbl1.mbn` - Secondary program loader (bootloader) for baseband recovery
 * `acdb.mbn` - Accessory Calibration Database (seems to be initial)
+* `apps.mbn` - Userland baseband applications
+* `rpm.mbn` - Rollback prevention manager
+* `wdt.mbn` - Watchdog Timer
+* `mba.mbn` - QURT - Qualcomm Realtime OS Kernel image
+* `dsp3.mbn`
 
 ## MBN Signature Format
 

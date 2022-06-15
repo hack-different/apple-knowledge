@@ -1053,8 +1053,12 @@ chip_ids:
 
   0x8030:
     name: t8030
-    description: A14
-    architecture:
+    description: A13
+    architecture: arm8
+    capabilities:
+      pac: true
+      64bit: true
+
 
     revisions:
       0x01:
@@ -1105,11 +1109,14 @@ chip_ids:
         board_name: J182AP
 
 
-
   0x8101:
     name: t8101
     description: A14
-    architecture:
+    architecture: arm8
+    capabilities:
+      el2: true
+      pac: true
+      64bit: true
 
     revisions:
       0x01:
@@ -1162,7 +1169,11 @@ chip_ids:
   0x8103:
     name: t8103
     description: M1
-    architecture:
+    architecture: armv8.4
+    capabilities:
+      64bit: true
+      pac: true
+      el2: true
     os:
       - macOS
       - padOS
@@ -1314,7 +1325,7 @@ chip_ids:
 
   0x8301:
     name: t8301
-    description: S6
+    description: S6 / S7
     architecture:
 
     revisions:

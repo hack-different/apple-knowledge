@@ -32,3 +32,27 @@ F8C19A07 6C9F304A 448E4A55 0E4B3606 74F4442C CFFF4F71 7D0EE4F2 18D35E70 F22A4482
 DFA064EB 3CC843CA D6EB9610 0D9580B3 27E06098 EE468A45 BC7B753F C0AE990E 085E1678 14A6B2E4 46CC14B8 F8EE8FB1 48EAC12C 48D49435 A1D87B41 56A652C4
 8D641979 36B93A75 BFAA8035 77B50F5D D5CA34BF 5208ED4B CB1B7C19 80303F0D 28C18589 729C3D05 30532471 CB0F49A7 7A96657D 528B7544 C3D467AD 5F81922B
 ```
+
+```c
+#define SHA1_HASH_LENGTH 0x20
+
+typdef struct {
+    uint32_t version = 2;
+    uint32_t header_size = 0x48;
+    uint32_t firmware_total_size;
+    uint32_t
+    uint32_t
+    uint32_t rows; // Guess: based on data being a multiple of this
+    uint32_t row_size_be;
+    char* hash[SHA1_HASH_LENGTH]; // Not hash of data stream or full file, perhaps check after patch?
+    uint32_t
+    uint32_t data_offset = 0;
+    uint32_t flags;
+} yonkers_firmware_header_t
+
+// Basically a SWAG: theroy 0xA0 is not aligned by 16 bytes - likely row data
+typedef struct {
+    char* uuid[16];
+    char* data[0x90]
+} yonkers_patch_t;
+```
