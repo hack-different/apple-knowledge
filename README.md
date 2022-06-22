@@ -215,6 +215,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * TrustCache - Pre-authorized Binary Hashes
   * [Apple Platform Security - Trust caches](https://support.apple.com/guide/security/trust-caches-sec7d38fbf97/web)
   * [`t8012/go-aapl-integrity`](https://github.com/t8012/go-aapl-integrity)
+  * [`CRKatri/trustcache`](https://github.com/CRKatri/trustcache)
 * EALF - `eficheck` baselines
   * [`t8012/go-aapl-integrity`](https://github.com/t8012/go-aapl-integrity)
   * [`t8012/efivalidate`](https://github.com/t8012/efivalidate)
