@@ -119,7 +119,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 ## Kernel General
 
 * [Mach](https://developer.apple.com/library/content/documentation/Darwin/Conceptual/KernelProgramming/Mach/Mach.html)
-  * <https://opensource.apple.com/tarballs/xnu/>
+  * [Apple's XNU Tarballs](https://opensource.apple.com/tarballs/xnu/)
 * [Mach and the Mach Interface Generator by nemo](https://www.exploit-db.com/papers/13176/)
 * [Apple IPC by Ian Beer](https://thecyberwire.com/events/docs/IanBeer_JSS_Slides.pdf)
 * [`acidanthera/Lilu`](https://github.com/acidanthera/Lilu)
@@ -131,7 +131,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [Qwertyoruiopz Attacking XNU: Part 1](https://web.archive.org/web/20160131061526/http://blog.qwertyoruiop.com/?p=38)
 * [Qwertyoruiopz Attacking XNU: Part 2](https://web.archive.org/web/20160131061526/http://blog.qwertyoruiop.com/?p=48)
 * [Kernel Heap by Stefan Esser](http://gsec.hitb.org/materials/sg2016/D2%20-%20Stefan%20Esser%20-%20iOS%2010%20Kernel%20Heap%20Revisited.pdf)
-* [Who needs task_for_pid anyway](https://newosxbook.com/articles/PST2.html)
+* [Levin's Who needs `task_for_pid()` anyway...](https://newosxbook.com/articles/PST2.html)
 * Apple Official Documentation
   * [Kernel Programming Guide](https://developer.apple.com/library/content/documentation/Darwin/Conceptual/KernelProgramming)
   * [IOKit Fundamentals](https://developer.apple.com/library/content/documentation/DeviceDrivers/Conceptual/IOKitFundamentals)
@@ -334,7 +334,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * Apple Wi-Fi Password Sharing
   * [`seemoo-lab/openwifipass`](https://github.com/seemoo-lab/openwifipass)
 * AWDL - Apple Wireless Distribution Link
-  * <https://googleprojectzero.blogspot.com/2020/12/an-ios-zero-click-radio-proximity.html>
+  * [Findings from Ian Beer, Project Zero](https://googleprojectzero.blogspot.com/2020/12/an-ios-zero-click-radio-proximity.html)
 * Bluetooth Bonjour (Service Discovery)
 * iCloud
   * [nicolas17/mesu-archive](https://gitlab.com/nicolas17/mesu-archive)
