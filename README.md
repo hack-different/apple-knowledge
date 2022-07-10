@@ -39,9 +39,9 @@ Updates and additions there should automatically be reflected in the documents
 Another authoritative source of information is the open source code released by Apple themselves at one of the
 following locations:
 
-* [https://opensource.apple.com](https://opensource.apple.com)
-* [GitHub apple](https://github.com/apple)
-* [GitHub apple-oss-distributions](https://github.com/apple-oss-distributions)
+* [Open Source at Apple Wesbite](https://opensource.apple.com)
+* [Apple's GitHub profile](https://github.com/apple)
+* [apple-oss-distributions's Github profile](https://github.com/apple-oss-distributions)
 * [Apple Gifts](docs/GIFTS)
 
 ## Tools
@@ -54,9 +54,9 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 * [mootool](https://github.com/hack-different/mootool) - FOSS Ruby Mach-O Tool (aims to replicate jtool2 feature set)
 * [ktool](https://github.com/cxnder/ktool) - FOSS Python Mach-O Tool
-* [checkra1n/toolchain](https://github.com/checkra1n/toolchain)
-* [alephsecurity/xnu-qemu-arm64](https://github.com/alephsecurity/xnu-qemu-arm64)
-  * [alephsecurity/xnu-qemu-arm64-tools](https://github.com/alephsecurity/xnu-qemu-arm64-tools)
+* [`checkra1n/toolchain`](https://github.com/checkra1n/toolchain)
+* [`alephsecurity/xnu-qemu-arm64`](https://github.com/alephsecurity/xnu-qemu-arm64)
+  * [`alephsecurity/xnu-qemu-arm64-tools`](https://github.com/alephsecurity/xnu-qemu-arm64-tools)
   * [Build iOS on QEMU](https://github.com/alephsecurity/xnu-qemu-arm64/wiki/Build-iOS-on-QEMU)
 * [IDA Disassembler by HexRays](https://hex-rays.com/ida-pro/)
   * [`onethawt/idaplugins-list`](https://github.com/onethawt/idaplugins-list)
@@ -88,7 +88,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ## Guides and General
 
-* [https://github.com/Proteas/apple-cve](https://github.com/Proteas/apple-cve)
+* [`Proteas/apple-cve`](https://github.com/Proteas/apple-cve)
 * [kpwn / qwertyoruiop's Wiki](https://github.com/kpwn/iOSRE/tree/master/wiki)
 * [kpwn / qwertyoruiop's Papers](https://github.com/kpwn/iOSRE/tree/master/resources/papers)
 * [About Apple Prototype and CPFM](docs/Prototypes)
@@ -97,14 +97,14 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [*OS Internals by Jonathan Levin](http://newosxbook.com/index.php)
 * [T2 Dev Setup](docs/T2)
 * [Apple 4CC](docs/4CC)
-* [bytepack/IntroToiOSReverseEngineering](https://github.com/bytepack/IntroToiOSReverseEngineering)
+* [`bytepack/IntroToiOSReverseEngineering`](https://github.com/bytepack/IntroToiOSReverseEngineering)
 * [Remote Attack Surface](https://googleprojectzero.blogspot.com/2019/08/the-fully-remote-attack-surface-of.html)
-* [Lakr233's Research](https://lab.qaq.wiki/Lakr233/iOS-kernel-research/-/tree/master))
+* [Lakr233's Research](https://lab.qaq.wiki/Lakr233/iOS-kernel-research/-/tree/master)
 
 ## Devices
 
 * [Device List](docs/Devices)
-* [T2]
+* T2
   * [T2 Dev Team: `t8012` / Apple T2 / bridgeOS](https://t8012.dev)
   * [Duo Labs: Apple T2 XPC](https://duo.com/labs/research/apple-t2-xpc)
   * [`t2linux/apple-bce-drv`](https://github.com/t2linux/apple-bce-drv)
@@ -113,25 +113,25 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [`seemoo-lab/internalblue`](https://github.com/seemoo-lab/internalblue)
 * [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Main_Page)
 * SMC (System Management Controller) for pre-T2
-  * [acidanthera/VirtualSMC](https://github.com/acidanthera/VirtualSMC)
-  * [t8012/smcutil](https://github.com/t8012/smcutil) - Create SMC binaries from update payloads
+  * [`acidanthera/VirtualSMC`](https://github.com/acidanthera/VirtualSMC)
+  * [`t8012/smcutil`](https://github.com/t8012/smcutil) - Create SMC binaries from update payloads
 
 ## Kernel General
 
 * [Mach](https://developer.apple.com/library/content/documentation/Darwin/Conceptual/KernelProgramming/Mach/Mach.html)
-  * <https://opensource.apple.com/tarballs/xnu/>
+  * [Apple's XNU Tarballs](https://opensource.apple.com/tarballs/xnu/)
 * [Mach and the Mach Interface Generator by nemo](https://www.exploit-db.com/papers/13176/)
-* [Appl IPC by Ian Beer](https://thecyberwire.com/events/docs/IanBeer_JSS_Slides.pdf)
-* [acidanthera/Lilu](https://github.com/acidanthera/Lilu)
-* [osy/AMFIExemption](https://github.com/osy/AMFIExemption)
-* [KTRR by Siguza](https://blog.siguza.net/KTRR/)
+* [Apple IPC by Ian Beer](https://thecyberwire.com/events/docs/IanBeer_JSS_Slides.pdf)
+* [`acidanthera/Lilu`](https://github.com/acidanthera/Lilu)
+* [`osy/AMFIExemption`](https://github.com/osy/AMFIExemption)
+* [Siguza's Research on KTRR](https://blog.siguza.net/KTRR/)
 * [Tick Tock by xerub](https://xerub.github.io/ios/kpp/2017/04/13/tick-tock.html)
 * [Casa de PPL by Levin](http://newosxbook.com/articles/CasaDePPL.html)
 * [KTRW by Brandon Azad](https://googleprojectzero.blogspot.com/2019/10/ktrw-journey-to-build-debuggable-iphone.html)
 * [Qwertyoruiopz Attacking XNU: Part 1](https://web.archive.org/web/20160131061526/http://blog.qwertyoruiop.com/?p=38)
 * [Qwertyoruiopz Attacking XNU: Part 2](https://web.archive.org/web/20160131061526/http://blog.qwertyoruiop.com/?p=48)
 * [Kernel Heap by Stefan Esser](http://gsec.hitb.org/materials/sg2016/D2%20-%20Stefan%20Esser%20-%20iOS%2010%20Kernel%20Heap%20Revisited.pdf)
-* [Who needs task_for_pid anyway](https://newosxbook.com/articles/PST2.html)
+* [Levin's Who needs `task_for_pid()` anyway...](https://newosxbook.com/articles/PST2.html)
 * Apple Official Documentation
   * [Kernel Programming Guide](https://developer.apple.com/library/content/documentation/Darwin/Conceptual/KernelProgramming)
   * [IOKit Fundamentals](https://developer.apple.com/library/content/documentation/DeviceDrivers/Conceptual/IOKitFundamentals)
@@ -151,7 +151,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [`Factory_Firmware_Payloads`](docs/Factory_Firmware_Payloads)
 * iBoot
   * [iBoot Firebloom](https://saaramar.github.io/iBoot_firebloom/)
-  * [`OpenJailbreak/iBootRE``](https://github.com/OpenJailbreak/iBootRE)
+  * [`OpenJailbreak/iBootRE`](https://github.com/OpenJailbreak/iBootRE)
   * [*OS iBoot](https://newosxbook.com/bonus/iBoot.pdf)
 * SecureROM
   * [SecureROM Binaries](https://github.com/hekapooios/hekapooios.github.io/tree/master/resources/APROM)
@@ -188,9 +188,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 ### Image, Sound and Other Resources
 
 * [Apple Flavored PNG](docs/PNG)
-* Apple IMA ADPCM
-  * <http://wiki.multimedia.cx/index.php?title=Apple_QuickTime_IMA_ADPCM>
-  * <https://www.downtowndougbrown.com/2012/07/power-macintosh-g3-blue-and-white-custom-startup-sound/>
+* [Apple IMA ADPCM](https://wiki.multimedia.cx/index.php?title=Apple_QuickTime_IMA_ADPC)
+  * [Using a Custom Startup Sound on a Power Macintosh G3 Blue and White](https://www.downtowndougbrown.com/2012/07/power-macintosh-g3-blue-and-white-custom-startup-sound/)
 * AirPlay2
   * [`mikebrady/shareport-sync`](https://github.com/mikebrady/shairport-sync)
 
@@ -210,7 +209,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [Levin's Code Signing](http://www.newosxbook.com/articles/CodeSigning.pdf)
   * [Apple CTF / Compact Type Format](https://github.com/apple-oss-distributions/dtrace/tree/main/tools/ctfconvert)
 * img4 - Apple signed images, version 4
-  * <https://www.theiphonewiki.com/wiki/IMG4_File_Format>
+  * [TheiPhoneWiki's documentation on IMG4 files](https://www.theiphonewiki.com/wiki/IMG4_File_Format)
   * [`h3adshotzz/img4helper`](https://github.com/h3adshotzz/img4helper)
 * TrustCache - Pre-authorized Binary Hashes
   * [Apple Platform Security - Trust caches](https://support.apple.com/guide/security/trust-caches-sec7d38fbf97/web)
@@ -240,22 +239,22 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [Apple Sandbox Guide v1.0](https://reverse.put.as/wp-content/uploads/2011/09/Apple-Sandbox-Guide-v1.0.pdf)
 * [OWASP - Reversing the Apple Sandbox](https://owasp.org/www-pdf-archive/OWASP_-_EEE_2015_-_Reversing_the_Apple_Sandbox.pdf)
 * [iBSparkles Breaking Entitlements](https://sparkes.zone/blog/ios/2018/04/06/diving-into-the-kernel-entitlements.html)
-* [stek29 Shenanigans Shenanigans](https://stek29.rocks/2018/12/11/shenanigans.html)
+* [stek29: Shenanigans, Shenanigans!](https://stek29.rocks/2018/12/11/shenanigans.html)
 * [argp vs com.apple.security.sandbox](https://census-labs.com/media/sandbox-argp-csw2019-public.pdf)
-* [malus-security/sandblaster](https://github.com/malus-security/sandblaster)
+* [`malus-security/sandblaster`](https://github.com/malus-security/sandblaster)
 
 ### Secure Enclave Processor
 
 * [SEP_memmap](docs/SEP_memmap)
 * [sep.yaml](_data/sep.yaml)
 * [SEPROM](https://github.com/hekapooios/hekapooios.github.io/tree/master/resources/SEPROM)
-* [nyuszika7h/sepfinder](https://github.com/nyuszika7h/sepfinder)
-* <http://mista.nu/research/sep-paper.pdf?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US>
-* <https://www.theiphonewiki.com/wiki/Seputil>
-* <https://github.com/mwpcheung/AppleSEPFirmware>
-* <https://www.blackhat.com/docs/us-16/materials/us-16-Mandt-Demystifying-The-Secure-Enclave-Processor.pdf>
-* <https://data.hackinn.com/ppt/2018腾讯安全国际技术峰会/SEPOS：A%20Guided%20Tour.pdf>
-* <https://github.com/windknown/presentations/blob/master/Attack_Secure_Boot_of_SEP.pdf> - blackbird
+* [`nyuszika7h/sepfinder`](https://github.com/nyuszika7h/sepfinder)
+* [Demystifying the Secure Enclave Processor](https://www.blackhat.com/docs/us-16/materials/us-16-Mandt-Demystifying-The-Secure-Enclave-Processor.pdf)
+  * [Mirror of presentation](http://mista.nu/research/sep-paper.pdf?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US)
+* [`seputil`](https://www.theiphonewiki.com/wiki/Seputil)
+  * [`mwpcheung/AppleSEPFirmware`](https://github.com/mwpcheung/AppleSEPFirmware)
+* [SEPOS: A Guided Tour](https://data.hackinn.com/ppt/2018腾讯安全国际技术峰会/SEPOS：A%20Guided%20Tour.pdf)
+* [Attack Secure Boot of SEP - blackbird](https://github.com/windknown/presentations/blob/master/Attack_Secure_Boot_of_SEP.pdf)
 
 ### ARM / x86
 
@@ -278,8 +277,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 ### Hypervisor / Virtualization
 
 * Apple Hypervisor
-  * <https://developer.apple.com/documentation/hypervisor>
-  * <https://developer.apple.com/documentation/hypervisor/apple_silicon>
+  * [Official documentation](https://developer.apple.com/documentation/hypervisor)
+  * [Hypervisor on Apple Silicon](https://developer.apple.com/documentation/hypervisor/apple_silicon)
 
 ## Baseband
 
@@ -309,7 +308,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [`doronz88/pymobiledevice3`](https://github.com/doronz88/pymobiledevice3)
 * DFU / Recovery
   * [`libimoibledevice/libirecovery`](https://github.com/libimobiledevice/libirecovery)
-  * <https://habr.com/en/company/dsec/blog/472762/>
+  * [Technical analysis of the checkm8 exploit](https://habr.com/en/company/dsec/blog/472762/)
 * usbmuxd - USB transport for iDevices
   * [`libimobiledevice/usbmuxd`](https://github.com/libimobiledevice/usbmuxd)
   * [`t8012/demuxusb`](https://github.com/t8012/demuxusb)
@@ -326,8 +325,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * NVMe / NAND / PCIe
   * <http://ramtin-amin.fr/#nvmepcie>
   * <http://ramtin-amin.fr/#nvmedma>
-* [gh2o/rvi_capture](https://github.com/gh2o/rvi_capture)
-* [osy/ThunderboltPatcher](https://github.com/osy/ThunderboltPatcher)
+* [`gh2o/rvi_capture`](https://github.com/gh2o/rvi_capture)
+* [`osy/ThunderboltPatcher`](https://github.com/osy/ThunderboltPatcher)
 * [Qi Wireless Charging](https://www.wirelesspowerconsortium.com/knowledge-base/specifications/download-the-qi-specifications.html)
 
 ### Network / Wireless / Transit
@@ -335,23 +334,21 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * Apple Wi-Fi Password Sharing
   * [`seemoo-lab/openwifipass`](https://github.com/seemoo-lab/openwifipass)
 * AWDL - Apple Wireless Distribution Link
-  * <https://googleprojectzero.blogspot.com/2020/12/an-ios-zero-click-radio-proximity.html>
+  * [Findings from Ian Beer, Project Zero](https://googleprojectzero.blogspot.com/2020/12/an-ios-zero-click-radio-proximity.html)
 * Bluetooth Bonjour (Service Discovery)
 * iCloud
-  * <https://gitlab.com/nicolas17/mesu-archive>
+  * [nicolas17/mesu-archive](https://gitlab.com/nicolas17/mesu-archive)
 * Apple Watch Pairing
 * `com.apple.terminusd`
-* Magic Pairing
-  * <https://arxiv.org/pdf/2005.07255.pdf>
+* [Magic Pairing: Securing Bluetooth Peripherals](https://arxiv.org/pdf/2005.07255.pdf)
 * ATC - Air Traffic Control - iTunes Wi-Fi Sync
 * RemoteXPC
   * <https://duo.com/labs/research/apple-t2-xpc>
-  * <http://newosxbook.com/tools/XPoCe2.html>
+  * [XPoCe](http://newosxbook.com/tools/XPoCe2.html)
 * macOS Internet Recovery
   * [`rickmark/apple_net_recovery`](https://github.com/rickmark/apple_net_recovery)
   * [`Internet Recovery`](docs/Internet_Recovery)
-* iCloud Keychain (Umbrella for multiple formats)
-  * <https://www.theiphonewiki.com/wiki/ICloud_Keychain>
+* [iCloud Keychain](https://www.theiphonewiki.com/wiki/ICloud_Keychain) (Umbrella for multiple formats)
 
 ### System Configuration and State
 
@@ -366,7 +363,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * Mojo Serial
   * [MojoKDP.kext.S](https://github.com/rickmark/mojo_thor/blob/master/MojoKDP/mojo.kext.S)
 * XHC20 USB Capture
-  * <https://github.com/t8012/demuxusb/blob/b6b1a1a6633449c2cb16ad44edcc22aab4dc29cd/ext/pcapng.h>
+  * [`hack-different/demuxusb/ext/pcapng.h`](https://github.com/t8012/demuxusb/blob/b6b1a1a6633449c2cb16ad44edcc22aab4dc29cd/ext/pcapng.h)
 
 ## Jailbreaks
 
@@ -407,8 +404,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 Hack Different - Apple Knowledge is a product of the entire community and belongs to the community.  It is
 facilitated by the volunteer work of the Hack Different moderation team.
 
-Portions of data and knowledge come from <https://theiphonewiki.org>, <https://libimobiledevice.org>, and
-<https://checkra.in>, as well as the individuals who brought you those projects.  (And many more!)
+Portions of data and knowledge come from [TheiPhoneWiki](https://theiphonewiki.org), [libimobiledevice's website](https://libimobiledevice.org), and
+[checkra1n's website](https://checkra.in), as well as the individuals who brought you those projects (and many more!)
 
 Special mention to Jonathan Levin and Amit Singh for taking the time to publish books on these topics.
 
