@@ -203,7 +203,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 ### Code and Signature Formats
 
 * [Mach-O File Types](docs/MachO.md) - Mach-O / Signing / Entitlements
-  * [`sbingner/ldid`](https://github.com/sbingner/ldid)
+  * [`sbingner/ldid`](https://github.com/sbingner/ldid) - Codesign tool
+  * [`ProcursusTeam/ldid`](https://github.com/ProcursusTeam/ldid) - Alternative to sbingner/ldid with some updates for iOS 15 and general fixes
   * [m4b Mach Binaries](http://www.m4b.io/reverse/engineering/mach/binaries/2015/03/29/mach-binaries.html)
   * [J's Entitlements Database](https://newosxbook.com/ent.jl)
   * [Levin's Code Signing](http://www.newosxbook.com/articles/CodeSigning.pdf)
