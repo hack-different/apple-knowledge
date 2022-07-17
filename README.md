@@ -213,7 +213,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [TheiPhoneWiki's documentation on IMG4 files](https://www.theiphonewiki.com/wiki/IMG4_File_Format)
   * [`xerub/img4lib`](https://github.com/xerub/img4lib)
   * [`m1stadev/PyIMG4`](https://github.com/m1stadev/PyIMG4) - A Python library/CLI tool for parsing IMG4
-  * [`tihmstar/img4tool`](https://github.com/h3adshotzz/img4helper)
+  * [`tihmstar/img4tool`](https://github.com/tihmstar/img4tool)
   * [`h3adshotzz/img4helper`](https://github.com/h3adshotzz/img4helper)
 * TrustCache - Pre-authorized Binary Hashes
   * [Apple Platform Security - Trust caches](https://support.apple.com/guide/security/trust-caches-sec7d38fbf97/web)
