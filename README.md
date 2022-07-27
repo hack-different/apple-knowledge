@@ -324,7 +324,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [USB-C Port Controller (ACE) Secrets](https://blog.t8012.dev/ace-part-1/)
   * [`rickmark/macvdmtool`](https://github.com/rickmark/macvdmtool)
 * Lightning
-  * <http://ramtin-amin.fr/#tristar>
+  * [http://ramtin-amin.fr/#tristar](https://web.archive.org/web/20220107101537/http://ramtin-amin.fr/tristar.html)
   * <https://nyansatan.github.io/lightning/>
 * NVMe / NAND / PCIe
   * <http://ramtin-amin.fr/#nvmepcie>
