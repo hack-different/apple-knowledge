@@ -9,7 +9,7 @@ import {glob} from 'glob';
 import * as util from "util";
 import {parse as parseYaml} from 'yaml';
 import * as fs from "fs";
-import type { PackageJson } from './package-json'
+import type { PackageJson } from '../types/package-json'
 
 async function getBranchHeight(branchName: string) : Promise<number> {
     const { stdout } = await util.promisify(exec)('git rev-list --count main')
@@ -67,3 +67,5 @@ export default async function build() : Promise<void> {
         await writeFile(outputFullPath, jsonData)
     }
 }
+
+build().then(() => console.log('build completed...'))

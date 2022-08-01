@@ -53,7 +53,7 @@ jobs:
         run: |
           yarn run build
 
-      - name: Publish to PyPI
+      - name: Publish to NPM Registry
         run: yarn publish
         working-directory: ./_packages/node
         env:
