@@ -1,11 +1,11 @@
 {
     "name": "apple-data",
     "description": "Static data files from https://docs.hackdiffe.rent",
-    "version": "1.0.483",
+    "version": "1.0.485",
     "license": "MIT",
     "author": "Rick Mark <rickmark@outlook.com>",
     "scripts": {
-        "build": "ts-node ./build/main",
+        "build": "ts-node ./src/build",
         "test": "jest"
     },
     "files": [
