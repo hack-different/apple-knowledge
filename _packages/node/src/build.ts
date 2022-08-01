@@ -42,8 +42,10 @@ export default async function build() : Promise<void> {
     await updateVersion()
 
     const dataPath = path.resolve(__dirname, '../../../_data')
+    console.log(`data path: ${dataPath}`)
 
     const outputPath = path.resolve(__dirname, '../share')
+    console.log(`output path: ${outputPath}`)
 
     const primaryDataGlob = path.join(dataPath, '**', "*.yaml")
 
