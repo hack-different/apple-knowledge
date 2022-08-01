@@ -10,7 +10,7 @@ GEM
   specs:
     CFPropertyList (3.0.5)
       rexml
-    activesupport (7.0.3)
+    activesupport (7.0.3.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -58,7 +58,7 @@ GEM
     http-cookie (1.0.5)
       domain_name (~> 0.5)
     http_parser.rb (0.8.0)
-    i18n (1.10.0)
+    i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     iniparse (1.5.0)
     jekyll (4.2.2)
@@ -143,7 +143,7 @@ GEM
       ruby-macho (~> 3)
       sorbet-runtime
     multipart-post (2.2.3)
-    nokogiri (1.13.6-x86_64-darwin)
+    nokogiri (1.13.8-x86_64-darwin)
       racc (~> 1.4)
     octokit (4.22.0)
       faraday (>= 0.9)
@@ -171,15 +171,15 @@ GEM
       ffi (~> 1.0)
     regexp_parser (2.5.0)
     rexml (3.2.5)
-    rouge (3.29.0)
-    rubocop (1.31.2)
+    rouge (3.30.0)
+    rubocop (1.32.0)
       json (~> 2.3)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml (>= 3.2.5, < 4.0)
-      rubocop-ast (>= 1.18.0, < 2.0)
+      rubocop-ast (>= 1.19.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.19.1)
@@ -193,15 +193,16 @@ GEM
     sawyer (0.8.2)
       addressable (>= 2.3.5)
       faraday (> 0.8, < 2.0)
-    sorbet (0.5.10151)
-      sorbet-static (= 0.5.10151)
-    sorbet-runtime (0.5.10151)
-    sorbet-static (0.5.10151-universal-darwin-21)
+    sorbet (0.5.10242)
+      sorbet-static (= 0.5.10242)
+    sorbet-runtime (0.5.10242)
+    sorbet-static (0.5.10242-universal-darwin-21)
+    sorbet-static (0.5.10242-universal-darwin-22)
     terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thor (1.2.1)
     tomlrb (2.0.3)
-    tzinfo (2.0.4)
+    tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
       unf_ext
@@ -211,6 +212,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
+  x86_64-darwin-22
 
 DEPENDENCIES
   CFPropertyList
@@ -250,9 +252,6 @@ DEPENDENCIES
   sorbet-runtime
   toml (~> 0.3.0)!
   webrick
-
-RUBY VERSION
-   ruby 3.1.2p20
 
 BUNDLED WITH
    2.3.7
