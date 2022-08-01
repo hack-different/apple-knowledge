@@ -12,7 +12,7 @@ import * as fs from "fs";
 import type { PackageJson } from './package-json'
 
 async function getBranchHeight(branchName: string) : Promise<number> {
-    const { stdout } = await util.promisify(exec)('git rev-list --count build')
+    const { stdout } = await util.promisify(exec)('git rev-list --count main')
 
     const revCount = Number(stdout || "0")
 
@@ -41,9 +41,9 @@ async function updateVersion() : Promise<void> {
 export default async function build() : Promise<void> {
     await updateVersion()
 
-    const dataPath = path.resolve(process.cwd(), '..', '..', 'share')
+    const dataPath = path.resolve(__dirname, '../../../_data')
 
-    const outputPath = path.resolve(process.cwd(), 'share')
+    const outputPath = path.resolve(__dirname, '../share')
 
     const primaryDataGlob = path.join(dataPath, '**', "*.yaml")
 
@@ -53,7 +53,7 @@ export default async function build() : Promise<void> {
         let relativePath = path.relative(dataPath, name)
         let outputBaseName = path.basename(relativePath, '.yaml')
         let outputFileName = path.join(path.dirname(relativePath), outputBaseName + '.json')
-        console.log(`would have parsed: ${relativePath} to ${outputFileName}`)
+        console.log(`Parsed: ${relativePath} to ${outputFileName}`)
 
         let outputFullPath = path.join(outputPath, outputFileName)
         let outputDirName = path.dirname(outputFullPath)
