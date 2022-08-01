@@ -204,7 +204,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 * [Mach-O File Types](docs/MachO.md) - Mach-O / Signing / Entitlements
   * [`sbingner/ldid`](https://github.com/sbingner/ldid) - Codesign tool
-  * [`ProcursusTeam/ldid`](https://github.com/ProcursusTeam/ldid) - Alternative to sbingner/ldid with some updates for iOS 15 and general fixes
+  * [`ProcursusTeam/ldid`](https://github.com/ProcursusTeam/ldid) - Alternative to sbingner/ldid with
+    some updates for iOS 15 and general fixes
   * [m4b Mach Binaries](http://www.m4b.io/reverse/engineering/mach/binaries/2015/03/29/mach-binaries.html)
   * [J's Entitlements Database](https://newosxbook.com/ent.jl)
   * [Levin's Code Signing](http://www.newosxbook.com/articles/CodeSigning.pdf)
@@ -408,7 +409,12 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 Hack Different - Apple Knowledge is a product of the entire community and belongs to the community.  It is
 facilitated by the volunteer work of the Hack Different moderation team.
 
-Portions of data and knowledge come from [TheiPhoneWiki](https://theiphonewiki.org), [libimobiledevice's website](https://libimobiledevice.org), and
+If you have issue with the design or workflow of this repository, blame me [`rickmark`](https://github.com/rickmark)
+as I setup and configured most of it.  (it me).  If you have feedback, join the `#documentation` channel of the
+discord server.
+
+Portions of data and knowledge come from
+[TheiPhoneWiki](https://theiphonewiki.org), [libimobiledevice's website](https://libimobiledevice.org), and
 [checkra1n's website](https://checkra.in), as well as the individuals who brought you those projects (and many more!)
 
 Special mention to Jonathan Levin and Amit Singh for taking the time to publish books on these topics.

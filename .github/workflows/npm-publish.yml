@@ -21,11 +21,20 @@ jobs:
           cache: yarn
           cache-dependency-path: _packages/node/yarn.lock
 
-      - name: Build node package
+      - name: Install Dependencies
         working-directory: ./_packages/node
         run: |
           yarn install
-          yarn run build
+
+      - name: Build Package
+        working-directory: ./_packages/node
+        run: |
+          yarn build
+
+      - name: Run Package Tests
+        working-directory: ./_packages/node
+        run: |
+          yarn test
 
   publish-npm:
     needs: build
@@ -52,11 +61,6 @@ jobs:
         working-directory: ./_packages/node
         run: |
           yarn build
-
-      - name: Test Package
-        working-directory: ./_packages/node
-        run: |
-          yarn test
 
       - name: Publish to NPM Registry
         run: yarn publish

@@ -4,11 +4,17 @@
       "es2021"
     ],
     "module": "commonjs",
+    "rootDir": "./src",
     "target": "es2021",
+    "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node"
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "tests"
+  ]
 }

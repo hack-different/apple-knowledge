@@ -1,17 +1,17 @@
 {
     "name": "apple-data",
     "description": "Static data files from https://docs.hackdiffe.rent",
-    "version": "1.0.485",
+    "version": "1.0.486",
     "license": "MIT",
     "author": "Rick Mark <rickmark@outlook.com>",
     "scripts": {
-        "build": "ts-node ./src/build",
+        "build": "ts-node ./src/build && tsc",
         "test": "jest"
     },
+    "main": "./dist/index.js",
     "files": [
-        "src/**/*.ts",
-        "share/**",
-        "build/**"
+        "dist/**",
+        "share/**"
     ],
     "devDependencies": {
         "@babel/preset-env": "^7.18.9",
