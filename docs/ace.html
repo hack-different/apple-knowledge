@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Introduction | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Introduction" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/ace.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/ace.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Introduction" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"Introduction","url":"https://docs.hackdiffe.rent/docs/ace.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="introduction">Introduction</h1>
+
+<p><img src="/docs/images/s-l400-2.jpg" alt="s-l400-2"></p>
+
+<p>After our team successfully ported the checkm8 exploit to the AppleSilicon T2 chip, we began exploring methods for
+closed-case hardware debugging, or CCD, as found on other iDevices. On such devices, the Serial Wire Debug protocol
+can be muxed out across the Lightning connector, which we presumed was replicable across the USB Type-C connector.
+With some assistance from easily obtainable schematics for our MacBook models, we have determined that muxing
+is handled by an Apple/TI co-designed USB Type-C Port Controller, colloquially known as “ACE”. The following details
+our findings and the vendor defined protocol, termed AppleVDM, Apple has implemented over the USB Power Delivery
+standard for muxing out various internal peripherals.</p>
+
+<p>A member of our team, <a href="https://github.com/h0m3us3r" class="user-mention">@h0m3us3r</a> has dumped the ACE firmware by attaching a SWD probe onto exposed test points on
+the logic board of a MacBook Pro. Thanks to this we were able to obtain both the ROM and the firmware payload patch
+applied over it and discover that the ACE chip contains a Cortex-M0 r0p1 ARM core. Most of the static analysis was
+later conducted by <a href="https://github.com/mrarm" class="user-mention">@mrarm</a>.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Connecting to target via SWD
+Found SW-DP with ID 0x0BC11477
+DPIDR: 0x0BC11477
+Scanning AP map to find all available APs
+AP[1]: Stopped AP scan as end of AP map has been reached
+AP[0]: AHB-AP (IDR: 0x04770031)
+Iterating through AP map to find AHB-AP to use
+AP[0]: Core found
+AP[0]: AHB-AP ROM base: 0xE00FF000
+CPUID register: 0x410CC601. Implementer code: 0x41 (ARM)
+Found Cortex-M0 r0p1, Little endian.
+FPUnit: 4 code (BP) slots and 0 literal slots
+CoreSight components:
+ROMTbl[0] @ E00FF000
+ROMTbl[0][0]: E000E000, CID: B105E00D, PID: 000BB008 SCS
+ROMTbl[0][1]: E0001000, CID: B105E00D, PID: 000BB00A DWT
+ROMTbl[0][2]: E0002000, CID: B105E00D, PID: 000BB00B FPB
+Cortex-M0 identified.
+</code></pre></div></div>
+
+<h2 id="ace-overview">ACE Overview</h2>
+
+<p>To better understand the inner-workings of ACE, we began looking for identifying information within the dumped
+firmware. We found the string <code class="language-plaintext highlighter-rouge">CD3217   HW0022 FW002.032.00 ZACE2-J213</code> and upon searching CD3217 online resulted
+in the similar <a href="https://www.ti.com/lit/ds/symlink/tps65986.pdf">TI TPS65986</a>. Based on how similar the functional
+description of the aforementioned TI USB Type-C Controller is to ACE, and considering that TI co-designed ACE
+with Apple, it was reasonable to assume most of the technical information applies to ACE.</p>
+
+<p>TI’s USB Type-C Controllers expose an I²C interface for host management, for which we found the excellent Host
+<a href="https://www.ti.com/lit/ug/slvuan1a/slvuan1a.pdf">Interface Technical Reference Manual</a>, documenting a multitude
+of public I²C registers and commands.</p>
+
+<p><img src="/docs/images/TPS65986_block.png" alt="TPS65986 Functional Block Diagram"></p>
+
+<p>The primary component of focus based on the above block diagram is the digital core, which communicates directly
+with the host and runs the firmware we dumped previously. As mentioned, the core is based on a Cortex-M0 r0p1.
+Unfortunately, we were unable to create a complete memory map with peripherals as TI does not release public
+information on the core itself. Regardless, we have the basic memory layout as follows:</p>
+
+<p>Since we weren’t sure whether the code for muxing out things lives in the ACE or somewhere else (there are
+registers for receiving vendor messages and processing them on another chip), we also investigated the firmware
+of chips that can directly communicate with the ACE, the SMC, part of T2 SoC, and the Thunderbolt controller. While
+we obtained and analyzed the I2C usages in the SMC firmware and found no suspicious code whatsoever, we had issues
+with analyzing the Thunderbolt controller firmware and decided to only reverse engineer it as a last resort. We
+initially thought that the only way that we could talk with the ACE from Mac OS (Intel) was by modifying the SMC
+firmware to relay commands to the ACE. While we have successfully managed to edit the SMC firmware and talk with
+the ACE, it turned out that this effort wasn’t needed. Later we stumbled upon the following project:
+<a href="https://github.com/osy/ThunderboltPatcher">osy/ThunderboltPatcher</a>, which uses the AppleHPM kext in order
+to communicate with the ACE.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">AppleHPM</code> KEXT allows a user space program running as root to read and write ACE registers. It also has
+several interesting methods that seem to be intended for reading and writing registers on ACEs connected using
+a USB Type-C cable to the DUT. Unfortunately, while we tried invoking them, we didn’t manage to get these
+methods working, suggesting that either they have been disabled on production hardware or need some more preparation
+work in order to work. We also discovered that there exists an EFI mode firmware updater for the ACE called
+<code class="language-plaintext highlighter-rouge">HPMUtil.efi</code>, which we also partially reverse engineered. There seems to be several methods of updating the
+ACEs depending on the hardware revision; the EFI program also seems to have an argument that makes it update
+externally connected ACEs, however at least for recent ACEs it seems to be broken; the only update route that
+would work on the firmware dump we obtained from our Mac (based on available commands) seems to be hardcoded in
+a few places to run commands on the local ACE.</p>
+
+<p>There are at least 3 known revisions of the ACE chip. Based on hardware available to us, the first variant,
+ACE1, is known to be used in 2018 and older T2 models, the second, ACE2, in 2019 and newer T2 models, and
+the third in 2020 M1 enabled laptops. The software update method differs significantly between ACE1 and ACE2.
+At the time of writing the article, we have only successfully dumped a single ACE firmware (ACE2) and all the
+analysis here is based on that version.</p>
+
+<h2 id="usb-pd">USB PD</h2>
+
+<p>The logical channel for telling the Mac to mux out something other than USB from the chip would be USB PD, since
+ACE’s main communication vector with external devices is USB PD and because controlling data lines using USB PD
+is a widespread practice (see: MIPI debug interface as well as this article on getting UART off an Samsung
+phone: <a href="https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/2632162/bookchapter.pdf">https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/2632162/bookchapter.pdf</a>). This TI-derived
+controller can be configured to support some variant of MIPI debug mode by default (and the MIPI debug ID is
+present in the Apple ACE firmware as well), however as we discovered later it is disabled in Apple’s configuration
+and can not be used. As such, we decided to look for other Vendor Defined Messages that the ACE understands.</p>
+
+<p>In the USB PD protocol, entering a vendor mode begins by sending a SVID (Standard ID or Vendor ID, usually
+the vendor’s USB VID) and object position (think of it as a sub mode that the vendor can define). By analyzing the
+ACE firmware we found at least 3 possible object positions under the Apple SVID, however their availability is
+dynamic and by default only a single SVID and object position is available. This primary mode is, for example,
+used when the Apple’s charger is connected. We are not sure when the other modes are activated and plan to do
+further work related to figuring out what the purpose of these other modes is.</p>
+
+<p>Since it would be logical if there was a reply for the command for entering a mode and also because reverse
+ngineering an embedded firmware with no context whatsoever is hard, we decided to look into the VDMs command,
+which can be used to send a VDM PD message. This allowed us to gather important information about the firmware’s
+inner workings and also to find a few functions that sent a message with Apple’s vendor ID. We investigated
+several of these, some of them were indeed related to the protocol used with the charger (which we aren’t sure
+what the purpose of is; however from what it seems it can be only used to read some memory sections from the
+external device), but we also found another procedure that had three cases, two of which replied with 16-bit
+values (created from information from a particular memory area) in a similar way to the Discover SVIDs VDM,
+and one of them was complex and handled additional logic. We investigated it further and eventually managed to
+use it to mux things out of the controller.</p>
+
+<p>Another possible use of the VDMs command can be found in the <code class="language-plaintext highlighter-rouge">AppleHPM</code> KEXT and the <code class="language-plaintext highlighter-rouge">HPLUtil.efi</code> program,
+which is reading registers from externally connected devices. Since we haven’t given much attention to it
+as it was not our goal and our experiments were a failure, we are not going to describe it in this article.</p>
+
+<p>Note that since SWD can also be muxed from the ACE, further reverse engineering ACE modes is not that
+interesting; you should be able to use the ACE’s SWD to trigger any mux choice of your choosing and directly
+talk to all peripherals ACE has access to.</p>
+
+<h2 id="dive-into-the-code">Dive into the code</h2>
+
+<p>With <a href="https://github.com/h0m3us3r" class="user-mention">@h0m3us3r</a>’s dump of ROM and RAM memory, we started by loading the ACE firmware in IDA. The reset handler
+address is present at <code class="language-plaintext highlighter-rouge">0x00000004</code> and can be used to get the address of the entrypoint.</p>
+
+<p>The command table can be trivially found by looking for the 4 character codes. Register table requires a bit
+more effort but is also not hard to find (since there is a register that is a string, you can find what
+references it). In comparison to the public TI documentation, there are substantially more commands and
+registers available, some of which are Apple-specific additions. Since the firmware has barely any strings
+or debug information, the command list has been very helpful.</p>
+
+<p>After initially exploring the firmware we quickly stumbled upon cursed looking trampolines such as the following:</p>
+
+<pre><code class="language-assembly">ROM:000266C2 _Command_HRST                           ; DATA XREF: ROM:commandsâ†“o
+ROM:000266C2
+ROM:000266C2
+ROM:000266C2                 PUSH            {R4-R6,LR}
+ROM:000266C4                 MOV             R4, R1
+ROM:000266C6                 MOV             R5, R0
+ROM:000266C8                 BL              sub_E4
+ROM:000266CC                 LDR             R0, =dword_20041040
+ROM:000266CE                 MOV             R1, R4
+ROM:000266D0                 ADDS            R0, #0x40 ; '@'
+ROM:000266D2                 LDR             R2, [R0]
+ROM:000266D4                 MOV             R0, R5
+ROM:000266D6                 BLX             R2
+ROM:000266D8                 MOV             R4, R0
+ROM:000266DA                 BL              sub_E8
+ROM:000266DE                 MOV             R0, R4
+ROM:000266E0                 B               loc_260E2
+ROM:000266E0 ; End of function _Command_HRST
+</code></pre>
+
+<p>Since IDA seems not to handle them nicely, we wrote a simple script to comment the BLX call. Unfortunately,
+this does not play nicely with the IDA decompiler but was enough for further firmware research. The purpose
+of these trampolines is to allow selective patching of functions in the firmware, since the main firmware
+seems to reside in ROM.</p>
+
+<p>After analyzing the VDMs (VDM send) command handler, we quickly found the function responsible for sending
+arbitrary PD messages. From here, we looked at the list functions referencing it, finding a few interesting
+possible investigation candidates, one of which turned out to be the one we were looking for. In addition,
+it was called by a function that checked whether the <code class="language-plaintext highlighter-rouge">SOP</code> it originated from is <code class="language-plaintext highlighter-rouge">SOP'DBG</code> or <code class="language-plaintext highlighter-rouge">SOP''DBG</code>.</p>
+
+<p><img src="/docs/images/HandleAppleVDM.png" alt="Handle Apple VDM"></p>
+
+<p>The function named <code class="language-plaintext highlighter-rouge">AppleVDM_0x12</code> in this image is in particular interesting as it is also referenced by
+DVEn command. Unfortunately, with only 4 characters we were unable to derive the function from the name
+alone. We decided to analyze all of these function called by this function starting from 0x10.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">AppleVDM_0x10_StartNo</span><span class="p">,</span> <span class="n">AppleVDM_0x10_NextStartNo</span><span class="p">,</span> <span class="n">AppleVDM_0x10_IterA</span><span class="p">,</span> <span class="n">AppleVDM_0x10_IterB</span><span class="p">;</span>
+<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">AppleVDM_Data</span><span class="p">[];</span>
+<span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">AppleVDM_Type1_0x10_Values</span><span class="p">[];</span>
+
+<span class="kt">void</span> <span class="kr">__fastcall</span> <span class="nf">AppleVDM_0x10</span><span class="p">(</span><span class="kt">int</span> <span class="n">sop</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">// Prepare the reply VDM</span>
+  <span class="n">SendMessageDataAfterHeader</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">byte_20044394</span> <span class="o">&lt;&lt;</span> <span class="mi">13</span><span class="p">)</span> <span class="o">+</span> <span class="mh">0x50</span><span class="p">)</span> <span class="o">|</span> <span class="mh">0x5AC8000</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">AppleVDM_0x10_StartNo</span> <span class="p">)</span>
+    <span class="n">AppleVDM_0x10_StartIter</span><span class="p">();</span>
+  <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">AppleVDM_0x10_StartNo</span><span class="p">;</span>
+  <span class="n">bool</span> <span class="n">even</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">7</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="n">AppleVDM_0x10_GetValue</span><span class="p">(</span><span class="n">j</span><span class="p">);</span>
+    <span class="n">AppleVDM_0x10_NextIter</span><span class="p">(</span><span class="o">&amp;</span><span class="n">j</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">even</span> <span class="p">)</span>
+      <span class="n">SendMessageDataAfterHeader</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">value</span> <span class="o">&amp;&amp;</span> <span class="p">(</span> <span class="o">!</span><span class="n">AppleVDM_0x10_IterA</span> <span class="o">||</span> <span class="n">AppleVDM_0x10_IterB</span> <span class="o">==</span> <span class="mi">8</span> <span class="p">)</span> <span class="p">)</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">value</span> <span class="o">&amp;&amp;</span> <span class="n">AppleVDM_0x10_IterB</span> <span class="o">&lt;</span> <span class="mi">8</span> <span class="p">)</span>
+      <span class="k">continue</span><span class="p">;</span>
+
+    <span class="n">SendMessageDataAfterHeader</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">|=</span> <span class="n">value</span> <span class="o">&lt;&lt;</span> <span class="p">(</span> <span class="n">even</span> <span class="o">?</span> <span class="mi">16</span> <span class="o">:</span> <span class="mi">0</span> <span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">even</span> <span class="p">)</span>
+      <span class="o">++</span><span class="n">i</span><span class="p">;</span>
+    <span class="n">even</span> <span class="o">=</span> <span class="o">!</span><span class="n">even</span><span class="p">;</span>
+    <span class="n">AppleVDM_0x10_NextStartNo</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">7</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="n">AppleVDM_0x10_NextStartNo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">AppleVDM_0x10_StartIter</span><span class="p">();</span>
+    <span class="o">++</span><span class="n">i</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">AppleVDM_0x10_ReplyMsgId</span> <span class="o">=</span> <span class="n">NextSendMessageId</span><span class="p">[</span><span class="n">sop</span><span class="p">];</span>
+  <span class="n">SendMessage</span><span class="p">(</span><span class="n">sop</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">AppleVDM_0x10_StartIter</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">AppleVDM_0x10_IterA</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">AppleVDM_0x10_IterB</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">bool</span> <span class="nf">AppleVDM_0x10_NextIter</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">i</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">while</span> <span class="p">(</span> <span class="o">*</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mh">0x40</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="c1">// the d variable is composed of two parts - the end position (bits 0:5) and the entry type (bits 6:7)</span>
+    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">d</span> <span class="o">=</span> <span class="n">AppleVDM_Data</span><span class="p">[</span><span class="o">*</span><span class="n">i</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="p">(</span> <span class="n">d</span> <span class="o">&gt;&gt;</span> <span class="mi">6</span> <span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">AppleVDM_0x10_IterB</span> <span class="o">&lt;</span> <span class="mi">8</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="o">++</span><span class="n">AppleVDM_0x10_IterB</span><span class="p">;</span>
+      <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// endpos is the position where this data entry ends (relative to the start of the AppleVDM_Data blob)</span>
+    <span class="kt">int</span> <span class="n">endpos</span> <span class="o">=</span> <span class="n">d</span> <span class="o">&amp;</span> <span class="mh">0x3F</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">endpos</span> <span class="o">||</span> <span class="n">endpos</span> <span class="o">==</span> <span class="mh">0x3F</span> <span class="p">)</span>
+      <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">i</span> <span class="o">=</span> <span class="n">endpos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// if the type is not zero, return this index, otherwise skip</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="p">(</span> <span class="n">AppleVDM_Data</span><span class="p">[</span><span class="o">*</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">6</span> <span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">)</span>
+      <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">AppleVDM_0x10_GetValue</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">&gt;=</span> <span class="mh">0x40</span> <span class="p">)</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="kt">int</span> <span class="n">type</span> <span class="o">=</span> <span class="n">AppleVDM_Data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">6</span><span class="p">;</span>
+  <span class="k">switch</span> <span class="p">(</span><span class="n">type</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">AppleVDM_0x10_IterA</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">AppleVDM_0x10_IterB</span> <span class="o">||</span> <span class="o">!</span><span class="n">sub_27B30</span><span class="p">())</span> <span class="o">&amp;&amp;</span> <span class="n">AppleVDM_Data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">AppleVDM_0x10_IterB</span><span class="p">)</span> <span class="p">)</span>
+      <span class="k">return</span> <span class="n">AppleVDM_Type1_0x10_Values</span><span class="p">[</span><span class="n">AppleVDM_0x10_IterB</span><span class="p">];</span>
+  <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mh">0x100</span> <span class="o">+</span> <span class="n">AppleVDM_Data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+  <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">AppleVDM_Data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">|</span> <span class="n">AppleVDM_Data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">];</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This AppleVDM_0x10 function handles the 0x10 message. This function iterates over a list of possible
+Actions, and presents them in a format similar to the one in Discover SVIDs (shorts followed by a 0
+terminator).</p>
+
+<p>This function wasn’t perhaps particularly interesting on it’s own but it was pretty easy to get a
+rough idea of most of what is happening in general and was pretty stand-alone (other than the type
+perhaps which was cross validated later).</p>
+
+<p>Continuing to <code class="language-plaintext highlighter-rouge">0x11</code>:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">AppleVDM_0x11_StartNo</span><span class="p">,</span> <span class="n">AppleVDM_0x11_NextStartNo</span><span class="p">;</span>
+<span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">AppleVDM_0x11_LastArgVal</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">Apple_0x11_ArgValIdx</span><span class="p">;</span>
+<span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">AppleVDM_Type1_0x11_Values</span><span class="p">[];</span>
+
+<span class="kt">void</span> <span class="kr">__fastcall</span> <span class="nf">AppleVDM_0x11</span><span class="p">(</span><span class="kt">int</span> <span class="n">sop</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">argVal</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0xffff</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">argVal</span> <span class="o">!=</span> <span class="n">AppleVDM_0x11_LastArgVal</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">AppleVDM_0x11_LastArgVal</span> <span class="o">=</span> <span class="n">argVal</span><span class="p">;</span>
+    <span class="n">AppleVDM_0x11_StartNo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">AppleVDM_0x11_NextStartNo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">AppleVDM_0x10_StartIter</span><span class="p">();</span>
+  <span class="n">Apple_0x11_ArgValIdx</span> <span class="o">=</span> <span class="n">AppleVDM_0x10_FindValue</span><span class="p">(</span><span class="n">argVal</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">Apple_0x11_ArgValIdx</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">SendMessageDataAfterHeader</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">byte_20044394</span> <span class="o">&lt;&lt;</span> <span class="mi">13</span><span class="p">)</span> <span class="o">+</span> <span class="mh">0x91</span><span class="p">)</span> <span class="o">|</span> <span class="mh">0x5AC8000</span><span class="p">;</span>
+    <span class="n">SendMessage</span><span class="p">(</span><span class="n">sop</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">SendMessageDataAfterHeader</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">byte_20044394</span> <span class="o">&lt;&lt;</span> <span class="mi">13</span><span class="p">)</span> <span class="o">+</span> <span class="mh">0x51</span><span class="p">)</span> <span class="o">|</span> <span class="mh">0x5AC8000</span><span class="p">;</span>
+  <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kr">__int8</span><span class="p">)</span><span class="n">AppleVDM_0x11_StartNo</span><span class="p">;</span>
+  <span class="n">bool</span> <span class="n">even</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">7</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">even</span> <span class="p">)</span>
+      <span class="n">SendMessageDataAfterHeader</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">data</span> <span class="o">=</span> <span class="n">AppleVDM_0x11_GetReplyData</span><span class="p">(</span><span class="n">Apple_0x11_ArgValIdx</span><span class="p">,</span> <span class="n">j</span><span class="o">++</span><span class="p">);</span>
+    <span class="n">SendMessageDataAfterHeader</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">|=</span> <span class="n">data</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">even</span> <span class="o">?</span> <span class="mh">0x10</span> <span class="o">:</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">AppleVDM_0x11_NextStartNo</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">even</span> <span class="p">)</span>
+      <span class="o">++</span><span class="n">i</span><span class="p">;</span>
+    <span class="n">even</span> <span class="o">=</span> <span class="o">!</span><span class="n">even</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">data</span> <span class="p">)</span>
+      <span class="k">break</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">7</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="n">AppleVDM_0x11_NextStartNo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">AppleVDM_0x10_StartIter</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">j</span> <span class="o">&amp;</span> <span class="mi">1</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">SendMessageDataAfterHeader</span><span class="p">[</span><span class="o">++</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">AppleVDM_0x11_ReplyMsgId</span> <span class="o">=</span> <span class="n">NextSendMessageId</span><span class="p">[</span><span class="n">sop</span><span class="p">];</span>
+  <span class="n">SendMessage</span><span class="p">(</span><span class="n">sop</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="kr">__fastcall</span> <span class="nf">AppleVDM_0x11_GetReplyData</span><span class="p">(</span><span class="kt">int</span> <span class="n">argIndex</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">argIndex</span> <span class="o">==</span> <span class="o">-</span><span class="mi">2</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="n">AppleVDM_0x11_GetReplyData_Type1</span><span class="p">(</span><span class="n">argIndex</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
+
+  <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">endposAndType</span> <span class="o">=</span> <span class="n">AppleVDM_Data</span><span class="p">[</span><span class="n">argIndex</span><span class="p">];</span>
+  <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">endpos</span> <span class="o">=</span> <span class="n">endposAndType</span> <span class="o">&amp;</span> <span class="mh">0x3F</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">endpos</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">type</span> <span class="o">=</span> <span class="n">endposAndType</span> <span class="o">&gt;&gt;</span> <span class="mi">6</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">type</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">argIndex</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="n">endpos</span> <span class="p">)</span>
+      <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">num</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="n">endpos</span> <span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="n">j</span> <span class="o">+=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">AppleVDM_Data</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">|</span> <span class="n">AppleVDM_Data</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">type</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">idx_b5_6</span><span class="p">,</span> <span class="n">idx_remaining</span><span class="p">,</span> <span class="n">idx_b1</span><span class="p">,</span> <span class="n">idx_221</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="o">~</span><span class="n">AppleVDM_Data</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">3</span><span class="p">];</span>
+    <span class="n">AppleVDM_0x11_GetReplyIndexes_Type3</span><span class="p">(((</span><span class="n">t</span> <span class="o">&gt;&gt;</span> <span class="mi">6</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="p">((</span><span class="n">t</span> <span class="o">&gt;&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">idx_b5_6</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">idx_remaining</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">idx_b1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">idx_221</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">idx_b1</span> <span class="o">==</span> <span class="n">num</span> <span class="p">)</span>
+      <span class="k">return</span> <span class="mh">0x100</span> <span class="o">+</span> <span class="n">AppleVDM_Data</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">4</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">idx_221</span> <span class="o">==</span> <span class="n">num</span> <span class="p">)</span>
+      <span class="k">return</span> <span class="mh">0x221</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">num</span> <span class="o">==</span> <span class="n">idx_b5_6</span> <span class="o">?</span> <span class="p">(</span><span class="n">argIndex</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span> <span class="o">:</span> <span class="p">(</span><span class="n">argIndex</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">num</span> <span class="o">-</span> <span class="n">idx_remaining</span><span class="p">));</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">endpos</span><span class="p">)</span>
+      <span class="k">return</span> <span class="p">(</span><span class="n">AppleVDM_Data</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">|</span> <span class="n">AppleVDM_Data</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">AppleVDM_0x11_GetReplyData_Type1</span><span class="p">(</span><span class="kt">int</span> <span class="n">argIndex</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">a2</span> <span class="o">&lt;</span> <span class="mi">8</span> <span class="p">)</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="n">AppleVDM_Type1_0x11_Values</span><span class="p">[</span><span class="mi">8</span> <span class="o">*</span> <span class="n">AppleVDM_0x10_IterB</span> <span class="o">+</span> <span class="n">num</span><span class="p">];</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">AppleVDM_0x11_GetReplyIndexes_Type3</span><span class="p">(</span><span class="kt">int</span> <span class="n">a1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">a2</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">idx_b5_6</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">idx_remaining</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">idx_b1</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">idx_221</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">a1</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="o">*</span><span class="n">idx_b5_6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">idx_b1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">a2</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="o">*</span><span class="n">idx_221</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+      <span class="o">*</span><span class="n">idx_remaining</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+      <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="o">*</span><span class="n">idx_remaining</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">idx_221</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">else</span>
+  <span class="p">{</span>
+    <span class="o">*</span><span class="n">idx_b1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">a2</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="o">*</span><span class="n">idx_221</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="o">*</span><span class="n">idx_b5_6</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+      <span class="o">*</span><span class="n">idx_remaining</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+      <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="o">*</span><span class="n">idx_b5_6</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">idx_remaining</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">idx_221</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">AppleVDM_0x10_FindValue</span><span class="p">(</span><span class="kt">int</span> <span class="n">value</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="n">AppleVDM_0x10_StartIter</span><span class="p">();</span>
+  <span class="k">while</span> <span class="p">(</span> <span class="n">AppleVDM_0x10_GetValue</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">!=</span> <span class="n">value</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">AppleVDM_0x10_NextIter</span><span class="p">(</span><span class="o">&amp;</span><span class="n">i</span><span class="p">)</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">AppleVDM_0x10_IterA</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">2</span><span class="p">;</span>
+  <span class="k">else</span>
+    <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This seems to list some additional information for each argument (list of these can be obtained
+from the 0x10 VDM). Right now there is nothing we can say about these but for Type 2 the
+information will become clear once we analyze some basic information about 0x12. Note that due
+to the complexity, 0x12 was not fully analyzed and some aspects of it were skipped and instead
+experimented with.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bool</span> <span class="kr">__fastcall</span> <span class="nf">AppleVDM_0x12</span><span class="p">(</span><span class="kt">int</span> <span class="n">sop</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="o">*</span><span class="n">data</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">dataCount</span><span class="p">,</span> <span class="kt">int</span> <span class="n">internalNonVDM</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">replyVdoCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">internalNonVDM</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">SendMessageDataAfterHeader</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">byte_20044394</span> <span class="o">&lt;&lt;</span> <span class="mi">13</span><span class="p">)</span> <span class="o">+</span> <span class="mh">0x52</span><span class="p">)</span> <span class="o">|</span> <span class="mh">0x5AC8000</span><span class="p">;</span>
+    <span class="n">replyVdoCount</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">argVal</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0xffff</span><span class="p">;</span>
+  <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">argLines</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x7F</span><span class="p">;</span>
+  <span class="n">bool</span> <span class="n">argTryToExitPrevious</span> <span class="o">=</span> <span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="p">(</span><span class="mi">16</span> <span class="o">+</span> <span class="mi">7</span><span class="p">))</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">bool</span> <span class="n">argPersistThroughReset</span> <span class="o">=</span> <span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">24</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">bool</span> <span class="n">argExit</span> <span class="o">=</span> <span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">24</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">argVal</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">argTryToExitPrevious</span> <span class="p">)</span>
+      <span class="n">DisableConflictingMuxModes</span><span class="p">(</span><span class="n">argLines</span><span class="p">);</span>
+    <span class="k">goto</span> <span class="n">succcess</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">bool</span> <span class="n">hasNoCollidingModes</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">argLines</span> <span class="o">&amp;&amp;</span> <span class="n">LineModeInfo</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">type</span> <span class="o">&gt;=</span> <span class="mi">2u</span> <span class="p">)</span>
+    <span class="n">hasNoCollidingModes</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span> <span class="c1">// has active colliding mode we should exit first</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">hasNoCollidingModes</span> <span class="o">&amp;&amp;</span> <span class="n">argTryToExitPrevious</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// note: this method sends a reply if it fails - 0x5AC80D2 if it exits an altmode</span>
+    <span class="c1">// and you need to wait or 0x5AC8092 if it fails</span>
+    <span class="n">TryToExitCollidingModes</span><span class="p">(</span><span class="n">sop</span><span class="p">,</span> <span class="n">argLines</span><span class="p">,</span> <span class="n">replyVdoCount</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">hasNoCollidingModes</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">hasNoCollidingModes</span> <span class="o">&amp;&amp;</span> <span class="n">argTryToExitPrevious</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">argTryToExitPrevious</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">hasNoCollidingModes</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">internalNonVDM</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">SendMessageDataAfterHeader</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">byte_20044394</span> <span class="o">&lt;&lt;</span> <span class="mi">13</span><span class="p">)</span> <span class="o">+</span> <span class="mh">0x92</span><span class="p">)</span> <span class="o">|</span> <span class="mh">0x5AC8000</span><span class="p">;</span>
+      <span class="n">SendMessage</span><span class="p">(</span><span class="n">sop_</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">replyVdoCount</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">args</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+  <span class="n">memset</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+  <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dataCount</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">args</span><span class="p">[</span><span class="n">j</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="p">;</span>
+    <span class="n">args</span><span class="p">[</span><span class="n">j</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">AppleVDM_0x12_Perform</span><span class="p">(</span><span class="n">argValue</span><span class="p">,</span> <span class="o">!</span><span class="n">argExit</span><span class="p">,</span> <span class="n">argLines</span><span class="p">,</span> <span class="n">argPersistThroughReset</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">internalNonVDM</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">SendMessageDataAfterHeader</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">byte_20044394</span> <span class="o">&lt;&lt;</span> <span class="mi">13</span><span class="p">)</span> <span class="o">+</span> <span class="mh">0x92</span><span class="p">)</span> <span class="o">|</span> <span class="mh">0x5AC8000</span><span class="p">;</span>
+      <span class="n">SendMessage</span><span class="p">(</span><span class="n">sop_</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">replyVdoCount</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="p">}</span>
+
+<span class="nl">succcess:</span>
+  <span class="n">AppleVDM_0x12_CollectStateForReply</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="o">&amp;</span><span class="n">AppleVDM_0x12_CurrentStateForReply</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">internalNonVDM</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">AppleVDM_0x12_SOPForReply</span> <span class="o">=</span> <span class="n">sop</span><span class="p">;</span>
+    <span class="n">ScheduleWork</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="n">AppleVDM_0x12_SendSuccessWithCurrentState</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="n">sub_25B66</span><span class="p">(</span><span class="mi">56</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="kr">__fastcall</span> <span class="nf">AppleVDM_0x12_CollectStateForReply</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">unsigned</span> <span class="kt">short</span> <span class="o">*</span><span class="n">sdata</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">short</span> <span class="o">*</span><span class="p">)</span> <span class="n">data</span><span class="p">;</span>
+  <span class="n">sdata</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">sdata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">GetCurrentActiveModeInfo</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">type</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+  <span class="n">sdata</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">GetCurrentActiveModeInfo</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">type</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+  <span class="n">sdata</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">GetCurrentActiveModeInfo</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">type</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+  <span class="n">sdata</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="n">GetCurrentActiveModeInfo</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">type</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+  <span class="n">sdata</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">GetCurrentActiveModeInfo</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">type</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>
+  <span class="n">sdata</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="n">GetCurrentActiveModeInfo</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">type</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span>
+  <span class="n">sdata</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="n">GetCurrentActiveModeInfo</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">type</span><span class="p">[</span><span class="mi">6</span><span class="p">]);</span>
+
+  <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">connState</span> <span class="o">=</span> <span class="n">SystemStatus</span><span class="p">.</span><span class="n">ConnState</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">connState</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">||</span> <span class="n">connState</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">)</span> <span class="c1">// Audio connection (Ra/Ra), Debug connection (Rd/Rd)</span>
+  <span class="p">{</span>
+    <span class="n">v4</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">connState</span> <span class="o">==</span> <span class="mi">6</span> <span class="o">||</span> <span class="n">connState</span> <span class="o">==</span> <span class="mi">7</span> <span class="p">)</span> <span class="c1">// Connection present</span>
+  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">IsPlugUpsideUp</span><span class="p">()</span> <span class="p">)</span>
+      <span class="n">v4</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">else</span>
+      <span class="n">v4</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="c1">// No connection</span>
+  <span class="p">{</span>
+    <span class="n">v4</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">|=</span> <span class="p">(</span><span class="n">type</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">type</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">18</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">type</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">20</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">type</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">22</span><span class="p">)</span> <span class="o">|</span>
+             <span class="p">(</span><span class="n">type</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">24</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">type</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">26</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">type</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">28</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">v4</span> <span class="o">&lt;&lt;</span> <span class="mi">30</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">AppleVDM_0x12_SendSuccessWithCurrentState</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">SendMessageDataAfterHeader</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">byte_20044394</span> <span class="o">&lt;&lt;</span> <span class="mi">13</span><span class="p">)</span> <span class="o">+</span> <span class="mh">0x52</span><span class="p">)</span> <span class="o">|</span> <span class="mh">0x5AC8000</span><span class="p">;</span>
+  <span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SendMessageDataAfterHeader</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="o">&amp;</span><span class="n">AppleVDM_0x12_CurrentStateForReply</span><span class="p">,</span> <span class="mi">16</span><span class="p">);</span>
+  <span class="n">SendMessage</span><span class="p">(</span><span class="n">AppleVDM_0x12_SOPForReply</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">bool</span> <span class="nf">AppleVDM_0x12_Perform</span><span class="p">(</span><span class="kt">int</span> <span class="n">argValue</span><span class="p">,</span> <span class="n">bool</span> <span class="n">activate</span><span class="p">,</span> <span class="kt">int</span> <span class="n">targetLines</span><span class="p">,</span> <span class="n">bool</span> <span class="n">persistThroughReset</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">argIndex</span> <span class="o">=</span> <span class="n">AppleVDM_0x10_FindValue</span><span class="p">(</span><span class="n">argValue</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">argIndex</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">type</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">argIndex</span> <span class="o">==</span> <span class="o">-</span><span class="mi">2</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">AppleVDM_0x10_IterB</span> <span class="o">&gt;=</span> <span class="mi">7u</span> <span class="p">)</span>
+      <span class="n">type</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="k">else</span>
+      <span class="n">type</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">else</span>
+  <span class="p">{</span>
+    <span class="n">type</span> <span class="o">=</span> <span class="n">AppleVDM_Data</span><span class="p">[</span><span class="n">argIndex</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">6</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">type</span> <span class="o">==</span> <span class="mi">2</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">args</span> <span class="p">)</span>
+      <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+
+    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">extraVal</span><span class="p">;</span>
+    <span class="n">bool</span> <span class="n">result</span> <span class="o">=</span> <span class="n">AppleVDM_0x12_Find_Type2_ExtraValue</span><span class="p">(</span><span class="n">valNo</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">&amp;</span><span class="n">extraVal</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">result</span> <span class="p">)</span>
+      <span class="n">result</span> <span class="o">=</span> <span class="n">AppleVDM_0x12_Perform_Type2</span><span class="p">(</span><span class="n">extraVal</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">type</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">valNo</span> <span class="o">==</span> <span class="o">-</span><span class="mi">2</span> <span class="p">)</span>
+      <span class="n">v10</span> <span class="o">=</span> <span class="n">AppleVDM_Type1_0x12_Values</span><span class="p">[</span><span class="n">AppleVDM_0x10_IterB</span><span class="p">];</span>
+    <span class="k">else</span>
+      <span class="n">v10</span> <span class="o">=</span> <span class="n">AppleVDM_Data</span><span class="p">[</span><span class="n">argIndex</span> <span class="o">+</span> <span class="mi">3</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0x1F</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">AppleVDM_0x12_Perform_Type3</span><span class="p">(</span><span class="n">v10</span><span class="p">,</span> <span class="n">targetLines</span><span class="p">,</span> <span class="n">activate</span><span class="p">,</span> <span class="n">argValue</span><span class="p">,</span> <span class="n">flag1</span><span class="p">,</span> <span class="n">args</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">AppleVDM_0x12_Perform_Type2</span><span class="p">(</span><span class="kt">int</span> <span class="n">internalId</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">internalId</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span>
+    <span class="n">Command_GAID_Gaid</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">internalId</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">internalId</span> <span class="o">==</span> <span class="mi">2</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">internalId</span> <span class="o">==</span> <span class="mi">2</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span> <span class="n">FindGPIOBit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">!=</span> <span class="mh">0xFF</span> <span class="p">)</span>
+        <span class="n">GPIOAction</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+      <span class="n">MEMORY</span><span class="p">[</span><span class="mh">0x4009004C</span><span class="p">]</span> <span class="o">&amp;=</span> <span class="mh">0xFEFFFFFF</span><span class="p">;</span>
+      <span class="k">if</span> <span class="p">(</span> <span class="n">RegAppleVIDConfig</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0x20</span> <span class="p">)</span>
+        <span class="n">sub_28B22</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="n">GPIOAction</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+    <span class="n">GPIOAction</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
+    <span class="n">byte_200424F2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">ScheduleWork</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="n">dword_200406A0</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">sub_289EE</span><span class="p">);</span> <span class="c1">// resets the GPIO</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">internalId</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="n">GPIOAction</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">byte_20042FC8</span> <span class="o">|=</span> <span class="mh">0x10u</span><span class="p">;</span>
+    <span class="n">sub_25B66</span><span class="p">(</span><span class="mh">0x3A</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">AppleVDM_0x12_Perform_Type3</span><span class="p">(</span><span class="kt">int</span> <span class="n">internalId</span><span class="p">,</span> <span class="kt">int</span> <span class="n">targetLines</span><span class="p">,</span> <span class="n">bool</span> <span class="n">activate</span><span class="p">,</span> <span class="kt">int</span> <span class="n">argValue</span><span class="p">,</span>
+                                <span class="n">bool</span> <span class="n">persistThroughReset</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="o">*</span><span class="n">params</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>The first thing we figured out from analyzing and trying to use the <code class="language-plaintext highlighter-rouge">0x12</code> handler is that Type 2 is used to reset the chip
+and pulse GPIO pins. Type 2, Action 0 resets the ACE, Action 1 seems to reset the whole device, Action 2 asserts force DFU
+and resets the device. We are not sure what Action 3 does as it does not seem to be exposed on our ACE.</p>
+
+<p>For Type 1 actions, the <code class="language-plaintext highlighter-rouge">AppleVDM_0x10_FindValue</code> function returns <code class="language-plaintext highlighter-rouge">-2</code>, and as such Type 1 actions are translated to either
+Type 1 or Type 2 (the last one will be Type 2).</p>
+
+<p>For Type 3, things are more interesting and we haven’t managed to fully reverse engineer all the involved code. However,
+by making some assumptions, we found code resetting the modes which allowed us to guess the meanings of <code class="language-plaintext highlighter-rouge">argTryToExitPrevious</code>,
+<code class="language-plaintext highlighter-rouge">argPersistThroughReset</code> and argExit bits. In general, the params parameter seems to be only saved and not used, except
+for internal action id <code class="language-plaintext highlighter-rouge">0x15</code> (external id <code class="language-plaintext highlighter-rouge">0x303</code>?), where it picks the first of one of the following parameters: <code class="language-plaintext highlighter-rouge">0x306</code>,
+<code class="language-plaintext highlighter-rouge">0x30C</code>, <code class="language-plaintext highlighter-rouge">0x809E</code> and changes an IO register write based on it.</p>
+
+<p>Decoding the <code class="language-plaintext highlighter-rouge">0x10</code> values on ACE2
+Afterwards, we proceeded to decode the actions available in our firmware based on the decompiled code. This is helpful if
+one wanted to analyze the firmware further.</p>
+
+<h3 id="action-types">Action Types</h3>
+
+<h4 id="type-1">Type 1</h4>
+
+<p>From our ACE firmware dump the following Type 1 actions are possible (if they were actually enabled but they aren’t). It
+is possible that this list may vary depending on the ACE firmware and variant pair.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[0] 0x203 - internal ID 0x5
+[1] 0x303 - internal ID 0x15
+[2] 0x803 - internal ID 0xB
+[3] 0x809 - internal ID 0xC
+(4-6) are not defined
+[7] 0x103 - Resolves to a General Action with an internal id of 0.
+</code></pre></div></div>
+
+<p>Note that in the case of the firmware we analyzed this exact action is available as a native Type 2 action and this
+Type 1 Action is not enabled.</p>
+
+<h4 id="type-2">Type 2</h4>
+
+<p>On our firmware dump the following General Actions with the given VDO argument map to the following internal General
+Action IDs:</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">0x106</code> with arg = <code class="language-plaintext highlighter-rouge">0x8001</code> maps to ID 2 (PMU reset + DFU hold)</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">0x105</code> with arg = <code class="language-plaintext highlighter-rouge">0x8000</code> maps to ID 1 (PMU reset)</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">0x103</code> with arg = <code class="language-plaintext highlighter-rouge">0x8000</code> maps to ID 0 (ACE GAID reset)</li>
+</ul>
+
+<p>Sending other arguments to known actions should have no effect.</p>
+
+<h4 id="type-3">Type 3</h4>
+
+<p>Mapping to internal IDs, again from ACE2:</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">0x606</code> - internal ID 2</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">0x206</code> - internal ID 8</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">0x304</code> - internal ID 9</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">0x203</code> - internal ID 5</li>
+</ul>
+
+<p>Dumping the raw table on your device</p>
+
+<p>It is possible to dump the AppleVDM table on any ACE and use the code above to decode it manually. This can be done by
+reading the <code class="language-plaintext highlighter-rouge">0x57</code> register.</p>
+
+<h2 id="protocol-summary">Protocol Summary</h2>
+
+<p>With the code above available, it is possible to finally sum up how this protocol works. All messages must come
+from <code class="language-plaintext highlighter-rouge">SOP'DBG</code> or <code class="language-plaintext highlighter-rouge">SOP''DBG</code>.</p>
+
+<h3 id="applevdm-0x10-get-action-list">AppleVDM 0x10: Get Action List</h3>
+
+<p>Input: { 0x5AC8010 }
+Reply: Shorts encoded using VDM (first short in high 16 bytes, second in low 16 bytes). Zero terminated.</p>
+
+<p>Example reply VDOs: <code class="language-plaintext highlighter-rouge">05020702 06060206 01060105 02030103 00000000</code></p>
+
+<h3 id="applevdm-0x11-get-action-info">AppleVDM 0x11: Get Action Info</h3>
+
+<p>Parameters:</p>
+
+<ul>
+  <li>uint16_t ActionId - specifies the action, taken from 0x10 reply
+Input: { <code class="language-plaintext highlighter-rouge">0x5AC8011</code>, ActionId }
+Reply: Shorts encoded using VDM (first short in high 16 bytes, second in low 16 bytes). Zero terminated.
+Example reply VDOs: <code class="language-plaintext highlighter-rouge">05010103 04090305 00000000</code>
+</li>
+</ul>
+
+<h3 id="applevdm-0x12-perform-action">AppleVDM <code class="language-plaintext highlighter-rouge">0x12</code>: Perform Action</h3>
+
+<p>Parameters:</p>
+
+<ul>
+  <li>uint16_t ActionId- specifies the action, taken from 0x10 reply</li>
+  <li>uint8_t Lines - bit mask of the lines on which the action should be muxed</li>
+  <li>bool TryToExitPrevious - the ACE will try to exit any conflicting modes</li>
+  <li>bool PersistSoftReset - the ACE will try to keep this mode active over a soft reset</li>
+  <li>bool Exit - instead of entering this mode, let’s exit it
+    <ul>
+      <li>Input:
+        <ul>
+          <li>0x5AC8012</li>
+          <li><code class="language-plaintext highlighter-rouge">(Exit &lt;&lt; 25) | (PersistSoftReset &lt;&lt; 24) | (TryToExitPrevious &lt;&lt; 23) | ((Lines &amp; 0x7F) &lt;&lt; 16) | ActionId }</code></li>
+        </ul>
+      </li>
+      <li>Output: Status of the currently active lines, encoded using 8 16-bit shorts (first short in high 16 bytes,
+second in low 16 bytes): first a packed value (ConnectionState « 14) | (LineState[i] « (2 * i)) for i
+between 0 and 7, exclusive), followed by 7 shorts which specify what action id is being muxed on the given line.
+ConnectionState can be 0 for disconnected, 1 or 2 for a standard connected device depending on the orientation and 3
+for audio and debug connections. LineState is a 2 bit value, which significance is not well known at the moment.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="concluding-remarks">Concluding Remarks</h2>
+
+<p>We have detailed the inner-workings of Apple’s proprietary USB Type-C Controller, termed ACE, and exposed the Vendor
+Defined Messages that are used to externally control these controllers over the USB-PD protocol, termed AppleVDM. We
+believe that further research in this area is crucial in exposing the hardware security mechanisms present on modern
+Apple devices.</p>
+
+      </section>
+    </div>
+  </body>
+</html>

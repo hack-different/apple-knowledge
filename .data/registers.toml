@@ -1,0 +1,2476 @@
+
+[aarch64.apple_system_registers.S3_0_c15_c0_0]
+description = ""
+name = "HID0"
+[aarch64.apple_system_registers.S3_0_c15_c0_1]
+description = ""
+name = "EHID0"
+[aarch64.apple_system_registers.S3_0_c15_c10_0]
+description = ""
+name = "HID10"
+[aarch64.apple_system_registers.S3_0_c15_c10_1]
+description = ""
+name = "EHID10"
+[aarch64.apple_system_registers.S3_0_c15_c11_0]
+description = ""
+name = "HID11"
+[aarch64.apple_system_registers.S3_0_c15_c11_1]
+description = ""
+name = "EHID11"
+[aarch64.apple_system_registers.S3_0_c15_c14_0]
+description = ""
+name = "HID13"
+[aarch64.apple_system_registers.S3_0_c15_c15_0]
+description = ""
+name = "HID14"
+[aarch64.apple_system_registers.S3_0_c15_c15_2]
+description = ""
+name = "HID16"
+[aarch64.apple_system_registers.S3_0_c15_c1_0]
+description = ""
+name = "HID1"
+[aarch64.apple_system_registers.S3_0_c15_c1_1]
+description = ""
+name = "EHID1"
+[aarch64.apple_system_registers.S3_0_c15_c2_0]
+description = ""
+name = "HID2"
+[aarch64.apple_system_registers.S3_0_c15_c2_1]
+description = ""
+name = "EHID2"
+[aarch64.apple_system_registers.S3_0_c15_c3_0]
+description = ""
+name = "HID3"
+[aarch64.apple_system_registers.S3_0_c15_c3_1]
+description = ""
+name = "EHID3"
+[aarch64.apple_system_registers.S3_0_c15_c4_0]
+description = ""
+name = "HID4"
+[aarch64.apple_system_registers.S3_0_c15_c4_1]
+description = ""
+name = "EHID4"
+[aarch64.apple_system_registers.S3_0_c15_c5_0]
+description = "L2 cache load/store prefetcher"
+name = "HID5"
+[aarch64.apple_system_registers.S3_0_c15_c5_1]
+description = ""
+name = "EHID5"
+[aarch64.apple_system_registers.S3_0_c15_c6_0]
+description = ""
+name = "HID6"
+[aarch64.apple_system_registers.S3_0_c15_c7_0]
+description = ""
+name = "L2_CRAMCONFIG"
+[aarch64.apple_system_registers.S3_0_c15_c8_0]
+description = ""
+name = "HID8"
+[aarch64.apple_system_registers.S3_0_c15_c9_0]
+description = ""
+name = "HID9"
+[aarch64.apple_system_registers.S3_1_c15_c0_0]
+description = "Apple Performance Monitor Control Register 0"
+name = "PMCR0"
+[aarch64.apple_system_registers.S3_1_c15_c10_0]
+description = ""
+name = "OPMSK1"
+[aarch64.apple_system_registers.S3_1_c15_c13_0]
+description = ""
+name = "PMSR"
+[aarch64.apple_system_registers.S3_1_c15_c1_0]
+description = "Controls which execution modes count events"
+name = "PMCR1"
+[aarch64.apple_system_registers.S3_1_c15_c2_0]
+description = "Controls watchpoint registers"
+name = "PMCR2"
+[aarch64.apple_system_registers.S3_1_c15_c3_0]
+description = "Controls breakpoints and address matching"
+name = "PMCR3"
+[aarch64.apple_system_registers.S3_1_c15_c4_0]
+description = "Controls opcode matching"
+name = "PMCR4"
+[aarch64.apple_system_registers.S3_1_c15_c5_0]
+description = ""
+name = "PMESR0"
+[aarch64.apple_system_registers.S3_1_c15_c6_0]
+description = ""
+name = "PMESR1"
+[aarch64.apple_system_registers.S3_1_c15_c7_0]
+description = ""
+name = "OPMAT0"
+[aarch64.apple_system_registers.S3_1_c15_c8_0]
+description = ""
+name = "OPMAT1"
+[aarch64.apple_system_registers.S3_1_c15_c9_0]
+description = ""
+name = "OPMSK0"
+[aarch64.apple_system_registers.S3_2_c15_c0_0]
+description = "48-bit cycles counter"
+name = "PMC0"
+[aarch64.apple_system_registers.S3_2_c15_c10_0]
+description = ""
+name = "PMC9"
+[aarch64.apple_system_registers.S3_2_c15_c12_0]
+description = ""
+name = "PMTRHLD6"
+[aarch64.apple_system_registers.S3_2_c15_c13_0]
+description = ""
+name = "PMTRHLD4"
+[aarch64.apple_system_registers.S3_2_c15_c14_0]
+description = ""
+name = "PMTRHLD2"
+[aarch64.apple_system_registers.S3_2_c15_c15_0]
+description = ""
+name = "PMMMAP"
+[aarch64.apple_system_registers.S3_2_c15_c1_0]
+description = "48-bit instructions counter"
+name = "PMC1"
+[aarch64.apple_system_registers.S3_2_c15_c2_0]
+description = ""
+name = "PMC2"
+[aarch64.apple_system_registers.S3_2_c15_c3_0]
+description = ""
+name = "PMC3"
+[aarch64.apple_system_registers.S3_2_c15_c4_0]
+description = ""
+name = "PMC4"
+[aarch64.apple_system_registers.S3_2_c15_c5_0]
+description = ""
+name = "PMC5"
+[aarch64.apple_system_registers.S3_2_c15_c6_0]
+description = ""
+name = "PMC6"
+[aarch64.apple_system_registers.S3_2_c15_c7_0]
+description = ""
+name = "PMC7"
+[aarch64.apple_system_registers.S3_2_c15_c9_0]
+description = ""
+name = "PMC8"
+[aarch64.apple_system_registers.S3_3_c15_c0_0]
+description = "LSU Error Status"
+name = "LSU_ERR_STS"
+[aarch64.apple_system_registers.S3_3_c15_c10_0]
+description = "LLC Error Information"
+name = "LLC_ERR_INF"
+[aarch64.apple_system_registers.S3_3_c15_c10_1]
+description = ""
+name = "L2E_ERR_INF"
+[aarch64.apple_system_registers.S3_3_c15_c1_0]
+description = "LSU Error Control"
+name = "LSU_ERR_CTL"
+[aarch64.apple_system_registers.S3_3_c15_c2_0]
+description = "LSU Error Status"
+name = "E_LSU_ERR_STS"
+[aarch64.apple_system_registers.S3_3_c15_c7_0]
+description = "LSU Error Status"
+name = "L2_CRAMCONFIG"
+[aarch64.apple_system_registers.S3_3_c15_c8_0]
+description = "LLC Error Status"
+name = "LLC_ERR_STS"
+[aarch64.apple_system_registers.S3_3_c15_c8_1]
+description = ""
+name = "L2E_ERR_STS"
+[aarch64.apple_system_registers.S3_3_c15_c9_0]
+description = "LLC Error Address"
+name = "LLC_ERR_ADR"
+[aarch64.apple_system_registers.S3_3_c15_c9_1]
+description = ""
+name = "L2E_ERR_ADR"
+[aarch64.apple_system_registers.S3_4_c15_c0_0]
+description = "FED Error Status"
+name = "FED_ERR_STS"
+[aarch64.apple_system_registers.S3_4_c15_c0_2]
+description = "FED Error Status"
+name = "E_FED_ERR_STS"
+[aarch64.apple_system_registers.S3_4_c15_c0_4]
+description = ""
+name = "APCTL_EL1/MIGSTS"
+[aarch64.apple_system_registers.S3_4_c15_c11_0]
+description = ""
+name = "ACC_CTRR_A_LWR_EL2"
+[aarch64.apple_system_registers.S3_4_c15_c11_1]
+description = ""
+name = "ACC_CTRR_A_UPR_EL2"
+[aarch64.apple_system_registers.S3_4_c15_c11_4]
+description = ""
+name = "ACC_CTRR_CTL_EL2"
+[aarch64.apple_system_registers.S3_4_c15_c11_5]
+description = ""
+name = "ACC_CTRR_LOCK_EL2"
+[aarch64.apple_system_registers.S3_4_c15_c1_0]
+description = "PAC Kernel Key (bits[63:0])"
+name = "KERNELKEYLO_EL1"
+[aarch64.apple_system_registers.S3_4_c15_c1_1]
+description = "PAC Kernel Key (bits[127:64])"
+name = "KERNELKEYHI_EL1"
+[aarch64.apple_system_registers.S3_4_c15_c1_2]
+description = "VMSA Lock"
+name = "VMSA_LOCK_EL1"
+[aarch64.apple_system_registers.S3_4_c15_c1_6]
+description = "CTRR Upper Range B"
+name = "CTRR_B_UPR_EL1"
+[aarch64.apple_system_registers.S3_4_c15_c1_7]
+description = "CTRR Lower Range B"
+name = "CTRR_B_LWR_EL1"
+[aarch64.apple_system_registers.S3_4_c15_c2_0]
+description = "APRR Register 0"
+name = "APRR_0"
+[aarch64.apple_system_registers.S3_4_c15_c2_1]
+description = "APRR Register 1"
+name = "APRR_1"
+[aarch64.apple_system_registers.S3_4_c15_c2_2]
+description = "CTRR Lockdown"
+name = "CTRR_LOCK"
+[aarch64.apple_system_registers.S3_4_c15_c2_3]
+description = "CTRR Lower Range"
+name = "CTRR_A_LWR_EL1"
+[aarch64.apple_system_registers.S3_4_c15_c2_4]
+description = "CTRR Upper Range"
+name = "CTRR_A_UPR_EL1"
+[aarch64.apple_system_registers.S3_4_c15_c2_5]
+description = "CTRR Control Register"
+name = "CTRR_CTL_EL1"
+[aarch64.apple_system_registers.S3_4_c15_c2_6]
+description = "APRR Register 6"
+name = "APRR_6"
+[aarch64.apple_system_registers.S3_4_c15_c2_7]
+description = "APRR Register 7"
+name = "APRR_7"
+[aarch64.apple_system_registers.S3_5_c15_c0_0]
+description = ""
+name = "IPI_RR_LOCAL"
+[aarch64.apple_system_registers.S3_5_c15_c0_1]
+description = ""
+name = "IPI_RR_GLOBAL"
+[aarch64.apple_system_registers.S3_5_c15_c0_5]
+description = ""
+name = "DPC_ERR_STS"
+[aarch64.apple_system_registers.S3_5_c15_c1_1]
+description = ""
+name = "IPI_SR"
+[aarch64.apple_system_registers.S3_5_c15_c3_1]
+description = ""
+name = "IPI_CR"
+[aarch64.apple_system_registers.S3_5_c15_c4_0]
+description = ""
+name = "ACC_CFG/CYC_CFG"
+[aarch64.apple_system_registers.S3_5_c15_c5_0]
+description = ""
+name = "CYC_OVRD"
+[aarch64.apple_system_registers.S3_5_c15_c6_0]
+description = ""
+name = "ACC_OVRD"
+[aarch64.apple_system_registers.S3_5_c15_c6_1]
+description = ""
+name = "ACC_EBLK_OVRD"
+[aarch64.apple_system_registers.S3_6_c15_c0_0]
+description = "MMU Error Status"
+name = "MMU_ERR_STS"
+[aarch64.apple_system_registers.S3_6_c15_c12_4]
+description = ""
+name = "APSTS_EL1"
+[aarch64.apple_system_registers.S3_6_c15_c2_0]
+description = "MMU Error Status"
+name = "E_MMU_ERR_STS"
+[aarch64.apple_system_registers.S3_7_c15_c0_4]
+description = "Controls which counters are enabled and how interrupts are generated for overflows"
+name = "UPMCR0"
+[aarch64.apple_system_registers.S3_7_c15_c0_5]
+description = ""
+name = "UPMC8"
+[aarch64.apple_system_registers.S3_7_c15_c10_4]
+description = ""
+name = "UPMC3"
+[aarch64.apple_system_registers.S3_7_c15_c11_4]
+description = ""
+name = "UPMC4"
+[aarch64.apple_system_registers.S3_7_c15_c11_5]
+description = "Event selection register for counters 8-15"
+name = "UPMESR1"
+[aarch64.apple_system_registers.S3_7_c15_c12_4]
+description = ""
+name = "UPMC5"
+[aarch64.apple_system_registers.S3_7_c15_c13_4]
+description = ""
+name = "UPMC6"
+[aarch64.apple_system_registers.S3_7_c15_c14_4]
+description = ""
+name = "UPMC7"
+[aarch64.apple_system_registers.S3_7_c15_c1_4]
+description = "Event selection register for counters 0-7"
+name = "UPMESR0"
+[aarch64.apple_system_registers.S3_7_c15_c1_5]
+description = ""
+name = "UPMC9"
+[aarch64.apple_system_registers.S3_7_c15_c2_5]
+description = ""
+name = "UPMC10"
+[aarch64.apple_system_registers.S3_7_c15_c3_4]
+description = "Event core masks for counters 0-3"
+name = "UPMECM0"
+[aarch64.apple_system_registers.S3_7_c15_c3_5]
+description = ""
+name = "UPMC11"
+[aarch64.apple_system_registers.S3_7_c15_c4_4]
+description = "Event core masks for counters 4-7"
+name = "UPMECM1"
+[aarch64.apple_system_registers.S3_7_c15_c4_5]
+description = ""
+name = "UPMC12"
+[aarch64.apple_system_registers.S3_7_c15_c5_4]
+description = ""
+name = "UPMPCM"
+[aarch64.apple_system_registers.S3_7_c15_c5_5]
+description = ""
+name = "UPMC13"
+[aarch64.apple_system_registers.S3_7_c15_c6_4]
+description = ""
+name = "UPMSR"
+[aarch64.apple_system_registers.S3_7_c15_c6_5]
+description = ""
+name = "UPMC14"
+[aarch64.apple_system_registers.S3_7_c15_c7_4]
+description = ""
+name = "UPMC0"
+[aarch64.apple_system_registers.S3_7_c15_c7_5]
+description = ""
+name = "UPMC15"
+[aarch64.apple_system_registers.S3_7_c15_c8_4]
+description = ""
+name = "UPMC1"
+[aarch64.apple_system_registers.S3_7_c15_c8_5]
+description = "Event core masks for counters 8-11"
+name = "UPMECM2"
+[aarch64.apple_system_registers.S3_7_c15_c9_4]
+description = ""
+name = "UPMC2"
+[aarch64.apple_system_registers.S3_7_c15_c9_5]
+description = "Event core masks for counters 12-15"
+name = "UPMECM3"
+[aarch64.msr.S1_0_c7_c10_2]
+description = "Data or unified Cache line Clean by Set/Way"
+name = "DC CSW"
+[aarch64.msr.S1_0_c7_c10_4]
+description = "Data, Allocation Tag or unified Cache line Clean of Allocation Tags by Set/Way"
+name = "DC CGSW"
+[aarch64.msr.S1_0_c7_c10_6]
+description = "Data, Allocation Tag or unified Cache line Clean of Data and Allocation Tags by Set/Way"
+name = "DC CGDSW"
+[aarch64.msr.S1_0_c7_c14_2]
+description = "Data or unified Cache line Clean and Invalidate by Set/Way"
+name = "DC CISW"
+[aarch64.msr.S1_0_c7_c14_4]
+description = "Data, Allocation Tag or unified Cache line Clean and Invalidate of Allocation Tags by Set/Way"
+name = "DC CIGSW"
+[aarch64.msr.S1_0_c7_c14_6]
+description = "Data, Allocation Tag or unified Cache line Clean and Invalidate of Data and Allocation Tags by Set/Way"
+name = "DC CIGDSW"
+[aarch64.msr.S1_0_c7_c1_0]
+description = "Instruction Cache Invalidate All to PoU, Inner Shareable"
+name = "IC IALLUIS"
+[aarch64.msr.S1_0_c7_c5_0]
+description = "Instruction Cache Invalidate All to PoU"
+name = "IC IALLU"
+[aarch64.msr.S1_0_c7_c6_1]
+description = "Data or unified Cache line Invalidate by VA to PoC"
+name = "DC IVAC"
+[aarch64.msr.S1_0_c7_c6_2]
+description = "Data or unified Cache line Invalidate by Set/Way"
+name = "DC ISW"
+[aarch64.msr.S1_0_c7_c6_3]
+description = "Data, Allocation Tag or unified Cache line Invalidate of Allocation Tags by VA to PoC"
+name = "DC IGVAC"
+[aarch64.msr.S1_0_c7_c6_4]
+description = "Data, Allocation Tag or unified Cache line Invalidate of Allocation Tags by Set/Way"
+name = "DC IGSW"
+[aarch64.msr.S1_0_c7_c6_5]
+description = "Data, Allocation Tag or unified Cache line Invalidate of Allocation Tags by VA to PoC"
+name = "DC IGDVAC"
+[aarch64.msr.S1_0_c7_c6_6]
+description = "Data, Allocation Tag or unified Cache line Invalidate of Data and Allocation Tags by Set/Way"
+name = "DC IGDSW"
+[aarch64.msr.S1_0_c7_c8_0]
+description = "Address Translate Stage 1 EL1 Read"
+name = "AT S1E1R"
+[aarch64.msr.S1_0_c7_c8_1]
+description = "Address Translate Stage 1 EL1 Write"
+name = "AT S1E1W"
+[aarch64.msr.S1_0_c7_c8_2]
+description = "Address Translate Stage 1 EL0 Read"
+name = "AT S1E0R"
+[aarch64.msr.S1_0_c7_c8_3]
+description = "Address Translate Stage 1 EL0 Write"
+name = "AT S1E0W"
+[aarch64.msr.S1_0_c7_c9_0]
+description = "Address Translate Stage 1 EL1 Read PAN"
+name = "AT S1E1RP"
+[aarch64.msr.S1_0_c7_c9_1]
+description = "Address Translate Stage 1 EL1 Write PAN"
+name = "AT S1E1WP"
+[aarch64.msr.S1_0_c8_c1_0]
+description = "TLB Invalidate by VMID, All at stage 1, EL1, Outer Shareable"
+name = "TLBI VMALLE1OS"
+[aarch64.msr.S1_0_c8_c1_1]
+description = "TLB Invalidate by VA, EL1, Outer Shareable"
+name = "TLBI VAE1OS"
+[aarch64.msr.S1_0_c8_c1_2]
+description = "TLB Invalidate by ASID, EL1, Outer Shareable"
+name = "TLBI ASIDE1OS"
+[aarch64.msr.S1_0_c8_c1_3]
+description = "TLB Invalidate by VA, All ASID, EL1, Outer Shareable"
+name = "TLBI VAAE1OS"
+[aarch64.msr.S1_0_c8_c1_5]
+description = "TLB Invalidate by VA, Last level, EL1, Outer Shareable"
+name = "TLBI VALE1OS"
+[aarch64.msr.S1_0_c8_c1_7]
+description = "TLB Invalidate by VA, All ASID, Last Level, EL1, Outer Shareable"
+name = "TLBI VAALE1OS"
+[aarch64.msr.S1_0_c8_c2_1]
+description = "TLB Range Invalidate by VA, EL1, Inner Shareable"
+name = "TLBI RVAE1IS"
+[aarch64.msr.S1_0_c8_c2_3]
+description = "TLB Range Invalidate by VA, All ASID, EL1, Inner Shareable"
+name = "TLBI RVAAE1IS"
+[aarch64.msr.S1_0_c8_c2_5]
+description = "TLB Range Invalidate by VA, Last level, EL1, Inner Shareable"
+name = "TLBI RVALE1IS"
+[aarch64.msr.S1_0_c8_c2_7]
+description = "TLB Range Invalidate by VA, All ASID, Last Level, EL1, Inner Shareable"
+name = "TLBI RVAALE1IS"
+[aarch64.msr.S1_0_c8_c3_0]
+description = "TLB Invalidate by VMID, All at stage 1, EL1, Inner Shareable"
+name = "TLBI VMALLE1IS"
+[aarch64.msr.S1_0_c8_c3_1]
+description = "TLB Invalidate by VA, EL1, Inner Shareable"
+name = "TLBI VAE1IS"
+[aarch64.msr.S1_0_c8_c3_2]
+description = "TLB Invalidate by ASID, EL1, Inner Shareable"
+name = "TLBI ASIDE1IS"
+[aarch64.msr.S1_0_c8_c3_3]
+description = "TLB Invalidate by VA, All ASID, EL1, Inner Shareable"
+name = "TLBI VAAE1IS"
+[aarch64.msr.S1_0_c8_c3_5]
+description = "TLB Invalidate by VA, Last level, EL1, Inner Shareable"
+name = "TLBI VALE1IS"
+[aarch64.msr.S1_0_c8_c3_7]
+description = "TLB Invalidate by VA, All ASID, Last Level, EL1, Inner Shareable"
+name = "TLBI VAALE1IS"
+[aarch64.msr.S1_0_c8_c5_1]
+description = "TLB Range Invalidate by VA, EL1, Outer Shareable"
+name = "TLBI RVAE1OS"
+[aarch64.msr.S1_0_c8_c5_3]
+description = "TLB Range Invalidate by VA, All ASID, EL1, Outer Shareable"
+name = "TLBI RVAAE1OS"
+[aarch64.msr.S1_0_c8_c5_5]
+description = "TLB Range Invalidate by VA, Last level, EL1, Outer Shareable"
+name = "TLBI RVALE1OS"
+[aarch64.msr.S1_0_c8_c5_7]
+description = "TLB Range Invalidate by VA, All ASID, Last Level, EL1, Outer Shareable"
+name = "TLBI RVAALE1OS"
+[aarch64.msr.S1_0_c8_c6_1]
+description = "TLB Range Invalidate by VA, EL1"
+name = "TLBI RVAE1"
+[aarch64.msr.S1_0_c8_c6_3]
+description = "TLB Range Invalidate by VA, All ASID, EL1"
+name = "TLBI RVAAE1"
+[aarch64.msr.S1_0_c8_c6_5]
+description = "TLB Range Invalidate by VA, Last level, EL1"
+name = "TLBI RVALE1"
+[aarch64.msr.S1_0_c8_c6_7]
+description = "TLB Range Invalidate by VA, All ASID, Last level, EL1"
+name = "TLBI RVAALE1"
+[aarch64.msr.S1_0_c8_c7_0]
+description = "TLB Invalidate by VMID, All at stage 1, EL1"
+name = "TLBI VMALLE1"
+[aarch64.msr.S1_0_c8_c7_1]
+description = "TLB Invalidate by VA, EL1"
+name = "TLBI VAE1"
+[aarch64.msr.S1_0_c8_c7_2]
+description = "TLB Invalidate by ASID, EL1"
+name = "TLBI ASIDE1"
+[aarch64.msr.S1_0_c8_c7_3]
+description = "TLB Invalidate by VA, All ASID, EL1"
+name = "TLBI VAAE1"
+[aarch64.msr.S1_0_c8_c7_5]
+description = "TLB Invalidate by VA, Last level, EL1"
+name = "TLBI VALE1"
+[aarch64.msr.S1_0_c8_c7_7]
+description = "TLB Invalidate by VA, All ASID, Last level, EL1"
+name = "TLBI VAALE1"
+[aarch64.msr.S1_3_c7_c10_1]
+description = "Data or unified Cache line Clean by VA to PoC"
+name = "DC CVAC"
+[aarch64.msr.S1_3_c7_c10_3]
+description = "Data, Allocation Tag or unified Cache line Clean of Allocation Tags by VA to PoC"
+name = "DC CGVAC"
+[aarch64.msr.S1_3_c7_c10_5]
+description = "Data, Allocation Tag or unified Cache line Clean of Allocation Tags by VA to PoC"
+name = "DC CGDVAC"
+[aarch64.msr.S1_3_c7_c11_1]
+description = "Data or unified Cache line Clean by VA to PoU"
+name = "DC CVAU"
+[aarch64.msr.S1_3_c7_c12_1]
+description = "Data or unified Cache line Clean by VA to PoP"
+name = "DC CVAP"
+[aarch64.msr.S1_3_c7_c12_3]
+description = "Data, Allocation Tag or unified Cache line Clean of Allocation Tags by VA to PoP"
+name = "DC CGVAP"
+[aarch64.msr.S1_3_c7_c12_5]
+description = "Data, Allocation Tag or unified Cache line Clean of Data and Allocation Tags by VA to PoP"
+name = "DC CGDVAP"
+[aarch64.msr.S1_3_c7_c13_1]
+description = "Data or unified Cache line Clean by VA to PoDP"
+name = "DC CVADP"
+[aarch64.msr.S1_3_c7_c13_3]
+description = "Clean of Allocation Tags by VA to PoDP"
+name = "DC CGVADP"
+[aarch64.msr.S1_3_c7_c13_5]
+description = "Data, Allocation Tag or unified Cache line Clean of Allocation Tags by VA to PoDP"
+name = "DC CGDVADP"
+[aarch64.msr.S1_3_c7_c14_1]
+description = "Data or unified Cache line Clean and Invalidate by VA to PoC"
+name = "DC CIVAC"
+[aarch64.msr.S1_3_c7_c14_3]
+description = "Data, Allocation Tag or unified Cache line Clean and Invalidate of Allocation Tags by VA to PoC"
+name = "DC CIGVAC"
+[aarch64.msr.S1_3_c7_c14_5]
+description = "Data, Allocation Tag or unified Cache line Clean and Invalidate of Data and Allocation Tags by VA to PoC"
+name = "DC CIGDVAC"
+[aarch64.msr.S1_3_c7_c3_4]
+description = "Control Flow Prediction Restriction by Context"
+name = "CFP RCTX"
+[aarch64.msr.S1_3_c7_c3_5]
+description = "Data Value Prediction Restriction by Context"
+name = "DVP RCTX"
+[aarch64.msr.S1_3_c7_c3_7]
+description = "Cache Prefetch Prediction Restriction by Context"
+name = "CPP RCTX"
+[aarch64.msr.S1_3_c7_c4_1]
+description = "Data Cache Zero by VA"
+name = "DC ZVA"
+[aarch64.msr.S1_3_c7_c4_3]
+description = "Data Cache set Allocation Tag by VA"
+name = "DC GVA"
+[aarch64.msr.S1_3_c7_c4_4]
+description = "Data Cache set Allocation Tags and Zero by VA"
+name = "DC GZVA"
+[aarch64.msr.S1_3_c7_c5_1]
+description = "Instruction Cache line Invalidate by VA to PoU"
+name = "IC IVAU"
+[aarch64.msr.S1_4_c7_c8_0]
+description = "Address Translate Stage 1 EL2 Read"
+name = "AT S1E2R"
+[aarch64.msr.S1_4_c7_c8_1]
+description = "Address Translate Stage 1 EL2 Write"
+name = "AT S1E2W"
+[aarch64.msr.S1_4_c7_c8_4]
+description = "Address Translate Stages 1 and 2 EL1 Read"
+name = "AT S12E1R"
+[aarch64.msr.S1_4_c7_c8_5]
+description = "Address Translate Stages 1 and 2 EL1 Write"
+name = "AT S12E1W"
+[aarch64.msr.S1_4_c7_c8_6]
+description = "Address Translate Stages 1 and 2 EL0 Read"
+name = "AT S12E0R"
+[aarch64.msr.S1_4_c7_c8_7]
+description = "Address Translate Stages 1 and 2 EL0 Write"
+name = "AT S12E0W"
+[aarch64.msr.S1_4_c8_c0_1]
+description = "TLB Invalidate by Intermediate Physical Address, Stage 2, EL1, Inner Shareable"
+name = "TLBI IPAS2E1IS"
+[aarch64.msr.S1_4_c8_c0_2]
+description = "TLB Range Invalidate by Intermediate Physical Address, Stage 2, EL1, Inner Shareable"
+name = "TLBI RIPAS2E1IS"
+[aarch64.msr.S1_4_c8_c0_5]
+description = "TLB Invalidate by Intermediate Physical Address, Stage 2, Last level, EL1, Inner Shareable"
+name = "TLBI IPAS2LE1IS"
+[aarch64.msr.S1_4_c8_c0_6]
+description = "TLB Range Invalidate by Intermediate Physical Address, Stage 2, Last level, EL1, Inner Shareable"
+name = "TLBI RIPAS2LE1IS"
+[aarch64.msr.S1_4_c8_c1_0]
+description = "TLB Invalidate All, EL2, Outer Shareable"
+name = "TLBI ALLE2OS"
+[aarch64.msr.S1_4_c8_c1_1]
+description = "TLB Invalidate by VA, EL2, Outer Shareable"
+name = "TLBI VAE2OS"
+[aarch64.msr.S1_4_c8_c1_4]
+description = "TLB Invalidate All, EL1, Outer Shareable"
+name = "TLBI ALLE1OS"
+[aarch64.msr.S1_4_c8_c1_5]
+description = "TLB Invalidate by VA, Last level, EL2, Outer Shareable"
+name = "TLBI VALE2OS"
+[aarch64.msr.S1_4_c8_c1_6]
+description = "TLB Invalidate by VMID, All at Stage 1 and 2, EL1, Outer Shareable"
+name = "TLBI VMALLS12E1OS"
+[aarch64.msr.S1_4_c8_c2_1]
+description = "TLB Range Invalidate by VA, EL2, Inner Shareable"
+name = "TLBI RVAE2IS"
+[aarch64.msr.S1_4_c8_c2_5]
+description = "TLB Range Invalidate by VA, Last level, EL2, Inner Shareable"
+name = "TLBI RVALE2IS"
+[aarch64.msr.S1_4_c8_c3_0]
+description = "TLB Invalidate All, EL2, Inner Shareable"
+name = "TLBI ALLE2IS"
+[aarch64.msr.S1_4_c8_c3_1]
+description = "TLB Invalidate by VA, EL2, Inner Shareable"
+name = "TLBI VAE2IS"
+[aarch64.msr.S1_4_c8_c3_4]
+description = "TLB Invalidate All, EL1, Inner Shareable"
+name = "TLBI ALLE1IS"
+[aarch64.msr.S1_4_c8_c3_5]
+description = "TLB Invalidate by VA, Last level, EL2, Inner Shareable"
+name = "TLBI VALE2IS"
+[aarch64.msr.S1_4_c8_c3_6]
+description = "TLB Invalidate by VMID, All at Stage 1 and 2, EL1, Inner Shareable"
+name = "TLBI VMALLS12E1IS"
+[aarch64.msr.S1_4_c8_c4_0]
+description = "TLB Invalidate by Intermediate Physical Address, Stage 2, EL1, Outer Shareable"
+name = "TLBI IPAS2E1OS"
+[aarch64.msr.S1_4_c8_c4_1]
+description = "TLB Invalidate by Intermediate Physical Address, Stage 2, EL1"
+name = "TLBI IPAS2E1"
+[aarch64.msr.S1_4_c8_c4_2]
+description = "TLB Range Invalidate by Intermediate Physical Address, Stage 2, EL1"
+name = "TLBI RIPAS2E1"
+[aarch64.msr.S1_4_c8_c4_3]
+description = "TLB Range Invalidate by Intermediate Physical Address, Stage 2, EL1, Outer Shareable"
+name = "TLBI RIPAS2E1OS"
+[aarch64.msr.S1_4_c8_c4_4]
+description = "TLB Invalidate by Intermediate Physical Address, Stage 2, Last level, EL1, Outer Shareable"
+name = "TLBI IPAS2LE1OS"
+[aarch64.msr.S1_4_c8_c4_5]
+description = "TLB Invalidate by Intermediate Physical Address, Stage 2, Last level, EL1"
+name = "TLBI IPAS2LE1"
+[aarch64.msr.S1_4_c8_c4_6]
+description = "TLB Range Invalidate by Intermediate Physical Address, Stage 2, Last level, EL1"
+name = "TLBI RIPAS2LE1"
+[aarch64.msr.S1_4_c8_c4_7]
+description = "TLB Range Invalidate by Intermediate Physical Address, Stage 2, Last level, EL1, Outer Shareable"
+name = "TLBI RIPAS2LE1OS"
+[aarch64.msr.S1_4_c8_c5_1]
+description = "TLB Range Invalidate by VA, EL2, Outer Shareable"
+name = "TLBI RVAE2OS"
+[aarch64.msr.S1_4_c8_c5_5]
+description = "TLB Range Invalidate by VA, Last level, EL2, Outer Shareable"
+name = "TLBI RVALE2OS"
+[aarch64.msr.S1_4_c8_c6_1]
+description = "TLB Range Invalidate by VA, EL2"
+name = "TLBI RVAE2"
+[aarch64.msr.S1_4_c8_c6_5]
+description = "TLB Range Invalidate by VA, Last level, EL2"
+name = "TLBI RVALE2"
+[aarch64.msr.S1_4_c8_c7_0]
+description = "TLB Invalidate All, EL2"
+name = "TLBI ALLE2"
+[aarch64.msr.S1_4_c8_c7_1]
+description = "TLB Invalidate by VA, EL2"
+name = "TLBI VAE2"
+[aarch64.msr.S1_4_c8_c7_4]
+description = "TLB Invalidate All, EL1"
+name = "TLBI ALLE1"
+[aarch64.msr.S1_4_c8_c7_5]
+description = "TLB Invalidate by VA, Last level, EL2"
+name = "TLBI VALE2"
+[aarch64.msr.S1_4_c8_c7_6]
+description = "TLB Invalidate by VMID, All at Stage 1 and 2, EL1"
+name = "TLBI VMALLS12E1"
+[aarch64.msr.S1_6_c7_c8_0]
+description = "Address Translate Stage 1 EL3 Read"
+name = "AT S1E3R"
+[aarch64.msr.S1_6_c7_c8_1]
+description = "Address Translate Stage 1 EL3 Write"
+name = "AT S1E3W"
+[aarch64.msr.S1_6_c8_c1_0]
+description = "TLB Invalidate All, EL3, Outer Shareable"
+name = "TLBI ALLE3OS"
+[aarch64.msr.S1_6_c8_c1_1]
+description = "TLB Invalidate by VA, EL3, Outer Shareable"
+name = "TLBI VAE3OS"
+[aarch64.msr.S1_6_c8_c1_5]
+description = "TLB Invalidate by VA, Last level, EL3, Outer Shareable"
+name = "TLBI VALE3OS"
+[aarch64.msr.S1_6_c8_c2_1]
+description = "TLB Range Invalidate by VA, EL3, Inner Shareable"
+name = "TLBI RVAE3IS"
+[aarch64.msr.S1_6_c8_c2_5]
+description = "TLB Range Invalidate by VA, Last level, EL3, Inner Shareable"
+name = "TLBI RVALE3IS"
+[aarch64.msr.S1_6_c8_c3_0]
+description = "TLB Invalidate All, EL3, Inner Shareable"
+name = "TLBI ALLE3IS"
+[aarch64.msr.S1_6_c8_c3_1]
+description = "TLB Invalidate by VA, EL3, Inner Shareable"
+name = "TLBI VAE3IS"
+[aarch64.msr.S1_6_c8_c3_5]
+description = "TLB Invalidate by VA, Last level, EL3, Inner Shareable"
+name = "TLBI VALE3IS"
+[aarch64.msr.S1_6_c8_c5_1]
+description = "TLB Range Invalidate by VA, EL3, Outer Shareable"
+name = "TLBI RVAE3OS"
+[aarch64.msr.S1_6_c8_c5_5]
+description = "TLB Range Invalidate by VA, Last level, EL3, Outer Shareable"
+name = "TLBI RVALE3OS"
+[aarch64.msr.S1_6_c8_c6_1]
+description = "TLB Range Invalidate by VA, EL3"
+name = "TLBI RVAE3"
+[aarch64.msr.S1_6_c8_c6_5]
+description = "TLB Range Invalidate by VA, Last level, EL3"
+name = "TLBI RVALE3"
+[aarch64.msr.S1_6_c8_c7_0]
+description = "TLB Invalidate All, EL3"
+name = "TLBI ALLE3"
+[aarch64.msr.S1_6_c8_c7_1]
+description = "TLB Invalidate by VA, EL3"
+name = "TLBI VAE3"
+[aarch64.msr.S1_6_c8_c7_5]
+description = "TLB Invalidate by VA, Last level, EL3"
+name = "TLBI VALE3"
+[aarch64.msr.S2_0_c0_c0_2]
+description = "OS Lock Data Transfer Register, Receive"
+name = "OSDTRRX_EL1"
+[aarch64.msr.S2_0_c0_c0_4]
+description = "Debug Breakpoint Value Register 0"
+name = "DBGBVR0_EL1"
+[aarch64.msr.S2_0_c0_c0_5]
+description = "Debug Breakpoint Control Register 0"
+name = "DBGBCR0_EL1"
+[aarch64.msr.S2_0_c0_c0_6]
+description = "Debug Watchpoint Value Register 0"
+name = "DBGWVR0_EL1"
+[aarch64.msr.S2_0_c0_c0_7]
+description = "Debug Watchpoint Control Register 0"
+name = "DBGWCR0_EL1"
+[aarch64.msr.S2_0_c0_c10_4]
+description = "Debug Breakpoint Value Register 10"
+name = "DBGBVR10_EL1"
+[aarch64.msr.S2_0_c0_c10_5]
+description = "Debug Breakpoint Control Register 10"
+name = "DBGBCR10_EL1"
+[aarch64.msr.S2_0_c0_c10_6]
+description = "Debug Watchpoint Value Register 10"
+name = "DBGWVR10_EL1"
+[aarch64.msr.S2_0_c0_c10_7]
+description = "Debug Watchpoint Control Register 10"
+name = "DBGWCR10_EL1"
+[aarch64.msr.S2_0_c0_c11_4]
+description = "Debug Breakpoint Value Register 11"
+name = "DBGBVR11_EL1"
+[aarch64.msr.S2_0_c0_c11_5]
+description = "Debug Breakpoint Control Register 11"
+name = "DBGBCR11_EL1"
+[aarch64.msr.S2_0_c0_c11_6]
+description = "Debug Watchpoint Value Register 11"
+name = "DBGWVR11_EL1"
+[aarch64.msr.S2_0_c0_c11_7]
+description = "Debug Watchpoint Control Register 11"
+name = "DBGWCR11_EL1"
+[aarch64.msr.S2_0_c0_c12_4]
+description = "Debug Breakpoint Value Register 12"
+name = "DBGBVR12_EL1"
+[aarch64.msr.S2_0_c0_c12_5]
+description = "Debug Breakpoint Control Register 12"
+name = "DBGBCR12_EL1"
+[aarch64.msr.S2_0_c0_c12_6]
+description = "Debug Watchpoint Value Register 12"
+name = "DBGWVR12_EL1"
+[aarch64.msr.S2_0_c0_c12_7]
+description = "Debug Watchpoint Control Register 12"
+name = "DBGWCR12_EL1"
+[aarch64.msr.S2_0_c0_c13_4]
+description = "Debug Breakpoint Value Register 13"
+name = "DBGBVR13_EL1"
+[aarch64.msr.S2_0_c0_c13_5]
+description = "Debug Breakpoint Control Register 13"
+name = "DBGBCR13_EL1"
+[aarch64.msr.S2_0_c0_c13_6]
+description = "Debug Watchpoint Value Register 13"
+name = "DBGWVR13_EL1"
+[aarch64.msr.S2_0_c0_c13_7]
+description = "Debug Watchpoint Control Register 13"
+name = "DBGWCR13_EL1"
+[aarch64.msr.S2_0_c0_c14_4]
+description = "Debug Breakpoint Value Register 14"
+name = "DBGBVR14_EL1"
+[aarch64.msr.S2_0_c0_c14_5]
+description = "Debug Breakpoint Control Register 14"
+name = "DBGBCR14_EL1"
+[aarch64.msr.S2_0_c0_c14_6]
+description = "Debug Watchpoint Value Register 14"
+name = "DBGWVR14_EL1"
+[aarch64.msr.S2_0_c0_c14_7]
+description = "Debug Watchpoint Control Register 14"
+name = "DBGWCR14_EL1"
+[aarch64.msr.S2_0_c0_c15_4]
+description = "Debug Breakpoint Value Register 15"
+name = "DBGBVR15_EL1"
+[aarch64.msr.S2_0_c0_c15_5]
+description = "Debug Breakpoint Control Register 15"
+name = "DBGBCR15_EL1"
+[aarch64.msr.S2_0_c0_c15_6]
+description = "Debug Watchpoint Value Register 15"
+name = "DBGWVR15_EL1"
+[aarch64.msr.S2_0_c0_c15_7]
+description = "Debug Watchpoint Control Register 15"
+name = "DBGWCR15_EL1"
+[aarch64.msr.S2_0_c0_c1_4]
+description = "Debug Breakpoint Value Register 1"
+name = "DBGBVR1_EL1"
+[aarch64.msr.S2_0_c0_c1_5]
+description = "Debug Breakpoint Control Register 1"
+name = "DBGBCR1_EL1"
+[aarch64.msr.S2_0_c0_c1_6]
+description = "Debug Watchpoint Value Register 1"
+name = "DBGWVR1_EL1"
+[aarch64.msr.S2_0_c0_c1_7]
+description = "Debug Watchpoint Control Register 1"
+name = "DBGWCR1_EL1"
+[aarch64.msr.S2_0_c0_c2_0]
+description = "Monitor DCC Interrupt Enable Register"
+name = "MDCCINT_EL1"
+[aarch64.msr.S2_0_c0_c2_2]
+description = "Monitor Debug System Control Register"
+name = "MDSCR_EL1"
+[aarch64.msr.S2_0_c0_c2_4]
+description = "Debug Breakpoint Value Register 2"
+name = "DBGBVR2_EL1"
+[aarch64.msr.S2_0_c0_c2_5]
+description = "Debug Breakpoint Control Register 2"
+name = "DBGBCR2_EL1"
+[aarch64.msr.S2_0_c0_c2_6]
+description = "Debug Watchpoint Value Register 2"
+name = "DBGWVR2_EL1"
+[aarch64.msr.S2_0_c0_c2_7]
+description = "Debug Watchpoint Control Register 2"
+name = "DBGWCR2_EL1"
+[aarch64.msr.S2_0_c0_c3_2]
+description = "OS Lock Data Transfer Register, Transmit"
+name = "OSDTRTX_EL1"
+[aarch64.msr.S2_0_c0_c3_4]
+description = "Debug Breakpoint Value Register 3"
+name = "DBGBVR3_EL1"
+[aarch64.msr.S2_0_c0_c3_5]
+description = "Debug Breakpoint Control Register 3"
+name = "DBGBCR3_EL1"
+[aarch64.msr.S2_0_c0_c3_6]
+description = "Debug Watchpoint Value Register 3"
+name = "DBGWVR3_EL1"
+[aarch64.msr.S2_0_c0_c3_7]
+description = "Debug Watchpoint Control Register 3"
+name = "DBGWCR3_EL1"
+[aarch64.msr.S2_0_c0_c4_4]
+description = "Debug Breakpoint Value Register 4"
+name = "DBGBVR4_EL1"
+[aarch64.msr.S2_0_c0_c4_5]
+description = "Debug Breakpoint Control Register 4"
+name = "DBGBCR4_EL1"
+[aarch64.msr.S2_0_c0_c4_6]
+description = "Debug Watchpoint Value Register 4"
+name = "DBGWVR4_EL1"
+[aarch64.msr.S2_0_c0_c4_7]
+description = "Debug Watchpoint Control Register 4"
+name = "DBGWCR4_EL1"
+[aarch64.msr.S2_0_c0_c5_4]
+description = "Debug Breakpoint Value Register 5"
+name = "DBGBVR5_EL1"
+[aarch64.msr.S2_0_c0_c5_5]
+description = "Debug Breakpoint Control Register 5"
+name = "DBGBCR5_EL1"
+[aarch64.msr.S2_0_c0_c5_6]
+description = "Debug Watchpoint Value Register 5"
+name = "DBGWVR5_EL1"
+[aarch64.msr.S2_0_c0_c5_7]
+description = "Debug Watchpoint Control Register 5"
+name = "DBGWCR5_EL1"
+[aarch64.msr.S2_0_c0_c6_2]
+description = "OS Lock Exception Catch Control Register"
+name = "OSECCR_EL1"
+[aarch64.msr.S2_0_c0_c6_4]
+description = "Debug Breakpoint Value Register 6"
+name = "DBGBVR6_EL1"
+[aarch64.msr.S2_0_c0_c6_5]
+description = "Debug Breakpoint Control Register 6"
+name = "DBGBCR6_EL1"
+[aarch64.msr.S2_0_c0_c6_6]
+description = "Debug Watchpoint Value Register 6"
+name = "DBGWVR6_EL1"
+[aarch64.msr.S2_0_c0_c6_7]
+description = "Debug Watchpoint Control Register 6"
+name = "DBGWCR6_EL1"
+[aarch64.msr.S2_0_c0_c7_4]
+description = "Debug Breakpoint Value Register 7"
+name = "DBGBVR7_EL1"
+[aarch64.msr.S2_0_c0_c7_5]
+description = "Debug Breakpoint Control Register 7"
+name = "DBGBCR7_EL1"
+[aarch64.msr.S2_0_c0_c7_6]
+description = "Debug Watchpoint Value Register 7"
+name = "DBGWVR7_EL1"
+[aarch64.msr.S2_0_c0_c7_7]
+description = "Debug Watchpoint Control Register 7"
+name = "DBGWCR7_EL1"
+[aarch64.msr.S2_0_c0_c8_4]
+description = "Debug Breakpoint Value Register 8"
+name = "DBGBVR8_EL1"
+[aarch64.msr.S2_0_c0_c8_5]
+description = "Debug Breakpoint Control Register 8"
+name = "DBGBCR8_EL1"
+[aarch64.msr.S2_0_c0_c8_6]
+description = "Debug Watchpoint Value Register 8"
+name = "DBGWVR8_EL1"
+[aarch64.msr.S2_0_c0_c8_7]
+description = "Debug Watchpoint Control Register 8"
+name = "DBGWCR8_EL1"
+[aarch64.msr.S2_0_c0_c9_4]
+description = "Debug Breakpoint Value Register 9"
+name = "DBGBVR9_EL1"
+[aarch64.msr.S2_0_c0_c9_5]
+description = "Debug Breakpoint Control Register 9"
+name = "DBGBCR9_EL1"
+[aarch64.msr.S2_0_c0_c9_6]
+description = "Debug Watchpoint Value Register 9"
+name = "DBGWVR9_EL1"
+[aarch64.msr.S2_0_c0_c9_7]
+description = "Debug Watchpoint Control Register 9"
+name = "DBGWCR9_EL1"
+[aarch64.msr.S2_0_c1_c0_0]
+description = "Monitor Debug ROM Address Register"
+name = "MDRAR_EL1"
+[aarch64.msr.S2_0_c1_c0_4]
+description = "OS Lock Access Register"
+name = "OSLAR_EL1"
+[aarch64.msr.S2_0_c1_c1_4]
+description = "OS Lock Status Register"
+name = "OSLSR_EL1"
+[aarch64.msr.S2_0_c1_c3_4]
+description = "OS Double Lock Register"
+name = "OSDLR_EL1"
+[aarch64.msr.S2_0_c1_c4_4]
+description = "Debug Power Control Register"
+name = "DBGPRCR_EL1"
+[aarch64.msr.S2_0_c7_c14_6]
+description = "Debug Authentication Status register"
+name = "DBGAUTHSTATUS_EL1"
+[aarch64.msr.S2_0_c7_c8_6]
+description = "Debug CLAIM Tag Set register"
+name = "DBGCLAIMSET_EL1"
+[aarch64.msr.S2_0_c7_c9_6]
+description = "Debug CLAIM Tag Clear register"
+name = "DBGCLAIMCLR_EL1"
+[aarch64.msr.S2_3_c0_c1_0]
+description = "Monitor DCC Status Register"
+name = "MDCCSR_EL0"
+[aarch64.msr.S2_3_c0_c4_0]
+description = "Debug Data Transfer Register, half-duplex"
+name = "DBGDTR_EL0"
+[aarch64.msr.S2_3_c0_c5_0]
+description = "Debug Data Transfer Register"
+name = "DBGDTRRX_EL0"
+[aarch64.msr.S2_4_c0_c7_0]
+description = "Debug Vector Catch Register"
+name = "DBGVCR32_EL2"
+[aarch64.msr.S3_0_c0_c0_0]
+description = "Main ID Register"
+name = "MIDR_EL1"
+[aarch64.msr.S3_0_c0_c0_5]
+description = "Multiprocessor Affinity Register"
+name = "MPIDR_EL1"
+[aarch64.msr.S3_0_c0_c0_6]
+description = "Revision ID Register"
+name = "REVIDR_EL1"
+[aarch64.msr.S3_0_c0_c1_0]
+description = "AArch32 Processor Feature Register 0"
+name = "ID_PFR0_EL1"
+[aarch64.msr.S3_0_c0_c1_1]
+description = "AArch32 Processor Feature Register 1"
+name = "ID_PFR1_EL1"
+[aarch64.msr.S3_0_c0_c1_2]
+description = "AArch32 Debug Feature Register 0"
+name = "ID_DFR0_EL1"
+[aarch64.msr.S3_0_c0_c1_3]
+description = "AArch32 Auxiliary Feature Register 0"
+name = "ID_AFR0_EL1"
+[aarch64.msr.S3_0_c0_c1_4]
+description = "AArch32 Memory Model Feature Register 0"
+name = "ID_MMFR0_EL1"
+[aarch64.msr.S3_0_c0_c1_5]
+description = "AArch32 Memory Model Feature Register 1"
+name = "ID_MMFR1_EL1"
+[aarch64.msr.S3_0_c0_c1_6]
+description = "AArch32 Memory Model Feature Register 2"
+name = "ID_MMFR2_EL1"
+[aarch64.msr.S3_0_c0_c1_7]
+description = "AArch32 Memory Model Feature Register 3"
+name = "ID_MMFR3_EL1"
+[aarch64.msr.S3_0_c0_c2_0]
+description = "AArch32 Instruction Set Attribute Register 0"
+name = "ID_ISAR0_EL1"
+[aarch64.msr.S3_0_c0_c2_1]
+description = "AArch32 Instruction Set Attribute Register 1"
+name = "ID_ISAR1_EL1"
+[aarch64.msr.S3_0_c0_c2_2]
+description = "AArch32 Instruction Set Attribute Register 2"
+name = "ID_ISAR2_EL1"
+[aarch64.msr.S3_0_c0_c2_3]
+description = "AArch32 Instruction Set Attribute Register 3"
+name = "ID_ISAR3_EL1"
+[aarch64.msr.S3_0_c0_c2_4]
+description = "AArch32 Instruction Set Attribute Register 4"
+name = "ID_ISAR4_EL1"
+[aarch64.msr.S3_0_c0_c2_5]
+description = "AArch32 Instruction Set Attribute Register 5"
+name = "ID_ISAR5_EL1"
+[aarch64.msr.S3_0_c0_c2_6]
+description = "AArch32 Memory Model Feature Register 4"
+name = "ID_MMFR4_EL1"
+[aarch64.msr.S3_0_c0_c2_7]
+description = "AArch32 Instruction Set Attribute Register 6"
+name = "ID_ISAR6_EL1"
+[aarch64.msr.S3_0_c0_c3_0]
+description = "AArch32 Media and VFP Feature Register 0"
+name = "MVFR0_EL1"
+[aarch64.msr.S3_0_c0_c3_1]
+description = "AArch32 Media and VFP Feature Register 1"
+name = "MVFR1_EL1"
+[aarch64.msr.S3_0_c0_c3_2]
+description = "AArch32 Media and VFP Feature Register 2"
+name = "MVFR2_EL1"
+[aarch64.msr.S3_0_c0_c3_4]
+description = "AArch32 Processor Feature Register 2"
+name = "ID_PFR2_EL1"
+[aarch64.msr.S3_0_c0_c3_5]
+description = "Debug Feature Register 1"
+name = "ID_DFR1_EL1"
+[aarch64.msr.S3_0_c0_c3_6]
+description = "AArch32 Memory Model Feature Register 5"
+name = "ID_MMFR5_EL1"
+[aarch64.msr.S3_0_c0_c4_0]
+description = "AArch64 Processor Feature Register 0"
+name = "ID_AA64PFR0_EL1"
+[aarch64.msr.S3_0_c0_c4_1]
+description = "AArch64 Processor Feature Register 1"
+name = "ID_AA64PFR1_EL1"
+[aarch64.msr.S3_0_c0_c4_4]
+description = "SVE Feature ID register 0"
+name = "ID_AA64ZFR0_EL1"
+[aarch64.msr.S3_0_c0_c5_0]
+description = "AArch64 Debug Feature Register 0"
+name = "ID_AA64DFR0_EL1"
+[aarch64.msr.S3_0_c0_c5_1]
+description = "AArch64 Debug Feature Register 1"
+name = "ID_AA64DFR1_EL1"
+[aarch64.msr.S3_0_c0_c5_4]
+description = "AArch64 Auxiliary Feature Register 0"
+name = "ID_AA64AFR0_EL1"
+[aarch64.msr.S3_0_c0_c5_5]
+description = "AArch64 Auxiliary Feature Register 1"
+name = "ID_AA64AFR1_EL1"
+[aarch64.msr.S3_0_c0_c6_0]
+description = "AArch64 Instruction Set Attribute Register 0"
+name = "ID_AA64ISAR0_EL1"
+[aarch64.msr.S3_0_c0_c6_1]
+description = "AArch64 Instruction Set Attribute Register 1"
+name = "ID_AA64ISAR1_EL1"
+[aarch64.msr.S3_0_c0_c7_0]
+description = "AArch64 Memory Model Feature Register 0"
+name = "ID_AA64MMFR0_EL1"
+[aarch64.msr.S3_0_c0_c7_1]
+description = "AArch64 Memory Model Feature Register 1"
+name = "ID_AA64MMFR1_EL1"
+[aarch64.msr.S3_0_c0_c7_2]
+description = "AArch64 Memory Model Feature Register 2"
+name = "ID_AA64MMFR2_EL1"
+[aarch64.msr.S3_0_c10_c2_0]
+description = "Memory Attribute Indirection Register (EL1)"
+name = "MAIR_EL1"
+[aarch64.msr.S3_0_c10_c3_0]
+description = "Auxiliary Memory Attribute Indirection Register (EL1)"
+name = "AMAIR_EL1"
+[aarch64.msr.S3_0_c10_c4_0]
+description = "LORegion Start Address (EL1)"
+name = "LORSA_EL1"
+[aarch64.msr.S3_0_c10_c4_1]
+description = "LORegion End Address (EL1)"
+name = "LOREA_EL1"
+[aarch64.msr.S3_0_c10_c4_2]
+description = "LORegion Number (EL1)"
+name = "LORN_EL1"
+[aarch64.msr.S3_0_c10_c4_3]
+description = "LORegion Control (EL1)"
+name = "LORC_EL1"
+[aarch64.msr.S3_0_c10_c4_4]
+description = "MPAM ID Register (EL1)"
+name = "MPAMIDR_EL1"
+[aarch64.msr.S3_0_c10_c4_7]
+description = "LORegionID (EL1)"
+name = "LORID_EL1"
+[aarch64.msr.S3_0_c10_c5_0]
+description = "MPAM1 Register (EL1)"
+name = "MPAM1_EL1"
+[aarch64.msr.S3_0_c10_c5_1]
+description = "MPAM0 Register (EL1)"
+name = "MPAM0_EL1"
+[aarch64.msr.S3_0_c12_c0_0]
+description = "Vector Base Address Register (EL1)"
+name = "VBAR_EL1"
+[aarch64.msr.S3_0_c12_c0_1]
+description = "Reset Vector Base Address Register (if EL2 and EL3 not implemented)"
+name = "RVBAR_EL1"
+[aarch64.msr.S3_0_c12_c0_2]
+description = "Reset Management Register (EL1)"
+name = "RMR_EL1"
+[aarch64.msr.S3_0_c12_c11_1]
+description = "Interrupt Controller Deactivate Interrupt Register Interrupt Controller Deactivate Virtual Interrupt Register"
+name = "ICC_DIR_EL1"
+[aarch64.msr.S3_0_c12_c11_3]
+description = "Interrupt Controller Running Priority Register Interrupt Controller Virtual Running Priority Register"
+name = "ICC_RPR_EL1"
+[aarch64.msr.S3_0_c12_c11_5]
+description = "Interrupt Controller Software Generated Interrupt Group 1 Register"
+name = "ICC_SGI1R_EL1"
+[aarch64.msr.S3_0_c12_c11_6]
+description = "Interrupt Controller Alias Software Generated Interrupt Group 1 Register"
+name = "ICC_ASGI1R_EL1"
+[aarch64.msr.S3_0_c12_c11_7]
+description = "Interrupt Controller Software Generated Interrupt Group 0 Register"
+name = "ICC_SGI0R_EL1"
+[aarch64.msr.S3_0_c12_c12_0]
+description = "Interrupt Controller Interrupt Acknowledge Register 1 Interrupt Controller Virtual Interrupt Acknowledge Register 1"
+name = "ICC_IAR1_EL1"
+[aarch64.msr.S3_0_c12_c12_1]
+description = "Interrupt Controller End Of Interrupt Register 1 Interrupt Controller Virtual End Of Interrupt Register 1"
+name = "ICC_EOIR1_EL1"
+[aarch64.msr.S3_0_c12_c12_2]
+description = "Interrupt Controller Highest Priority Pending Interrupt Register 1 Interrupt Controller Virtual Highest Priority Pending Interrupt Register 1"
+name = "ICC_HPPIR1_EL1"
+[aarch64.msr.S3_0_c12_c12_3]
+description = "Interrupt Controller Binary Point Register 1 Interrupt Controller Virtual Binary Point Register 1"
+name = "ICC_BPR1_EL1"
+[aarch64.msr.S3_0_c12_c12_4]
+description = "Interrupt Controller Control Register (EL1) Interrupt Controller Virtual Control Register"
+name = "ICC_CTLR_EL1"
+[aarch64.msr.S3_0_c12_c12_5]
+description = "Interrupt Controller System Register Enable register (EL1)"
+name = "ICC_SRE_EL1"
+[aarch64.msr.S3_0_c12_c12_6]
+description = "Interrupt Controller Interrupt Group 0 Enable register Interrupt Controller Virtual Interrupt Group 0 Enable register"
+name = "ICC_IGRPEN0_EL1"
+[aarch64.msr.S3_0_c12_c12_7]
+description = "Interrupt Controller Interrupt Group 1 Enable register Interrupt Controller Virtual Interrupt Group 1 Enable register"
+name = "ICC_IGRPEN1_EL1"
+[aarch64.msr.S3_0_c12_c1_0]
+description = "Interrupt Status Register"
+name = "ISR_EL1"
+[aarch64.msr.S3_0_c12_c1_1]
+description = "Deferred Interrupt Status Register"
+name = "DISR_EL1"
+[aarch64.msr.S3_0_c12_c8_0]
+description = "Interrupt Controller Interrupt Acknowledge Register 0 Interrupt Controller Virtual Interrupt Acknowledge Register 0"
+name = "ICC_IAR0_EL1"
+[aarch64.msr.S3_0_c12_c8_1]
+description = "Interrupt Controller End Of Interrupt Register 0 Interrupt Controller Virtual End Of Interrupt Register 0"
+name = "ICC_EOIR0_EL1"
+[aarch64.msr.S3_0_c12_c8_2]
+description = "Interrupt Controller Highest Priority Pending Interrupt Register 0 Interrupt Controller Virtual Highest Priority Pending Interrupt Register 0"
+name = "ICC_HPPIR0_EL1"
+[aarch64.msr.S3_0_c12_c8_3]
+description = "Interrupt Controller Binary Point Register 0 Interrupt Controller Virtual Binary Point Register 0"
+name = "ICC_BPR0_EL1"
+[aarch64.msr.S3_0_c12_c8_4]
+description = "Interrupt Controller Active Priorities Group 0 Register 0 Interrupt Controller Virtual Active Priorities Group 0 Register 0"
+name = "ICC_AP0R0_EL1"
+[aarch64.msr.S3_0_c12_c8_5]
+description = "Interrupt Controller Active Priorities Group 0 Register 1 Interrupt Controller Virtual Active Priorities Group 0 Register 1"
+name = "ICC_AP0R1_EL1"
+[aarch64.msr.S3_0_c12_c8_6]
+description = "Interrupt Controller Active Priorities Group 0 Register 2 Interrupt Controller Virtual Active Priorities Group 0 Register 2"
+name = "ICC_AP0R2_EL1"
+[aarch64.msr.S3_0_c12_c8_7]
+description = "Interrupt Controller Active Priorities Group 0 Register 3 Interrupt Controller Virtual Active Priorities Group 0 Register 3"
+name = "ICC_AP0R3_EL1"
+[aarch64.msr.S3_0_c12_c9_0]
+description = "Interrupt Controller Active Priorities Group 1 Register 0 Interrupt Controller Virtual Active Priorities Group 1 Register 0"
+name = "ICC_AP1R0_EL1"
+[aarch64.msr.S3_0_c12_c9_1]
+description = "Interrupt Controller Active Priorities Group 1 Register 1 Interrupt Controller Virtual Active Priorities Group 1 Register 1"
+name = "ICC_AP1R1_EL1"
+[aarch64.msr.S3_0_c12_c9_2]
+description = "Interrupt Controller Active Priorities Group 1 Register 2 Interrupt Controller Virtual Active Priorities Group 1 Register 2"
+name = "ICC_AP1R2_EL1"
+[aarch64.msr.S3_0_c12_c9_3]
+description = "Interrupt Controller Active Priorities Group 1 Register 3 Interrupt Controller Virtual Active Priorities Group 1 Register 3"
+name = "ICC_AP1R3_EL1"
+[aarch64.msr.S3_0_c13_c0_1]
+description = "Context ID Register (EL1)"
+name = "CONTEXTIDR_EL1"
+[aarch64.msr.S3_0_c13_c0_4]
+description = "EL1 Software Thread ID Register"
+name = "TPIDR_EL1"
+[aarch64.msr.S3_0_c13_c0_7]
+description = "EL1 Read/Write Software Context Number"
+name = "SCXTNUM_EL1"
+[aarch64.msr.S3_0_c14_c1_0]
+description = "Counter-timer Kernel Control register"
+name = "CNTKCTL_EL1"
+[aarch64.msr.S3_0_c1_c0_0]
+description = "System Control Register (EL1)"
+name = "SCTLR_EL1"
+[aarch64.msr.S3_0_c1_c0_1]
+description = "Auxiliary Control Register (EL1)"
+name = "ACTLR_EL1"
+[aarch64.msr.S3_0_c1_c0_2]
+description = "Architectural Feature Access Control Register"
+name = "CPACR_EL1"
+[aarch64.msr.S3_0_c1_c0_5]
+description = "Random Allocation Tag Seed Register."
+name = "RGSR_EL1"
+[aarch64.msr.S3_0_c1_c0_6]
+description = "Tag Control Register."
+name = "GCR_EL1"
+[aarch64.msr.S3_0_c1_c2_0]
+description = "SVE Control Register for EL1"
+name = "ZCR_EL1"
+[aarch64.msr.S3_0_c1_c2_1]
+description = "Trace Filter Control Register (EL1)"
+name = "TRFCR_EL1"
+[aarch64.msr.S3_0_c2_c0_0]
+description = "Translation Table Base Register 0 (EL1)"
+name = "TTBR0_EL1"
+[aarch64.msr.S3_0_c2_c0_1]
+description = "Translation Table Base Register 1 (EL1)"
+name = "TTBR1_EL1"
+[aarch64.msr.S3_0_c2_c0_2]
+description = "Translation Control Register (EL1)"
+name = "TCR_EL1"
+[aarch64.msr.S3_0_c2_c1_0]
+description = "Pointer Authentication Key A for Instruction (bits[63:0]) "
+name = "APIAKeyLo_EL1"
+[aarch64.msr.S3_0_c2_c1_1]
+description = "Pointer Authentication Key A for Instruction (bits[127:64]) "
+name = "APIAKeyHi_EL1"
+[aarch64.msr.S3_0_c2_c1_2]
+description = "Pointer Authentication Key B for Instruction (bits[63:0]) "
+name = "APIBKeyLo_EL1"
+[aarch64.msr.S3_0_c2_c1_3]
+description = "Pointer Authentication Key B for Instruction (bits[127:64]) "
+name = "APIBKeyHi_EL1"
+[aarch64.msr.S3_0_c2_c2_0]
+description = "Pointer Authentication Key A for Data (bits[63:0]) "
+name = "APDAKeyLo_EL1"
+[aarch64.msr.S3_0_c2_c2_1]
+description = "Pointer Authentication Key A for Data (bits[127:64]) "
+name = "APDAKeyHi_EL1"
+[aarch64.msr.S3_0_c2_c2_2]
+description = "Pointer Authentication Key B for Data (bits[63:0]) "
+name = "APDBKeyLo_EL1"
+[aarch64.msr.S3_0_c2_c2_3]
+description = "Pointer Authentication Key B for Data (bits[127:64]) "
+name = "APDBKeyHi_EL1"
+[aarch64.msr.S3_0_c2_c3_0]
+description = "Pointer Authentication Key A for Code (bits[63:0]) "
+name = "APGAKeyLo_EL1"
+[aarch64.msr.S3_0_c2_c3_1]
+description = "Pointer Authentication Key A for Code (bits[127:64]) "
+name = "APGAKeyHi_EL1"
+[aarch64.msr.S3_0_c4_c0_0]
+description = "Saved Program Status Register (EL1)"
+name = "SPSR_EL1"
+[aarch64.msr.S3_0_c4_c0_1]
+description = "Exception Link Register (EL1)"
+name = "ELR_EL1"
+[aarch64.msr.S3_0_c4_c1_0]
+description = "Stack Pointer (EL0)"
+name = "SP_EL0"
+[aarch64.msr.S3_0_c4_c2_0]
+description = "Stack Pointer Select"
+name = "SPSel"
+[aarch64.msr.S3_0_c4_c2_2]
+description = "Current Exception Level"
+name = "CurrentEL"
+[aarch64.msr.S3_0_c4_c2_3]
+description = "Privileged Access Never"
+name = "PAN"
+[aarch64.msr.S3_0_c4_c2_4]
+description = "User Access Override"
+name = "UAO"
+[aarch64.msr.S3_0_c4_c6_0]
+description = "Interrupt Controller Interrupt Priority Mask Register Interrupt Controller Virtual Interrupt Priority Mask Register"
+name = "ICC_PMR_EL1"
+[aarch64.msr.S3_0_c5_c1_0]
+description = "Auxiliary Fault Status Register 0 (EL1)"
+name = "AFSR0_EL1"
+[aarch64.msr.S3_0_c5_c1_1]
+description = "Auxiliary Fault Status Register 1 (EL1)"
+name = "AFSR1_EL1"
+[aarch64.msr.S3_0_c5_c2_0]
+description = "Exception Syndrome Register (EL1)"
+name = "ESR_EL1"
+[aarch64.msr.S3_0_c5_c3_0]
+description = "Error Record ID Register"
+name = "ERRIDR_EL1"
+[aarch64.msr.S3_0_c5_c3_1]
+description = "Error Record Select Register"
+name = "ERRSELR_EL1"
+[aarch64.msr.S3_0_c5_c4_0]
+description = "Selected Error Record Feature Register"
+name = "ERXFR_EL1"
+[aarch64.msr.S3_0_c5_c4_1]
+description = "Selected Error Record Control Register"
+name = "ERXCTLR_EL1"
+[aarch64.msr.S3_0_c5_c4_2]
+description = "Selected Error Record Primary Status Register"
+name = "ERXSTATUS_EL1"
+[aarch64.msr.S3_0_c5_c4_3]
+description = "Selected Error Record Address Register"
+name = "ERXADDR_EL1"
+[aarch64.msr.S3_0_c5_c4_4]
+description = "Selected Pseudo-fault Generation Feature register"
+name = "ERXPFGF_EL1"
+[aarch64.msr.S3_0_c5_c4_5]
+description = "Selected Pseudo-fault Generation Control register"
+name = "ERXPFGCTL_EL1"
+[aarch64.msr.S3_0_c5_c4_6]
+description = "Selected Pseudo-fault Generation Countdown register"
+name = "ERXPFGCDN_EL1"
+[aarch64.msr.S3_0_c5_c5_0]
+description = "Selected Error Record Miscellaneous Register 0"
+name = "ERXMISC0_EL1"
+[aarch64.msr.S3_0_c5_c5_1]
+description = "Selected Error Record Miscellaneous Register 1"
+name = "ERXMISC1_EL1"
+[aarch64.msr.S3_0_c5_c5_2]
+description = "Selected Error Record Miscellaneous Register 2"
+name = "ERXMISC2_EL1"
+[aarch64.msr.S3_0_c5_c5_3]
+description = "Selected Error Record Miscellaneous Register 3"
+name = "ERXMISC3_EL1"
+[aarch64.msr.S3_0_c5_c6_0]
+description = "Tag Fault Status Register (EL1)"
+name = "TFSR_EL1"
+[aarch64.msr.S3_0_c5_c6_1]
+description = "Tag Fault Status Register (EL0)."
+name = "TFSRE0_EL1"
+[aarch64.msr.S3_0_c6_c0_0]
+description = "Fault Address Register (EL1)"
+name = "FAR_EL1"
+[aarch64.msr.S3_0_c7_c4_0]
+description = "Physical Address Register"
+name = "PAR_EL1"
+[aarch64.msr.S3_0_c9_c10_0]
+description = "Profiling Buffer Limit Address Register"
+name = "PMBLIMITR_EL1"
+[aarch64.msr.S3_0_c9_c10_1]
+description = "Profiling Buffer Write Pointer Register"
+name = "PMBPTR_EL1"
+[aarch64.msr.S3_0_c9_c10_3]
+description = "Profiling Buffer Status/syndrome Register"
+name = "PMBSR_EL1"
+[aarch64.msr.S3_0_c9_c10_7]
+description = "Profiling Buffer ID Register"
+name = "PMBIDR_EL1"
+[aarch64.msr.S3_0_c9_c14_1]
+description = "Performance Monitors Interrupt Enable Set register"
+name = "PMINTENSET_EL1"
+[aarch64.msr.S3_0_c9_c14_2]
+description = "Performance Monitors Interrupt Enable Clear register"
+name = "PMINTENCLR_EL1"
+[aarch64.msr.S3_0_c9_c14_6]
+description = "Performance Monitors Machine Identification Register"
+name = "PMMIR_EL1"
+[aarch64.msr.S3_0_c9_c9_0]
+description = "Statistical Profiling Control Register (EL1)"
+name = "PMSCR_EL1"
+[aarch64.msr.S3_0_c9_c9_2]
+description = "Sampling Interval Counter Register"
+name = "PMSICR_EL1"
+[aarch64.msr.S3_0_c9_c9_3]
+description = "Sampling Interval Reload Register"
+name = "PMSIRR_EL1"
+[aarch64.msr.S3_0_c9_c9_4]
+description = "Sampling Filter Control Register"
+name = "PMSFCR_EL1"
+[aarch64.msr.S3_0_c9_c9_5]
+description = "Sampling Event Filter Register"
+name = "PMSEVFR_EL1"
+[aarch64.msr.S3_0_c9_c9_6]
+description = "Sampling Latency Filter Register"
+name = "PMSLATFR_EL1"
+[aarch64.msr.S3_0_c9_c9_7]
+description = "Sampling Profiling ID Register"
+name = "PMSIDR_EL1"
+[aarch64.msr.S3_1_c0_c0_0]
+description = "Current Cache Size ID Register"
+name = "CCSIDR_EL1"
+[aarch64.msr.S3_1_c0_c0_1]
+description = "Cache Level ID Register"
+name = "CLIDR_EL1"
+[aarch64.msr.S3_1_c0_c0_2]
+description = "Current Cache Size ID Register 2"
+name = "CCSIDR2_EL1"
+[aarch64.msr.S3_1_c0_c0_4]
+description = " Multiple tag transfer ID register"
+name = "GMID_EL1"
+[aarch64.msr.S3_1_c0_c0_7]
+description = "Auxiliary ID Register"
+name = "AIDR_EL1"
+[aarch64.msr.S3_2_c0_c0_0]
+description = "Cache Size Selection Register"
+name = "CSSELR_EL1"
+[aarch64.msr.S3_3_c0_c0_1]
+description = "Cache Type Register"
+name = "CTR_EL0"
+[aarch64.msr.S3_3_c0_c0_7]
+description = "Data Cache Zero ID register"
+name = "DCZID_EL0"
+[aarch64.msr.S3_3_c13_c0_2]
+description = "EL0 Read/Write Software Thread ID Register"
+name = "TPIDR_EL0"
+[aarch64.msr.S3_3_c13_c0_3]
+description = "EL0 Read-Only Software Thread ID Register"
+name = "TPIDRRO_EL0"
+[aarch64.msr.S3_3_c13_c0_7]
+description = "EL0 Read/Write Software Context Number"
+name = "SCXTNUM_EL0"
+[aarch64.msr.S3_3_c13_c12_0]
+description = "Activity Monitors Event Counter Register 1 0"
+name = "AMEVCNTR10_EL0"
+[aarch64.msr.S3_3_c13_c12_1]
+description = "Activity Monitors Event Counter Register 1 1"
+name = "AMEVCNTR11_EL0"
+[aarch64.msr.S3_3_c13_c12_2]
+description = "Activity Monitors Event Counter Register 1 2"
+name = "AMEVCNTR12_EL0"
+[aarch64.msr.S3_3_c13_c12_3]
+description = "Activity Monitors Event Counter Register 1 3"
+name = "AMEVCNTR13_EL0"
+[aarch64.msr.S3_3_c13_c12_4]
+description = "Activity Monitors Event Counter Register 1 4"
+name = "AMEVCNTR14_EL0"
+[aarch64.msr.S3_3_c13_c12_5]
+description = "Activity Monitors Event Counter Register 1 5"
+name = "AMEVCNTR15_EL0"
+[aarch64.msr.S3_3_c13_c12_6]
+description = "Activity Monitors Event Counter Register 1 6"
+name = "AMEVCNTR16_EL0"
+[aarch64.msr.S3_3_c13_c12_7]
+description = "Activity Monitors Event Counter Register 1 7"
+name = "AMEVCNTR17_EL0"
+[aarch64.msr.S3_3_c13_c13_0]
+description = "Activity Monitors Event Counter Register 1 8"
+name = "AMEVCNTR18_EL0"
+[aarch64.msr.S3_3_c13_c13_1]
+description = "Activity Monitors Event Counter Register 1 9"
+name = "AMEVCNTR19_EL0"
+[aarch64.msr.S3_3_c13_c13_2]
+description = "Activity Monitors Event Counter Register 1 10"
+name = "AMEVCNTR110_EL0"
+[aarch64.msr.S3_3_c13_c13_3]
+description = "Activity Monitors Event Counter Register 1 11"
+name = "AMEVCNTR111_EL0"
+[aarch64.msr.S3_3_c13_c13_4]
+description = "Activity Monitors Event Counter Register 1 12"
+name = "AMEVCNTR112_EL0"
+[aarch64.msr.S3_3_c13_c13_5]
+description = "Activity Monitors Event Counter Register 1 13"
+name = "AMEVCNTR113_EL0"
+[aarch64.msr.S3_3_c13_c13_6]
+description = "Activity Monitors Event Counter Register 1 14"
+name = "AMEVCNTR114_EL0"
+[aarch64.msr.S3_3_c13_c13_7]
+description = "Activity Monitors Event Counter Register 1 15"
+name = "AMEVCNTR115_EL0"
+[aarch64.msr.S3_3_c13_c14_0]
+description = "Activity Monitors Event Type Register 1 0"
+name = "AMEVTYPER10_EL0"
+[aarch64.msr.S3_3_c13_c14_1]
+description = "Activity Monitors Event Type Register 1 1"
+name = "AMEVTYPER11_EL0"
+[aarch64.msr.S3_3_c13_c14_2]
+description = "Activity Monitors Event Type Register 1 2"
+name = "AMEVTYPER12_EL0"
+[aarch64.msr.S3_3_c13_c14_3]
+description = "Activity Monitors Event Type Register 1 3"
+name = "AMEVTYPER13_EL0"
+[aarch64.msr.S3_3_c13_c14_4]
+description = "Activity Monitors Event Type Register 1 4"
+name = "AMEVTYPER14_EL0"
+[aarch64.msr.S3_3_c13_c14_5]
+description = "Activity Monitors Event Type Register 1 5"
+name = "AMEVTYPER15_EL0"
+[aarch64.msr.S3_3_c13_c14_6]
+description = "Activity Monitors Event Type Register 1 6"
+name = "AMEVTYPER16_EL0"
+[aarch64.msr.S3_3_c13_c14_7]
+description = "Activity Monitors Event Type Register 1 7"
+name = "AMEVTYPER17_EL0"
+[aarch64.msr.S3_3_c13_c15_0]
+description = "Activity Monitors Event Type Register 1 8"
+name = "AMEVTYPER18_EL0"
+[aarch64.msr.S3_3_c13_c15_1]
+description = "Activity Monitors Event Type Register 1 9"
+name = "AMEVTYPER19_EL0"
+[aarch64.msr.S3_3_c13_c15_2]
+description = "Activity Monitors Event Type Register 1 10"
+name = "AMEVTYPER110_EL0"
+[aarch64.msr.S3_3_c13_c15_3]
+description = "Activity Monitors Event Type Register 1 11"
+name = "AMEVTYPER111_EL0"
+[aarch64.msr.S3_3_c13_c15_4]
+description = "Activity Monitors Event Type Register 1 12"
+name = "AMEVTYPER112_EL0"
+[aarch64.msr.S3_3_c13_c15_5]
+description = "Activity Monitors Event Type Register 1 13"
+name = "AMEVTYPER113_EL0"
+[aarch64.msr.S3_3_c13_c15_6]
+description = "Activity Monitors Event Type Register 1 14"
+name = "AMEVTYPER114_EL0"
+[aarch64.msr.S3_3_c13_c15_7]
+description = "Activity Monitors Event Type Register 1 15"
+name = "AMEVTYPER115_EL0"
+[aarch64.msr.S3_3_c13_c2_0]
+description = "Activity Monitors Control Register"
+name = "AMCR_EL0"
+[aarch64.msr.S3_3_c13_c2_1]
+description = "Activity Monitors Configuration Register"
+name = "AMCFGR_EL0"
+[aarch64.msr.S3_3_c13_c2_2]
+description = "Activity Monitors Counter Group Configuration Register"
+name = "AMCGCR_EL0"
+[aarch64.msr.S3_3_c13_c2_3]
+description = "Activity Monitors User Enable Register"
+name = "AMUSERENR_EL0"
+[aarch64.msr.S3_3_c13_c2_4]
+description = "Activity Monitors Count Enable Clear Register 0"
+name = "AMCNTENCLR0_EL0"
+[aarch64.msr.S3_3_c13_c2_5]
+description = "Activity Monitors Count Enable Set Register 0"
+name = "AMCNTENSET0_EL0"
+[aarch64.msr.S3_3_c13_c2_6]
+description = "Activity Monitors Counter Group 1 Identification Register"
+name = "AMCG1IDR_EL0"
+[aarch64.msr.S3_3_c13_c3_0]
+description = "Activity Monitors Count Enable Clear Register 1"
+name = "AMCNTENCLR1_EL0"
+[aarch64.msr.S3_3_c13_c3_1]
+description = "Activity Monitors Count Enable Set Register 1"
+name = "AMCNTENSET1_EL0"
+[aarch64.msr.S3_3_c13_c4_0]
+description = "Activity Monitors Event Counter Register 0 0"
+name = "AMEVCNTR00_EL0"
+[aarch64.msr.S3_3_c13_c4_1]
+description = "Activity Monitors Event Counter Register 0 1"
+name = "AMEVCNTR01_EL0"
+[aarch64.msr.S3_3_c13_c4_2]
+description = "Activity Monitors Event Counter Register 0 2"
+name = "AMEVCNTR02_EL0"
+[aarch64.msr.S3_3_c13_c4_3]
+description = "Activity Monitors Event Counter Register 0 3"
+name = "AMEVCNTR03_EL0"
+[aarch64.msr.S3_3_c13_c4_4]
+description = "Activity Monitors Event Counter Register 0 4"
+name = "AMEVCNTR04_EL0"
+[aarch64.msr.S3_3_c13_c4_5]
+description = "Activity Monitors Event Counter Register 0 5"
+name = "AMEVCNTR05_EL0"
+[aarch64.msr.S3_3_c13_c4_6]
+description = "Activity Monitors Event Counter Register 0 6"
+name = "AMEVCNTR06_EL0"
+[aarch64.msr.S3_3_c13_c4_7]
+description = "Activity Monitors Event Counter Register 0 7"
+name = "AMEVCNTR07_EL0"
+[aarch64.msr.S3_3_c13_c5_0]
+description = "Activity Monitors Event Counter Register 0 8"
+name = "AMEVCNTR08_EL0"
+[aarch64.msr.S3_3_c13_c5_1]
+description = "Activity Monitors Event Counter Register 0 9"
+name = "AMEVCNTR09_EL0"
+[aarch64.msr.S3_3_c13_c5_2]
+description = "Activity Monitors Event Counter Register 0 10"
+name = "AMEVCNTR010_EL0"
+[aarch64.msr.S3_3_c13_c5_3]
+description = "Activity Monitors Event Counter Register 0 11"
+name = "AMEVCNTR011_EL0"
+[aarch64.msr.S3_3_c13_c5_4]
+description = "Activity Monitors Event Counter Register 0 12"
+name = "AMEVCNTR012_EL0"
+[aarch64.msr.S3_3_c13_c5_5]
+description = "Activity Monitors Event Counter Register 0 13"
+name = "AMEVCNTR013_EL0"
+[aarch64.msr.S3_3_c13_c5_6]
+description = "Activity Monitors Event Counter Register 0 14"
+name = "AMEVCNTR014_EL0"
+[aarch64.msr.S3_3_c13_c5_7]
+description = "Activity Monitors Event Counter Register 0 15"
+name = "AMEVCNTR015_EL0"
+[aarch64.msr.S3_3_c13_c6_0]
+description = "Activity Monitors Event Type Register 0 0"
+name = "AMEVTYPER00_EL0"
+[aarch64.msr.S3_3_c13_c6_1]
+description = "Activity Monitors Event Type Register 0 1"
+name = "AMEVTYPER01_EL0"
+[aarch64.msr.S3_3_c13_c6_2]
+description = "Activity Monitors Event Type Register 0 2"
+name = "AMEVTYPER02_EL0"
+[aarch64.msr.S3_3_c13_c6_3]
+description = "Activity Monitors Event Type Register 0 3"
+name = "AMEVTYPER03_EL0"
+[aarch64.msr.S3_3_c13_c6_4]
+description = "Activity Monitors Event Type Register 0 4"
+name = "AMEVTYPER04_EL0"
+[aarch64.msr.S3_3_c13_c6_5]
+description = "Activity Monitors Event Type Register 0 5"
+name = "AMEVTYPER05_EL0"
+[aarch64.msr.S3_3_c13_c6_6]
+description = "Activity Monitors Event Type Register 0 6"
+name = "AMEVTYPER06_EL0"
+[aarch64.msr.S3_3_c13_c6_7]
+description = "Activity Monitors Event Type Register 0 7"
+name = "AMEVTYPER07_EL0"
+[aarch64.msr.S3_3_c13_c7_0]
+description = "Activity Monitors Event Type Register 0 8"
+name = "AMEVTYPER08_EL0"
+[aarch64.msr.S3_3_c13_c7_1]
+description = "Activity Monitors Event Type Register 0 9"
+name = "AMEVTYPER09_EL0"
+[aarch64.msr.S3_3_c13_c7_2]
+description = "Activity Monitors Event Type Register 0 10"
+name = "AMEVTYPER010_EL0"
+[aarch64.msr.S3_3_c13_c7_3]
+description = "Activity Monitors Event Type Register 0 11"
+name = "AMEVTYPER011_EL0"
+[aarch64.msr.S3_3_c13_c7_4]
+description = "Activity Monitors Event Type Register 0 12"
+name = "AMEVTYPER012_EL0"
+[aarch64.msr.S3_3_c13_c7_5]
+description = "Activity Monitors Event Type Register 0 13"
+name = "AMEVTYPER013_EL0"
+[aarch64.msr.S3_3_c13_c7_6]
+description = "Activity Monitors Event Type Register 0 14"
+name = "AMEVTYPER014_EL0"
+[aarch64.msr.S3_3_c13_c7_7]
+description = "Activity Monitors Event Type Register 0 15"
+name = "AMEVTYPER015_EL0"
+[aarch64.msr.S3_3_c14_c0_0]
+description = "Counter-timer Frequency register"
+name = "CNTFRQ_EL0"
+[aarch64.msr.S3_3_c14_c0_1]
+description = "Counter-timer Physical Count register"
+name = "CNTPCT_EL0"
+[aarch64.msr.S3_3_c14_c0_2]
+description = "Counter-timer Virtual Count register"
+name = "CNTVCT_EL0"
+[aarch64.msr.S3_3_c14_c0_5]
+description = "Counter-timer Self-Synchronized Physical Count register"
+name = "CNTPCTSS_EL0"
+[aarch64.msr.S3_3_c14_c0_6]
+description = "Counter-timer Self-Synchronized Virtual Count register"
+name = "CNTVCTSS_EL0"
+[aarch64.msr.S3_3_c14_c10_0]
+description = "Performance Monitors Event Count Register 16"
+name = "PMEVCNTR16_EL0"
+[aarch64.msr.S3_3_c14_c10_1]
+description = "Performance Monitors Event Count Register 17"
+name = "PMEVCNTR17_EL0"
+[aarch64.msr.S3_3_c14_c10_2]
+description = "Performance Monitors Event Count Register 18"
+name = "PMEVCNTR18_EL0"
+[aarch64.msr.S3_3_c14_c10_3]
+description = "Performance Monitors Event Count Register 19"
+name = "PMEVCNTR19_EL0"
+[aarch64.msr.S3_3_c14_c10_4]
+description = "Performance Monitors Event Count Register 20"
+name = "PMEVCNTR20_EL0"
+[aarch64.msr.S3_3_c14_c10_5]
+description = "Performance Monitors Event Count Register 21"
+name = "PMEVCNTR21_EL0"
+[aarch64.msr.S3_3_c14_c10_6]
+description = "Performance Monitors Event Count Register 22"
+name = "PMEVCNTR22_EL0"
+[aarch64.msr.S3_3_c14_c10_7]
+description = "Performance Monitors Event Count Register 23"
+name = "PMEVCNTR23_EL0"
+[aarch64.msr.S3_3_c14_c11_0]
+description = "Performance Monitors Event Count Register 24"
+name = "PMEVCNTR24_EL0"
+[aarch64.msr.S3_3_c14_c11_1]
+description = "Performance Monitors Event Count Register 25"
+name = "PMEVCNTR25_EL0"
+[aarch64.msr.S3_3_c14_c11_2]
+description = "Performance Monitors Event Count Register 26"
+name = "PMEVCNTR26_EL0"
+[aarch64.msr.S3_3_c14_c11_3]
+description = "Performance Monitors Event Count Register 27"
+name = "PMEVCNTR27_EL0"
+[aarch64.msr.S3_3_c14_c11_4]
+description = "Performance Monitors Event Count Register 28"
+name = "PMEVCNTR28_EL0"
+[aarch64.msr.S3_3_c14_c11_5]
+description = "Performance Monitors Event Count Register 29"
+name = "PMEVCNTR29_EL0"
+[aarch64.msr.S3_3_c14_c11_6]
+description = "Performance Monitors Event Count Register 30"
+name = "PMEVCNTR30_EL0"
+[aarch64.msr.S3_3_c14_c11_7]
+description = "Performance Monitors Event Count Register 31"
+name = "PMEVCNTR31_EL0"
+[aarch64.msr.S3_3_c14_c12_0]
+description = "Performance Monitors Event Type Register 0"
+name = "PMEVTYPER0_EL0"
+[aarch64.msr.S3_3_c14_c12_1]
+description = "Performance Monitors Event Type Register 1"
+name = "PMEVTYPER1_EL0"
+[aarch64.msr.S3_3_c14_c12_2]
+description = "Performance Monitors Event Type Register 2"
+name = "PMEVTYPER2_EL0"
+[aarch64.msr.S3_3_c14_c12_3]
+description = "Performance Monitors Event Type Register 3"
+name = "PMEVTYPER3_EL0"
+[aarch64.msr.S3_3_c14_c12_4]
+description = "Performance Monitors Event Type Register 4"
+name = "PMEVTYPER4_EL0"
+[aarch64.msr.S3_3_c14_c12_5]
+description = "Performance Monitors Event Type Register 5"
+name = "PMEVTYPER5_EL0"
+[aarch64.msr.S3_3_c14_c12_6]
+description = "Performance Monitors Event Type Register 6"
+name = "PMEVTYPER6_EL0"
+[aarch64.msr.S3_3_c14_c12_7]
+description = "Performance Monitors Event Type Register 7"
+name = "PMEVTYPER7_EL0"
+[aarch64.msr.S3_3_c14_c13_0]
+description = "Performance Monitors Event Type Register 8"
+name = "PMEVTYPER8_EL0"
+[aarch64.msr.S3_3_c14_c13_1]
+description = "Performance Monitors Event Type Register 9"
+name = "PMEVTYPER9_EL0"
+[aarch64.msr.S3_3_c14_c13_2]
+description = "Performance Monitors Event Type Register 10"
+name = "PMEVTYPER10_EL0"
+[aarch64.msr.S3_3_c14_c13_3]
+description = "Performance Monitors Event Type Register 11"
+name = "PMEVTYPER11_EL0"
+[aarch64.msr.S3_3_c14_c13_4]
+description = "Performance Monitors Event Type Register 12"
+name = "PMEVTYPER12_EL0"
+[aarch64.msr.S3_3_c14_c13_5]
+description = "Performance Monitors Event Type Register 13"
+name = "PMEVTYPER13_EL0"
+[aarch64.msr.S3_3_c14_c13_6]
+description = "Performance Monitors Event Type Register 14"
+name = "PMEVTYPER14_EL0"
+[aarch64.msr.S3_3_c14_c13_7]
+description = "Performance Monitors Event Type Register 15"
+name = "PMEVTYPER15_EL0"
+[aarch64.msr.S3_3_c14_c14_0]
+description = "Performance Monitors Event Type Register 16"
+name = "PMEVTYPER16_EL0"
+[aarch64.msr.S3_3_c14_c14_1]
+description = "Performance Monitors Event Type Register 17"
+name = "PMEVTYPER17_EL0"
+[aarch64.msr.S3_3_c14_c14_2]
+description = "Performance Monitors Event Type Register 18"
+name = "PMEVTYPER18_EL0"
+[aarch64.msr.S3_3_c14_c14_3]
+description = "Performance Monitors Event Type Register 19"
+name = "PMEVTYPER19_EL0"
+[aarch64.msr.S3_3_c14_c14_4]
+description = "Performance Monitors Event Type Register 20"
+name = "PMEVTYPER20_EL0"
+[aarch64.msr.S3_3_c14_c14_5]
+description = "Performance Monitors Event Type Register 21"
+name = "PMEVTYPER21_EL0"
+[aarch64.msr.S3_3_c14_c14_6]
+description = "Performance Monitors Event Type Register 22"
+name = "PMEVTYPER22_EL0"
+[aarch64.msr.S3_3_c14_c14_7]
+description = "Performance Monitors Event Type Register 23"
+name = "PMEVTYPER23_EL0"
+[aarch64.msr.S3_3_c14_c15_0]
+description = "Performance Monitors Event Type Register 24"
+name = "PMEVTYPER24_EL0"
+[aarch64.msr.S3_3_c14_c15_1]
+description = "Performance Monitors Event Type Register 25"
+name = "PMEVTYPER25_EL0"
+[aarch64.msr.S3_3_c14_c15_2]
+description = "Performance Monitors Event Type Register 26"
+name = "PMEVTYPER26_EL0"
+[aarch64.msr.S3_3_c14_c15_3]
+description = "Performance Monitors Event Type Register 27"
+name = "PMEVTYPER27_EL0"
+[aarch64.msr.S3_3_c14_c15_4]
+description = "Performance Monitors Event Type Register 28"
+name = "PMEVTYPER28_EL0"
+[aarch64.msr.S3_3_c14_c15_5]
+description = "Performance Monitors Event Type Register 29"
+name = "PMEVTYPER29_EL0"
+[aarch64.msr.S3_3_c14_c15_6]
+description = "Performance Monitors Event Type Register 30"
+name = "PMEVTYPER30_EL0"
+[aarch64.msr.S3_3_c14_c15_7]
+description = "Performance Monitors Cycle Count Filter Register Performance Monitors Event Type Register 31"
+name = "PMCCFILTR_EL0"
+[aarch64.msr.S3_3_c14_c2_0]
+description = "Counter-timer Physical Timer TimerValue register"
+name = "CNTP_TVAL_EL0"
+[aarch64.msr.S3_3_c14_c2_1]
+description = "Counter-timer Physical Timer Control register"
+name = "CNTP_CTL_EL0"
+[aarch64.msr.S3_3_c14_c2_2]
+description = "Counter-timer Physical Timer CompareValue register"
+name = "CNTP_CVAL_EL0"
+[aarch64.msr.S3_3_c14_c3_0]
+description = "Counter-timer Virtual Timer TimerValue register"
+name = "CNTV_TVAL_EL0"
+[aarch64.msr.S3_3_c14_c3_1]
+description = "Counter-timer Virtual Timer Control register"
+name = "CNTV_CTL_EL0"
+[aarch64.msr.S3_3_c14_c3_2]
+description = "Counter-timer Virtual Timer CompareValue register"
+name = "CNTV_CVAL_EL0"
+[aarch64.msr.S3_3_c14_c8_0]
+description = "Performance Monitors Event Count Register 0"
+name = "PMEVCNTR0_EL0"
+[aarch64.msr.S3_3_c14_c8_1]
+description = "Performance Monitors Event Count Register 1"
+name = "PMEVCNTR1_EL0"
+[aarch64.msr.S3_3_c14_c8_2]
+description = "Performance Monitors Event Count Register 2"
+name = "PMEVCNTR2_EL0"
+[aarch64.msr.S3_3_c14_c8_3]
+description = "Performance Monitors Event Count Register 3"
+name = "PMEVCNTR3_EL0"
+[aarch64.msr.S3_3_c14_c8_4]
+description = "Performance Monitors Event Count Register 4"
+name = "PMEVCNTR4_EL0"
+[aarch64.msr.S3_3_c14_c8_5]
+description = "Performance Monitors Event Count Register 5"
+name = "PMEVCNTR5_EL0"
+[aarch64.msr.S3_3_c14_c8_6]
+description = "Performance Monitors Event Count Register 6"
+name = "PMEVCNTR6_EL0"
+[aarch64.msr.S3_3_c14_c8_7]
+description = "Performance Monitors Event Count Register 7"
+name = "PMEVCNTR7_EL0"
+[aarch64.msr.S3_3_c14_c9_0]
+description = "Performance Monitors Event Count Register 8"
+name = "PMEVCNTR8_EL0"
+[aarch64.msr.S3_3_c14_c9_1]
+description = "Performance Monitors Event Count Register 9"
+name = "PMEVCNTR9_EL0"
+[aarch64.msr.S3_3_c14_c9_2]
+description = "Performance Monitors Event Count Register 10"
+name = "PMEVCNTR10_EL0"
+[aarch64.msr.S3_3_c14_c9_3]
+description = "Performance Monitors Event Count Register 11"
+name = "PMEVCNTR11_EL0"
+[aarch64.msr.S3_3_c14_c9_4]
+description = "Performance Monitors Event Count Register 12"
+name = "PMEVCNTR12_EL0"
+[aarch64.msr.S3_3_c14_c9_5]
+description = "Performance Monitors Event Count Register 13"
+name = "PMEVCNTR13_EL0"
+[aarch64.msr.S3_3_c14_c9_6]
+description = "Performance Monitors Event Count Register 14"
+name = "PMEVCNTR14_EL0"
+[aarch64.msr.S3_3_c14_c9_7]
+description = "Performance Monitors Event Count Register 15"
+name = "PMEVCNTR15_EL0"
+[aarch64.msr.S3_3_c2_c4_0]
+description = "Random Number"
+name = "RNDR"
+[aarch64.msr.S3_3_c2_c4_1]
+description = "Reseeded Random Number"
+name = "RNDRRS"
+[aarch64.msr.S3_3_c4_c2_0]
+description = "Condition Flags"
+name = "NZCV"
+[aarch64.msr.S3_3_c4_c2_1]
+description = "Interrupt Mask Bits"
+name = "DAIF"
+[aarch64.msr.S3_3_c4_c2_5]
+description = "Data Independent Timing"
+name = "DIT"
+[aarch64.msr.S3_3_c4_c2_6]
+description = "Speculative Store Bypass Safe"
+name = "SSBS"
+[aarch64.msr.S3_3_c4_c2_7]
+description = "Tag Check Override"
+name = "TCO"
+[aarch64.msr.S3_3_c4_c4_0]
+description = "Floating-point Control Register"
+name = "FPCR"
+[aarch64.msr.S3_3_c4_c4_1]
+description = "Floating-point Status Register"
+name = "FPSR"
+[aarch64.msr.S3_3_c4_c5_0]
+description = "Debug Saved Program Status Register"
+name = "DSPSR_EL0"
+[aarch64.msr.S3_3_c4_c5_1]
+description = "Debug Link Register"
+name = "DLR_EL0"
+[aarch64.msr.S3_3_c9_c12_0]
+description = "Performance Monitors Control Register"
+name = "PMCR_EL0"
+[aarch64.msr.S3_3_c9_c12_1]
+description = "Performance Monitors Count Enable Set register"
+name = "PMCNTENSET_EL0"
+[aarch64.msr.S3_3_c9_c12_2]
+description = "Performance Monitors Count Enable Clear register"
+name = "PMCNTENCLR_EL0"
+[aarch64.msr.S3_3_c9_c12_3]
+description = "Performance Monitors Overflow Flag Status Clear Register"
+name = "PMOVSCLR_EL0"
+[aarch64.msr.S3_3_c9_c12_4]
+description = "Performance Monitors Software Increment register"
+name = "PMSWINC_EL0"
+[aarch64.msr.S3_3_c9_c12_5]
+description = "Performance Monitors Event Counter Selection Register"
+name = "PMSELR_EL0"
+[aarch64.msr.S3_3_c9_c12_6]
+description = "Performance Monitors Common Event Identification register 0"
+name = "PMCEID0_EL0"
+[aarch64.msr.S3_3_c9_c12_7]
+description = "Performance Monitors Common Event Identification register 1"
+name = "PMCEID1_EL0"
+[aarch64.msr.S3_3_c9_c13_0]
+description = "Performance Monitors Cycle Count Register"
+name = "PMCCNTR_EL0"
+[aarch64.msr.S3_3_c9_c13_1]
+description = "Performance Monitors Selected Event Type Register"
+name = "PMXEVTYPER_EL0"
+[aarch64.msr.S3_3_c9_c13_2]
+description = "Performance Monitors Selected Event Count Register"
+name = "PMXEVCNTR_EL0"
+[aarch64.msr.S3_3_c9_c14_0]
+description = "Performance Monitors User Enable Register"
+name = "PMUSERENR_EL0"
+[aarch64.msr.S3_3_c9_c14_3]
+description = "Performance Monitors Overflow Flag Status Set register"
+name = "PMOVSSET_EL0"
+[aarch64.msr.S3_4_c0_c0_0]
+description = "Virtualization Processor ID Register"
+name = "VPIDR_EL2"
+[aarch64.msr.S3_4_c0_c0_5]
+description = "Virtualization Multiprocessor ID Register"
+name = "VMPIDR_EL2"
+[aarch64.msr.S3_4_c10_c2_0]
+description = "Memory Attribute Indirection Register (EL2)"
+name = "MAIR_EL2"
+[aarch64.msr.S3_4_c10_c3_0]
+description = "Auxiliary Memory Attribute Indirection Register (EL2)"
+name = "AMAIR_EL2"
+[aarch64.msr.S3_4_c10_c4_0]
+description = "MPAM Hypervisor Control Register (EL2)"
+name = "MPAMHCR_EL2"
+[aarch64.msr.S3_4_c10_c4_1]
+description = "MPAM Virtual Partition Mapping Valid Register"
+name = "MPAMVPMV_EL2"
+[aarch64.msr.S3_4_c10_c5_0]
+description = "MPAM2 Register (EL2)"
+name = "MPAM2_EL2"
+[aarch64.msr.S3_4_c10_c6_0]
+description = "MPAM Virtual PARTID Mapping Register 0"
+name = "MPAMVPM0_EL2"
+[aarch64.msr.S3_4_c10_c6_1]
+description = "MPAM Virtual PARTID Mapping Register 1"
+name = "MPAMVPM1_EL2"
+[aarch64.msr.S3_4_c10_c6_2]
+description = "MPAM Virtual PARTID Mapping Register 2"
+name = "MPAMVPM2_EL2"
+[aarch64.msr.S3_4_c10_c6_3]
+description = "MPAM Virtual PARTID Mapping Register 3"
+name = "MPAMVPM3_EL2"
+[aarch64.msr.S3_4_c10_c6_4]
+description = "MPAM Virtual PARTID Mapping Register 4"
+name = "MPAMVPM4_EL2"
+[aarch64.msr.S3_4_c10_c6_5]
+description = "MPAM Virtual PARTID Mapping Register 5"
+name = "MPAMVPM5_EL2"
+[aarch64.msr.S3_4_c10_c6_6]
+description = "MPAM Virtual PARTID Mapping Register 6"
+name = "MPAMVPM6_EL2"
+[aarch64.msr.S3_4_c10_c6_7]
+description = "MPAM Virtual PARTID Mapping Register 7"
+name = "MPAMVPM7_EL2"
+[aarch64.msr.S3_4_c12_c0_0]
+description = "Vector Base Address Register (EL2)"
+name = "VBAR_EL2"
+[aarch64.msr.S3_4_c12_c0_1]
+description = "Reset Vector Base Address Register (if EL3 not implemented)"
+name = "RVBAR_EL2"
+[aarch64.msr.S3_4_c12_c0_2]
+description = "Reset Management Register (EL2)"
+name = "RMR_EL2"
+[aarch64.msr.S3_4_c12_c11_0]
+description = "Interrupt Controller Hyp Control Register"
+name = "ICH_HCR_EL2"
+[aarch64.msr.S3_4_c12_c11_1]
+description = "Interrupt Controller VGIC Type Register"
+name = "ICH_VTR_EL2"
+[aarch64.msr.S3_4_c12_c11_2]
+description = "Interrupt Controller Maintenance Interrupt State Register"
+name = "ICH_MISR_EL2"
+[aarch64.msr.S3_4_c12_c11_3]
+description = "Interrupt Controller End of Interrupt Status Register"
+name = "ICH_EISR_EL2"
+[aarch64.msr.S3_4_c12_c11_5]
+description = "Interrupt Controller Empty List Register Status Register"
+name = "ICH_ELRSR_EL2"
+[aarch64.msr.S3_4_c12_c11_7]
+description = "Interrupt Controller Virtual Machine Control Register"
+name = "ICH_VMCR_EL2"
+[aarch64.msr.S3_4_c12_c12_0]
+description = "Interrupt Controller List Register 0"
+name = "ICH_LR0_EL2"
+[aarch64.msr.S3_4_c12_c12_1]
+description = "Interrupt Controller List Register 1"
+name = "ICH_LR1_EL2"
+[aarch64.msr.S3_4_c12_c12_2]
+description = "Interrupt Controller List Register 2"
+name = "ICH_LR2_EL2"
+[aarch64.msr.S3_4_c12_c12_3]
+description = "Interrupt Controller List Register 3"
+name = "ICH_LR3_EL2"
+[aarch64.msr.S3_4_c12_c12_4]
+description = "Interrupt Controller List Register 4"
+name = "ICH_LR4_EL2"
+[aarch64.msr.S3_4_c12_c12_5]
+description = "Interrupt Controller List Register 5"
+name = "ICH_LR5_EL2"
+[aarch64.msr.S3_4_c12_c12_6]
+description = "Interrupt Controller List Register 6"
+name = "ICH_LR6_EL2"
+[aarch64.msr.S3_4_c12_c12_7]
+description = "Interrupt Controller List Register 7"
+name = "ICH_LR7_EL2"
+[aarch64.msr.S3_4_c12_c13_0]
+description = "Interrupt Controller List Register 8"
+name = "ICH_LR8_EL2"
+[aarch64.msr.S3_4_c12_c13_1]
+description = "Interrupt Controller List Register 9"
+name = "ICH_LR9_EL2"
+[aarch64.msr.S3_4_c12_c13_2]
+description = "Interrupt Controller List Register 10"
+name = "ICH_LR10_EL2"
+[aarch64.msr.S3_4_c12_c13_3]
+description = "Interrupt Controller List Register 11"
+name = "ICH_LR11_EL2"
+[aarch64.msr.S3_4_c12_c13_4]
+description = "Interrupt Controller List Register 12"
+name = "ICH_LR12_EL2"
+[aarch64.msr.S3_4_c12_c13_5]
+description = "Interrupt Controller List Register 13"
+name = "ICH_LR13_EL2"
+[aarch64.msr.S3_4_c12_c13_6]
+description = "Interrupt Controller List Register 14"
+name = "ICH_LR14_EL2"
+[aarch64.msr.S3_4_c12_c13_7]
+description = "Interrupt Controller List Register 15"
+name = "ICH_LR15_EL2"
+[aarch64.msr.S3_4_c12_c1_1]
+description = "Virtual Deferred Interrupt Status Register"
+name = "VDISR_EL2"
+[aarch64.msr.S3_4_c12_c8_0]
+description = "Interrupt Controller Hyp Active Priorities Group 0 Register 0"
+name = "ICH_AP0R0_EL2"
+[aarch64.msr.S3_4_c12_c8_1]
+description = "Interrupt Controller Hyp Active Priorities Group 0 Register 1"
+name = "ICH_AP0R1_EL2"
+[aarch64.msr.S3_4_c12_c8_2]
+description = "Interrupt Controller Hyp Active Priorities Group 0 Register 2"
+name = "ICH_AP0R2_EL2"
+[aarch64.msr.S3_4_c12_c8_3]
+description = "Interrupt Controller Hyp Active Priorities Group 0 Register 3"
+name = "ICH_AP0R3_EL2"
+[aarch64.msr.S3_4_c12_c9_0]
+description = "Interrupt Controller Hyp Active Priorities Group 1 Register 0"
+name = "ICH_AP1R0_EL2"
+[aarch64.msr.S3_4_c12_c9_1]
+description = "Interrupt Controller Hyp Active Priorities Group 1 Register 1"
+name = "ICH_AP1R1_EL2"
+[aarch64.msr.S3_4_c12_c9_2]
+description = "Interrupt Controller Hyp Active Priorities Group 1 Register 2"
+name = "ICH_AP1R2_EL2"
+[aarch64.msr.S3_4_c12_c9_3]
+description = "Interrupt Controller Hyp Active Priorities Group 1 Register 3"
+name = "ICH_AP1R3_EL2"
+[aarch64.msr.S3_4_c12_c9_5]
+description = "Interrupt Controller System Register Enable register (EL2)"
+name = "ICC_SRE_EL2"
+[aarch64.msr.S3_4_c13_c0_1]
+description = "Context ID Register (EL2)"
+name = "CONTEXTIDR_EL2"
+[aarch64.msr.S3_4_c13_c0_2]
+description = "EL2 Software Thread ID Register"
+name = "TPIDR_EL2"
+[aarch64.msr.S3_4_c13_c0_7]
+description = "EL2 Read/Write Software Context Number"
+name = "SCXTNUM_EL2"
+[aarch64.msr.S3_4_c13_c10_0]
+description = "Activity Monitors Event Counter Virtual Offset Register 1 0"
+name = "AMEVCNTVOFF10_EL2"
+[aarch64.msr.S3_4_c13_c10_1]
+description = "Activity Monitors Event Counter Virtual Offset Register 1 1"
+name = "AMEVCNTVOFF11_EL2"
+[aarch64.msr.S3_4_c13_c10_2]
+description = "Activity Monitors Event Counter Virtual Offset Register 1 2"
+name = "AMEVCNTVOFF12_EL2"
+[aarch64.msr.S3_4_c13_c10_3]
+description = "Activity Monitors Event Counter Virtual Offset Register 1 3"
+name = "AMEVCNTVOFF13_EL2"
+[aarch64.msr.S3_4_c13_c10_4]
+description = "Activity Monitors Event Counter Virtual Offset Register 1 4"
+name = "AMEVCNTVOFF14_EL2"
+[aarch64.msr.S3_4_c13_c10_5]
+description = "Activity Monitors Event Counter Virtual Offset Register 1 5"
+name = "AMEVCNTVOFF15_EL2"
+[aarch64.msr.S3_4_c13_c10_6]
+description = "Activity Monitors Event Counter Virtual Offset Register 1 6"
+name = "AMEVCNTVOFF16_EL2"
+[aarch64.msr.S3_4_c13_c10_7]
+description = "Activity Monitors Event Counter Virtual Offset Register 1 7"
+name = "AMEVCNTVOFF17_EL2"
+[aarch64.msr.S3_4_c13_c11_0]
+description = "Activity Monitors Event Counter Virtual Offset Register 1 8"
+name = "AMEVCNTVOFF18_EL2"
+[aarch64.msr.S3_4_c13_c11_1]
+description = "Activity Monitors Event Counter Virtual Offset Register 1 9"
+name = "AMEVCNTVOFF19_EL2"
+[aarch64.msr.S3_4_c13_c11_2]
+description = "Activity Monitors Event Counter Virtual Offset Register 1 10"
+name = "AMEVCNTVOFF110_EL2"
+[aarch64.msr.S3_4_c13_c11_3]
+description = "Activity Monitors Event Counter Virtual Offset Register 1 11"
+name = "AMEVCNTVOFF111_EL2"
+[aarch64.msr.S3_4_c13_c11_4]
+description = "Activity Monitors Event Counter Virtual Offset Register 1 12"
+name = "AMEVCNTVOFF112_EL2"
+[aarch64.msr.S3_4_c13_c11_5]
+description = "Activity Monitors Event Counter Virtual Offset Register 1 13"
+name = "AMEVCNTVOFF113_EL2"
+[aarch64.msr.S3_4_c13_c11_6]
+description = "Activity Monitors Event Counter Virtual Offset Register 1 14"
+name = "AMEVCNTVOFF114_EL2"
+[aarch64.msr.S3_4_c13_c11_7]
+description = "Activity Monitors Event Counter Virtual Offset Register 1 15"
+name = "AMEVCNTVOFF115_EL2"
+[aarch64.msr.S3_4_c13_c8_0]
+description = "Activity Monitors Event Counter Virtual Offset Register 0 0"
+name = "AMEVCNTVOFF00_EL2"
+[aarch64.msr.S3_4_c13_c8_1]
+description = "Activity Monitors Event Counter Virtual Offset Register 0 1"
+name = "AMEVCNTVOFF01_EL2"
+[aarch64.msr.S3_4_c13_c8_2]
+description = "Activity Monitors Event Counter Virtual Offset Register 0 2"
+name = "AMEVCNTVOFF02_EL2"
+[aarch64.msr.S3_4_c13_c8_3]
+description = "Activity Monitors Event Counter Virtual Offset Register 0 3"
+name = "AMEVCNTVOFF03_EL2"
+[aarch64.msr.S3_4_c13_c8_4]
+description = "Activity Monitors Event Counter Virtual Offset Register 0 4"
+name = "AMEVCNTVOFF04_EL2"
+[aarch64.msr.S3_4_c13_c8_5]
+description = "Activity Monitors Event Counter Virtual Offset Register 0 5"
+name = "AMEVCNTVOFF05_EL2"
+[aarch64.msr.S3_4_c13_c8_6]
+description = "Activity Monitors Event Counter Virtual Offset Register 0 6"
+name = "AMEVCNTVOFF06_EL2"
+[aarch64.msr.S3_4_c13_c8_7]
+description = "Activity Monitors Event Counter Virtual Offset Register 0 7"
+name = "AMEVCNTVOFF07_EL2"
+[aarch64.msr.S3_4_c13_c9_0]
+description = "Activity Monitors Event Counter Virtual Offset Register 0 8"
+name = "AMEVCNTVOFF08_EL2"
+[aarch64.msr.S3_4_c13_c9_1]
+description = "Activity Monitors Event Counter Virtual Offset Register 0 9"
+name = "AMEVCNTVOFF09_EL2"
+[aarch64.msr.S3_4_c13_c9_2]
+description = "Activity Monitors Event Counter Virtual Offset Register 0 10"
+name = "AMEVCNTVOFF010_EL2"
+[aarch64.msr.S3_4_c13_c9_3]
+description = "Activity Monitors Event Counter Virtual Offset Register 0 11"
+name = "AMEVCNTVOFF011_EL2"
+[aarch64.msr.S3_4_c13_c9_4]
+description = "Activity Monitors Event Counter Virtual Offset Register 0 12"
+name = "AMEVCNTVOFF012_EL2"
+[aarch64.msr.S3_4_c13_c9_5]
+description = "Activity Monitors Event Counter Virtual Offset Register 0 13"
+name = "AMEVCNTVOFF013_EL2"
+[aarch64.msr.S3_4_c13_c9_6]
+description = "Activity Monitors Event Counter Virtual Offset Register 0 14"
+name = "AMEVCNTVOFF014_EL2"
+[aarch64.msr.S3_4_c13_c9_7]
+description = "Activity Monitors Event Counter Virtual Offset Register 0 15"
+name = "AMEVCNTVOFF015_EL2"
+[aarch64.msr.S3_4_c14_c0_3]
+description = "Counter-timer Virtual Offset register"
+name = "CNTVOFF_EL2"
+[aarch64.msr.S3_4_c14_c0_6]
+description = "Counter-timer Physical Offset register"
+name = "CNTPOFF_EL2"
+[aarch64.msr.S3_4_c14_c1_0]
+description = "Counter-timer Hypervisor Control register"
+name = "CNTHCTL_EL2"
+[aarch64.msr.S3_4_c14_c2_0]
+description = "Counter-timer Physical Timer TimerValue register (EL2)"
+name = "CNTHP_TVAL_EL2"
+[aarch64.msr.S3_4_c14_c2_1]
+description = "Counter-timer Hypervisor Physical Timer Control register"
+name = "CNTHP_CTL_EL2"
+[aarch64.msr.S3_4_c14_c2_2]
+description = "Counter-timer Physical Timer CompareValue register (EL2)"
+name = "CNTHP_CVAL_EL2"
+[aarch64.msr.S3_4_c14_c3_0]
+description = "Counter-timer Virtual Timer TimerValue Register (EL2)"
+name = "CNTHV_TVAL_EL2"
+[aarch64.msr.S3_4_c14_c3_1]
+description = "Counter-timer Virtual Timer Control register (EL2)"
+name = "CNTHV_CTL_EL2"
+[aarch64.msr.S3_4_c14_c3_2]
+description = "Counter-timer Virtual Timer CompareValue register (EL2)"
+name = "CNTHV_CVAL_EL2"
+[aarch64.msr.S3_4_c14_c4_0]
+description = "Counter-timer Secure Virtual Timer TimerValue register (EL2)"
+name = "CNTHVS_TVAL_EL2"
+[aarch64.msr.S3_4_c14_c4_1]
+description = "Counter-timer Secure Virtual Timer Control register (EL2)"
+name = "CNTHVS_CTL_EL2"
+[aarch64.msr.S3_4_c14_c4_2]
+description = "Counter-timer Secure Virtual Timer CompareValue register (EL2)"
+name = "CNTHVS_CVAL_EL2"
+[aarch64.msr.S3_4_c14_c5_0]
+description = "Counter-timer Secure Physical Timer TimerValue register (EL2)"
+name = "CNTHPS_TVAL_EL2"
+[aarch64.msr.S3_4_c14_c5_1]
+description = "Counter-timer Secure Physical Timer Control register (EL2)"
+name = "CNTHPS_CTL_EL2"
+[aarch64.msr.S3_4_c14_c5_2]
+description = "Counter-timer Secure Physical Timer CompareValue register (EL2)"
+name = "CNTHPS_CVAL_EL2"
+[aarch64.msr.S3_4_c1_c0_0]
+description = "System Control Register (EL2)"
+name = "SCTLR_EL2"
+[aarch64.msr.S3_4_c1_c0_1]
+description = "Auxiliary Control Register (EL2)"
+name = "ACTLR_EL2"
+[aarch64.msr.S3_4_c1_c1_0]
+description = "Hypervisor Configuration Register"
+name = "HCR_EL2"
+[aarch64.msr.S3_4_c1_c1_1]
+description = "Monitor Debug Configuration Register (EL2)"
+name = "MDCR_EL2"
+[aarch64.msr.S3_4_c1_c1_2]
+description = "Architectural Feature Trap Register (EL2)"
+name = "CPTR_EL2"
+[aarch64.msr.S3_4_c1_c1_3]
+description = "Hypervisor System Trap Register"
+name = "HSTR_EL2"
+[aarch64.msr.S3_4_c1_c1_4]
+description = "Hypervisor Fine-Grained Read Trap Register"
+name = "HFGRTR_EL2"
+[aarch64.msr.S3_4_c1_c1_5]
+description = "Hypervisor Fine-Grained Write Trap Register"
+name = "HFGWTR_EL2"
+[aarch64.msr.S3_4_c1_c1_6]
+description = "Hypervisor Fine-Grained Instruction Trap Register"
+name = "HFGITR_EL2"
+[aarch64.msr.S3_4_c1_c1_7]
+description = "Hypervisor Auxiliary Control Register"
+name = "HACR_EL2"
+[aarch64.msr.S3_4_c1_c2_0]
+description = "SVE Control Register for EL2"
+name = "ZCR_EL2"
+[aarch64.msr.S3_4_c1_c2_1]
+description = "Trace Filter Control Register (EL2)"
+name = "TRFCR_EL2"
+[aarch64.msr.S3_4_c1_c3_1]
+description = "AArch32 Secure Debug Enable Register"
+name = "SDER32_EL2"
+[aarch64.msr.S3_4_c2_c0_0]
+description = "Translation Table Base Register 0 (EL2)"
+name = "TTBR0_EL2"
+[aarch64.msr.S3_4_c2_c0_1]
+description = "Translation Table Base Register 1 (EL2)"
+name = "TTBR1_EL2"
+[aarch64.msr.S3_4_c2_c0_2]
+description = "Translation Control Register (EL2)"
+name = "TCR_EL2"
+[aarch64.msr.S3_4_c2_c1_0]
+description = "Virtualization Translation Table Base Register"
+name = "VTTBR_EL2"
+[aarch64.msr.S3_4_c2_c1_2]
+description = "Virtualization Translation Control Register"
+name = "VTCR_EL2"
+[aarch64.msr.S3_4_c2_c2_0]
+description = "Virtual Nested Control Register"
+name = "VNCR_EL2"
+[aarch64.msr.S3_4_c2_c6_0]
+description = "Virtualization Secure Translation Table Base Register"
+name = "VSTTBR_EL2"
+[aarch64.msr.S3_4_c2_c6_2]
+description = "Virtualization Secure Translation Control Register"
+name = "VSTCR_EL2"
+[aarch64.msr.S3_4_c3_c0_0]
+description = "Domain Access Control Register"
+name = "DACR32_EL2"
+[aarch64.msr.S3_4_c3_c1_4]
+description = "Hypervisor Debug Fine-Grained Read Trap Register"
+name = "HDFGRTR_EL2"
+[aarch64.msr.S3_4_c3_c1_5]
+description = "Hypervisor Debug Fine-Grained Write Trap Register"
+name = "HDFGWTR_EL2"
+[aarch64.msr.S3_4_c3_c1_6]
+description = "Hypervisor Activity Monitors Fine-Grained Read Trap Register"
+name = "HAFGRTR_EL2"
+[aarch64.msr.S3_4_c4_c0_0]
+description = "Saved Program Status Register (EL2)"
+name = "SPSR_EL2"
+[aarch64.msr.S3_4_c4_c0_1]
+description = "Exception Link Register (EL2)"
+name = "ELR_EL2"
+[aarch64.msr.S3_4_c4_c1_0]
+description = "Stack Pointer (EL1)"
+name = "SP_EL1"
+[aarch64.msr.S3_4_c4_c3_0]
+description = "Saved Program Status Register (IRQ mode)"
+name = "SPSR_irq"
+[aarch64.msr.S3_4_c4_c3_1]
+description = "Saved Program Status Register (Abort mode)"
+name = "SPSR_abt"
+[aarch64.msr.S3_4_c4_c3_2]
+description = "Saved Program Status Register (Undefined mode)"
+name = "SPSR_und"
+[aarch64.msr.S3_4_c4_c3_3]
+description = "Saved Program Status Register (FIQ mode)"
+name = "SPSR_fiq"
+[aarch64.msr.S3_4_c5_c0_1]
+description = "Instruction Fault Status Register (EL2)"
+name = "IFSR32_EL2"
+[aarch64.msr.S3_4_c5_c1_0]
+description = "Auxiliary Fault Status Register 0 (EL2)"
+name = "AFSR0_EL2"
+[aarch64.msr.S3_4_c5_c1_1]
+description = "Auxiliary Fault Status Register 1 (EL2)"
+name = "AFSR1_EL2"
+[aarch64.msr.S3_4_c5_c2_0]
+description = "Exception Syndrome Register (EL2)"
+name = "ESR_EL2"
+[aarch64.msr.S3_4_c5_c2_3]
+description = "Virtual SError Exception Syndrome Register"
+name = "VSESR_EL2"
+[aarch64.msr.S3_4_c5_c3_0]
+description = "Floating-Point Exception Control register"
+name = "FPEXC32_EL2"
+[aarch64.msr.S3_4_c5_c6_0]
+description = "Tag Fault Status Register (EL2)"
+name = "TFSR_EL2"
+[aarch64.msr.S3_4_c6_c0_0]
+description = "Fault Address Register (EL2)"
+name = "FAR_EL2"
+[aarch64.msr.S3_4_c6_c0_4]
+description = "Hypervisor IPA Fault Address Register"
+name = "HPFAR_EL2"
+[aarch64.msr.S3_4_c9_c9_0]
+description = "Statistical Profiling Control Register (EL2)"
+name = "PMSCR_EL2"
+[aarch64.msr.S3_6_c10_c2_0]
+description = "Memory Attribute Indirection Register (EL3)"
+name = "MAIR_EL3"
+[aarch64.msr.S3_6_c10_c3_0]
+description = "Auxiliary Memory Attribute Indirection Register (EL3)"
+name = "AMAIR_EL3"
+[aarch64.msr.S3_6_c10_c5_0]
+description = "MPAM3 Register (EL3)"
+name = "MPAM3_EL3"
+[aarch64.msr.S3_6_c12_c0_0]
+description = "Vector Base Address Register (EL3)"
+name = "VBAR_EL3"
+[aarch64.msr.S3_6_c12_c0_1]
+description = "Reset Vector Base Address Register (if EL3 implemented)"
+name = "RVBAR_EL3"
+[aarch64.msr.S3_6_c12_c0_2]
+description = "Reset Management Register (EL3)"
+name = "RMR_EL3"
+[aarch64.msr.S3_6_c12_c12_4]
+description = "Interrupt Controller Control Register (EL3)"
+name = "ICC_CTLR_EL3"
+[aarch64.msr.S3_6_c12_c12_5]
+description = "Interrupt Controller System Register Enable register (EL3)"
+name = "ICC_SRE_EL3"
+[aarch64.msr.S3_6_c12_c12_7]
+description = "Interrupt Controller Interrupt Group 1 Enable register (EL3)"
+name = "ICC_IGRPEN1_EL3"
+[aarch64.msr.S3_6_c13_c0_2]
+description = "EL3 Software Thread ID Register"
+name = "TPIDR_EL3"
+[aarch64.msr.S3_6_c13_c0_7]
+description = "EL3 Read/Write Software Context Number"
+name = "SCXTNUM_EL3"
+[aarch64.msr.S3_6_c1_c0_0]
+description = "System Control Register (EL3)"
+name = "SCTLR_EL3"
+[aarch64.msr.S3_6_c1_c0_1]
+description = "Auxiliary Control Register (EL3)"
+name = "ACTLR_EL3"
+[aarch64.msr.S3_6_c1_c1_0]
+description = "Secure Configuration Register"
+name = "SCR_EL3"
+[aarch64.msr.S3_6_c1_c1_1]
+description = "AArch32 Secure Debug Enable Register"
+name = "SDER32_EL3"
+[aarch64.msr.S3_6_c1_c1_2]
+description = "Architectural Feature Trap Register (EL3)"
+name = "CPTR_EL3"
+[aarch64.msr.S3_6_c1_c2_0]
+description = "SVE Control Register for EL3"
+name = "ZCR_EL3"
+[aarch64.msr.S3_6_c1_c3_1]
+description = "Monitor Debug Configuration Register (EL3)"
+name = "MDCR_EL3"
+[aarch64.msr.S3_6_c2_c0_0]
+description = "Translation Table Base Register 0 (EL3)"
+name = "TTBR0_EL3"
+[aarch64.msr.S3_6_c2_c0_2]
+description = "Translation Control Register (EL3)"
+name = "TCR_EL3"
+[aarch64.msr.S3_6_c4_c0_0]
+description = "Saved Program Status Register (EL3)"
+name = "SPSR_EL3"
+[aarch64.msr.S3_6_c4_c0_1]
+description = "Exception Link Register (EL3)"
+name = "ELR_EL3"
+[aarch64.msr.S3_6_c4_c1_0]
+description = "Stack Pointer (EL2)"
+name = "SP_EL2"
+[aarch64.msr.S3_6_c5_c1_0]
+description = "Auxiliary Fault Status Register 0 (EL3)"
+name = "AFSR0_EL3"
+[aarch64.msr.S3_6_c5_c1_1]
+description = "Auxiliary Fault Status Register 1 (EL3)"
+name = "AFSR1_EL3"
+[aarch64.msr.S3_6_c5_c2_0]
+description = "Exception Syndrome Register (EL3)"
+name = "ESR_EL3"
+[aarch64.msr.S3_6_c5_c6_0]
+description = "Tag Fault Status Register (EL3)"
+name = "TFSR_EL3"
+[aarch64.msr.S3_6_c6_c0_0]
+description = "Fault Address Register (EL3)"
+name = "FAR_EL3"
+[aarch64.msr.S3_7_c14_c2_0]
+description = "Counter-timer Physical Secure Timer TimerValue register"
+name = "CNTPS_TVAL_EL1"
+[aarch64.msr.S3_7_c14_c2_1]
+description = "Counter-timer Physical Secure Timer Control register"
+name = "CNTPS_CTL_EL1"
+[aarch64.msr.S3_7_c14_c2_2]
+description = "Counter-timer Physical Secure Timer CompareValue register"
+name = "CNTPS_CVAL_EL1"
+[aarch64.pstate]
+3 = "UAO"
+4 = "PAN"
+5 = "SPSel"
+6 = "DAIFSet"
+7 = "DAIFClr"
+[metadata]
+credits = ["https://gist.github.com/bazad/42054285391c6e0dcd0ede4b5f969ad2"]
+description = "Representations of registers and instructions for various CPU elements"

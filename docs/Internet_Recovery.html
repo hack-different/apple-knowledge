@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Dissection of the Apple Internet Recovery protocol and Security Analysis | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Dissection of the Apple Internet Recovery protocol and Security Analysis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/Internet_Recovery.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/Internet_Recovery.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Dissection of the Apple Internet Recovery protocol and Security Analysis" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"Dissection of the Apple Internet Recovery protocol and Security Analysis","url":"https://docs.hackdiffe.rent/docs/Internet_Recovery.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="dissection-of-the-apple-internet-recovery-protocol-and-security-analysis">Dissection of the Apple Internet Recovery protocol and Security Analysis</h1>
+
+<p>NOTE: The authors’ machine always downgrades from 10.15.3 to 10.13.0 via
+internet recovery, therefore some experiments may not be working the same
+due to a network issue with an attacker at a position of privilege on the
+network.</p>
+
+<h2 id="verification-of-basesystemdmg-and-osdinstalldmg">Verification of BaseSystem.dmg and OSDInstall.dmg</h2>
+
+<p>See <code class="language-plaintext highlighter-rouge">doc/chunklist_v1.md</code> and <a href="https://github.com/t8012/cnklverify">https://github.com/t8012/cnklverify</a></p>
+
+<h2 id="request--response-of-internet-recovery-image-location">Request / Response of Internet Recovery image location</h2>
+
+<p>PAW and ruby code</p>
+
+<p><code class="language-plaintext highlighter-rouge">doc/Apple Internet Recovery.paw</code>
+<code class="language-plaintext highlighter-rouge">lib/request_recovery.rb</code></p>
+
+<p>It seems that it is impossible to fake a response from the Apple Internet
+recovery server, but since the forgery token isn’t included with the signed
+response, it opens up the case where a man-in-the-middle attack on the request
+may occur.  This leads to the potential to downgrade an operating system.</p>
+
+<p>This may be in part due to the age of the IR protocol and lack of stronger
+PKI based crypto in older (read Lion 10.9) versions of IR.</p>
+
+<h3 id="request-format">Request Format</h3>
+
+<p>A session cookie is requested from <a href="http://osrecovery.apple.com/">http://osrecovery.apple.com/</a> then
+A request is made to <a href="http://osrecovery.apple.com/InstallationPayload/RecoveryImage">http://osrecovery.apple.com/InstallationPayload/RecoveryImage</a></p>
+
+<p>A request is in the form of:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cid=A64F96125D28533D
+    sn=C079442000SJRWLAX
+    bid=Mac-7BA5B2DFE22DDD8C
+    k=CF4EF754A68299485E52179B73382421FDBE38BAA06C7CE518A9A4BA91E3C96D
+    os=latest
+    bv=17.16.11081.0.0,0
+    fg=9ECA302EC3E25279AA80C088EF82A821DAD22197B8516F2E9966CC462B524393
+</code></pre></div></div>
+
+<p>An analysis of variables comes to these assumed names</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">cid</code> - The T2 ECID</li>
+  <li><code class="language-plaintext highlighter-rouge">sn</code> - Motherboard Serial number</li>
+  <li><code class="language-plaintext highlighter-rouge">bid</code> - Board ID (BDID)</li>
+  <li><code class="language-plaintext highlighter-rouge">k</code> - Key or some form of challenge (unknown, server accepts any value)</li>
+  <li><code class="language-plaintext highlighter-rouge">os</code> - The requested OS</li>
+  <li><code class="language-plaintext highlighter-rouge">bv</code> - Version of bridgeOS</li>
+  <li><code class="language-plaintext highlighter-rouge">fg</code> - Anti forgery challenge (unknown, server accepts any value)</li>
+</ul>
+
+<h3 id="response-format">Response Format</h3>
+
+<p>A response is in the form of</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    AP: 041-76812
+    AU: http://oscdn.apple.com/content/downloads/22/29/041-76812a/2liqsakq9ocpldao5gxogpqqkg3666itc6/RecoveryImage/BaseSystem.dmg
+    AH: 0DD88446D924DC180B25085F53BEA4A2B148024F69EA93E265AEC2F1102E4CB4
+    AT: expires=1585251286~access=/content/downloads/22/29/041-76812a/2liqsakq9ocpldao5gxogpqqkg3666itc6/RecoveryImage/BaseSystem.dmg~md5=aade63d0bf105b660880b522ee16276f
+    CU: http://oscdn.apple.com/content/downloads/22/29/041-76812a/2liqsakq9ocpldao5gxogpqqkg3666itc6/RecoveryImage/BaseSystem.chunklist
+    CH: 791BD581006AD8147F988138B434A2CB792D87F4C2187BD992CC06B64234CA4A
+    CT: expires=1585251286~access=/content/downloads/22/29/041-76812a/2liqsakq9ocpldao5gxogpqqkg3666itc6/RecoveryImage/BaseSystem.chunklist~md5=7b7ae5fd362c4ff1b216016121f6cb87
+</code></pre></div></div>
+
+<p>An analysis shows the following values</p>
+
+<ul>
+  <li>AP - Apple’s update ID for the package, from the software update catalog</li>
+  <li>AU - base system URL to download from (dmg)</li>
+  <li>AH - Some form of hash for the base system URL / content</li>
+  <li>AT - BaseSystem URL token cookie (Passed in the next request as a cookie header)</li>
+  <li>CU - chunklist URL (this becomes dangerous if downgrade attacked to v1)</li>
+  <li>CH - Chunklist URL hash / content</li>
+  <li>CT - Chunklist URL token cookie (Passed in the next request as a cookie header)</li>
+</ul>
+
+<h2 id="credit">Credit</h2>
+
+<p>Research by Rick Mark and moved from <code class="language-plaintext highlighter-rouge">rickmark/apple_net_recovery</code></p>
+
+      </section>
+    </div>
+  </body>
+</html>

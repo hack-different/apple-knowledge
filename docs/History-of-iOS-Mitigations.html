@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>History of iOS Mitigations | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="History of iOS Mitigations" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/History-of-iOS-Mitigations.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/History-of-iOS-Mitigations.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="History of iOS Mitigations" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"History of iOS Mitigations","url":"https://docs.hackdiffe.rent/docs/History-of-iOS-Mitigations.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="history-of-ios-mitigations">History of iOS Mitigations</h1>
+
+<h2 id="firmware-encryption">Firmware Encryption</h2>
+
+<p>Wasn’t fully working until iOS 2.0. The 8900 format was used first, then <code class="language-plaintext highlighter-rouge">img3</code> and now <code class="language-plaintext highlighter-rouge">im4p</code>. Common
+workarounds are low level exploits which allow to turn devices into key oracles.</p>
+
+<h2 id="code-signing">Code Signing</h2>
+
+<p>Introduced in iOS 2.0. Enforced by <code class="language-plaintext highlighter-rouge">AppleMobileFileIntegrity</code>, or AMFI.</p>
+
+<p>Common workarounds are unprotecting codesigned pages to rw- to avoid code sign enforcement, and neutering
+<code class="language-plaintext highlighter-rouge">MISValidateSignature</code> in amfid (these tricks are often combined in order to get dyld to load a fake dylib
+which interposes MISValidateSignature without triggering any code sign fault, which kills effectively
+codesigning system-wide, allowing arbitrary ad-hoc binaries to be loaded at will).</p>
+
+<p>For patching, <code class="language-plaintext highlighter-rouge">amfi_get_out_of_my_way</code> is a good technique.</p>
+
+<h2 id="llb-validation">LLB Validation</h2>
+
+<p>On the S5L8900 no sigchecking was performed by the bootrom before jumping into the LLB- note that with a
+solid chain of trust this wouldn’t be an issue since sigchecks are performed when flashing the image, but
+this allowed for easy persistance once a single injection vector was acquired. This changed with the
+introduction of the iPod Touch 2G, whose bootrom validated also the LLB image.</p>
+
+<p>Common workarounds are bootrom exploits or similar low level exploits, or an userland persistency vector
+(look for Code Signing workarounds).</p>
+
+<ul>
+  <li>dyld data-only dylib hardening</li>
+  <li>ASLR</li>
+  <li>Free List Hardening</li>
+  <li>Poisoning</li>
+  <li>Stack Guard</li>
+  <li>KASLR</li>
+  <li>Info Leak Mitigation Strategy</li>
+  <li>Proper kernel memory protection flags</li>
+  <li>Address Space Isolation</li>
+  <li><code class="language-plaintext highlighter-rouge">CS_RESTRICT</code></li>
+  <li>LwVM Write Locking</li>
+  <li><code class="language-plaintext highlighter-rouge">mmap</code> hook TeamID validation</li>
+  <li>validateFirstFewPages</li>
+  <li>KPP - Kernel Patch Protection</li>
+  <li>Modern AMFI</li>
+  <li>LaunchDaemons plists moved to xpcd_cache.dylib
+    <ul>
+      <li>First attempt (iOS x.y) just moved plists to code-signed xpcd_cache.dylib</li>
+      <li>Second attempt (iOS x.y) added a dummy function to xpcd_cache.dylib that launchd runs to make sure
+AMFI kicks in and checks integrety.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Commond workarounds usually involve replacing daemons directly. A good target for this is softwareupdated,
+since stashing breaks OTA (and OTA is an unwanted feature, too).</p>
+
+      </section>
+    </div>
+  </body>
+</html>

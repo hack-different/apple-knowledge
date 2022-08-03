@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Bypassing AMFI | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Bypassing AMFI" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/Bypassing-AMFI.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/Bypassing-AMFI.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bypassing AMFI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"Bypassing AMFI","url":"https://docs.hackdiffe.rent/docs/Bypassing-AMFI.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="bypassing-amfi">Bypassing AMFI</h1>
+
+<p><code class="language-plaintext highlighter-rouge">AppleMobileFileIntegrity</code> is the kernel extension that handles codesign enforcement.
+It uses MAC Framework in order to hook into the Mach-O loading related functions in XNU, as well
+as hooking into mmap and several other functions.  Code sign enforcement also happens at page fault time.</p>
+
+<p>When a mapping is added to an address space, it is not actually added to translation tables just yet. Instead,
+on the first access a page fault exception is generated and the kernel maps in the requested page. If a page
+is marked as executable, the kernel will also hash the page and compare it against the codesign blob for
+the vnode it’s mapped from; if the hashes differ, the task is terminated.</p>
+
+<p>The main attack vector for AMFI has historically been dyld, the dynamic loader. Indeed, the dynamic loader
+is in charge for mapping Mach-Os such as dylibs into a given address space. Segments in a Mach-O describe
+a section of said address space; memory protection flags are also described by Mach-O segments and applied by dyld.</p>
+
+<p>Dyld also enforces code signatures by requiring Mach-O load commands to be in a segment marked as executable
+(in function sniffLoadCommands) to counter against <a href="https://github.com/comex" class="user-mention">@comex</a>’s incomplete codesign; however there is a chicken-and-egg
+issue here; Load commands are themselves part of a segment, however segments aren’t mapped until load commands
+are parsed. This means dyld just copies load commands on the stack (which is rw- memory and thus not codesign
+enforced), parses load commands and checks wether the load commands were in an executable segment or not; on
+failure, dyld <code class="language-plaintext highlighter-rouge">abort()</code>s.</p>
+
+<p>Once segments are mapped in, dyld page faults into each of the segments’s pages (in function <code class="language-plaintext highlighter-rouge">crashIfInvalidSignature</code>),
+which finally validates both the load commands and segments.</p>
+
+<p>The first attack against this was to mark a semgent as “textreloc”, which would unprotect it to <code class="language-plaintext highlighter-rouge">rw-</code> after
+<code class="language-plaintext highlighter-rouge">sniffLoadCommands</code> checked load commands to be in a <code class="language-plaintext highlighter-rouge">PROT_EXEC</code> area, but before <code class="language-plaintext highlighter-rouge">crashIfInvalidSignature</code> could
+validate signatures.  Following attacks involved overlapping segments so load commands would be detected to be
+in a executable segment, but after getting mmap()ed, a second non-executable mapping would map on top of them,
+effectively killing the <code class="language-plaintext highlighter-rouge">crashIfInvalidCodeSignature</code> check.</p>
+
+      </section>
+    </div>
+  </body>
+</html>

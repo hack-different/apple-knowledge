@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Security Weakness of the M1 | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="The Security Weakness of the M1" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/wip/M1_Security.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/wip/M1_Security.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Security Weakness of the M1" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"The Security Weakness of the M1","url":"https://docs.hackdiffe.rent/wip/M1_Security.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="the-security-weakness-of-the-m1">The Security Weakness of the M1</h1>
+
+<h2 id="tldr">tl;dr</h2>
+
+<p>The M1 and iBoot was overall a massive step forward in boot integrity for our devices, but the use of an encrypted
+boot-loader (as opposed to EFI which was not encrypted) makes it’s security guarantees impossible to verify.  In
+addition, other regressions are outlined.</p>
+
+<h2 id="static-and-dynamic-analysis-of-the-boot-loader">Static and Dynamic Analysis of the Boot-loader</h2>
+
+<p>The security industry routinely performs analysis of security critical code components (the linux kernel, uBoot,
+TianoCore) or in cases where the source code is not available, by reverse engineering binary components (iBoot).  This
+allows the “many eyes make bugs shallow” theory to improve the overall security of our devices.  Early boot components
+get the most scrutiny due to the “secure-boot-chain” or that a device is only as secure as all the element in the
+chain that precede it.  <code class="language-plaintext highlighter-rouge">checkm8</code> is a massive issue largely because the chain was broken permanently at the earliest
+stage of the boot process, where it is fixed in ROM.</p>
+
+<p>It is this authors belief that iBoot, had it been open source, would have had this bug discovered and corrected much
+sooner than the span between the 5s (2013) and the X (2017) with the addition of the T2 (shipping today in 2022
+devices).  Nothing in the iBoot loader is particularly trade secret (as evidenced as Apple left it in the clear in
+the shipping of the M1 <code class="language-plaintext highlighter-rouge">applevm2</code> stack).  This allows us to examine a nearly complete M1 boot process, but leaves
+out the possibility of full verification, save NDAs with Apple or illegally obtained source material.  Given how wide
+spread the iBoot source disclosure was, I believe if Apple want’s to maintain its market position of “secure
+devices” that is a cornerstone of the App Store debate, it should make this fully open to external review.</p>
+
+<h2 id="lack-of-ability-to-create-measurements-externally">Lack of ability to create measurements externally</h2>
+
+<p>Yes, again.  The only way to assure an iBoot based device is to restore it, which is potentially expensive in
+time.  A high assurance path to performing a measurement (hashes of regions, reading APTicket) would allow a
+device to be attested without restore.</p>
+
+<h2 id="relocation-of-securerom-to-volatile-memory">Relocation of SecureROM to volatile memory</h2>
+
+<p>The initial stages of SecureROM copy the executable region to mutable SRAM (static ram).  This provides no benefit, as
+only the data region need be in mutable memory.  Cache shadowing of ROM is sufficient to ensure that performance is
+acceptable.  By existing in DRAM, any coprocessor released from reset with DMA path, or any incomplete clearing of
+SRAM (the detection of ROM vs SRAM run is via a <code class="language-plaintext highlighter-rouge">&lt;</code> operator, which means it could be possible to execute SecureROM
+code at neither ROM nor SRAM by being further into the address space) would potentially compromise the SecureROM
+guarantees.  Given that the PMP is also an ARM core, and manages power state machine changes, this may indicate a
+flaw in that core may cause errant PMGR sequences that may violate the secure boot chain “cold” boot state.</p>
+
+<h2 id="security-dependence-on-hydrausb-c-ace-etc">Security dependence on Hydra/USB-C (ACE) etc</h2>
+
+<p>The ACE (USB-C port controller) was able to be used to push a device to DFU without user interaction.  This flow
+should require a physical key be depressed while the command is received to prevent misuse.  All port controllers
+must operate safely from ROM until SecureROM has exited as well and co-processor verification can take place.</p>
+
+<h2 id="the-pmp-and-pmgr">The PMP and PMGR</h2>
+
+<p>A malicious PMP firmware can prevent the DFU flow as it is the processor handling the DFU chord.  Apple should
+return to a ROM based DFU entry method.</p>
+
+<h2 id="lack-of-documentation-of-escapes-to-secure-boot-flow">Lack of documentation of escapes to secure boot flow</h2>
+
+<p>The usage of “dev build on production hardware” allows anyone with privileged access at Apple to create blue pill
+operating systems that are nearly impossible to detect.  Other operating systems solve this with “big scary warning”
+when a device is running a non-production / secure code path.</p>
+
+<h2 id="bonus-section">Bonus Section</h2>
+
+<h3 id="xnu-kernels-failure-to-prevent-dlopen-of-mh_executable-objects">XNU Kernel’s Failure to prevent <code class="language-plaintext highlighter-rouge">dlopen</code> of <code class="language-plaintext highlighter-rouge">MH_EXECUTABLE</code> objects</h3>
+
+<p>Every modern operating system guarantees that only dynamic libraries may be loaded by the dynamic symbol
+system (<code class="language-plaintext highlighter-rouge">dlopen</code> in POSIX, <code class="language-plaintext highlighter-rouge">LoadLibrary</code> on Windows) and not executables.  The ‘quirk’ that macOS picked up by
+allowing executables compiled as PIC (position independent code) as all code now is to support user mode ASLR,
+violates the security axiom of “principal of least surprise”.  Apple should immediately prevent the loading
+of <code class="language-plaintext highlighter-rouge">MH_EXECUTABLE</code> objects via <code class="language-plaintext highlighter-rouge">dlopen</code>.</p>
+
+<h3 id="implement-trust-zone-like-secure-and-non-secure-user-task-modes">Implement trust-zone like secure and non-secure user task modes</h3>
+
+<p>Security of processes could be improved by allowing the dynamic linker to run in usermode in a similar way to how
+trust-zone has two worlds.  This would allow the linker to stay in user mode but to only be able to bind from
+secure mode - making the pages read only to normal user-task mode and rw to the privileged mode.  This prevents
+malicious code from rebinding symbols.</p>
+
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Yonkers | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Yonkers" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/Yonkers_Savage_FW.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/Yonkers_Savage_FW.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Yonkers" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"Yonkers","url":"https://docs.hackdiffe.rent/docs/Yonkers_Savage_FW.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="yonkers">Yonkers</h1>
+
+<h2 id="header">Header</h2>
+
+<ul>
+  <li>uint32_t version? = 0x02</li>
+  <li>uint32_t header_size = 72 (0x48)</li>
+  <li>uint32_t</li>
+  <li>uint32_t</li>
+  <li>uint32_t</li>
+  <li>uint32_t = number of rows (5)</li>
+  <li>uint32_t = BE size of row</li>
+  <li>uint8_t[32] = SHA 256 Hash</li>
+  <li>uint32_t</li>
+  <li>uint32_t = offset / next haeder size</li>
+  <li>uint32_t = flags</li>
+</ul>
+
+<h2 id="rows">Rows</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>58670F7E 9ED5F03D 3EC7CACC BBA68416 85C25FCE 99B237F4 697D6D1D 6CAA77C9 625D4201 5ABD2C08 C842F790 339D8DB1 16D93FD4 CB3B684D EA4F4B64 C035A2B2
+BE0795C0 6D8A51FA 9CE8357B 72D99B4C 876FCFAA 89547183 2D34E19C 342FA221 9D4DA49B 65AB7152 240603D9 5C2163D7 D05E63F9 CCAD81FD C1962266 FBCCF1A6
+
+ECFF16D1 D5C975E2 693EAB14 25EEBB84 EE97AF77 C5177BF4 1974D0E5 0D131398 6468E2DA 9E54E221 FFD2F7B1 D5F57893 A364B8C3 58524897 41E23852 D41AEE1A
+57439C94 BADB07C1 EBC8EE55 99B72986 896EB6FF AAA87F3C 1039334B 61F3BB70 D4086F7D 7D847E61 E390908B B533D115 5ECCC216 5D866AD7 2BA7B872 F196AA26
+
+5C958306 6A342A66 CAA09143 99C76A36 A7767B0F 7A36C1D9 C977A7D6 AFA6CC52 234D0939 2BDC8B52 28D13845 1B0EEB20 57DB1BEB D3719D71 23D133DA CF165D17
+F8C19A07 6C9F304A 448E4A55 0E4B3606 74F4442C CFFF4F71 7D0EE4F2 18D35E70 F22A4482 910F57EA A2307EB7 B04C1498 0B368591 BC4BAF3A F0B60BC4 57D22E5E
+
+1AABD176 07A69A5E 76BC659C 34BDA9BE 153E0DC3 6F189EC0 3EA03A8A 7641D6BA D6E1D91A 6B4F0495 A331631F 1FA23697 BC49098C 37354EB7 E79591E5 FAF6AEDF
+29B745DA 788530D8 628E2599 B200FF17 CE644D49 8CC9295B 0D7240BD CEF57648 25C51027 CDD44274 DD647CED E056E2CA 210EAFB5 578C2539 DBDE92B3 1D2A53FE
+
+DFA064EB 3CC843CA D6EB9610 0D9580B3 27E06098 EE468A45 BC7B753F C0AE990E 085E1678 14A6B2E4 46CC14B8 F8EE8FB1 48EAC12C 48D49435 A1D87B41 56A652C4
+8D641979 36B93A75 BFAA8035 77B50F5D D5CA34BF 5208ED4B CB1B7C19 80303F0D 28C18589 729C3D05 30532471 CB0F49A7 7A96657D 528B7544 C3D467AD 5F81922B
+</code></pre></div></div>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define SHA1_HASH_LENGTH 0x20
+</span>
+<span class="n">typdef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="kt">uint32_t</span> <span class="n">version</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="n">header_size</span> <span class="o">=</span> <span class="mh">0x48</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="n">firmware_total_size</span><span class="p">;</span>
+    <span class="kt">uint32_t</span>
+    <span class="kt">uint32_t</span>
+    <span class="kt">uint32_t</span> <span class="n">rows</span><span class="p">;</span> <span class="c1">// Guess: based on data being a multiple of this</span>
+    <span class="kt">uint32_t</span> <span class="n">row_size_be</span><span class="p">;</span>
+    <span class="kt">char</span><span class="o">*</span> <span class="n">hash</span><span class="p">[</span><span class="n">SHA1_HASH_LENGTH</span><span class="p">];</span> <span class="c1">// Not hash of data stream or full file, perhaps check after patch?</span>
+    <span class="kt">uint32_t</span>
+    <span class="kt">uint32_t</span> <span class="n">data_offset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="n">flags</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">yonkers_firmware_header_t</span>
+
+<span class="c1">// Basically a SWAG: theroy 0xA0 is not aligned by 16 bytes - likely row data</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="kt">char</span><span class="o">*</span> <span class="n">uuid</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span>
+    <span class="kt">char</span><span class="o">*</span> <span class="n">data</span><span class="p">[</span><span class="mh">0x90</span><span class="p">]</span>
+<span class="p">}</span> <span class="n">yonkers_patch_t</span><span class="p">;</span>
+</code></pre></div></div>
+
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Apple Factory Data | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Apple Factory Data" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/factory_data.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/factory_data.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Apple Factory Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"Apple Factory Data","url":"https://docs.hackdiffe.rent/docs/factory_data.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="apple-factory-data">Apple Factory Data</h1>
+
+<h2 id="tcfg-test-configuration"><code class="language-plaintext highlighter-rouge">tCfg</code> Test Configuration</h2>
+
+<p>In my experiance this is an img4 file that contains a payload that contains a <code class="language-plaintext highlighter-rouge">fCfg</code> as described later.</p>
+
+<ul>
+  <li>ASN.1 Sequence
+    <ul>
+      <li>Integer magic ‘fCfg’ in little endian</li>
+      <li>Intger</li>
+      <li>Private Sequence <code class="language-plaintext highlighter-rouge">1397768537</code>
+        <ul>
+          <li>Magic (values observed <code class="language-plaintext highlighter-rouge">MtCl</code>/<code class="language-plaintext highlighter-rouge">TPCl</code>)</li>
+          <li>String ‘.’</li>
+          <li>Data Stream - Appears to be a “patch” to a value provided by the firmware</li>
+        </ul>
+      </li>
+      <li>Private <code class="language-plaintext highlighter-rouge">1296389185</code></li>
+      <li>Private <code class="language-plaintext highlighter-rouge">1296125513</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="fcfg-factory-config"><code class="language-plaintext highlighter-rouge">fCfg</code> Factory Config</h2>
+
+<h2 id="scrt---sep-certificate"><code class="language-plaintext highlighter-rouge">scrt</code> - SEP Certificate</h2>
+
+<h2 id="hop0---h-o-policy-0"><code class="language-plaintext highlighter-rouge">hop0</code> - H O policy 0</h2>
+
+<p>Contains some amount of policy involving debug IP/MAC and what operations are permitted.</p>
+
+<h3 id="policy-12840113635100616">Policy <code class="language-plaintext highlighter-rouge">1.2.840.113635.100.6.16</code></h3>
+
+<ul>
+  <li>GET/FSCl:*</li>
+  <li>PUT/FSCl:*</li>
+  <li>GET/NvMR:*</li>
+  <li>PUT/NvMR:*</li>
+  <li>GET/hop0:*</li>
+  <li>PUT/hop0:*</li>
+  <li>GET/ateD:*</li>
+  <li>PUT/ateD:*</li>
+</ul>
+
+<h3 id="host-12840113635100617">Host <code class="language-plaintext highlighter-rouge">1.2.840.113635.100.6.17</code></h3>
+
+<p>Example: <code class="language-plaintext highlighter-rouge">0c:4d:e9:a7:16:31/172.19.203.55</code></p>
+
+<h3 id="128401136351006115"><code class="language-plaintext highlighter-rouge">1.2.840.113635.100.6.1.15</code></h3>
+
+<h2 id="lcrt---lynx-certificate"><code class="language-plaintext highlighter-rouge">lcrt</code> - Lynx Certificate</h2>
+
+<p>The Lynx (and later ocelot) are parts of the SEP.  This file is a IMG4 signed copy of that certificate. Along
+with some other structured data.</p>
+
+<h2 id="trust-object"><code class="language-plaintext highlighter-rouge">trust-object</code></h2>
+
+<p>Trust object (current and specified) are ASN.1 files encoding the trusted TLS certificate for when the FDR process
+contacts out to the apple server to restore factory data (things like serial number etc).  A restore machine is
+expected to provide a FDR proxy during the restore process, this allow the device to connect out to download data
+directly to Apple.  These certificates are rooted out of <code class="language-plaintext highlighter-rouge">FDR-DC-SSL-ROOT</code></p>
+
+<h3 id="asn1-sequence">ASN.1 Sequence</h3>
+
+<p>Data file magic <code class="language-plaintext highlighter-rouge">secb</code></p>
+
+<p>Sequence staring with <code class="language-plaintext highlighter-rouge">trst</code> which is the trust object.
+Sequence next is <code class="language-plaintext highlighter-rouge">rssl</code> which is the transport root
+Sequence final is <code class="language-plaintext highlighter-rouge">rvok</code> which is revoked certificates</p>
+
+      </section>
+    </div>
+  </body>
+</html>

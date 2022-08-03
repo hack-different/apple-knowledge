@@ -1,0 +1,136 @@
+
+[nvram_variables]
+
+[nvram_variables.AAPL,ignore]
+platforms = ["macOS","Intel","bridgeOS"]
+[nvram_variables.ApChipID]
+scopes = ["94b73556-2197-4702-82a8-3e1337dafbfb"]
+[nvram_variables.AppleSecureBootWindowsPolicy]
+description = "Controls trust in Microsoft's PCA 2011 cert for Apple Secure Boot"
+platforms = ["macOS","Intel","bridgeOS"]
+scopes = ["94b73556-2197-4702-82a8-3e1337dafbfb"]
+type = "boolean"
+[nvram_variables.DefaultBackgroundColor]
+description = "boot.efi background color. Stored as BGRA."
+platforms = ["macOS","Intel"]
+scopes = ["4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14"]
+[nvram_variables.IASUCatalogURL]
+description = "This is the update url used for install / update.  Security issues can occur when set to HTTP.  Typically managed through `seedutil`"
+platforms = ["macOS","Intel"]
+type = "string"
+[nvram_variables.StartupManagerPolicy]
+scopes = ["5eeb160f-45fb-4ce9-b4e3-610359abf6f8"]
+[nvram_variables.StartupMute]
+description = "Mute startup chime"
+scopes = ["default"]
+type = "integer"
+[nvram_variables.UIScale]
+description = "boot.efi interface scaling"
+platforms = ["macOS","Intel"]
+scopes = ["4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14"]
+[nvram_variables.aht-results]
+description = "Apple Hardware Test (diags) - PList"
+platforms = ["macOS","PPC","Intel"]
+type = "string"
+[nvram_variables.auto-boot]
+description = "If the device should `fsboot` upon power on"
+type = "boolean"
+[nvram_variables.auto-boot?]
+type = ":boolean"
+[nvram_variables.backlight-level]
+scopes = ["common"]
+[nvram_variables.boot-args]
+description = "String passed to the XNU kernel at boot (M1's do filter this though)"
+persistent = true
+scopes = ["common"]
+type = "string"
+[nvram_variables.boot-breadcrumbs]
+type = "string"
+[nvram_variables.boot-command]
+type = "string"
+values = ["alamo","diags","fsboot","rbm","recover","recover-once","recover-system","rtos","upgrade"]
+[nvram_variables.boot-device]
+type = "string"
+values = ["nand0","asp_nand0","nvme_nand0"]
+[nvram_variables.boot-partition]
+type = "number"
+[nvram_variables.bootdelay]
+description = "Seconds to pause before autoboot"
+persistent = true
+type = "number"
+[nvram_variables.csr-active-config]
+description = "SIP bitmask (see csr.h in xnu source)"
+platforms = ["macOS","Intel"]
+scopes = ["common"]
+[nvram_variables.csr-data]
+description = "Kexts to approve regardless of CSR_ALLOW_UNAPPROVED_KEXTS"
+platforms = ["macOS","Intel"]
+scopes = ["common"]
+type = "string"
+[nvram_variables.current-network]
+scopes = ["36C28AB5-6566-4C50-9EBD-CBB920F83843"]
+[nvram_variables.debug-uarts]
+description = "Bitfield of which UARTs to enable"
+persistent = true
+type = "integer"
+[nvram_variables.default-mac-address?]
+type = "boolean"
+[nvram_variables.enter-tdm-mode]
+description = "Enter USB Target Disk Mode"
+platforms = ["macOS","Intel"]
+type = "boolean"
+[nvram_variables.fcode-debug?]
+description = "Forth code debugging for OpenFirmware"
+platforms = ["macOS","PPC"]
+type = "string"
+[nvram_variables.fmm-computer-name]
+description = "Current saved host name"
+scopes = ["common"]
+type = "string"
+[nvram_variables.fmm-mobileme-token-FMM-BridgeHasAccount]
+description = "If this value is true FMM is handled by the T2 coprocessor.  This is always false on Apple Silicon as there is no bridgeOS device"
+platforms = ["macOS","Intel","macOS ASi"]
+type = "boolean"
+[nvram_variables.fmm-mobileme-token-FMM-WipePending]
+description = "If a device wipe has been requested by FindMy"
+platforms = ["macOS","Intel"]
+type = "boolean"
+[nvram_variables.gpu-power-prefs]
+description = "Disable dGPU (I think only for older models)"
+platforms = ["macOS","Intel"]
+scopes = ["FA4CE28D-B62F-4C99-9CC3-6815686E30F9"]
+type = "boolean"
+[nvram_variables.input-device]
+platforms = ["macOS","PPC"]
+[nvram_variables.input-device-1]
+platforms = ["macOS","PPC"]
+[nvram_variables.little-endian?]
+description = "If the CPU is a little endian architecture"
+platforms = ["macOS","PPC"]
+type = "boolean"
+[nvram_variables.lts-persistance]
+type = "string"
+[nvram_variables.preferred-count]
+scopes = ["36C28AB5-6566-4C50-9EBD-CBB920F83843"]
+[nvram_variables.preferred-networks]
+scopes = ["36C28AB5-6566-4C50-9EBD-CBB920F83843"]
+[nvram_variables.prev-lang:kbd]
+description = "Default keyboard layout"
+scopes = ["common"]
+type = "string"
+[nvram_variables.real-base]
+type = "number"
+[nvram_variables.real-base?]
+type = "boolean"
+[nvram_variables.real-size]
+type = "number"
+[nvram_variables.screen-#columns]
+type = "number"
+[nvram_variables.screen-#rows]
+type = "number"
+[nvram_variables.security-mode]
+description = "FireWire security mode \nSee IOFireWireController.cpp in IOFireWireFamily: https://github.com/apple-oss-distributions/IOFireWireFamily/blob/IOFireWireFamily-483/IOFireWireFamily.kmodproj/IOFireWireController.cpp#L4212\n"
+scopes = ["common"]
+type = "string"
+[nvram_variables.selftest-#megs]
+type = "number"

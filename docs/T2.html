@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>T2 Dev Setup | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="T2 Dev Setup" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/T2.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/T2.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="T2 Dev Setup" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"T2 Dev Setup","url":"https://docs.hackdiffe.rent/docs/T2.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="t2-dev-setup">T2 Dev Setup</h1>
+
+<ul>
+  <li>Install DevTools</li>
+  <li>Install Homebrew</li>
+  <li><code class="language-plaintext highlighter-rouge">brew install libplist automake autoconf pkg-config openssl libtool llvm libusb</code></li>
+  <li>Clone and install the following (./autogen.sh, make, make install)
+    <ul>
+      <li><a href="https://github.com/sbingner/ldid">https://github.com/sbingner/ldid</a></li>
+      <li><a href="https://github.com/libimobiledevice/libusbmuxd">https://github.com/libimobiledevice/libusbmuxd</a></li>
+      <li><a href="https://github.com/libimobiledevice/libimobiledevice">https://github.com/libimobiledevice/libimobiledevice</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="how-to-ssh">How to SSH</h2>
+
+<ul>
+  <li>build checkra1n</li>
+  <li>run <code class="language-plaintext highlighter-rouge">sudo ./checkra1n -r build/t2rdsk.dmg</code>.  It will stall when complete</li>
+  <li>Bring up a proxy to the checkra1n daemon with <code class="language-plaintext highlighter-rouge">iproxy 1337 1337 &amp;</code></li>
+  <li>Hand the userland to the daemon with
+<code class="language-plaintext highlighter-rouge">cat build/t2overlay.dmg | nc 127.0.0.1 1337 | xxd</code></li>
+  <li>Bring up another proxy to dropbear with <code class="language-plaintext highlighter-rouge">iproxy 2222 44 &amp;</code></li>
+  <li>SSH <code class="language-plaintext highlighter-rouge">ssh -p 2222 root@127.0.0.1</code> - Profit</li>
+</ul>
+
+<h2 id="fun-utilities-and-locations-on-the-t2">Fun Utilities and Locations on the T2</h2>
+
+<ul>
+  <li>MacEFIUtil</li>
+  <li>/private/var/MobileSoftwareUpdate/nvram.plist</li>
+</ul>
+
+<h2 id="things-of-interest-for-the-t2">Things of interest for the T2</h2>
+
+<ul>
+  <li>CoreBoot - <a href="https://www.coreboot.org">https://www.coreboot.org</a></li>
+  <li>OpenCore - <a href="https://github.com/acidanthera/OpenCorePkg">https://github.com/acidanthera/OpenCorePkg</a></li>
+  <li>EFI Protocols - <a href="https://github.com/acidanthera/EfiPkg">https://github.com/acidanthera/EfiPkg</a></li>
+  <li>Cursed NVMe - <a href="https://github.com/acidanthera/NVMeFix">https://github.com/acidanthera/NVMeFix</a></li>
+</ul>
+
+      </section>
+    </div>
+  </body>
+</html>

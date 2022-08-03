@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Qualcomm Baseband | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Qualcomm Baseband" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/Baseband_Qualcomm.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/Baseband_Qualcomm.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Qualcomm Baseband" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"Qualcomm Baseband","url":"https://docs.hackdiffe.rent/docs/Baseband_Qualcomm.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="qualcomm-baseband">Qualcomm Baseband</h1>
+
+<h2 id="bbfw"><code class="language-plaintext highlighter-rouge">bbfw</code></h2>
+
+<p>Zip package containing:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sbl1.mbn</code> - Secondary Bootloader (after ROM PBL)</li>
+  <li><code class="language-plaintext highlighter-rouge">Info.plist</code> - Apple update information</li>
+  <li><code class="language-plaintext highlighter-rouge">Options.plist</code> - Zero? Seems in error? (Even empty plists have length)</li>
+  <li><code class="language-plaintext highlighter-rouge">qdsp6sw.mbn</code> - Qualcomm Hexagon Digital Signal Processor (non-ARM core)</li>
+  <li><code class="language-plaintext highlighter-rouge">tz.mbn</code> - Qualcomm TrustZone Implementation - QSEE</li>
+  <li><code class="language-plaintext highlighter-rouge">hyp.mbn</code> - Qualcomm Hypervisor Execution Environment - QHEE - EL2</li>
+  <li><code class="language-plaintext highlighter-rouge">xbl_cfg.mbn</code> - For XBL (eXtensible Boot Loader) or EFI based SPL signed static data</li>
+  <li><code class="language-plaintext highlighter-rouge">restoresbl1.mbn</code> - Secondary program loader (bootloader) for baseband recovery</li>
+  <li><code class="language-plaintext highlighter-rouge">acdb.mbn</code> - Accessory Calibration Database (seems to be initial)</li>
+  <li><code class="language-plaintext highlighter-rouge">apps.mbn</code> - Userland baseband applications</li>
+  <li><code class="language-plaintext highlighter-rouge">rpm.mbn</code> - Rollback prevention manager</li>
+  <li><code class="language-plaintext highlighter-rouge">wdt.mbn</code> - Watchdog Timer</li>
+  <li><code class="language-plaintext highlighter-rouge">mba.mbn</code> - QURT - Qualcomm Realtime OS Kernel image</li>
+  <li><code class="language-plaintext highlighter-rouge">dsp3.mbn</code></li>
+</ul>
+
+<h2 id="mbn-signature-format">MBN Signature Format</h2>
+
+<p>Contains a C struct styled header, followed by hashes, a signature and a certificate chain.</p>
+
+<p>MBNs are ill-designed because the ELF header contains the offset to the signature region, which signs the ELF header
+creating a circular dependency.</p>
+
+<h3 id="header-region">Header Region</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Likely depends on hash type - samples found stated PK algorithm scep384r1 having a signature size of 384 - deterministic noncing?</span>
+<span class="c1">// does this lead to a potential leak of private key with double nonce values?</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+  <span class="kt">char</span><span class="o">*</span> <span class="n">hash</span><span class="p">[</span><span class="n">HASH_TYPE_SIZE</span><span class="p">];</span> <span class="c1">// Unfortuantly they used all zeros to encode an empty region instead of hash of zeros...</span>
+                              <span class="c1">// This seems to always be true of the signature area (b01) but also of other regions?</span>
+<span class="p">}</span> <span class="n">mbn_hash_row_t</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span>
+  <span class="n">kSHA2_384</span> <span class="o">=</span> <span class="mh">0x06</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">mbn_hash_type_t</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+  <span class="kt">uint32_t</span> <span class="n">hash_rows</span><span class="p">;</span>         <span class="c1">// Number of hash rows - samples with 0 have hashes but no signature... and 0xFFFFFFFF for</span>
+                              <span class="c1">// pk_hash.  It also has hash rows, perhaps its a problem via multiple verification paths?</span>
+  <span class="n">mbn_hash_type_t</span> <span class="n">hash_type</span><span class="p">;</span>  <span class="c1">// 6 - SHA2-384?</span>
+  <span class="kt">uint32_t</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="kt">uint32_t</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="kt">uint32_t</span> <span class="n">hash_and_signature_size</span><span class="p">;</span> <span class="c1">// Little endian - data following header and extra</span>
+  <span class="kt">uint32_t</span> <span class="n">hash_size</span><span class="p">;</span> <span class="c1">// size in bytes of hash type row size * rows - signature follows</span>
+  <span class="kt">uint32_t</span> <span class="n">pk_hash_one</span><span class="o">?</span> <span class="o">=</span> <span class="mh">0xFFFFFFFF</span> <span class="o">/</span> <span class="mh">0xA803708F</span>
+  <span class="kt">uint32_t</span> <span class="n">signature_size</span><span class="p">;</span> <span class="c1">// Size of ASN.1 signature following hash list</span>
+  <span class="kt">uint32_t</span> <span class="n">pk_hash_two</span><span class="o">?</span> <span class="o">=</span> <span class="mh">0xFFFFFFFF</span> <span class="o">/</span> <span class="mh">0xA803708F</span> <span class="c1">// Usually matches pk_hash_one</span>
+  <span class="kt">uint32_t</span> <span class="n">some_size</span><span class="p">;</span>  <span class="c1">// Some header item size or possibly align value?</span>
+  <span class="kt">uint32_t</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kt">uint32_t</span> <span class="n">extra_size</span><span class="p">;</span> <span class="c1">// Seems to be 0x78 bytes long... 64bit extension?</span>
+  <span class="kt">char</span><span class="o">*</span> <span class="n">extra</span><span class="p">[</span><span class="n">extra_size</span><span class="p">];</span>
+  <span class="n">mbn_hash_row_t</span> <span class="n">hashes</span><span class="p">[</span><span class="n">hash_rows</span><span class="p">];</span>
+<span class="p">}</span> <span class="n">mbn_header_t</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+
+</code></pre></div></div>
+
+<h4 id="examples-of-headers">Examples of headers</h4>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>restoresbl1.b01
+00000000 06000000 00000000 00000000 A8120000 40020000 FFFFFFFF 68000000 FFFFFFFF 00100000 00000000 78000000
+00000000 00000000 00000000 E1401400 00000000 00000000 00000000 04000000 00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 B7EB6FD8 00000000 00000000 00000000
+00000000 00000000 00000000 00000000 00000000 00000000
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>qdsp06sw.b01
+0C000000 06000000 00000000 00000000 40050000 40050000 A803708F 00000000 A803708F 00000000 00000000 00000000
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>multi_image.b01
+00000000 06000000 00000000 00000000 F8100000 90000000 FFFFFFFF 68000000 FFFFFFFF 00100000 00000000 78000000
+00000000 00000000 22000000 E1401400 00000000 00000000 00000000 04000000 00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 B7EB6FD8 00000000 00000000 00000000
+00000000 00000000 00000000 00000000 00000000 00000000
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hyp.b01
+00000000 06000000 00000000 00000000 C0000000 C0000000 FFFFFFFF 00000000 FFFFFFFF 00000000 00000000 00000000
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>devcfg.b01
+00000000 06000000 00000000 00000000 C0000000 C0000000 FFFFFFFF 00000000 FFFFFFFF 00000000 00000000 00000000
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apps.b01
+04000000 06000000 00000000 00000000 70020000 70020000 C821F980 00000000 C821F980 00000000 00000000 00000000
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aop.b01
+00000000 06000000 00000000 00000000 F0000000 F0000000 C880E08F 00000000 C880E08F 00000000 00000000 00000000
+</code></pre></div></div>
+
+<h3 id="asn1-encoded-signature">ASN.1 Encoded Signature</h3>
+
+<h4 id="ecdsa-scep384r1">ECDSA scep384r1</h4>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>9062 // ASN1 string header
+
+// SHA2-384 of the data to sign
+BCD8BE0C F9D0C2FD 4B19F174 CCEB6387 C3B05F17 1BAFA3D1 3DD12AC1 067E2B17 4424C5B4 9DC318C5 5E45C5F9 9E703066
+
+02 // Type?
+31 // Length
+00 // Compression of point? (possible non-standard 0/1 instead of 03/04)
+C0BA9832 B6F45BA2 AB8D411E E1C719F6 42342B86 2D4D3623 C7252D13 507339D7 C7EDAF53 5C84C3FA 1D14ABE4 BA1048A4
+
+02 // Type?
+31 // Length
+00 // Compression of point?
+8A8598AD B921E977 1276DACC 6FCEAA7A DEA4E971 EABAFEEB 61FF5F55 11AAB378 48C91884 8C6CE7E4 BABC4907 05F1E36F
+</code></pre></div></div>
+
+<h3 id="asn1-encoded-certificate-chain">ASN.1 Encoded Certificate Chain</h3>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SEQUENCE (3 elem)
+  SEQUENCE (8 elem)
+    [0] (1 elem)
+      INTEGER 2
+    INTEGER (63 bit) 5102134721289033247
+    SEQUENCE (1 elem)
+      OBJECT IDENTIFIER 1.2.840.10045.4.3.3 ecdsaWithSHA384 (ANSI X9.62 ECDSA algorithm with SHA384)
+    SEQUENCE (3 elem)
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.3 commonName (X.520 DN component)
+          UTF8String Test Eureka SOC Root CA 35
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.10 organizationName (X.520 DN component)
+          UTF8String Apple Inc.
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.8 stateOrProvinceName (X.520 DN component)
+          UTF8String California
+    SEQUENCE (2 elem)
+      UTCTime 2018-05-15 22:12:28 UTC
+      UTCTime 2018-05-16 22:12:28 UTC
+    SEQUENCE (2 elem)
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.3 commonName (X.520 DN component)
+          UTF8String Test Eureka SOC Root CA 35 Leaf
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.10 organizationName (X.520 DN component)
+          UTF8String Apple Inc.
+    SEQUENCE (2 elem)
+      SEQUENCE (2 elem)
+        OBJECT IDENTIFIER 1.2.840.10045.2.1 ecPublicKey (ANSI X9.62 public key type)
+        OBJECT IDENTIFIER 1.3.132.0.34 secp384r1 (SECG (Certicom) named elliptic curve)
+      BIT STRING (776 bit) 0000010011101011000011110010001100011110100010100110000000100001100000…
+    [3] (1 elem)
+      SEQUENCE (4 elem)
+        SEQUENCE (3 elem)
+          OBJECT IDENTIFIER 2.5.29.19 basicConstraints (X.509 extension)
+          BOOLEAN true
+          OCTET STRING (2 byte) 3000
+            SEQUENCE (0 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.29.35 authorityKeyIdentifier (X.509 extension)
+          OCTET STRING (24 byte) 301680140C64EDABDEA076FCCBB4F49FBDB75D46F597AF32
+            SEQUENCE (1 elem)
+              [0] (20 byte) 0C64EDABDEA076FCCBB4F49FBDB75D46F597AF32
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.29.14 subjectKeyIdentifier (X.509 extension)
+          OCTET STRING (22 byte) 0414DD5C0F80952FB597AB60DD9282EA70B80EEA0E7A
+            OCTET STRING (20 byte) DD5C0F80952FB597AB60DD9282EA70B80EEA0E7A
+        SEQUENCE (3 elem)
+          OBJECT IDENTIFIER 2.5.29.15 keyUsage (X.509 extension)
+          BOOLEAN true
+          OCTET STRING (4 byte) 03020780
+            BIT STRING (1 bit) 1
+  SEQUENCE (1 elem)
+    OBJECT IDENTIFIER 1.2.840.10045.4.3.3 ecdsaWithSHA384 (ANSI X9.62 ECDSA algorithm with SHA384)
+  BIT STRING (816 bit) 0011000001100100000000100011000000110100111101101000100011111010111100…
+    SEQUENCE (2 elem)
+      INTEGER (382 bit) 8151756030331056487823161874997707277988121415666908648513990112722474…
+      INTEGER (383 bit) 1281400542485460847206440091939968328867920960916542938903846231152859…
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SEQUENCE (3 elem)
+  SEQUENCE (8 elem)
+    [0] (1 elem)
+      INTEGER 2
+    INTEGER (61 bit) 1625249655888498160
+    SEQUENCE (1 elem)
+      OBJECT IDENTIFIER 1.2.840.10045.4.3.3 ecdsaWithSHA384 (ANSI X9.62 ECDSA algorithm with SHA384)
+    SEQUENCE (3 elem)
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.3 commonName (X.520 DN component)
+          UTF8String Test Eureka SOC Root CA 35
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.10 organizationName (X.520 DN component)
+          UTF8String Apple Inc.
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.8 stateOrProvinceName (X.520 DN component)
+          UTF8String California
+    SEQUENCE (2 elem)
+      UTCTime 2018-05-15 21:55:08 UTC
+      UTCTime 2038-05-10 21:55:08 UTC
+    SEQUENCE (3 elem)
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.3 commonName (X.520 DN component)
+          UTF8String Test Eureka SOC Root CA 35
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.10 organizationName (X.520 DN component)
+          UTF8String Apple Inc.
+      SET (1 elem)
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.4.8 stateOrProvinceName (X.520 DN component)
+          UTF8String California
+    SEQUENCE (2 elem)
+      SEQUENCE (2 elem)
+        OBJECT IDENTIFIER 1.2.840.10045.2.1 ecPublicKey (ANSI X9.62 public key type)
+        OBJECT IDENTIFIER 1.3.132.0.34 secp384r1 (SECG (Certicom) named elliptic curve)
+      BIT STRING (776 bit) 0000010001111010111101000100010110101111010000000101100101000010110101…
+    [3] (1 elem)
+      SEQUENCE (3 elem)
+        SEQUENCE (3 elem)
+          OBJECT IDENTIFIER 2.5.29.19 basicConstraints (X.509 extension)
+          BOOLEAN true
+          OCTET STRING (8 byte) 30060101FF020100
+            SEQUENCE (2 elem)
+              BOOLEAN true
+              INTEGER 0
+        SEQUENCE (2 elem)
+          OBJECT IDENTIFIER 2.5.29.14 subjectKeyIdentifier (X.509 extension)
+          OCTET STRING (22 byte) 04140C64EDABDEA076FCCBB4F49FBDB75D46F597AF32
+            OCTET STRING (20 byte) 0C64EDABDEA076FCCBB4F49FBDB75D46F597AF32
+        SEQUENCE (3 elem)
+          OBJECT IDENTIFIER 2.5.29.15 keyUsage (X.509 extension)
+          BOOLEAN true
+          OCTET STRING (4 byte) 03020204
+            BIT STRING (6 bit) 000001
+  SEQUENCE (1 elem)
+    OBJECT IDENTIFIER 1.2.840.10045.4.3.3 ecdsaWithSHA384 (ANSI X9.62 ECDSA algorithm with SHA384)
+  BIT STRING (832 bit) 0011000001100110000000100011000100000000111101001001010000001111111011…
+    SEQUENCE (2 elem)
+      INTEGER (384 bit) 3764405614543861553181393903194413274471521338802557327047703229534942…
+      INTEGER (384 bit) 2942036852031372040337745727030783615133201264286154596397242159682249…
+</code></pre></div></div>
+
+<h2 id="sahara-protocol">Sahara Protocol</h2>
+
+<p>Based on a public gitlab copy of msm8974 headers</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="cm">/* Sahara command IDs */</span>
+<span class="k">enum</span> <span class="n">boot_sahara_cmd_id</span>
+<span class="p">{</span>
+  <span class="n">SAHARA_NO_CMD_ID</span>          <span class="o">=</span> <span class="mh">0x00</span><span class="p">,</span>
+  <span class="n">SAHARA_HELLO_ID</span>           <span class="o">=</span> <span class="mh">0x01</span><span class="p">,</span> <span class="cm">/* sent from target to host */</span>
+  <span class="n">SAHARA_HELLO_RESP_ID</span>      <span class="o">=</span> <span class="mh">0x02</span><span class="p">,</span> <span class="cm">/* sent from host to target */</span>
+  <span class="n">SAHARA_READ_DATA_ID</span>       <span class="o">=</span> <span class="mh">0x03</span><span class="p">,</span> <span class="cm">/* sent from target to host */</span>
+  <span class="n">SAHARA_END_IMAGE_TX_ID</span>    <span class="o">=</span> <span class="mh">0x04</span><span class="p">,</span> <span class="cm">/* sent from target to host */</span>
+  <span class="n">SAHARA_DONE_ID</span>            <span class="o">=</span> <span class="mh">0x05</span><span class="p">,</span> <span class="cm">/* sent from host to target */</span>
+  <span class="n">SAHARA_DONE_RESP_ID</span>       <span class="o">=</span> <span class="mh">0x06</span><span class="p">,</span> <span class="cm">/* sent from target to host */</span>
+  <span class="n">SAHARA_RESET_ID</span>           <span class="o">=</span> <span class="mh">0x07</span><span class="p">,</span> <span class="cm">/* sent from host to target */</span>
+  <span class="n">SAHARA_RESET_RESP_ID</span>      <span class="o">=</span> <span class="mh">0x08</span><span class="p">,</span> <span class="cm">/* sent from target to host */</span>
+  <span class="n">SAHARA_MEMORY_DEBUG_ID</span>    <span class="o">=</span> <span class="mh">0x09</span><span class="p">,</span> <span class="cm">/* sent from target to host */</span>
+  <span class="n">SAHARA_MEMORY_READ_ID</span>     <span class="o">=</span> <span class="mh">0x0A</span><span class="p">,</span> <span class="cm">/* sent from host to target */</span>
+  <span class="n">SAHARA_CMD_READY_ID</span>       <span class="o">=</span> <span class="mh">0x0B</span><span class="p">,</span> <span class="cm">/* sent from target to host */</span>
+  <span class="n">SAHARA_CMD_SWITCH_MODE_ID</span> <span class="o">=</span> <span class="mh">0x0C</span><span class="p">,</span> <span class="cm">/* sent from host to target */</span>
+  <span class="n">SAHARA_CMD_EXEC_ID</span>        <span class="o">=</span> <span class="mh">0x0D</span><span class="p">,</span> <span class="cm">/* sent from host to target */</span>
+  <span class="n">SAHARA_CMD_EXEC_RESP_ID</span>   <span class="o">=</span> <span class="mh">0x0E</span><span class="p">,</span> <span class="cm">/* sent from target to host */</span>
+  <span class="n">SAHARA_CMD_EXEC_DATA_ID</span>   <span class="o">=</span> <span class="mh">0x0F</span><span class="p">,</span> <span class="cm">/* sent from host to target */</span>
+
+  <span class="cm">/* place all new commands above this */</span>
+  <span class="n">SAHARA_LAST_CMD_ID</span><span class="p">,</span>
+  <span class="n">SAHARA_MAX_CMD_ID</span>             <span class="o">=</span> <span class="mh">0x7FFFFFFF</span> <span class="cm">/* To ensure 32-bits wide */</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="baseband-config">Baseband Config</h2>
+
+<p><code class="language-plaintext highlighter-rouge">bbcfg</code> files are a 48 byte header:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="kt">uint32_t</span> <span class="n">magic</span> <span class="o">=</span> <span class="err">'\</span><span class="mi">0</span><span class="n">GFC</span><span class="err">'</span><span class="p">;</span> <span class="c1">// LE 'CFG\0'</span>
+    <span class="kt">uint32_t</span> <span class="n">header_size</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// Offset to next magic?</span>
+    <span class="kt">uint32_t</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kt">uint32_t</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="p">}</span> <span class="n">bbcfg_header_t</span><span class="p">;</span>
+
+<span class="n">typdef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="kt">uint64_t</span> <span class="n">magic</span> <span class="o">=</span> <span class="mh">0xDAEF3003DAEF3003</span><span class="p">;</span> <span class="c1">// Magic</span>
+    <span class="kt">uint64_t</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Guess: offset following header?</span>
+    <span class="kt">uint64_t</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Guess: size, 0 being to EoF</span>
+    <span class="kt">uint8_t</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="n">name</span><span class="p">;</span> <span class="c1">// 'BBCFGMBN'</span>
+<span class="p">}</span> <span class="n">bbcfg_mbn_header_t</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>The remaining data is ASN1 - DER encoded:</p>
+
+<ul>
+  <li>Tag 0 - String: Build Type (<code class="language-plaintext highlighter-rouge">Mav21_Official</code>)</li>
+  <li>Tag 1 - String: Build Number (Seems in Apple <code class="language-plaintext highlighter-rouge">\d+[A-Z]\d+</code> format)</li>
+  <li>Tag 2 - String: Build Host</li>
+  <li>Tag 3 - String: Build User</li>
+  <li>Tag 4 - String: Build Host IP Address</li>
+  <li>Tag 5 - String: 6 byte short commit hash?</li>
+  <li>Tag 6 - String: Build Timestamp</li>
+  <li>Tag 7 - String: Branch</li>
+  <li>Tag 8 - Sequence of Tag 16:
+    <ul>
+      <li>Tag 200 -</li>
+      <li>Tag 201</li>
+      <li>Tag 202</li>
+      <li>Tag 203</li>
+      <li>Tag 204</li>
+    </ul>
+  </li>
+  <li>Tag 9 - Sequence, Patch Files?
+    <ul>
+      <li>Tag 100 - String: SHA1 Hash</li>
+      <li>Tag 101 - String: Binary Data</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="blobs">Blobs</h2>
+
+<h3 id="asn-coded-files">ASN Coded Files</h3>
+
+<ul>
+  <li>Sequence containing nodes
+    <ul>
+      <li>Tag <code class="language-plaintext highlighter-rouge">600</code> - A series of patches into non-volatile
+        <ul>
+          <li>Tag <code class="language-plaintext highlighter-rouge">400</code> - Offset</li>
+          <li>Tag <code class="language-plaintext highlighter-rouge">401</code> - Unknown (Usually 0, guess - pad char?)</li>
+          <li>Tag <code class="language-plaintext highlighter-rouge">402</code> - Unknown (guess - length?)</li>
+          <li>Tag <code class="language-plaintext highlighter-rouge">403</code> - Content</li>
+          <li>Tag <code class="language-plaintext highlighter-rouge">404</code></li>
+        </ul>
+      </li>
+      <li>Tag <code class="language-plaintext highlighter-rouge">601</code> - A sequence of files
+        <ul>
+          <li>Tag <code class="language-plaintext highlighter-rouge">500</code> - File Name</li>
+          <li>Tag <code class="language-plaintext highlighter-rouge">501</code> - Guess: Permission? Offset?</li>
+          <li>Tag <code class="language-plaintext highlighter-rouge">502</code> - Content</li>
+          <li>Tag <code class="language-plaintext highlighter-rouge">503</code></li>
+          <li>Tag <code class="language-plaintext highlighter-rouge">504</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="stx2vg">STX2VG</h3>
+
+<h3 id="mavz">MAVZ</h3>
+
+<p>A compressed stream with the following header followed by <code class="language-plaintext highlighter-rouge">zlib</code> compressed data</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+  <span class="kt">uint32_t</span> <span class="n">magic</span> <span class="o">=</span> <span class="err">'</span><span class="n">MAVZ</span><span class="err">'</span><span class="p">;</span> <span class="c1">// Magic</span>
+  <span class="kt">uint16_t</span> <span class="n">unknown1</span><span class="p">;</span> <span class="c1">// DE76</span>
+  <span class="kt">uint16_t</span> <span class="n">unknown2</span><span class="p">;</span> <span class="c1">// 0000</span>
+<span class="p">}</span> <span class="n">mavz_file_heaeder_t</span>
+</code></pre></div></div>
+
+<h2 id="xbl_cfg">xbl_cfg</h2>
+
+<p>Signed ELF (MBN) file with a CFGL header and payloads for each entry.</p>
+
+<p>Example files from manifest:</p>
+
+<ul>
+  <li>/6013_0100_0_dcb.bin</li>
+  <li>/6013_0100_1_dcb.bin</li>
+  <li>/6013_0200_1_dcb.bin</li>
+</ul>
+
+<p>Each of which appear to be machine code as evidenced by the constant string areas:</p>
+
+<p>File contains a number of unicode (wide char) 8 byte full caps magic values:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">0000</code></li>
+  <li><code class="language-plaintext highlighter-rouge">DEFG</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ABVW</code></li>
+  <li><code class="language-plaintext highlighter-rouge">HIJK</code></li>
+</ul>
+
+<h3 id="cfgl">CFGL</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+  <span class="kt">uint32_t</span> <span class="n">magic</span> <span class="o">=</span> <span class="err">'</span><span class="n">CFGL</span><span class="err">'</span><span class="p">;</span>
+  <span class="kt">uint32_t</span>
+  <span class="kt">uint32_t</span> <span class="n">size</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">cfgl_header_t</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+  <span class="kt">uint32_t</span> <span class="n">unknown1</span><span class="p">;</span> <span class="c1">// 0</span>
+  <span class="kt">uint32_t</span> <span class="n">file_offset</span><span class="p">;</span>
+  <span class="kt">uint32_t</span> <span class="n">unknown2</span><span class="p">;</span> <span class="c1">// 04340000</span>
+  <span class="kt">uint32_t</span> <span class="n">file_name_length</span><span class="p">;</span> <span class="c1">// In examples 0x14</span>
+  <span class="kt">char</span><span class="p">[</span><span class="n">file_name_length</span><span class="p">]</span> <span class="o">=</span> <span class="s">"/6013_0100_0_dcb.bin"</span><span class="p">;</span>
+  <span class="kt">uint32_t</span> <span class="n">unknown3</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">cfgl_row_t</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="qhee">QHEE</h2>
+
+<h3 id="devices-in-hypmbn">Devices in <code class="language-plaintext highlighter-rouge">hyp.mbn</code></h3>
+
+<p>Suspicion - <code class="language-plaintext highlighter-rouge">$</code> are serviced by the TrustZone</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">IORT</code></li>
+  <li><code class="language-plaintext highlighter-rouge">QCOM</code></li>
+  <li><code class="language-plaintext highlighter-rouge">2KDEMOCQ</code></li>
+  <li><code class="language-plaintext highlighter-rouge">MOCQ</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$AOSS</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$BLSP</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$CRYPTO</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$DAP</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$DCC</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$ECATS_TEST</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$IPA</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$LPASS</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$PCIE0</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$QPIC</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$SDC2</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$SPDM</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$SPMI</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$TIC</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$USB0</code></li>
+</ul>
+
+      </section>
+    </div>
+  </body>
+</html>

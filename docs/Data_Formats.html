@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Data Format Guidance | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Data Format Guidance" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/Data_Formats.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/Data_Formats.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Data Format Guidance" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"Data Format Guidance","url":"https://docs.hackdiffe.rent/docs/Data_Formats.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="data-format-guidance">Data Format Guidance</h1>
+
+<p>This serves as general guidance to the structured data effort (see <code class="language-plaintext highlighter-rouge">_data</code>)</p>
+
+<h2 id="guidelines">Guidelines</h2>
+
+<ul>
+  <li>Group things that go together.  <code class="language-plaintext highlighter-rouge">mach_o.yaml</code> contains many Mach-O things, because they all relate.  It could have
+been done by creating <code class="language-plaintext highlighter-rouge">mach_o.load_commands.yaml</code> etc to create a more tabular format, but that is hard for a human
+to think about.  By grouping a few categories that are related, we reduce effort.</li>
+  <li>Use canonical form.  As an example, any list of items should be keyed on a fixed identifier (bundle IDs are a good
+example).  Once this is keyed, ensure that you sort the items so that other editors don’t face useless merge conflicts</li>
+  <li>Machine generate where possible.  By building scripts (generally under <code class="language-plaintext highlighter-rouge">_tools</code>) that generate or enrich our datasets
+people are able to see where and how they are sourced, as well as updates are reflected.  Attempt to use primary
+sources.  Apple source code, or call-graph / binary analysis are the most obvious methods of this.</li>
+  <li>Most elements should have a <code class="language-plaintext highlighter-rouge">description</code> field which is intended for human documentation and usage.  This can be
+initially populated to <code class="language-plaintext highlighter-rouge">nil</code>.  Anywhere a documentation value comes from automation, it should use a different name.
+As an example, Kexts have a description as well, but we should call this <code class="language-plaintext highlighter-rouge">kext_description_text</code> to imply it comes
+from the Kext itself.</li>
+  <li>Adding new keys is easy; Redefining is hard.  If there’s a chance something may need to be a list, make it a list of
+one to start.  If something might occur on multiple platforms, ensure you leave room for platforms (first appeared
+in version is an example as AMFI.kext was iOS then macOS)</li>
+  <li>Use string keys, not symbols.  Yes, I know, but it makes the data readable on more platforms.</li>
+  <li>Break things down by a hierarchy.  Mach-O sections belong to segments.  This means that we use a natural grouping
+for the data.  If more than one grouping exists, think of the common case and other tools can pivot the data.</li>
+  <li>Everything is v0 and subject to change until otherwise noted stable.  Be ready to update your tools.</li>
+  <li>File formats should include initial data.  No one can extend a file that doesn’t have enough data for an author to
+understand.  Feel free to join the discord and discuss areas where you see gaps.</li>
+</ul>
+
+      </section>
+    </div>
+  </body>
+</html>

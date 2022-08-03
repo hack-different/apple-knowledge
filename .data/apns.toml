@@ -1,0 +1,335 @@
+
+[apns_commands.7]
+direction = "outgoing"
+label = "Connect"
+name = "connect"
+[apns_commands.7.items.1]
+label = "Token"
+name = "token"
+[apns_commands.7.items.2]
+label = "State"
+name = "state"
+[apns_commands.7.items.5]
+label = "Flags"
+name = "flags"
+[apns_commands.7.items.6]
+base = "BASE_DEC"
+label = "Interface"
+name = "interface"
+strings = "VALS(interface_string)"
+type = "FT_UINT8"
+[apns_commands.7.items.7]
+label = "Active Interval"
+name = "active_interval"
+[apns_commands.7.items.8]
+label = "Carrier"
+name = "carrier"
+type = "FT_STRING"
+[apns_commands.7.items.9]
+label = "Software Version"
+name = "software_version"
+type = "FT_STRING"
+[apns_commands.7.items.10]
+label = "Software Build"
+name = "software_build"
+type = "FT_STRING"
+[apns_commands.7.items.11]
+label = "Hardware Version"
+name = "hardware_version"
+type = "FT_STRING"
+[apns_commands.7.items.12]
+label = "Certificate"
+name = "certificate"
+[apns_commands.7.items.13]
+label = "Nonce"
+name = "nonce"
+[apns_commands.7.items.14]
+label = "Signature"
+name = "signature"
+[apns_commands.7.items.16]
+base = "BASE_DEC"
+label = "Protocol Version"
+name = "version"
+type = "FT_UINT16"
+[apns_commands.7.items.17]
+base = "BASE_DEC"
+label = "Redirect Count"
+name = "redirect_count"
+type = "FT_UINT16"
+[apns_commands.7.items.19]
+label = "DNS Resolve Time"
+name = "dns_time"
+[apns_commands.7.items.20]
+label = "TLS Handshake Time"
+name = "tls_time"
+type = "FT_RELATIVE_TIME"
+[apns_commands.8]
+direction = "incoming"
+label = "Connected"
+name = "connected"
+[apns_commands.8.items.1]
+base = "BASE_HEX"
+label = "Response"
+name = "connected_response"
+type = "FT_UINT8"
+[apns_commands.8.items.2]
+label = "Server Metadata"
+name = "server_metadata"
+type = "FT_STRING"
+[apns_commands.8.items.3]
+label = "Token"
+name = "token"
+[apns_commands.8.items.4]
+base = "BASE_DEC"
+label = "Message Size"
+name = "message_size"
+type = "FT_UINT16"
+[apns_commands.8.items.6]
+base = "BASE_HEX"
+label = "Capabilities"
+name = "capabilities"
+type = "FT_UINT32"
+[apns_commands.8.items.7]
+base = "BASE_HEX"
+label = "Server Time For Bad Nonce"
+name = "bad_nonce_time"
+type = "FT_UINT64"
+[apns_commands.8.items.8]
+base = "BASE_DEC"
+label = "Large Message Size"
+name = "large_message_size"
+type = "FT_UINT16"
+[apns_commands.8.items.9]
+label = "Redirect Reason"
+name = "redirect_reason"
+type = "FT_STRING"
+[apns_commands.8.items.10]
+base = "ABSOLUTE_TIME_UTC"
+label = "Server Time"
+name = "server_time"
+type = "FT_ABSOLUTE_TIME"
+[apns_commands.8.items.11]
+label = "Geo Region"
+name = "geo_region"
+type = "FT_STRING"
+[apns_commands.8.items.12]
+base = "ABSOLUTE_TIME_UTC"
+label = "Unknown"
+name = "unknown_ts"
+type = "FT_ABSOLUTE_TIME"
+[apns_commands.9]
+direction = "outgoing"
+label = "Filter"
+name = "filter"
+[apns_commands.9.items.1]
+label = "Token"
+name = "token"
+[apns_commands.9.items.2]
+label = "Enabled Topic Hash"
+name = "enabled_hash"
+[apns_commands.9.items.3]
+label = "Ignored Topic Hash"
+name = "ignored_hash"
+[apns_commands.9.items.4]
+label = "Opportunistic Topic Hash"
+name = "opportunistic_hash"
+[apns_commands.9.items.5]
+label = "Paused Topic Hash"
+name = "paused_hash"
+[apns_commands.10]
+direction = "both"
+label = "Message"
+name = "message"
+[apns_commands.10.items.1]
+label = "Topic Hash"
+name = "topic_hash"
+[apns_commands.10.items.2]
+label = "Token"
+name = "token"
+[apns_commands.10.items.3]
+label = "Payload"
+name = "payload"
+[apns_commands.10.items.4]
+base = "BASE_HEX"
+label = "Message ID"
+name = "message_id"
+type = "FT_UINT32"
+[apns_commands.10.items.5]
+base = "ABSOLUTE_TIME_UTC"
+label = "Message Expiry Time"
+name = "expiry"
+type = "FT_ABSOLUTE_TIME"
+[apns_commands.10.items.6]
+base = "BASE_HEX"
+label = "Message Timestamp"
+name = "timestamp"
+type = "FT_UINT64"
+[apns_commands.10.items.9]
+base = "BASE_HEX"
+label = "Storage Fiags"
+name = "storage_flags"
+type = "FT_UINT8"
+[apns_commands.10.items.13]
+base = "BASE_HEX"
+label = "Priority"
+name = "priority"
+type = "FT_UINT8"
+[apns_commands.10.items.15]
+label = "Base Token"
+name = "base_token"
+[apns_commands.10.items.21]
+label = "Message Tracing UUID"
+name = "tracing_uuid"
+[apns_commands.10.items.24]
+label = "Correlation Identifier"
+name = "correlation_id"
+type = "FT_STRING"
+[apns_commands.10.items.25]
+base = "BASE_DEC"
+label = "Last RTT"
+name = "lastRTT"
+type = "FT_UINT16"
+[apns_commands.10.items.26]
+base = "BASE_HEX"
+label = "APN Flags"
+name = "apn_flags"
+type = "FT_UINT32"
+[apns_commands.10.items.28]
+base = "BASE_DEC"
+label = "Push Type"
+name = "push_type"
+strings = "VALS(push_type_string)"
+type = "FT_UINT16"
+[apns_commands.11]
+direction = "both"
+label = "Acknowledge Message"
+name = "ack"
+[apns_commands.11.items.1]
+label = "Token"
+name = "token"
+[apns_commands.11.items.4]
+base = "BASE_HEX"
+label = "Message ID"
+name = "message_id"
+type = "FT_UINT32"
+[apns_commands.11.items.8]
+base = "BASE_HEX"
+label = "Response"
+name = "response"
+type = "FT_UINT8"
+[apns_commands.12]
+direction = "outgoing"
+label = "Keep-Alive"
+name = "keepalive"
+[apns_commands.12.items.1]
+label = "Carrier"
+name = "carrier"
+type = "FT_STRING"
+[apns_commands.12.items.2]
+label = "Software Version"
+name = "software_version"
+type = "FT_STRING"
+[apns_commands.12.items.3]
+label = "Software Build"
+name = "software_build"
+type = "FT_STRING"
+[apns_commands.12.items.4]
+label = "Hardware Version"
+name = "hardware_version"
+type = "FT_STRING"
+[apns_commands.12.items.5]
+label = "Keepalive Interval"
+name = "interval"
+type = "FT_STRING"
+[apns_commands.12.items.6]
+label = "Delayed Response Interval"
+name = "delayed_interval"
+type = "FT_STRING"
+[apns_commands.13]
+direction = "incoming"
+label = "Keep-Alive Response"
+name = "keepalive_response"
+[apns_commands.13.items.1]
+base = "BASE_HEX"
+label = "Response"
+name = "response"
+type = "FT_UINT8"
+[apns_commands.15]
+direction = "incoming"
+label = "Flush"
+name = "flush"
+[apns_commands.15.items.1]
+base = "BASE_HEX"
+label = "Want Padding"
+name = "want_padding"
+type = "FT_UINT16"
+[apns_commands.16]
+direction = "incoming"
+label = "Flush Response"
+name = "flush_response"
+[apns_commands.17]
+direction = "outgoing"
+label = "App Token Generate Request"
+name = "apptoken"
+[apns_commands.17.items.1]
+label = "Base Token"
+name = "base_token"
+[apns_commands.17.items.2]
+label = "Topic Hash"
+name = "topic_hash"
+[apns_commands.17.items.3]
+base = "BASE_HEX"
+label = "App ID"
+name = "appid"
+type = "FT_UINT16"
+[apns_commands.18]
+direction = "incoming"
+label = "App Token Generate Response"
+name = "apptoken_response"
+[apns_commands.18.items.1]
+base = "BASE_HEX"
+label = "Response"
+name = "response"
+type = "FT_UINT8"
+[apns_commands.18.items.2]
+label = "Token"
+name = "token"
+[apns_commands.18.items.3]
+label = "Topic Hash"
+name = "topic_hash"
+[apns_commands.18.items.4]
+base = "BASE_HEX"
+label = "App ID"
+name = "appid"
+type = "FT_UINT16"
+[apns_commands.20]
+direction = "outgoing"
+label = "Set Active State"
+name = "setstate"
+[apns_commands.20.items.1]
+base = "BASE_DEC"
+label = "State"
+name = "state"
+strings = "VALS(active_state_string)"
+type = "FT_UINT8"
+[apns_commands.20.items.2]
+base = "BASE_HEX"
+label = "Interval"
+name = "interval"
+type = "FT_UINT32"
+[apns_commands.22]
+direction = "incoming"
+label = "Keep-Alive Ack"
+name = "keepalive_ack"
+[apns_commands.23]
+direction = "incoming"
+label = "Redirect"
+name = "redirect"
+[apns_commands.23.items.2]
+label = "Server Metadata"
+name = "server_metadata"
+type = "FT_STRING"
+[apns_commands.23.items.9]
+label = "Redirect Reason"
+name = "redirect_reason"
+type = "FT_STRING"

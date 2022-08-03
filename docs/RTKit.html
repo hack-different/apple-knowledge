@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>RTKit - “Realtime Kit” | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="RTKit - “Realtime Kit”" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/RTKit.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/RTKit.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="RTKit - “Realtime Kit”" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"RTKit - “Realtime Kit”","url":"https://docs.hackdiffe.rent/docs/RTKit.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="rtkit---realtime-kit">RTKit - “Realtime Kit”</h1>
+
+<h2 id="rtbuddy2">RTBuddy2</h2>
+
+<h2 id="commands">Commands</h2>
+
+<p>As documented in <code class="language-plaintext highlighter-rouge">m1n1</code></p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">rtkit_message</span> <span class="p">{</span>
+    <span class="n">u8</span> <span class="n">ep</span><span class="p">;</span>
+    <span class="n">u64</span> <span class="n">msg</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="n">rtkit_buffer</span> <span class="p">{</span>
+    <span class="kt">void</span> <span class="o">*</span><span class="n">bfr</span><span class="p">;</span>
+    <span class="n">u64</span> <span class="n">dva</span><span class="p">;</span>
+    <span class="kt">size_t</span> <span class="n">sz</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">rtkit_dev_t *rtkit_init(const char *name, asc_dev_t *asc, dart_dev_t *dart,
+iova_domain_t *dart_iovad, sart_dev_t *sart);</code></li>
+  <li><code class="language-plaintext highlighter-rouge">bool rtkit_sleep(rtkit_dev_t *rtk);</code></li>
+  <li><code class="language-plaintext highlighter-rouge">bool rtkit_hibernate(rtkit_dev_t *rtk);</code></li>
+  <li><code class="language-plaintext highlighter-rouge">bool rtkit_start_ep(rtkit_dev_t *rtk, u8 ep);</code></li>
+  <li><code class="language-plaintext highlighter-rouge">bool rtkit_boot(rtkit_dev_t *rtk);</code></li>
+  <li><code class="language-plaintext highlighter-rouge">int rtkit_recv(rtkit_dev_t *rtk, struct rtkit_message *msg);</code></li>
+  <li><code class="language-plaintext highlighter-rouge">bool rtkit_send(rtkit_dev_t *rtk, const struct rtkit_message *msg);</code></li>
+  <li><code class="language-plaintext highlighter-rouge">bool rtkit_map(rtkit_dev_t *rtk, void *phys, size_t sz, u64 *dva);</code></li>
+  <li><code class="language-plaintext highlighter-rouge">bool rtkit_unmap(rtkit_dev_t *rtk, u64 dva, size_t sz);</code></li>
+  <li><code class="language-plaintext highlighter-rouge">bool rtkit_alloc_buffer(rtkit_dev_t *rtk, struct rtkit_buffer *bfr, size_t sz);</code></li>
+  <li><code class="language-plaintext highlighter-rouge">bool rtkit_free_buffer(rtkit_dev_t *rtk, struct rtkit_buffer *bfr);</code></li>
+</ul>
+
+<h3 id="service-rtkit_ep_mgmt">Service: RTKIT_EP_MGMT</h3>
+
+<h4 id="mgmt_msg_hello--mgmt_msg_hello_ack">MGMT_MSG_HELLO / MGMT_MSG_HELLO_ACK</h4>
+
+<h4 id="mgmt_msg_hello_minver--mgmt_msg_hello_maxver">MGMT_MSG_HELLO_MINVER / MGMT_MSG_HELLO_MAXVER</h4>
+
+<h4 id="mgmt_msg_iop_pwr_state--mgmt_msg_iop_pwr_state_ack">MGMT_MSG_IOP_PWR_STATE / MGMT_MSG_IOP_PWR_STATE_ACK</h4>
+
+<h4 id="mgmt_msg_epmap--mgmt_msg_epmap_done--mgmt_msg_epmap_base--mgmt_msg_epmap_bitmap">MGMT_MSG_EPMAP / MGMT_MSG_EPMAP_DONE / MGMT_MSG_EPMAP_BASE / MGMT_MSG_EPMAP_BITMAP</h4>
+
+<h4 id="mgmt_msg_epmap_reply--mgmt_msg_epmap_reply_done--mgmt_msg_epmap_reply_more">MGMT_MSG_EPMAP_REPLY / MGMT_MSG_EPMAP_REPLY_DONE / MGMT_MSG_EPMAP_REPLY_MORE</h4>
+
+<h3 id="service-rtkit_ep_crashlog">Service: RTKIT_EP_CRASHLOG</h3>
+
+<h3 id="service-rtkit_ep_syslog">Service: RTKIT_EP_SYSLOG</h3>
+
+<h4 id="msg_syslog_init--msg_syslog_init_entrysize--msg_syslog_init_count">MSG_SYSLOG_INIT / MSG_SYSLOG_INIT_ENTRYSIZE / MSG_SYSLOG_INIT_COUNT</h4>
+
+<h4 id="msg_syslog_log">MSG_SYSLOG_LOG</h4>
+
+<h4 id="msg_syslog_log_index">MSG_SYSLOG_LOG_INDEX</h4>
+
+<h3 id="service-rtkit_ep_debug">Service: RTKIT_EP_DEBUG</h3>
+
+<h3 id="service-rtkit_ep_ioreport">Service: RTKIT_EP_IOREPORT</h3>
+
+<h3 id="service-rtkit_ep_oslog">Service: RTKIT_EP_OSLOG</h3>
+
+<h4 id="msg_oslog_init">MSG_OSLOG_INIT</h4>
+
+<h4 id="msg_oslog_ack">MSG_OSLOG_ACK</h4>
+
+<h2 id="mach-o-binary-structure">Mach-O Binary Structure</h2>
+
+<h3 id="_rtk_boot">_rtk_boot</h3>
+
+<h3 id="_rtk_mtab">_rtk_mtab</h3>
+
+<h3 id="_fp_context">_fp_context</h3>
+
+<p>Floating point context</p>
+
+<h3 id="_hb_context">_hb_context</h3>
+
+<p>Hibernate context, used to restore device from a power-off state.  Wakeup resume flag of <code class="language-plaintext highlighter-rouge">0xfeed1b00</code></p>
+
+<h2 id="ftab">FTAB</h2>
+
+<p>FTAB is a linear filesystem like region</p>
+
+<h2 id="mtab">MTAB</h2>
+
+      </section>
+    </div>
+  </body>
+</html>

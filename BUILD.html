@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>How to Setup for Build | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="How to Setup for Build" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/BUILD.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/BUILD.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How to Setup for Build" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"How to Setup for Build","url":"https://docs.hackdiffe.rent/BUILD.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="how-to-setup-for-build">How to Setup for Build</h1>
+
+<h2 id="ruby">Ruby</h2>
+
+<p>In true <code class="language-plaintext highlighter-rouge">ruby</code> fashion we run on latest stable.  As of this writing that is <code class="language-plaintext highlighter-rouge">3.1</code> (but the official is
+in <code class="language-plaintext highlighter-rouge">.ruby-version</code>)</p>
+
+<p>You must either have that version installed from <a href="https://ruby-lang.org">https://ruby-lang.org</a> from source, or have <code class="language-plaintext highlighter-rouge">rbenv</code> setup with a
+modern <code class="language-plaintext highlighter-rouge">ruby-build</code> to install it/</p>
+
+<h3 id="simple-on-macos">Simple on macOS</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>hunspell rbenv libxml2
+rbenv <span class="nb">install </span>3.1.0
+</code></pre></div></div>
+
+<h4 id="bonus-making-tower-work-with-overcommit--yubikeys">BONUS: Making Tower Work with Overcommit / Yubikeys</h4>
+
+<p>Get your <code class="language-plaintext highlighter-rouge">PATH</code> from the console:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$PATH</span>
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+</code></pre></div></div>
+
+<p>Set <code class="language-plaintext highlighter-rouge">PATH</code> for Tower: <a href="https://www.git-tower.com/help/guides/integration/environment/mac">https://www.git-tower.com/help/guides/integration/environment/mac</a></p>
+
+<h3 id="possible-on-linux">Possible on Linux</h3>
+
+<h4 id="modern-ruby-for-debian--ubuntu">Modern Ruby for Debian / Ubuntu</h4>
+
+<p>The versions of <code class="language-plaintext highlighter-rouge">ruby</code> and <code class="language-plaintext highlighter-rouge">ruby-build</code> included with Debian / Ubuntu is woefully out of date… Setup <code class="language-plaintext highlighter-rouge">rbenv</code> and
+modern <code class="language-plaintext highlighter-rouge">ruby-build</code> to install modern ruby</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>git rbenv build-essential libxml2-dev
+<span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="si">$(</span>rbenv root<span class="si">)</span><span class="s2">"</span>/plugins
+git clone https://github.com/rbenv/ruby-build.git <span class="s2">"</span><span class="si">$(</span>rbenv root<span class="si">)</span><span class="s2">"</span>/plugins/ruby-build
+rbenv init
+rbenv <span class="nb">install </span>3.1.0
+</code></pre></div></div>
+
+<h2 id="enter-the-checkout-directory-and-bring-in-prerequisites">Enter the Checkout Directory and Bring in Prerequisites</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/hack-different/apple-knowledge.git
+<span class="nb">cd </span>apple-knowledge
+gem <span class="nb">install </span>bundler
+bundle <span class="nb">install
+</span>overcommit <span class="nt">--install</span>
+</code></pre></div></div>
+
+<h2 id="running-the-jekyll-build">Running the Jekyll Build</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div></div>
+
+<h2 id="setting-up-overcommit">Setting up Overcommit</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>overcommit <span class="nt">--install</span>
+</code></pre></div></div>
+
+      </section>
+    </div>
+  </body>
+</html>

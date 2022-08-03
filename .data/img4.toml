@@ -1,0 +1,40 @@
+
+[img4_tags.BORD]
+description = "The board the chip is attached to.  With iPhones/iPads this is the variation between device sizes (occasionally\nalso used for low cost devices like the SE/XR).\n\nWith the T2 this value is unique to all MacBooks with the T2"
+[img4_tags.CEPO]
+description = "Certificate Epoch.  This is a unit of roll-forward time (monotonic) that allows for any security issues\nin the prior epoch to be fixed by a anti-rollback scheme."
+[img4_tags.CHIP]
+description = "Unique identifier for a single Apple designed application processor sharing the same GID key"
+width = 2
+[img4_tags.CSEC]
+description = "Burned-in chip security mode"
+[img4_tags.ECID]
+description = "Exclusive chip identifier.  This is burned into an eFuse at time of manufacture and unique across all devices sharing the same CHIP"
+width = 8
+[img4_tags.ESEC]
+description = "Effective security mode"
+[img4_tags.SDOM]
+description = "Security domain, or which set of certificates govern device security.\n\nKnown values:\n  0x01 - Main Production certificates"
+width = 2
+[img4_tags.auxk]
+description = "Auxilary Kernel Cache"
+[img4_tags.bat0]
+description = "battery image 0"
+[img4_tags.bat1]
+description = "battery image 1"
+[img4_tags.batf]
+description = "battery full image"
+[img4_tags.dtre]
+description = "device tree"
+[img4_tags.dtrs]
+description = "device tree for recovery"
+[img4_tags.lpnh]
+description = "LocalPolicy nonce hash"
+[img4_tags.lpol]
+descrioption = "LocalPolicy"
+[img4_tags.ronh]
+description = "recoveryOS nonce hash"
+[img4_tags.rpnh]
+description = "RemotePolicy nonce hash"
+[img4_tags.svrn]
+description = "Server nonce"

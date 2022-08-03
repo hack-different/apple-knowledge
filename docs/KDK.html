@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>KDK | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="KDK" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/KDK.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/KDK.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="KDK" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"KDK","url":"https://docs.hackdiffe.rent/docs/KDK.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="kdk">KDK</h1>
+
+<p>Apple Silicon supports kernel debugging, but there are some limitations.</p>
+
+<!-- Amend once limitations are investigated and solved -->
+<p>Limitations:</p>
+
+<ul>
+  <li>No known way to switch between kernel variants (e.g. <code class="language-plaintext highlighter-rouge">.development</code>, etc.)</li>
+  <li>Active debugging is not supported, but you can still trigger an NMI with the
+power button.</li>
+</ul>
+
+<h2 id="contents-of-the-kdk">Contents of the KDK</h2>
+
+<p>The KDK is a folder that contains a number of assets and is installed on macOS under <code class="language-plaintext highlighter-rouge">/Library/Developer/KDKs</code></p>
+
+<p>The KDK contains:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">DEVELOPMENT</code> and <code class="language-plaintext highlighter-rouge">KASAN</code> (kernel address sanitizer) versions of the kernel</li>
+  <li><code class="language-plaintext highlighter-rouge">dSYM</code> bundles which contain external <a href="https://en.wikipedia.org/wiki/DWARF">DWARF</a> files to symbolicate
+the kernel as well as lldb python helpers</li>
+  <li>Extensions and their respective <code class="language-plaintext highlighter-rouge">dSYM</code> bundles</li>
+  <li><code class="language-plaintext highlighter-rouge">KernelSupport</code> which contains the non-open-source content of XNU on the Apple Silicon platform (Prior to the M1 XNU
+itself was truly open-source and could be compiled and run, albeit without the majority of what we call macOS.  As
+of the M1, Apple silently closed portions required to create a bootable image)</li>
+</ul>
+
+<h2 id="two-machine-debugging-setup">Two-Machine Debugging Setup</h2>
+
+<p>This is somewhat straightforward and follows the general guidelines outlined in the
+<code class="language-plaintext highlighter-rouge">ReadMe.pdf</code> file contained inside the KDK. The complications arise once you’re
+inside the debugger.</p>
+
+<blockquote>
+  <p>Note: SIP needs to be disabled to set NVRAM boot arguments</p>
+</blockquote>
+
+<p>There are multiple ways to get a connection between your host and target machine,
+but the cheapest option is to purchase a “Thunderbolt 3 (USB-C) to Thunderbolt 2
+Adapter” and “Thunderbolt to Gigabit Ethernet Adapter”. Then connect an ethernet cable
+between the target and host (can use a USB-C to ethernet adapter on the host end).
+A regular ethernet to USB-C adapter on the target <strong>will not work</strong>.</p>
+
+<p>Once both machines are connected, find the name of the networking interface in
+<code class="language-plaintext highlighter-rouge">ifconfig</code> and set the <code class="language-plaintext highlighter-rouge">boot-args</code> accordingly:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nvram boot-args<span class="o">=</span><span class="s2">"debug=0x44 kdp_match_name=enX wdt=-1"</span>
+</code></pre></div></div>
+
+<p>Reboot and record the address of the target on using <code class="language-plaintext highlighter-rouge">ifconfig</code> (on the interface
+used for debugging) then trigger a panic on the target machine. On the host machine, run <code class="language-plaintext highlighter-rouge">lldb</code>
+and <code class="language-plaintext highlighter-rouge">kdp-remote</code> with the address of the target machine:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>lldb
+<span class="o">(</span>lldb<span class="o">)</span> kdp-remote 169.254.XXX.XXX
+</code></pre></div></div>
+
+<p>Once you’ve finished with debugging, clear the <code class="language-plaintext highlighter-rouge">boot-args</code> with</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nvram <span class="nt">-d</span> boot-args
+</code></pre></div></div>
+
+<h3 id="bugs">Bugs</h3>
+
+<p>If on any <code class="language-plaintext highlighter-rouge">memory read</code> or <code class="language-plaintext highlighter-rouge">x</code> (<code class="language-plaintext highlighter-rouge">x</code> is an alias for <code class="language-plaintext highlighter-rouge">memory read</code>) you are getting</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>error: kdp read memory failed
+</code></pre></div></div>
+
+<p>Your <code class="language-plaintext highlighter-rouge">lldb</code> is broken. Known <strong>broken</strong> versions include:</p>
+
+<ul>
+  <li>lldb-1200.0.41 (Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8))</li>
+</ul>
+
+<p>This is due to a bug where <code class="language-plaintext highlighter-rouge">lldb</code> attempts to correct the base address to use iOS
+semantics. The heap on iOS is <code class="language-plaintext highlighter-rouge">0xFFFFFFE0xxxxxxxx</code> whereas on ASi it’s <code class="language-plaintext highlighter-rouge">0xFFFFFE0xxxxxxxx</code> (notice the missing <code class="language-plaintext highlighter-rouge">F</code>).</p>
+
+<p>This is apparent if you open a coredump and inspect an address:</p>
+
+<pre><code class="language-lldb">(lldb) x/x 0xffffe00010204000
+error: core file does not contain 0xffffffe010204000
+</code></pre>
+
+<p>To work around this issue on a broken <code class="language-plaintext highlighter-rouge">lldb</code>, use <code class="language-plaintext highlighter-rouge">p</code> to evaluate expressions, e.g.:</p>
+
+<pre><code class="language-lldb">p *(uint32_t*) 0xfffffe0010204000
+</code></pre>
+
+<p>This will not use <code class="language-plaintext highlighter-rouge">memory read</code> and will therefore work as intended. As well,
+amend all scripts in the KDK distribution that use the iOS address with the ASi
+one:</p>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">if name == 'VM_MIN_KERNEL_ADDRESS':
+</span>    if self.arch == 'x86_64':
+        return unsigned(0xFFFFFF8000000000)
+    elif self.arch.startswith('arm64'):
+<span class="gd">-        return unsigned(0xffffffe000000000)
+</span><span class="gi">+        return unsigned(0xfffffe000000000)
+</span>    else:
+        return unsigned(0x80000000)
+</code></pre></div></div>
+
+<h2 id="crash-server-setup">Crash Server Setup</h2>
+
+<p>You can alternatively debug the system by writing coredumps to a remote server
+and then inspect them afterwards. Note that coredumps are typically very large uncompressed
+(e.g.: 700mb+), so ensure there’s adequate space on the server before continuing.</p>
+
+<p>Connect both machines using the same setup in <a href="#two-machine-debugging-setup">Two-Machine Debugging Setup</a> and record
+the IP address of the server running <code class="language-plaintext highlighter-rouge">kdumpd</code>.  Then, on the panicking machine, set the <code class="language-plaintext highlighter-rouge">boot-args</code> as follows:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nvram boot-args<span class="o">=</span><span class="s2">"debug=0xc44 kdp_match_name=enX wdt=-1 _panicd_ip=169.254.XXX.XXX"</span>
+</code></pre></div></div>
+
+<p>On the server, create a location for the coredumps and start <code class="language-plaintext highlighter-rouge">kdumpd</code>:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo mkdir</span> /PanicDumps
+<span class="nb">sudo chown </span>root:wheel /PanicDumps
+<span class="nb">sudo chmod </span>1777 /PanicDumps
+</code></pre></div></div>
+
+<p>You can either start the daemon:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>launchctl load <span class="nt">-w</span> /System/Library/LaunchDaemons/com.apple.kdumpd.plist
+</code></pre></div></div>
+
+<p>Or you can run it in the foreground:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kdumpd <span class="nt">-w</span> /PanicDumps
+</code></pre></div></div>
+
+<p>Once the panicking machine panics, the coredump will be written gzipped to
+<code class="language-plaintext highlighter-rouge">/PanicDumps</code>. <code class="language-plaintext highlighter-rouge">gunzip</code> it and then load it in <code class="language-plaintext highlighter-rouge">lldb</code> with</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lldb /System/Library/Kernels/kernel.release.t8101 <span class="nt">--core</span> core-xnu-XXX
+</code></pre></div></div>
+
+<p>See <a href="#bugs">bugs</a> before continuing.</p>
+
+<p>Once done creating crash dumps, stop the daemon or kill the foreground <code class="language-plaintext highlighter-rouge">kdumpd</code>
+process and wipe the <code class="language-plaintext highlighter-rouge">boot-args</code> with <code class="language-plaintext highlighter-rouge">sudo nvram -d boot-args</code>.</p>
+
+      </section>
+    </div>
+  </body>
+</html>

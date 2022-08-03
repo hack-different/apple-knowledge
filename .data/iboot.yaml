@@ -1,0 +1,143 @@
+---
+metadata:
+  description:
+  credits:
+tasks:
+- main
+- poweroff
+- command
+- idleoff
+- usb req
+- usb-high-current
+- usb-no-current
+- usb
+- usb_serial
+commands:
+- saveenv
+- setenv
+- getenv
+- reset
+- reboot
+- setenvnp
+- clearenvp
+- alamo
+- rtos
+- diags
+- fsboot
+- upgrade
+- recover
+- recover-once
+obfuscated_hashes:
+  25629712044137433: arch/arm64/cpu.c
+  45546403955607489: drivers/usb/usb_controller.c
+  56584004980503413: drivers/apple/apcie/apcie.c
+  72983202559590267: drivers/display_eeprom/gen_eeprom/gen_eeprom.c
+  79396516430377403: drivers/apple/ans2/ans2.c
+  85548793333560714: lib/himem/himem.c
+  116703209509058498: lib/nvram/nvram.c
+  118809346283974020: lib/rtbuddy/rtkit_firmware.c
+  131884603733767052: platform/generic/platform_dep.c
+  203499993999720670: lib/rtbuddy/endpoints/syslog_ep.c
+  206948983655456595: platform/t8015/pmgr/pmgr.c
+  214573715536090585: lib/paniclog/paniclog.c
+  217832313602750836: lib/devicetree/devicetree.c
+  221101432871554270: lib/fs/fs.c
+  225323951240254439: lib/rtbuddy/endpoints/ioreporting_ep.c
+  231838851157100267: drivers/usb/usb_core.c
+  237233797153020614: lib/nonce/nonce.c
+  246770858393410496: platform/t8015/dcs_v2/dcs_calibration.c
+  253101229148830685: sys/hash.c
+  258759054623776163: apps/iBoot/main.c
+  261964788685987884: drivers/als_eeprom/als_gen_eeprom/als_gen_eeprom.c
+  277235011926387907: lib/rtbuddy_fs/rtbuddy_fs_firmware.c
+  279165414112761933: lib/heap/heap.c
+  342313556134831108: platform/t8020/chipid/chipid.c
+  376107085860357171: drivers/apple/aes_v2/aes_v2.c
+  384888342139357316: lib/sys/lock.c
+  388382159905852296: lib/slice/slice.c
+  424748870674377822: drivers/apple/prc/prc_v2.c
+  428332935327745454: lib/trustcache/trustcache.c
+  431000434292740227: drivers/synopsys/usbotg/synopsys_otg.c
+  441416286880372842: lib/sepfw/sepfirmware.c
+  442180569929589760: lib/fs/apfs/apfs_io.c
+  443480543225836852: drivers/pci/pci.c
+  452448320049055811: sys/boot.c
+  479322956450577775: lib/devicetree/devicetree_load.c
+  506421429845671966: lib/libc/printf_chk.c
+  518225565324593993: drivers/apple/sart/sart.c
+  542878019515365725: lib/blockdev/subdev.c
+  546100299647860056: platform/t8015/miu/miu.c
+  552694572847392386: apps/iBoot/boot.c
+  556850132502530458: drivers/apple/aic/aic.c
+  572113744337196175: lib/rtbuddy/endpoints/management_ep.c
+  582908062290540084: lib/blockdev/mem_blockdev.c
+  594174880721832199: lib/random/random.c
+  618355212138294485: lib/macho/dt.c
+  636132609100191252: lib/rtbuddy/rtbuddy.c
+  646391848013937106: drivers/apple/dockchannel/dockchannel_uart.c
+  657924575354898147: platform/t8020/dcs_v2/dcs_calibration_t8020.c
+  696789832896414173: drivers/apple/mailbox/mailbox128/mailbox128.c
+  710858739606010797: lib/handoff/handoff.c
+  736955654476733630: lib/image/image4/image4_wrapper.c
+  737647435414005801: drivers/apple/smc/smc.c
+  748225236487733261: drivers/apple/sep/sep_client.c
+  756533788410305276: drivers/apple/dart_v3/dart.c
+  766123721742739426: drivers/apple/adisp/adisp_control.c
+  780397044702300026: lib/image/image4/image4_partial.c
+  783183360151269948: target/iphone10/init.c
+  804654363780839318: drivers/apple/gpio/gpio.c
+  806714195927799682: drivers/apple/reconfig/reconfig.c
+  807409280459989434: platform/generic/platform_indep.c
+  807878884511385002: drivers/apple/mailbox/mailbox128.c
+  809637393175934523: drivers/apple/ccc/ccc.c
+  814797970244609606: arch/arm64/mmu.c
+  853641458174228670: sys/security.c
+  880199917523682515: sys/supervisor.c
+  881571642300266752: drivers/synopsys/mipi/dsim.c
+  901343020544091024: lib/macho/macho.c
+  915733243234583911: arch/arm64/task.c
+  934972440173490195: drivers/apple/asmi/asmi.c
+  952625420311608715: sys/task.c
+  959454019359558990: drivers/apple/a7iop/a7iop.c
+  965147648874319929: drivers/nvme/nvme.c
+  968261168088229629: lib/paint/paint.c
+  968597552906010290: drivers/usbphy/usbphy.c
+  994867816063525027: lib/macho/kernelcache.c
+  1007006693226865882: platform/t8020/dcs_v2/dcs_misc.c
+  1016647493242068094: platform/t8020/reconfig.c
+  1020143034621568339: lib/enc/enc.c
+  1021378034834855350: drivers/apple/dart_v1/dart.c
+  1029654400832507291: drivers/apple/mailbox/mailbox64/mailbox64.c
+  1031756677793123950: lib/power/power.c
+  1061455936768864074: drivers/apple/mailbox/mailbox64.c
+  1062966391386713521: drivers/apple/dcs_v2/dcs.c
+  1078734404411208575: lib/rtbuddy_fs/rtkit_macho.c
+  1080661105843249925: lib/libc/misc.c
+  1083504090439545272: lib/blockdev/blockdev.c
+  1100221367319980790: lib/huffman/huffman.c
+  1126834423361578506: lib/mib/mib.c
+  1138901756230437902: target/iphone11/init.c
+environment_vars:
+- auto-boot
+- boot-args
+- debug-uarts
+- filesize
+- pw-path
+- auto-boot
+- backlight-level
+- boot-command
+- com.apple.System.boot-nonce
+- device-material
+- display-rotation
+- display-vsh-comp
+- idle-off
+- is-tethered
+- darkboot
+- ota-breadcrumbs
+- boot-breadcrumbs
+- recovery-breadcrumbs
+- com.apple.System.tz0-size
+- com.apple.System.rtc-offset
+- pwr-path
+- upgrade-retry
+- preserve-debuggability

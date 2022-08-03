@@ -1,0 +1,50 @@
+
+[csr_flags.CSR_ALLOW_ANY_RECOVERY_OS]
+always_enforced = true
+description = "disable validation of BaseSystem.dmg by ignoring BaseSystem.chunklist"
+value = 256
+[csr_flags.CSR_ALLOW_APPLE_INTERNAL]
+disable_default = true
+value = 16
+[csr_flags.CSR_ALLOW_DEVICE_CONFIGURATION]
+always_enforced = true
+value = 128
+[csr_flags.CSR_ALLOW_EXECUTABLE_POLICY_OVERRIDE]
+description = "override spctl or executable policy"
+value = 1024
+[csr_flags.CSR_ALLOW_KERNEL_DEBUGGER]
+description = "allow using the kernel debugger (KDP) - requires configuring the kernel debugger via boot-args"
+disable_default = true
+value = 8
+[csr_flags.CSR_ALLOW_TASK_FOR_PID]
+description = "allow getting the pid task, required for debugging"
+disable_default = true
+value = 4
+[csr_flags.CSR_ALLOW_UNAPPROVED_KEXTS]
+description = "do not require kext approval (managed in the T2 when it exists)"
+value = 512
+[csr_flags.CSR_ALLOW_UNAUTHENTICATED_ROOT]
+value = 2048
+[csr_flags.CSR_ALLOW_UNRESTRICTED_DTRACE]
+aliases = ["CSR_ALLOW_DESTRUCTIVE_DTRACE"]
+disable_default = true
+value = 32
+[csr_flags.CSR_ALLOW_UNRESTRICTED_FS]
+description = "disable SIP protections of various paths (such as write protection of /System)"
+disable_default = true
+value = 2
+[csr_flags.CSR_ALLOW_UNRESTRICTED_NVRAM]
+description = "disable restrictions to writing to restricted NVRAM variables"
+disable_default = true
+value = 64
+[csr_flags.CSR_ALLOW_UNTRUSTED_KEXTS]
+description = "allow loading kernel extensions that are not signed"
+disable_default = true
+value = 1
+[csr_process_capabilities.CSR_CAPABILITY_APPLE_INTERNAL]
+value = 4
+[csr_process_capabilities.CSR_CAPABILITY_CONFIG]
+value = 2
+[csr_process_capabilities.CSR_CAPABILITY_UNLIMITED]
+description = "process is not restricted by SIP and may bypass"
+value = 1

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Mis-reporting | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="The Mis-reporting" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/t2_reporting.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/t2_reporting.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Mis-reporting" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"The Mis-reporting","url":"https://docs.hackdiffe.rent/docs/t2_reporting.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="the-mis-reporting">The Mis-reporting</h1>
+
+<p>There were technical details that were inaccurate in the original reporting.  This was due to an attempt
+to rush analysis, due to the importance of this issue.  We’ve since provided corrections to the details
+in the original IronPeak blog.  Moreover several media outlets have misattributed the research that went
+into the article.  Niels is an industry consultant who provided  impact analysis of the T2 and checkm8, but
+was incorrectly referred to as the researcher.</p>
+
+<h2 id="existing-t2-coverage">Existing T2 Coverage</h2>
+
+<p><a href="https://paper.dropbox.com/doc/Existing-T2-Coverage--BgHcAbQKNitYzgoF4FDo1J40AQ-n2ByvSgsY7EWACprZ1jBI">https://paper.dropbox.com/doc/Existing-T2-Coverage--BgHcAbQKNitYzgoF4FDo1J40AQ-n2ByvSgsY7EWACprZ1jBI</a></p>
+
+<h2 id="the-researchers">The Researchers</h2>
+
+<p>Naturally <a href="https://github.com/axi0mX" class="user-mention">@axi0mX</a> provided checkm8 allowing most of what follows to have been done.</p>
+
+<p>The primary researchers responsible for T2/bridgeOS are <a href="https://github.com/h0m3us3r" class="user-mention">@h0m3us3r</a>, <a href="https://github.com/mcmrarm" class="user-mention">@mcmrarm</a>, <a href="https://github.com/aunali1" class="user-mention">@aunali1</a> and Rick Mark(<a href="https://github.com/su_rickmark" class="user-mention">@su_rickmark</a>).
+The group met each other via the GitHub issue <a href="https://github.com/axi0mX/ipwndfu/issues/141">https://github.com/axi0mX/ipwndfu/issues/141</a> and learned they
+were interested in the topic broadly.</p>
+
+<h3 id="the-t2-team">The T2 Team</h3>
+
+<h4 id="h0m3us3r">h0m3us3r</h4>
+
+<p>Twitter: <a href="https://github.com/h0m3us3r" class="user-mention">@h0m3us3r</a>
+GitHub: github.com/h0m3us3r
+An EE student, newcomer to iOS prior to this project. Brute-forced the offsets in the T2 BootROM needed for
+checkm8 exploit. Started USB-C debug probe research and was first to SWD the T2 from a homemade probe. Currently
+works on a retail version of USB-C debug probe.</p>
+
+<h4 id="aunali1">aunali1</h4>
+
+<p>Twitter: <a href="https://github.com/aunali1" class="user-mention">@aunali1</a>
+GitHub: github.com/aunali1
+CS/Neuroscience pre-med student. Involved with T2/Linux drivers and support and current maintainer prior to T2
+exploitation. Analyzed Apple hardware designs to determine points of infiltration. Developed toolchain/SDK for
+bridgeOS and SSH from host macOS using NCM interface. Created keylogger PoC and zero-click DFU PoC. Currently
+completing hardware design of retail USB-C debug probe.</p>
+
+<h4 id="mrarm">mrarm</h4>
+
+<p>Twitter: <a href="https://github.com/mcmrarm" class="user-mention">@mcmrarm</a>
+GitHub: github.com/mcmrarm
+Computer Engineering student with an interest in reverse engineering. Helped in getting Linux running on T2 Macs
+by reverse engineering important T2 Mac OS drivers and communication protocols, later implementing them for Linux.
+Helped with the T2 BootROM bruteforce. Reverse engineered parts of T2 boot chain, kernel and user-space for how
+they are designed and in search of attack vectors.</p>
+
+<h4 id="rickmark">rickmark</h4>
+
+<p>Twitter: <a href="https://github.com/su_rickmark" class="user-mention">@su_rickmark</a>
+GitHub: github.com/rickmark
+History as an internal security engineer at tech companies.  In this role his assessment of the workstations,
+phones and other systems was a key concern.  He worked generally on macOS integrity, EFI and idevicerestore concerns.</p>
+
+<h3 id="the-checkra1n-team">The checkra1n Team</h3>
+
+<p>The checkra1n team did substantive work in creating a full jailbreak from the checkm8 flaw.  It was the similarity
+of bridgeOS and iOS that allowed the T2 version of checkm8 to be rapidly included and supported.  Much of the
+further work is due to this framework and the jail-breaking community at large.  It was after the T2 checkm8 work
+that the T2 team was added to checkra1n and credited.</p>
+
+<h2 id="timeline-of-events">Timeline of Events</h2>
+
+<ul>
+  <li>Oct 27, 2017 - rickmark creates a utility to verify the integrity of T1 and prior Macs
+    <ul>
+      <li><a href="https://twitter.com/su_rickmark/status/1280590602690637824?s=20">https://twitter.com/su_rickmark/status/1280590602690637824?s=20</a></li>
+    </ul>
+  </li>
+  <li>Aug 13, 2018 - aunali1 begins inquiry regarding Linux support for Apple portables with the T2 chip.
+Subsequently begins research into T2 firmware payload.
+    <ul>
+      <li>
+<a href="https://github.com/Dunedan/mbp-2016-linux/issues/71">https://github.com/Dunedan/mbp-2016-linux/issues/71</a>.</li>
+    </ul>
+  </li>
+  <li>Jun 29, 2019 - mrarm begins investigating support for the T2 attached NVMe drive within Linux.
+    <ul>
+      <li><a href="https://github.com/Dunedan/mbp-2016-linux/issues/71#issuecomment-506987345">https://github.com/Dunedan/mbp-2016-linux/issues/71#issuecomment-506987345</a></li>
+    </ul>
+  </li>
+  <li>Jul 1, 2019 - mrarm completes PoC Linux driver support for T2 attached NVMe drive.
+    <ul>
+      <li><a href="https://github.com/Dunedan/mbp-2016-linux/issues/71#issuecomment-507325112">https://github.com/Dunedan/mbp-2016-linux/issues/71#issuecomment-507325112</a></li>
+    </ul>
+  </li>
+  <li>Jul 3, 2019 - mram begins investigating and reverse engineering the Apple BCE driver for supporting communication
+with the T2 on Linux and associated USB VHCI interface for supporting attached peripherals.
+    <ul>
+      <li><a href="https://github.com/Dunedan/mbp-2016-linux/issues/71#issuecomment-508199545">https://github.com/Dunedan/mbp-2016-linux/issues/71#issuecomment-508199545</a></li>
+    </ul>
+  </li>
+  <li>Aug 4, 2019 - aunali1 packages up Linux kernel patches and mrarm’s drivers into installable Arch packages for
+distribution. Becomes current maintainer of patchset and driver code.
+    <ul>
+      <li><a href="https://github.com/Dunedan/mbp-2016-linux/issues/71#issuecomment-517976727">https://github.com/Dunedan/mbp-2016-linux/issues/71#issuecomment-517976727</a></li>
+    </ul>
+  </li>
+  <li>Oct 6, 2019 - rickmark postulates the impact of checkm8 for the T2 and proposes that ipwndfu is extended
+to support it:
+    <ul>
+      <li><a href="https://github.com/axi0mX/ipwndfu/issues/141">https://github.com/axi0mX/ipwndfu/issues/141</a></li>
+    </ul>
+  </li>
+  <li>Nov 9, 2019 - rickmark begins research into bridgeOS
+    <ul>
+      <li><a href="https://twitter.com/su_rickmark/status/1193396044752547840?s=20">https://twitter.com/su_rickmark/status/1193396044752547840?s=20</a></li>
+    </ul>
+  </li>
+  <li>Nov 17, 2019 - mrarm ports SMC Linux driver to support ACPI addressed T2 controller.
+    <ul>
+      <li><a href="https://github.com/Dunedan/mbp-2016-linux/issues/71#issuecomment-554794307">https://github.com/Dunedan/mbp-2016-linux/issues/71#issuecomment-554794307</a></li>
+    </ul>
+  </li>
+  <li>Nov 22, 2019 - aunali1 and mrarm begin collaborating on investigating T2’s SEP and overall security model for
+further supporting biometrics on Linux.</li>
+  <li>Dec 3, 2019 - rickmark creates patches to libimobiledevice allowing the T2 to be restored outside of Apple
+Configurator and research to proceed
+    <ul>
+      <li><a href="https://twitter.com/su_rickmark/status/1202129990545887233?s=21">https://twitter.com/su_rickmark/status/1202129990545887233?s=21</a></li>
+    </ul>
+  </li>
+  <li>Dec 15, 2019 - team using version data from SecureROM, it is considered likely that the T2 should be vulnerable:
+    <ul>
+      <li><a href="https://twitter.com/su_rickmark/status/1206292115795271680?s=21">https://twitter.com/su_rickmark/status/1206292115795271680?s=21</a></li>
+    </ul>
+  </li>
+  <li>Jan 14, 2020 - rickmark performs analysis of USB Target Disk mode which can later be used to transfer data to
+and from the disk of an attached Mac
+    <ul>
+      <li><a href="https://twitter.com/su_rickmark/status/1217347628536492032?s=21">https://twitter.com/su_rickmark/status/1217347628536492032?s=21</a></li>
+    </ul>
+  </li>
+  <li>Feb 28, 2020 - rickmark postulates the security impact of the USB-C cable (power delivery pins) and how Apple
+factory cables can use these to affect a device
+    <ul>
+      <li><a href="https://twitter.com/su_rickmark/status/1233478919463960576?s=21">https://twitter.com/su_rickmark/status/1233478919463960576?s=21</a></li>
+    </ul>
+  </li>
+  <li>Mar 6, 2020 - First successful dump of SecureROM of the T2 performed, accepted as proof of the first to execute
+code on the device
+    <ul>
+      <li><a href="https://twitter.com/su_rickmark/status/1260456712898740224?s=20">https://twitter.com/su_rickmark/status/1260456712898740224?s=20</a></li>
+    </ul>
+  </li>
+  <li>Mar 7, 2020 - h0m3us3r publishes fork of checkm8/ipwndfu with T2 support
+    <ul>
+      <li><a href="https://github.com/h0m3us3r/ipwndfu/commit/4d7932a285ec04a1499694ed58be8d4f975d6dfe">https://github.com/h0m3us3r/ipwndfu/commit/4d7932a285ec04a1499694ed58be8d4f975d6dfe</a></li>
+    </ul>
+  </li>
+  <li>Mar 10, 2020 - qwertyoriop uses that branch to add support for T2 into checkra1n
+    <ul>
+      <li><a href="https://twitter.com/su_rickmark/status/1237414287372500993?s=21">https://twitter.com/su_rickmark/status/1237414287372500993?s=21</a></li>
+    </ul>
+  </li>
+  <li>Mar 10, 2020 - rickmark assesses how this situation cannot be mitigated
+    <ul>
+      <li><a href="https://twitter.com/su_rickmark/status/1237419421913604096?s=21">https://twitter.com/su_rickmark/status/1237419421913604096?s=21</a></li>
+    </ul>
+  </li>
+  <li>Mar 11, 2020 - German coverage of the T2 jailbreak
+    <ul>
+      <li><a href="https://tweakers.net/nieuws/164492/hacker-omzeilt-beveiliging-t2-chip-in-recente-mac-computers.html?utm_source=dlvr.it&amp;utm_medium=twitter">https://tweakers.net/nieuws/164492/hacker-omzeilt-beveiliging-t2-chip-in-recente-mac-computers.html?utm_source=dlvr.it&amp;utm_medium=twitter</a></li>
+    </ul>
+  </li>
+  <li>Mar 18, 2020 - Dutch coverage of the T2 jailbreak
+    <ul>
+      <li><a href="https://tweakers.net/nieuws/164492/hacker-omzeilt-beveiliging-t2-chip-in-recente-mac-computers.html?utm_source=dlvr.it&amp;utm_medium=twitter">https://tweakers.net/nieuws/164492/hacker-omzeilt-beveiliging-t2-chip-in-recente-mac-computers.html?utm_source=dlvr.it&amp;utm_medium=twitter</a></li>
+    </ul>
+  </li>
+  <li>Mar 18, 2020 - First English press of the T2 jailbreak
+    <ul>
+      <li><a href="https://www.idownloadblog.com/2020/03/18/checkra1n-experimental-pre-release-adds-preliminary-support-for-ios-13-4-mac-t2-chip/">https://www.idownloadblog.com/2020/03/18/checkra1n-experimental-pre-release-adds-preliminary-support-for-ios-13-4-mac-t2-chip/</a></li>
+    </ul>
+  </li>
+  <li>Mar 20, 2020 - rickmark assesses the impact of the T2 jailbreak on security of Apple Mac’s
+    <ul>
+      <li><a href="https://twitter.com/su_rickmark/status/1240532838555856897?s=21">https://twitter.com/su_rickmark/status/1240532838555856897?s=21</a></li>
+    </ul>
+  </li>
+  <li>Mar 22, 2020 - rickmark creates first writeup and analysis of the T2 impact created and circulated in industry and on Reddit
+    <ul>
+      <li><a href="https://paper.dropbox.com/doc/OUCHbar--A9CuZXZu3CBHYb2MzShFKQ2BAQ-OSBDo3SOCEetgQy3cGZqx">https://paper.dropbox.com/doc/OUCHbar--A9CuZXZu3CBHYb2MzShFKQ2BAQ-OSBDo3SOCEetgQy3cGZqx</a></li>
+    </ul>
+  </li>
+  <li>Mar 26, 2020 - rickmark highlights dangers of setting persistence in the T2 synthetic NVRAM (nvram.plist)
+    <ul>
+      <li><a href="https://twitter.com/su_rickmark/status/1243392084171558921?s=21">https://twitter.com/su_rickmark/status/1243392084171558921?s=21</a></li>
+    </ul>
+  </li>
+  <li>May 7, 2020 - rickmark uses checkra1n to jailbreak a 2020 Mac Pro
+    <ul>
+      <li><a href="https://twitter.com/su_rickmark/status/1258424888160735234?s=20">https://twitter.com/su_rickmark/status/1258424888160735234?s=20</a></li>
+    </ul>
+  </li>
+  <li>Jun 22, 2020 - rickmark and libimobiledevice add support for iOS 14 which makes use of Signed System Volumes
+    <ul>
+      <li><a href="https://twitter.com/su_rickmark/status/1275210160286265345?s=20">https://twitter.com/su_rickmark/status/1275210160286265345?s=20</a></li>
+    </ul>
+  </li>
+  <li>Jul 7, 2020 - h0m3us3r successfully connects to the debug interface of the T2 (ARM Single Wire Debug)
+    <ul>
+      <li><a href="https://twitter.com/h0m3us3r/status/1280432544731860993?s=21">https://twitter.com/h0m3us3r/status/1280432544731860993?s=21</a></li>
+    </ul>
+  </li>
+  <li>Jul 7, 2020 - rickmark comments that Intel debug is exposed as well
+    <ul>
+      <li><a href="https://twitter.com/su_rickmark/status/1280590602690637824?s=20">https://twitter.com/su_rickmark/status/1280590602690637824?s=20</a></li>
+    </ul>
+  </li>
+  <li>Jul 24, 2020 - aunali1 completes PoC bridgeOS SDK and compiles a benchmarking utility which provides first speed
+testand specifications of the T2
+    <ul>
+      <li><a href="https://twitter.com/su_rickmark/status/1286886010681462784">https://twitter.com/su_rickmark/status/1286886010681462784</a></li>
+    </ul>
+  </li>
+  <li>Jul 24, 2020 - Pangu releases blackbird an un-patchable Secure Enclave Processor flaw similar to checkm8
+    <ul>
+      <li><a href="https://www.idownloadblog.com/2020/07/24/pangu-hacks-sep/">https://www.idownloadblog.com/2020/07/24/pangu-hacks-sep/</a></li>
+    </ul>
+  </li>
+  <li>Aug 25, 2020 - rickmark postulates that macOS Big Sur will be installed over USB just like bridgeOS and that
+Signed System Volumes will reduce persistent jailbreaks on the T2
+    <ul>
+      <li><a href="https://twitter.com/su_rickmark/status/1298512629040910336?s=20">https://twitter.com/su_rickmark/status/1298512629040910336?s=20</a></li>
+    </ul>
+  </li>
+  <li>Sep 21, 2020 - Checkra1n 0.11.0 with T2/bridgeOS support released
+    <ul>
+      <li><a href="https://checkra.in">https://checkra.in</a></li>
+    </ul>
+  </li>
+  <li>Sep 30, 2020 - News article covering checkra1n 0.11.0 released
+    <ul>
+      <li><a href="https://reportcybercrime.com/hackers-jailbreak-apples-t2-security-chip-powered-by-bridgeos/">https://reportcybercrime.com/hackers-jailbreak-apples-t2-security-chip-powered-by-bridgeos/</a></li>
+    </ul>
+  </li>
+  <li>Sep 30, 2020 - Article above discussed in industry Slack instance (of which Neils is a member),
+rickmark solicits questions, and answers those and others in Slack</li>
+  <li>Oct 5, 2020 - A security consultant uses available information to assess the impact
+of checkra1n and the T2
+    <ul>
+      <li><a href="https://ironpeak.be/blog/crouching-t2-hidden-danger/">https://ironpeak.be/blog/crouching-t2-hidden-danger/</a></li>
+    </ul>
+  </li>
+  <li>Oct 5, 2020 - Corrections of accuracy compiled and sent to Neils
+    <ul>
+      <li><a href="https://paper.dropbox.com/pad-desktop-redirect?relativePadUrl=%2Fdoc%2FNOTES-Crouching-T2-Hidden-Danger--A9D8yBay8_W2AWSvNn3ifN9fAg-5Fv29pghexoM9jT3KV38m">https://paper.dropbox.com/pad-desktop-redirect?relativePadUrl=%2Fdoc%2FNOTES-Crouching-T2-Hidden-Danger--A9D8yBay8_W2AWSvNn3ifN9fAg-5Fv29pghexoM9jT3KV38m</a></li>
+    </ul>
+  </li>
+  <li>Oct 5, 2020 - rickmark publishes a blog with a more accurate T2 analysis
+    <ul>
+      <li><a href="https://blog.rickmark.me/checkra1n-and-the-t2/">https://blog.rickmark.me/checkra1n-and-the-t2/</a></li>
+    </ul>
+  </li>
+</ul>
+
+      </section>
+    </div>
+  </body>
+</html>

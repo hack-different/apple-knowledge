@@ -1,0 +1,2139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>launchd_services</key>
+	<dict>
+		<key>com.apple.ABDatabaseDoctor</key>
+		<dict>
+			<key>description</key>
+			<string>AddressBook database repair</string>
+		</dict>
+		<key>com.apple.AXMediaUtilitiesService</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.Accessibility.AccessibilityUIServer</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.AdminLite</key>
+		<dict>
+			<key>binary</key>
+			<string>/System/Library/PrivateFrameworks/AdminLite.framework/Resources/AdminLiteTool</string>
+			<key>description</key>
+			<string>Turns on / off setting boot-args</string>
+		</dict>
+		<key>com.apple.AppImageMounter</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.AppleCredentialManagerDaemon</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.AppleSSODaemon</key>
+		<dict>
+			<key>description</key>
+			<string>Apple ID</string>
+		</dict>
+		<key>com.apple.AssetCacheLocatorService</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.BTServer.avrcp</key>
+		<dict>
+			<key>description</key>
+			<string>Bluetooth Audio/Video Remote Control Profile (AVRCP)</string>
+		</dict>
+		<key>com.apple.BTServer.cloudpairing</key>
+		<dict>
+			<key>description</key>
+			<string>iCloud Pairing for AirPods etc.</string>
+		</dict>
+		<key>com.apple.BTServer.map</key>
+		<dict>
+			<key>description</key>
+			<string>Bluetooth Message Access Profile (MAP)</string>
+		</dict>
+		<key>com.apple.BTServer.pbap</key>
+		<dict>
+			<key>description</key>
+			<string>Bluetooth Phone Book Access Profile (PBAP)</string>
+		</dict>
+		<key>com.apple.BarcodeSupport.BarcodeNotificationService</key>
+		<dict>
+			<key>description</key>
+			<string>Camera QR code reader</string>
+		</dict>
+		<key>com.apple.BlueTool</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.CallHistorySyncHelper</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.CarPlayApp</key>
+		<dict>
+			<key>platforms</key>
+			<array>
+				<string>iOS</string>
+			</array>
+		</dict>
+		<key>com.apple.CommCenter</key>
+		<dict>
+			<key>description</key>
+			<string>Deal with the radios</string>
+		</dict>
+		<key>com.apple.CommCenterMobileHelper</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.CommCenterRootHelper</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.CoreAuthentication.agent</key>
+		<dict>
+			<key>binary</key>
+			<string>/System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd</string>
+			<key>description</key>
+			<string>coreauthd is a system daemon or agent that provides LocalAuthentication services. It maintains the authenticated contexts and presents the authentication user interface.</string>
+		</dict>
+		<key>com.apple.CoreAuthentication.daemon</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.CoreRoutine.helperservice</key>
+		<dict>
+			<key>binary</key>
+			<string>/System/Library/PrivateFrameworks/CoreRoutine.framework/Versions/A/XPCServices/CoreRoutineHelperService.xpc/Contents/MacOS/CoreRoutineHelperService</string>
+			<key>endpoints</key>
+			<array>
+				<string>com.apple.CoreRoutine.helperservice</string>
+			</array>
+			<key>platforms</key>
+			<array>
+				<string>macOS Intel</string>
+			</array>
+		</dict>
+		<key>com.apple.DMHelper</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.DataDetectorsSourceAccess</key>
+		<dict>
+			<key>description</key>
+			<string>Find phone numbers, shipping tracking codes</string>
+		</dict>
+		<key>com.apple.DragUI.druid</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.DumpBasebandCrash</key>
+		<dict>
+			<key>description</key>
+			<string>Collect logs from the Baseband if it crashes</string>
+		</dict>
+		<key>com.apple.DumpPanic</key>
+		<dict>
+			<key>description</key>
+			<string>Reads kernel panics from block storage and writes to log</string>
+		</dict>
+		<key>com.apple.EscrowSecurityAlert</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.FileCoordination</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.FileProvider</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.GSSCred</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.GameController.gamecontrollerd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.IOAccelMemoryInfoCollector</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.MapKit.SnapshotService</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.Maps.geocorrectiond</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.Maps.mapspushd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.MobileAccessoryUpdater</key>
+		<dict>
+			<key>description</key>
+			<string>Update attached accessories like [[Haywire]]</string>
+		</dict>
+		<key>com.apple.MobileBackup.MBHelperService</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.MobileFileIntegrity</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.MobileInstallationHelperService</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.MobileInternetSharing</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.MobileSoftwareUpdate.CleanupPreparePathService</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.OTACrashCopier</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.OTATaskingAgent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.PerfPowerServicesExtended</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.PointerUI.pointeruid</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.PowerUIAgent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.ProxiedCrashCopier.ProxyingDevice</key>
+		<dict>
+			<key>description</key>
+			<string>move crash logs, awdd and sysdiagnose from the watch to the phone</string>
+		</dict>
+		<key>com.apple.PurpleReverseProxy</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.ReportCrash</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.ReportCrash.SimulateCrash</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.ReportMemoryException</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.SCHelper</key>
+		<dict>
+			<key>description</key>
+			<string>Smart Card helper</string>
+			<key>platforms</key>
+			<array>
+				<string>macOS</string>
+			</array>
+		</dict>
+		<key>com.apple.Safari.SafeBrowsing.Service</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.SafariBookmarksSyncAgent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.SafariCloudHistoryPushAgent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.ScreenTimeAgent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.SecureBackupDaemon</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.SensorKitALSHelper</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.SepUpdateTimer</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.SpringBoard</key>
+		<dict>
+			<key>platforms</key>
+			<array>
+				<string>iOS</string>
+			</array>
+		</dict>
+		<key>com.apple.SyncAgent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.TextInput.kbd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.TrustEvaluationAgent</key>
+		<dict>
+			<key>binary</key>
+			<string>/System/Library/PrivateFrameworks/TrustEvaluationAgent.framework/Resources/trustevaluationagent</string>
+			<key>platforms</key>
+			<array>
+				<string>macOS Intel</string>
+			</array>
+		</dict>
+		<key>com.apple.TrustedPeersHelper</key>
+		<dict>
+			<key>binary</key>
+			<string>/System/Library/Frameworks/Security.framework/Versions/A/XPCServices/TrustedPeersHelper.xpc/Contents/MacOS/TrustedPeersHelper</string>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+		</dict>
+		<key>com.apple.UIKit.KeyboardManagement</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.UsageTrackingAgent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.UserEventAgent-System</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.VideoConversionService</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.VideoSubscriberAccount.DeveloperService</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.VideoSubscriberAccount.PrivacyService</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.VoiceOverTouch</key>
+		<dict>
+			<key>description</key>
+			<string>VoiceOver or the reading of the UI to the user</string>
+		</dict>
+		<key>com.apple.WebBookmarks.webbookmarksd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.WirelessRadioManager</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.abm-helper</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.absd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.accessablility.mediaaccessibilityd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.accessibility.heard</key>
+		<dict>
+			<key>description</key>
+			<string>Hearing aid</string>
+		</dict>
+		<key>com.apple.accessibility.motiontrackingd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.accessoryd</key>
+		<dict>
+			<key>description</key>
+			<string>iAP or Apple Accessory Protocol - Handle accessories via USB / Lightning</string>
+			<key>platforms</key>
+			<array>
+				<string>iOS</string>
+				<string>padOS</string>
+			</array>
+		</dict>
+		<key>com.apple.accounts.dom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.accountsd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.adid</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/adid</string>
+		</dict>
+		<key>com.apple.afcd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/afcd</string>
+		</dict>
+		<key>com.apple.aggregated</key>
+		<dict>
+			<key>description</key>
+			<string>Create aggregate logs</string>
+		</dict>
+		<key>com.apple.aggregated.addaily</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.airtunesd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/airtunesd</string>
+			<key>description</key>
+			<string>iTunes library sharing</string>
+		</dict>
+		<key>com.apple.akd</key>
+		<dict>
+			<key>description</key>
+			<string>AuthKit</string>
+		</dict>
+		<key>com.apple.amsaccountsd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.analyticsd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.and</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.ap.adprivacyd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/adprivacyd</string>
+			<key>description</key>
+			<string>iAd privacy</string>
+		</dict>
+		<key>com.apple.ap.adservicesd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/adservicesd</string>
+			<key>description</key>
+			<string>iAd services</string>
+		</dict>
+		<key>com.apple.applecamerad</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/adservicesd</string>
+			<key>description</key>
+			<string>Camera handler</string>
+		</dict>
+		<key>com.apple.appstored</key>
+		<dict>
+			<key>description</key>
+			<string>App Store</string>
+		</dict>
+		<key>com.apple.apsd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.asd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/asd</string>
+		</dict>
+		<key>com.apple.askpermissiond</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.aslmanager</key>
+		<dict>
+			<key>description</key>
+			<string>Apple System Log</string>
+		</dict>
+		<key>com.apple.assetsd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.assetsd.nebulad</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.assistant_cdmd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.assistant_service</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.assistantd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.assistivetouchd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.atc</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/atc</string>
+		</dict>
+		<key>com.apple.atc.atwakeup</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/atwakeup</string>
+		</dict>
+		<key>com.apple.audio.toolbox.reporting.service</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.avatarsd</key>
+		<dict>
+			<key>description</key>
+			<string>iMessage / iCloud profile photos</string>
+		</dict>
+		<key>com.apple.awdd</key>
+		<dict>
+			<key>description</key>
+			<string>Apple Wireless Diagnostics Daemon</string>
+		</dict>
+		<key>com.apple.backboardd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/backboardd</string>
+		</dict>
+		<key>com.apple.backupd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.biometrickitd.pearl</key>
+		<dict>
+			<key>description</key>
+			<string>FaceID</string>
+		</dict>
+		<key>com.apple.bird</key>
+		<dict>
+			<key>description</key>
+			<string>iCloud Documents / Ubiquity Containers</string>
+		</dict>
+		<key>com.apple.bluetoothd</key>
+		<dict>
+			<key>description</key>
+			<string>Bluetooth</string>
+		</dict>
+		<key>com.apple.bookassetd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.bookdatastored</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.businesschatd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.cache_delete</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.calaccessd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.captiveagent</key>
+		<dict>
+			<key>description</key>
+			<string>Handle captive WiFi login</string>
+		</dict>
+		<key>com.apple.carkitd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.cdpd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.certui.relay</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.cfnetwork.AuthBrokerAgent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.cfnetwork.cfnetworkagent</key>
+		<dict>
+			<key>description</key>
+			<string>Core Foundation networking</string>
+		</dict>
+		<key>com.apple.cfprefsd.xpc.daemon</key>
+		<dict>
+			<key>description</key>
+			<string>Core Foundation preference sync</string>
+		</dict>
+		<key>com.apple.ckdiscretionaryd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.cloudd</key>
+		<dict>
+			<key>description</key>
+			<string>iCloud</string>
+		</dict>
+		<key>com.apple.cloudphotod</key>
+		<dict>
+			<key>description</key>
+			<string>iCloud photo library</string>
+		</dict>
+		<key>com.apple.cmfsyncagent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.commandandcontrol</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.companion_proxy</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.configd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/configd</string>
+		</dict>
+		<key>com.apple.contacts.donation-agent</key>
+		<dict>
+			<key>description</key>
+			<string>Provide contacts from a sync provider</string>
+		</dict>
+		<key>com.apple.contactsd</key>
+		<dict>
+			<key>description</key>
+			<string>Contacts handler</string>
+		</dict>
+		<key>com.apple.containermanagerd</key>
+		<dict>
+			<key>description</key>
+			<string>Mange App and Group containers</string>
+		</dict>
+		<key>com.apple.contextstored</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.corecaptured</key>
+		<dict>
+			<key>description</key>
+			<string>WiFi / Bluetooth diagnostic capture</string>
+		</dict>
+		<key>com.apple.coredatad</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.coreduetd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.coreidvd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/coreidvd</string>
+			<key>description</key>
+			<string>Daemon for the CoreIDV private framework (probably &quot;identity verification&quot; for Apple Pay)</string>
+		</dict>
+		<key>com.apple.coreparsec.silhoette</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.coreservices.useractivityd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.corespeechd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.corespotlightservice</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.coresymbolicationd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.crash_mover</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.crashreportcopymobile</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.ctkd</key>
+		<dict>
+			<key>description</key>
+			<string>Cloud Token Kit daemon</string>
+		</dict>
+		<key>com.apple.dasd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/dasd</string>
+			<key>description</key>
+			<string>Duet Activity Scheduler Daemon (related to DuetActivityScheduler.framework)</string>
+		</dict>
+		<key>com.apple.dataaccess.dataaccessd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.datamigrator</key>
+		<dict>
+			<key>description</key>
+			<string>Handles data conversion after OS update</string>
+		</dict>
+		<key>com.apple.datastored</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.deferredmediad</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.deleted_helper</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.device-o-matic</key>
+		<dict>
+			<key>description</key>
+			<string>Figure out what profile to present when the device is connected via USB</string>
+		</dict>
+		<key>com.apple.devicecheckd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.devicedataresetd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.diagnosticd</key>
+		<dict>
+			<key>description</key>
+			<string>Diagnostics</string>
+		</dict>
+		<key>com.apple.diagnosticextensionsd</key>
+		<dict>
+			<key>description</key>
+			<string>Manage diagnostic extensions</string>
+		</dict>
+		<key>com.apple.distnoted.xpc.agent</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/sbin/distnoted</string>
+		</dict>
+		<key>com.apple.distnoted.xpc.daemon</key>
+		<dict>
+			<key>description</key>
+			<string>Distributed notificaions</string>
+		</dict>
+		<key>com.apple.dmd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.dprivacyd</key>
+		<dict>
+			<key>description</key>
+			<string>Differential Privacy</string>
+		</dict>
+		<key>com.apple.duetexpertd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.email.maild</key>
+		<dict>
+			<key>description</key>
+			<string>Email daemon for background push</string>
+		</dict>
+		<key>com.apple.exchangesyncd</key>
+		<dict>
+			<key>description</key>
+			<string>Exchange mail/contacts handler</string>
+		</dict>
+		<key>com.apple.facebook.xpc</key>
+		<dict>
+			<key>description</key>
+			<string>Facebook account handler</string>
+		</dict>
+		<key>com.apple.fairplay.H2</key>
+		<dict>
+			<key>danger</key>
+			<true/>
+			<key>description</key>
+			<string>FairPlay is the DRM (digital rights management) system for Apple - research in this area is dangorous</string>
+		</dict>
+		<key>com.apple.familycircled</key>
+		<dict>
+			<key>description</key>
+			<string>iCloud Family Management</string>
+		</dict>
+		<key>com.apple.familynotificaiton</key>
+		<dict>
+			<key>description</key>
+			<string>Notify UI for family events</string>
+		</dict>
+		<key>com.apple.fdrhelper</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/fdrhelper</string>
+			<key>description</key>
+			<string>Factory Data Reset</string>
+		</dict>
+		<key>com.apple.filesystems.apfs_defragd</key>
+		<dict>
+			<key>description</key>
+			<string>online defragment and optimize for APFS</string>
+		</dict>
+		<key>com.apple.filesystems.livefileproviderd</key>
+		<dict>
+			<key>description</key>
+			<string>Files.app service</string>
+		</dict>
+		<key>com.apple.filesystems.smbclientd</key>
+		<dict>
+			<key>description</key>
+			<string>Server Message Block client</string>
+		</dict>
+		<key>com.apple.filesystems.userfs_helper</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.filesystems.userfsd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.followupd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.fontservicesd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.fs_task_scheduler</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.fseventsd</key>
+		<dict>
+			<key>description</key>
+			<string>Filesystem events</string>
+		</dict>
+		<key>com.apple.ftp-proxy-embedded</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.fusiond</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.gamed</key>
+		<dict>
+			<key>description</key>
+			<string>GameKit</string>
+		</dict>
+		<key>com.apple.geod</key>
+		<dict>
+			<key>binary</key>
+			<string>/System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod</string>
+			<key>description</key>
+			<string>Geo-fencing</string>
+			<key>platforms</key>
+			<array>
+				<string>macOS Intel</string>
+			</array>
+		</dict>
+		<key>com.apple.gpsd</key>
+		<dict>
+			<key>description</key>
+			<string>GPS</string>
+		</dict>
+		<key>com.apple.handreporter</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.handwritingd</key>
+		<dict>
+			<key>description</key>
+			<string>iPad Handwriting Recogntion</string>
+		</dict>
+		<key>com.apple.hangtracerd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.healthappd</key>
+		<dict>
+			<key>description</key>
+			<string>Health App</string>
+		</dict>
+		<key>com.apple.healthd</key>
+		<dict>
+			<key>description</key>
+			<string>HealthKit</string>
+		</dict>
+		<key>com.apple.homed</key>
+		<dict>
+			<key>description</key>
+			<string>HomeKit</string>
+		</dict>
+		<key>com.apple.iapauthd</key>
+		<dict>
+			<key>description</key>
+			<string>iAccessory authentication</string>
+		</dict>
+		<key>com.apple.iapd</key>
+		<dict>
+			<key>description</key>
+			<string>iAccessory Protocol handler</string>
+		</dict>
+		<key>com.apple.icloud.FindMyDevice.FindMyDeviceHelperXPCService</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.icloud.findmydeviced</key>
+		<dict>
+			<key>description</key>
+			<string>Find my iPhone</string>
+		</dict>
+		<key>com.apple.icloud.fmfd</key>
+		<dict>
+			<key>description</key>
+			<string>Find my friends</string>
+		</dict>
+		<key>com.apple.icloud.fmflocatord</key>
+		<dict>
+			<key>description</key>
+			<string>Find my friends</string>
+		</dict>
+		<key>com.apple.icloud.searchpartyd</key>
+		<dict>
+			<key>description</key>
+			<string>The searching component looking for offline devices broadcasging for FindMy and sending to Apple</string>
+		</dict>
+		<key>com.apple.iconservices.iconservicesagent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.idamd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/idamd</string>
+		</dict>
+		<key>com.apple.identityservicesd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.ids.IDSCredentialsAgent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.idsfoundation.IDSRemoteURLConnectionAgent</key>
+		<dict>
+			<key>description</key>
+			<string>Make URL requests under identity services without exposing credential</string>
+		</dict>
+		<key>com.apple.imagent</key>
+		<dict>
+			<key>description</key>
+			<string>Instant Message Agent (iMessage)</string>
+		</dict>
+		<key>com.apple.imautomatichistorydeletionagent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.imcore.imtransferagent</key>
+		<dict>
+			<key>description</key>
+			<string>iMessage attachment handler</string>
+		</dict>
+		<key>com.apple.imdpersistence.IMDPersistenceAgent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.ind</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.installcoordinationd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.iomfb_bics_daemon</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.iosdiagnosticsd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.itunescloudd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.itunesstored</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.languageassetd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.localizationswitcherd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.locationd</key>
+		<dict>
+			<key>description</key>
+			<string>Location services</string>
+		</dict>
+		<key>com.apple.lockdown</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.logd</key>
+		<dict>
+			<key>description</key>
+			<string>Logging Daemon</string>
+		</dict>
+		<key>com.apple.lsd</key>
+		<dict>
+			<key>description</key>
+			<string>Launch Services daemon</string>
+		</dict>
+		<key>com.apple.lskdd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/lskdd</string>
+			<key>description</key>
+			<string>Local System Kernel Debug Daemon?</string>
+		</dict>
+		<key>com.apple.lskdmsed</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/lskdmsed</string>
+			<key>description</key>
+			<string>Local System Kernel Debug Memory Daemon?</string>
+		</dict>
+		<key>com.apple.mDNSResponder.reloaded</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mDNSResponderHelper.reloaded</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.managedconfiguration.mdmd</key>
+		<dict>
+			<key>description</key>
+			<string>Mobile Device Manager daemon</string>
+		</dict>
+		<key>com.apple.managedconfiguration.passscodenagd</key>
+		<dict>
+			<key>description</key>
+			<string>Tells you to set a passcode if set from policy</string>
+		</dict>
+		<key>com.apple.managedconfiguration.profiled</key>
+		<dict>
+			<key>description</key>
+			<string>.mobileprofile management</string>
+		</dict>
+		<key>com.apple.managedconfiguration.teslad</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.maps.destinationd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.matd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mdt</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mediaanalysisd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mediaartworkd</key>
+		<dict>
+			<key>description</key>
+			<string>iTunes Cover Art</string>
+		</dict>
+		<key>com.apple.medialibraryd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mediaremoted</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mediaserverd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mediastream.mstreamd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.memory-maintenance</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.metrickitd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.midiserver</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.migrationpluginwrapper</key>
+		<dict>
+			<key>description</key>
+			<string>Environment for OS upgrade migration plugins to run in</string>
+		</dict>
+		<key>com.apple.misagent</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/misagent</string>
+			<key>description</key>
+			<string>Provisioning profiles</string>
+		</dict>
+		<key>com.apple.mlmodelingd</key>
+		<dict>
+			<key>description</key>
+			<string>Machine Learning modeling daemon</string>
+		</dict>
+		<key>com.apple.mobile.MCInstall</key>
+		<dict>
+			<key>description</key>
+			<string>.mobileconfig management</string>
+		</dict>
+		<key>com.apple.mobile.assertion_agent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobile.cache_delete_app_container_caches</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobile.cache_delete_daily</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobile.cache_delete_mobile_backup</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobile.heartbeat</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobile.insecure_notification_proxy</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobile.installation_proxy</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobile.installd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobile.keybagd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobile.notification_proxy</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobile.obliteration</key>
+		<dict>
+			<key>description</key>
+			<string>Erase device via AppleEffacableStorage</string>
+		</dict>
+		<key>com.apple.mobile.softwareupdated</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobile.storage_mounter</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobile.storage_mounter_proxy</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobileactivationd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobileassetd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobilecheckpoint.checkpointd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobilegestalt.xpc</key>
+		<dict>
+			<key>description</key>
+			<string>Get device properties like model / serial</string>
+		</dict>
+		<key>com.apple.mobilestoredemod</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobilestoredemohelper</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.mobiletimerd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.monbile.house_arrest</key>
+		<dict>
+			<key>description</key>
+			<string>iTunes file transfer for application documents</string>
+		</dict>
+		<key>com.apple.mtmergeprops</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.nand_task_scheduler</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.nanobackupd</key>
+		<dict>
+			<key>description</key>
+			<string>Apple Watch backup agent</string>
+		</dict>
+		<key>com.apple.nanoprefsyncd.2</key>
+		<dict>
+			<key>description</key>
+			<string>Apple Watch preference syncing</string>
+		</dict>
+		<key>com.apple.nanoregistryd</key>
+		<dict>
+			<key>description</key>
+			<string>Apple Watch application registry (launch services)</string>
+		</dict>
+		<key>com.apple.nanoregistrylaunchd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.nanosubridged</key>
+		<dict>
+			<key>description</key>
+			<string>Apple Watch Software Update Bridge</string>
+		</dict>
+		<key>com.apple.nanotimekitcompaniond</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.navd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.ndoagent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.neagent-ios</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/neagent</string>
+			<key>description</key>
+			<string>Network Extension - Agent</string>
+		</dict>
+		<key>com.apple.nearbyd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/nearbyd</string>
+		</dict>
+		<key>com.apple.nehelper</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/nehelper</string>
+			<key>description</key>
+			<string>Network Extensions</string>
+		</dict>
+		<key>com.apple.nesessionmanager</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/nesessionmanager</string>
+		</dict>
+		<key>com.apple.networkserviceproxy</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/networkserviceproxy</string>
+		</dict>
+		<key>com.apple.newsd</key>
+		<dict>
+			<key>description</key>
+			<string>Apple News</string>
+		</dict>
+		<key>com.apple.nfcd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/nfcd</string>
+			<key>description</key>
+			<string>Near Field Communications</string>
+		</dict>
+		<key>com.apple.nfrestore</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/nfrestore_service</string>
+		</dict>
+		<key>com.apple.nlcd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/ncld</string>
+			<key>description</key>
+			<string>Network Link Conditioner</string>
+		</dict>
+		<key>com.apple.notifyd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.nsurlsessiond</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.nsurlstoraged</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.online-auth-agent.xpc</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.osanalytics.osanalyticshelper</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.parsec-fbf</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.parsecd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.passd</key>
+		<dict>
+			<key>description</key>
+			<string>Passbook</string>
+		</dict>
+		<key>com.apple.pasteboard.pasted</key>
+		<dict>
+			<key>description</key>
+			<string>Clipboard / Paseboard Services</string>
+		</dict>
+		<key>com.apple.pcapd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/pcapd</string>
+			<key>description</key>
+			<string>Packet Capture</string>
+		</dict>
+		<key>com.apple.peakpowermanagerd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.perfdiagsselfenabled</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.pfd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/pfd</string>
+			<key>description</key>
+			<string>Packet Filter</string>
+		</dict>
+		<key>com.apple.photoanalysisd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.photos.ImageConversionService</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.pipelined</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.pluginkit.pkd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/pkd</string>
+			<key>description</key>
+			<string>pkd manages plug-ins for the PlugInKit subsystem. It is a classic launch agent managed by launchd.</string>
+			<key>endpoints</key>
+			<array>
+				<string>com.apple.pluginkit.pkd</string>
+			</array>
+			<key>platforms</key>
+			<array>
+				<string>macOS Intel</string>
+			</array>
+		</dict>
+		<key>com.apple.pluginkit.pkreporter</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.powerd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.powerlogHelperd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.preboardservice</key>
+		<dict>
+			<key>description</key>
+			<string>First unlock screen</string>
+		</dict>
+		<key>com.apple.preboardservice_v2</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.printd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.proactiveeventtrackerd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.progressd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.protectedcloudstorage.protectedcloudkeysyncing</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.ptpcamerad</key>
+		<dict>
+			<key>description</key>
+			<string>Picture Transfer Protocol</string>
+		</dict>
+		<key>com.apple.ptpd</key>
+		<dict>
+			<key>description</key>
+			<string>Picture Transfer Protocol</string>
+		</dict>
+		<key>com.apple.purplebuddy.budd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.quicklook.ThumbnailsAgent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.racoon</key>
+		<dict>
+			<key>description</key>
+			<string>VPN</string>
+		</dict>
+		<key>com.apple.rapportd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.recentsd</key>
+		<dict>
+			<key>description</key>
+			<string>Most recently used (MRU) list</string>
+		</dict>
+		<key>com.apple.relatived</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.remindd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.remotemanagementd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.replayd</key>
+		<dict>
+			<key>description</key>
+			<string>Game Kit instant replay</string>
+		</dict>
+		<key>com.apple.reversetimplated</key>
+		<dict>
+			<key>description</key>
+			<string>Create user folder layout from template</string>
+		</dict>
+		<key>com.apple.revisiond</key>
+		<dict>
+			<key>description</key>
+			<string>Historical file revision management</string>
+		</dict>
+		<key>com.apple.routined</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.rtcreportingd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.runningboardd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.safarifetcherd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.screensharingserver</key>
+		<dict>
+			<key>description</key>
+			<string>AirPlay</string>
+		</dict>
+		<key>com.apple.scrod</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.searchd</key>
+		<dict>
+			<key>description</key>
+			<string>Spotlight</string>
+		</dict>
+		<key>com.apple.security.CircleJoinRequested</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.security.XPCTimeStampingService</key>
+		<dict>
+			<key>binary</key>
+			<string>/System/Library/Frameworks/Security.framework/Versions/A/XPCServices/XPCTimeStampingService.xpc/Contents/MacOS/XPCTimeStampingService</string>
+		</dict>
+		<key>com.apple.security.cloudkeychainproxy3</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.security.swcagent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.securityd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/securityd</string>
+			<key>description</key>
+			<string>Handle keychains etc</string>
+		</dict>
+		<key>com.apple.securityuploadd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/securityuploadd</string>
+		</dict>
+		<key>com.apple.seld</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/seld</string>
+		</dict>
+		<key>com.apple.sensorkitd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/sensorkitd</string>
+		</dict>
+		<key>com.apple.seserviced</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/seserviced</string>
+			<key>description</key>
+			<string>Secure Element interface</string>
+		</dict>
+		<key>com.apple.sharingd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/sharingd</string>
+			<key>description</key>
+			<string>Generic &quot;Share&quot; action handler</string>
+		</dict>
+		<key>com.apple.sidecar-relay</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/SidecarRelay</string>
+			<key>description</key>
+			<string>Use iDevice as a screen</string>
+		</dict>
+		<key>com.apple.signpost.signpost_reporter</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/signpost_reporter</string>
+		</dict>
+		<key>com.apple.siri-distributed-evaluation</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.siri.ClientFlow.ClientScripter</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.siri.acousticsignature</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.siri.context.service</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.siriactionsd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.siriknowledged</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.softwareupdateservicesd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.sosd</key>
+		<dict>
+			<key>description</key>
+			<string>Emergency recovery for iCloud Keychain</string>
+		</dict>
+		<key>com.apple.spindump</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.splashboard</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.spotlight.IndexAgent</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.storebookkeeperd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.streaming_zip_conduit</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/streaming_zip_conduit</string>
+			<key>description</key>
+			<string>Handle untrusted Zip content out of process</string>
+		</dict>
+		<key>com.apple.subridged</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.suggestd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.swcd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/swcd</string>
+			<key>description</key>
+			<string>Shared Web Credentials</string>
+		</dict>
+		<key>com.apple.symptomsd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.symptomsd.helper</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.syncdefaultsd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.sysdiagnose</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.sysdiagnose_helper</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.systemstats.microstackshot_periodic</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.tailspind</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/tailspind</string>
+		</dict>
+		<key>com.apple.tccd</key>
+		<dict>
+			<key>description</key>
+			<string>Total and Complete Control - App privacy settings</string>
+		</dict>
+		<key>com.apple.telephonyutilities.callservicesd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.tencentweibo.xpc</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.terminusd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/terminusd</string>
+			<key>description</key>
+			<string>On-demand VPN</string>
+		</dict>
+		<key>com.apple.thermalmonitord</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/thermalmonitord</string>
+		</dict>
+		<key>com.apple.timed</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/timed</string>
+			<key>description</key>
+			<string>NTP Client</string>
+		</dict>
+		<key>com.apple.timezoneupdates.tzd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/tzd</string>
+		</dict>
+		<key>com.apple.tipsd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/tipsd</string>
+			<key>description</key>
+			<string>Tip of the day</string>
+		</dict>
+		<key>com.apple.tonelibraryd</key>
+		<dict>
+			<key>description</key>
+			<string>Ringtone library access</string>
+		</dict>
+		<key>com.apple.touchsetupd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.transparencyd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/transparencyd</string>
+		</dict>
+		<key>com.apple.triald</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/triald</string>
+			<key>description</key>
+			<string>Apple A/B testing</string>
+		</dict>
+		<key>com.apple.trustd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/trustd</string>
+			<key>description</key>
+			<string>PKI trust evaluation</string>
+		</dict>
+		<key>com.apple.tvremoted</key>
+		<dict>
+			<key>description</key>
+			<string>Apple TV remote app</string>
+		</dict>
+		<key>com.apple.twitter.xpc</key>
+		<dict>
+			<key>description</key>
+			<string>Twitter account handler</string>
+		</dict>
+		<key>com.apple.tzlinkd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/tzlinkd</string>
+			<key>description</key>
+			<string>Time Zones</string>
+		</dict>
+		<key>com.apple.usb.networking.addNetworkInterface</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.videosybscriptionsd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/videosubscriptionsd</string>
+		</dict>
+		<key>com.apple.voiced</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.voicemail.vmd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.voicememod</key>
+		<dict>
+			<key>description</key>
+			<string>Voice Memos</string>
+		</dict>
+		<key>com.apple.watchdogd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/watchdogd</string>
+		</dict>
+		<key>com.apple.watchlistd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.wcd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/wcd</string>
+		</dict>
+		<key>com.apple.webinspectord</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/webinspectord</string>
+		</dict>
+		<key>com.apple.webio.xpc</key>
+		<dict>
+			<key>description</key>
+			<string>Webio account handler</string>
+		</dict>
+		<key>com.apple.wifi.hostapd</key>
+		<dict>
+			<key>description</key>
+			<string>Host Access Point - Instant Hotspot</string>
+		</dict>
+		<key>com.apple.wifi.wapic</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/wapic</string>
+		</dict>
+		<key>com.apple.wifiFirmwareLoader</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/wifiFirmwareLoader</string>
+			<key>description</key>
+			<string>Move the firmware from disk to the WiFi chip</string>
+		</dict>
+		<key>com.apple.wifianalyticsd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/wifianalyticsd</string>
+		</dict>
+		<key>com.apple.wifid</key>
+		<dict>
+			<key>description</key>
+			<string>WiFi</string>
+		</dict>
+		<key>com.apple.wifip2pd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/wifip2pd</string>
+			<key>description</key>
+			<string>WiFi peer-to-peer</string>
+		</dict>
+		<key>com.apple.wifivelocityd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/wifivelocityd</string>
+		</dict>
+		<key>com.apple.xpc.roleaccountd</key>
+		<dict>
+			<key>binary</key>
+			<string>/usr/libexec/xpcroleaccountd</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>credits</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
+</dict>
+</plist>

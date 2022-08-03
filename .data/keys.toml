@@ -1,0 +1,39 @@
+
+[derrived_keys.2101]
+data = 1334440654591915542993625911497130241
+description = "Used for data protection.\n"
+type = "uid"
+[derrived_keys.2102]
+data = 1192299414131223233912285359034425728
+description = "This is computed by the kernel during a restore, but is zeroed out during a normal boot. It is also computed by\nthe Secure Bootloader, and its only known use is to decrypt LLB in NOR. Like `0x835`, it is different\nfor each device.\n"
+type = "uid"
+[derrived_keys.2103]
+chip_id = 8900
+data = 69588083788013974478752691731509087765
+description = "It is used as the encryption key for IMG2 files. With the introduction of IMG3 in iPhone OS 2.0, KBAGs are now\nused instead of the `0x837` key. Because iPhone OS versions 1.x were used only on the iPhone and iPod touch\n(both use the S5L8900) the encrypted values for other processors don't matter.\n"
+type = "gid"
+value = 32588653152864007722841128035178264436
+[derrived_keys.2104]
+data = 186772609949988273681485834769094998241
+description = "Another UID-AES-key-based key, it is used to encrypt everything but LLB in the NOR (iBoot,\nDeviceTree, pictures).\n"
+type = "uid"
+[derrived_keys.2201]
+data = 279018389515453073819669168862421701808
+description = "Usage unknown."
+type = "uid"
+[derrived_keys.2202]
+data = 291263742049262950426416465193106933345
+description = "Used on A4 devices. A device-specific key. It is used to encrypt the SHSH blobs on the device.\n"
+type = "uid"
+[derrived_keys.2203]
+data = 32226505706565189832158137978565999945
+description = "It is used to encrypt the data partition key.\n"
+type = "uid"
+[derrived_keys.2211]
+data = 114989932619137914553416987311769025007
+description = "It is used during software upgrades on A12 and later to encrypt the \"generator\" value (using AES-128-CBC)\nbefore hashing it to become the nonce.\n"
+mode = "AES-256-CBC"
+type = "uid"
+[keys]
+1000 = "gid"
+2000 = "uid"

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Firmwares and Keys | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Firmwares and Keys" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/Firmwares-and-Keys.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/Firmwares-and-Keys.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Firmwares and Keys" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"Firmwares and Keys","url":"https://docs.hackdiffe.rent/docs/Firmwares-and-Keys.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="firmwares-and-keys">Firmwares and Keys</h1>
+
+<p>Firmwares come as .ipsw files, which are .zip files in disguise.</p>
+
+<p>Here’s what the folder structure looks like (example: iPhone5,4 on iOS 9.2.1):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>iPhone5,4_9.2.1_13D15_Restore.ipsw/
+├── 058-32080-015.dmg
+├── 058-32173-015.dmg
+├── 058-32359-015.dmg
+├── BuildManifest.plist
+├── Firmware/
+├──── Mav7Mav8-6.01.00.Release.bbfw
+├──── Mav7Mav8-6.01.00.Release.plist
+├──── all_flash/
+├────── all_flash.n49ap.production/
+├────── DeviceTree.n49ap.img3
+├────── LLB.n49.RELEASE.img3
+├────── applelogo@2x~iphone.s5l8950x.img3
+├────── batterycharging0@2x~iphone.s5l8950x.img3
+├────── batterycharging1@2x~iphone.s5l8950x.img3
+├────── batteryfull@2x~iphone.s5l8950x.img3
+├────── batterylow0@2x~iphone.s5l8950x.img3
+├────── batterylow1@2x~iphone.s5l8950x.img3
+├────── glyphplugin@1136~iphone-lightning.s5l8950x.img3
+├────── iBoot.n49.RELEASE.img3
+├────── manifest
+├────── recoverymode@1136~iphone-lightning.s5l8950x.img3
+├──── dfu/
+├────── iBEC.n49.RELEASE.dfu
+├────── iBSS.n49.RELEASE.dfu
+├──── usr/
+├────── local/
+├────── standalone/
+├── Restore.plist
+└── kernelcache.release.n49
+</code></pre></div></div>
+
+<p>All of these files can be extracted using keys and xpwn.</p>
+
+<p>Firmware keys are posted on:</p>
+
+<ul>
+  <li><a href="https://theiphonewiki.com/wiki/Firmware_Keys">https://theiphonewiki.com/wiki/Firmware_Keys</a></li>
+  <li><a href="https://ipsw.me/keys">https://ipsw.me/keys</a></li>
+  <li><a href="https://ipswcentral.com//keys">https://ipswcentral.com//keys</a></li>
+</ul>
+
+<p>For the kernelcache, run:</p>
+
+<p><code class="language-plaintext highlighter-rouge">xpwntool path/to/cache /path/to/output -k KEY -iv IV -decrypt</code></p>
+
+<p>The root filesystem is in the largest DMG file of the .ipsw. To extract it, download dmg
+(<a href="http://www.ifans.com/forums/attachments/dmg-zip.68330/">OS X</a>, <a href="https://intdev.googlecode.com/files/dmg.exe">Windows</a>).<br />
+Make sure dmg or dmg.exe is in your path and execute one of the following:</p>
+
+<p><code class="language-plaintext highlighter-rouge">./dmg input.dmg output.dmg -k KEY</code> (OS X)</p>
+
+<p><code class="language-plaintext highlighter-rouge">dmg.exe input.dmg output.dmg -k KEY</code> (Windows)</p>
+
+      </section>
+    </div>
+  </body>
+</html>

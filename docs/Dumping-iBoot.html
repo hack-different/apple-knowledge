@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Dumping iBoot from the Kernel | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Dumping iBoot from the Kernel" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/Dumping-iBoot.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/Dumping-iBoot.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Dumping iBoot from the Kernel" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"Dumping iBoot from the Kernel","url":"https://docs.hackdiffe.rent/docs/Dumping-iBoot.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="dumping-iboot-from-the-kernel">Dumping iBoot from the Kernel</h1>
+
+<p>This information only applies to iBoot64 on iOS 8 or lower.</p>
+
+<p>In order to dump iBoot, you need:</p>
+
+<ol>
+  <li>Kernel read/write (eg <code class="language-plaintext highlighter-rouge">task_for_pid</code> 0)</li>
+  <li><code class="language-plaintext highlighter-rouge">gPhysBase</code> and <code class="language-plaintext highlighter-rouge">gVirtBase</code></li>
+  <li>A pointer to the kernel pmap’s level1 translation table entries.</li>
+</ol>
+
+<p>Once those are obtained, just add a mapping for <code class="language-plaintext highlighter-rouge">gPhysBase</code> to the level1 table (code for this is
+available upon request; drop me a pm on freenode), mapping 1GB of physical memory at a given virtual address.
+Additionally, make sure to clear the read only bit and set the EL0-accessible bit.</p>
+
+<p>At this point, it’s simple matter of memmem to figure out where iBoot is hiding in phys. Given a
+<code class="language-plaintext highlighter-rouge">gPhysBase</code> map at <code class="language-plaintext highlighter-rouge">0xffffffc3c0000000</code>, this code should do the trick.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">envp</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">char</span><span class="o">*</span> <span class="n">base</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span> <span class="mh">0xffffffc3c0000000</span><span class="p">;</span>
+    <span class="kt">char</span><span class="o">*</span> <span class="n">sig</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span> <span class="s">"FFiBoot for "</span><span class="p">;</span>
+    <span class="kt">char</span><span class="o">*</span> <span class="n">iboot</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span> <span class="n">memmem</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">30</span><span class="p">),</span> <span class="n">sig</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">sig</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span>
+    <span class="k">while</span> <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">iboot</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="sc">'F'</span> <span class="o">&amp;&amp;</span> <span class="o">*</span><span class="p">(</span><span class="n">iboot</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="sc">'F'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">iboot</span> <span class="o">++</span><span class="p">;</span>
+        <span class="cm">/* should fix size up here but too lazy lol */</span>
+        <span class="n">iboot</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span> <span class="n">memmem</span><span class="p">(</span><span class="n">iboot</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">30</span><span class="p">),</span> <span class="n">sig</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">sig</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span>
+        <span class="n">assert</span><span class="p">(</span><span class="n">iboot</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">iboot</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span> <span class="p">(((</span><span class="kt">uintptr_t</span><span class="p">)</span><span class="n">iboot</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="o">~</span><span class="mh">0xFFF</span><span class="p">));</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"found iboot at %p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">iboot</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+      </section>
+    </div>
+  </body>
+</html>

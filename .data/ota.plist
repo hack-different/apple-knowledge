@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>metadata</key>
+	<dict>
+		<key>credits</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
+	<key>ota_stages</key>
+	<array>
+		<string>fdr_verify_sealed_manifest</string>
+		<string>update_appletcon</string>
+		<string>update_veridian</string>
+		<string>update_rose</string>
+		<string>update_se</string>
+		<string>update_stockholm</string>
+		<string>update_baseband</string>
+	</array>
+</dict>
+</plist>

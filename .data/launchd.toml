@@ -1,0 +1,664 @@
+
+[services_bridgeOS_61.os_version]
+build_id = "D04E13CA-525E-11EC-93BF-BBD40D124CC4"
+product_build_version = "19P647"
+product_copyright = "1983-2021 Apple Inc."
+product_name = "Bridge OS"
+product_version = "6.1"
+system_image_id = "04A4AD6B-415A-4491-B756-CB818FC4DCE6"
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.CSCRemoteSupportd"
+program_arguments = ["/usr/libexec/CSCRemoteSupportd"]
+[services_bridgeOS_61.services.remote_services.com.apple.CSCRemoteSupportd]
+ExposedToUntrustedDevices = true
+RequireEntitlement = "com.apple.private.CSCSupport.antenna-access"
+[services_bridgeOS_61.services.remote_services.com.apple.CSCRemoteSupportd.ServiceProperties]
+ServiceVersion = 4
+UsesRemoteXPC = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.CoreAuthentication.daemon"
+posix_spawn_type = "Adaptive"
+program_arguments = ["/System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd"]
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+label = "com.apple.FileCoordination"
+posix_spawn_type = "Interactive"
+[services_bridgeOS_61.services.mach_services]
+com.apple.FileCoordination = true
+com.apple.ProgressReporting = true
+[services_bridgeOS_61.services.mach_services.com.apple.FileCoordination.kernel.ipc]
+HostSpecialPort = 30
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.GSSCred"
+program_arguments = ["/System/Library/Frameworks/GSS.framework/Helpers/GSSCred"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.GSSCred = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.IOAccelMemoryInfoCollector"
+program_arguments = ["/usr/libexec/IOAccelMemoryInfoCollector"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.gpumemd.client = true
+com.apple.gpumemd.source = true
+[[services_bridgeOS_61.services]]
+label = "com.apple.LASecureIOd"
+[services_bridgeOS_61.services.remote_services.com.apple.eos.LASecureIO]
+RequireEntitlement = "com.apple.private.lasecureio.remote"
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+label = "com.apple.MobileAccessoryUpdater"
+program_arguments = ["/System/Library/PrivateFrameworks/MobileAccessoryUpdater.framework/Support/fud","120"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.MobileAccessoryUpdater = true
+com.apple.accessoryupdater.uarp = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+label = "com.apple.MobileFileIntegrity"
+posix_spawn_type = "Interactive"
+program_arguments = ["/usr/libexec/amfid"]
+[services_bridgeOS_61.services.launch_events.com.apple.fsevents.matching.com.apple.MobileFileIntegrity.CodeRequirementPrefsChanged]
+Path = "/Library/Preferences/com.apple.security.coderequirements.plist"
+[services_bridgeOS_61.services.launch_events.com.apple.fsevents.matching.com.apple.MobileFileIntegrity.LibraryValidationPrefsChanged]
+Path = "/Library/Preferences/com.apple.security.libraryvalidation.plist"
+[services_bridgeOS_61.services.mach_services.com.apple.MobileFileIntegrity]
+HostSpecialPort = 18
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.ReportCrash"
+posix_spawn_type = "Interactive"
+program_arguments = ["/System/Library/CoreServices/ReportCrash","agent"]
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.RestoreRemoteServices.restoreserviced"
+posix_spawn_type = "Interactive"
+program_arguments = ["/usr/libexec/restoreserviced"]
+[services_bridgeOS_61.services.remote_services.com.apple.RestoreRemoteServices.restoreserviced]
+ExposedToUntrustedDevices = ["PreSetup","HasInternalSecurityPolicies"]
+RequireEntitlement = "com.apple.private.RestoreRemoteServices.restoreservice.remote"
+[services_bridgeOS_61.services.remote_services.com.apple.RestoreRemoteServices.restoreserviced.ServiceProperties]
+ServiceVersion = 2
+UsesRemoteXPC = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.SepUpdateTimer"
+program_arguments = ["/usr/libexec/seputil","--daemonize-update-timer"]
+[services_bridgeOS_61.services.launch_events.com.apple.xpc.activity.com.apple.SepUpdateTimer]
+AllowBattery = true
+GracePeriod = 0
+Interval = 3600
+ShouldWakeDevice = true
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.analyticsd"
+program_arguments = ["/System/Library/PrivateFrameworks/CoreAnalytics.framework/Support/analyticsd"]
+[services_bridgeOS_61.services.launch_events.com.apple.iokit.matching.com.apple.analyticsd]
+IOProviderClass = "CoreAnalyticsMessenger"
+[services_bridgeOS_61.services.mach_services]
+com.apple.analyticsd = true
+com.apple.analyticsd.messagetracer = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.aslmanager"
+posix_spawn_type = "Interactive"
+program_arguments = ["aslmanager"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.aslmanager = true
+[[services_bridgeOS_61.services]]
+enable_transactions = true
+label = "com.apple.aveserverd"
+posix_spawn_type = "Interactive"
+program_arguments = ["/usr/libexec/aveserverd"]
+[services_bridgeOS_61.services.remote_services.com.apple.aveservice]
+RequireEntitlement = "com.apple.aveservice.access-allowed"
+[services_bridgeOS_61.services.remote_services.com.apple.aveservice.ServiceProperties]
+UsesRemoteXPC = true
+[[services_bridgeOS_61.services]]
+label = "com.apple.bkremoted"
+[services_bridgeOS_61.services.remote_services.com.apple.eos.BiometricKit]
+RequireEntitlement = "com.apple.private.bmk.remote.allow"
+[[services_bridgeOS_61.services]]
+label = "com.apple.bkremoted.ta"
+program_arguments = ["/usr/libexec/bkremoted","--ta"]
+[services_bridgeOS_61.services.remote_services.com.apple.eos.BiometricKit.ta]
+RequireEntitlement = "com.apple.private.bmk.remote.allow"
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+label = "com.apple.bridgeOSUpdated"
+posix_spawn_type = "Adaptive"
+program_arguments = ["/usr/libexec/bridgeOSUpdated"]
+[services_bridgeOS_61.services.keep_alive.PathState]
+/tmp/bridgeOSUpdated-keep-alive = true
+[services_bridgeOS_61.services.remote_services.com.apple.bridgeOSUpdated]
+RequireEntitlement = "bridgeOSUpdated-access-allowed"
+[services_bridgeOS_61.services.remote_services.com.apple.bridgeOSUpdated.ServiceProperties]
+UsesRemoteXPC = true
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.cache_delete"
+program_arguments = ["/System/Library/PrivateFrameworks/CacheDelete.framework/deleted"]
+[services_bridgeOS_61.services.launch_events.com.apple.dispatch.vfs.Monitor Low Disk Conditions]
+DesiredDisk = true
+LowDisk = 0
+NearLowDisk = true
+VeryLowDisk = 0
+[services_bridgeOS_61.services.launch_events.com.apple.xpc.activity.com.apple.CacheDelete.daily]
+Interval = 86400
+Priority = "Maintenance"
+Repeating = true
+[services_bridgeOS_61.services.mach_services]
+com.apple.cache_delete = true
+com.apple.cache_delete.public = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+label = "com.apple.cfnetwork.cfnetworkagent"
+program_arguments = ["/System/Library/Frameworks/CFNetwork.framework/CFNetworkAgent"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.cfnetwork.cfnetworkagent = true
+[[services_bridgeOS_61.services]]
+enable_transactions = true
+label = "com.apple.cfprefsd.xpc.daemon"
+posix_spawn_type = "Adaptive"
+program_arguments = ["/usr/sbin/cfprefsd","daemon"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.cfprefsd.daemon = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.containermanagerd"
+program_arguments = ["/usr/libexec/containermanagerd","--runmode=exclusive","--default-user=mobile","--bundle-container-mode=global","--bundle-container-owner=_installd","--system-container-mode=global","--system-container-owner=root"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.containermanagerd = true
+[services_bridgeOS_61.services.mach_services.com.apple.containermanagerd.upcall]
+HostSpecialPort = 25
+[[services_bridgeOS_61.services]]
+enable_transactions = true
+keep_alive = true
+label = "com.apple.corebrightnessd"
+program_arguments = ["/usr/libexec/corebrightnessd","--launchd"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.backlightd = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.corecaptured"
+posix_spawn_type = "Adaptive"
+program_arguments = ["/usr/libexec/corecaptured"]
+[services_bridgeOS_61.services.launch_events.com.apple.iokit.matching.com.apple.corecaptured]
+IOProviderClass = "CCCapture"
+[services_bridgeOS_61.services.launch_events.com.apple.notifyd.matching.com.apple.MCX._managementStatusChangedForDomains]
+Notification = "com.apple.MCX._managementStatusChangedForDomains"
+[services_bridgeOS_61.services.launch_events.com.apple.notifyd.matching.com.apple.ManagedConfiguration.profileListChanged]
+Notification = "com.apple.ManagedConfiguration.profileListChanged"
+[services_bridgeOS_61.services.mach_services]
+com.apple.corecaptured = true
+[services_bridgeOS_61.services.remote_services.com.apple.corecaptured.remoteservice]
+RequireEntitlement = "com.apple.corecaptured.remoteservice-access"
+[services_bridgeOS_61.services.remote_services.com.apple.corecaptured.remoteservice.ServiceProperties]
+UsesRemoteXPC = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.corekdld"
+[services_bridgeOS_61.services.mach_services]
+com.apple.CoreKDL.XPC.bridge = true
+[services_bridgeOS_61.services.remote_services.com.apple.CoreKDL.remoteXPC]
+RequireEntitlement = "com.apple.private.CoreKDL.allow"
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+keep_alive = true
+label = "com.apple.corespeechd"
+program_arguments = ["/System/Library/PrivateFrameworks/CoreSpeech.framework/corespeechd"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.corespeech.audioinjection.xpc = true
+[services_bridgeOS_61.services.remote_services.com.apple.corespeech.xpc.remote.control]
+RequireEntitlement = "com.apple.private.corespeech.xpc.remote"
+[services_bridgeOS_61.services.remote_services.com.apple.corespeech.xpc.remote.control.ServiceProperties]
+UsesRemoteXPC = true
+[services_bridgeOS_61.services.remote_services.com.apple.corespeech.xpc.remote.record]
+RequireEntitlement = "com.apple.private.corespeech.xpc.remote"
+[services_bridgeOS_61.services.remote_services.com.apple.corespeech.xpc.remote.record.ServiceProperties]
+UsesRemoteXPC = true
+[services_bridgeOS_61.services.remote_services.com.apple.private.avvc.xpc.remote]
+RequireEntitlement = "com.apple.private.avvc.xpc.remote"
+[services_bridgeOS_61.services.remote_services.com.apple.private.avvc.xpc.remote.ServiceProperties]
+UsesRemoteXPC = true
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.deleted_helper"
+program_arguments = ["/System/Library/PrivateFrameworks/CacheDelete.framework/deleted_helper"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.deleted_helper = true
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.diagnosticd"
+posix_spawn_type = "Interactive"
+[services_bridgeOS_61.services.mach_services]
+com.apple.diagnosticd = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.diskimagesiod"
+program_arguments = ["/usr/libexec/diskimagesiod"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.diskimagesiod.cachedelete = true
+com.apple.diskimagesiod.xpc = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.diskimagesiod.ram"
+program_arguments = ["/usr/libexec/diskimagesiod","--ram"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.diskimagesiod.ram.xpc = true
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+enable_transactions = true
+label = "com.apple.dynamic_pager"
+posix_spawn_type = "Interactive"
+program_arguments = ["/sbin/dynamic_pager"]
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.filesystems.apfs_iosd"
+program_arguments = ["/System/Library/Filesystems/apfs.fs/apfs_iosd"]
+[services_bridgeOS_61.services.launch_events.com.apple.notifyd.matching.com.apple.system.powersources.timeremaining]
+Notification = "com.apple.system.powersources.timeremaining"
+[services_bridgeOS_61.services.launch_events.com.apple.xpc.activity.com.apple.filesystems.apfs_iosd.fx_defrag]
+CPUIntensive = true
+Interval = 259200
+Priority = "Maintenance"
+Repeating = true
+RequireScreenSleep = true
+[services_bridgeOS_61.services.launch_events.com.apple.xpc.activity.com.apple.filesystems.apfs_iosd.hash_validation]
+CPUIntensive = true
+DiskIntensive = true
+Interval = 604800.0
+Priority = "Maintenance"
+Repeating = true
+RequiresDeviceInactivity = true
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+enable_transactions = true
+keep_alive = true
+label = "com.apple.hidd"
+posix_spawn_type = "Interactive"
+program_arguments = ["/usr/libexec/hidd"]
+[services_bridgeOS_61.services.mach_services.com.apple.iohideventsystem]
+ResetAtClose = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.icloud.findmydeviced"
+posix_spawn_type = "Adaptive"
+[services_bridgeOS_61.services.remote_services.com.apple.icloud.findmydeviced.bridge]
+RequireEntitlement = "com.apple.private.icloud.FindMyDeviceBridge.access"
+[services_bridgeOS_61.services.remote_services.com.apple.icloud.findmydeviced.bridge.ServiceProperties]
+ServiceVersion = 1
+UsesRemoteXPC = true
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.logd_helper"
+posix_spawn_type = "Interactive"
+[services_bridgeOS_61.services.mach_services]
+com.apple.logd_helper = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.lskdd"
+posix_spawn_type = "Adaptive"
+[services_bridgeOS_61.services.mach_services]
+com.apple.lskdd = true
+[services_bridgeOS_61.services.remote_services.com.apple.lskdd]
+RequireEntitlement = "com.apple.private.lskdbosd.access"
+[services_bridgeOS_61.services.remote_services.com.apple.lskdd.ServiceProperties]
+UsesRemoteXPC = 1
+[[services_bridgeOS_61.services]]
+enable_transactions = true
+label = "com.apple.mdt"
+program_arguments = ["/usr/libexec/transitd"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.mdt = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+label = "com.apple.misagent"
+posix_spawn_type = "Adaptive"
+program_arguments = ["/usr/libexec/misagent"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.misagent = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.mobile.cache_delete_daily"
+program_arguments = ["/System/Library/CoreServices/CacheDeleteDaily"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.mobile.cache_delete_daily = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.mobile.heartbeat"
+posix_spawn_type = "Adaptive"
+program_arguments = ["/usr/libexec/heartbeatd"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.mobile.heartbeat = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+label = "com.apple.mobile.keybagd"
+posix_spawn_type = "Interactive"
+program_arguments = ["/usr/libexec/keybagd","-t","15"]
+[services_bridgeOS_61.services.launch_events.com.apple.notifyd.matching.com.apple.mobile.keybagd.first_unlock]
+Notification = "com.apple.mobile.keybagd.first_unlock"
+[services_bridgeOS_61.services.mach_services]
+com.apple.mobile.keybagd.UserManager.xpc = true
+com.apple.mobile.keybagd.mach = true
+com.apple.mobile.keybagd.xpc = true
+com.apple.mobile.usermanagerd.synchronous.xpc = true
+com.apple.mobile.usermanagerd.xpc = true
+com.apple.system.libinfo.muser = true
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+label = "com.apple.mobile.softwareupdated"
+program_arguments = ["/System/Library/PrivateFrameworks/MobileSoftwareUpdate.framework/Support/softwareupdated"]
+[services_bridgeOS_61.services.launch_events.com.apple.xpc.activity.com.apple.softwareupdated.logs-cleanup]
+Delay = 604800
+GracePeriod = 86400
+Priority = "Maintenance"
+Repeating = true
+[services_bridgeOS_61.services.mach_services]
+com.apple.mobile.softwareupdated = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.mobile.storage_mounter"
+posix_spawn_type = "Adaptive"
+program_arguments = ["/usr/libexec/MobileStorageMounter"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.mobile.storage_mounter.xpc = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.mobile.storage_mounter_proxy"
+program_arguments = ["/usr/libexec/mobile_storage_proxy"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.mobile.storage_mounter_proxy = true
+[services_bridgeOS_61.services.remote_services.com.apple.mobile.storage_mounter_proxy.bridge]
+ExposedToUntrustedDevices = true
+RequireEntitlement = "com.apple.private.mobile_storage.remote.allowedSPI"
+[services_bridgeOS_61.services.remote_services.com.apple.mobile.storage_mounter_proxy.bridge.ServiceProperties]
+ServiceVersion = 1
+UsesRemoteXPC = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.mobileactivationd"
+posix_spawn_type = "Adaptive"
+program_arguments = ["/usr/libexec/mobileactivationd"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.mobileactivationd = true
+[services_bridgeOS_61.services.remote_services.com.apple.mobileactivationd.bridge]
+RequireEntitlement = "com.apple.mobileactivationd.bridge"
+[services_bridgeOS_61.services.remote_services.com.apple.mobileactivationd.bridge.ServiceProperties]
+ServiceVersion = 1
+UsesRemoteXPC = true
+[[services_bridgeOS_61.services]]
+enable_transactions = true
+label = "com.apple.mtmergeprops"
+posix_spawn_type = "Interactive"
+program_arguments = ["/usr/libexec/mtmergeprops"]
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+label = "com.apple.nehelper"
+[services_bridgeOS_61.services.launch_events.com.apple.distnoted.matching.ApplicationDatabaseUpdated]
+Name = "com.apple.LaunchServices.DatabaseSeedingComplete"
+[services_bridgeOS_61.services.launch_events.com.apple.distnoted.matching.ApplicationInstalled]
+Name = "com.apple.LaunchServices.applicationRegistered"
+[services_bridgeOS_61.services.launch_events.com.apple.distnoted.matching.ApplicationUninstalled]
+Name = "com.apple.LaunchServices.applicationUnregistered"
+[services_bridgeOS_61.services.launch_events.com.apple.fsevents.matching.ConfigFileChanged]
+Path = "/Library/Preferences/com.apple.networkextension.plist"
+[services_bridgeOS_61.services.launch_events.com.apple.fsevents.matching.ControlSettingsChanged]
+Path = "/Library/Preferences/com.apple.networkextension.control.plist"
+[services_bridgeOS_61.services.launch_events.com.apple.fsevents.matching.NetworkdSettingsChanged]
+Path = "/Library/Preferences/com.apple.networkd.plist"
+[services_bridgeOS_61.services.launch_events.com.apple.fsevents.matching.NetworkdSysctlSettingsChanged]
+Path = "/Library/Preferences/com.apple.networkd.sysctl.plist"
+[services_bridgeOS_61.services.launch_events.com.apple.notifyd.matching.com.apple.networkextension.nehelper-init]
+Notification = "com.apple.networkextension.nehelper-init"
+[services_bridgeOS_61.services.mach_services]
+com.apple.nehelper = true
+com.apple.networkd_privileged = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+label = "com.apple.nfcd"
+[services_bridgeOS_61.services.remote_services.com.apple.nfcd.relay.control]
+RequireEntitlement = "com.apple.private.stockholm.remoteservice"
+[services_bridgeOS_61.services.remote_services.com.apple.nfcd.relay.uart]
+RequireEntitlement = "com.apple.private.stockholm.remoteservice"
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.osanalytics.osanalyticshelper"
+program_arguments = ["/System/Library/CoreServices/osanalyticshelper","server-init"]
+[services_bridgeOS_61.services.launch_events.com.apple.dispatch.vfs.Monitor Low Disk Conditions]
+LowDisk = 300
+NearLowDisk = true
+VeryLowDisk = true
+[services_bridgeOS_61.services.launch_events.com.apple.remoteservicediscovery.events.com.apple.SubmitDiagInfo.available]
+AvailableService = "com.apple.osanalytics.logRelay"
+DeviceType = "host"
+[services_bridgeOS_61.services.launch_events.com.apple.xpc.activity.com.apple.osanalytics.osanalyticshelper.checkQuota]
+Interval = 43200
+Priority = "Maintenance"
+[services_bridgeOS_61.services.launch_events.com.apple.xpc.activity.com.apple.osanalytics.osanalyticshelper.pseudoADLog]
+Interval = 3600
+Priority = "Maintenance"
+[services_bridgeOS_61.services.mach_services]
+com.apple.osanalytics.diagnosticmonitor = true
+com.apple.osanalytics.osanalyticshelper = true
+[services_bridgeOS_61.services.remote_services.com.apple.osanalytics.logTransfer]
+RequireEntitlement = "com.apple.ReportCrash.antenna-access"
+[services_bridgeOS_61.services.remote_services.com.apple.osanalytics.logTransfer.ServiceProperties]
+UsesRemoteXPC = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.pcapd"
+posix_spawn_type = "Interactive"
+program_arguments = ["/usr/libexec/pcapd"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.pcapd = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+label = "com.apple.powerchimed"
+[services_bridgeOS_61.services.launch_events.com.apple.notifyd.matching.com.apple.system.powersources.source]
+Notification = "com.apple.system.powersources.source"
+[services_bridgeOS_61.services.remote_services.com.apple.powerchime.remote]
+RequireEntitlement = "com.apple.private.powerchime.remote"
+[services_bridgeOS_61.services.remote_services.com.apple.powerchime.remote.ServiceProperties]
+UsesRemoteXPC = true
+[[services_bridgeOS_61.services]]
+keep_alive = true
+label = "com.apple.powerd"
+posix_spawn_type = "Adaptive"
+[services_bridgeOS_61.services.mach_services]
+com.apple.PowerManagement.control = true
+com.apple.iokit.powerdxpc = true
+com.apple.powerd.lowpowermode = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.powerdatad"
+[services_bridgeOS_61.services.launch_events.com.apple.xpc.activity.com.apple.powerdatad.3hourlyTask]
+AllowBattery = true
+Interval = 10800
+Priority = "Maintenance"
+[services_bridgeOS_61.services.mach_services]
+com.apple.powerdatad = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.recoverylogd"
+posix_spawn_type = "Adaptive"
+program_arguments = ["/usr/libexec/recoverylogd"]
+[services_bridgeOS_61.services.launch_events.com.apple.xpc.activity.com.apple.recoverylogd.logs.daily]
+Interval = 86400.0
+PowerNap = true
+Priority = "Utility"
+Repeating = true
+[services_bridgeOS_61.services.mach_services]
+com.apple.recoverylogd = true
+[services_bridgeOS_61.services.remote_services.com.apple.recoverylogd.bridge]
+RequireEntitlement = "com.apple.recoverylogd.bridge"
+[services_bridgeOS_61.services.remote_services.com.apple.recoverylogd.bridge.ServiceProperties]
+ServiceVersion = 1
+UsesRemoteXPC = true
+[[services_bridgeOS_61.services]]
+enable_transactions = true
+keep_alive = true
+label = "com.apple.remoted"
+program_arguments = ["/usr/libexec/remoted"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.remoted = true
+com.apple.remoted.control = true
+com.apple.remoted.watchdog = true
+[services_bridgeOS_61.services.publishes_events]
+com.apple.remoteservicediscovery.events = true
+[services_bridgeOS_61.services.publishes_events.com.apple.remoted.service]
+DomainInternal = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.securityd"
+posix_spawn_type = "Interactive"
+program_arguments = ["/usr/libexec/securityd"]
+[services_bridgeOS_61.services.launch_events.com.apple.notifyd.matching.com.apple.springboard.lockstate]
+Notification = "com.apple.springboard.lockstate"
+[services_bridgeOS_61.services.launch_events.com.apple.notifyd.matching.com.apple.system.clock_set]
+Notification = "com.apple.system.clock_set"
+[services_bridgeOS_61.services.launch_events.com.apple.notifyd.matching.kSOSCCHoldLockForInitialSync]
+Notification = "com.apple.security.secureobjectsync.holdlock"
+[services_bridgeOS_61.services.launch_events.com.apple.xpc.activity.com.apple.securityd.entropyhealth]
+Interval = 86400.0
+Priority = "Utility"
+[services_bridgeOS_61.services.mach_services]
+com.apple.security.escrow-update = true
+com.apple.security.octagon = true
+com.apple.security.tribeca = true
+com.apple.securityd = true
+com.apple.securityd.aps = true
+com.apple.securityd.ckks = true
+com.apple.securityd.general = true
+com.apple.securityd.sos = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.spindump"
+posix_spawn_type = "Background"
+program_arguments = ["/usr/sbin/spindump"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.spindump = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+label = "com.apple.sysdiagnose"
+program_arguments = ["/usr/bin/sysdiagnose"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.sysdiagnose.CacheDelete = true
+[services_bridgeOS_61.services.mach_services.com.apple.sysdiagnose.kernel.ipc]
+HostSpecialPort = 23
+[services_bridgeOS_61.services.remote_services.com.apple.sysdiagnose.remote]
+RequireEntitlement = "com.apple.private.sysdiagnose.remote"
+[services_bridgeOS_61.services.remote_services.com.apple.sysdiagnose.remote.ServiceProperties]
+UsesRemoteXPC = true
+[services_bridgeOS_61.services.remote_services.com.apple.sysdiagnose.stackshot.remote]
+ExposedToUntrustedDevices = true
+RequireEntitlement = "com.apple.private.sysdiagnose.stackshot.remote"
+[services_bridgeOS_61.services.remote_services.com.apple.sysdiagnose.stackshot.remote.ServiceProperties]
+UsesRemoteXPC = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+label = "com.apple.sysdiagnose_helper"
+posix_spawn_type = "Adaptive"
+[services_bridgeOS_61.services.mach_services]
+com.apple.sysdiagnose_helper = true
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+label = "com.apple.tailspind"
+program_arguments = ["/usr/libexec/tailspind"]
+[services_bridgeOS_61.services.launch_events.com.apple.notifyd.matching.com.apple.tailspin.profile_changed]
+Notification = "com.apple.ManagedConfiguration.profileListChanged"
+[services_bridgeOS_61.services.launch_events.com.apple.notifyd.matching.com.apple.tailspin.tasking_changed]
+Notification = "com.apple.da.tasking_changed"
+[services_bridgeOS_61.services.mach_services]
+com.apple.tailspind = true
+[services_bridgeOS_61.services.mach_services.com.apple.tailspind.ktrace_background]
+HostSpecialPort = 13
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.trustd"
+posix_spawn_type = "Adaptive"
+program_arguments = ["/usr/libexec/trustd"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.trustd = true
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+enable_transactions = true
+label = "com.apple.videoprocessingd"
+program_arguments = ["/System/Library/PrivateFrameworks/VideoProcessing.framework/videoprocessingd"]
+[services_bridgeOS_61.services.remote_services.com.apple.videoprocessingd.encode.remote]
+RequireEntitlement = "com.apple.private.videoprocessing.remote"
+[services_bridgeOS_61.services.remote_services.com.apple.videoprocessingd.encode.remote.ServiceProperties]
+UsesRemoteXPC = true
+[[services_bridgeOS_61.services]]
+
+[[services_bridgeOS_61.services]]
+enable_pressured_exit = true
+label = "com.apple.xpc.roleaccountd"
+program_arguments = ["/usr/libexec/xpcroleaccountd","-launchd"]
+[services_bridgeOS_61.services.mach_services]
+com.apple.xpc.roleaccountd = true

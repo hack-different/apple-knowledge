@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>certificate_names</key>
+	<dict>
+		<key>dcrt</key>
+		<string>device certificate</string>
+		<key>dcrt-oid</key>
+		<string>device owner certificate</string>
+		<key>lcrt</key>
+		<string>local certificate?</string>
+		<key>pcrt</key>
+		<string>product/production certificate?</string>
+		<key>rcrt</key>
+		<string>remote/recovery certificate?</string>
+		<key>scrt</key>
+		<string>server certificate?</string>
+		<key>tcrt</key>
+		<string>test certificate?</string>
+		<key>ucrt</key>
+		<string>user certificate (mapps to a single iCloud account)</string>
+		<key>vcrt</key>
+		<string>virtual certificate?</string>
+	</dict>
+	<key>constants</key>
+	<dict>
+		<key>private_oid_root</key>
+		<string>1.2.840.113635</string>
+	</dict>
+	<key>known_symbols</key>
+	<dict>
+		<key>ekus</key>
+		<array>
+			<string>_oidAppleExtendedKeyUsageAppleID</string>
+			<string>_oidAppleExtendedKeyUsageCodeSigning</string>
+			<string>_oidAppleExtendedKeyUsageCodeSigningDev</string>
+			<string>_oidAppleExtendedKeyUsagePassbook</string>
+			<string>_oidAppleExtendedKeyUsageProfileSigning</string>
+			<string>_oidAppleExtendedKeyUsageQAProfileSigning</string>
+		</array>
+		<key>extensions</key>
+		<array>
+			<string>_oidAppleCertExtAST2DiagnosticsServerAuthProd</string>
+			<string>_oidAppleCertExtAST2DiagnosticsServerAuthProdQA</string>
+			<string>_oidAppleCertExtATVAppSigningProd</string>
+			<string>_oidAppleCertExtATVAppSigningProdQA</string>
+			<string>_oidAppleCertExtATVVPNProfileSigning</string>
+			<string>_oidAppleCertExtApplePPQSigningProd</string>
+			<string>_oidAppleCertExtApplePPQSigningProdQA</string>
+			<string>_oidAppleCertExtAppleSMPEncryption</string>
+			<string>_oidAppleCertExtAppleServerAuthentication</string>
+			<string>_oidAppleCertExtAppleServerAuthenticationAPNProd</string>
+			<string>_oidAppleCertExtAppleServerAuthenticationAPNProdQA</string>
+			<string>_oidAppleCertExtAppleServerAuthenticationGS</string>
+			<string>_oidAppleCertExtAppleServerAuthenticationIDSProd</string>
+			<string>_oidAppleCertExtAppleServerAuthenticationIDSProdQA</string>
+			<string>_oidAppleCertExtAppleServerAuthenticationMMCSProd</string>
+			<string>_oidAppleCertExtAppleServerAuthenticationMMCSProdQA</string>
+			<string>_oidAppleCertExtAppleServerAuthenticationPPQProd</string>
+			<string>_oidAppleCertExtAppleServerAuthenticationPPQProdQA</string>
+			<string>_oidAppleCertExtAppleServerAuthenticationiCloudSetupProd</string>
+			<string>_oidAppleCertExtAppleServerAuthenticationiCloudSetupProdQA</string>
+			<string>_oidAppleCertExtCryptoServicesExtEncryption</string>
+			<string>_oidAppleCertExtEscrowProxyServerAuthProd</string>
+			<string>_oidAppleCertExtEscrowProxyServerAuthProdQA</string>
+			<string>_oidAppleCertExtFMiPServerAuthProd</string>
+			<string>_oidAppleCertExtFMiPServerAuthProdQA</string>
+			<string>_oidAppleCertExtHomeKitServerAuth</string>
+			<string>_oidAppleCertExtOSXProvisioningProfileSigning</string>
+			<string>_oidAppleCertExtTrustCacheSigning</string>
+			<string>_oidAppleCertExtTrustCacheSigningTest</string>
+			<string>_oidAppleCertExtensionAppleIDRecordValidationSigning</string>
+		</array>
+		<key>purposes</key>
+		<array>
+			<string>_oidAppleApplicationSigning</string>
+			<string>_oidAppleProvisioningProfile</string>
+			<string>_oidAppleInstallerPackagingSigningExternal</string>
+			<string>_oidApplePushServiceClient</string>
+		</array>
+		<key>unknown</key>
+		<array>
+			<string>_oidAppleImg4ManifestCertSpec</string>
+			<string>_oidAppleIntmMarkerAppleHomeKitServerCA</string>
+			<string>_oidAppleIntmMarkerAppleID</string>
+			<string>_oidAppleIntmMarkerAppleID2</string>
+			<string>_oidAppleIntmMarkerAppleServerAuthentication</string>
+			<string>_oidAppleIntmMarkerAppleSystemIntg2</string>
+			<string>_oidAppleIntmMarkerAppleSystemIntgG3</string>
+			<string>_oidAppleIntmMarkerAppleWWDR</string>
+			<string>_oidApplePolicyEscrowService</string>
+			<string>_oidApplePolicyMobileStore</string>
+			<string>_oidApplePolicyMobileStoreProdQA</string>
+			<string>_oidAppleSecureBootCertSpec</string>
+			<string>_oidAppleSecureBootTicketCertSpec</string>
+			<string>_oidAppleTVOSApplicationSigningProd</string>
+			<string>_oidAppleTVOSApplicationSigningProdQA</string>
+		</array>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>credits</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
+	<key>oids</key>
+	<array>
+		<dict>
+			<key>apple_description</key>
+			<string>ADC Certificate Policy</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.5.3</string>
+		</dict>
+		<dict>
+			<key>apple_description</key>
+			<string>Markers for iPhone OS Device Certificate Policies, used for external sources to trust iPhone OS devices</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.5.4</string>
+		</dict>
+		<dict>
+			<key>apple_description</key>
+			<string>BBC&#39;s Policy</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.5.4.1</string>
+		</dict>
+		<dict>
+			<key>apple_description</key>
+			<string>Apple Released Code Signature</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.6.1.1</string>
+		</dict>
+		<dict>
+			<key>apple_description</key>
+			<string>Apple World Wide Developer Relations Certificates for Code Signing during development</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.6.1.2</string>
+		</dict>
+		<dict>
+			<key>apple_description</key>
+			<string>Apple World Wide Developer Relations Certificates for Code Signing for General Release through the iTMS</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.6.1.3</string>
+		</dict>
+		<dict>
+			<key>apple_description</key>
+			<string>Apple World Wide Developer Relations Certificates for Code Signing for Test Release through the iTMS</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.6.1.3.1</string>
+		</dict>
+		<dict>
+			<key>apple_description</key>
+			<string>Apple World Wide Developer Relations Certificates for Code Signing GM from developer to Apple</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.6.1.4</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>Contains the boot policy of the machine during certificate issuance based on boot policy.  includes BORD, ronh, lobo, SDOM, lpnh, rpnh BNCH, CSEC, CHIP, ECID, CPEO, OBJP, EPRO, DPRO, ESEC, DSEC and DGST</string>
+			<key>found_in</key>
+			<array>
+				<string>ucrt</string>
+				<string>dcrt-oid</string>
+			</array>
+			<key>issuers</key>
+			<array>
+				<string>Basic Attestation User Sub CA2</string>
+				<string>FDRDC-UCRT-SUBCA</string>
+			</array>
+			<key>oid</key>
+			<string>1.2.840.113635.100.6.1.15</string>
+			<key>ous</key>
+			<array>
+				<string>BAA Certification</string>
+				<string>ucrt Leaf Certificate</string>
+			</array>
+		</dict>
+		<dict>
+			<key>apple_description</key>
+			<string>Marker for the WWDR Intermediate Certificate</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.6.2.1</string>
+		</dict>
+		<dict>
+			<key>apple_description</key>
+			<string>Marker for the iTunes Store Intermediate Certificate</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.6.2.2</string>
+		</dict>
+		<dict>
+			<key>apple_description</key>
+			<string>Apple World Wide Developer Relations Client SSL Certificates for Accessing the Development Apple Push Service</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.6.3.1</string>
+		</dict>
+		<dict>
+			<key>apple_description</key>
+			<string>Apple World Wide Developer Relations Client SSL Certificates for Accessing the Production Apple Push Service</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.6.3.2</string>
+		</dict>
+		<dict>
+			<key>apple_description</key>
+			<string>Extension Markers for device version string, expects UTF8 to follow in SubjectAltName</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.6.4.1</string>
+		</dict>
+		<dict>
+			<key>apple_description</key>
+			<string>Extension Markers for OS version string, expects UTF8 to follow in SubjectAltName</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.6 4.2</string>
+		</dict>
+		<dict>
+			<key>apple_description</key>
+			<string>Apple iTunes Store Certificates for Signing Receipts of Purchases from the iTS</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.6.5.1</string>
+		</dict>
+		<dict>
+			<key>apple_description</key>
+			<string>Apple iTunes Store Certificates for Signing Requests to Purchase for the iTS</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.6.5.2</string>
+		</dict>
+		<dict>
+			<key>apple_description</key>
+			<string>Apple FairPlay certificate extended Application Authentication &amp; Authorization: Policy</string>
+			<key>oid</key>
+			<string>1.2.840.113635.100.7.1.1</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>contains 3 integer values in ASN1, the second of which seems to be a 64bit mask of 0xFE000000</string>
+			<key>found_in</key>
+			<array>
+				<string>dcrt</string>
+				<string>dcrt-oid</string>
+			</array>
+			<key>is_asn_body</key>
+			<true/>
+			<key>is_extension</key>
+			<true/>
+			<key>issuers</key>
+			<array>
+				<string>Basic Attestation User Sub CA2</string>
+			</array>
+			<key>oid</key>
+			<string>1.2.840.113635.100.8.4</string>
+			<key>ous</key>
+			<array>
+				<string>BAA Certification</string>
+			</array>
+		</dict>
+		<dict>
+			<key>found_in</key>
+			<array>
+				<string>dcrt</string>
+				<string>dcrt-oid</string>
+			</array>
+			<key>is_asn_body</key>
+			<true/>
+			<key>is_extension</key>
+			<true/>
+			<key>issuers</key>
+			<array>
+				<string>Basic Attestation User Sub CA2</string>
+			</array>
+			<key>oid</key>
+			<string>1.2.840.113635.100.8.5</string>
+			<key>ous</key>
+			<array>
+				<string>BAA Certification</string>
+			</array>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>ASN1 data for the version of macOS for the issued under (e.g. 12.2)</string>
+			<key>found_in</key>
+			<array>
+				<string>dcrt</string>
+				<string>dcrt-oid</string>
+			</array>
+			<key>is_asn_body</key>
+			<true/>
+			<key>is_extension</key>
+			<true/>
+			<key>issuers</key>
+			<array>
+				<string>Basic Attestation User Sub CA2</string>
+			</array>
+			<key>oid</key>
+			<string>1.2.840.113635.100.8.7</string>
+			<key>ous</key>
+			<array>
+				<string>BAA Certification</string>
+			</array>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>Hardware device identifiers of the machine the certificate is issued to contains BORD, CHIP, ECID, srnm, udid, seid</string>
+			<key>found_in</key>
+			<array>
+				<string>ucrt</string>
+			</array>
+			<key>issuers</key>
+			<array>
+				<string>FDRDC-UCRT-SUBCA</string>
+			</array>
+			<key>oid</key>
+			<string>1.2.840.113635.100.10.1</string>
+			<key>ous</key>
+			<array>
+				<string>ucrt Leaf Certificate</string>
+			</array>
+		</dict>
+		<dict>
+			<key>found_in</key>
+			<array>
+				<string>ucrt</string>
+			</array>
+			<key>issuers</key>
+			<array>
+				<string>FDRDC-UCRT-SUBCA</string>
+			</array>
+			<key>oid</key>
+			<string>1.2.840.113635.100.10.2</string>
+			<key>ous</key>
+			<array>
+				<string>ucrt Leaf Certificate</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

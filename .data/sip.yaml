@@ -1,0 +1,64 @@
+---
+metadata:
+  description:
+  credits:
+csr_process_capabilities:
+  CSR_CAPABILITY_APPLE_INTERNAL:
+    value: 4
+    description:
+  CSR_CAPABILITY_CONFIG:
+    value: 2
+    descrption:
+  CSR_CAPABILITY_UNLIMITED:
+    value: 1
+    description: process is not restricted by SIP and may bypass
+csr_flags:
+  CSR_ALLOW_ANY_RECOVERY_OS:
+    value: 256
+    description: disable validation of BaseSystem.dmg by ignoring BaseSystem.chunklist
+    always_enforced: true
+  CSR_ALLOW_APPLE_INTERNAL:
+    value: 16
+    description:
+    disable_default: true
+  CSR_ALLOW_DEVICE_CONFIGURATION:
+    value: 128
+    description:
+    always_enforced: true
+  CSR_ALLOW_EXECUTABLE_POLICY_OVERRIDE:
+    value: 1024
+    description: override spctl or executable policy
+  CSR_ALLOW_KERNEL_DEBUGGER:
+    value: 8
+    description: allow using the kernel debugger (KDP) - requires configuring the
+      kernel debugger via boot-args
+    disable_default: true
+  CSR_ALLOW_TASK_FOR_PID:
+    value: 4
+    description: allow getting the pid task, required for debugging
+    disable_default: true
+  CSR_ALLOW_UNAPPROVED_KEXTS:
+    value: 512
+    description: do not require kext approval (managed in the T2 when it exists)
+  CSR_ALLOW_UNAUTHENTICATED_ROOT:
+    value: 2048
+    description:
+  CSR_ALLOW_UNRESTRICTED_DTRACE:
+    aliases:
+    - CSR_ALLOW_DESTRUCTIVE_DTRACE
+    value: 32
+    description:
+    disable_default: true
+  CSR_ALLOW_UNRESTRICTED_FS:
+    value: 2
+    description: disable SIP protections of various paths (such as write protection
+      of /System)
+    disable_default: true
+  CSR_ALLOW_UNRESTRICTED_NVRAM:
+    value: 64
+    description: disable restrictions to writing to restricted NVRAM variables
+    disable_default: true
+  CSR_ALLOW_UNTRUSTED_KEXTS:
+    value: 1
+    description: allow loading kernel extensions that are not signed
+    disable_default: true

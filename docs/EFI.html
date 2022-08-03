@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>EFI | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="EFI" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/EFI.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/EFI.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="EFI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"EFI","url":"https://docs.hackdiffe.rent/docs/EFI.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="efi">EFI</h1>
+
+<h2 id="t1-and-historical-intel">T1 and Historical Intel</h2>
+
+<p>The EFI firmware is loaded from an SPI flash chip as is typical in an Intel computer.  It just implements additional
+services and communicates with the ARM SMC (System Management Controller).</p>
+
+<p>Look into the Medusa from CMIzapper for direct access to the SPI Flash.</p>
+
+<p><code class="language-plaintext highlighter-rouge">eficheck</code> is a utility provided in 10.13 to verify the firmware of the SPI flash chip, though it skips the
+Intel ME region.</p>
+
+<p><code class="language-plaintext highlighter-rouge">efivalidate</code> is a re-implementation of <code class="language-plaintext highlighter-rouge">eficheck</code> by Rick Mark.</p>
+
+<h2 id="t2">T2</h2>
+
+<p>T2 systems boot EFI like their predecessors.  Unlike previous versions, they use
+<a href="https://www.intel.com/content/dam/support/us/en/documents/software/chipset-software
+/327432-004_espi_base_specification_rev1.0_cb.pdf">eSPI</a>
+to load the firmware and write back NVRAM to a virtual backing device provided by the T2, thereby allowing the T2 to
+use img4 to verify the <code class="language-plaintext highlighter-rouge">MacEFI.im4</code> firmware and theoretically enhancing security.</p>
+
+<h2 id="apple-silicon">Apple Silicon</h2>
+
+<p>Apple Silicon chips don’t run EFI but run iBoot instead (Though it does emulate parts of the EFI system via IOKit for
+backwards compatibility).   Even so, you can still chainload to another bootloader if you want to; It’s not prevented
+when Secure Boot is set to permissive.  That permissive option doesn’t technically turn off Secure Boot, but allows
+you to enroll your own hashes to the Secure Boot policy on the system w/ user authentication instead.</p>
+
+<p>They also do not have EL3 (only EL2, EL1, and EL0). There’s no Arm GIC as the interrupt controller, but Apple
+AIC instead.</p>
+
+<p>Our strategy at checkra1n (so far) is to reserve EL2 for ourselves since modern Armv8.4 parts support nested
+virtualization. The goal is to have a thin hypervisor layer to simulate a standard interrupt controller, IOMMUs, and
+PCIe ECAM-compliant controllers. These would be impossible to provide otherwise. (then UEFI + ACPI will run on top,
+preferably with CPPC for power scaling). This approach will (at a minor performance cost for VMs) reduce the amount
+of work necessary.</p>
+
+<p>Another nice tidbit is that iBoot loads the firmware for the GPU and all the other on-SoC blocks before passing
+through control from iBoot. This removes concerns on whether that firmware is redistributable or not in practice.</p>
+
+<p>However, reversing all of those blocks will take quite some work for a fully usable system.</p>
+
+      </section>
+    </div>
+  </body>
+</html>

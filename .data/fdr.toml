@@ -1,0 +1,55 @@
+
+[fdr_properties.BMac]
+description = "Bluetooth MAC Address"
+[fdr_properties.BORD]
+description = "Board ID"
+[fdr_properties.FSCl]
+contexts = ["mandev","mansta"]
+[fdr_properties.HmCA]
+contexts = ["base","mansta"]
+[fdr_properties.NvMR]
+contexts = ["mandev","mansta"]
+[fdr_properties.SDOM]
+description = "Security Domain"
+[fdr_properties.SrNm]
+description = "Serial Number"
+[fdr_properties.WMac]
+description = "Wireless MAC Address"
+[fdr_properties.appv]
+contexts = ["base","mandev"]
+[fdr_properties.bbcl]
+description = "Baseband"
+[fdr_properties.bbpc]
+description = "Baseband"
+[fdr_properties.bbpv]
+description = "Baseband"
+[fdr_properties.dCfg]
+contexts = ["base","mansta"]
+[fdr_properties.dcrt]
+description = "bputil certificate from BAA Certification / Basic Attestation User Sub CA2 seems related to \"key recovery assistant\" as this is device level so for all iCloud users (KeyRecoveryAssistant_dcrt_baa_request/response)"
+[fdr_properties.eeid]
+description = "eSIM Embedded ID (EID)"
+[fdr_properties.fCfg]
+contexts = ["base","mandev","mansta"]
+[fdr_properties.hop0]
+contexts = ["base","mandev","mansta"]
+[fdr_properties.ime2]
+description = "International Mobile Equipment Identifier 2"
+[fdr_properties.imei]
+description = "International Mobile Equipment Identifier"
+[fdr_properties.lcrt]
+contexts = ["base","mansta"]
+[fdr_properties.meid]
+description = "Mobile Equipment Identifier (CMDA)"
+[fdr_properties.mlb#]
+description = "Main Logic Board Serial Number"
+[fdr_properties.pcrt]
+contexts = ["base"]
+[fdr_properties.scrt]
+contexts = ["base"]
+[fdr_properties.seal]
+contexts = ["base"]
+[fdr_properties.seid]
+description = "Secure Element ID (for NFC / Payments)"
+[fdr_properties.tCfg]
+contexts = ["mansta"]

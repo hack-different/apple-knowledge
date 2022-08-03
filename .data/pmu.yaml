@@ -1,0 +1,56 @@
+---
+metadata:
+  description:
+  credits:
+pmu_errors:
+  btn_rst:
+    subtypes:
+      two_finger_rst:
+      btn_seq_reset:
+  btn_shdn:
+  crash:
+    subtypes:
+      crash_in:
+  dbg_rst:
+    description: debug based reset
+    subtypes:
+      reset_in_2:
+  ntc_shdn:
+  ot:
+    description: over-temprature
+    subtypes:
+      overtemp:
+  otp_crc:
+    description: one-type-passcode, cyclic redundancy check
+  ov:
+    description: over-voltage
+    subtypes:
+      vddmain_ovlo:
+  por:
+    description: power-on reset
+  rst:
+    description: reset
+  sochot:
+    subtypes:
+      reset_in_3:
+  spmi:
+    subtypes:
+      spmi_fault:
+  sstate:
+    subtypes:
+      wallet_crash_seq:
+      btn_dfu_recover:
+  timeout:
+    subytpes:
+      watchdog_timeout:
+      dblclick_timeout:
+  uv:
+    description: under-voltage
+    subtypes:
+      vddmain_uvlo:
+      vddmain_uvlo_hold:
+      vdd_boost_uvlo:
+  wdog:
+    description: watchdog timer
+    subtypes:
+      reset_in_1:

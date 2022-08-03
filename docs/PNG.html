@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>PNG images | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="PNG images" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/PNG.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/PNG.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="PNG images" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"PNG images","url":"https://docs.hackdiffe.rent/docs/PNG.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="png-images">PNG images</h1>
+
+<p>The standard PNG format is documented in the
+<a href="http://www.libpng.org/pub/png/spec/1.2/PNG-Contents.html">PNG specification</a>.
+It consists of a series of “chunks” which contain:</p>
+
+<ul>
+  <li>length (4 bytes big-endian, only counts length of data, may be 0)</li>
+  <li>chunk type (4 bytes)</li>
+  <li>data (variable length, may be empty)</li>
+  <li>CRC (4 bytes)</li>
+</ul>
+
+<p>Apple uses PNG images extensively,
+but they also extended them with proprietary chunks.</p>
+
+<h2 id="cgbi-chunk">CgBI chunk</h2>
+
+<p>Ever since the first iPhoneOS,
+PNG images included in the operating system (such as application icons)
+have a custom chunk called <code class="language-plaintext highlighter-rouge">CgBI</code>.
+These images are not supported by standard PNG viewers since the <code class="language-plaintext highlighter-rouge">CgBI</code> chunk is marked “critical”.
+Standard decoders reject the whole file.
+In theory, the purpose is to optimize the image decoding
+on the slow CPUs of early iPhones.
+For example, red and blue channels are flipped (BGR instead of RGB)
+to match the iPhone framebuffer format.</p>
+
+<p>There is some public information about this format:</p>
+
+<ul>
+  <li><a href="https://patents.google.com/patent/US20080177769A1/en">Apple’s patent</a></li>
+  <li><a href="https://www.theiphonewiki.com/wiki/PNG_Images">The iPhone Wiki</a></li>
+  <li><a href="https://iphonedev.wiki/index.php/CgBI_file_format">iPhone dev wiki</a></li>
+  <li><a href="http://www.jongware.com/pngdefry.html">pngdefry website</a></li>
+  <li><a href="http://fileformats.archiveteam.org/wiki/CgBI">Archiveteam file format wiki</a></li>
+</ul>
+
+<p>There are also many tools to create (flip color channels, add CgBI chunk)
+and decode (convert to standard PNG image) these PNG files:</p>
+
+<ul>
+  <li><a href="https://github.com/DHowett/pincrush">pincrush</a> (Python encoder)</li>
+  <li><a href="https://axelbrz.com/?mod=iphone-png-images-normalizer">ipin.py</a> (Python decoder)</li>
+  <li><a href="http://www.jongware.com/pngdefry.html">pngdefry</a> (C decoder)</li>
+  <li><a href="https://github.com/briancollins/PNGNormalizer">PNGNormalizer</a> (ObjC decoder)</li>
+  <li><a href="https://github.com/jakubknejzlik/cgbi-to-png">cgbi-to-png</a> (Javascript decoder)</li>
+</ul>
+
+<p>However, many tools are incomplete (eg. they swap BGR to RGB
+but don’t fix the pre-multipled alpha channel),
+and none of the public information seems to have actually figured out
+what the <em>content</em> of the <code class="language-plaintext highlighter-rouge">CgBI</code> chunk is about.</p>
+
+<p>By the specification:</p>
+
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">IHDR</code> chunk must appear first.</li>
+  <li>The image data, if true-color, must have color components in RGB order.</li>
+  <li>“The color values stored for a pixel are not affected
+by the alpha value assigned to the pixel.
+This rule is sometimes called ‘unassociated’ or ‘non-premultiplied’ alpha.
+PNG does <em>not</em> use pre-multiplied alpha”.</li>
+  <li>Image data is compressed with ‘deflate’
+and the compressed data stream is stored in the “zlib” format
+(compression method + flags + data + Adler-32 checksum).</li>
+</ul>
+
+<p>iPhone-optimized PNG images with a <code class="language-plaintext highlighter-rouge">CgBI</code> chunk break all these items.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">CgBI</code> chunk appears even before the <code class="language-plaintext highlighter-rouge">IHDR</code>.
+It contains 4 bytes with flags.</p>
+
+<p>The image data is (sometimes?) byte-swapped such that the colors are in BGR order instead of RGB.
+The alpha channel is also (sometimes?) in pre-multiplied format.
+This <em>may</em> depend on other flags in <code class="language-plaintext highlighter-rouge">CgBI</code>, but I haven’t figured it out exactly yet.</p>
+
+<p>If bit 0x1 is set in the first byte of the <code class="language-plaintext highlighter-rouge">CgBI</code> chunk,
+then the compressed stream is in raw format,
+and doesn’t have the zlib header or Adler checksum.
+(Note that most tools will use the raw zlib format
+if the CgBI chunk is merely present, and don’t check for this bit being set).</p>
+
+<p>Bit 0x2 in the first byte sets an internal flag <code class="language-plaintext highlighter-rouge">APPLE_FILTER_SUB_ONLY</code> in the decoder
+but the meaning is not yet understood.</p>
+
+<h2 id="idot-chunk">iDOT chunk</h2>
+
+<p>Another proprietary PNG chunk added by Apple is <code class="language-plaintext highlighter-rouge">iDOT</code>.
+It even appears on screenshots taken on iOS.</p>
+
+<p>This chunk has information that allows decoding the PNG image using multiple threads.</p>
+
+<p>More information is available on <a href="https://www.hackerfactor.com/blog/index.php?/archives/895-Connecting-the-iDOTs.html">https://www.hackerfactor.com/blog/index.php?/archives/895-Connecting-the-iDOTs.html</a></p>
+
+<h2 id="appd-chunk">apPD chunk</h2>
+
+<p>The ImageIO framework has code that looks for an <code class="language-plaintext highlighter-rouge">apPD</code> chunk.
+Probably means “app data”.</p>
+
+<p>The format seems to be:</p>
+
+<ul>
+  <li>Offset 0, length 4: unknown</li>
+  <li>Offset 4, length 4: subtype? Only <code class="language-plaintext highlighter-rouge">pKit</code> is supported</li>
+  <li>Offset 8, length 4: big-endian number, payload length</li>
+  <li>Offset 12, var length: payload</li>
+</ul>
+
+<p>The ImageIO decoder checks that the subtype is equal to <code class="language-plaintext highlighter-rouge">pKit</code>,
+and checks that the chunk length is equal to the “payload length” field + 12,
+If both checks pass, the rest of the chunk data (the “payload” above) is stored as a <code class="language-plaintext highlighter-rouge">CFData</code>.
+Later this data is added to a <code class="language-plaintext highlighter-rouge">dictionary["PencilKitPrivateData"]</code>.</p>
+
+<p>The purpose of this data is unknown (probably need to dig into the PencilKit framework),
+and I haven’t yet seen any sample of an image file containing <code class="language-plaintext highlighter-rouge">apPD</code>.</p>
+
+      </section>
+    </div>
+  </body>
+</html>

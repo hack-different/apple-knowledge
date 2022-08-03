@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Contents of Hardware iBoot Volume | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Contents of Hardware iBoot Volume" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/Factory_Firmware_Payloads.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/Factory_Firmware_Payloads.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Contents of Hardware iBoot Volume" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"Contents of Hardware iBoot Volume","url":"https://docs.hackdiffe.rent/docs/Factory_Firmware_Payloads.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="contents-of-hardware-iboot-volume">Contents of <code class="language-plaintext highlighter-rouge">Hardware</code> iBoot Volume</h1>
+
+<p>Several of these files seem to exist at once.  The format is as such:</p>
+
+<p><code class="language-plaintext highlighter-rouge">[mandev-|mansta-]&lt;FIRMWARE_4CC&gt;-&lt;COMPONENT_SERIAL_NUMBER&gt;</code></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">FSCl</code></li>
+  <li><code class="language-plaintext highlighter-rouge">HmCA</code> - bare, mandev versions. Serial is Ambient Light Sensor</li>
+  <li><code class="language-plaintext highlighter-rouge">NvMR</code> - bare, mandev, mansta versions.  Serial is Display Panel</li>
+  <li><code class="language-plaintext highlighter-rouge">appv</code> - bare, mandev, mansta versions.  Serial is <code class="language-plaintext highlighter-rouge">&lt;CPID&gt;-&lt;ECID&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">dCfg</code></li>
+  <li><code class="language-plaintext highlighter-rouge">fCfg</code> - bare, mandev, mansta versions.  Serial is <code class="language-plaintext highlighter-rouge">&lt;CPID&gt;-&lt;ECID&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">tCfg</code> - bare, mansta version.  Serial is Touch Controller</li>
+  <li><code class="language-plaintext highlighter-rouge">hop0</code></li>
+  <li><code class="language-plaintext highlighter-rouge">lcrt</code></li>
+</ul>
+
+<p>The following occur without any mandev/mansta versions</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pcrt</code> - Serial is <code class="language-plaintext highlighter-rouge">&lt;CPID&gt;-&lt;ECID&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">scrt</code> - Serial is <code class="language-plaintext highlighter-rouge">&lt;CPID&gt;-&lt;ECID&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">seal</code> - Serial is <code class="language-plaintext highlighter-rouge">&lt;CPID&gt;-&lt;ECID&gt;</code>, is FDR “seal”</li>
+</ul>
+
+<p>The following are non-serial based</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">trustobject-current</code></li>
+  <li><code class="language-plaintext highlighter-rouge">trustobject-&lt;HASH&gt;</code></li>
+</ul>
+
+      </section>
+    </div>
+  </body>
+</html>

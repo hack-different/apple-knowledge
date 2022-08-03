@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Introduction | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Introduction" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/SEP_memmap.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/SEP_memmap.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Introduction" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"Introduction","url":"https://docs.hackdiffe.rent/docs/SEP_memmap.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="introduction">Introduction</h1>
+
+<p>When emulating SEP, it is particularly useful to know its physical memory layout (i.e. MMIO address). Inside the decoded
+64bit SEP Firmware (&gt;=A11), there are some constant arrays of structure which have the following format:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">phys_range</span> <span class="p">{</span>
+    <span class="kt">uint32_t</span> <span class="n">ctx</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kt">uint64_t</span> <span class="n">start</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="n">size</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="n">unk</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">static_assert</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">phys_range</span><span class="p">)</span> <span class="o">==</span> <span class="mh">0x18</span><span class="p">,</span> <span class="s">""</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>This array contains the physical location of many SEP’s peripherals.
+The <code class="language-plaintext highlighter-rouge">ctx</code> and <code class="language-plaintext highlighter-rouge">name</code> fields are in reversed ASCII.</p>
+
+<h2 id="methodology">Methodology</h2>
+
+<p>First, we have to decrypt the sep-firmware. This can be done using <a href="https://github.com/xerub/img4lib">xerub’s img4lib</a>.
+You’ll also need the decryption keys.</p>
+
+<p>For A11 SEPOS especially, you might have to do lzvn decode after decrypting img4 since it is an unpacker.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">dd </span><span class="k">if</span><span class="o">=</span>sepfw-raw <span class="nv">of</span><span class="o">=</span>sepfw.lzvn <span class="nv">bs</span><span class="o">=</span>0x20000 <span class="nv">skip</span><span class="o">=</span>1
+lzvn <span class="nt">-d</span> sepfw.lzvn sepfw
+</code></pre></div></div>
+
+<p><a href="https://github.com/xerub/lzvn">LZVN</a>
+(Credit goes to <a href="https://twitter.com/s1guza">@s1guza</a>)</p>
+
+<p>To find these arrays, we can do a <code class="language-plaintext highlighter-rouge">/ EASB</code> or <code class="language-plaintext highlighter-rouge">/x 0000010006</code> on the sep-firmware image. Then go back to the farthest
+chunk of 8 ASCII characters (<code class="language-plaintext highlighter-rouge">ctx</code> and <code class="language-plaintext highlighter-rouge">name</code> fields).</p>
+
+<p>Here is the python code to dump these fields on A12 sep-firmware:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">struct</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">struct</span><span class="p">.</span><span class="n">Struct</span><span class="p">(</span><span class="s">"&lt;4s4sQII"</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">f</span><span class="p">.</span><span class="n">size</span> <span class="o">==</span> <span class="mh">0x18</span>
+<span class="k">def</span> <span class="nf">dump_map</span><span class="p">(</span><span class="nb">buffer</span><span class="p">):</span>
+ <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">f</span><span class="p">.</span><span class="n">iter_unpack</span><span class="p">(</span><span class="nb">buffer</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">][::</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">),</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">][::</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">),</span> <span class="nb">hex</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="nb">hex</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="nb">hex</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">])])</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"sepos"</span><span class="p">,</span> <span class="s">"rb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">fd</span><span class="p">:</span>
+ <span class="n">fd</span><span class="p">.</span><span class="n">seek</span><span class="p">(</span><span class="mh">0x2cb180</span><span class="p">)</span>
+ <span class="nb">buffer</span> <span class="o">=</span> <span class="n">fd</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="mh">0x18</span><span class="o">*</span><span class="mi">14</span><span class="p">)</span>
+ <span class="n">dump_map</span><span class="p">(</span><span class="nb">buffer</span><span class="p">)</span>
+
+ <span class="n">fd</span><span class="p">.</span><span class="n">seek</span><span class="p">(</span><span class="mh">0x2d6080</span><span class="p">)</span>
+ <span class="nb">buffer</span> <span class="o">=</span> <span class="n">fd</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="mh">0x18</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+ <span class="n">dump_map</span><span class="p">(</span><span class="nb">buffer</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="examples">Examples</h2>
+
+<p>For your convenience, A11 and A12’s memmap are put here.</p>
+
+<h3 id="a11-physical-ranges">A11 physical ranges</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>ctx</th>
+      <th>name</th>
+      <th>start</th>
+      <th>size</th>
+      <th>unk</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>dram</td>
+      <td>nubg</td>
+      <td>0x235000000</td>
+      <td>0x4000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>dram</td>
+      <td>nubs</td>
+      <td>0x235f00000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>dram</td>
+      <td>mpst</td>
+      <td>0x2352c0000</td>
+      <td>0x4000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>dram</td>
+      <td>amcc</td>
+      <td>0x200000000</td>
+      <td>0x4000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>XPRT</td>
+      <td>PMSC</td>
+      <td>0x2352d0000</td>
+      <td>0x4000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>XPRT</td>
+      <td>FUSE</td>
+      <td>0x2352bc000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>XPRT</td>
+      <td>MISC</td>
+      <td>0x2352e8000</td>
+      <td>0x3c4000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>PMGR</td>
+      <td>BASE</td>
+      <td>0x240200000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>TRNG</td>
+      <td>REGS</td>
+      <td>0x240500000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>KEY</td>
+      <td>BASE</td>
+      <td>0x240680000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>KEY</td>
+      <td>FKEY</td>
+      <td>0x240e40000</td>
+      <td>0x4000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>KEY</td>
+      <td>FCFG</td>
+      <td>0x240e50000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>AKF</td>
+      <td>MBOX</td>
+      <td>0x243000000</td>
+      <td>0x8000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>AESS</td>
+      <td>BASE</td>
+      <td>0x240300000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>PKA</td>
+      <td>BASE</td>
+      <td>0x240600000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>GPIO</td>
+      <td>BASE</td>
+      <td>0x240f00000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>I2C</td>
+      <td>BASE</td>
+      <td>0x240700000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="a12-physical-ranges">A12 physical ranges</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>ctx</th>
+      <th>name</th>
+      <th>start</th>
+      <th>size</th>
+      <th>unk</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>XPRT</td>
+      <td>PMSC</td>
+      <td>0x23d2d0000</td>
+      <td>0x4000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>XPRT</td>
+      <td>FUSE</td>
+      <td>0x23d2bc000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>XPRT</td>
+      <td>MISC</td>
+      <td>0x23d2e8000</td>
+      <td>0x3c4000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>PMGR</td>
+      <td>BASE</td>
+      <td>0x241000000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>AKF</td>
+      <td>MBOX</td>
+      <td>0x242404000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>TRNG</td>
+      <td>REGS</td>
+      <td>0x241100000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>KEY</td>
+      <td>BASE</td>
+      <td>0x241180000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>KEY</td>
+      <td>FCFG</td>
+      <td>0x241400000</td>
+      <td>0x18000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>MONI</td>
+      <td>BASE</td>
+      <td>0x241380000</td>
+      <td>0x40000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>MONI</td>
+      <td>THRM</td>
+      <td>0x2413c0000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>GPIO</td>
+      <td>BASE</td>
+      <td>0x241480000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>I2C</td>
+      <td>BASE</td>
+      <td>0x241440000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>EISP</td>
+      <td>HMAC</td>
+      <td>0x240a60000</td>
+      <td>0x4000</td>
+      <td>0x16</td>
+    </tr>
+    <tr>
+      <td>EISP</td>
+      <td>BASE</td>
+      <td>0x240800000</td>
+      <td>0x240000</td>
+      <td>0x16</td>
+    </tr>
+    <tr>
+      <td>AESS</td>
+      <td>BASE</td>
+      <td>0x241040000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+    <tr>
+      <td>PKA</td>
+      <td>BASE</td>
+      <td>0x241140000</td>
+      <td>0x10000</td>
+      <td>0x6</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="character-codes">Character codes</h2>
+
+<p>Here are some that are known:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>4CC</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>XPRT</td>
+      <td>Expert device</td>
+    </tr>
+    <tr>
+      <td>PMGR</td>
+      <td>Power Manager</td>
+    </tr>
+    <tr>
+      <td>AKF</td>
+      <td>Apple KingFisher</td>
+    </tr>
+    <tr>
+      <td>MONI</td>
+      <td>Monitor</td>
+    </tr>
+    <tr>
+      <td>TRNG</td>
+      <td>True Random Number Generator</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="seps-peripherals">SEP’s peripherals</h2>
+
+<p>Many SEP’s peripherals have a similar MMIO format compared to AP. This includes the I2C master, interrupt dispatcher,
+and mailbox.</p>
+
+<h3 id="akf">AKF</h3>
+
+<p>The AKF block generally contains both the interrupt dispatcher (intr) and the AP mailbox. Although A11 and A12 store
+different addresses for this, we are certain that the mailbox address ends with 0x4000, because it sits right after
+0x4000 bytes of intr’s MMIO.</p>
+
+<p>In the above dump, A11’s SEP stores intr’s address, A12’s SEP stores mailbox’s address.</p>
+
+<h4 id="interrupt-dispatcher">Interrupt dispatcher</h4>
+
+<p>SEP’s interrupt dispatcher (intr) has some similarity with Apple Interrupt Controller (AIC) that AP uses.</p>
+
+<p>The intr outputs to the core’s IRQ line, it dispatches IRQ from peripherals and the physical timer.</p>
+
+<p>Most of the registers are unknown; however, the SEP’s IRQ handler reads from the offset (+0x81C) to find the
+asserting interrupt.  This register has a similar format to AIC’s IACK.</p>
+
+<ul>
+  <li>External Interrupt: <code class="language-plaintext highlighter-rouge">0x10000 | (v &amp; 0x1ff)</code>
+</li>
+  <li>Timer Interrupt: <code class="language-plaintext highlighter-rouge">0x70000 | 1</code>
+</li>
+</ul>
+
+<p>The timer interrupt seems to be acknowledged by writing <code class="language-plaintext highlighter-rouge">2</code> to offset (+0xc18)</p>
+
+<h4 id="mailbox">Mailbox</h4>
+
+<p>SEP’s mailbox MMIO is also very similar compared to AP’s side:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define REG_IOP_I2A_CTRL                    (0x10C)
+#define     REG_IOP_I2A_CTRL_ENABLE         (1 &lt;&lt; 0)
+#define     REG_IOP_I2A_CTRL_FULL           (1 &lt;&lt; 16)
+#define     REG_IOP_I2A_CTRL_EMPTY          (1 &lt;&lt; 17)
+#define     REG_IOP_I2A_CTRL_OVFL           (1 &lt;&lt; 18)
+#define     REG_IOP_I2A_CTRL_UDFL           (1 &lt;&lt; 19)
+#define REG_IOP_I2A_MSG0                    (0x820)
+#define REG_IOP_I2A_MSG1                    (0x824)
+#define REG_IOP_I2A_MSG2                    (0x828)
+#define REG_IOP_I2A_MSG3                    (0x82C)
+</span>
+<span class="cp">#define REG_IOP_A2I_CTRL                    (0x108)
+#define REG_IOP_A2I_MSG0                    (0x810)
+#define REG_IOP_A2I_MSG1                    (0x814)
+#define REG_IOP_A2I_MSG2                    (0x818)
+#define REG_IOP_A2I_MSG3                    (0x81C)
+</span></code></pre></div></div>
+
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+
+[secondary_cores.AppleNandStorage]
+description = "Processor that presents NVMe to the AP and provides both NVMe storage as well as emulated SPI flash for early boot.  This"
+firmware_type = "ansf"
+restore_firmware_type = "rans"
+type = "aarch64"
+[secondary_cores.Baseband]
+description = "Comes from multiple vendors, encoded in `bbfw` file.  See `baseband.yaml` for more info."
+firmware_packing = ["zip"]
+[secondary_cores.ImageSignalProcessor]
+description = "Image Signal Processor"
+firmware_type = "ispf"
+[secondary_cores.Juliet]
+description = "The Infared FaceID camera"
+[secondary_cores.Maggie]
+description = "Ultra low power FPGA (iCE5LP4K) / Lattice iCEcube2"
+firmware_type = "magg"
+[secondary_cores.Pearl]
+description = "The FaceID assembly"
+[secondary_cores.PowerManagementProcessor]
+description = "Power Management Processor.  Provides ARM Cortex-M processor for power sequencing and interfaces directly with the PMGR.  Among its other talents, it manages the multi-button reset and DFU process using configured values for `volume-up-debounce` and `volume-down-debounce`.  There have been reported copies of debug firmwares in the wild which might avoid such power sequencing."
+firmware_type = "pmpf"
+type = "arm7m"
+[secondary_cores.Vinyl]
+description = "the eUICC or eSIM Contains a ZIP file with various hash specifiers, each containing two directories.  One `recovery` is seemingly empty (strange as this would imply a bad eUICC can never be recovered but also is consistent with observed behaviour of a eSIM surviving DFU recovery).  Update seems to contain two folders \"main\" and \"gold\".\nThese folders contain a `firmware.der` as well as a `profile.bin`\nThese folders contain a number of \"root keys\" as defined in the eUICC spec.\n"
+firmware_packing = ["zip"]

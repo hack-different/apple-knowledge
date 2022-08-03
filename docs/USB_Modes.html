@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>iDevice USB Modes | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="iDevice USB Modes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/USB_Modes.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/USB_Modes.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="iDevice USB Modes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"iDevice USB Modes","url":"https://docs.hackdiffe.rent/docs/USB_Modes.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="idevice-usb-modes">iDevice USB Modes</h1>
+
+<h2 id="disabling-macos-from-mastering-devices">Disabling macOS from mastering devices</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>defaults write com.apple.iTunesHelper ignore-devices <span class="nt">-bool</span> YES
+defaults write com.apple.AMPDeviceDiscoveryAgent ignore-devices 1
+defaults write com.apple.AMPDeviceDiscoveryAgent reveal-devices 0
+defaults write <span class="nt">-g</span> ignore-devices <span class="nt">-bool</span> <span class="nb">true</span>
+</code></pre></div></div>
+
+<h2 id="modes-as-a-function-of-sdom">Modes as a function of SDOM</h2>
+
+<p>SDOM is a two bit (2^2) value.  The value is a bitflag of SEC and PRO (CXXX and EXXX).</p>
+
+<p>CXXX (being CSEC and CRPO) are the in-burned chip security and “promotion” value.</p>
+
+<p>EXXX (being ESEC and EPRO) are the effective security and promotion values.</p>
+
+<p>the SEC bit is the lower (ones place)</p>
+
+<p>the PRO bit is if the device is promoted (twos place)</p>
+
+<p>This means a “SDOM” of 03 is secure, promoted which matches the CPFM of retail devices (the default value for SDOM)</p>
+
+<p>“Demotion” occurs by changing the SDOM value from it’s CPFM mode by running a CPFM:03 diags payload.  Because this is
+signed with the CPFM:03 values, it can run on retail.  It then is able to modify EPRO to 0 bringing a device to
+SDOM = 01 (secure, development), the use of ESEC <em>implies</em> that an Apple payload could turn any device into SDOM:00
+or making it an insecure development device.  (CSEC = 1, CPRO = 1, ESEC = 0, EPRO = 0 from CPFM = 03 to SDOM = 00).</p>
+
+<p>Each “mode” has a base USB product ID (compiled into the binary) as given in the following:
+WTF Mode (classic iPods) = 0x1222
+DFU Mode (shared between iPod and iDevice) = 0x1226
+…
+unknown, other apple products?  other iBoot modes (likely defunct as 1280 can respond with its mode)?
+…
+iBoot Mode = 0x1280</p>
+
+<p>The low order bits are set to the value of SDOM, meaning that the Product ID presented to macOS differs based on the
+SDOM value.  This is no doubt useful to Apple employees who do not want iTunes / Finder popping up excpet on “retail”
+devices fighting over the USB interface.  (They likely only respond to SDOM=3)</p>
+
+<p>This means a “production” device should present as 0x1229 in DFU and 0x1283 in recovery.</p>
+
+      </section>
+    </div>
+  </body>
+</html>

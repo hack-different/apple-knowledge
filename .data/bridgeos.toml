@@ -1,0 +1,61 @@
+
+[local_properties.DeviceSupportsLockdown]
+type = "boolean"
+[local_properties.HasSEP]
+type = "boolean"
+[local_properties.IsUIBuild]
+type = "boolean"
+[remote_services]
+
+[remote_services.com.apple.RestoreRemoteServices.restoreserviced]
+version = 2
+[remote_services.com.apple.RestoreRemoteServices.restoreserviced.properties]
+ServiceVersion = 2
+UsesRemoteXPC = true
+[remote_services.com.apple.TrustedAccessoryController.properties]
+UsesRemoteXPC = true
+[remote_services.com.apple.aveservice.properties]
+UsesRemoteXPC = true
+[remote_services.com.apple.bridgeOSUpdated.properties]
+UsesRemoteXPC = true
+[remote_services.com.apple.corecaptured.remoteservice.properties]
+UsesRemoteXPC = true
+[remote_services.com.apple.corespeech.xpc.remote.control.properties]
+UsesRemoteXPC = true
+[remote_services.com.apple.corespeech.xpc.remote.record.properties]
+UsesRemoteXPC = true
+[remote_services.com.apple.icloud.findmydeviced.bridge]
+version = 1
+[remote_services.com.apple.icloud.findmydeviced.bridge.properties]
+ServiceVersion = 1
+UsesRemoteXPC = true
+[remote_services.com.apple.internal.xpc.remote.kext_audit.properties]
+UsesRemoteXPC = true
+[remote_services.com.apple.lskdd.properties]
+UsesRemoteXPC = 1
+[remote_services.com.apple.mobileactivationd.bridge]
+version = 1
+[remote_services.com.apple.mobileactivationd.bridge.properties]
+ServiceVersion = 1
+UsesRemoteXPC = true
+[remote_services.com.apple.osanalytics.logTransfer.properties]
+UsesRemoteXPC = true
+[remote_services.com.apple.powerchime.remote.properties]
+UsesRemoteXPC = true
+[remote_services.com.apple.private.avvc.xpc.remote.properties]
+UsesRemoteXPC = true
+[remote_services.com.apple.recoverylogd.bridge]
+version = 1
+[remote_services.com.apple.recoverylogd.bridge.properties]
+ServiceVersion = 1
+UsesRemoteXPC = true
+[remote_services.com.apple.sysdiagnose.remote.properties]
+UsesRemoteXPC = true
+[remote_services.com.apple.sysdiagnose.stackshot.remote.properties]
+UsesRemoteXPC = true
+[remote_services.com.apple.videoprocessingd.encode.remote.properties]
+UsesRemoteXPC = true
+[remote_services.com.apple.xpc.remote.mobile_obliteration.properties]
+UsesRemoteXPC = true
+[remote_services.com.apple.xpc.remote.multiboot.properties]
+UsesRemoteXPC = true

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Accessory Firmware Updates | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Accessory Firmware Updates" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/UARP_and_FOTA.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/UARP_and_FOTA.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Accessory Firmware Updates" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"Accessory Firmware Updates","url":"https://docs.hackdiffe.rent/docs/UARP_and_FOTA.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="accessory-firmware-updates">Accessory Firmware Updates</h1>
+
+<p>WARNING: This is a lot of guessing and raw notes, please validate and extend but do not assume it is correct.  It
+is a starting point for those who wish to continue this area of work.</p>
+
+<h2 id="uarp---universal-accessory-restore-protocol">UARP - Universal Accessory Restore Protocol</h2>
+
+<p>Guesswork structs from work on MagSafe Charger and Beats Studio Buds.</p>
+
+<p>Versions appear to follow the format <code class="language-plaintext highlighter-rouge">major.minor.release.build</code>. An example of a build version is
+<code class="language-plaintext highlighter-rouge">100.7916.1052884864.1</code> or <code class="language-plaintext highlighter-rouge">247.0.0.0</code>.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span>
+    <span class="n">kPayloadFOTA</span> <span class="o">=</span> <span class="err">'</span><span class="n">FOTA</span><span class="err">'</span><span class="p">,</span> <span class="c1">// Firmware Over the Air</span>
+    <span class="n">kPayloadP1FW</span> <span class="o">=</span> <span class="err">'</span><span class="n">P1FW</span><span class="err">'</span><span class="p">,</span> <span class="c1">// PROTO1?</span>
+    <span class="n">kPayloadP2FW</span> <span class="o">=</span> <span class="err">'</span><span class="n">P2FW</span><span class="err">'</span><span class="p">,</span> <span class="c1">// PROTO2?</span>
+    <span class="n">kPayloadEVTF</span> <span class="o">=</span> <span class="err">'</span><span class="n">EVTF</span><span class="err">'</span><span class="p">,</span> <span class="c1">// Engineering Validation Test</span>
+    <span class="n">kPayloadPVTF</span> <span class="o">=</span> <span class="err">'</span><span class="n">PVTF</span><span class="err">'</span><span class="p">,</span> <span class="c1">// Production Validation Test</span>
+    <span class="n">kPayloadMPFW</span> <span class="o">=</span> <span class="err">'</span><span class="n">MPFW</span><span class="err">'</span><span class="p">,</span> <span class="c1">// Mainline Production Firmware</span>
+    <span class="n">kPayloadSTFW</span> <span class="o">=</span> <span class="err">'</span><span class="n">STFW</span><span class="err">'</span><span class="p">,</span> <span class="c1">// Storage Firmware?</span>
+    <span class="n">kPayloadDTTX</span> <span class="o">=</span> <span class="err">'</span><span class="n">DTTX</span><span class="err">'</span><span class="p">,</span> <span class="c1">// Data? Transmit</span>
+    <span class="n">kPayloadDTRX</span> <span class="o">=</span> <span class="err">'</span><span class="n">DTRX</span><span class="err">'</span><span class="p">,</span> <span class="c1">// Data? Receive</span>
+    <span class="n">kPayloadDMTP</span> <span class="o">=</span> <span class="err">'</span><span class="n">DMTP</span><span class="err">'</span><span class="p">,</span> <span class="c1">// Test Point?</span>
+    <span class="n">kPayloadPDFW</span> <span class="o">=</span> <span class="err">'</span><span class="n">PDFW</span><span class="err">'</span><span class="p">,</span> <span class="c1">// USB-C Power Delivery</span>
+    <span class="n">kPayloadULPD</span> <span class="o">=</span> <span class="err">'</span><span class="n">ULPD</span><span class="err">'</span><span class="p">,</span> <span class="c1">// Upload? Possibly the updater</span>
+    <span class="n">kPayloadCHDR</span> <span class="o">=</span> <span class="err">'</span><span class="n">CHDR</span><span class="err">'</span><span class="p">,</span> <span class="c1">// Charge Direction?</span>
+<span class="p">}</span> <span class="n">t_payoad_type</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="kt">uint32_t</span> <span class="n">version</span><span class="p">;</span> <span class="c1">// BE, == 2</span>
+    <span class="kt">uint32_t</span> <span class="n">size</span><span class="p">;</span> <span class="c1">// Version 2 header size == 0x2C</span>
+    <span class="kt">uint32_t</span> <span class="n">binary_size</span><span class="p">;</span> <span class="c1">// Length of the binary. Metadata plist follows immediately after.</span>
+    <span class="kt">uint32_t</span> <span class="n">major_version</span><span class="p">;</span> <span class="c1">// 100 in '100.7916.1052884864.1'.</span>
+    <span class="kt">uint32_t</span> <span class="n">minor_version</span><span class="p">;</span> <span class="c1">// 7916 in '100.7916.1052884864.1'.</span>
+    <span class="kt">uint32_t</span> <span class="n">release_version</span><span class="p">;</span> <span class="c1">// 1052884864 in '100.7916.1052884864.1'.</span>
+    <span class="kt">uint32_t</span> <span class="n">build_version</span><span class="p">;</span> <span class="c1">// 1 in '100.7916.1052884864.1'.</span>
+    <span class="kt">uint32_t</span> <span class="n">metadata_offset</span><span class="p">;</span> <span class="c1">// Typically present after the full header.</span>
+    <span class="kt">uint32_t</span> <span class="n">metadata_length</span><span class="p">;</span> <span class="c1">// Note that metadata can be 0 in length.</span>
+    <span class="kt">uint32_t</span> <span class="n">row_offset</span> <span class="o">=</span> <span class="mh">0x2c</span><span class="p">;</span> <span class="c1">// Immediately follows UARP header.</span>
+    <span class="kt">uint32_t</span> <span class="n">row_length</span><span class="p">;</span> <span class="c1">// Divide by row size (0x28) to determine. 0xC8 defines five.</span>
+<span class="p">}</span> <span class="n">uarp_header</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="kt">uint32_t</span> <span class="n">row_size</span> <span class="o">=</span> <span class="mh">0x28</span><span class="p">;</span>
+    <span class="n">t_payload_type</span> <span class="n">payload_type</span><span class="p">;</span>  <span class="c1">// For example 'FOTA';</span>
+    <span class="kt">uint32_t</span> <span class="n">major_version</span><span class="p">;</span> <span class="c1">// All versions within rows appear to match the binary header.</span>
+    <span class="kt">uint32_t</span> <span class="n">minor_version</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="n">release_version</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="n">build_version</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="n">metadata_offset</span><span class="p">;</span> <span class="c1">// Both offset/length typically match the UARP header.</span>
+    <span class="kt">uint32_t</span> <span class="n">metadata_length</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="n">payload_offset</span><span class="p">;</span> <span class="c1">// Offset within file.</span>
+    <span class="kt">uint32_t</span> <span class="n">payload_length</span><span class="p">;</span> <span class="c1">// Should never exceed binary size.</span>
+<span class="p">}</span> <span class="n">uarp_row</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="fota---firmware-over-the-air">FOTA - Firmware over the Air</h2>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="kt">uint16_t</span> <span class="n">nand_offset</span><span class="p">;</span>
+    <span class="kt">uint16_t</span> <span class="n">file_offset</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">chunk_checksum</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="kt">uint32_t</span> <span class="c1">// pad_before?</span>
+    <span class="kt">uint32_t</span> <span class="c1">// distance_from_end</span>
+    <span class="kt">uint32_t</span> <span class="c1">// pad_after?</span>
+    <span class="kt">uint32_t</span> <span class="n">chunks</span> <span class="o">=</span> <span class="mh">0x1C4</span>
+    <span class="kt">uint32_t</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// pad_before?</span>
+    <span class="kt">uint32_t</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// distance_from_end</span>
+    <span class="kt">uint32_t</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// pad_after?</span>
+    <span class="kt">uint32_t</span> <span class="n">plist_length</span> <span class="o">=</span> <span class="mh">0xC97</span>
+<span class="p">}</span> <span class="n">fota_footer</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="superbinary">SuperBinary</h2>
+
+<h3 id="metadata">Metadata</h3>
+
+<p>A <code class="language-plaintext highlighter-rouge">NSKeyedArchiver</code> for a bunch of <code class="language-plaintext highlighter-rouge">NSDictionary</code> objects - because just serializing the dictionary made no sense…</p>
+
+<p>An example taken from the Beats Headphone Update:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"SuperBinary Format Version"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"SuperBinary Firmware Version"</span><span class="p">:</span><span class="w">  </span><span class="s2">"100.232833204.3401103616.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"SuperBinary payloads"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"Payload Version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.232833204.3401103616.1"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"Payload Filepath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/Library/Caches/com.apple.xbs/Binaries/TideUserFirmware/install/TempContent/Root/TideUserFirmware/b507/download/b507_fota_package-prod.bin"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"Payload 4CC"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FOTA"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"Payload Long Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Beats Studio Buds Firmware"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"MetaData plist"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"MetaData Format Version"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"MetaData Values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Payload Filepath"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Payload Long Name"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Minimum Required Version"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ignore Version"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Urgent Update"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Payload Certificate"</span><span class="p">,</span><span class="w"> </span><span class="nl">"Filepath"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Payload Signature"</span><span class="p">,</span><span class="w"> </span><span class="nl">"Filepath"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Payload Hash"</span><span class="p">,</span><span class="w"> </span><span class="nl">"Filepath"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Personalization Required"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Personalization Payload Tag"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Personalization SuperBinary AssetID"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Personalization Manifest Prefix"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Payload Digest"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HeySiri Model Type"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HeySiri Model Locale"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HeySiri Model Hash"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HeySiri Model"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Minimum Battery Level"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Trigger Battery Level"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HeySiri Fallback Model"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HeySiri Model Digest"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HeySiri Model Signature"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HeySiri Model Certificate"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">-16777216</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Host Minimum Battery Level"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">-16777215</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Host Inactive To Stage Asset"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">-16777214</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Host Inactive To Apply Asset"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">-16777213</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Host Network Delay"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">-16777212</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Host Reconnect After Apply"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">-16777211</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Minimum iOS Version"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">-16777210</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Minimum macOS Version"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">-16777209</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Minimum tvOS Version"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">-16777208</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Minimum watchOS Version"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">-16777207</span><span class="p">,</span><span class="w"> </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Host Trigger Battery Level"</span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+      </section>
+    </div>
+  </body>
+</html>

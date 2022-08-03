@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Introduction | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Introduction" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/M1_Boot_Policy.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/M1_Boot_Policy.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Introduction" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"Introduction","url":"https://docs.hackdiffe.rent/docs/M1_Boot_Policy.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="introduction">Introduction</h1>
+
+<p>The M1 introduced us to a new ‘boot policy’ scheme for allowing booting older versions of macOS as well as other
+non-Apple operating systems (see Asahi Linux).  This scheme is based on the idea of a <code class="language-plaintext highlighter-rouge">img4</code> file in the <code class="language-plaintext highlighter-rouge">iSCPreboot</code>
+(iBoot System Container?) portion of the disk.  In order to ensure that the policy file is modified only in approved
+ways, the system must be first booted to 1TR (one true recoveryOS) to allow the SEP to sign a new policy file.
+Furthermore, the SEP must be authenticated to by an administrator to approve the change.  Because the SEP has
+limited storage (see Lynx, next-generation Ocelot), the policy is stored on disk, and only the appropriate hashes are
+stored in SEP local storage / EEPROM.</p>
+
+<h2 id="methodology">Methodology</h2>
+
+<p>By using <code class="language-plaintext highlighter-rouge">bputil -l</code> the commands sent to the SEP are plainly visible.  This is the documentation of those commands.</p>
+
+<p>Aside:
+I do find it unusual that there is both a SEP command to retrieve the policy nonces as well as a system
+<code class="language-plaintext highlighter-rouge">policy-nonce-digests</code> NVRAM variable as this seems
+redundant</p>
+
+<h2 id="storage-of-policy">Storage of Policy</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">img4</code> policy itself is stored in the <code class="language-plaintext highlighter-rouge">iSCPreboot</code> volume and grouped by the APFS volume group ID.  It uses
+the path structure:</p>
+
+<p>Local Policy:      <code class="language-plaintext highlighter-rouge">&lt;iSCPreboot_MOUNT_POINT&gt;/&lt;VOLUME_GROUP_ID&gt;/LocalPolicy/&lt;LOCAL_POLICY_HASH_HEX&gt;.img4</code>
+RecoveryOS Policy: <code class="language-plaintext highlighter-rouge">&lt;iSCPreboot_MOUNT_POINT&gt;/&lt;VOLUME_GROUP_ID&gt;/LocalPolicy/&lt;LOCAL_POLICY_HASH_HEX&gt;.recovery.img4</code></p>
+
+<p>It appears there is a volume group for the regular APFS macOS install as well as the second <code class="language-plaintext highlighter-rouge">Apple_APFS_Recovery</code>
+volume group.</p>
+
+<h2 id="boot-policy--baa-commands">Boot Policy / BAA Commands</h2>
+
+<p>Note: all commands specify that the SEP must respond to API level v7
+Note: “hashes” are 48 bytes long, which corresponds to SHA2-384</p>
+
+<table>
+    <thead>
+        <th>SEP Ordinal</th>
+        <th>Command</th>
+        <td>Description</td>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2</td>
+            <td>begin_update_policy</td>
+            <td>TBD</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>end_update_policy</td>
+            <td>TBD</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>bootpolicy_get_proposed_local_policy_nonce_digest</td>
+            <td>TBD</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>bootpolicy_get_proposed_remote_policy_nonce_digest</td>
+            <td>TBD</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>bootpolicy_get_proposed_recoveryos_policy_nonce_digest</td>
+            <td>TBD</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>bootpolicy_get_blessed_local_policy_nonce_digest</td>
+            <td>Input "Volume Group ID", Returns "Local Policy Nonce Hash" (lpnh) </td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>bootpolicy_get_blessed_remote_policy_nonce_digest</td>
+            <td>TBD</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>bootpolicy_get_blessed_recoveryos_policy_nonce_digest</td>
+            <td>TBD</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>update_local_policy_for_new_local_nonce</td>
+            <td>TBD</td>
+        </tr>
+        <tr>
+            <td>43</td>
+            <td>create_sidp_measurement</td>
+            <td>TBD</td>
+        </tr>
+        <tr>
+            <td>45</td>
+            <td>bootpolicy_get_linked_manifest_tag_list</td>
+            <td>TBD</td>
+        </tr>
+        <tr>
+            <td>62</td>
+            <td>bootpolicy_get_current_os_type</td>
+            <td>Returns macOS, one true recoveryOS, ordinary recoveryOS</td>
+        </tr>
+        <tr>
+            <td>63</td>
+            <td>bootpolicy_get_current_os_type_restrictions_override_status</td>
+            <td>TBD</td>
+        </tr>
+        <tr>
+            <td>67</td>
+            <td>bootpolicy_get_local_policy_pairing_status</td>
+            <td>TBD</td>
+        </tr>
+        <tr>
+            <td>68</td>
+            <td>bootpolicy_verify_local_policy_pairing</td>
+            <td>TBD</td>
+        </tr>
+    </tbody>
+</table>
+
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+
+[dnssd_services]
+
+[dnssd_services.KeynoteControl]
+name = "Keynote Remote"
+transport = "tcp"
+[dnssd_services.adisk]
+name = "Time Capsule Backups / Auto Disk Discovery"
+transport = "tcp"
+[dnssd_services.afpovertcp]
+name = "Apple Filing Protocol"
+transport = "tcp"
+[dnssd_services.afpovertcp.properties]
+p = "Password"
+path = "Path"
+u = "Username"
+[dnssd_services.airdrop]
+name = "AirDrop"
+transport = "tcp"
+[dnssd_services.airplay]
+name = "AirPlay"
+transport = "tcp"
+[dnssd_services.airplay.properties]
+btaddr = "Bluetooth Address"
+deviceid = "Cannonical Device Identifier"
+[dnssd_services.airport]
+name = "AirPort Base Station"
+transport = "tcp"
+[dnssd_services.amzn-wplay]
+transport = "tcp"
+[dnssd_services.apple-midi]
+name = "Apple MIDI"
+transport = "udp"
+[dnssd_services.apple-mobdev2]
+name = "iTunes Wi-Fi Sync"
+transport = "tcp"
+[dnssd_services.apple-sasl]
+name = "Apple Password Server"
+transport = "tcp"
+[dnssd_services.applerdbg]
+name = "Apple Remote Debug Services (OpenGL Profiler)"
+[dnssd_services.appletv]
+name = "Apple TV"
+[dnssd_services.appletv-itunes]
+name = "Apple TV discovery of iTunes"
+[dnssd_services.appletv-pair]
+name = "Apple TV Pairing"
+[dnssd_services.appletv-v2]
+name = "Apple TV Home Sharing"
+transport = "tcp"
+[dnssd_services.asr]
+name = "Apple Software Restore"
+[dnssd_services.asr.properties]
+image = "HTTP URL of disk image"
+[dnssd_services.atc]
+name = "iTunes Shared Library"
+transport = "tcp"
+[dnssd_services.companion-link]
+transport = "tcp"
+[dnssd_services.daap]
+name = "Digital Audio Access Protocol"
+transport = "tcp"
+[dnssd_services.dacp]
+name = "Digital Audio Control Protocol"
+transport = "tcp"
+[dnssd_services.device-info]
+name = "macOS Device Infrormation Protocol"
+transport = "tcp"
+[dnssd_services.distcc]
+name = "Xcode Distributed Compiler"
+transport = "tcp"
+[dnssd_services.dns-llq]
+name = "DNS-SD Long Lievd Queries"
+urls = ["http://files.dns-sd.org/draft-sekar-dns-llq.txt"]
+[dnssd_services.dns-update]
+name = "DNS Dynamic Update Service"
+urls = ["http://www.ietf.org/rfc/rfc2136.txt","http://www.ietf.org/rfc/rfc3007.txt"]
+[dnssd_services.dpap]
+name = "Digital Photo Access Protocol"
+transport = "tcp"
+[dnssd_services.eppc]
+name = "Remote Apple Events"
+transport = "tcp"
+[dnssd_services.ftp]
+name = "File Transport Protocol"
+transport = "tcp"
+[dnssd_services.hap]
+name = "HomeKit Accessory Protocol"
+transport = "tcp"
+[dnssd_services.home-sharing]
+name = "iTunes Home Sharing"
+transport = "tcp"
+[dnssd_services.homekit]
+transport = "tcp"
+[dnssd_services.http]
+name = "Hyper Text Transfer Protocol"
+transport = "tcp"
+[dnssd_services.hue]
+name = "Phillips Hue"
+transport = "tcp"
+[dnssd_services.ica-networking]
+name = "Image Capture Sharing"
+transport = "tcp"
+[dnssd_services.ichat]
+name = "iChat Instant Messaging Protocol"
+transport = "tcp"
+[dnssd_services.ieee1588]
+name = "Precision Time Protocol"
+transport = "udp"
+[dnssd_services.ipp]
+name = "Internet Printing Protocol"
+transport = "tcp"
+[dnssd_services.ipps]
+name = "Internet Printing Protocol (Secure)"
+transport = "tcp"
+[dnssd_services.ipps.subresource]
+cups = "Common Unix Printing System"
+print = "AirPrint"
+[dnssd_services.keynotepair]
+name = "Keynote Remote Pairing"
+transport = "tcp"
+[dnssd_services.mediaremotetv]
+name = "Apple TV Media Remote"
+transport = "tcp"
+[dnssd_services.meshcop]
+name = "Thread Mesh Commissioning"
+transport = "udp"
+[dnssd_services.nfs]
+name = "Network File System (NFS)"
+transport = "tcp"
+[dnssd_services.od-master]
+name = "OpenDirectory Master"
+[dnssd_services.odisk]
+name = "Optical Disk Sharing"
+[dnssd_services.pcast]
+name = "Apple Podcast Producer"
+[dnssd_services.pdl-datastream]
+name = "Page Description Language (PDL) Data Stream"
+transport = "tcp"
+[dnssd_services.presence]
+name = "eXtensable Message and Presence Protocol (Jabber)"
+[dnssd_services.printer]
+name = "Line Printer Daemon"
+transport = "tcp"
+[dnssd_services.raop]
+name = "Remote Audio Output Protocol (AirPlay2)"
+transport = "tcp"
+[dnssd_services.raop.properties]
+am = "Apple Model"
+ov = "OS Version"
+pk = "Public Key"
+tp = "Transport Protocol"
+vs = "Version"
+[dnssd_services.rfb]
+name = "Remote Framebuffer - macOS Screen Sharing"
+transport = "tcp"
+[dnssd_services.riousbprint]
+name = "Remote I/O USB Printer Protocol"
+transport = "tcp"
+[dnssd_services.scanner]
+name = "Remote Scanning Protocol"
+transport = "tcp"
+[dnssd_services.servermgr]
+name = "macOS Server Remote Administration"
+transport = "tcp"
+[dnssd_services.sftp-ssh]
+name = "Secure File Transport Protocol (SFTP)"
+transport = "tcp"
+[dnssd_services.sleep-proxy]
+description = "Protocol used by Apple Products to advratise devices capiable of WoL or WWoL"
+name = "Sleep Proxy Server"
+transport = "udp"
+[dnssd_services.smb]
+name = "Server Message Block (SMB) / Common Internet File System (CIFS)"
+transport = "tcp"
+[dnssd_services.srpl-tls]
+name = "Service Registration Protocol - Replication over TLS"
+transport = "tcp"
+[dnssd_services.ssh]
+name = "Secure Shell"
+transport = "tcp"
+[dnssd_services.telnet]
+name = "Telnet"
+transport = "tcp"
+[dnssd_services.touch-able]
+name = "Apple TV Remote App (iOS devices)"
+transport = "tcp"
+[dnssd_services.workstation]
+name = "Apple Workgroup Manager"
+transport = "tcp"
+[dnssd_services.xserveraid]
+name = "Xserve RAID"
+transport = "tcp"

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>metadata</key>
+	<dict>
+		<key>credits</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
+	<key>resources</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>Run iOS on QEMU</string>
+			<key>type</key>
+			<string>article</string>
+			<key>url</key>
+			<string>https://github.com/alephsecurity/xnu-qemu-arm64/wiki/Build-iOS-on-QEMU</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>onethawt&#39;s list of IDA plugins</string>
+			<key>type</key>
+			<string>article</string>
+			<key>url</key>
+			<string>https://github.com/onethawt/idaplugins-list</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Awesome Ghirda Plugins</string>
+			<key>type</key>
+			<string>article</string>
+			<key>url</key>
+			<string>https://github.com/AllsafeCyberSecurity/awesome-ghidra</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>USB-C Port Controller (ACE) Secrets</string>
+			<key>type</key>
+			<string>article</string>
+			<key>url</key>
+			<string>https://blog.t8012.dev/ace-part-1/</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Ramtin Amin&#39;s Tristar Reverse Engineering</string>
+			<key>type</key>
+			<string>article</string>
+			<key>url</key>
+			<string>http://ramtin-amin.fr/#tristar</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Nyan Satin&#39;s Lightning Reverse Engineering</string>
+			<key>type</key>
+			<string>article</string>
+			<key>url</key>
+			<string>https://nyansatan.github.io/lightning/</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>http://ramtin-amin.fr/#nvmepcie</string>
+			<key>type</key>
+			<string>article</string>
+			<key>url</key>
+			<string>Ramtin Amin&#39;s NVMe PCIe Reverse Engineering</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Ramtin Amin&#39;s NVMe DMA Reverse Engineering</string>
+			<key>type</key>
+			<string>article</string>
+			<key>url</key>
+			<string>http://ramtin-amin.fr/#nvmedma</string>
+		</dict>
+		<dict>
+			<key>categories</key>
+			<array>
+				<string>tool</string>
+				<string>re</string>
+				<string>ruby</string>
+			</array>
+			<key>description</key>
+			<string>FOSS Ruby Mach-O Tool (aims to replicate jtool2 feature set)</string>
+			<key>name</key>
+			<string>mootool</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/hack-different/mootool</string>
+		</dict>
+		<dict>
+			<key>categories</key>
+			<array>
+				<string>tool</string>
+				<string>re</string>
+				<string>python</string>
+			</array>
+			<key>description</key>
+			<string>FOSS Python Mach-O Tool</string>
+			<key>name</key>
+			<string>ktool</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/cxnder/ktool</string>
+		</dict>
+		<dict>
+			<key>categories</key>
+			<array>
+				<string>toolchain</string>
+				<string>c</string>
+			</array>
+			<key>description</key>
+			<string>Toolchain used to compile checkra1n and pongoOS</string>
+			<key>name</key>
+			<string>checkra1n-toolchain</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/checkra1n/toolchain</string>
+		</dict>
+		<dict>
+			<key>categories</key>
+			<array>
+				<string>emulation</string>
+				<string>c</string>
+				<string>xnu</string>
+			</array>
+			<key>description</key>
+			<string>QEMU branch for emulating iOS / XNU on arm64</string>
+			<key>name</key>
+			<string>alephsecurity/xnu-qemu-arm64</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/alephsecurity/xnu-qemu-arm64</string>
+		</dict>
+		<dict>
+			<key>categories</key>
+			<array>
+				<string>tool</string>
+				<string>emulation</string>
+			</array>
+			<key>description</key>
+			<string>Tooling to prepare an image for QEMU</string>
+			<key>name</key>
+			<string>alephsecurity/xnu-qemu-arm64-tools</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/alephsecurity/xnu-qemu-arm64-tools</string>
+		</dict>
+		<dict>
+			<key>categories</key>
+			<array>
+				<string>ida_plugin</string>
+				<string>disassembly</string>
+				<string>re</string>
+			</array>
+			<key>description</key>
+			<string>IDA plugin for XNU kernelcaches</string>
+			<key>name</key>
+			<string>cellebrite-srl/ida_kernelcache</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/cellebrite-srl/ida_kernelcache</string>
+		</dict>
+		<dict>
+			<key>categories</key>
+			<array>
+				<string>ida_plugin</string>
+				<string>disassembly</string>
+				<string>re</string>
+			</array>
+			<key>description</key>
+			<string>IDA plugin for pointer authentication</string>
+			<key>name</key>
+			<string>cellebrite-srl/PacExplorer</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/cellebrite-srl/PacXplorer</string>
+		</dict>
+		<dict>
+			<key>categories</key>
+			<array>
+				<string>ida_plugin</string>
+				<string>disassembly</string>
+				<string>re</string>
+			</array>
+			<key>description</key>
+			<string>IDA plugin for function inlining</string>
+			<key>name</key>
+			<string>cellebrite-srl/FunctionInliner</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/cellebrite-srl/FunctionInliner</string>
+		</dict>
+		<dict>
+			<key>categories</key>
+			<array>
+				<string>ghidra_plugin</string>
+				<string>disassembly</string>
+				<string>re</string>
+			</array>
+			<key>description</key>
+			<string>Ghidra plugin for XNU kernel caches</string>
+			<key>name</key>
+			<string>0x36/ghidra_kernelcache</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/0x36/ghidra_kernelcache</string>
+		</dict>
+		<dict>
+			<key>categories</key>
+			<array>
+				<string>tool</string>
+			</array>
+			<key>description</key>
+			<string>Swiss army knife for IPSWs</string>
+			<key>name</key>
+			<string>blacktop/ipsw</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/blacktop/ipsw</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>pongoOS</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/checkra1n/pongoOS</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>DeMuxUSB - USBMuxD disector</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/t8012/demuxusb</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>open source usbmuxd implementation from libimobiledevice</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/libimobiledevice/usbmuxd</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>libimobiledevice</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/libimobiledevice/libimobiledevice</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>libirecovery - low level iBoot / DFU handler</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/libimobiledevice/libirecovery</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>idevicerestore - open source Apple device restore tool</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/libimobiledevice/idevicerestore</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>UTDM - USB Target Disk Mode</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/rickmark/apple_utdm</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>MacVDMTool and Library - USB-PD Vendor Defined Messsages</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/rickmark/macvdmtool</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Apple Remote Virtaul Interface</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/gh2o/rvi_capture</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Thunderbolt Patcher by osy</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/osy/ThunderboltPatcher</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Apple Wireless Diagnostics logging decode</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/rickmark/awdd_decode</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Shareport - AirPlay2 implementation</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/mikebrady/shairport-sync</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>open source iOS backup library</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/rickmark/libibackup</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BOM - Bill of Materials by NeXT / Apple</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/iineva/bom</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Open source plist implementation</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/libimobiledevice/libplist</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Open Source iTunes Library Parser</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/josephw/titl</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>SBinger&#39;s fork of the ldid link editor</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/sbingner/ldid</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>T1 and prior EFI firmware verification</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/t8012/efivalidate</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>List of all SecureROM / SEPROMs</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/hekapooios/hekapooios.github.io</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Apple WiFi Password Sharing Implementation</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/seemoo-lab/openwifipass</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Create SMC binaries from update payloads</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/t8012/smcutil</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Virtual SMC implementation for Clover</string>
+			<key>type</key>
+			<string>repo</string>
+			<key>url</key>
+			<string>https://github.com/acidanthera/VirtualSMC</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>IDA - The Intellegent Disassembler</string>
+			<key>type</key>
+			<string>tool</string>
+			<key>url</key>
+			<string>https://hex-rays.com/ida-pro/</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>VisUAL ARM Simulator</string>
+			<key>type</key>
+			<string>tool</string>
+			<key>url</key>
+			<string>https://salmanarif.bitbucket.io/visual/index.html</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Ghidra Disassembler</string>
+			<key>open_source</key>
+			<true/>
+			<key>type</key>
+			<string>tool</string>
+			<key>url</key>
+			<string>https://ghidra-sre.org</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Hopper Disassembler</string>
+			<key>type</key>
+			<string>tool</string>
+			<key>url</key>
+			<string>https://www.hopperapp.com</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>jtool2 by Levin</string>
+			<key>type</key>
+			<string>tool</string>
+			<key>url</key>
+			<string>https://www.newosxbook.com/tools/jtool.html</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Frida - Dynamic instrumentation toolkit for developers</string>
+			<key>open_source</key>
+			<true/>
+			<key>type</key>
+			<string>tool</string>
+			<key>url</key>
+			<string>https://frida.re/</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>libimobiledevice - open source Apple / iTunes implementation</string>
+			<key>type</key>
+			<string>tool</string>
+			<key>url</key>
+			<string>https://libimobiledevice.org</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Apple - Kernel Programming Guide</string>
+			<key>type</key>
+			<string>article</string>
+			<key>url</key>
+			<string>https://developer.apple.com/library/content/documentation/Darwin/Conceptual/KernelProgramming</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Apple - IOKit Fundamentals</string>
+			<key>type</key>
+			<string>article</string>
+			<key>url</key>
+			<string>https://developer.apple.com/library/content/documentation/DeviceDrivers/Conceptual/IOKitFundamentals</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Apple - Virtual Memory System</string>
+			<key>type</key>
+			<string>article</string>
+			<key>url</key>
+			<string>https://developer.apple.com/library/content/documentation/Performance/Conceptual/ManagingMemory/Articles/AboutMemory.html</string>
+		</dict>
+	</array>
+</dict>
+</plist>

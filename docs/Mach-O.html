@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Mach-O Format | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="The Mach-O Format" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/docs/Mach-O.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/docs/Mach-O.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Mach-O Format" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"The Mach-O Format","url":"https://docs.hackdiffe.rent/docs/Mach-O.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="the-mach-o-format">The Mach-O Format</h1>
+
+<p>The Mach-O file format is the executable format of choice for XNU and dyld.</p>
+
+<p>It serves a purpose analog to what ELF or PE do; to put it simply, it describes a portion of an
+address space.</p>
+
+<p>Support for multi-architecture executables is also provided thanks to the fat format, which allows
+you to join multiple different architecture Mach-OS letting the kernel pick which to load. Note that
+it is possible to influence this with posix_spawn APIs.</p>
+
+<h2 id="working-with-mach-os">Working with Mach-Os</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">otool</code> is provided out-of-the-box with the xcode cli utils.</li>
+  <li><code class="language-plaintext highlighter-rouge">jtool</code>, by Jonathan Levin, author of MOXiI and MOXiI II, is an analog but more flexible and advanced
+tool. On the other hand, it lacks support for disassembling architectures other than arm64.</li>
+  <li><code class="language-plaintext highlighter-rouge">lipo</code> is a tool for working with fat files</li>
+  <li>Apple headers, specifically <code class="language-plaintext highlighter-rouge">&lt;mach-o/loader.h&gt;</code>/<code class="language-plaintext highlighter-rouge">&lt;mach-o/fat.h&gt;</code>.</li>
+</ul>
+
+<h2 id="general-structure">General structure</h2>
+
+<p>This image from Apple documentation illustrates pretty well how a Mach-O file is composed.</p>
+
+<p><img src="/docs/images/mach_o_segments.png" alt="Mach-O files structure" /></p>
+
+<p>The <strong>header</strong> is the first thing you will encounter while parsing a Mach-O file. It is always located
+at the very beginning.</p>
+
+<p>Immediately following the header there are the <strong>load commands</strong>, these commands describe what the content
+of the file is. They give us an idea of how the file is structured. Particularly, each command describes
+its own <strong>segment</strong> a piece of data (located in the <strong>data</strong> part of the Mach-O file), specifying where it
+is located (offset) in the file, and its size. Each specific command may also contain other values, specific
+to its segment only.</p>
+
+<p>Finally, we have the <strong>data</strong>. This part of the file contains actual data. It also contains, as you are probably
+wondering, the executable code of the Mach-O. The structure of this part is described exactly by the load
+commands discussed above, the layout is really the same. Each segment may be divided into various <strong>sections</strong>
+which simply exist to sub-categorize the data in each segment. For example, the <code class="language-plaintext highlighter-rouge">__TEXT</code> segment contains various
+sections, among those the <code class="language-plaintext highlighter-rouge">__text</code> section, that contains the actual executable machine bytes. Another section is
+the <code class="language-plaintext highlighter-rouge">__cstring</code>, which only contains hardcoded C strings used in the program.</p>
+
+<h2 id="universal-binaries-fat-mach-os-structure">Universal Binaries (fat Mach-Os) structure</h2>
+
+<p>Apple introduced universal binaries when the transition from PPC architecture to x86 architecture was made.
+Universal binaries consists of more Mach-O files chained together, preceded by a so-called <em>fat header</em>, which
+contains the fat magic number and the number of Mach-O objects included in the file.</p>
+
+<p>Here’s the structure of a fat header (<code class="language-plaintext highlighter-rouge">struct fat_header</code>):</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">fat_header</span> <span class="p">{</span>
+    <span class="kt">uint32_t</span>    <span class="n">magic</span><span class="p">;</span>      <span class="cm">/* FAT_MAGIC */</span>
+    <span class="kt">uint32_t</span>    <span class="n">nfat_arch</span><span class="p">;</span>  <span class="cm">/* number of structs that follow */</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>Immediately following the header, we find an <code class="language-plaintext highlighter-rouge">nfat_arch</code> number of <code class="language-plaintext highlighter-rouge">struct fat_arch</code>, each of those defines
+more in detail every Mach-O contained in the file. Here’s the structure definition:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">fat_arch</span> <span class="p">{</span>
+    <span class="n">cpu_type_t</span>      <span class="n">cputype</span><span class="p">;</span>    <span class="cm">/* cpu specifier (int) */</span>
+    <span class="n">cpu_subtype_t</span>   <span class="n">cpusubtype</span><span class="p">;</span> <span class="cm">/* machine specifier (int) */</span>
+    <span class="kt">uint32_t</span>        <span class="n">offset</span><span class="p">;</span>     <span class="cm">/* file offset to this object file */</span>
+    <span class="kt">uint32_t</span>        <span class="n">size</span><span class="p">;</span>       <span class="cm">/* size of this object file */</span>
+    <span class="kt">uint32_t</span>        <span class="n">align</span><span class="p">;</span>      <span class="cm">/* alignment as a power of 2 */</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>The first two fields describe the architecture for the Mach-O this structure is referring to, so that <em>dyld</em>
+knows which Mach-O to load for your specific CPU.</p>
+
+<p>~</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">offset</code> field indicates, from the beginning of the file, where the Mach-O this structure is referring
+to is located in the whole fat binary. The <code class="language-plaintext highlighter-rouge">size</code> field indicates the whole size of that same Mach-O. Finally,
+the <code class="language-plaintext highlighter-rouge">align</code> field indicates the address boundary where the Mach-O should be aligned (generally, this is a
+page boundary, <code class="language-plaintext highlighter-rouge">4096</code>).</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">fat_header</code> and the various <code class="language-plaintext highlighter-rouge">fat_arch</code>s are stored at the beginning of the file, in the so-called
+<em>fat section</em>. The <em>fat section</em> is 4096 bytes in size, and thus it can hypothetically contain up to 204
+<code class="language-plaintext highlighter-rouge">fat_arch</code>s. The rest of the <em>fat section</em>, which doesn’t contain either the header nor the archs, is
+filled with zeroes.</p>
+
+<p>On a final note, remember that every single value found in the <em>fat section</em> (<code class="language-plaintext highlighter-rouge">fat_header</code> + <code class="language-plaintext highlighter-rouge">fat_arch</code>s) is
+big-endian encoded. This is because at the time universal binaries were designed PPC was still the most widely
+used architecture, and it was big-endian. So, when reading values from parsed structures in the <em>fat section</em>,
+flip them.</p>
+
+<p>Summarizing an universal binary structure with a visual representation:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+---------------------+     /* header (fat_header: 0x8) */
+|                     |
+|     FAT HEADER      |
+|                     |
++---------------------+     /* archs (fat_arch: 0x14) */
+|     FAT ARCH #1     |
++---------------------+
+|     FAT ARCH #2     |
++---------------------+
+|         ...         |     /* other eventual fat archs... */
++---------------------+     /* Mach-Os section (variable size) */
+|                     |
+|                     |
+|                     |
+|                     |
+|      MACH-O #1      |
+|                     |
+|                     |
+|                     |
+|                     |
+|                     |
++---------------------+
+|                     |
+|                     |
+|                     |
+|                     |
+|                     |
+|      MACH-O #2      |
+|                     |
+|                     |
+|                     |
+|                     |
++---------------------+
+|         ...         |     /* other eventual Mach-Os... */
++---------------------+
+</code></pre></div></div>
+
+<h2 id="mach_header_64">mach_header(_64)</h2>
+
+<p>There are two structs (for both <em>x86</em> and <em>x64</em> architectures) for representing a Mach-O header:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">mach_header</span><span class="p">;</span> <span class="c1">// 32-bit Mach-O format</span>
+<span class="k">struct</span> <span class="n">mach_header_64</span><span class="p">;</span> <span class="c1">// 64-bit Mach-O format</span>
+</code></pre></div></div>
+
+<p>The differences are minimal, just a <code class="language-plaintext highlighter-rouge">reserved</code> field added to the 64-bit header.</p>
+
+<p>As per loader.h, the header file defining Mach-O constants and structures:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="nf">mach_header</span><span class="p">(</span><span class="n">_64</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">uint32_t</span>        <span class="n">magic</span><span class="p">;</span>          <span class="cm">/* mach magic number identifier */</span>
+    <span class="n">cpu_type_t</span>      <span class="n">cputype</span><span class="p">;</span>        <span class="cm">/* cpu specifier */</span>
+    <span class="n">cpu_subtype_t</span>   <span class="n">cpusubtype</span><span class="p">;</span>     <span class="cm">/* machine specifier */</span>
+    <span class="kt">uint32_t</span>        <span class="n">filetype</span><span class="p">;</span>       <span class="cm">/* type of file */</span>
+    <span class="kt">uint32_t</span>        <span class="n">ncmds</span><span class="p">;</span>          <span class="cm">/* number of load commands */</span>
+    <span class="kt">uint32_t</span>        <span class="n">sizeofcmds</span><span class="p">;</span>     <span class="cm">/* the size of all the load commands */</span>
+    <span class="kt">uint32_t</span>        <span class="n">flags</span><span class="p">;</span>          <span class="cm">/* flags */</span>
+    <span class="kt">uint32_t</span>        <span class="n">reserved</span><span class="p">;</span>       <span class="cm">/* reserved; 64 bit only */</span>
+<span class="p">};</span>
+<span class="cp">#define    MH_MAGIC       0xfeedface  </span><span class="cm">/* the mach magic number */</span><span class="cp">
+#define    MH_MAGIC_64    0xfeedfacf  </span><span class="cm">/* the 64-bit mach magic number */</span><span class="cp">
+</span></code></pre></div></div>
+
+<h3 id="types-of-mach-os">Types of Mach-Os</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// These shuld be representing userland Mach-Os</span>
+<span class="cp">#define MH_EXECUTE  0x2     </span><span class="cm">/* demand paged executable file (executable) */</span><span class="cp">
+#define MH_FVMLIB   0x3     </span><span class="cm">/* fixed VM shared library file (???) */</span><span class="cp">
+#define MH_DYLIB    0x6     </span><span class="cm">/* dynamically bound shared library */</span><span class="cp">
+#define MH_DYLINKER 0x7     </span><span class="cm">/* dynamic link editor */</span><span class="cp">
+#define MH_BUNDLE   0x8     </span><span class="cm">/* dynamically bound bundle file */</span><span class="cp">
+</span>
+<span class="c1">// Compile-time Mach-Os, Generic address-space Mach-Os, ???</span>
+<span class="cp">#define MH_OBJECT       0x1     </span><span class="cm">/* relocatable object file (.o) */</span><span class="cp">
+#define MH_CORE         0x4     </span><span class="cm">/* core file */</span><span class="cp">
+#define MH_PRELOAD      0x5     </span><span class="cm">/* preloaded executable file */</span><span class="cp">
+#define MH_DYLIB_STUB   0x9     </span><span class="cm">/* shared library stub for static */</span><span class="cp">
+</span>                                <span class="cm">/*  linking only, no section contents */</span>
+<span class="cp">#define MH_DSYM         0xa     </span><span class="cm">/* companion file with only debug */</span><span class="cp">
+</span>                                <span class="cm">/*  sections */</span>
+
+<span class="c1">// Kernel Mach-Os</span>
+<span class="cp">#define MH_KEXT_BUNDLE   0xb    </span><span class="cm">/* x86_64 kexts */</span><span class="cp">
+</span></code></pre></div></div>
+
+<h2 id="load-commands">Load Commands</h2>
+
+<p>Load commands are located immediately after the Mach header. They describe the content of the file,
+and are necessary to correctly parse the Mach-O.</p>
+
+<p>They can be parsed using the <code class="language-plaintext highlighter-rouge">struct load_command</code>:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">load_command</span> <span class="p">{</span>
+    <span class="kt">uint32_t</span> <span class="n">cmd</span><span class="p">;</span>       <span class="cm">/* type of load command */</span>
+    <span class="kt">uint32_t</span> <span class="n">cmdsize</span><span class="p">;</span>   <span class="cm">/* total size of command in bytes */</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>For a comprehensive list and descriptions of load commands, look in <code class="language-plaintext highlighter-rouge">mach-o/loader.h</code>.</p>
+
+<p>The most important ones are the <code class="language-plaintext highlighter-rouge">LC_SEGMENT(_64)</code>s, which describe each segment in the file. For example,
+the segment’s name, the virtual address, the virtual size, the file offset (i.e. where that segment data is
+located in the file), the file size, initial and maximum memory protections and the number of sections for
+that segment.</p>
+
+<h2 id="segments">Segments</h2>
+
+<p>Segments are portions of the Mach-O file that get mapped in the address space at runtime. They are composed
+of sections, which hold actual data.</p>
+
+<p>~</p>
+
+<p>Whatever data they contain, it is needed by the process at runtime and so it gets mapped in the address space.</p>
+
+<h2 id="sections">Sections</h2>
+
+<p>As we have stated before, segments are made of sections, and those hold actual data. They can contain
+virtually anything, like executable code bytes, data, pointers, strings or even nothing at all (see
+<code class="language-plaintext highlighter-rouge">__PAGEZERO</code> segment).</p>
+
+<h3 id="nlist--nlist_64">nlist / nlist_64</h3>
+
+<h2 id="symbols">Symbols</h2>
+
+<p>Check <a href="https://github.com/facebook/fishhook">facebook/fishhook</a> For Explanations</p>
+
+<h2 id="lazy-linking">Lazy Linking</h2>
+
+<p>Check <a href="https://github.com/facebook/fishhook">facebook/fishhook</a> For Explanations</p>
+
+<h2 id="position-independent-executables">Position Independent Executables</h2>
+
+<p>a.k.a. ASLR-Enabled Executables.</p>
+
+<p>PIE Flag is in the <em>thin</em> mach_header with value <code class="language-plaintext highlighter-rouge">0x200000</code></p>
+
+<p>Minus that from the original flag value will disable ASLR, and vice verse</p>
+
+<h2 id="special-segments">Special Segments</h2>
+
+<p><code class="language-plaintext highlighter-rouge">__PAGEZERO</code> is a special segment with <em>ZERO</em> disk space and takes a page in VM.</p>
+
+<p>When code access <code class="language-plaintext highlighter-rouge">NULL</code>, it will land there Mach-O containing <code class="language-plaintext highlighter-rouge">__RESTRICT/__restrict</code>
+will be flagged by dyld and thus <code class="language-plaintext highlighter-rouge">DYLD_INSERT_LIBRARIES</code> EnvVar will be ignored.(This is added after iOS6)</p>
+
+<h2 id="other-common-load-commands">Other common load commands</h2>
+
+<h2 id="malformed-mach-o">Malformed Mach-O</h2>
+
+<p>By altering Mach-O headers. Different issues would happen within dyld.</p>
+
+<p>Sometimes it can protect the binary from being analyzed</p>
+
+<p>Sometimes it’s a 0Day and can help bypass Code-Signature-Verification</p>
+
+<p>Examples:</p>
+
+<p><del><a href="https://github.com/Naville/MachOProtecter">MachOProtector</a></del></p>
+
+<p>Won’t Work After iOS 8.1 or OS X 10.11</p>
+
+<p><a href="https://github.com/kpwn/yalu">yalu</a></p>
+
+<p>Maybe. Didn’t Check SRC.</p>
+
+<p><a href="http://8.pangu.io">Pangu8</a></p>
+
+<h2 id="two-level-namespace">Two Level Namespace</h2>
+
+<h2 id="the-mach-o-address-space-in-xnudyld-based-oses">The Mach-O Address Space in xnu/dyld based OSes</h2>
+
+<h2 id="dyld-shared-cache">Dyld Shared Cache</h2>
+
+<p>Download the latest dyld source from <a href="http://opensource.apple.com/source/dyld/">here</a>.</p>
+
+<p>Open <code class="language-plaintext highlighter-rouge">./launch-cache/dsc_extractor.cpp</code> and change <code class="language-plaintext highlighter-rouge">#if 0</code> to <code class="language-plaintext highlighter-rouge">#if 1</code>.</p>
+
+<p>~</p>
+
+<p>Then just <code class="language-plaintext highlighter-rouge">clang++ -o dsc_extractor dsc_extractor.cpp dsc_iterator.cpp</code>
+and run <code class="language-plaintext highlighter-rouge">dsc_extractor</code> on the cache to extract.</p>
+
+<h3 id="known-issues">Known Issues</h3>
+
+<p>Seems like segment VM Address is wrong. So the binary is not class-dump able (Just use runtime dump instead)
+not nm-able (solution: simply replace <code class="language-plaintext highlighter-rouge">LC_SEGMENT_SPLIT_INFO</code> to  <code class="language-plaintext highlighter-rouge">LC_SOURCE_VERSION</code>)</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/MachORuntime/">Apple OS X ABI Mach-O File Format Reference</a></li>
+  <li><a href="http://www.opensource.apple.com/source/xnu/xnu-3248.20.55/EXTERNAL_HEADERS/mach-o/loader.h">loader.h (mach-o file format .h)</a></li>
+</ul>
+
+      </section>
+    </div>
+  </body>
+</html>
