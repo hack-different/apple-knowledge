@@ -14,5 +14,8 @@ def build(kwargs):
     input_data = pathlib.Path(os.path.dirname(__file__)).joinpath('../../_site/.data')
     if input_data.exists():
         output_data = pathlib.Path(os.path.dirname(__file__)).joinpath('./share')
+        if not pathlib.Path(output_data).exists():
+            os.mkdir(output_data)
+
         for file in input_data.rglob('*.json'):
             shutil.copy(file, output_data)
