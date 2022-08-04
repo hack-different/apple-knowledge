@@ -1,6 +1,7 @@
 import pathlib
 import os
 import json
+from typing import Dict, Any
 
 DATA_PATH = pathlib.Path(os.path.dirname(__file__)).joinpath('../share/')
 
