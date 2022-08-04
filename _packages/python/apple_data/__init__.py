@@ -5,7 +5,7 @@ import json
 DATA_PATH = pathlib.Path(os.path.dirname(__file__)).joinpath('../share/')
 
 
-def load_file(name: str):
+def load_file(name: str) -> Dict[str, Any]:
     if name.endswith('.yaml'):
         name = name[:-5]
 
@@ -19,5 +19,5 @@ def load_file(name: str):
     return json.loads(data_path.read_text())
 
 
-def get_data(name: str):
+def get_data(name: str) -> Dict[str, Any]:
     return load_file(name)
