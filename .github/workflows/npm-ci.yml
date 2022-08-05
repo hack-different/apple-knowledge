@@ -27,6 +27,11 @@ jobs:
         run: |
           yarn install
 
+      - name: Perform a Build
+        working-directory: ./_packages/node
+        run: |
+          yarn build
+
       - name: Run Package Tests
         working-directory: ./_packages/node
         run: |
