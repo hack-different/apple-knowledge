@@ -12,7 +12,7 @@ import * as fs from "fs";
 import type { PackageJson } from '../types/package-json'
 
 async function getBranchHeight(branchName: string) : Promise<number> {
-    const { stdout } = await util.promisify(exec)('git rev-list --count ^HEAD')
+    const { stdout } = await util.promisify(exec)('git rev-list --count main')
 
     const revCount = Number(stdout || "0")
 
