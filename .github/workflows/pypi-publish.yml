@@ -20,6 +20,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0 # Counter intuitive, but this is the value for full history required for rev-list --count
 
     - name: Set up Python
       uses: actions/setup-python@v2

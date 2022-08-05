@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Counter intuitive, but this is the value for full history required for rev-list --count
 
       - uses: actions/setup-node@v2
         with:
