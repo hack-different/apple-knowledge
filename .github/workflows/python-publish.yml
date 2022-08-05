@@ -13,7 +13,7 @@ on:
     branches: [ main ]
 
 jobs:
-  deploy:
+  publish-pypi:
     runs-on: ubuntu-latest
     environment: pypi-push
 
