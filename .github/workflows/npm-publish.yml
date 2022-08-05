@@ -9,13 +9,11 @@ on:
 
 jobs:
   publish-npm:
-    needs: build
     runs-on: ubuntu-latest
     environment: node-push
+
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
       - uses: actions/setup-node@v2
         with:
