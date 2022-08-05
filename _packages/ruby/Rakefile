@@ -40,3 +40,6 @@ end
 
 desc 'build the package'
 task default: %i[files version]
+
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec)

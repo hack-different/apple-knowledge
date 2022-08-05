@@ -31,4 +31,4 @@ jobs:
       - name: Perform Explicit Rake Test
         working-directory: ./_packages/ruby
         run: |
-          rake test
+          rake spec

@@ -6,7 +6,9 @@ require_relative 'common'
 class KextStatDumpState
   # Represents a kernel extension (kext/dext) loaded from disk
   class KextBundle
+    # rubocop:disable Layout/LineLength
     LINE_REGEX = /\s*(\S+) v(\S+) \((no uuid|[0-9A-F\-]+)\) in (codeless|executable) (kext|dext) bundle (\S+) at (.+) signed (.*) \(([a-f0-9]+)\) (entitlements: \[(.*)\] )?flags \[(.*)\]/
+    # rubocop:enable Layout/LineLength
 
     attr_accessor :id, :version, :hash, :uuid, :codeless, :type, :path, :bundle, :flags, :signer, :entitlements
 
@@ -27,7 +29,9 @@ class KextStatDumpState
 
   # Represents a kernel extension, or psudo-extension loaded from kernel or a .kc
   class KextEntry
+    # rubocop:disable Layout/LineLength
     LINE_REGEX = /\s*(\S+) v(\S+) \((no uuid|[0-9A-F\-]+)\) in loaded (system|boot|auxiliary) (kext|kernel) collection signed (<(.*)>|(\S+))( \((.*)\))? flags \[(.*)\]/
+    # rubocop:enable Layout/LineLength
 
     attr_accessor :id, :version, :uuid, :codeless, :collection_type, :signer, :flags, :collection
 

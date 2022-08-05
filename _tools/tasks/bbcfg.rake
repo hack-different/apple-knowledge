@@ -40,7 +40,7 @@ namespace :data do
 
         base_dir = File.dirname(args[:file])
         extracted_dir = File.join(base_dir, "#{File.basename(args[:file])}_extracted")
-        Dir.mkdir extracted_dir unless Dir.exist? extracted_dir
+        Dir.mkdir extracted_dir
 
         parser.entries[9].value.each do |blob|
           hash = blob.value[0].value
