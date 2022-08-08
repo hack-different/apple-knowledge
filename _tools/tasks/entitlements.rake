@@ -18,7 +18,6 @@ namespace :data do
           entry['types'] << 'boolean' if !entry['types'].include?('boolean') && [true, false].include?(value.value)
           entry['types'] << 'array' if !entry['types'].include?('array') && value.value.is_a?(Array)
         end
-      rescue StandardError
       end
       data.save
     end

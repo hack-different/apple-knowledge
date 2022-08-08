@@ -6,9 +6,6 @@ Found this years ago while being stalked in SF [mojo_thor](https://github.com/ri
 more kernel extensions beyond just `MojoKDP` that are involved.  MojoKDP was originally found by running a VM, then
 capturing the memory state providing a core dump. (see other repo)
 
-Also, my ex at Apple is a total criminal for using this over many years to stalk me... But Apple refuses
-to discuss the issue with me.
-
 ## Overall Theory
 
 Two Possibilities:

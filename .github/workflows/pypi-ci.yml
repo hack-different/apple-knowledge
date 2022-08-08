@@ -1,0 +1,35 @@
+name: Python Package CI
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  ci-test-python:
+    name: Perform Python CI Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Counter intuitive, but this is the value for full history required for rev-list --count
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+
+      - name: Install Poetry
+        working-directory: ./_packages/python
+        run: |
+          python -m pip install --upgrade pip poetry
+
+      - name: Install Dependencies
+        working-directory: ./_packages/python
+        run: |
+          poetry install
+
+      - name: Perform Tests
+        working-directory: ./_packages/python
+        run: |
+          poetry run pytest

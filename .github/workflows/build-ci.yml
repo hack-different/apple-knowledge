@@ -1,0 +1,41 @@
+name: Jekyll Site CI
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  ci-test-ruby:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Counter intuitive, but this is the value for full history required for rev-list --count
+
+      - name: Set up Ruby 3.1
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1.2
+
+      - name: Install Dependencies
+        run: |
+          bundle install
+
+      - name: Perform Default Rake Task
+        run: |
+          rake
+
+  ci-build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0 # Counter intuitive, but this is the value for full history required for rev-list --count
+
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"

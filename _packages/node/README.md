@@ -13,10 +13,13 @@ be made to update the data files by any other method.
 
 For the time being, there is only one simple API:
 
-```python
-from apple_data import get_data
+```js
+import { getData } from 'apple-data';
 
-REGISERS = get_data('registers')
+// 'cores' is the path of the data file without extension in the _data directory of
+// apple-knowledge
+
+const cores_data = await getData('cores');
 ```
 
 ## Credits

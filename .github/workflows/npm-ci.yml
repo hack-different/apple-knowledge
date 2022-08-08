@@ -1,16 +1,14 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
-
-name: Upload NPM Package
+name: NPM / Node Package CI
 
 on:
-  push:
+  pull_request:
     branches: [ main ]
 
+
 jobs:
-  publish-npm:
+  ci-test-node:
+    name: Perform Node Continuous Integration Tests
     runs-on: ubuntu-latest
-    environment: node-push
 
     steps:
       - uses: actions/checkout@v2
@@ -19,7 +17,7 @@ jobs:
 
       - uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: 18
           cache: yarn
           cache-dependency-path: _packages/node/yarn.lock
           registry-url: https://registry.npmjs.org/
@@ -29,7 +27,7 @@ jobs:
         run: |
           yarn install
 
-      - name: Build package
+      - name: Perform a Build
         working-directory: ./_packages/node
         run: |
           yarn build
@@ -38,9 +36,3 @@ jobs:
         working-directory: ./_packages/node
         run: |
           yarn test
-
-      - name: Publish to NPM Registry
-        run: yarn publish
-        working-directory: ./_packages/node
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}

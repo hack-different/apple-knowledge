@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # typed: ignore
-#
+
 require_relative '../lib/common'
 
 CLASS_NAME_REGEX = /o\s([A-Za-z0-9\s,\-_]+)(@[a-fA-F0-9]+)?\s+<class ([a-zA-Z0-9:]+),/

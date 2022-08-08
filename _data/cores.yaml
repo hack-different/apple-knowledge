@@ -3,6 +3,11 @@ metadata:
   description: attributes about various Apple SoCs and Boards
   credits:
 templates:
+  - &dfu_load_s8001
+    dfu_image_base: 0x180000000
+    dfu_load_base: 0x800000000
+    recovery_image_base: 0x180000000
+    recovery_load_base: 0x800000000
   - &dfu_load_s894x
     dfu_image_base: 0x34000000
     dfu_load_base: 0x9FF00000

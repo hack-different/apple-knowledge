@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  publish-gem:
     name: Build + Publish
     runs-on: ubuntu-latest
     environment: gem-push
@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        fetch-depth: 0
+        fetch-depth: 0 # Counter intuitive, but this is the value for full history required for rev-list --count
 
     - name: Set up Ruby 3.1
       uses: ruby/setup-ruby@v1

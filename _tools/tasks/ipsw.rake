@@ -54,5 +54,23 @@ namespace :data do
 
       ap tree.to_h
     end
+
+    desc 'total order each IPSW'
+    task :total_order do
+      data_file = DataFile.new 'ipsw'
+      collection = data_file.collection :ipsw_files
+
+      collection.each do |_, entry|
+        if entry['urls']&.any? { |url| url.is_a?(String) }
+          entry['urls'] = entry['urls'].map do |url|
+            { 'url' => url }
+          end
+        end
+
+        entry['hashes'] = entry['hashes'].sort.to_h if entry['hashes']
+      end
+
+      data_file.save
+    end
   end
 end

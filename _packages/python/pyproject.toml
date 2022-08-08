@@ -1,3 +1,7 @@
+[build-system]
+requires = ["poetry_core>=1.0.1", "PyYAML>=5",'setuptools>=38.6.0']
+build-backend = "poetry.core.masonry.api"
+
 [tool.poetry]
 name = "apple-data"
 version = "1.0.0"
@@ -13,3 +17,4 @@ python = "^3.8"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.1"
+PyYAML = "^6.0"
