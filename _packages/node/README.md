@@ -5,7 +5,7 @@ Brought to you by the [Hack Different](https://hackdifferent.com) team.
 ## Introduction
 
 This is a package with data files sourced from
-the [Hack Different - Apple Knowledge](https://github.com/hack-different/apple-knowledge/tree/main/_data)
+the [hack-different/apple-knowledge](https://github.com/hack-different/apple-knowledge/tree/main/_data)
 repository.  Updates to that repository will automatically update this package, therefore no attempt should
 be made to update the data files by any other method.
 
@@ -24,6 +24,7 @@ const cores_data = await getData('cores');
 
 ## Credits
 
-* [Hack Different](https://hackdifferent.com)
+* [Hack Different - Community](https://hackdifferent.com)
+* [Hack Different - Discord](https://hackdifferent.com/discord)
 
-Created and maintained as a labor of love by [`rickmark`](https://github.com/rickmark)
+Package and repo created and maintained as a labor of love by [`rickmark`](https://github.com/rickmark)

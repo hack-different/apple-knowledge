@@ -11,14 +11,20 @@ import {parse as parseYaml} from 'yaml';
 import * as fs from "fs";
 import type { PackageJson } from '../types/package-json'
 
-async function getBranchHeight(branchName: string) : Promise<number> {
-    const { stdout } = await util.promisify(exec)('git rev-list --count main --')
+async function getBranchHeight(branchName: string = "main") : Promise<number> {
+    try {
+        const { stdout } = await util.promisify(exec)(`git rev-list --count {branchName}`)
 
-    const revCount = Number(stdout || "0")
+        const revCount = Number(stdout || "0")
 
-    console.log(`height of branch ${branchName}: ${revCount} commits`)
+        console.log(`height of branch ${branchName}: ${revCount} commits`)
 
-    return revCount
+        return revCount
+    }
+    catch (e) {
+        console.log("Could not get branch height")
+        return 0
+    }
 }
 
 async function updateVersion() : Promise<void> {

@@ -1,8 +1,14 @@
 # typed: strict
 # frozen_string_literal: true
 
-require 'apple-data/boot_args'
-require 'apple-data/fdr'
-require 'apple-data/ioreg'
-require 'apple-data/macho'
-require 'apple-data/lockdown'
+require 'apple_data/boot_args'
+require 'apple_data/fdr'
+require 'apple_data/ioreg'
+require 'apple_data/macho'
+require 'apple_data/lockdown'
+
+APPLE_DATA_SHARE = File.join(File.dirname(__FILE__), '../share/')
+
+def get_data(file)
+  YAML.load_file(File.join(APPLE_DATA_SHARE, file))
+end
