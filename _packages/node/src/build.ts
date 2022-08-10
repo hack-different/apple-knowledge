@@ -13,7 +13,7 @@ import type { PackageJson } from '../types/package-json'
 
 async function getBranchHeight(branchName: string = "main") : Promise<number> {
     try {
-        const { stdout } = await util.promisify(exec)(`git rev-list --count {branchName}`)
+        const { stdout } = await util.promisify(exec)(`git rev-list --count ${branchName}`)
 
         const revCount = Number(stdout || "0")
 
@@ -22,7 +22,7 @@ async function getBranchHeight(branchName: string = "main") : Promise<number> {
         return revCount
     }
     catch (e) {
-        console.log("Could not get branch height")
+        console.log("Could not get branch height due to\n", e)
         return 0
     }
 }
