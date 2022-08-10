@@ -26,9 +26,13 @@ Gemspec/RequireMFA:
 
 Metrics/BlockLength:
   Max: 35
-  IgnoredMethods:
+  AllowedPatterns:
     - namespace
     - task
+
+Naming/FileName:
+  Exclude:
+    - '_packages/ruby/lib/apple-data.rb'
 
 Metrics/AbcSize:
   CountRepeatedAttributes: false
