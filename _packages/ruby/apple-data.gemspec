@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.licenses    = ['MIT']
   s.summary     = 'Static data files from https://docs.hackdiffe.rent'
 
-  spec.description = <<-DESC
+  s.description = <<-DESC
     This package includes machine readable data about Apple platforms maintained by hack-different.
 
     To update the contents of this gem perform a pull request against the `_data` folder of the repository

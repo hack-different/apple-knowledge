@@ -32,3 +32,8 @@ jobs:
         working-directory: ./_packages/ruby
         run: |
           rake spec
+
+      - name: Build Gem
+        working-directory: ./_packages/ruby
+        run: |
+          gem build *.gemspec
