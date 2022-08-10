@@ -22,3 +22,7 @@ def load_file(name: str) -> Dict[str, Any]:
 
 def get_data(name: str) -> Dict[str, Any]:
     return load_file(name)
+
+
+def get_url(name: str, format = None) -> str:
+    return f"https://docs.hackdiff.rent/.data/{name}.{format}" if format else f"https://docs.hackdiff.rent/.data/{name}.json"
