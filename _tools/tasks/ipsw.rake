@@ -5,6 +5,73 @@ require_relative '../lib/merkle'
 
 namespace :data do
   namespace :ipsw do
+    desc 'download ipsw manifests'
+    task :manifests do
+      data_file = DataFile.new 'ipsw'
+      collection = data_file.collection :ipsw_files
+
+      file_path = File.join(TMP_DIR, 'ipsw', 'build_manifests')
+      FileUtils.mkdir_p file_path unless File.directory? file_path
+
+      collection.each do |key, value|
+        output_file = File.join(file_path, "#{key}.plist")
+        next if File.exist? output_file
+
+        (value['urls'] || []).each do |url|
+          uri = URI.parse url['url']
+          target_uri = uri.merge('BuildManifest.plist')
+
+          http_conn = Faraday.new uri, ssl: { verify: false } do |builder|
+            builder.use FaradayMiddleware::FollowRedirects
+            builder.adapter Faraday.default_adapter
+          end
+          response = http_conn.get target_uri
+          next unless response.status == 200
+
+          File.write output_file, response.body
+        rescue StandardError
+          next
+        end
+
+        puts "Unable to get manifest for #{key}"
+      end
+    end
+
+    namespace :manifests do
+      desc 'download ipsw manifests from local store'
+      task :local, [:dir] do |_task, args|
+        raise("No directory exists at #{args[:dir]}") unless File.directory? args[:dir]
+
+        data_file = DataFile.new 'ipsw'
+        collection = data_file.collection :ipsw_files
+
+        file_path = File.join(TMP_DIR, 'ipsw', 'build_manifests')
+        FileUtils.mkdir_p file_path unless File.directory? file_path
+
+        collection.each do |key, _value|
+          output_file = File.join(file_path, "#{key}.plist")
+          next if File.exist? output_file
+
+          full_path = File.join(args[:dir], key)
+          unless File.exist? full_path
+            puts "Unable to get IPSW for #{key}"
+            next
+          end
+
+          Zip::File.open(full_path) do |zip_file|
+            entry = zip_file.find_entry('BuildManifest.plist')
+            if entry
+              File.write output_file, entry.get_input_stream.read
+            else
+              puts "Unable to get manifest in IPSW at #{full_path}"
+            end
+          end
+        rescue StandardError
+          next
+        end
+      end
+    end
+
     desc 'update hashes for IPSW from shasum file'
     task :hashes, [:shasums] do |_task, args|
       filename = args[:shasums]

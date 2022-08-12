@@ -103,10 +103,10 @@ namespace :tipw do
     uri_map.each do |file, file_urls|
       single_file = files_collection.ensure_key file
       single_file['urls'] ||= []
-      single_file['urls'] << single_file.delete('url') if single_file.key? 'url'
+      single_file['urls'] << { url: single_file.delete('url') } if single_file.key? 'url'
 
-      file_urls.map(&:to_s).each do |url|
-        single_file['urls'] << url unless single_file['urls'].include?(url)
+      file_urls.map(&:to_s).each do |single_url|
+        single_file['urls'] << { url: single_url } unless single_file['urls'].any? { |u| u['url'] == single_url }
       end
     end
 
