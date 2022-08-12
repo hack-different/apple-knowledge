@@ -56,6 +56,7 @@ group :development, :test do
   gem 'rubocop'
   gem 'ruby-macho'
   gem 'sorbet'
+  gem 'tapioca', require: false
   gem 'webrick'
 end
 
