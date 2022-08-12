@@ -139,5 +139,55 @@ namespace :data do
 
       data_file.save
     end
+
+    desc 'missing IPSWs from local store'
+    task :missing, [:dir, :urls] do |_task, args|
+      raise("No directory exists at #{args[:dir]}") unless File.directory? args[:dir]
+
+      data_file = DataFile.new 'ipsw'
+      collection = data_file.collection :ipsw_files
+
+      collection.each do |key, value|
+        full_path = File.join(args[:dir], key)
+        unless File.exist? full_path
+          if args[:urls]
+            (value['urls'] || []).each do |url|
+              puts url['url']
+            end
+          else
+            puts "Missing IPSW: #{key}"
+          end
+        end
+      rescue StandardError
+        next
+      end
+    end
+
+    desc 'invalid IPSWs from local store'
+    task :invalid, [:dir] do |_task, args|
+      raise("No directory exists at #{args[:dir]}") unless File.directory? args[:dir]
+
+      data_file = DataFile.new 'ipsw'
+      collection = data_file.collection :ipsw_files
+
+      collection.each do |key, _value|
+        full_path = File.join(args[:dir], key)
+        unless File.exist? full_path
+          puts "Missing IPSW: #{key}"
+          next
+        end
+
+        Zip::File.open(full_path) do |zip_file|
+          entry = zip_file.find_entry('BuildManifest.plist')
+          if entry
+            File.write output_file, entry.get_input_stream.read
+          else
+            puts "Unable to get manifest in IPSW at #{full_path}"
+          end
+        end
+      rescue StandardError
+        next
+      end
+    end
   end
 end
