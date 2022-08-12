@@ -128,6 +128,8 @@ namespace :data do
       collection = data_file.collection :ipsw_files
 
       collection.each do |_, entry|
+        entry.delete 'description'
+
         if entry['urls']&.any? { |url| url.is_a?(String) }
           entry['urls'] = entry['urls'].map do |url|
             { 'url' => url }

@@ -106,7 +106,7 @@ namespace :tipw do
       single_file['urls'] << { url: single_file.delete('url') } if single_file.key? 'url'
 
       file_urls.map(&:to_s).each do |single_url|
-        single_file['urls'] << { url: single_url } unless single_file['urls'].any? { |u| u['url'] == single_url }
+        single_file['urls'] << { 'url' => single_url } unless single_file['urls'].any? { |u| u['url'] == single_url }
       end
     end
 
