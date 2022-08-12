@@ -911,6 +911,7 @@ mobile_assets:
   asset_type: com.apple.MobileAsset.RecoveryOSUpdateBrain
 - url: https://mesu.apple.com/assets/watchOS7DeveloperSeed/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain.xml
   asset_type: com.apple.MobileAsset.MobileSoftwareUpdate.UpdateBrain
+  audience: watchOS7DeveloperSeed
 - url: https://mesu.apple.com/assets/watchOS7DeveloperSeed/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
   asset_type: com.apple.MobileAsset.RecoveryOSUpdate
 - url: https://mesu.apple.com/assets/watchOS7DeveloperSeed/com_apple_MobileAsset_RecoveryOSUpdateBrain/com_apple_MobileAsset_RecoveryOSUpdateBrain.xml
@@ -923,28 +924,72 @@ mobile_assets:
   asset_type: com.apple.MobileAsset.RecoveryOSUpdateBrain
 - url: https://mesu.apple.com/assets/watchOSDeveloperSeed/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain.xml
   asset_type: com.apple.MobileAsset.MobileSoftwareUpdate.UpdateBrain
-without_asset_type:
-- https://mesu.apple.com/assets/watchOS7PublicSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-- https://mesu.apple.com/assets/watchOS6AppleSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-- https://mesu.apple.com/assets/watchOS4DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-- https://mesu.apple.com/assets/watch/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
-- https://mesu.apple.com/assets/tvOSDeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-- https://mesu.apple.com/assets/watchOS5DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-- https://mesu.apple.com/assets/watchOS6AppleSeed/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
-- https://mesu.apple.com/assets/tvOS14PublicSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-- https://mesu.apple.com/assets/watchOS6DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-- https://mesu.apple.com/assets/watchOS6DeveloperSeed/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
-- https://mesu.apple.com/assets/watchOS7DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-- https://mesu.apple.com/assets/watchOSDeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-- https://mesu.apple.com/carrierseedios7/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-- https://mesu.apple.com/carrierseedios7/assets/com_apple_MobileAsset_SoftwareUpdateDocumentation/com_apple_MobileAsset_SoftwareUpdateDocumentation.xml
-- https://mesu.apple.com/carrierseedios8/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-- https://mesu.apple.com/carrierseedios8/assets/com_apple_MobileAsset_SoftwareUpdateDocumentation/com_apple_MobileAsset_SoftwareUpdateDocumentation.xml
-- https://mesu.apple.com/ios5carrierseed/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-- https://mesu.apple.com/ios5carrierseed/assets/com_apple_MobileAsset_SoftwareUpdateDocumentation/com_apple_MobileAsset_SoftwareUpdateDocumentation.xml
-- https://mesu.apple.com/iossixcarrierseed/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-- https://mesu.apple.com/assets/tvOS11DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
-- https://mesu.apple.com/iossixcarrierseed/assets/com_apple_MobileAsset_SoftwareUpdateDocumentation/com_apple_MobileAsset_SoftwareUpdateDocumentation.xml
+- url: https://mesu.apple.com/assets/watchOS7PublicSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdate
+  audience: watchOS7PublicSeed
+- url: https://mesu.apple.com/assets/watchOS6AppleSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdate
+  audience: watchOS6AppleSeed
+- url: https://mesu.apple.com/assets/watchOS4DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdate
+  audience: watchOS4DeveloperSeed
+- url: https://mesu.apple.com/assets/watch/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
+  asset_type: com.apple.MobileAsset.RecoveryOSUpdate
+  device: watch
+- url: https://mesu.apple.com/assets/tvOSDeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdate
+  audience: tvOSDeveloperSeed
+- url: https://mesu.apple.com/assets/watchOS5DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdate
+  audience:  watchOS5DeveloperSeed
+- url: https://mesu.apple.com/assets/watchOS6AppleSeed/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
+  asset_type: com.apple.MobileAsset.RecoveryOSUpdate
+  audience: watchOS6AppleSeed
+- url: https://mesu.apple.com/assets/tvOS14PublicSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdate
+  audience: tvOS14PublicSeed
+- url: https://mesu.apple.com/assets/watchOS6DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdate
+  audience: watchOS6DeveloperSeed
+- url: https://mesu.apple.com/assets/watchOS6DeveloperSeed/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
+  asset_type: com.apple.MobileAsset.RecoveryOSUpdate
+  audience: watchOS6DeveloperSeed
+- url: https://mesu.apple.com/assets/watchOS7DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdate
+  audience: watchOS7DeveloperSeed
+- url: https://mesu.apple.com/assets/watchOSDeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdate
+  audience: watchOSDeveloperSeed
+- url: https://mesu.apple.com/carrierseedios7/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdate
+  audience: carrierseedios7
+- url: https://mesu.apple.com/carrierseedios8/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdate
+  audience: carrierseedios8
+- url: https://mesu.apple.com/ios5carrierseed/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdate
+  audience:  ios5carrierseed
+- url: https://mesu.apple.com/iossixcarrierseed/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdate
+  audience: iossixcarrierseed
+- url: https://mesu.apple.com/iossixcarrierseed/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdate
+  audience: iossixcarrierseed
+- url: https://mesu.apple.com/assets/tvOS11DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdate
+  audience: tvOS11DeveloperSeed
+- url: https://mesu.apple.com/carrierseedios7/assets/com_apple_MobileAsset_SoftwareUpdateDocumentation/com_apple_MobileAsset_SoftwareUpdateDocumentation.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdateDocumentation
+  audience: carrierseedios7
+- url: https://mesu.apple.com/carrierseedios8/assets/com_apple_MobileAsset_SoftwareUpdateDocumentation/com_apple_MobileAsset_SoftwareUpdateDocumentation.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdateDocumentation
+  audience: carrierseedios8
+- url: https://mesu.apple.com/ios5carrierseed/assets/com_apple_MobileAsset_SoftwareUpdateDocumentation/com_apple_MobileAsset_SoftwareUpdateDocumentation.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdateDocumentation
+  audience: ios5carrierseed
+- url: https://mesu.apple.com/iossixcarrierseed/assets/com_apple_MobileAsset_SoftwareUpdateDocumentation/com_apple_MobileAsset_SoftwareUpdateDocumentation.xml
+  asset_type: com.apple.MobileAsset.SoftwareUpdateDocumentation
+  audience: iossixcarrierseed
 template_assets:
   com_apple_MobileAsset_SystemApp:
     tempalte_url: https://mesu.apple.com/systemassets/{build_id}/{system_image_id}/com_apple_MobileAsset_SystemApp/com_apple_MobileAsset_SystemApp.xml
