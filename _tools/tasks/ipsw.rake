@@ -5,7 +5,7 @@ require_relative '../lib/merkle'
 
 namespace :data do
   namespace :ipsw do
-    desc 'download ipsw manifests'
+    desc 'process ipsw manifests'
     task :manifests do
       data_file = DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
@@ -14,30 +14,57 @@ namespace :data do
       FileUtils.mkdir_p file_path unless File.directory? file_path
 
       collection.each do |key, value|
-        output_file = File.join(file_path, "#{key}.plist")
-        next if File.exist? output_file
+        manifest_file = File.join(file_path, "#{key}.plist")
+        next unless File.exist? manifest_file
 
-        (value['urls'] || []).each do |url|
-          uri = URI.parse url['url']
-          target_uri = uri.merge('BuildManifest.plist')
+        raw_plist = CFPropertyList::List.new(file: manifest_file)
+        plist = CFPropertyList.native_types(raw_plist.value)
 
-          http_conn = Faraday.new uri, ssl: { verify: false } do |builder|
-            builder.use FaradayMiddleware::FollowRedirects
-            builder.adapter Faraday.default_adapter
-          end
-          response = http_conn.get target_uri
-          next unless response.status == 200
+        metadata = {}
+        metadata['build_number'] = plist['ProductBuildVersion']
+        metadata['version'] = plist['ProductVersion']
+        metadata['products'] = plist['SupportedProductTypes']
+        metadata['build_identities'] = plist['BuildIdentities']&.map { |i| i['UniqueBuildID']&.unpack1('H*') }&.compact
 
-          File.write output_file, response.body
-        rescue StandardError
-          next
-        end
-
-        puts "Unable to get manifest for #{key}"
+        value['metadata'] = metadata
       end
+
+      data_file.save
     end
 
     namespace :manifests do
+      desc 'download ipsw manifests'
+      task :download do
+        data_file = DataFile.new 'ipsw'
+        collection = data_file.collection :ipsw_files
+
+        file_path = File.join(TMP_DIR, 'ipsw', 'build_manifests')
+        FileUtils.mkdir_p file_path unless File.directory? file_path
+
+        collection.each do |key, value|
+          output_file = File.join(file_path, "#{key}.plist")
+          next if File.exist? output_file
+
+          (value['urls'] || []).each do |url|
+            uri = URI.parse url['url']
+            target_uri = uri.merge('BuildManifest.plist')
+
+            http_conn = Faraday.new uri, ssl: { verify: false } do |builder|
+              builder.use FaradayMiddleware::FollowRedirects
+              builder.adapter Faraday.default_adapter
+            end
+            response = http_conn.get target_uri
+            next unless response.status == 200
+
+            File.write output_file, response.body
+          rescue StandardError
+            next
+          end
+
+          puts "Unable to get manifest for #{key}"
+        end
+      end
+
       desc 'download ipsw manifests from local store'
       task :local, [:dir] do |_task, args|
         raise("No directory exists at #{args[:dir]}") unless File.directory? args[:dir]
