@@ -99,6 +99,31 @@ namespace :data do
       end
     end
 
+    desc 'download device trees from IPSWs from local store'
+    task :dt, [:dir] do |_task, args|
+      raise("No directory exists at #{args[:dir]}") unless File.directory? args[:dir]
+
+      data_file = DataFile.new 'ipsw'
+      collection = data_file.collection :ipsw_files
+
+      file_path = File.join(TMP_DIR, 'ipsw', 'device_trees')
+      FileUtils.mkdir_p file_path unless File.directory? file_path
+
+      collection.each do |key, _value|
+        full_path = File.join(args[:dir], key)
+        next unless File.exist? full_path
+
+        ipsw_root = File.join(file_path, key)
+        FileUtils.mkdir_p ipsw_root unless File.directory? ipsw_root
+
+        Zip::File.foreach(full_path) do |entry|
+          entry.extract(File.join(ipsw_root, File.basename(entry.name))) if entry.name.include? 'DeviceTree'
+        end
+      rescue StandardError => e
+        puts e
+      end
+    end
+
     desc 'update hashes for IPSW from shasum file'
     task :hashes, [:shasums] do |_task, args|
       filename = args[:shasums]
