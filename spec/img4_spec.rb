@@ -29,7 +29,7 @@ if TEST_IMG4P
       file_basename = File.basename(TEST_IMG4P)
 
       puts "file_basename: #{file.basename}"
-      expect(file.basename.length).to be(file_basename.length - 5)
+      expect(file.basename.length).to be(file_basename.length)
     end
   end
 end
