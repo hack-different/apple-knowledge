@@ -64,3 +64,8 @@ PostCheckout:
 PostMerge:
   SubmoduleStatus:
     enabled: true
+
+
+PrePush:
+  RSpec:
+    enabled: true

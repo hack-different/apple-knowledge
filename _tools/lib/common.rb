@@ -24,6 +24,8 @@ require 'zlib'
 require 'byebug'
 require 'pry'
 
+BASE_PATH = File.expand_path('..', __dir__) unless defined? BASE_PATH
+
 DATA_DIR = File.realdirpath File.join(BASE_PATH, '_data')
 TMP_DIR = File.join(BASE_PATH, 'tmp')
 

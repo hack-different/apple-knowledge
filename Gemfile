@@ -17,6 +17,10 @@ source 'https://rubygems.org'
 
 gem 'jekyll', '~> 4.2'
 gem 'plist'
+gem 'toml', '~> 0.3.0', github: 'rickmark/toml'
+
+gem 'mootool', '~> 0.1.2'
+
 gem 'sorbet-runtime'
 
 # If you have any plugins, put them here!
@@ -43,23 +47,21 @@ group :development, :test do
   gem 'bundle-audit'
   gem 'byebug'
   gem 'CFPropertyList'
-  gem 'faraday'
+  gem 'faraday', '~> 2.5'
+  gem 'faraday-retry'
   gem 'kramdown'
   gem 'manpages'
   gem 'mdl'
-  gem 'mediawiki_api'
+  gem 'mediawiki_api', github: 'rickmark/mediawiki-ruby-api'
   gem 'nokogiri'
   gem 'octokit'
   gem 'overcommit'
   gem 'pry'
   gem 'rake'
+  gem 'rspec'
+  gem 'rspec-rake'
   gem 'rubocop'
   gem 'ruby-macho'
   gem 'sorbet'
   gem 'tapioca', require: false
-  gem 'webrick'
 end
-
-gem 'toml', '~> 0.3.0', github: 'rickmark/toml'
-
-gem 'mootool', '~> 0.1.2'
