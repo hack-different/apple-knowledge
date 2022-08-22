@@ -8,22 +8,22 @@ environment_variables:
   __CFPREFERENCES_AVOID_DAEMON:
     type: boolean
     values:
-    - 0
-    - 1
+    - "0"
+    - "1"
   __CF_USER_TEXT_ENCODING:
     examples:
-    - 0x0:0:0
-    - 0x1F5:0x0:0x0
+    - "0x0:0:0"
+    - "0x1F5:0x0:0x0"
   ASL_DISABLE:
     type: boolean
     values:
-    - 0
-    - 1
+    - "0"
+    - "1"
   CA_ASSERT_MAIN_THREAD_TRANSACTIONS:
     type: boolean
     values:
-    - 0
-    - 1
+    - "0"
+    - "1"
   CA_DEBUG_TRANSACTIONS:
     description: debug core animation transactions
     type: boolean
@@ -35,25 +35,25 @@ environment_variables:
   CFNETWORK_STORAGED_TIMERELOFF:
     type: boolean
     values:
-    - false
-    - true
+    - "false"
+    - "true"
   CHECK_IN:
     type: boolean
     values:
-    - 0
-    - 1
+    - "0"
+    - "1"
   CLEAN_FILES_OLDER_THAN_DAYS:
     type: integer
   com.apple.CoreData.CloudKitDebug:
     type: boolean
     values:
-    - 0
-    - 1
+    - "0"
+    - "1"
   com.apple.CoreData.XPCDebug:
     type: boolean
     values:
-    - 0
-    - 1
+    - "0"
+    - "1"
   COMMAND_MODE:
     type: string
     examples:
@@ -70,7 +70,7 @@ environment_variables:
     format: path
   DEBUGSCOPE:
     type: array
-    seperator: ","
+    separator: ","
     values:
     - all
     - "-policy-node"
@@ -98,7 +98,7 @@ environment_variables:
       a framework is not found at its install path, dyld uses this as a list of directories
       to search for the framework.
     type: array
-    seperator: ":"
+    separator: ":"
     default: "/Library/Frameworks:/System/Library/Frameworks"
   DYLD_FALLBACK_LIBRARY_PATH:
     description: |
@@ -106,12 +106,10 @@ environment_variables:
       path, dyld uses this as a list of directories to search for the dylib.  By default, it is set
       to /usr/local/lib:/usr/lib.
     type: array
-    seperator: ":"
+    separator: ":"
     default: "/usr/local/lib:/usr/lib"
   DYLD_FORCE_FLAT_NAMESPACE:
-    description: 'Disable two level namespaces
-
-      '
+    description: 'Disable two level namespaces'
   DYLD_FRAMEWORK_PATH:
     description: |
       This is a colon separated list of directories that contain frameworks.  The dynamic linker searches these
@@ -126,7 +124,7 @@ environment_variables:
       Use the -L option to otool(1) to discover the frameworks and shared libraries that the executable is linked
       against.
     type: array
-    seperator: ":"
+    separator: ":"
   DYLD_IMAGE_SUFFIX:
     description: |
       This is set to a string of a suffix to try to be used for all shared libraries used by the program.  For
@@ -141,7 +139,7 @@ environment_variables:
       If instead, your goal is to substitute a library that would normally be loaded, use `DYLD_LIBRARY_PATH`
       or `DYLD_FRAMEWORK_PATH` instead.
     type: array
-    seperator: ":"
+    separator: ":"
   DYLD_LIBRARY_PATH:
     description: |
       This is a colon separated list of directories that contain libraries. The dynamic linker searches these
@@ -154,7 +152,7 @@ environment_variables:
       Use the `-L` option to `otool(1)` to discover the frameworks and shared libraries that the executable is linked
       against.
     type: array
-    seperator: ":"
+    separator: ":"
   DYLD_NO_FIX_PREBINDING:
   DYLD_PRINT_APIS:
     description: 'If set, causes dyld to print a line whenever a dyld API is called
@@ -168,10 +166,8 @@ environment_variables:
       '
   DYLD_PRINT_DOFS:
   DYLD_PRINT_ENV:
-    description: 'If set, causes dyld to print a line of key=valule for each enviroment
-      variable in the process.
-
-      '
+    description: 'If set, causes dyld to print a line of key=value for each environment
+      variable in the process.'
     type: presence
   DYLD_PRINT_INITIALIZERS:
     description: |
@@ -235,7 +231,7 @@ environment_variables:
       Note: dyld does not check the framework's Info.plist to find its version.  Dyld only checks the `-current_version`
       number supplied when the framework was created.
     type: array
-    seperator: ":"
+    separator: ":"
     default: "/Library/Frameworks:/System/Library/Frameworks"
   DYLD_VERSIONED_LIBRARY_PATH:
     description: |
@@ -252,8 +248,8 @@ environment_variables:
   LIBDISPATCH_STRICT:
     type: boolean
     values:
-    - false
-    - true
+    - "false"
+    - "true"
   LOGNAME:
     type: string
     format: username
@@ -263,36 +259,36 @@ environment_variables:
   MallocCorruptionAbort:
     type: boolean
     values:
-    - 0
-    - 1
+    - "0"
+    - "1"
   MallocMaxMagazines:
     type: integer
   MallocNanoZone:
     type: boolean
     values:
-    - 0
-    - 1
+    - "0"
+    - "1"
   MallocSpaceEfficient:
     type: boolean
     values:
-    - 0
-    - 1
+    - "0"
+    - "1"
   MallocStackLoggingDirectory:
     type: string
     format: path
   NSRunningFromLaunchd:
     type: boolean
     values:
-    - 0
-    - 1
+    - "0"
+    - "1"
   NSZombieEnabled:
     type: boolean
     values:
-    - false
-    - true
+    - "false"
+    - "true"
   PATH:
     type: array
-    seperator: ":"
+    separator: ":"
     default:
     - "/usr/bin"
     - "/bin"
@@ -307,31 +303,31 @@ environment_variables:
   OS_ACTIVITY_MODE:
     type: boolean
     values:
-    - disable
-    - enable
+    - "disable"
+    - "enable"
   PWD:
     type: string
     format: path
   REACH_DARK_WAKE_CONTROL:
     type: boolean
     values:
-    - true
-    - false
+    - "true"
+    - "false"
   REACH_DARK_WAKE_NOTIFY:
     type: boolean
     values:
-    - true
-    - false
+    - "true"
+    - "false"
   RPC_DEBUG:
     type: boolean
     values:
-    - 0
-    - 1
+    - "0"
+    - "1"
   RUN_WITH_LAUNCHD:
     type: boolean
     values:
-    - 0
-    - 1
+    - "0"
+    - "1"
   SSH_AUTH_SOCK:
     type: string
     format: path
@@ -341,14 +337,14 @@ environment_variables:
   WAIT4DEBUGGER:
     type: boolean
     values:
-    - false
-    - true
+    - "false"
+    - "true"
   XPC_FLAGS:
   XPC_NULL_BOOTSTRAP:
     type: boolean
     values:
-    - 0
-    - 1
+    - "0"
+    - "1"
   XPC_SERVICE_NAME:
     type: string
 

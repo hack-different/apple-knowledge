@@ -64,7 +64,7 @@ module Concurrent
   def call_dataflow(method, executor, *inputs, &block); end
 
   # Dataflow allows you to create a task that will be scheduled when all of its data dependencies are available.
-  # {include:file:docs-source/dataflow.md}
+  # {include:file:_docs-source/dataflow.md}
   #
   # @param inputs [Future] zero or more `Future` operations that this dataflow depends upon
   # @raise [ArgumentError] if no block is given
@@ -156,7 +156,7 @@ module Concurrent
     def create_stdlib_logger(level = T.unsafe(nil), output = T.unsafe(nil)); end
 
     # Dataflow allows you to create a task that will be scheduled when all of its data dependencies are available.
-    # {include:file:docs-source/dataflow.md}
+    # {include:file:_docs-source/dataflow.md}
     #
     # @param inputs [Future] zero or more `Future` operations that this dataflow depends upon
     # @raise [ArgumentError] if no block is given
@@ -3998,7 +3998,7 @@ class Concurrent::FixedThreadPool < ::Concurrent::ThreadPoolExecutor
   def initialize(num_threads, opts = T.unsafe(nil)); end
 end
 
-# {include:file:docs-source/future.md}
+# {include:file:_docs-source/future.md}
 #
 # @see http://ruby-doc.org/stdlib-2.1.1/libdoc/observer/rdoc/Observable.html Ruby Observable module
 # @see http://clojuredocs.org/clojure_core/clojure.core/future Clojure's future function
@@ -6344,7 +6344,7 @@ end
 # source://concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/promise.rb:11
 class Concurrent::PromiseExecutionError < ::StandardError; end
 
-# {include:file:docs-source/promises-main.md}
+# {include:file:_docs-source/promises-main.md}
 #
 # source://concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/promises.rb:11
 module Concurrent::Promises
@@ -9942,8 +9942,8 @@ class Concurrent::SingleThreadExecutor < ::Concurrent::RubySingleThreadExecutor;
 # source://concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/single_thread_executor.rb:10
 Concurrent::SingleThreadExecutorImplementation = Concurrent::RubySingleThreadExecutor
 
-# {include:file:docs-source/synchronization.md}
-# {include:file:docs-source/synchronization-notes.md}
+# {include:file:_docs-source/synchronization.md}
+# {include:file:_docs-source/synchronization-notes.md}
 #
 # source://concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/synchronization/abstract_object.rb:2
 module Concurrent::Synchronization; end
@@ -10646,7 +10646,7 @@ end
 # * *{Concurrent::TVar}:* Shared, mutable variables which provide
 #   *coordinated*, *synchronous*, change of *many* stated. Used when multiple
 #   value must change together, in an all-or-nothing transaction.
-# {include:file:docs-source/tvar.md}
+# {include:file:_docs-source/tvar.md}
 #
 # source://concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/tvar.rb:12
 class Concurrent::TVar < ::Concurrent::Synchronization::Object

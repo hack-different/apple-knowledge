@@ -55,7 +55,7 @@ end
 # * +IO+ (and its descendants) and +StringIO+ objects are read from and their contents placed in a <data> element.
 # * User classes may implement +to_plist_node+ to dictate how they should be serialized; otherwise the object will be passed to <tt>Marshal.dump</tt> and the result placed in a <data> element.
 #
-# For detailed usage instructions, refer to USAGE[link:files/docs/USAGE.html] and the methods documented below.
+# For detailed usage instructions, refer to USAGE[link:files/_docs/USAGE.html] and the methods documented below.
 #
 # source://plist-3.6.0/lib/plist/generator.rb:24
 module Plist::Emit

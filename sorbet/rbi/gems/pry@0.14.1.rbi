@@ -2811,11 +2811,11 @@ class Pry::Command::CodeCollector
   # source://pry-0.14.1/lib/pry/commands/code_collector.rb:86
   def code_object; end
 
-  # The content (i.e code/docs) for the selected object.
+  # The content (i.e code/_docs) for the selected object.
   # If the user provided a bare code object, it returns the source.
   # If the user provided the `-i` or `-o` switches, it returns the
   # selected input/output lines joined as a string. If the user used
-  # `-d CODE_OBJECT` it returns the docs for that code object.
+  # `-d CODE_OBJECT` it returns the _docs for that code object.
   #
   # @return [String]
   #
@@ -3938,15 +3938,15 @@ end
 class Pry::Command::ShowDoc < ::Pry::Command::ShowInfo
   include ::Pry::Helpers::DocumentationHelpers
 
-  # The docs for code_object prepared for display.
+  # The _docs for code_object prepared for display.
   #
   # source://pry-0.14.1/lib/pry/commands/show_doc.rb:35
   def content_for(code_object); end
 
-  # Return docs for the code_object, adjusting for whether the code_object
-  # has yard docs available, in which case it returns those.
-  # (note we only have to check yard docs for modules since they can
-  # have multiple docs, but methods can only be doc'd once so we
+  # Return _docs for the code_object, adjusting for whether the code_object
+  # has yard _docs available, in which case it returns those.
+  # (note we only have to check yard _docs for modules since they can
+  # have multiple _docs, but methods can only be doc'd once so we
   # dont need to check them)
   #
   # source://pry-0.14.1/lib/pry/commands/show_doc.rb:64
@@ -3966,10 +3966,10 @@ class Pry::Command::ShowDoc < ::Pry::Command::ShowInfo
   # source://pry-0.14.1/lib/pry/commands/show_doc.rb:44
   def render_doc_markup_for(code_object); end
 
-  # figure out start line of docs by back-calculating based on
+  # figure out start line of _docs by back-calculating based on
   # number of lines in the comment and the start line of the code_object
   #
-  # @return [Fixnum] start line of docs
+  # @return [Fixnum] start line of _docs
   #
   # source://pry-0.14.1/lib/pry/commands/show_doc.rb:83
   def start_line_for(code_object); end
@@ -3989,7 +3989,7 @@ class Pry::Command::ShowInfo < ::Pry::ClassCommand
 
   # This method checks whether the `code_object` is a WrappedModule, if it
   # is, then it returns the first candidate (monkeypatch) with accessible
-  # source (or docs). If `code_object` is not a WrappedModule (i.e a method
+  # source (or _docs). If `code_object` is not a WrappedModule (i.e a method
   # or a command) then the `code_object` itself is just returned.
   #
   # @raise [CommandError]
@@ -4007,7 +4007,7 @@ class Pry::Command::ShowInfo < ::Pry::ClassCommand
   # source://pry-0.14.1/lib/pry/commands/show_info.rb:81
   def content_and_headers_for_all_module_candidates(mod); end
 
-  # takes into account possible yard docs, and returns yard_file / yard_line
+  # takes into account possible yard _docs, and returns yard_file / yard_line
   # Also adjusts for start line of comments (using start_line_for), which it
   # has to infer by subtracting number of lines of comment from start line
   # of code_object
@@ -4081,10 +4081,10 @@ class Pry::Command::ShowSource < ::Pry::Command::ShowInfo
   # source://pry-0.14.1/lib/pry/commands/show_source.rb:48
   def content_for(code_object); end
 
-  # Return docs for the code_object, adjusting for whether the code_object
-  # has yard docs available, in which case it returns those.
-  # (note we only have to check yard docs for modules since they can
-  # have multiple docs, but methods can only be doc'd once so we
+  # Return _docs for the code_object, adjusting for whether the code_object
+  # has yard _docs available, in which case it returns those.
+  # (note we only have to check yard _docs for modules since they can
+  # have multiple _docs, but methods can only be doc'd once so we
   # dont need to check them)
   #
   # source://pry-0.14.1/lib/pry/commands/show_source.rb:86
@@ -4107,10 +4107,10 @@ class Pry::Command::ShowSource < ::Pry::Command::ShowInfo
   # source://pry-0.14.1/lib/pry/commands/show_source.rb:66
   def render_doc_markup_for(code_object); end
 
-  # figure out start line of docs by back-calculating based on
+  # figure out start line of _docs by back-calculating based on
   # number of lines in the comment and the start line of the code_object
   #
-  # @return [Fixnum] start line of docs
+  # @return [Fixnum] start line of _docs
   #
   # source://pry-0.14.1/lib/pry/commands/show_source.rb:105
   def start_line_for(code_object); end
@@ -9816,12 +9816,12 @@ class Pry::WrappedModule
   # source://pry-0.14.1/lib/pry/wrapped_module.rb:20
   def wrapped; end
 
-  # @return [String] Return the YARD docs for this module.
+  # @return [String] Return the YARD _docs for this module.
   #
   # source://pry-0.14.1/lib/pry/wrapped_module.rb:223
   def yard_doc; end
 
-  # @return [Boolean] Whether YARD docs are available for this module.
+  # @return [Boolean] Whether YARD _docs are available for this module.
   #
   # source://pry-0.14.1/lib/pry/wrapped_module.rb:265
   def yard_docs?; end

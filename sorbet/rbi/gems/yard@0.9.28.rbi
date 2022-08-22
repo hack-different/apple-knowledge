@@ -3287,7 +3287,7 @@ YARD::CodeObjects::METHODNAMEMATCH = T.let(T.unsafe(nil), Regexp)
 # +attached+ type flag to the macro definition to have it attached to the
 # specific DSL method so it will be implicitly reused.
 #
-# Macros are fully described in the {file:docs/Tags.md#macro Tags Overview}
+# Macros are fully described in the {file:_docs/Tags.md#macro Tags Overview}
 # document.
 #
 # @example Creating a basic named macro
@@ -13463,7 +13463,7 @@ module YARD::Server::DocServerHelper
   def abs_url(*path_components); end
 
   # @example The base path for a library 'foo'
-  #   base_path('docs') # => 'docs/foo'
+  #   base_path('_docs') # => '_docs/foo'
   # @param path [String] the path prefix for a base path URI
   # @return [String] the base URI for a library with an extra +path+ prefix
   # @since 0.6.0

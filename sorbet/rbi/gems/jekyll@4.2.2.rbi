@@ -364,7 +364,7 @@ class Jekyll::Collection
   # source://jekyll-4.2.2/lib/jekyll/collection.rb:24
   def docs; end
 
-  # Sets the attribute docs
+  # Sets the attribute _docs
   #
   # @param value the value to set the attribute docs to.
   #
@@ -444,9 +444,9 @@ class Jekyll::Collection
   # source://jekyll-4.2.2/lib/jekyll/collection.rb:35
   def method_missing(method, *args, &blck); end
 
-  # Read the allowed documents into the collection's array of docs.
+  # Read the allowed documents into the collection's array of _docs.
   #
-  # Returns the sorted array of docs.
+  # Returns the sorted array of _docs.
   #
   # source://jekyll-4.2.2/lib/jekyll/collection.rb:57
   def read; end
@@ -479,7 +479,7 @@ class Jekyll::Collection
   # Produce a representation of this Collection for use in Liquid.
   # Exposes two attributes:
   #   - label
-  #   - docs
+  #   - _docs
   #
   # Returns a representation of this collection for use in Liquid.
   #
@@ -520,7 +520,7 @@ class Jekyll::Collection
   # source://jekyll-4.2.2/lib/jekyll/collection.rb:294
   def read_static_file(file_path, full_path); end
 
-  # Rearrange documents within the `docs` array as listed in the `metadata["order"]` array.
+  # Rearrange documents within the `_docs` array as listed in the `metadata["order"]` array.
   #
   # Involves converting the two arrays into hashes based on relative_paths as keys first, then
   # merging them to remove duplicates and finally retrieving the Document instances from the
@@ -3091,10 +3091,10 @@ end
 #     [1]: http://example.com/
 #
 # This is fairly good option for Markdown and Textile files. But might cause
-# problems for HTML docs (which is quite unusual for Jekyll). If default
+# problems for HTML _docs (which is quite unusual for Jekyll). If default
 # excerpt delimiter is not good for you, you might want to set your own via
 # configuration option `excerpt_separator`. For example, following is a good
-# alternative for HTML docs:
+# alternative for HTML _docs:
 #
 #     # file: _config.yml
 #     excerpt_separator: "<!-- more -->"
@@ -3143,7 +3143,7 @@ module Jekyll::External
 
     # The version constraint required to activate a given gem.
     # Usually the gem version requirement is "> 0," because any version
-    # will do. In the case of jekyll-docs, however, we require the exact
+    # will do. In the case of jekyll-_docs, however, we require the exact
     # same version as Jekyll.
     #
     # Returns a String version constraint in a parseable form for

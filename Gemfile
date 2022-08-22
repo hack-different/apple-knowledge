@@ -19,7 +19,7 @@ gem 'jekyll', '~> 4.2'
 gem 'plist'
 gem 'toml', '~> 0.3.0', github: 'rickmark/toml'
 
-gem 'mootool', '~> 0.1.2'
+gem 'mootool', '~> 0.2.2'
 
 gem 'sorbet-runtime'
 
@@ -42,6 +42,7 @@ group :jekyll_plugins do
 end
 
 group :development, :test do
+  gem 'activerecord'
   gem 'activesupport', require: false
   gem 'awesome_print'
   gem 'bundle-audit'
@@ -63,5 +64,6 @@ group :development, :test do
   gem 'rubocop'
   gem 'ruby-macho'
   gem 'sorbet'
+  gem 'sqlite3'
   gem 'tapioca', require: false
 end

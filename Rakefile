@@ -6,7 +6,11 @@ require 'rubocop/rake_task'
 
 BASE_PATH = File.dirname(__FILE__)
 
-Rake.add_rakelib '_tools/tasks'
+$LOAD_PATH.unshift(File.join(BASE_PATH, 'lib'))
+
+require 'common'
+
+Rake.add_rakelib 'tasks'
 
 RuboCop::RakeTask.new
 

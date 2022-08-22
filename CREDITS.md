@@ -1,6 +1,6 @@
 # Credits
 
-{% for project in site.data.credits %}
+{% for project in site.data.credits.repositories %}
 
 ## {{project[0]}}
 
