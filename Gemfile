@@ -50,6 +50,7 @@ group :development, :test do
   gem 'CFPropertyList'
   gem 'faraday', '~> 2.5'
   gem 'faraday-retry'
+  gem 'hashie'
   gem 'kramdown'
   gem 'manpages'
   gem 'mdl'

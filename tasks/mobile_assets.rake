@@ -18,6 +18,7 @@ namespace :data do
 
       entry = Plist.parse_xml xml
       asset['asset_type'] = entry['AssetType']
+
     rescue StandardError
       puts 'Unable to parse element'
     end
