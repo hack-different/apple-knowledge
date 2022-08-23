@@ -638,7 +638,7 @@ module Thor::Actions
   # ==== Examples
   #
   #   directory "doc"
-  #   directory "doc", "docs", :recursive => false
+  #   directory "doc", "_docs", :recursive => false
   #
   # source://thor-1.2.1/lib/thor/actions/directory.rb:49
   def directory(source, *args, &block); end

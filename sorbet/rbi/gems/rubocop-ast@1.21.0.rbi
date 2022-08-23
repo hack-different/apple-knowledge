@@ -3440,7 +3440,7 @@ RuboCop::AST::Node::VARIABLES = T.let(T.unsafe(nil), Set)
 
 # This class performs a pattern-matching operation on an AST node.
 #
-# Detailed syntax: /docs/modules/ROOT/pages/node_pattern.adoc
+# Detailed syntax: /_docs/modules/ROOT/pages/node_pattern.adoc
 #
 # Initialize a new `NodePattern` with `NodePattern.new(pattern_string)`, then
 # pass an AST node to `NodePattern#match`. Alternatively, use one of the class
@@ -3534,7 +3534,7 @@ end
 # Responsible to build the AST nodes for `NodePattern`
 #
 # Doc on how this fits in the compiling process:
-#   /docs/modules/ROOT/pages/node_pattern.adoc
+#   /_docs/modules/ROOT/pages/node_pattern.adoc
 #
 # source://rubocop-ast-1.21.0/lib/rubocop/ast/node_pattern/builder.rb:10
 class RuboCop::AST::NodePattern::Builder
@@ -3617,7 +3617,7 @@ end
 # Defers work to its subcompilers
 #
 # Doc on how this fits in the compiling process:
-#   /docs/modules/ROOT/pages/node_pattern.adoc
+#   /_docs/modules/ROOT/pages/node_pattern.adoc
 #
 # source://rubocop-ast-1.21.0/lib/rubocop/ast/node_pattern/compiler.rb:11
 class RuboCop::AST::NodePattern::Compiler
@@ -3699,7 +3699,7 @@ end
 # This value responds to `===`.
 #
 # Doc on how this fits in the compiling process:
-#   /docs/modules/ROOT/pages/node_pattern.adoc
+#   /_docs/modules/ROOT/pages/node_pattern.adoc
 #
 # source://rubocop-ast-1.21.0/lib/rubocop/ast/node_pattern/compiler/atom_subcompiler.rb:12
 class RuboCop::AST::NodePattern::Compiler::AtomSubcompiler < ::RuboCop::AST::NodePattern::Compiler::Subcompiler
@@ -4005,7 +4005,7 @@ end
 # or it's `node.type` if `seq_head` is true
 #
 # Doc on how this fits in the compiling process:
-#   /docs/modules/ROOT/pages/node_pattern.adoc
+#   /_docs/modules/ROOT/pages/node_pattern.adoc
 #
 # source://rubocop-ast-1.21.0/lib/rubocop/ast/node_pattern/compiler/node_pattern_subcompiler.rb:13
 class RuboCop::AST::NodePattern::Compiler::NodePatternSubcompiler < ::RuboCop::AST::NodePattern::Compiler::Subcompiler
@@ -4100,7 +4100,7 @@ end
 # Assumes the given `var` is a `::RuboCop::AST::Node`
 #
 # Doc on how this fits in the compiling process:
-#   /docs/modules/ROOT/pages/node_pattern.adoc
+#   /_docs/modules/ROOT/pages/node_pattern.adoc
 #
 #
 # source://rubocop-ast-1.21.0/lib/rubocop/ast/node_pattern/compiler/sequence_subcompiler.rb:17
@@ -4263,7 +4263,7 @@ RuboCop::AST::NodePattern::Compiler::SequenceSubcompiler::POSITIVE = T.let(T.uns
 # Implements visitor pattern
 #
 # Doc on how this fits in the compiling process:
-#   /docs/modules/ROOT/pages/node_pattern.adoc
+#   /_docs/modules/ROOT/pages/node_pattern.adoc
 #
 # source://rubocop-ast-1.21.0/lib/rubocop/ast/node_pattern/compiler/subcompiler.rb:12
 class RuboCop::AST::NodePattern::Compiler::Subcompiler
@@ -4314,7 +4314,7 @@ class RuboCop::AST::NodePattern::Invalid < ::StandardError; end
 # Lexer class for `NodePattern`
 #
 # Doc on how this fits in the compiling process:
-#   /docs/modules/ROOT/pages/node_pattern.adoc
+#   /_docs/modules/ROOT/pages/node_pattern.adoc
 #
 # source://rubocop-ast-1.21.0/lib/rubocop/ast/node_pattern/lexer.rb:18
 class RuboCop::AST::NodePattern::Lexer < ::RuboCop::AST::NodePattern::LexerRex
@@ -4775,7 +4775,7 @@ end
 # Note: class reopened in `parser.racc`
 #
 # Doc on how this fits in the compiling process:
-#   /docs/modules/ROOT/pages/node_pattern.adoc
+#   /_docs/modules/ROOT/pages/node_pattern.adoc
 #
 # source://rubocop-ast-1.21.0/lib/rubocop/ast/node_pattern/parser.racc.rb:13
 class RuboCop::AST::NodePattern::Parser < ::Racc::Parser

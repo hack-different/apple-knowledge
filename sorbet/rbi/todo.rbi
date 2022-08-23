@@ -4,6 +4,5 @@
 
 # typed: false
 
-module ::BASE_PATH; end
-module RuboCop::Cop::AllowedMethods::Config; end
+module Faraday::Error::ConnectionFailed; end
 module TIPW::TIPWCodenames::WikiCloth::Parser; end

@@ -39,7 +39,7 @@ class HTML::Pipeline
   # Apply all filters in the pipeline to the given HTML.
   #
   # html    - A String containing HTML or a DocumentFragment object.
-  # context - The context hash passed to each filter. See the Filter docs
+  # context - The context hash passed to each filter. See the Filter _docs
   #           for more info on possible values. This object MUST NOT be modified
   #           in place by filters.  Use the Result for passing state back.
   # result  - The result Hash passed to each filter for modification.  This
@@ -321,7 +321,7 @@ HTML::Pipeline::DocumentFragment = Nokogiri::HTML4::DocumentFragment
 #   :repository - A Repository providing context for the HTML being processed
 #
 # Each filter may define additional options and output values. See the class
-# docs for more info.
+# _docs for more info.
 #
 # source://html-pipeline-2.14.2/lib/html/pipeline/filter.rb:31
 class HTML::Pipeline::Filter

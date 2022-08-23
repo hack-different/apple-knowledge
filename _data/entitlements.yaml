@@ -1,11 +1,11 @@
 ---
 metadata:
-  description:
-  credits: []
+  description: Known entitlements and their possessors
+  credits:
+    - rickmark
 entitlements:
   application-identifier:
     description:
-    types: []
   com.apple.UIKit.vends-view-services:
     description:
     types:
@@ -90,7 +90,6 @@ entitlements:
     - array
   abs-client:
     description:
-    types: []
   adi-client:
     description:
     types:
@@ -106,7 +105,6 @@ entitlements:
     - boolean
   com.apple.application-identifier:
     description:
-    types: []
   com.apple.authkit.client.private:
     description:
     types:
@@ -182,7 +180,6 @@ entitlements:
     - boolean
   fairplay-client:
     description:
-    types: []
   CanInheritApplicationStateFromOtherProcesses:
     description:
     types:
@@ -237,7 +234,6 @@ entitlements:
     - boolean
   DataProtectionClass:
     description:
-    types: []
   com.apple.private.accounts.authdialoghost:
     description:
     types:
@@ -605,7 +601,6 @@ entitlements:
     - boolean
   com.apple.developer.icloud-container-environment:
     description:
-    types: []
   com.apple.developer.icloud-services:
     description:
     types:
@@ -681,7 +676,6 @@ entitlements:
     - boolean
   com.apple.private.assetsd.nebulad.access:
     description:
-    types: []
   com.apple.private.avfoundation.capture.deferred-photo-processor.allow:
     description:
     types:
@@ -764,7 +758,6 @@ entitlements:
     - boolean
   fairplay:
     description:
-    types: []
   seatbelt-profiles:
     description:
     types:
@@ -1073,10 +1066,8 @@ entitlements:
     - boolean
   com.apple.private.appstorecomponents.media-client-id:
     description:
-    types: []
   com.apple.private.appstorecomponents.media-client-version:
     description:
-    types: []
   com.apple.private.assets.change-daemon-config:
     description:
     types:
@@ -1496,7 +1487,6 @@ entitlements:
     - boolean
   aps-environment:
     description:
-    types: []
   com.apple.security.application-groups:
     description:
     types:
@@ -1581,7 +1571,6 @@ entitlements:
     - array
   com.apple.private.cloudkit.serviceNameForContainerMap:
     description:
-    types: []
   com.apple.private.cloudkit.setEnvironment:
     description:
     types:
@@ -1640,7 +1629,6 @@ entitlements:
     - boolean
   com.apple.developer.default-data-protection:
     description:
-    types: []
   com.apple.developer.siri:
     description:
     types:
@@ -1687,7 +1675,6 @@ entitlements:
     - array
   com.apple.developer.ubiquity-kvstore-identifier:
     description:
-    types: []
   com.apple.messages.private.AllowAlertPresentation:
     description:
     types:
@@ -1706,7 +1693,6 @@ entitlements:
     - boolean
   absinthe-client:
     description:
-    types: []
   backupd-connection-initiate:
     description:
     types:
@@ -1862,7 +1848,6 @@ entitlements:
     - boolean
   com.apple.corespotlight.privateindex.uuid:
     description:
-    types: []
   com.apple.developer.auto-elect-plugin:
     description:
     types:
@@ -1946,7 +1931,6 @@ entitlements:
     - boolean
   com.apple.announced.clientid:
     description:
-    types: []
   com.apple.avfoundation.allow-system-wide-context:
     description:
     types:
@@ -2343,7 +2327,6 @@ entitlements:
     - boolean
   com.apple.identitylookup.classification-ui.extension-host:
     description:
-    types: []
   com.apple.private.corespotlight.search.internal:
     description:
     types:
@@ -2366,7 +2349,6 @@ entitlements:
     - boolean
   com.apple.IdentityLookup.MessageFilter:
     description:
-    types: []
   com.apple.NanoTimeKit.userphotofaceclient:
     description:
     types:
@@ -2566,7 +2548,6 @@ entitlements:
     - boolean
   com.apple.private.interstellar.data-access:
     description:
-    types: []
   com.apple.private.networkserviceproxy:
     description:
     types:
@@ -2665,7 +2646,6 @@ entitlements:
     - boolean
   com.apple.private.cloudphotod.access:
     description:
-    types: []
   com.apple.private.photos.allowmemorymutation:
     description:
     types:
@@ -2748,7 +2728,6 @@ entitlements:
     - boolean
   com.apple.asd.client:
     description:
-    types: []
   com.apple.coreidvd.identity-proofing-ui:
     description:
     types:
@@ -2844,7 +2823,6 @@ entitlements:
     - boolean
   com.apple.private.corespotlight.bundleid:
     description:
-    types: []
   com.apple.accessibility.AXSettingsShortcuts:
     description:
     types:
@@ -2911,7 +2889,6 @@ entitlements:
     - boolean
   auth-key-vault-client:
     description:
-    types: []
   com.apple.BTServer.le:
     description:
     types:
@@ -3062,7 +3039,6 @@ entitlements:
     - boolean
   com.apple.developer.ClassKit-environment:
     description:
-    types: []
   com.apple.developer.coreml.model-deployment:
     description:
     types:
@@ -3630,7 +3606,6 @@ entitlements:
     - boolean
   com.apple.CoreML.adopter:
     description:
-    types: []
   com.apple.triald.namespace-management:
     description:
     types:
@@ -3825,7 +3800,6 @@ entitlements:
     - boolean
   com.apple.sidecar-relay:
     description:
-    types: []
   com.apple.frontboard.debugapplications:
     description:
     types:
@@ -3884,7 +3858,6 @@ entitlements:
     - array
   com.apple.private.healthkit.source.default:
     description:
-    types: []
   com.apple.Pasteboard.background-access:
     description:
     types:
@@ -4011,7 +3984,6 @@ entitlements:
     - boolean
   com.apple.private.MobileContainerManager.lookup:
     description:
-    types: []
   com.apple.private.MobileContainerManager.deleteContainerContent:
     description:
     types:
@@ -4382,7 +4354,6 @@ entitlements:
     - array
   com.apple.private.healthkit.source_override:
     description:
-    types: []
   com.apple.private.healthkit.write_authorization_override:
     description:
     types:
@@ -4553,7 +4524,6 @@ entitlements:
     - boolean
   com.apple.private.ctk.slot-type:
     description:
-    types: []
   com.apple.developer.driverkit:
     description:
     types:
@@ -4796,7 +4766,6 @@ entitlements:
     - boolean
   UNUserNotificationCenter:
     description:
-    types: []
   com.apple.IPConfigurationService:
     description:
     types:
@@ -5064,7 +5033,6 @@ entitlements:
     - boolean
   com.apple.developer.team-identifier:
     description:
-    types: []
   com.apple.private.managed-settings.apply:
     description:
     types:
@@ -5111,7 +5079,6 @@ entitlements:
     - boolean
   MachServices:
     description:
-    types: []
   com.apple.CoreRoutine.Action:
     description:
     types:
@@ -5194,10 +5161,8 @@ entitlements:
     - boolean
   CFBundleIdentifier:
     description:
-    types: []
   CFBundleName:
     description:
-    types: []
   com.apple.private.tcc.override-prompt-policy:
     description:
     types:
@@ -5276,7 +5241,6 @@ entitlements:
     - array
   com.apple.private.pluginkit.persona:
     description:
-    types: []
   com.apple.rootless.storage.QLThumbnailCache:
     description:
     types:
@@ -5295,14 +5259,12 @@ entitlements:
     - boolean
   com.apple.developer.aps-environment:
     description:
-    types: []
   com.apple.private.cloudkit.allowUnverifiedAccount:
     description:
     types:
     - boolean
   com.apple.private.cloudkit.prefix:
     description:
-    types: []
   com.apple.private.cloudkit.supportservice:
     description:
     types:
@@ -5433,7 +5395,6 @@ entitlements:
     - boolean
   com.apple.pac.shared_region_id:
     description:
-    types: []
   com.apple.private.pac.exception:
     description:
     types:
@@ -6059,7 +6020,6 @@ entitlements:
     - boolean
   com.apple.private.sandbox.profile:embedded:
     description:
-    types: []
   com.apple.iBooks.BDSService.private:
     description:
     types:
@@ -6074,7 +6034,6 @@ entitlements:
     - boolean
   com.apple.geoservices.navd.clientIdentifier:
     description:
-    types: []
   com.apple.geoservices.navd.routehypothesis:
     description:
     types:
@@ -6089,7 +6048,6 @@ entitlements:
     - boolean
   com.apple.private.aps-environment:
     description:
-    types: []
   com.apple.avfoundation.allow-offline-video-stabilization:
     description:
     types:
@@ -6136,7 +6094,6 @@ entitlements:
     - array
   com.apple.fileprovider.purposeidentifier:
     description:
-    types: []
   com.apple.private.clouddocs.folder-sharing-proxy:
     description:
     types:
@@ -6203,7 +6160,6 @@ entitlements:
     - boolean
   com.apple.private.foundation.fileprovideridentifier:
     description:
-    types: []
   com.apple.private.launchservices.allowopenwithanyhandler:
     description:
     types:
@@ -6342,7 +6298,6 @@ entitlements:
     - boolean
   secure-key-vault-client:
     description:
-    types: []
   com.apple.iokit.CoreAnalytics.user:
     description:
     types:
@@ -6437,7 +6392,6 @@ entitlements:
     - boolean
   com.apple.private.avfoundation.capture.nonstandard-client.allowed-media-types:
     description:
-    types: []
   com.apple.private.corespeechd.activation:
     description:
     types:
@@ -6704,7 +6658,6 @@ entitlements:
     - array
   com.apple.dataaccess.dataaccessd.PersistentPush:
     description:
-    types: []
   com.apple.springboard.monitorAppSwitcherUserQuit:
     description:
     types:
@@ -7011,7 +6964,6 @@ entitlements:
     - boolean
   com.apple.security.ts.ipc-posix-sem:
     description:
-    types: []
   com.apple.private.security.storage.containers:
     description:
     types:
@@ -7134,7 +7086,6 @@ entitlements:
     - boolean
   com.apple.mediaremote.nearby-device:
     description:
-    types: []
   com.apple.mediaremote.set-now-playing-app:
     description:
     types:
@@ -7541,7 +7492,6 @@ entitlements:
     - boolean
   lskdd-client:
     description:
-    types: []
   com.apple.private.associated-domains.ignore-required-entitlements:
     description:
     types:
@@ -7764,7 +7714,6 @@ entitlements:
     - boolean
   com.apple.private.appleevents.allowedtosend:
     description:
-    types: []
   com.apple.security.automation.apple-events:
     description:
     types:
@@ -7943,7 +7892,6 @@ entitlements:
     - boolean
   NSCameraUsageDescription:
     description:
-    types: []
   SBAppUsesLocalNotifications:
     description:
     types:
@@ -8230,7 +8178,6 @@ entitlements:
     - boolean
   com.apple.private.data-usage-classification-override:
     description:
-    types: []
   com.apple.apfs.get-dev-by-role:
     description:
     types:
@@ -8661,7 +8608,6 @@ entitlements:
     - boolean
   com.apple.private.xpc.launchd.job-manager:
     description:
-    types: []
   com.apple.coretelephony.SubscriberInfo.allow:
     description:
     types:
@@ -8860,14 +8806,12 @@ entitlements:
     - boolean
   CKContainer.sourceApplicationBundleIdentifier:
     description:
-    types: []
   com.apple.datadetectors.source-write.user:
     description:
     types:
     - boolean
   com.apple.developer.icloud-database-environment:
     description:
-    types: []
   com.apple.private.ids.urgent-priority:
     description:
     types:
@@ -9830,7 +9774,6 @@ entitlements:
     - boolean
   com.apple.private.jetsam.modify-priority:
     description:
-    types: []
   com.apple.private.kernel.setpriority-darwin-role:
     description:
     types:
@@ -9881,7 +9824,6 @@ entitlements:
     - boolean
   com.apple.aps-environment:
     description:
-    types: []
   com.apple.private.cloudkit.notifyOnAccountWarmup:
     description:
     types:
@@ -10252,7 +10194,6 @@ entitlements:
     - boolean
   lskd-client:
     description:
-    types: []
   com.apple.SystemConfiguration.trailing-edge-agent:
     description:
     types:

@@ -2,6 +2,7 @@
 metadata:
   description: Listing of known firmware types included in a restore package
   credits:
+    - rickmark
 firmware_types:
   ANE:
     description: Apple Neural Engine
@@ -270,7 +271,6 @@ firmware_types:
     - glyphplugin@2224~ipad-lightning.im4p
     - glyphplugin@2732~ipad-lightning.t8011.im4p
     - glyphplugin@2224~ipad-lightning.t8011.im4p
-
   DeviceTree:
     description: Normal mode device tree
     type: dtre
@@ -885,7 +885,7 @@ firmware_types:
     - '058-88752-045.dmg'
     - '058-88752-043.dmg'
   RecoveryMode:
-    description:
+    description: Image showing "connect to iTunes"
     type:
     filenames:
     - recoverymode@1136~iphone-lightning.s5l8950x.img3
@@ -916,7 +916,7 @@ firmware_types:
     type: rans
     tipw_key_name: RANS
   RestoreDeviceTree:
-    description:
+    description: DeviceTree that is used when booted into Restore mode (via DFU/recovery)
     type:
     filenames:
     - DeviceTree.n42ap.img3
@@ -1254,11 +1254,11 @@ firmware_types:
   rfta:
     description:
     type:
-    filenames: []
+    filenames:
   rfts:
     description:
     type:
-    filenames: []
+    filenames:
   SEP:
     description: Secure Enclave Processor firmware (SEPOS)
     type: sepi
@@ -1302,7 +1302,7 @@ firmware_types:
     type: siof
     tipw_key_name: SmartIOFirmware
   StaticTrustCache:
-    description:
+    description: A listing of approved CDHashes
     type:
     filenames:
     - '048-95869-019.dmg.trustcache'

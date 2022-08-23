@@ -20,13 +20,18 @@ GEM
   specs:
     CFPropertyList (3.0.5)
       rexml
+    activemodel (7.0.3.1)
+      activesupport (= 7.0.3.1)
+    activerecord (7.0.3.1)
+      activemodel (= 7.0.3.1)
+      activesupport (= 7.0.3.1)
     activesupport (7.0.3.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     awesome_print (1.9.2)
     bundle-audit (0.1.0)
@@ -146,17 +151,21 @@ GEM
       mixlib-shellout
     mercenary (0.4.0)
     method_source (1.0.0)
-    minitest (5.16.2)
+    minitest (5.16.3)
     mixlib-cli (2.1.8)
     mixlib-config (3.0.27)
       tomlrb
     mixlib-shellout (3.2.7)
       chef-utils
-    mootool (0.1.2)
+    mootool (0.2.3)
+      plist (~> 3)
       ruby-macho (~> 3)
-      sorbet-runtime
+      rubyzip (~> 2)
+      sorbet-runtime (~> 0)
     multipart-post (2.2.3)
     netrc (0.11.0)
+    nokogiri (1.13.8-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.8-x86_64-darwin)
       racc (~> 1.4)
     octokit (4.25.1)
@@ -176,7 +185,7 @@ GEM
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    public_suffix (4.0.7)
+    public_suffix (5.0.0)
     racc (1.6.0)
     rainbow (3.1.1)
     rake (13.0.6)
@@ -207,7 +216,7 @@ GEM
       rake
       rspec-core
     rspec-support (3.11.0)
-    rubocop (1.35.0)
+    rubocop (1.35.1)
       json (~> 2.3)
       parallel (~> 1.10)
       parser (>= 3.1.2.1)
@@ -229,19 +238,20 @@ GEM
     sawyer (0.9.2)
       addressable (>= 2.3.5)
       faraday (>= 0.17.3, < 3)
-    sorbet (0.5.10324)
-      sorbet-static (= 0.5.10324)
-    sorbet-runtime (0.5.10324)
-    sorbet-static (0.5.10324-universal-darwin-21)
-    sorbet-static (0.5.10324-universal-darwin-22)
-    sorbet-static-and-runtime (0.5.10324)
-      sorbet (= 0.5.10324)
-      sorbet-runtime (= 0.5.10324)
-    spoom (1.1.11)
+    sorbet (0.5.10346)
+      sorbet-static (= 0.5.10346)
+    sorbet-runtime (0.5.10346)
+    sorbet-static (0.5.10346-universal-darwin-21)
+    sorbet-static (0.5.10346-universal-darwin-22)
+    sorbet-static-and-runtime (0.5.10346)
+      sorbet (= 0.5.10346)
+      sorbet-runtime (= 0.5.10346)
+    spoom (1.1.12)
       sorbet (>= 0.5.9204)
       sorbet-runtime (>= 0.5.9204)
       thor (>= 0.19.2)
-    tapioca (0.9.2)
+    sqlite3 (1.4.4)
+    tapioca (0.9.3)
       bundler (>= 1.17.3)
       netrc (>= 0.11.0)
       parallel (>= 1.21.0)
@@ -272,11 +282,13 @@ GEM
       yard (>= 0.9)
 
 PLATFORMS
+  arm64-darwin-22
   x86_64-darwin-21
   x86_64-darwin-22
 
 DEPENDENCIES
   CFPropertyList
+  activerecord
   activesupport
   awesome_print
   bundle-audit
@@ -301,7 +313,7 @@ DEPENDENCIES
   manpages
   mdl
   mediawiki_api!
-  mootool (~> 0.1.2)
+  mootool (~> 0.2.2)
   nokogiri
   octokit
   overcommit
@@ -314,6 +326,7 @@ DEPENDENCIES
   ruby-macho
   sorbet
   sorbet-runtime
+  sqlite3
   tapioca
   toml (~> 0.3.0)!
 

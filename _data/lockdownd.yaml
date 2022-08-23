@@ -1,14 +1,15 @@
 ---
 metadata:
-  description:
+  description: Services that can be contacted over usbmuxd via lockdownd
   credits:
+    - rickmark
 clients:
-- AMPDeviceDiscoveryAgent
-- Safari
-- SpringBoard
-- accountsd
-- atwakeup
-- backupd
+  - AMPDeviceDiscoveryAgent
+  - Safari
+  - SpringBoard
+  - accountsd
+  - atwakeup
+  - backupd
 lockdownd_domains:
   com.apple.Accessibility:
     description:
@@ -28,13 +29,13 @@ lockdownd_domains:
     - WillEncrypt
   com.apple.mobile.data_sync:
     description:
-    properties: []
+    properties:
   com.apple.mobile.iTunes:
     description:
-    properties: []
+    properties:
   com.apple.mobile.iTunes.accessories:
     description:
-    properties: []
+    properties:
   com.apple.mobile.restriction:
     description:
     properties:
@@ -67,7 +68,7 @@ lockdownd_domains:
     - EnableWifiDebugging
   com.apple.MobileDeviceCrashCopy:
     description:
-    properties: []
+    properties:
   com.apple.purplebuddy:
     description:
     properties:
@@ -75,7 +76,7 @@ lockdownd_domains:
     - SetupState
   com.apple.TerminalFlashr:
     description:
-    properties: []
+    properties:
   com.apple.xcode.developerdomain:
     description:
     properties:
