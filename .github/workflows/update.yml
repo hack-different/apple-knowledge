@@ -1,0 +1,41 @@
+name: Periodic Updates from data sources
+
+on:
+  schedule:
+    - cron: '* 8 * * *'
+  workflow_dispatch:
+
+jobs:
+  periodic-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Counter intuitive, but this is the value for full history required for rev-list --count
+
+      - name: Set up Ruby 3.1
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1.2
+
+      - name: Install Dependencies
+        run: |
+          bundle install
+
+      - name: Cache Temporary Data
+        id: cache-tmp
+        uses: actions/cache@v3
+        with:
+          path: tmp
+          key: ${{ runner.os }}-data-tmp
+
+      - name: Perform Default Rake Task
+        run: |
+          bundle exec rake update
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Apply data updates
+          commit_user_name: Hack Different's fully sentient AI
+          file_pattern: _data/**
