@@ -170,6 +170,8 @@ GEM
       sorbet-runtime (~> 0)
     multipart-post (2.2.3)
     netrc (0.11.0)
+    nokogiri (1.13.8-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.8-x86_64-darwin)
       racc (~> 1.4)
     octokit (4.25.1)
@@ -286,10 +288,7 @@ GEM
       yard (>= 0.9)
 
 PLATFORMS
-<<<<<<< HEAD
   arm64-darwin-22
-=======
->>>>>>> d78a884 (Device tree parsing)
   x86_64-darwin-22
 
 DEPENDENCIES
