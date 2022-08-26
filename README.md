@@ -184,6 +184,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * <https://metacpan.org/pod/Mac::iTunes::Library::Parse>
 * Apple iDevice Backup Format
   * [`rickmark/libibackup`](https://github.com/rickmark/libibackup)
+  * [`horrorho/InflatableDonkey`](https://github.com/horrorho/InflatableDonkey)
 
 ### Image, Sound and Other Resources
 
@@ -260,6 +261,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [`mwpcheung/AppleSEPFirmware`](https://github.com/mwpcheung/AppleSEPFirmware)
 * [SEPOS: A Guided Tour](https://data.hackinn.com/ppt/2018腾讯安全国际技术峰会/SEPOS：A%20Guided%20Tour.pdf)
 * [Attack Secure Boot of SEP - blackbird](https://github.com/windknown/presentations/blob/master/Attack_Secure_Boot_of_SEP.pdf)
+* [iPhone Data Protection in Depth](https://www.slideshare.net/seguridadapple/iphone-data-protection-in-depth)
+* [Overcoming iPhone Data Protection](https://www.slideshare.net/andrey.belenko/ios-forensics-overcoming-iphone-data-protection)
 
 ### ARM / x86
 
