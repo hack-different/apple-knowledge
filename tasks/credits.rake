@@ -36,7 +36,7 @@ task :credits do
 
   links.each do |repo|
     puts "Fetching credits for #{repo}"
-    collabs = github.contributors(repo).map { |c| c.to_h.stringify_keys }.where { |c| c['type'] == 'User' }
+    collabs = github.contributors(repo).map { |c| c.to_h.stringify_keys }.select { |c| c['type'] == 'User' }
     credits[repo] = { 'contributors' => collabs }
   rescue Octokit::Forbidden, Octokit::NotFound => e
     puts "Failed to update credits for #{repo}\n\n#{e}"

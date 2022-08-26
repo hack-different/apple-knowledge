@@ -42,9 +42,8 @@ PreCommit:
 
   BundleAudit:
     enabled: true
+
   BundleCheck:
-    enabled: true
-  BundleOutdated:
     enabled: true
 
 PostRewrite:
@@ -59,6 +58,9 @@ PostCheckout:
     enabled: true
 
   SubmoduleStatus:
+    enabled: true
+
+  BundleOutdated:
     enabled: true
 
 PostMerge:
