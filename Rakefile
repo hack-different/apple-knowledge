@@ -10,6 +10,9 @@ $LOAD_PATH.unshift(File.join(BASE_PATH, 'lib'))
 
 require 'common'
 
+UPDATE_TASKS = %w[credits tipw:categories tipw:pages tipw:ipsws data:mobile_assets data:ipsw:manifests:download
+                  data:ipsw:manifests data:ipsw:total_order sort].freeze
+
 Rake.add_rakelib 'tasks'
 
 RuboCop::RakeTask.new
@@ -22,7 +25,8 @@ task default: ['rubocop:auto_correct', :precommit]
 
 desc 'Perform all automated updates'
 task :update do
-  Rake::Task['credits'].execute
-  Rake::Task['sort'].execute
-  Rake::Task['data:ipsw:total_order'].execute
+  UPDATE_TASKS.each do |task|
+    puts "Executing update task: #{task}"
+    Rake::Task[task].invoke
+  end
 end
