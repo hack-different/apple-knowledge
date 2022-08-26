@@ -55,7 +55,7 @@ mobile_assets:
   tags:
   - ipsw
   - bridgeos
-  asset_type:
+  asset_type: com.apple.bridgeOSIPSW
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_Activity_Achievements/com_apple_MobileAsset_Activity_Achievements.xml
   asset_type: com.apple.MobileAsset.Activity.Achievements
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_ActivityChallengeAssets/com_apple_MobileAsset_ActivityChallengeAssets.xml
@@ -85,6 +85,7 @@ mobile_assets:
   - bridgeos
   asset_type: com.apple.MobileAsset.BridgeAssets
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_BridgeAssets/com_apple_MobileAsset_BridgeAssets.xml
+  asset_type: com.apple.MobileAsset.BridgeAssets
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_CarExperienceAssets/com_apple_MobileAsset_CarExperienceAssets.xml
   asset_type: com.apple.MobileAsset.CarExperienceAssets
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_CarPlayAppBlacklist/com_apple_MobileAsset_CarPlayAppBlacklist.xml
@@ -145,7 +146,9 @@ mobile_assets:
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_Font2/com_apple_MobileAsset_Font2.xml
   tags:
   - font
+  asset_type: com.apple.MobileAsset.Font2
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_Font3/com_apple_MobileAsset_Font3.xml
+  asset_type: com.apple.MobileAsset.Font3
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_Font3/com_apple_MobileAsset_Font3.xml
   tags:
   - font
@@ -163,6 +166,7 @@ mobile_assets:
   - font
   asset_type: com.apple.MobileAsset.Font6
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_Font6/com_apple_MobileAsset_Font6.xml
+  asset_type: com.apple.MobileAsset.Font6
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_Font7/com_apple_MobileAsset_Font7.xml
   tags:
   - font
@@ -278,7 +282,7 @@ mobile_assets:
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_MobileAccessoryUpdate_ExternalKeyboardFirmware/com_apple_MobileAsset_MobileAccessoryUpdate_ExternalKeyboardFirmware.xml
   asset_type: com.apple.MobileAsset.MobileAccessoryUpdate.ExternalKeyboardFirmware
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_MobileAccessoryUpdate_haywire/com_apple_MobileAsset_MobileAccessoryUpdate_haywire.xml
-  asset_type:
+  asset_type: com.apple.MobileAsset.MobileAccessoryUpdate.haywire
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_MobileAccessoryUpdate_KeyboardCoverFirmware/com_apple_MobileAsset_MobileAccessoryUpdate_KeyboardCoverFirmware.xml
   asset_type: com.apple.MobileAsset.MobileAccessoryUpdate.KeyboardCoverFirmware
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_MobileAccessoryUpdate_KeyboardCoverFirmware_4/com_apple_MobileAsset_MobileAccessoryUpdate_KeyboardCoverFirmware_4.xml
@@ -421,7 +425,7 @@ mobile_assets:
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_VoiceServicesVocalizerVoice/com_apple_MobileAsset_VoiceServicesVocalizerVoice.xml
   asset_type: com.apple.MobileAsset.VoiceServicesVocalizerVoice
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_VoiceTriggerAssets/com_apple_MobileAsset_VoiceTriggerAssets.xml
-  asset_type:
+  asset_type: com.apple.MobileAsset.VoiceTriggerAssets
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_VoiceTriggerAssetsIPad/com_apple_MobileAsset_VoiceTriggerAssetsIPad.xml
   asset_type: com.apple.MobileAsset.VoiceTriggerAssetsIPad
 - url: https://mesu.apple.com/assets/com_apple_MobileAsset_VoiceTriggerAssetsMarsh/com_apple_MobileAsset_VoiceTriggerAssetsMarsh.xml
@@ -941,7 +945,7 @@ mobile_assets:
   audience: tvOSDeveloperSeed
 - url: https://mesu.apple.com/assets/watchOS5DeveloperSeed/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
   asset_type: com.apple.MobileAsset.SoftwareUpdate
-  audience:  watchOS5DeveloperSeed
+  audience: watchOS5DeveloperSeed
 - url: https://mesu.apple.com/assets/watchOS6AppleSeed/com_apple_MobileAsset_RecoveryOSUpdate/com_apple_MobileAsset_RecoveryOSUpdate.xml
   asset_type: com.apple.MobileAsset.RecoveryOSUpdate
   audience: watchOS6AppleSeed
@@ -968,7 +972,7 @@ mobile_assets:
   audience: carrierseedios8
 - url: https://mesu.apple.com/ios5carrierseed/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
   asset_type: com.apple.MobileAsset.SoftwareUpdate
-  audience:  ios5carrierseed
+  audience: ios5carrierseed
 - url: https://mesu.apple.com/iossixcarrierseed/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml
   asset_type: com.apple.MobileAsset.SoftwareUpdate
   audience: iossixcarrierseed
