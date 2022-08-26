@@ -36,7 +36,7 @@ task :credits do
 
   links.each do |repo|
     credits[repo] = { 'contributors' => github.contributors(repo).map { |c| c.to_h.stringify_keys } }
-  rescue Octokit::Forbidden
+  rescue Octokit::Forbidden, Octokit::NotFound
     # TODO: GitHub won't work when its a fork of something large (like linux) - we could grab the org members
     # in leau which is usually what is meant
     break
