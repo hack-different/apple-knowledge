@@ -18,7 +18,7 @@ Rake.add_rakelib 'tasks'
 RuboCop::RakeTask.new
 
 desc 'do all precommit tasks'
-task precommit: %i[sort jekyll]
+task precommit: %i[sort]
 
 desc 'default build task'
 task default: ['rubocop:auto_correct', :precommit]
