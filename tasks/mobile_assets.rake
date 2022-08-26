@@ -6,6 +6,7 @@ require_relative '../lib/common'
 require 'hashie'
 
 namespace :data do
+  desc 'Update files from MESU'
   task :mobile_assets do
     data_file = DataFile.new 'mobile_assets'
     ipsw_data_file = DataFile.new 'ipsw'
