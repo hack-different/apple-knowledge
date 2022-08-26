@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="RUBY_MODULE" version="4">
   <component name="ModuleRunConfigurationManager">
-    <shared />
+    <shared>
+      <configuration default="false" name="Jekyll: Build" type="CommandRunConfigurationType" factoryName="Gem Command">
+        <module name="apple-knowledge" />
+        <COMMAND_RUN_CONFIGURATION NAME="RUBY_ARGS" VALUE="" />
+        <COMMAND_RUN_CONFIGURATION NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+        <COMMAND_RUN_CONFIGURATION NAME="SHOULD_USE_SDK" VALUE="false" />
+        <COMMAND_RUN_CONFIGURATION NAME="ALTERN_SDK_NAME" VALUE="" />
+        <COMMAND_RUN_CONFIGURATION NAME="myPassParentEnvs" VALUE="true" />
+        <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+        <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
+          <COVERAGE_PATTERN ENABLED="true">
+            <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+          </COVERAGE_PATTERN>
+        </EXTENSION>
+        <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+        <COMMAND_CONFIG_SETTINGS_ID NAME="GEM_NAME" VALUE="jekyll" />
+        <COMMAND_CONFIG_SETTINGS_ID NAME="EXECUTABLE_NAME" VALUE="jekyll" />
+        <COMMAND_CONFIG_SETTINGS_ID NAME="EXECUTABLE_ARGS" VALUE="build" />
+        <COMMAND_CONFIG_SETTINGS_ID NAME="WORKING_DIR" VALUE="$MODULE_DIR$" />
+        <method v="2">
+          <option name="Make" enabled="true" />
+        </method>
+      </configuration>
+    </shared>
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
@@ -9,6 +32,10 @@
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+<<<<<<< HEAD
+=======
+      <excludeFolder url="file://$MODULE_DIR$/.jekyll-cache" />
+>>>>>>> d78a884 (Device tree parsing)
       <excludeFolder url="file://$MODULE_DIR$/_site" />
     </content>
     <orderEntry type="jdk" jdkName="rbenv: 3.1.2" jdkType="RUBY_SDK" />
@@ -83,7 +110,11 @@
     <orderEntry type="library" scope="PROVIDED" name="mixlib-cli (v2.1.8, rbenv: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mixlib-config (v3.0.27, rbenv: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mixlib-shellout (v3.2.7, rbenv: 3.1.2) [gem]" level="application" />
+<<<<<<< HEAD
     <orderEntry type="library" scope="PROVIDED" name="mootool (v0.2.4, rbenv: 3.1.2) [gem]" level="application" />
+=======
+    <orderEntry type="library" scope="PROVIDED" name="mootool (v0.2.6, rbenv: 3.1.2) [gem]" level="application" />
+>>>>>>> d78a884 (Device tree parsing)
     <orderEntry type="library" scope="PROVIDED" name="multipart-post (v2.2.3, rbenv: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="netrc (v0.11.0, rbenv: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.13.8, rbenv: 3.1.2) [gem]" level="application" />
@@ -168,6 +199,10 @@
                   <RakeTaskImpl description="" fullCommand="data:boot_args:scan_xnu_source" id="scan_xnu_source" />
                 </subtasks>
               </RakeTaskImpl>
+<<<<<<< HEAD
+=======
+              <RakeTaskImpl description="update device files from device trees" fullCommand="data:device_tree" id="device_tree" />
+>>>>>>> d78a884 (Device tree parsing)
               <RakeTaskImpl id="entitlements">
                 <subtasks>
                   <RakeTaskImpl description="scan directory of plists and add to entitements database" fullCommand="data:entitlements:scan[directory]" id="scan[directory]" />
@@ -254,7 +289,10 @@
               <RakeTaskImpl description="" fullCommand="tipw:pages" id="pages" />
             </subtasks>
           </RakeTaskImpl>
+<<<<<<< HEAD
           <RakeTaskImpl description="Perform all automated updates" fullCommand="update" id="update" />
+=======
+>>>>>>> d78a884 (Device tree parsing)
           <RakeTaskImpl description="validate data directory" fullCommand="validate" id="validate" />
           <RakeTaskImpl description="" fullCommand="sort_collection" id="sort_collection" />
         </subtasks>

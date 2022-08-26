@@ -1,0 +1,1300 @@
+---
+model: VirtualMac2,1
+device_tree:
+  regulatory-model-number: syscfg/RMd#/0x20
+  "#address-cells": 2
+  AAPL,phandle: 1
+  config-number: syscfg/CFG#/0x40,zeroes/0x40
+  serial-number: syscfg/SrNm/0x20,zeroes/0x20
+  target-type: VMA2MACOS
+  platform-name: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+  mlb-serial-number: syscfg/MLB#/0x20,zeroes/0x20
+  secure-root-prefix: md
+  name: device-tree
+  manufacturer: Apple Inc.
+  region-info: syscfg/Regn/0x20,zeroes/0x20
+  compatible:
+  - VMA2MACOSAP
+  - VirtualMac2,1
+  - AppleVirtualPlatformARM
+  model-number: syscfg/Mod#/0x20,zeroes/0x20
+  time-stamp: Sun May 22 19:39:36 PDT 2022
+  clock-frequency: 0
+  model-config: syscfg/MdlC
+  model: VirtualMac2,1
+  device_type: bootrom
+  "#size-cells": 2
+  :children:
+  - AAPL,phandle: 2
+    sshot-interrupt-masked-scale: 0
+    lock-scale: 0
+    debug-ack-scale: 0
+    lock-panic-scale: 0
+    gicr-wake-timeout-scale: 0
+    interrupt-masked-b-scale: 0
+    interrupt-masked-scale: 0
+    name: machine-timeouts
+    ticket-lock-scale: 0
+  - development-cert: 0
+    disable-transport-rm: 0
+    amfi-only-platform-code: 0
+    coverglass-color: syscfg/CLCG
+    consistent-debug-root: "\0\0\0\0\0\0\0\0"
+    dram-vendor: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+    board-id: 0
+    enable-user-rm: 0
+    unique-chip-id: "\0\0\0\0\0\0\0\0"
+    dram-vendor-id: 0
+    mac-address-bluetooth0: macaddr/btaddr,syscfg/BMac/6
+    allow-whitelist-disable: 1
+    nvram-bank-size: 0
+    software-behavior: syscfg/SwBh/0x10,zeroes/0x10
+    backing-color: syscfg/CLBG
+    amfi-allows-trust-cache-load: 0
+    max-env-var-name-size: 0
+    mix-n-match-prevention-status: 0
+    certificate-security-mode: 0
+    display-rotation: 0
+    crypto-hash-method: sha2-384
+    marketing-software-behavior: syscfg/MkBS
+    secure-boot: 0
+    housing-color: syscfg/CLHS
+    disable-av-content-protection: 0
+    gid-aes-key: 0
+    display-corner-radius: 0
+    enable-sep-rm: 0
+    boot-nonce: "\0\0\0\0\0\0\0\0"
+    image4-supported: ''
+    isp-horizon: 0
+    nvram-bank-count: 0
+    cover-glass-material: syscfg/CGMt
+    firmware-version: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+    nvram-current-bank: 0
+    boot-manifest-hash: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+    max-env-var-data-size: 0
+    display-boot-rotation: 0
+    uid-aes-key: 0
+    random-seed: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+    chip-id: 0
+    max-env-partition: 0
+    security-downgradable: 1
+    name: chosen
+    ephemeral-storage: 0
+    osenvironment: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+    mac-address-ethernet0: macaddr/ethaddr,syscfg/EMac/6
+    enclosure-material: syscfg/EnMt
+    allowed-boot-args: trace,trace_wake,kperf,-x,-v
+    debug-enabled: 0
+    system-trusted: 0
+    apfs-preboot-uuid: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+    non-apple-or-untrusted-code: 1
+    recovery-snag-key-pressed: 0
+    AAPL,phandle: 3
+    amfi-exec-req-tc: 0
+    effective-production-status-sep: 0
+    backing-glass-material: syscfg/BGMt
+    mac-address-ethernet1: macaddr/ethaddr1,syscfg/EMc2/6
+    csr-allow-device-configuration: 0
+    protected-data-access: 1
+    effective-security-mode-ap: 0
+    effective-production-status-ap: 0
+    repair-status: syscfg/rpcp
+    mac-address-wifi0: macaddr/wifiaddr,syscfg/WMac/6
+    bootp-response: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+    use-recovery-securityd: 0
+    marketing-hardware-behavior: syscfg/MkBH
+    software-bundle-version: syscfg/SBVr/0x10,zeroes/0x10
+    die-id: "\0\0\0\0\0\0\0\0"
+    allow-ap-nonce-retrieval: ''
+    disable-accessory-firmware: 0
+    certificate-production-status: 0
+    production-cert: 0
+    "#address-cells": 2
+    effective-security-mode-sep: 0
+    sepfw-load-at-boot: 1
+    display-scale: 0
+    debug-board-revision: 0
+    :children:
+    - UnusedIntegerProperty10: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty3: 0
+      UnusedIntegerProperty6: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty18: 0
+      UnusedBooleanProperty11: 0
+      UnusedIntegerProperty15: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty2: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty6: 0
+      UnusedIntegerProperty9: "\0\0\0\0\0\0\0\0"
+      UnusedStringProperty2: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty16: 0
+      UnusedStringProperty5: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty13: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty2: 0
+      UnusedIntegerProperty5: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty9: 0
+      UnusedStringProperty8: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty14: 0
+      UnusedIntegerProperty18: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty1: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty11: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty5: 0
+      UnusedIntegerProperty8: "\0\0\0\0\0\0\0\0"
+      UnusedStringProperty0: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty19: 0
+      AAPL,phandle: 4
+      UnusedBooleanProperty12: 0
+      UnusedIntegerProperty16: "\0\0\0\0\0\0\0\0"
+      UnusedStringProperty3: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty1: 0
+      UnusedIntegerProperty4: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty8: 0
+      name: manifest-properties
+      UnusedStringProperty6: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty17: 0
+      UnusedBooleanProperty10: 0
+      UnusedIntegerProperty0: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty14: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty4: 0
+      UnusedIntegerProperty7: "\0\0\0\0\0\0\0\0"
+      UnusedStringProperty9: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty15: 0
+      UnusedIntegerProperty19: "\0\0\0\0\0\0\0\0"
+      UnusedStringProperty1: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty12: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty0: 0
+      UnusedBooleanProperty7: 0
+      UnusedIntegerProperty3: "\0\0\0\0\0\0\0\0"
+      UnusedStringProperty4: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty13: 0
+      UnusedIntegerProperty17: "\0\0\0\0\0\0\0\0"
+      UnusedStringProperty7: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+    - UnusedIntegerProperty10: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty3: 0
+      UnusedIntegerProperty6: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty18: 0
+      UnusedBooleanProperty11: 0
+      UnusedIntegerProperty15: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty2: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty6: 0
+      UnusedIntegerProperty9: "\0\0\0\0\0\0\0\0"
+      UnusedStringProperty2: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty16: 0
+      UnusedStringProperty5: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty13: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty2: 0
+      UnusedIntegerProperty5: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty9: 0
+      UnusedStringProperty8: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty14: 0
+      UnusedIntegerProperty18: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty1: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty11: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty5: 0
+      UnusedIntegerProperty8: "\0\0\0\0\0\0\0\0"
+      UnusedStringProperty0: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty19: 0
+      AAPL,phandle: 5
+      UnusedBooleanProperty12: 0
+      UnusedIntegerProperty16: "\0\0\0\0\0\0\0\0"
+      UnusedStringProperty3: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty1: 0
+      UnusedIntegerProperty4: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty8: 0
+      name: manifest-object-properties
+      UnusedStringProperty6: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty17: 0
+      UnusedBooleanProperty10: 0
+      UnusedIntegerProperty0: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty14: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty4: 0
+      UnusedIntegerProperty7: "\0\0\0\0\0\0\0\0"
+      UnusedStringProperty9: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty15: 0
+      UnusedIntegerProperty19: "\0\0\0\0\0\0\0\0"
+      UnusedStringProperty1: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty12: "\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty0: 0
+      UnusedBooleanProperty7: 0
+      UnusedIntegerProperty3: "\0\0\0\0\0\0\0\0"
+      UnusedStringProperty4: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      UnusedBooleanProperty13: 0
+      UnusedIntegerProperty17: "\0\0\0\0\0\0\0\0"
+      UnusedStringProperty7: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+    - name: boot-object-manifests
+      AAPL,phandle: 6
+    - name: secure-boot-hashes
+      AAPL,phandle: 7
+    - MemoryMapReserved-14: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      MemoryMapReserved-5: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      MemoryMapReserved-11: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      MemoryMapReserved-0: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      MemoryMapReserved-6: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      AAPL,phandle: 8
+      MemoryMapReserved-15: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      MemoryMapReserved-1: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      MemoryMapReserved-7: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      MemoryMapReserved-12: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      MemoryMapReserved-2: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      MemoryMapReserved-8: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      MemoryMapReserved-3: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      MemoryMapReserved-9: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      MemoryMapReserved-10: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      MemoryMapReserved-13: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      MemoryMapReserved-4: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      name: memory-map
+      kernel-only: 'true'
+    - name: carveout-memory-map
+      AAPL,phandle: 9
+    - name: lock-regs
+      AAPL,phandle: 10
+    - AAPL,phandle: 11
+      populate-registry-time: 0
+      load-kernel-start: 0
+      start-time: 0
+      debug-wait-start: 0
+      name: iBoot
+    - name: memory-report
+      AAPL,phandle: 12
+      :children:
+      - name: zeroization-report
+        AAPL,phandle: 13
+    - name: asmb
+      AAPL,phandle: 14
+  - name: options
+    AAPL,phandle: 15
+  - "#address-cells": 1
+    "#size-cells": 0
+    name: cpus
+    AAPL,phandle: 16
+    :children:
+    - name: cpu0
+      peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: running
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 0
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 0
+      AAPL,phandle: 17
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      cpu-version: 0
+      function-enable_core: ''
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 1
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 1
+      AAPL,phandle: 18
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu1
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 2
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 2
+      AAPL,phandle: 19
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu2
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 3
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 3
+      AAPL,phandle: 20
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu3
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 4
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 4
+      AAPL,phandle: 21
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu4
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 5
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 5
+      AAPL,phandle: 22
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu5
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 6
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 6
+      AAPL,phandle: 23
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu6
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 7
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 7
+      AAPL,phandle: 24
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu7
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 8
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 8
+      AAPL,phandle: 25
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu8
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 9
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 9
+      AAPL,phandle: 26
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu9
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 10
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 10
+      AAPL,phandle: 27
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu10
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 11
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 11
+      AAPL,phandle: 28
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu11
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 12
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 12
+      AAPL,phandle: 29
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu12
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 13
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 13
+      AAPL,phandle: 30
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu13
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 14
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 14
+      AAPL,phandle: 31
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu14
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 15
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 15
+      AAPL,phandle: 32
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu15
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 16
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 16
+      AAPL,phandle: 33
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu16
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 17
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 17
+      AAPL,phandle: 34
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu17
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 18
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 18
+      AAPL,phandle: 35
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu18
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 19
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 19
+      AAPL,phandle: 36
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu19
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 20
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 20
+      AAPL,phandle: 37
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu20
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 21
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 21
+      AAPL,phandle: 38
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu21
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 22
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 22
+      AAPL,phandle: 39
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu22
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 23
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 23
+      AAPL,phandle: 40
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu23
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 24
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 24
+      AAPL,phandle: 41
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu24
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 25
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 25
+      AAPL,phandle: 42
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu25
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 26
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 26
+      AAPL,phandle: 43
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu26
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 27
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 27
+      AAPL,phandle: 44
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu27
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 28
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 28
+      AAPL,phandle: 45
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu28
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 29
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 29
+      AAPL,phandle: 46
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu29
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 30
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 30
+      AAPL,phandle: 47
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu30
+    - peripheral-frequency: "\06n\x01\0\0\0\0"
+      state: waiting
+      compatible:
+      - ARM,v8
+      interrupt-parent: 55
+      interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
+      cpu-id: 31
+      memory-frequency: "\06n\x01\0\0\0\0"
+      reg: 31
+      AAPL,phandle: 48
+      device_type: 7696483
+      timebase-frequency: "\06n\x01\0\0\0\0"
+      clock-frequency: "\06n\x01\0\0\0\0"
+      fixed-frequency: "\06n\x01\0\0\0\0"
+      bus-frequency: "\06n\x01\0\0\0\0"
+      function-enable_core: ''
+      name: cpu31
+  - name: aliases
+    AAPL,phandle: 49
+  - AAPL,phandle: 50
+    device_type: memory
+    name: memory
+    reg: "\0\0\0\0\0\0\0\0"
+  - compatible:
+    - ARM,psci
+    name: pmgr
+    AAPL,phandle: 51
+  - name: arm-io
+    compatible:
+    - arm-io,vmapple1
+    ranges: "\0\0\0\0\0\0\0\0\0\0\0\x10\0\0\0\0\0\0\0p\0\0\0\0"
+    soc-generation: VMApple2
+    AAPL,phandle: 52
+    "#address-cells": 2
+    "#size-cells": 2
+    chip-revision: 0
+    device_type: vmapple2-io
+    :children:
+    - interrupt-parent: 55
+      compatible:
+      - aes,s8000
+      reg: "\0\0\" \0\0\0\0\0@\0\0\0\0\0\0\0\0# \0\0\0\0\0@\0\0\0\0\0\0"
+      interrupts: "2\0\0\0\x01\0\0\0"
+      AAPL,phandle: 53
+      clock-gates: 48
+      device_type: 7562593
+      name: 7562593
+      aes-version: 3
+    - reg: "\0\0\x01\x10\0\0\0\0\0\0\x01\0\0\0\0\0"
+      name: uart0
+      AAPL,phandle: 54
+    - interrupt-controller: master
+      compatible:
+      - gic,vmapple1
+      - ARM,gicv3
+      AAPL,phandle: 55
+      "#interrupt-cells": 2
+      "#address-cells": 0
+      device_type: interrupt-controller
+      name: 6515047
+      reg: "\0\0\0\0\0\0\0\0\0\0\x01\0\0\0\0\0\0\0\x01\0\0\0\0\0\0\0@\0\0\0\0\0"
+    - compatible:
+      - ARM,pl031
+      reg: "\0\0\x05\x10\0\0\0\0\0\x10\0\0\0\0\0\0"
+      name: 6517874
+      AAPL,phandle: 56
+    - AAPL,phandle: 57
+      compatible:
+      - qemu,pvpanic-mmio
+      "#address-cells": 2
+      "#size-cells": 2
+      name: pvpanic
+      reg: "\0\0\a\x10\0\0\0\0\x02\0\0\0\0\0\0\0"
+    - interrupt-base: 64
+      bus-range: "\0\0\0\0\b\0\0\0"
+      compatible:
+      - pcie,vmapple1
+      AAPL,phandle: 58
+      reg: "\0\0\00\0\0\0\0\0\0\0\x10\0\0\0\0"
+      device-interrupt-parent: 55
+      device_type: 6906736
+      ranges: !binary |-
+        AAAAAgAAAFAAAAAAAAAAQAAAAAAAAP8vAAAAAA==
+      "#size-cells": 2
+      "#address-cells": 3
+      dev-range: !binary |-
+        AAAAAP8AAAA=
+      name: pcie
+    - interrupt-parent: 55
+      compatible:
+      - ARM,pl061
+      interrupts: "%\0\0\0\0\0\0\0"
+      role: VMA1_BUTTONS
+      reg: "\0\0\x06\x10\0\0\0\0\0\x10\0\0\0\0\0\0"
+      name: pl061-buttons
+      AAPL,phandle: 59
+    - interrupt-parent: 55
+      compatible:
+      - paravirtualizedgraphics,iosurface
+      interrupts: "0\0\0\0\0\0\0\0"
+      role: APV_IOSFC
+      reg: "\0\0! \0\0\0\0\0\0\x01\0\0\0\0\0"
+      name: iosurface-mapper
+      AAPL,phandle: 60
+    - interrupt-parent: 55
+      compatible:
+      - paravirtualizedgraphics,gpu
+      interrupts: "1\0\0\0\0\0\0\0"
+      role: APV_GFX
+      reg: "\0\0  \0\0\0\0\0\0\x01\0\0\0\0\0"
+      name: 7890535
+      AAPL,phandle: 61
+  - AAPL,phandle: 62
+    device_type: pram
+    name: pram
+    reg: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+  - AAPL,phandle: 63
+    device_type: vram
+    name: vram
+    reg: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+  - no-effaceable-storage: ''
+    sleep-disabled: 1
+    vmm-present: 1
+    ean-storage-present: ''
+    kern.vm_compressor: 4
+    AAPL,phandle: 64
+    force-sep-nonce: 1
+    pmap-max-asids: 16384
+    name: defaults
+    avp-encryption-version: 0
+  - graphics-featureset-fallbacks: APPLE6:APPLE5:APPLE4:APPLE3:APPLE3v1:APPLE2:APPLE1:GLES2,0
+    location-reminders: 0
+    device-perf-memory-class: 16
+    artwork-device-subtype: 0
+    product-description: virtual machine for ARM-v8.4 with Apple Silicon extensions
+    builtin-mics: 0
+    allow-32bit-apps: 1
+    compatible-device-fallback: iPad8,6
+    mobiledevice-beta-min-ver: 1190.100.2
+    sandman-support: 0
+    atomic-firmware-update-support: 1
+    RF-exposure-separation-distance: 5
+    single-stage-boot: 1
+    dali-mode: 0
+    AAPL,phandle: 65
+    name: product
+    graphics-featureset-class: APPLE7
+    mobiledevice-min-ver: '1351'
+    apple-guest-agent-port: 505050
+    compatible-app-variant: MacFamily20,1
+    ui-weather-quality: 100
+    artwork-dynamic-displaymode: '0'
+    dual-iboot-support: 1
+    assistant: 0
+    product-name: Apple Virtual Machine 1
+    product-id: !binary |-
+      I/F7wA3G6rgWLhQDO+qR4Ff2FRA=
+    udid-version: 2
+    bluetooth-le: 0
+    ephemeral-data-mode: 0
+    lockdown-certtype: 0
+    dictation: 0
+    artwork-scale-factor: 2
+    artwork-device-idiom: 6513005
+    artwork-display-gamut: P3
+    :children:
+    - ncm-self-name-unit: 0
+      configuration-string: ncmAuxBringup
+      ncm-interrupt-ep-disabled: 1
+      ncm-control-ecid-mac: 1
+      product-string: macOS Virtual Machine
+      vendor-id: 1452
+      name: usb-device
+      AAPL,phandle: 66
+    - regions: !binary |-
+        AQAAAAAAAAAAAKAAAgAAAAAAoAAAABAAAwAAAAAAsAAAAFAABAAAAAAAAAEAAFAABQAAAAAAUAEAAFAABgAAAAAAoAEAAGAA
+      AAPL,phandle: 67
+      low-level-fw-device-info: 1
+      reg: ''
+      fw-regions: "\0\0\0\0\0\0\x02\0\0\0\x02\0\0\0 \0\0\0\"\0\0\0 \0"
+      name: util
+  - name: filesystems
+    AAPL,phandle: 68
+    :children:
+    - AAPL,phandle: 69
+      max_fs_entries: 7
+      name: fstab
+      os_env_type: 1
+      :children:
+      - vol.fs_mntopts: ''
+        vol.fs_type: ro
+        vol.fs_role: 1
+        vol.fs_name: System
+        vol.fs_file: "/"
+        vol.fs_passno: 1
+        vol.fs_mntorder: 0
+        name: system-vol
+        AAPL,phandle: 70
+      - vol.fs_mntopts: nosuid,nodev,nobrowse
+        vol.fs_type: ro
+        vol.fs_role: 16
+        vol.fs_name: Preboot
+        vol.fs_file: "/private/preboot"
+        vol.fs_passno: 1
+        vol.fs_mntorder: 1
+        name: preboot-vol
+        AAPL,phandle: 71
+      - vol.fs_mntopts: nosuid,nodev
+        vol.fs_type: rw
+        vol.fs_role: 64
+        vol.fs_name: Data
+        vol.fs_file: "/private/var"
+        vol.fs_passno: 2
+        vol.fs_mntorder: 3
+        name: data-vol
+        AAPL,phandle: 72
+      - vol.fs_mntopts: nosuid,nodev,nobrowse
+        vol.fs_type: rw
+        vol.fs_role: 192
+        vol.fs_name: Update
+        vol.fs_file: "/private/var/MobileSoftwareUpdate"
+        vol.fs_passno: 2
+        vol.fs_mntorder: 5
+        name: update-vol
+        AAPL,phandle: 73
+      - vol.fs_mntopts: nosuid,nodev,nobrowse
+        vol.fs_type: rw
+        vol.fs_role: 320
+        vol.fs_name: Hardware
+        vol.fs_file: "/private/var/hardware"
+        vol.fs_passno: 2
+        vol.fs_mntorder: 6
+        name: hardware-vol
+        AAPL,phandle: 74
+    - AAPL,phandle: 75
+      max_fs_entries: 3
+      name: fstab-ephemeral-recovery-data
+      os_env_type: 2
+      :children:
+      - AAPL,phandle: 76
+        vol.fs_mntopts: nosuid,nodev,size=262144,template=/private/var/
+        vol.fs_type: rw
+        vol.fs_name: Data
+        vol.fs_ephemeral: ''
+        vol.fs_file: "/private/var"
+        vol.fs_mntorder: 0
+        name: ephemeral-recovery-data-vol
+        vol.fs_passno: 2
+      - vol.fs_mntopts: nosuid,nodev,nobrowse
+        vol.fs_type: ro
+        vol.fs_role: 16
+        vol.fs_name: Preboot
+        vol.fs_file: "/private/preboot"
+        vol.fs_passno: 1
+        vol.fs_mntorder: 1
+        name: preboot-vol
+        AAPL,phandle: 77
+      - vol.fs_mntopts: nosuid,nodev,nobrowse
+        vol.fs_type: rw
+        vol.fs_role: 320
+        vol.fs_name: Hardware
+        vol.fs_file: "/private/var/hardware"
+        vol.fs_passno: 2
+        vol.fs_mntorder: 6
+        name: hardware-vol
+        AAPL,phandle: 78
+    - AAPL,phandle: 79
+      max_fs_entries: 7
+      name: fstab-ephemeral-diag-data
+      os_env_type: 3
+      :children:
+      - AAPL,phandle: 80
+        vol.fs_mntopts: nosuid,nodev,size=1048576,template=/private/var/
+        vol.fs_type: rw
+        vol.fs_name: Data
+        vol.fs_ephemeral: ''
+        vol.fs_file: "/private/var"
+        vol.fs_mntorder: 0
+        name: ephemeral-diag-data-vol
+        vol.fs_passno: 2
+      - vol.fs_mntopts: nosuid,nodev,nobrowse
+        vol.fs_type: rw
+        vol.fs_role: 192
+        vol.fs_name: Update
+        vol.fs_file: "/private/var/MobileSoftwareUpdate"
+        vol.fs_passno: 2
+        vol.fs_mntorder: 5
+        name: update-vol
+        AAPL,phandle: 81
+      - vol.fs_mntopts: nosuid,nodev,nobrowse
+        vol.fs_type: ro
+        vol.fs_role: 16
+        vol.fs_name: Preboot
+        vol.fs_file: "/private/preboot"
+        vol.fs_passno: 1
+        vol.fs_mntorder: 1
+        name: preboot-vol
+        AAPL,phandle: 82
+      - vol.fs_mntopts: nosuid,nodev,nobrowse
+        vol.fs_type: rw
+        vol.fs_role: 320
+        vol.fs_name: Hardware
+        vol.fs_file: "/private/var/hardware"
+        vol.fs_passno: 2
+        vol.fs_mntorder: 6
+        name: hardware-vol
+        AAPL,phandle: 83
+  - name: buttons
+    AAPL,phandle: 84
+  - name: osenvironments
+    AAPL,phandle: 85
+    :children:
+    - name: recovery-environment
+      AAPL,phandle: 86
+      :children:
+      - parent: "/filesystems"
+        AAPL,phandle: 87
+        replacement: fstab-ephemeral-recovery-data
+        name: ephemeral-recovery-data-volume
+        node: fstab
+      - property_name: ephemeral-storage
+        value: 1
+        name: ephemeral-storage
+        AAPL,phandle: 88
+      - property_name: sepfw-load-at-boot
+        value: 0
+        name: no-sepfw-load-at-boot
+        AAPL,phandle: 89
+      - property_name: protected-data-access
+        value: 0
+        name: no-protected-data-access
+        AAPL,phandle: 90
+      - property_name: amfi-allows-trust-cache-load
+        value: 1
+        name: amfi-allows-trust-cache-load
+        AAPL,phandle: 91
+      - property_name: disable-av-content-protection
+        value: 1
+        name: disable-av-content-protection
+        AAPL,phandle: 92
+      - property_name: use-recovery-securityd
+        value: 1
+        name: use-recovery-securityd
+        AAPL,phandle: 93
+      - property_name: disable-accessory-firmware
+        value: 1
+        name: disable-accessory-firmware
+        AAPL,phandle: 94
+      - property_name: non-apple-or-untrusted-code
+        value: 0
+        name: apple-trusted-code
+        AAPL,phandle: 95
+      - property_name: allowed-boot-args
+        value: ''
+        name: boot-args-not-allowed
+        AAPL,phandle: 96
+      - property_name: allow-whitelist-disable
+        value: 0
+        name: disallow-whitelist-disabled
+        AAPL,phandle: 97
+    - name: diagnostics-environment
+      AAPL,phandle: 98
+      :children:
+      - property_name: disable-transport-rm
+        value: 1
+        name: disable-transport-rm
+        AAPL,phandle: 99
+      - property_name: protected-data-access
+        value: 0
+        name: no-protected-data-access
+        AAPL,phandle: 100
+      - property_name: amfi-allows-trust-cache-load
+        value: 1
+        name: amfi-allows-trust-cache-load
+        AAPL,phandle: 101
+      - property_name: enable-user-rm
+        value: 1
+        name: enable-user-rm
+        AAPL,phandle: 102
+      - property_name: enable-sep-rm
+        value: 1
+        name: enable-sep-rm
+        AAPL,phandle: 103
+      - property_name: allowed-boot-args
+        value: ''
+        name: boot-args-not-allowed
+        AAPL,phandle: 104
+      - property_name: allow-whitelist-disable
+        value: 0
+        name: disallow-whitelist-disabled
+        AAPL,phandle: 105
+      - property_name: security-downgradable
+        value: 0
+        name: security-not-downgradable
+        AAPL,phandle: 106
+      - property_name: non-apple-or-untrusted-code
+        value: 0
+        name: apple-trusted-code
+        AAPL,phandle: 107
+      - property_name: amfi-exec-req-tc-overrideable
+        value: 1
+        name: amfi-exec-req-tc-overrideable
+        AAPL,phandle: 108
+    - name: darwinos-ramdisk-environment
+      AAPL,phandle: 109
+      :children:
+      - property_name: isp-horizon
+        value: 1
+        name: isp-horizon
+        AAPL,phandle: 110
+      - parent: "/filesystems"
+        AAPL,phandle: 111
+        replacement: fstab-ephemeral-recovery-data
+        name: ephemeral-recovery-data-volume
+        node: fstab
+      - property_name: ephemeral-storage
+        value: 1
+        name: ephemeral-storage
+        AAPL,phandle: 112
+      - property_name: protected-data-access
+        value: 0
+        name: no-protected-data-access
+        AAPL,phandle: 113
+      - property_name: allowed-boot-args
+        value: ''
+        name: boot-args-not-allowed
+        AAPL,phandle: 114
+      - property_name: allow-whitelist-disable
+        value: 0
+        name: disallow-whitelist-disabled
+        AAPL,phandle: 115
+      - property_name: sepfw-load-at-boot
+        value: 0
+        name: no-sepfw-load-at-boot
+        AAPL,phandle: 116
+    - name: kcgen-environment
+      AAPL,phandle: 117
+      :children:
+      - property_name: non-apple-or-untrusted-code
+        value: 0
+        name: apple-trusted-code
+        AAPL,phandle: 118
+      - property_name: allowed-boot-args
+        value: ''
+        name: boot-args-not-allowed
+        AAPL,phandle: 119
+      - property_name: allow-whitelist-disable
+        value: 0
+        name: disallow-whitelist-disabled
+        AAPL,phandle: 120
+      - property_name: amfi-exec-req-tc
+        value: 1
+        name: amfi-exec-req-tc
+        AAPL,phandle: 121
+    - name: recoveryos-environment
+      AAPL,phandle: 122
+      :children:
+      - property_name: csr-allow-device-configuration
+        value: 1
+        name: csr-allow-device-configuration
+        AAPL,phandle: 123
+      - property_name: security-downgradable
+        value: 0
+        name: security-not-downgradable
+        AAPL,phandle: 124
+      - property_name: non-apple-or-untrusted-code
+        value: 0
+        name: apple-trusted-code
+        AAPL,phandle: 125
+      - property_name: allowed-boot-args
+        value: 3174514
+        name: only-dmgboot-boot-args-allowed
+        AAPL,phandle: 126
+      - property_name: allow-whitelist-disable
+        value: 0
+        name: disallow-whitelist-disabled
+        AAPL,phandle: 127
+      - property_name: amfi-exec-req-tc-overrideable
+        value: 1
+        name: amfi-exec-req-tc-overrideable
+        AAPL,phandle: 128
+    - name: upgrade-environment
+      AAPL,phandle: 129
+      :children:
+      - property_name: non-apple-or-untrusted-code
+        value: 0
+        name: apple-trusted-code
+        AAPL,phandle: 130
+      - property_name: enable-sep-rm
+        value: 1
+        name: enable-sep-rm
+        AAPL,phandle: 131
+      - property_name: allowed-boot-args
+        value: ''
+        name: boot-args-not-allowed
+        AAPL,phandle: 132
+      - property_name: allow-whitelist-disable
+        value: 0
+        name: disallow-whitelist-disabled
+        AAPL,phandle: 133
+      - property_name: amfi-exec-req-tc
+        value: 1
+        name: amfi-exec-req-tc
+        AAPL,phandle: 134
