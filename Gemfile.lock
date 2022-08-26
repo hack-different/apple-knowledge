@@ -74,6 +74,7 @@ GEM
       faraday (~> 2.0)
     ffi (1.15.5)
     forwardable-extended (2.6.0)
+    hashie (5.0.0)
     html-pipeline (2.14.2)
       activesupport (>= 2)
       nokogiri (>= 1.4)
@@ -280,12 +281,13 @@ GEM
     webrick (1.7.0)
     yard (0.9.28)
       webrick (~> 1.7.0)
-    yard-sorbet (0.6.1)
+    yard-sorbet (0.7.0)
       sorbet-runtime (>= 0.5)
       yard (>= 0.9)
 
 PLATFORMS
   x86_64-darwin-22
+  arm64-darwin-22
 
 DEPENDENCIES
   CFPropertyList
@@ -296,6 +298,7 @@ DEPENDENCIES
   byebug
   faraday (~> 2.5)
   faraday-retry
+  hashie
   jekyll (~> 4.2)
   jekyll-coffeescript
   jekyll-commonmark

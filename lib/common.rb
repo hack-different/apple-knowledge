@@ -58,7 +58,8 @@ class DataFileCollection
 
   def ensure_key(key, description: true)
     key = key.to_s if key.is_a? Symbol
-    value = @collection_data[key] ||= {}
+    @collection_data[key] ||= {}
+    value = @collection_data[key]
     value['description'] ||= nil if description
     value
   end

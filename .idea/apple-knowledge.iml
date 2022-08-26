@@ -69,6 +69,7 @@
     <orderEntry type="library" scope="PROVIDED" name="faraday-retry (v2.0.0, rbenv: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.5, rbenv: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="forwardable-extended (v2.6.0, rbenv: 3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hashie (v5.0.0, rbenv: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="html-pipeline (v2.14.2, rbenv: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="http-cookie (v1.0.5, rbenv: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="http_parser.rb (v0.8.0, rbenv: 3.1.2) [gem]" level="application" />
@@ -278,6 +279,7 @@
               <RakeTaskImpl description="" fullCommand="tipw:pages" id="pages" />
             </subtasks>
           </RakeTaskImpl>
+          <RakeTaskImpl description="Perform all automated updates" fullCommand="update" id="update" />
           <RakeTaskImpl description="validate data directory" fullCommand="validate" id="validate" />
           <RakeTaskImpl description="" fullCommand="sort_collection" id="sort_collection" />
         </subtasks>
