@@ -37,5 +37,15 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Apply data updates
+          create_branch: true
+          branch: auto-update-bot
           commit_user_name: Hack Different's fully sentient AI
           file_pattern: _data/**
+
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          destination_branch: main
+          source_branch: auto-update-bot
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_title: "Automated data updater"
