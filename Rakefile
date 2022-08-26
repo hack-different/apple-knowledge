@@ -19,3 +19,10 @@ task precommit: %i[sort jekyll]
 
 desc 'default build task'
 task default: ['rubocop:auto_correct', :precommit]
+
+desc 'Perform all automated updates'
+task :update do
+  Rake::Task['credits'].execute
+  Rake::Task['sort'].execute
+  Rake::Task['data:ipsw:total_order'].execute
+end
