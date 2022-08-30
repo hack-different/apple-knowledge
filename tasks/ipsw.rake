@@ -195,26 +195,27 @@ namespace :data do
     end
 
     desc 'missing IPSWs from local store'
-    task :missing, [:dir, :urls] do |_task, args|
+    task :missing, [:dir] do |_task, args|
       raise("No directory exists at #{args[:dir]}") unless File.directory? args[:dir]
 
       data_file = DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
 
+      result = []
+
       collection.each do |key, value|
         full_path = File.join(args[:dir], key)
         unless File.exist? full_path
-          if args[:urls]
-            (value['urls'] || []).each do |url|
-              puts url['url']
-            end
-          else
-            puts "Missing IPSW: #{key}"
+          urls = (value['urls'] || []).map do |url|
+            url['url']
           end
+          result << { 'key' => key, 'urls' => urls }
         end
       rescue StandardError
         next
       end
+
+      puts result.to_json
     end
 
     desc 'invalid IPSWs from local store'

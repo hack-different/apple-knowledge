@@ -6,9 +6,11 @@ class SHASum
 
   def self.shasum_type?(input)
     case input.length
+    when 32
+      'md5'
     when 40
       'sha1'
-    when 48
+    when 56
       'sha2-224'
     when 64
       'sha2-256'
