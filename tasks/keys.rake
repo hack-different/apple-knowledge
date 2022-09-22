@@ -7,7 +7,9 @@ namespace :data do
 
     input_keys = JSON.load_file args[:path]
 
-    keybag = AppleData::GIDKeyBag[chip_id]
+    input_keys.each do |_entry|
+      AppleData::Core.find_board
+    end
 
     AppleData.GIDKeyBag.save_all
   end

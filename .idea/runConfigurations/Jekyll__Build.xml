@@ -2,12 +2,12 @@
   <configuration default="false" name="Jekyll: Build" type="CommandRunConfigurationType" factoryName="Gem Command">
     <module name="apple-knowledge" />
     <COMMAND_RUN_CONFIGURATION NAME="RUBY_ARGS" VALUE="" />
-    <COMMAND_RUN_CONFIGURATION NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+    <COMMAND_RUN_CONFIGURATION NAME="WORK DIR" VALUE="$MODULE_DIR$" />
     <COMMAND_RUN_CONFIGURATION NAME="SHOULD_USE_SDK" VALUE="false" />
     <COMMAND_RUN_CONFIGURATION NAME="ALTERN_SDK_NAME" VALUE="" />
     <COMMAND_RUN_CONFIGURATION NAME="myPassParentEnvs" VALUE="true" />
     <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-    <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+    <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
       <COVERAGE_PATTERN ENABLED="true">
         <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
       </COVERAGE_PATTERN>
@@ -16,7 +16,7 @@
     <COMMAND_CONFIG_SETTINGS_ID NAME="GEM_NAME" VALUE="jekyll" />
     <COMMAND_CONFIG_SETTINGS_ID NAME="EXECUTABLE_NAME" VALUE="jekyll" />
     <COMMAND_CONFIG_SETTINGS_ID NAME="EXECUTABLE_ARGS" VALUE="build" />
-    <COMMAND_CONFIG_SETTINGS_ID NAME="WORKING_DIR" VALUE="$PROJECT_DIR$" />
+    <COMMAND_CONFIG_SETTINGS_ID NAME="WORKING_DIR" VALUE="$MODULE_DIR$" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>
