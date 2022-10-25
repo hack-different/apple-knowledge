@@ -42,6 +42,7 @@ jobs:
           branch: auto-update-bot
           commit_user_name: Hack Different's fully sentient AI
           file_pattern: _data/**
+          push_options: '--force'
 
       - name: pull-request
         uses: repo-sync/pull-request@v2
