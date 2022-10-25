@@ -36,6 +36,8 @@ namespace :tipw do
         entry['downloaded'] = true
       end
 
+      collection.sort
+
       TIPW::SYNC_DATAFILE.save
     end
   end

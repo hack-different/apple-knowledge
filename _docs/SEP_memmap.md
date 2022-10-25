@@ -17,45 +17,6 @@ static_assert(sizeof(struct phys_range) == 0x18, "");
 This array contains the physical location of many SEP's peripherals.
 The `ctx` and `name` fields are in reversed ASCII.
 
-## Methodology
-
-First, we have to decrypt the sep-firmware. This can be done using [xerub's img4lib](https://github.com/xerub/img4lib).
-You'll also need the decryption keys.
-
-For A11 SEPOS especially, you might have to do lzvn decode after decrypting img4 since it is an unpacker.
-
-```shell
-dd if=sepfw-raw of=sepfw.lzvn bs=0x20000 skip=1
-lzvn -d sepfw.lzvn sepfw
-```
-
-[LZVN](https://github.com/xerub/lzvn)
-(Credit goes to [@s1guza](https://twitter.com/s1guza))
-
-To find these arrays, we can do a `/ EASB` or `/x 0000010006` on the sep-firmware image. Then go back to the farthest
-chunk of 8 ASCII characters (`ctx` and `name` fields).
-
-Here is the python code to dump these fields on A12 sep-firmware:
-
-```python
-import struct
-
-f = struct.Struct("<4s4sQII")
-assert f.size == 0x18
-def dump_map(buffer):
- for x in f.iter_unpack(buffer):
-  print(*[x[0][::-1].decode('utf-8'), x[1][::-1].decode('utf-8'), hex(x[2]), hex(x[3]), hex(x[4])])
-
-with open("sepos", "rb") as fd:
- fd.seek(0x2cb180)
- buffer = fd.read(0x18*14)
- dump_map(buffer)
-
- fd.seek(0x2d6080)
- buffer = fd.read(0x18*2)
- dump_map(buffer)
-```
-
 ## Examples
 
 For your convenience, A11 and A12's memmap are put here.
