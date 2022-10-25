@@ -67,4 +67,5 @@ group :development, :test do
   gem 'sorbet'
   gem 'sqlite3'
   gem 'tapioca', require: false
+  gem 'typhoeus'
 end
