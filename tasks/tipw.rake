@@ -27,13 +27,43 @@ namespace :tipw do
 
       collection = TIPW::SYNC_DATAFILE.collection key
 
+      work_queue = Queue.new
+      finished_queue = Queue.new
+
       collection.each do |page_id, entry|
         result_file_name = File.join(collection_file_path, "#{page_id}.page")
         next if !args[:force] && File.exist?(result_file_name)
 
-        puts "Downloading page: '#{entry['title']}'"
-        File.write(result_file_name, TIPW.get_page_content(entry['title']))
-        entry['downloaded'] = true
+        work_queue.push [page_id, entry, result_file_name]
+      end
+
+      threads = []
+      16.times do
+        threads << Thread.new do
+          until work_queue.empty?
+            begin
+              page_id, entry, result_file_name = work_queue.pop(true)
+              next unless page_id
+
+              puts "Getting page #{page_id} (#{entry['title']})"
+              page = TIPW.get_page_content entry['title']
+              next unless page
+
+              finished_queue.push(entry)
+
+              File.write result_file_name, page.to_json
+            rescue StandardError
+              puts "Error getting page #{page_id} (#{entry['title']})"
+            end
+          end
+        end
+      end
+
+      threads.each(&:join)
+
+      until finished_queue.empty?
+        entry = finished_queue.pop(true)
+        entry['synced'] = true
       end
 
       collection.sort
