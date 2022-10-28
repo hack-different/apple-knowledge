@@ -12,6 +12,7 @@ jobs:
     uses: hack-different/apple-knowledge/.github/workflows/build-node.yml@main
 
   publish-npm:
+    name: Publish to NPM
     runs-on: ubuntu-latest
     environment: node-push
 

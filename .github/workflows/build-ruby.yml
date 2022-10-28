@@ -11,13 +11,14 @@ on:
 
 jobs:
   ci-test-gem:
+    name: Perform Ruby Gem CI Tests
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./_packages/ruby
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: ${{ inputs.fetch-depth }}
 

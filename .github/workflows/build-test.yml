@@ -10,12 +10,13 @@ on:
         type: number
 
 jobs:
-  ci-test:
+  ci-test-root:
+    name: "Integration Tests"
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository with History
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: ${{ inputs.fetch-depth }}
 
