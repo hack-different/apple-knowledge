@@ -1,4 +1,4 @@
-name: Build and deploy Jekyll site to GitHub Pages
+name: Static Website - Build
 
 on:
   push:
@@ -11,15 +11,24 @@ jobs:
     environment: gh-pages
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+
+      - id: gem-cache
+        uses: actions/cache@v2
         with:
           path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          key: ${{ runner.os }}-gems-${{ hashFiles('Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gems-
+
       - uses: hack-different/jekyll-action@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           debug: true
           target_branch: gh-pages
           target_path: /
+
+      - name: Archive Data Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: data-site
+          path: _site

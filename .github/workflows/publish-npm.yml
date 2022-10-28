@@ -1,46 +1,43 @@
 # This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
 # For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
 
-name: Upload NPM Package
+name: Publish Package - Node / NPM
+
+inputs:
+  # Counterintuitive, but this is the value for full history required for rev-list --count
+  fetch-depth:
+    default: 0
+    required: false
+    type: number
 
 on:
   push:
     branches: [ main ]
 
 jobs:
+  ci-build-node:
+    needs: ci-test
+    uses: hack-different/apple-knowledge/.github/workflows/build-node.yml@main
+
   publish-npm:
     runs-on: ubuntu-latest
     environment: node-push
 
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0 # Counter intuitive, but this is the value for full history required for rev-list --count
-
       - uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: 18
           cache: yarn
           cache-dependency-path: _packages/node/yarn.lock
           registry-url: https://registry.npmjs.org/
 
-      - name: Install dependencies
-        working-directory: ./_packages/node
-        run: |
-          yarn install
-
-      - name: Build package
-        working-directory: ./_packages/node
-        run: |
-          yarn build
-
-      - name: Run Package Tests
-        working-directory: ./_packages/node
-        run: |
-          yarn test
+      - name: Download Node Package Artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: package-node
+          path: dist
 
       - name: Publish to NPM Registry
-        run: yarn publish
-        working-directory: ./_packages/node
+        run: yarn publish dist/
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}

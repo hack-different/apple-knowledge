@@ -1,9 +1,21 @@
-name: Periodic Updates from data sources
+name: Periodic Updates
 
 on:
   schedule:
     - cron: '* 8 * * *'
+
   workflow_dispatch:
+
+inputs:
+  # Counterintuitive, but this is the value for full history required for rev-list --count
+  fetch-depth:
+    default: 0
+    required: false
+    type: number
+  ref:
+    default: 'auto-update-bot'
+    required: false
+    type: string
 
 jobs:
   periodic-update:
@@ -11,36 +23,64 @@ jobs:
     timeout-minutes: 60
 
     steps:
+      # This allows us to continue to update an existing auto-update branch if it has yet to be merged, but if one
+      # does not exist we will create a new one from the main branch.
+      - id: repo
+        shell: bash
+        run: |
+          if git ls-remote --heads --quiet --exit-code https://github.com/${{ github.repository }}.git ${{ inputs.ref }}
+          then
+            echo "::notice::Checkout: ${{ github.repository }} using ${{ inputs.ref }}"
+            echo "::set-output name=ref-exists::true"
+          else
+            USING="main"
+            echo "::notice::Checkout: ${{ github.repository }} does not have ref ${{ inputs.ref }} (fallback to ${USING})"
+            echo "::set-output name=ref-exists::false"
+            echo "::set-output name=default-branch::${USING}"
+          fi
+
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0 # Counter intuitive, but this is the value for full history required for rev-list --count
+          fetch-depth: ${{ inputs.fetch-depth }}
+          ref: ${{ inputs.ref }}
+
+      - name: Cache Ruby Gems and Bundle
+        id: cache-gems
+        uses: actions/cache@v3
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-build-ruby-${{ hashFiles('Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-ruby-
 
       - name: Set up Ruby 3.1
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1.2
-
-      - name: Install and Update Dependencies
-        run: |
-          bundle update
+          bundler-cache: true
 
       - name: Cache Temporary Data
         id: cache-tmp
         uses: actions/cache@v3
         with:
           path: tmp
-          key: ${{ runner.os }}-data-tmp
+          key: data-update-cache
 
       - name: Perform Default Rake Task
-        run: |
-          bundle exec rake update
+        run: bundle exec rake update
+
+      - name: Archive Data Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: data-update-artifacts
+          path: _data
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Apply data updates
           create_branch: true
-          branch: auto-update-bot
-          commit_user_name: Hack Different's fully sentient AI
+          branch: ${{ inputs.ref }}
+          commit_user_name: The Hack Different fully sentient AI
           file_pattern: _data/**
           push_options: '--force'
 
@@ -48,6 +88,26 @@ jobs:
         uses: repo-sync/pull-request@v2
         with:
           destination_branch: main
-          source_branch: auto-update-bot
+          source_branch: ${{ inputs.ref }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          pr_title: "Automated data updater"
+          pr_title: "Automated Data Update: ${{ github.run_number }}"
+
+    ci-test:
+      needs: periodic-update
+      uses: hack-different/apple-knowledge/.github/workflows/build-test.yml@main
+
+    ci-build-jekyll:
+      needs: ci-test
+      uses: hack-different/apple-knowledge/.github/workflows/build-jekyll.yml@main
+
+    ci-build-python:
+      needs: ci-test
+      uses: hack-different/apple-knowledge/.github/workflows/build-python.yml@main
+
+    ci-build-ruby:
+      needs: ci-test
+      uses: hack-different/apple-knowledge/.github/workflows/build-ruby.yml@main
+
+    ci-build-node:
+      needs: ci-test
+      uses: hack-different/apple-knowledge/.github/workflows/build-node.yml@main

@@ -1,0 +1,57 @@
+name: Continuous Integration - Node Package
+
+on:
+  workflow_call:
+
+inputs:
+  # Counterintuitive, but this is the value for full history required for rev-list --count
+  fetch-depth:
+    default: 0
+    required: false
+    type: number
+
+jobs:
+  ci-test-node:
+    name: Perform Node Continuous Integration Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: ${{ inputs.fetch-depth }}
+
+      - name: Cache Node Packages
+        id: cache-node
+        uses: actions/cache@v3
+        with:
+          path:  _packages/node/node_modules
+          key: ${{ runner.os }}-build-ci-node-yarn-${{ hashFiles('_packages/node/yarn.lock') }}
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 18
+          cache: yarn
+          cache-dependency-path: _packages/node/yarn.lock
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install dependencies
+        working-directory: ./_packages/node
+        run: yarn install
+
+      - name: Perform a Build
+        working-directory: ./_packages/node
+        run: yarn build
+
+      - name: Run Package Tests
+        working-directory: ./_packages/node
+        run: yarn test
+
+      - name: Package Node Artifact
+        working-directory: ./_packages/node
+        run: yarn pack
+
+      - name: Archive Node Package Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: package-node
+          path: _packages/node/*.tgz
