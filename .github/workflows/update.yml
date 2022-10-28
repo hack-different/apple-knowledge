@@ -5,17 +5,11 @@ on:
     - cron: '* 8 * * *'
 
   workflow_dispatch:
-
-inputs:
-  # Counterintuitive, but this is the value for full history required for rev-list --count
-  fetch-depth:
-    default: 0
-    required: false
-    type: number
-  ref:
-    default: 'auto-update-bot'
-    required: false
-    type: string
+    inputs:
+      ref:
+        default: 'auto-update-bot'
+        required: false
+        type: string
 
 jobs:
   periodic-update:
@@ -41,7 +35,7 @@ jobs:
 
       - uses: actions/checkout@v2
         with:
-          fetch-depth: ${{ inputs.fetch-depth }}
+          fetch-depth: 0
           ref: ${{ inputs.ref }}
 
       - name: Cache Ruby Gems and Bundle
