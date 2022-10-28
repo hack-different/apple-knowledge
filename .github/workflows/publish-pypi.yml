@@ -17,6 +17,7 @@ jobs:
     uses: hack-different/apple-knowledge/.github/workflows/build-python.yml@main
 
   publish-pypi:
+    name: Publish to PyPI
     runs-on: ubuntu-latest
     environment: pypi-push
     defaults:

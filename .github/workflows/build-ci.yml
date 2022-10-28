@@ -5,21 +5,26 @@ on:
     branches: [ main ]
 
 jobs:
-  ci-test:
+  ci-test-root:
+    name: "Root Project"
     uses: hack-different/apple-knowledge/.github/workflows/build-test.yml@main
 
   ci-build-jekyll:
+    name: "Jekyll"
     needs: ci-test
     uses: hack-different/apple-knowledge/.github/workflows/build-jekyll.yml@main
 
   ci-build-python:
+    name: "Python"
     needs: ci-test
     uses: hack-different/apple-knowledge/.github/workflows/build-python.yml@main
 
   ci-build-ruby:
+    name: "Ruby"
     needs: ci-test
     uses: hack-different/apple-knowledge/.github/workflows/build-ruby.yml@main
 
   ci-build-node:
+    name: "Node"
     needs: ci-test
     uses: hack-different/apple-knowledge/.github/workflows/build-node.yml@main

@@ -1,4 +1,4 @@
-name: Publish Package - Ruby Rubygems
+name: Publish Package - Ruby RubyGems
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
     uses: hack-different/apple-knowledge/.github/workflows/build-ruby.yml@main
 
   publish-gem:
-    name: Build + Publish
+    name: Publish to RubyGems
     runs-on: ubuntu-latest
     environment: gem-push
     permissions:
