@@ -16,7 +16,6 @@ on:
 
 jobs:
   ci-build-node:
-    needs: ci-test
     uses: hack-different/apple-knowledge/.github/workflows/build-node.yml@main
 
   publish-npm:

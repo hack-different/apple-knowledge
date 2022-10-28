@@ -13,7 +13,6 @@ inputs:
 
 jobs:
   ci-build-ruby:
-    needs: ci-test
     uses: hack-different/apple-knowledge/.github/workflows/ruby-ci.yml@main
 
   publish-gem:

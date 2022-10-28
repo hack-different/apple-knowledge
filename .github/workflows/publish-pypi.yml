@@ -14,7 +14,6 @@ on:
 
 jobs:
   ci-build-python:
-    needs: ci-test
     uses: hack-different/apple-knowledge/.github/workflows/build-python.yml@main
 
   publish-pypi:
