@@ -1,0 +1,43 @@
+name: Continuous Integration - Python Package
+
+on:
+  workflow_call:
+
+inputs:
+  # Counterintuitive, but this is the value for full history required for rev-list --count
+  fetch-depth:
+    default: 0
+    required: false
+    type: number
+
+jobs:
+  ci-test-python:
+    name: Perform Python CI Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./_packages/python
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: ${{ inputs.fetch-depth }}
+
+      - name: Set up Python with Poetry Caching
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+          cache: 'poetry'
+          cache-dependency-path: |
+            _packages/python/poetry.lock
+
+      - name: Install dependencies
+        run: |
+          ./update_version.py
+          poetry install
+
+      - name: Perform Tests
+        run:  poetry run pytest
+
+      - name: Build package
+        run: poetry build

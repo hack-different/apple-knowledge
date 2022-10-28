@@ -1,0 +1,52 @@
+name: Continuous Integration - Ruby Gem
+
+on:
+  workflow_call:
+
+inputs:
+  # Counterintuitive, but this is the value for full history required for rev-list --count
+  fetch-depth:
+    default: 0
+    required: false
+    type: number
+
+jobs:
+  ci-test-gem:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./_packages/ruby
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: ${{ inputs.fetch-depth }}
+
+      - name: Cache Ruby Gems and Bundle
+        id: cache-gems
+        uses: actions/cache@v3
+        with:
+          path: _packages/ruby/vendor/bundle
+          key: ${{ runner.os }}-build-ci-ruby-gem-${{ hashFiles('_packages/ruby/Gemfile.lock') }}
+
+      - name: Setup Ruby 3.1
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1.2
+          bundler-cache: true
+          working-directory: _packages/ruby
+
+      - name: Perform Default Rake Task
+        run: bundle exec rake
+
+      - name: Perform Explicit Rake Test
+        run: bundle exec rake spec
+
+      - name: Build Gem
+        run: gem build *.gemspec
+
+      - name: Archive Gem Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: package-gem
+          path: _packages/ruby/*.gem

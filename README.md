@@ -371,6 +371,10 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [`rickmark/awdd_decode`](https://github.com/rickmark/awdd_decode)
 * Mojo Serial
   * [MojoKDP.kext.S](https://github.com/rickmark/mojo_thor/blob/master/MojoKDP/mojo.kext.S)
+* Apple "tailspin"
+* Apple `tracev3` Unified Logging
+  * [`ydkhatri/UnifiedLogReader``](https://github.com/ydkhatri/UnifiedLogReader)
+  * [dtformats](https://github.com/libyal/dtformats/blob/main/documentation/Apple%20Unified%20Logging%20and%20Activity%20Tracing%20formats.asciidoc)
 * XHC20 USB Capture
   * [`hack-different/demuxusb/ext/pcapng.h`](https://github.com/t8012/demuxusb/blob/b6b1a1a6633449c2cb16ad44edcc22aab4dc29cd/ext/pcapng.h)
 

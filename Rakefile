@@ -10,7 +10,7 @@ $LOAD_PATH.unshift(File.join(BASE_PATH, 'lib'))
 
 require 'common'
 
-UPDATE_TASKS = %w[credits tipw:categories tipw:pages tipw:ipsws data:mobile_assets data:ipsw:manifests:download
+UPDATE_TASKS = %w[tipw:categories tipw:pages tipw:ipsws data:mobile_assets data:ipsw:manifests:download
                   data:ipsw:manifests data:ipsw:total_order sort].freeze
 
 Rake.add_rakelib 'tasks'
