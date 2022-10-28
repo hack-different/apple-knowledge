@@ -13,7 +13,7 @@ inputs:
 
 jobs:
   ci-build-ruby:
-    uses: hack-different/apple-knowledge/.github/workflows/ruby-ci.yml@main
+    uses: hack-different/apple-knowledge/.github/workflows/build-ruby.yml@main
 
   publish-gem:
     name: Build + Publish

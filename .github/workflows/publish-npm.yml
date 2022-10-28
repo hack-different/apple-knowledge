@@ -3,13 +3,6 @@
 
 name: Publish Package - Node / NPM
 
-inputs:
-  # Counterintuitive, but this is the value for full history required for rev-list --count
-  fetch-depth:
-    default: 0
-    required: false
-    type: number
-
 on:
   push:
     branches: [ main ]
