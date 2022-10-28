@@ -30,6 +30,9 @@ jobs:
           cache-dependency-path: |
             _packages/python/poetry.lock
 
+      - name: Install Poetry
+        run: pip install poetry
+
       - name: Install dependencies
         run: |
           ./update_version.py

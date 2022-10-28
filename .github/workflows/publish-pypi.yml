@@ -31,6 +31,9 @@ jobs:
           python-version: '3.10'
           cache: 'poetry'
 
+      - name: Install Poetry
+        run: pip install poetry
+
       - name: Download Python Package Artifacts
         uses: actions/download-artifact@v3
         with:

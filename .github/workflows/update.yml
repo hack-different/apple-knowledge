@@ -86,22 +86,22 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pr_title: "Automated Data Update: ${{ github.run_number }}"
 
-    ci-test:
-      needs: periodic-update
-      uses: hack-different/apple-knowledge/.github/workflows/build-test.yml@main
+  ci-test:
+    needs: periodic-update
+    uses: hack-different/apple-knowledge/.github/workflows/build-test.yml@main
 
-    ci-build-jekyll:
-      needs: ci-test
-      uses: hack-different/apple-knowledge/.github/workflows/build-jekyll.yml@main
+  ci-build-jekyll:
+    needs: ci-test
+    uses: hack-different/apple-knowledge/.github/workflows/build-jekyll.yml@main
 
-    ci-build-python:
-      needs: ci-test
-      uses: hack-different/apple-knowledge/.github/workflows/build-python.yml@main
+  ci-build-python:
+    needs: ci-test
+    uses: hack-different/apple-knowledge/.github/workflows/build-python.yml@main
 
-    ci-build-ruby:
-      needs: ci-test
-      uses: hack-different/apple-knowledge/.github/workflows/build-ruby.yml@main
+  ci-build-ruby:
+    needs: ci-test
+    uses: hack-different/apple-knowledge/.github/workflows/build-ruby.yml@main
 
-    ci-build-node:
-      needs: ci-test
-      uses: hack-different/apple-knowledge/.github/workflows/build-node.yml@main
+  ci-build-node:
+    needs: ci-test
+    uses: hack-different/apple-knowledge/.github/workflows/build-node.yml@main
