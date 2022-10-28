@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  ci-test-root:
+  ci-test:
     name: "Root Project"
     uses: hack-different/apple-knowledge/.github/workflows/build-test.yml@main
 

@@ -10,7 +10,7 @@ on:
         type: number
 
 jobs:
-  ci-test:
+  ci-test-root:
     name: "Integration Tests"
     runs-on: ubuntu-latest
 
