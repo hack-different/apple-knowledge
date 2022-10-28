@@ -18,7 +18,7 @@ jobs:
 
   ci-build-ruby:
     needs: ci-test
-    uses: hack-different/apple-knowledge/.github/workflows/ruby-ci.yml@main
+    uses: hack-different/apple-knowledge/.github/workflows/build-ruby.yml@main
 
   ci-build-node:
     needs: ci-test
