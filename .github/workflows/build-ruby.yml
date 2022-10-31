@@ -13,6 +13,12 @@ jobs:
   ci-test-gem:
     name: Perform Ruby Gem CI Tests
     runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby-version: [ "2.9", "3.0", "3.1" ]
+
     defaults:
       run:
         working-directory: ./_packages/ruby
@@ -32,7 +38,7 @@ jobs:
       - name: Setup Ruby 3.1
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1.2
+          ruby-version: ${{ matrix.ruby-version }}
           bundler-cache: true
           working-directory: _packages/ruby
 
