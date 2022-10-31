@@ -4,7 +4,10 @@ import subprocess
 
 git_branch_height = subprocess.run(['git', 'rev-list', '--count', 'main'], stdout=subprocess.PIPE)
 
-height = git_branch_height.stdout.decode('utf-8').strip()
+try:
+    height = git_branch_height.stdout.decode('utf-8').strip()
+except:
+    height = '0'
 
 project_content = None
 
