@@ -2,18 +2,11 @@
 
 import subprocess
 
-height = '0'
-
-try:
-    git_branch_height = subprocess.run(['git', 'rev-list', '--count', 'main'], stdout=subprocess.PIPE)
+git_branch_height = subprocess.run(['git', 'rev-list', '--count', 'main'], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+if git_branch_height.returncode == 0:
     height = git_branch_height.stdout.decode('utf-8').strip()
-except subprocess.CalledProcessError:
-    height = '0'
-
-if height is None:
-    height = '0'
-
-project_content = None
+else:
+    height = "0"
 
 with open('pyproject.toml', 'r') as input_file:
     project_content = input_file.read()

@@ -11,6 +11,7 @@ on:
 
 jobs:
   ci-build-site:
+    name: Build Jekyll Site
     runs-on: ubuntu-latest
 
     steps:
