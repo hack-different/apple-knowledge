@@ -35,7 +35,7 @@ jobs:
           path: _packages/ruby/vendor/bundle
           key: ${{ runner.os }}-build-ci-ruby-${{ matrix.ruby-version }}-gem-${{ hashFiles('_packages/ruby/Gemfile.lock') }}
 
-      - name: Setup Ruby 3.1
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby-version }}
