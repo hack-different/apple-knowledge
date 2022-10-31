@@ -49,13 +49,14 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: poetry install --no-interaction --no-root
 
+      - name: Update Version String
+        run: python ./update_version.py
+
       - name: Install dependencies
-        run: |
-          ./update_version.py
-          poetry install --no-interaction
+        run: poetry install --no-interaction
 
       - name: Perform Tests
-        run:  poetry run pytest
+        run: poetry run pytest
 
       - name: Build package
         run: poetry build
