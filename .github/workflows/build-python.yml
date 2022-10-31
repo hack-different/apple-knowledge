@@ -17,6 +17,10 @@ jobs:
       run:
         working-directory: ./_packages/python
 
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10", "3.11"]
+
     steps:
       - uses: actions/checkout@v3
         with:
@@ -25,13 +29,13 @@ jobs:
       - name: Set up Python with Poetry Caching
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: ${{ matrix.python-version }}
           cache: 'poetry'
           cache-dependency-path: |
             _packages/python/poetry.lock
 
-      - name: Install Poetry
-        run: pip install poetry
+      - name: Install and configure Poetry
+        uses: snok/install-poetry@v1
 
       - name: Install dependencies
         run: |
