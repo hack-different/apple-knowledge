@@ -33,7 +33,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: _packages/ruby/vendor/bundle
-          key: ${{ runner.os }}-build-ci-ruby-gem-${{ hashFiles('_packages/ruby/Gemfile.lock') }}
+          key: ${{ runner.os }}-build-ci-ruby-${{ matrix.ruby-version }}-gem-${{ hashFiles('_packages/ruby/Gemfile.lock') }}
 
       - name: Setup Ruby 3.1
         uses: ruby/setup-ruby@v1
@@ -54,5 +54,5 @@ jobs:
       - name: Archive Gem Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: package-gem
+          name: package-gem-${{ matrix.ruby-version }}
           path: _packages/ruby/*.gem

@@ -29,7 +29,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path:  _packages/node/node_modules
-          key: ${{ runner.os }}-build-ci-node-yarn-${{ hashFiles('_packages/node/yarn.lock') }}
+          key: ${{ runner.os }}-build-ci-node-yarn-${{ matrix.node-version }}-${{ hashFiles('_packages/node/yarn.lock') }}
 
       - uses: actions/setup-node@v3
         with:
@@ -57,5 +57,5 @@ jobs:
       - name: Archive Node Package Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: package-node
+          name: package-node-${{ matrix.node-version }}
           path: _packages/node/*.tgz

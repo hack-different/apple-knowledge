@@ -2,12 +2,15 @@
 
 import subprocess
 
-height = None
+height = '0'
 
 try:
     git_branch_height = subprocess.run(['git', 'rev-list', '--count', 'main'], stdout=subprocess.PIPE)
     height = git_branch_height.stdout.decode('utf-8').strip()
-except:
+except subprocess.CalledProcessError:
+    height = '0'
+
+if height is None:
     height = '0'
 
 project_content = None
