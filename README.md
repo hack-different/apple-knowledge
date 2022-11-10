@@ -398,6 +398,10 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [`Chronic-Dev/syringe`](https://github.com/Chronic-Dev/syringe)
 * [Cydia](https://cydia.saurik.com)
 
+### Jailbreak Misc
+
+* [Jailbreaking iOS in the Post-Apocalyptic Age - By CoolStar and tihmstar](https://tihmstar.net/slides/nullcongoa2022.pdf)
+
 ## X-Plat
 
 * [pongoOS](https://github.com/checkra1n/pongoOS)
