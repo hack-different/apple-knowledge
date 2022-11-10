@@ -382,10 +382,12 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 * [limera1n](https://github.com/Chronic-Dev/syringe/blob/master/syringe/exploits/limera1n/limera1n.c)
 * [`OpenJailbreak/greenpois0n`](https://github.com/OpenJailbreak/greenpois0n)
+* [Phoenix Kernel Exploit](https://gist.github.com/Siguza/96ae6d6806e974199b1d44ffffca5331)
 * [`axi0mX/ipwndfu`](https://github.com/axi0mX/ipwndfu)
 * [checkra1n](https://checkra.in)
 * [unc0ver](https://unc0ver.dev)
 * [Taurine](https://taurine.app)
+* [Odyssey](https://theodyssey.dev/)
 * [evasi0n writeup by geohot](http://geohot.com/e7writeup.html)
 * TaIG
   * [8.0](http://www.newosxbook.com/articles/TaiG.html)
@@ -397,10 +399,12 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 * [`Chronic-Dev/syringe`](https://github.com/Chronic-Dev/syringe)
 * [Cydia](https://cydia.saurik.com)
+* [Zebra](https://getzbra.com/)
+* [Sileo](https://getsileo.app/)
 
-### Jailbreak Misc
+### Jailbreak Slides
 
-* [Jailbreaking iOS in the Post-Apocalyptic Age - By CoolStar and tihmstar](https://tihmstar.net/slides/nullcongoa2022.pdf)
+* [Jailbreaking iOS in the Post-Apocalyptic Age](https://tihmstar.net/slides/nullcongoa2022.pdf)
 
 ## X-Plat
 
