@@ -382,7 +382,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 * [limera1n](https://github.com/Chronic-Dev/syringe/blob/master/syringe/exploits/limera1n/limera1n.c)
 * [`OpenJailbreak/greenpois0n`](https://github.com/OpenJailbreak/greenpois0n)
-* [Phoenix Kernel Exploit](https://gist.github.com/Siguza/96ae6d6806e974199b1d44ffffca5331)
+* [`0x7ff/gaster`](https://github.com/0x7ff/gaster)
 * [`axi0mX/ipwndfu`](https://github.com/axi0mX/ipwndfu)
 * [checkra1n](https://checkra.in)
 * [unc0ver](https://unc0ver.dev)
