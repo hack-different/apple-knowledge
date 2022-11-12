@@ -404,7 +404,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ### Jailbreak Slides
 
-* [Jailbreaking iOS in the Post-Apocalyptic Age](https://tihmstar.net/slides/nullcongoa2022.pdf)
+* [Jailbreaking iOS in the Post-Apocalyptic Age](https://cameronkatri.com/nullcongoa2022.pdf)
 
 ## X-Plat
 
