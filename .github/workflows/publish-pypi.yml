@@ -30,6 +30,7 @@ jobs:
         with:
           python-version: '3.10'
           cache: 'poetry'
+          cache-dependency-path: _packages/python/poetry.lock
 
       - name: Install Poetry
         run: pip install poetry
