@@ -384,11 +384,15 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [`OpenJailbreak/greenpois0n`](https://github.com/OpenJailbreak/greenpois0n)
 * [`0x7ff/gaster`](https://github.com/0x7ff/gaster)
 * [`axi0mX/ipwndfu`](https://github.com/axi0mX/ipwndfu)
+* [`LinusHenze/Fugu`](https://github.com/LinusHenze/Fugu)
 * [checkra1n](https://checkra.in)
 * [unc0ver](https://unc0ver.dev)
 * [Taurine](https://taurine.app)
 * [Odyssey](https://theodyssey.dev/)
+* [Chimera](https://chimera.coolstar.org/)
+* [rootlessJB writeup](https://github.com/jakeajames/rootlessJB3/blob/master/writeup.pdf)
 * [evasi0n writeup by geohot](http://geohot.com/e7writeup.html)
+* [Fugu14 writeup](https://github.com/LinusHenze/Fugu14/blob/master/Writeup.pdf)
 * TaIG
   * [8.0](http://www.newosxbook.com/articles/TaiG.html)
   * [8.1.2](http://www.newosxbook.com/articles/TaiG2.html)
@@ -398,6 +402,9 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 ### Jailbreak Tooling
 
 * [`Chronic-Dev/syringe`](https://github.com/Chronic-Dev/syringe)
+* [`ProcursusTeam/Procursus`](https://github.com/ProcursusTeam/Procursus)
+* [`comex/substitute`](https://github.com/comex/substitute)
+* [`sbingner/substitute`](https://github.com/sbingner/substitute)
 * [Cydia](https://cydia.saurik.com)
 * [Zebra](https://getzbra.com/)
 * [Sileo](https://getsileo.app/)
@@ -405,6 +412,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 ### Jailbreak Slides
 
 * [Jailbreaking iOS in the Post-Apocalyptic Age](https://cameronkatri.com/nullcongoa2022.pdf)
+* [Fugu15 Slides](https://objectivebythesea.org/v5/talks/OBTS_v5_lHenze.pdf)
 
 ## X-Plat
 
