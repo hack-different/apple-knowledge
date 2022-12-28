@@ -58,7 +58,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [`alephsecurity/xnu-qemu-arm64`](https://github.com/alephsecurity/xnu-qemu-arm64)
   * [`alephsecurity/xnu-qemu-arm64-tools`](https://github.com/alephsecurity/xnu-qemu-arm64-tools)
   * [Build iOS on QEMU](https://github.com/alephsecurity/xnu-qemu-arm64/wiki/Build-iOS-on-QEMU)
-* [IDA Disassembler by HexRays](https://hex-rays.com/ida-pro/)
+* [IDA Disassembler by Hex-Rays](https://hex-rays.com/ida-pro/)
   * [`onethawt/idaplugins-list`](https://github.com/onethawt/idaplugins-list)
   * [`cellebrite-srl/ida_kernelcache`](https://github.com/cellebrite-srl/ida_kernelcache)
   * [`cellebrite-srl/PacExplorer`](https://github.com/cellebrite-srl/PacXplorer)
@@ -433,8 +433,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 Hack Different - Apple Knowledge is a product of the entire community and belongs to the community.  It is
 facilitated by the volunteer work of the Hack Different moderation team.
 
-If you have issue with the design or workflow of this repository, blame me [`rickmark`](https://github.com/rickmark)
-as I setup and configured most of it.  (it me).  If you have feedback, join the `#documentation` channel of the
+If you have issue with the design or workflow of this repository, blame me ([`rickmark`](https://github.com/rickmark))
+as I setup and configured most of it.  (it me).  If you have feedback, join the `#apple-knowledge` channel of the
 discord server.
 
 Portions of data and knowledge come from
