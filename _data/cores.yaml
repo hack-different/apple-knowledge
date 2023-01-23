@@ -192,6 +192,86 @@ chip_ids:
         board_name: J375dAP
 
 
+  0x6020:
+    name: t6020
+    description: M2 Pro
+    architecture: arm64
+
+    revisions:
+      0x01:
+        security_epoch: 0x01
+        version: iBoot-
+        sha1:
+        sha256:
+
+    securerom:
+      nonce:
+        ap_length:
+        sep_length:
+      demotion_reg:
+      memory_layout:
+        rom:
+        sram:
+        dram:
+        dfu_image:
+        dfu_load:
+        recovery_image:
+        recovery_load:
+        trampoline:
+
+    boards:
+      0x02:
+        product_name: Mac mini (M2 Pro, 2023)
+        product_id: Mac14,10
+        board_name: J416sAP
+      0x04:
+        product_name: MacBook Pro (M2 Pro, 14-inch, 2023)
+        product_id: Mac14,9
+        board_name: J414sAP
+      0x06:
+        product_name: MacBook Pro (M2 Pro, 16-inch, 2023)
+        product_id: Mac14,10
+        board_name: J416sAP
+
+
+  0x6021:
+    name: t6021
+    description: M2 Max
+    architecture: arm64
+
+    revisions:
+      0x01:
+        security_epoch: 0x01
+        version: iBoot-
+        sha1:
+        sha256:
+
+    securerom:
+      nonce:
+        ap_length:
+        sep_length:
+      demotion_reg:
+      memory_layout:
+        rom:
+        sram:
+        dram:
+        dfu_image:
+        dfu_load:
+        recovery_image:
+        recovery_load:
+        trampoline:
+
+    boards:
+      0x04:
+        product_name: MacBook Pro (M2 Max, 14-inch, 2023)
+        product_id: Mac14,5
+        board_name: J414cAP
+      0x06:
+        product_name: MacBook Pro (M2 Max, 16-inch, 2023)
+        product_id: Mac14,6
+        board_name: J416cAP
+
+
 
   0x7000:
     name: t7000
@@ -1426,6 +1506,10 @@ chip_ids:
         trampoline:
 
     boards:
+      0x24:
+        product_name: Mac mini (M2, 2023)
+        product_id: Mac14,3
+        board_name: J473AP
       0x28:
         product_name: MacBook Air (M2, 2022)
         product_id: Mac14,2
