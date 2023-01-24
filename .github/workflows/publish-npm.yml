@@ -18,6 +18,15 @@ jobs:
     environment: node-push
 
     steps:
+      - uses: actions/checkout@v3
+
+      - name: Cache Node Packages
+        id: cache-node
+        uses: actions/cache@v3
+        with:
+          path:  _packages/node/node_modules
+          key: ${{ runner.os }}-publish-npm-${{ hashFiles('_packages/node/yarn.lock') }}
+
       - uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -28,7 +37,7 @@ jobs:
       - name: Download Node Package Artifacts
         uses: actions/download-artifact@v3
         with:
-          name: package-node
+          name: package-node-18
           path: dist
 
       - name: Publish to NPM Registry
