@@ -11,6 +11,7 @@ jobs:
   publish-gem:
     name: Publish to RubyGems
     runs-on: ubuntu-latest
+    needs: ci-build-ruby
     environment: gem-push
     permissions:
       contents: read
