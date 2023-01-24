@@ -47,10 +47,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-build-ruby-
 
-      - name: Set up Ruby 3.1
+      - name: Set up Ruby 3.2
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1.2
+          ruby-version: 3.2.0
           bundler-cache: true
 
       - name: Cache Temporary Data
