@@ -190,7 +190,9 @@ nvram_variables:
     - PPC
   filesize:
   fixed-lcm-boost:
+  fm-account-masked:
   fm-activation-locked:
+  fm-spkeys:
   fm-spstatus:
   fmm-computer-name:
     description: Current saved host name
@@ -299,6 +301,7 @@ nvram_variables:
   ota-install-tonight:
   ota-internal-failure-reason:
   ota-internal-forced-reset-uptime:
+  ota-original-base-os-version:
   ota-original-os-version:
   ota-os-version:
   ota-outcome:
@@ -452,6 +455,7 @@ nvram_variables:
   upgrade-fallback-boot-command:
   upgrade-retry:
   usb-enabled:
+  usbcfwflasherResult:
   use-generic?:
   use-nvramrc?:
   utc-offset:

@@ -24,10 +24,10 @@ jobs:
       packages: write
 
     steps:
-      - name: Setup Ruby 3.1
+      - name: Setup Ruby 3.2
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1.2
+          ruby-version: 3.2.0
 
       - uses: actions/download-artifact@v3
         name: Download Ruby Package Artifacts

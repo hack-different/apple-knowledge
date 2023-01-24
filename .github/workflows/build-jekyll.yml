@@ -28,10 +28,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-build-ruby-
 
-      - name: Setup Ruby 3.1
+      - name: Setup Ruby 3.2
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1.2
+          ruby-version: 3.2.0
           bundler-cache: true
 
       - name: Build Jekyll Site
