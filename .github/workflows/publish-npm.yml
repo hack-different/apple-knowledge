@@ -17,7 +17,7 @@ jobs:
     environment: node-push
 
     steps:
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: yarn
