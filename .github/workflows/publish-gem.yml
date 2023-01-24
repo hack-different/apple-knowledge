@@ -25,7 +25,7 @@ jobs:
       - uses: actions/download-artifact@v3
         name: Download Ruby Package Artifacts
         with:
-          name: package-gem
+          name: package-gem-3.2
 
       - name: Publish to RubyGems
         env:
