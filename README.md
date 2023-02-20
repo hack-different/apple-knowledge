@@ -201,7 +201,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [Mobile Asset URLs](docs/Mobile_Assets)
 * [`notpeter/apple-installer-checksums`](https://github.com/notpeter/apple-installer-checksums)
 * [ipsw.me](https://ipsw.me)
-* [ipsw.dev](https://ipsw.dev)
+* [ipswbeta.dev](https://ipswbeta.dev)
 
 ### Code and Signature Formats
 
