@@ -14,7 +14,7 @@ on:
 jobs:
   periodic-update:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 120
 
     steps:
       # This allows us to continue to update an existing auto-update branch if it has yet to be merged, but if one
