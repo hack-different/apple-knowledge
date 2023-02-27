@@ -25,12 +25,12 @@ jobs:
           if git ls-remote --heads --quiet --exit-code https://github.com/${{ github.repository }}.git ${{ inputs.ref }}
           then
             echo "::notice::Checkout: ${{ github.repository }} using ${{ inputs.ref }}"
-            echo "::set-output name=ref-exists::true"
+            echo "name=ref-exists::true" >> $GITHUB_OUTPUT
           else
             USING="main"
             echo "::notice::Checkout: ${{ github.repository }} does not have ref ${{ inputs.ref }} (fallback to ${USING})"
-            echo "::set-output name=ref-exists::false"
-            echo "::set-output name=default-branch::${USING}"
+            echo "name=ref-exists::false" >> $GITHUB_OUTPUT
+            echo "name=default-branch::${USING}" >> $GITHUB_OUTPUT
           fi
 
       - uses: actions/checkout@v3
