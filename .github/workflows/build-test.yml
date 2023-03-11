@@ -31,6 +31,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1.2
+          rubygems: latest
           bundler-cache: true
 
       - name: Perform Default Rake Task

@@ -17,6 +17,7 @@
 #
 DT_KEY_LEN = 32
 
+# A class representing a node in a device tree
 class DtNode
   attr_reader :name, :compatible, :handle, :functions, :props, :children
 end
