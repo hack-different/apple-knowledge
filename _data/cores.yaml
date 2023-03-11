@@ -343,7 +343,7 @@ chip_ids:
         product_id: AppleTV5,3
         board_name: J42dAP
       0x38:
-        product_name: HomePod
+        product_name: HomePod (1st gen)
         product_id: AudioAccessory1,1
         board_name: B238aAP
 
@@ -1306,6 +1306,14 @@ chip_ids:
         product_name: iPhone 12 Pro
         product_id: iPhone13,3
         board_name: D53pAP
+      0x14:
+        product_name: iPad (10th gen, WiFi)
+        product_id: iPad13,18
+        board_name: J271AP
+      0x16:
+        product_name: iPad (10th gen, Cellular)
+        product_id: iPad13,19
+        board_name: J272AP
 
   0x8103:
     name: t8103
@@ -1433,6 +1441,10 @@ chip_ids:
         trampoline:
 
     boards:
+      0x02:
+        product_name: Apple TV 4K (3rd gen)
+        product_id: AppleTV14,1
+        board_name: J255AP
       0x04:
         product_name: iPad mini (6th gen, WiFi)
         product_id: iPad14,1
@@ -1506,6 +1518,22 @@ chip_ids:
         trampoline:
 
     boards:
+      0x08:
+        product_name: iPad Pro 11-inch (4th gen, WiFi)
+        product_id: iPad14,3
+        board_name: J617AP
+      0x0A:
+        product_name: iPad Pro 11-inch (4th gen, Cellular)
+        product_id: iPad14,4
+        board_name: J618AP
+      0x0C:
+        product_name: iPad Pro 12.9-inch (6th gen, WiFi)
+        product_id: iPad14,5
+        board_name: J620AP
+      0x0E:
+        product_name: iPad Pro 12.9-inch (6th gen, Cellular)
+        product_id: iPad14,6
+        board_name: J621AP
       0x24:
         product_name: Mac mini (M2, 2023)
         product_id: Mac14,3
@@ -1616,6 +1644,46 @@ chip_ids:
         product_name: Apple Watch Series 7 (45mm Cellular)
         product_id: Watch6,9
         board_name: N188bAP
+      0x18:
+        product_name: HomePod (2nd gen)
+        product_id: AudioAccessory6,1
+        board_name: B620AP
+      0x26:
+        product_name: Apple Watch Ultra
+        product_id: Watch6,18
+        board_name: N199AP
+      0x28:
+        product_name: Apple Watch SE 2 (40mm)
+        product_id: Watch6,10
+        board_name: N143sAP
+      0x2A:
+        product_name: Apple Watch SE 2 (44mm)
+        product_id: Watch6,11
+        board_name: N143bAP
+      0x2C:
+        product_name: Apple Watch SE 2 (40mm Cellular)
+        product_id: Watch6,12
+        board_name: N149sAP
+      0x2e:
+        product_name: Apple Watch SE 2 (44mm Cellular)
+        product_id: Watch6,13
+        board_name: N149bAP
+      0x30:
+        product_name: Apple Watch Series 8 (41mm)
+        product_id: Watch6,14
+        board_name: N197sAP
+      0x32:
+        product_name: Apple Watch Series 8 (45mm)
+        product_id: Watch6,15
+        board_name: N197bAP
+      0x34:
+        product_name: Apple Watch Series 8 (41mm Cellular)
+        product_id: Watch6,16
+        board_name: N198sAP
+      0x36:
+        product_name: Apple Watch Series 8 (45mm Cellular)
+        product_id: Watch6,17
+        board_name: N198bAP
 
 
 
