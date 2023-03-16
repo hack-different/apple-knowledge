@@ -20,12 +20,8 @@ GEM
   specs:
     CFPropertyList (3.0.5)
       rexml
-    activemodel (7.0.4.1)
-      activesupport (= 7.0.4.1)
-    activerecord (7.0.4.1)
-      activemodel (= 7.0.4.1)
-      activesupport (= 7.0.4.1)
-    activesupport (7.0.4.1)
+    activerecord (3.2.14)
+    activesupport (7.0.4.3)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -50,7 +46,7 @@ GEM
     coffee-script-source (1.12.2)
     colorator (1.1.0)
     commonmarker (0.23.7)
-    concurrent-ruby (1.2.0)
+    concurrent-ruby (1.2.2)
     diff-lcs (1.5.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
@@ -77,6 +73,8 @@ GEM
     ffi (1.15.5)
     forwardable-extended (2.6.0)
     google-protobuf (3.21.12)
+    google-protobuf (3.21.12-x86_64-darwin)
+    google-protobuf (3.21.12-x86_64-linux)
     hashie (5.0.0)
     html-pipeline (2.14.3)
       activesupport (>= 2)
@@ -158,7 +156,7 @@ GEM
       mixlib-shellout
     mercenary (0.4.0)
     method_source (1.0.0)
-    minitest (5.17.0)
+    minitest (5.18.0)
     mixlib-cli (2.1.8)
     mixlib-config (3.0.27)
       tomlrb
@@ -288,7 +286,7 @@ GEM
     tomlrb (2.0.3)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
-    tzinfo (2.0.5)
+    tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
       unf_ext
