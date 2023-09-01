@@ -161,7 +161,7 @@ chip_ids:
   0x6002:
     name: t6002
     description: M1 Ultra
-    architecture: arm64
+    architecture: armv8.4
 
     revisions:
       0x01:
@@ -195,7 +195,7 @@ chip_ids:
   0x6020:
     name: t6020
     description: M2 Pro
-    architecture: arm64
+    architecture: armv8.4
 
     revisions:
       0x01:
@@ -237,7 +237,7 @@ chip_ids:
   0x6021:
     name: t6021
     description: M2 Max
-    architecture: arm64
+    architecture: armv8.4
 
     revisions:
       0x01:
@@ -270,6 +270,50 @@ chip_ids:
         product_name: MacBook Pro (M2 Max, 16-inch, 2023)
         product_id: Mac14,6
         board_name: J416cAP
+      0x0A:
+        product_name: Mac Studio (M2 Max, 2023)
+        product_id: Mac14,13
+        board_name: J475cAP
+
+
+
+  0x6022:
+    name: t6022
+    description: M2 Ultra
+    architecture: armv8.4
+
+    revisions:
+      0x01:
+        security_epoch: 0x01
+        version: iBoot-
+        sha1:
+        sha256:
+
+    securerom:
+      nonce:
+        ap_length:
+        sep_length:
+      demotion_reg:
+      memory_layout:
+        rom:
+        sram:
+        dram:
+        dfu_image:
+        dfu_load:
+        recovery_image:
+        recovery_load:
+        trampoline:
+
+    boards:
+      0x08:
+        product_name: Mac Pro (2023)
+        product_id: Mac14,8
+        board_name: J180dAP
+      0x0A:
+        product_name: Mac Studio (M2 Ultra, 2023)
+        product_id: Mac14,14
+        board_name: J475dAP
+
 
 
 
@@ -1546,6 +1590,10 @@ chip_ids:
         product_name: MacBook Pro (M2, 2022)
         product_id: Mac14,7
         board_name: J493AP
+      0x2E:
+        product_name: MacBook Air (M2, 2023)
+        product_id: Mac14,15
+        board_name: J415AP
 
   0x8120:
     name: t8120
@@ -1739,7 +1787,11 @@ chip_ids:
       0x02:
         product_name: iPod Touch (1st gen)
         product_id: iPod1,1
-        board_name: M45AP
+        board_name: N45AP
+      0x04:
+        product_name: iPhone 3G
+        product_id: iPhone1,2
+        board_name: N82AP
 
   0x8920:
     name: s5l8920xsi
@@ -1778,10 +1830,6 @@ chip_ids:
         product_name: iPhone 3Gs
         product_id: iPhone2,1
         board_name: N88AP
-      0x04:
-        product_name: iPhone 3G
-        product_id: iPhone1,2
-        board_name: N82AP
 
 
 
@@ -2102,3 +2150,40 @@ chip_ids:
         product_name: iPad mini 3 (China)
         product_id: iPad4,9
         board_name: J87mAP
+
+
+
+  0xFE00:
+    name: VMApple2
+    description: VMApple2
+    architecture: armv8.4
+    os:
+      - macOS
+
+    revisions:
+      0x01:
+        security_epoch: 0x01
+        version: iBoot-
+        sha1:
+        sha256:
+
+    securerom:
+      nonce:
+        ap_length:
+        sep_length:
+      demotion_reg:
+      memory_layout:
+        rom:
+        sram:
+        dram:
+        dfu_image:
+        dfu_load:
+        recovery_image:
+        recovery_load:
+        trampoline:
+
+    boards:
+      0x20:
+        product_name: Apple Virtual Machine 1
+        product_id: VirtualMac2,1
+        board_name: VMA2MACOSAP
