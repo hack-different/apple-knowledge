@@ -1623,6 +1623,14 @@ chip_ids:
         trampoline:
 
     boards:
+      0x08:
+        product_name: iPhone 15
+        product_id: iPhone15,4
+        board_name: D37AP
+      0x0A:
+        product_name: iPhone 15 Plus
+        product_id: iPhone15,5
+        board_name: D38AP
       0x0C:
         product_name: iPhone 14 Pro
         product_id: iPhone15,2
@@ -1631,6 +1639,43 @@ chip_ids:
         product_name: iPhone 14 Pro Max
         product_id: iPhone15,3
         board_name: D74AP
+
+  0x8130:
+    name: t8130
+    description: A17 Pro
+    architecture:
+
+    revisions:
+      0x01:
+        security_epoch: 0x01
+        version: iBoot-
+        sha1:
+        sha256:
+
+    securerom:
+      nonce:
+        ap_length:
+        sep_length:
+      demotion_reg:
+      memory_layout:
+        rom:
+        sram:
+        dram:
+        dfu_image:
+        dfu_load:
+        recovery_image:
+        recovery_load:
+        trampoline:
+
+    boards:
+      0x04:
+        product_name: iPhone 15 Pro
+        product_id: iPhone15,2
+        board_name: D83AP
+      0x06:
+        product_name: iPhone 15 Pro Max
+        product_id: iPhone15,3
+        board_name: D84AP
 
   0x8301:
     name: t8301
@@ -1734,6 +1779,54 @@ chip_ids:
         board_name: N198bAP
 
 
+  0x8310:
+    name: t8310
+    description: S9
+    architecture:
+
+    revisions:
+      0x01:
+        security_epoch: 0x01
+        version: iBoot-
+        sha1:
+        sha256:
+
+    securerom:
+      nonce:
+        ap_length:
+        sep_length:
+      demotion_reg:
+      memory_layout:
+        rom:
+        sram:
+        dram:
+        dfu_image:
+        dfu_load:
+        recovery_image:
+        recovery_load:
+        trampoline:
+
+    boards:
+      0x02:
+        product_name: Apple Watch Ultra 2
+        product_id: Watch7,5
+        board_name: N210AP
+      0x08:
+        product_name: Apple Watch Series 9 (41mm)
+        product_id: Watch7,1
+        board_name: N207sAP
+      0x0A:
+        product_name: Apple Watch Series 9 (45mm)
+        product_id: Watch7,2
+        board_name: N207bAP
+      0x0C:
+        product_name: Apple Watch Series 9 (41mm Cellular)
+        product_id: Watch7,3
+        board_name: N208sAP
+      0x0E:
+        product_name: Apple Watch Series 9 (45mm Cellular)
+        product_id: Watch7,4
+        board_name: N208bAP
 
   0x8720:
     name: s5L8720
