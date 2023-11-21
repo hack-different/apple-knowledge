@@ -123,7 +123,6 @@ namespace :tipw do
     ipsw_urls = urls.filter_map do |url|
       uri = URI.parse url
       uri if uri && %w[http https].include?(uri.scheme) && uri.path.ends_with?('.ipsw')
-
     rescue URI::InvalidURIError
       nil
     end

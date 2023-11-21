@@ -24,7 +24,7 @@ namespace :data do
 
         next unless match
 
-        tree = match[3].split(/:/).reverse
+        tree = match[3].split(':').reverse
 
         puts "#{match[1]}: #{tree.inspect}"
 

@@ -17,6 +17,7 @@
 #
 DT_KEY_LEN = 32
 
+# Device Tree node object
 class DtNode
   attr_reader :name, :compatible, :handle, :functions, :props, :children
 end

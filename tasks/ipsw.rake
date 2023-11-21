@@ -152,7 +152,7 @@ namespace :data do
         FileUtils.mkdir_p File.join(TMP_DIR, 'ipsw', 'urls')
         batch_size = args[:batch_size].to_i
         puts "Writing to download files with batch size of #{batch_size}"
-        urls.flatten.compact.each_slice(batch_size).each_with_index do |url_list, index|
+        urls.flatten.compact.each_slice(batch_size).with_index do |url_list, index|
           file_path = File.join(TMP_DIR, 'ipsw', 'urls', "batch_#{index}.txt")
           puts "Writing group #{index} to #{file_path}"
           File.open(file_path, 'w') do |file|

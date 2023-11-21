@@ -51,7 +51,6 @@ namespace :data do
           ipsw_entry['urls'] << { 'url' => ipsw['FirmwareURL'] }
         end
       end
-
     rescue StandardError
       puts 'Unable to parse element'
     end
