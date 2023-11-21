@@ -58,6 +58,7 @@ group :development, :test do
   gem 'nokogiri'
   gem 'octokit'
   gem 'overcommit'
+  gem 'pathutil'
   gem 'pry'
   gem 'rake'
   gem 'rspec'
