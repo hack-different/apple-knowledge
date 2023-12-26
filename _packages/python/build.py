@@ -48,3 +48,7 @@ def build(kwargs):
             except Exception as e:
                 print(f"Error handling {file}:\n\n{e}")
                 raise e
+
+
+if __name__ == "__main__":
+    build({})

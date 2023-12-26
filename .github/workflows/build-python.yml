@@ -55,9 +55,11 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-interaction
 
-      - name: Build package
-        run: poetry build
+      - name: Convert Data Files
+        run: poetry run python ./build.py
 
       - name: Perform Tests
         run: poetry run pytest
 
+      - name: Build package
+        run: poetry build
