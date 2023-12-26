@@ -38,9 +38,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: package-node-20
-          path: dist
+          path:  _packages/node/dist/
 
       - name: Publish to NPM Registry
-        run: yarn publish dist/
+        run: yarn publish  _packages/node/dist/
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
