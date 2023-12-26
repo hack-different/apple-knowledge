@@ -29,7 +29,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           cache: yarn
           cache-dependency-path: _packages/node/yarn.lock
           registry-url: https://registry.npmjs.org/
@@ -37,7 +37,7 @@ jobs:
       - name: Download Node Package Artifacts
         uses: actions/download-artifact@v3
         with:
-          name: package-node-18
+          name: package-node-20
           path: dist
 
       - name: Publish to NPM Registry
