@@ -55,8 +55,9 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-interaction
 
+      - name: Build package
+        run: poetry build
+
       - name: Perform Tests
         run: poetry run pytest
 
-      - name: Build package
-        run: poetry build
