@@ -161,7 +161,7 @@ chip_ids:
   0x6002:
     name: t6002
     description: M1 Ultra
-    architecture: arm64
+    architecture: armv8.4
 
     revisions:
       0x01:
@@ -195,7 +195,7 @@ chip_ids:
   0x6020:
     name: t6020
     description: M2 Pro
-    architecture: arm64
+    architecture: armv8.4
 
     revisions:
       0x01:
@@ -222,8 +222,8 @@ chip_ids:
     boards:
       0x02:
         product_name: Mac mini (M2 Pro, 2023)
-        product_id: Mac14,10
-        board_name: J416sAP
+        product_id: Mac14,12
+        board_name: J474sAP
       0x04:
         product_name: MacBook Pro (M2 Pro, 14-inch, 2023)
         product_id: Mac14,9
@@ -237,7 +237,7 @@ chip_ids:
   0x6021:
     name: t6021
     description: M2 Max
-    architecture: arm64
+    architecture: armv8.4
 
     revisions:
       0x01:
@@ -270,6 +270,50 @@ chip_ids:
         product_name: MacBook Pro (M2 Max, 16-inch, 2023)
         product_id: Mac14,6
         board_name: J416cAP
+      0x0A:
+        product_name: Mac Studio (M2 Max, 2023)
+        product_id: Mac14,13
+        board_name: J475cAP
+
+
+
+  0x6022:
+    name: t6022
+    description: M2 Ultra
+    architecture: armv8.4
+
+    revisions:
+      0x01:
+        security_epoch: 0x01
+        version: iBoot-
+        sha1:
+        sha256:
+
+    securerom:
+      nonce:
+        ap_length:
+        sep_length:
+      demotion_reg:
+      memory_layout:
+        rom:
+        sram:
+        dram:
+        dfu_image:
+        dfu_load:
+        recovery_image:
+        recovery_load:
+        trampoline:
+
+    boards:
+      0x08:
+        product_name: Mac Pro (2023)
+        product_id: Mac14,8
+        board_name: J180dAP
+      0x0A:
+        product_name: Mac Studio (M2 Ultra, 2023)
+        product_id: Mac14,14
+        board_name: J475dAP
+
 
 
 
@@ -343,7 +387,7 @@ chip_ids:
         product_id: AppleTV5,3
         board_name: J42dAP
       0x38:
-        product_name: HomePod
+        product_name: HomePod (1st gen)
         product_id: AudioAccessory1,1
         board_name: B238aAP
 
@@ -1306,6 +1350,14 @@ chip_ids:
         product_name: iPhone 12 Pro
         product_id: iPhone13,3
         board_name: D53pAP
+      0x14:
+        product_name: iPad (10th gen, WiFi)
+        product_id: iPad13,18
+        board_name: J271AP
+      0x16:
+        product_name: iPad (10th gen, Cellular)
+        product_id: iPad13,19
+        board_name: J272AP
 
   0x8103:
     name: t8103
@@ -1433,6 +1485,10 @@ chip_ids:
         trampoline:
 
     boards:
+      0x02:
+        product_name: Apple TV 4K (3rd gen)
+        product_id: AppleTV14,1
+        board_name: J255AP
       0x04:
         product_name: iPad mini (6th gen, WiFi)
         product_id: iPad14,1
@@ -1506,6 +1562,22 @@ chip_ids:
         trampoline:
 
     boards:
+      0x08:
+        product_name: iPad Pro 11-inch (4th gen, WiFi)
+        product_id: iPad14,3
+        board_name: J617AP
+      0x0A:
+        product_name: iPad Pro 11-inch (4th gen, Cellular)
+        product_id: iPad14,4
+        board_name: J618AP
+      0x0C:
+        product_name: iPad Pro 12.9-inch (6th gen, WiFi)
+        product_id: iPad14,5
+        board_name: J620AP
+      0x0E:
+        product_name: iPad Pro 12.9-inch (6th gen, Cellular)
+        product_id: iPad14,6
+        board_name: J621AP
       0x24:
         product_name: Mac mini (M2, 2023)
         product_id: Mac14,3
@@ -1518,6 +1590,10 @@ chip_ids:
         product_name: MacBook Pro (M2, 2022)
         product_id: Mac14,7
         board_name: J493AP
+      0x2E:
+        product_name: MacBook Air (M2, 2023)
+        product_id: Mac14,15
+        board_name: J415AP
 
   0x8120:
     name: t8120
@@ -1547,6 +1623,14 @@ chip_ids:
         trampoline:
 
     boards:
+      0x08:
+        product_name: iPhone 15
+        product_id: iPhone15,4
+        board_name: D37AP
+      0x0A:
+        product_name: iPhone 15 Plus
+        product_id: iPhone15,5
+        board_name: D38AP
       0x0C:
         product_name: iPhone 14 Pro
         product_id: iPhone15,2
@@ -1555,6 +1639,43 @@ chip_ids:
         product_name: iPhone 14 Pro Max
         product_id: iPhone15,3
         board_name: D74AP
+
+  0x8130:
+    name: t8130
+    description: A17 Pro
+    architecture:
+
+    revisions:
+      0x01:
+        security_epoch: 0x01
+        version: iBoot-
+        sha1:
+        sha256:
+
+    securerom:
+      nonce:
+        ap_length:
+        sep_length:
+      demotion_reg:
+      memory_layout:
+        rom:
+        sram:
+        dram:
+        dfu_image:
+        dfu_load:
+        recovery_image:
+        recovery_load:
+        trampoline:
+
+    boards:
+      0x04:
+        product_name: iPhone 15 Pro
+        product_id: iPhone15,2
+        board_name: D83AP
+      0x06:
+        product_name: iPhone 15 Pro Max
+        product_id: iPhone15,3
+        board_name: D84AP
 
   0x8301:
     name: t8301
@@ -1616,8 +1737,96 @@ chip_ids:
         product_name: Apple Watch Series 7 (45mm Cellular)
         product_id: Watch6,9
         board_name: N188bAP
+      0x18:
+        product_name: HomePod (2nd gen)
+        product_id: AudioAccessory6,1
+        board_name: B620AP
+      0x26:
+        product_name: Apple Watch Ultra
+        product_id: Watch6,18
+        board_name: N199AP
+      0x28:
+        product_name: Apple Watch SE 2 (40mm)
+        product_id: Watch6,10
+        board_name: N143sAP
+      0x2A:
+        product_name: Apple Watch SE 2 (44mm)
+        product_id: Watch6,11
+        board_name: N143bAP
+      0x2C:
+        product_name: Apple Watch SE 2 (40mm Cellular)
+        product_id: Watch6,12
+        board_name: N149sAP
+      0x2e:
+        product_name: Apple Watch SE 2 (44mm Cellular)
+        product_id: Watch6,13
+        board_name: N149bAP
+      0x30:
+        product_name: Apple Watch Series 8 (41mm)
+        product_id: Watch6,14
+        board_name: N197sAP
+      0x32:
+        product_name: Apple Watch Series 8 (45mm)
+        product_id: Watch6,15
+        board_name: N197bAP
+      0x34:
+        product_name: Apple Watch Series 8 (41mm Cellular)
+        product_id: Watch6,16
+        board_name: N198sAP
+      0x36:
+        product_name: Apple Watch Series 8 (45mm Cellular)
+        product_id: Watch6,17
+        board_name: N198bAP
 
 
+  0x8310:
+    name: t8310
+    description: S9
+    architecture:
+
+    revisions:
+      0x01:
+        security_epoch: 0x01
+        version: iBoot-
+        sha1:
+        sha256:
+
+    securerom:
+      nonce:
+        ap_length:
+        sep_length:
+      demotion_reg:
+      memory_layout:
+        rom:
+        sram:
+        dram:
+        dfu_image:
+        dfu_load:
+        recovery_image:
+        recovery_load:
+        trampoline:
+
+    boards:
+      0x02:
+        product_name: Apple Watch Ultra 2
+        product_id: Watch7,5
+        board_name: N210AP
+      0x08:
+        product_name: Apple Watch Series 9 (41mm)
+        product_id: Watch7,1
+        board_name: N207sAP
+      0x0A:
+        product_name: Apple Watch Series 9 (45mm)
+        product_id: Watch7,2
+        board_name: N207bAP
+      0x0C:
+        product_name: Apple Watch Series 9 (41mm Cellular)
+        product_id: Watch7,3
+        board_name: N208sAP
+      0x0E:
+        product_name: Apple Watch Series 9 (45mm Cellular)
+        product_id: Watch7,4
+        board_name: N208bAP
 
   0x8720:
     name: s5L8720
@@ -1671,7 +1880,11 @@ chip_ids:
       0x02:
         product_name: iPod Touch (1st gen)
         product_id: iPod1,1
-        board_name: M45AP
+        board_name: N45AP
+      0x04:
+        product_name: iPhone 3G
+        product_id: iPhone1,2
+        board_name: N82AP
 
   0x8920:
     name: s5l8920xsi
@@ -1710,10 +1923,6 @@ chip_ids:
         product_name: iPhone 3Gs
         product_id: iPhone2,1
         board_name: N88AP
-      0x04:
-        product_name: iPhone 3G
-        product_id: iPhone1,2
-        board_name: N82AP
 
 
 
@@ -2034,3 +2243,40 @@ chip_ids:
         product_name: iPad mini 3 (China)
         product_id: iPad4,9
         board_name: J87mAP
+
+
+
+  0xFE00:
+    name: VMApple2
+    description: VMApple2
+    architecture: armv8.4
+    os:
+      - macOS
+
+    revisions:
+      0x01:
+        security_epoch: 0x01
+        version: iBoot-
+        sha1:
+        sha256:
+
+    securerom:
+      nonce:
+        ap_length:
+        sep_length:
+      demotion_reg:
+      memory_layout:
+        rom:
+        sram:
+        dram:
+        dfu_image:
+        dfu_load:
+        recovery_image:
+        recovery_load:
+        trampoline:
+
+    boards:
+      0x20:
+        product_name: Apple Virtual Machine 1
+        product_id: VirtualMac2,1
+        board_name: VMA2MACOSAP
