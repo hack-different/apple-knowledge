@@ -41,6 +41,6 @@ jobs:
           path:  _packages/node/dist/
 
       - name: Publish to NPM Registry
-        run: yarn publish  _packages/node/dist/
+        run: yarn publish  _packages/node/
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
