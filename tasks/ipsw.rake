@@ -75,7 +75,7 @@ namespace :data do
         file_path = File.join(TMP_DIR, 'ipsw', 'build_manifests')
         FileUtils.mkdir_p file_path unless File.directory? file_path
 
-        collection.each do |key, _value|
+        collection.each_key do |key|
           output_file = File.join(file_path, "#{key}.plist")
           next if File.exist? output_file
 
@@ -109,7 +109,7 @@ namespace :data do
       file_path = File.join(TMP_DIR, 'ipsw', 'device_trees')
       FileUtils.mkdir_p file_path unless File.directory? file_path
 
-      collection.each do |key, _value|
+      collection.each_key do |key|
         full_path = File.join(args[:dir], key)
         next unless File.exist? full_path
 
@@ -179,7 +179,7 @@ namespace :data do
       data_file = DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
 
-      collection.each do |_, entry|
+      collection.each_value do |entry|
         entry.delete 'description'
 
         if entry['urls']&.any? { |url| url.is_a?(String) }
@@ -225,7 +225,7 @@ namespace :data do
       data_file = DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
 
-      collection.each do |key, _value|
+      collection.each_key do |key|
         full_path = File.join(args[:dir], key)
         unless File.exist? full_path
           puts "Missing IPSW: #{key}"

@@ -4,7 +4,7 @@
 # Factory Device Restore
 class FDRData < DataFile
   def initialize
-    super 'fdr.yaml'
+    super('fdr.yaml')
 
     @data ||= {}
 

@@ -23,6 +23,7 @@ require 'awesome_print'
 require 'zlib'
 require 'byebug'
 require 'pry'
+require 'sorbet-runtime'
 
 BASE_PATH = File.expand_path('..', __dir__) unless defined? BASE_PATH
 
@@ -80,18 +81,21 @@ end
 
 # Base class for all data files
 class DataFile
+  extend T::Sig
   attr_reader :data
 
+  sig { params(parts: String).void }
   def initialize(*parts)
     @parts = parts
     @collections = {}
-    load_file(*parts)
+    T.unsafe(self).load_file(*parts)
     ensure_metadata
   end
 
+  sig { params(parts: String).returns(T::Hash[T.untyped, T.untyped]) }
   def load_file(*parts)
-    parts[-1] = "#{parts[-1]}.yaml" unless parts[-1].ends_with? '.yaml'
-    @filename = File.join(DATA_DIR, File.join(*parts))
+    parts[-1] = "#{parts[-1]}.yaml" unless T.must(parts[-1]).end_with? '.yaml'
+    @filename = File.join(DATA_DIR, T.unsafe(File).join(*parts))
     @data = {}
     @data = YAML.load_file @filename if File.exist? @filename
   end

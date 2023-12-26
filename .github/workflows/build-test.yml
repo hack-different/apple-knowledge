@@ -27,10 +27,10 @@ jobs:
           path: vendor/bundle
           key: ${{ runner.os }}-build-ci-ruby-${{ hashFiles('Gemfile.lock') }}
 
-      - name: Setup Ruby 3.1
+      - name: Setup Ruby 3.2.2
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1.2
+          ruby-version: 3.2.2
           bundler-cache: true
 
       - name: Perform Default Rake Task

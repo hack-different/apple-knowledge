@@ -20,6 +20,7 @@ namespace :data do
 
       output_path = File.join(device_dir, "#{identity}.yaml")
       File.write(output_path, { 'model' => identity, 'device_tree' => tree_hash }.to_yaml)
+      puts "Wrote output data to #{output_path}"
     rescue StandardError => e
       puts "Error processing #{file}: #{e}"
       next

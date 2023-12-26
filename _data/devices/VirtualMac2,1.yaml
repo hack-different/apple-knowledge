@@ -22,7 +22,7 @@ device_tree:
   clock-frequency: 0
   model-config: syscfg/MdlC
   model: VirtualMac2,1
-  device_type: bootrom
+  device_type: 30803309831876450
   "#size-cells": 2
   :children:
   - AAPL,phandle: 2
@@ -39,11 +39,11 @@ device_tree:
     disable-transport-rm: 0
     amfi-only-platform-code: 0
     coverglass-color: syscfg/CLCG
-    consistent-debug-root: "\0\0\0\0\0\0\0\0"
+    consistent-debug-root: 0
     dram-vendor: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
     board-id: 0
     enable-user-rm: 0
-    unique-chip-id: "\0\0\0\0\0\0\0\0"
+    unique-chip-id: 0
     dram-vendor-id: 0
     mac-address-bluetooth0: macaddr/btaddr,syscfg/BMac/6
     allow-whitelist-disable: 1
@@ -63,7 +63,7 @@ device_tree:
     gid-aes-key: 0
     display-corner-radius: 0
     enable-sep-rm: 0
-    boot-nonce: "\0\0\0\0\0\0\0\0"
+    boot-nonce: 0
     image4-supported: ''
     isp-horizon: 0
     nvram-bank-count: 0
@@ -104,7 +104,7 @@ device_tree:
     use-recovery-securityd: 0
     marketing-hardware-behavior: syscfg/MkBH
     software-bundle-version: syscfg/SBVr/0x10,zeroes/0x10
-    die-id: "\0\0\0\0\0\0\0\0"
+    die-id: 0
     allow-ap-nonce-retrieval: ''
     disable-accessory-firmware: 0
     certificate-production-status: 0
@@ -115,109 +115,109 @@ device_tree:
     display-scale: 0
     debug-board-revision: 0
     :children:
-    - UnusedIntegerProperty10: "\0\0\0\0\0\0\0\0"
+    - UnusedIntegerProperty10: 0
       UnusedBooleanProperty3: 0
-      UnusedIntegerProperty6: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty6: 0
       UnusedBooleanProperty18: 0
       UnusedBooleanProperty11: 0
-      UnusedIntegerProperty15: "\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty2: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty15: 0
+      UnusedIntegerProperty2: 0
       UnusedBooleanProperty6: 0
-      UnusedIntegerProperty9: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty9: 0
       UnusedStringProperty2: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty16: 0
       UnusedStringProperty5: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty13: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty13: 0
       UnusedBooleanProperty2: 0
-      UnusedIntegerProperty5: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty5: 0
       UnusedBooleanProperty9: 0
       UnusedStringProperty8: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty14: 0
-      UnusedIntegerProperty18: "\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty1: "\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty11: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty18: 0
+      UnusedIntegerProperty1: 0
+      UnusedIntegerProperty11: 0
       UnusedBooleanProperty5: 0
-      UnusedIntegerProperty8: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty8: 0
       UnusedStringProperty0: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty19: 0
       AAPL,phandle: 4
       UnusedBooleanProperty12: 0
-      UnusedIntegerProperty16: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty16: 0
       UnusedStringProperty3: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty1: 0
-      UnusedIntegerProperty4: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty4: 0
       UnusedBooleanProperty8: 0
       name: manifest-properties
       UnusedStringProperty6: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty17: 0
       UnusedBooleanProperty10: 0
-      UnusedIntegerProperty0: "\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty14: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty0: 0
+      UnusedIntegerProperty14: 0
       UnusedBooleanProperty4: 0
-      UnusedIntegerProperty7: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty7: 0
       UnusedStringProperty9: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty15: 0
-      UnusedIntegerProperty19: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty19: 0
       UnusedStringProperty1: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty12: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty12: 0
       UnusedBooleanProperty0: 0
       UnusedBooleanProperty7: 0
-      UnusedIntegerProperty3: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty3: 0
       UnusedStringProperty4: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty13: 0
-      UnusedIntegerProperty17: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty17: 0
       UnusedStringProperty7: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
-    - UnusedIntegerProperty10: "\0\0\0\0\0\0\0\0"
+    - UnusedIntegerProperty10: 0
       UnusedBooleanProperty3: 0
-      UnusedIntegerProperty6: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty6: 0
       UnusedBooleanProperty18: 0
       UnusedBooleanProperty11: 0
-      UnusedIntegerProperty15: "\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty2: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty15: 0
+      UnusedIntegerProperty2: 0
       UnusedBooleanProperty6: 0
-      UnusedIntegerProperty9: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty9: 0
       UnusedStringProperty2: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty16: 0
       UnusedStringProperty5: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty13: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty13: 0
       UnusedBooleanProperty2: 0
-      UnusedIntegerProperty5: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty5: 0
       UnusedBooleanProperty9: 0
       UnusedStringProperty8: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty14: 0
-      UnusedIntegerProperty18: "\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty1: "\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty11: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty18: 0
+      UnusedIntegerProperty1: 0
+      UnusedIntegerProperty11: 0
       UnusedBooleanProperty5: 0
-      UnusedIntegerProperty8: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty8: 0
       UnusedStringProperty0: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty19: 0
       AAPL,phandle: 5
       UnusedBooleanProperty12: 0
-      UnusedIntegerProperty16: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty16: 0
       UnusedStringProperty3: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty1: 0
-      UnusedIntegerProperty4: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty4: 0
       UnusedBooleanProperty8: 0
       name: manifest-object-properties
       UnusedStringProperty6: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty17: 0
       UnusedBooleanProperty10: 0
-      UnusedIntegerProperty0: "\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty14: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty0: 0
+      UnusedIntegerProperty14: 0
       UnusedBooleanProperty4: 0
-      UnusedIntegerProperty7: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty7: 0
       UnusedStringProperty9: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty15: 0
-      UnusedIntegerProperty19: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty19: 0
       UnusedStringProperty1: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty12: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty12: 0
       UnusedBooleanProperty0: 0
       UnusedBooleanProperty7: 0
-      UnusedIntegerProperty3: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty3: 0
       UnusedStringProperty4: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty13: 0
-      UnusedIntegerProperty17: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty17: 0
       UnusedStringProperty7: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
     - name: boot-object-manifests
       AAPL,phandle: 6
@@ -259,7 +259,7 @@ device_tree:
         AAPL,phandle: 13
     - name: asmb
       AAPL,phandle: 14
-  - name: options
+  - name: 32491047111389295
     AAPL,phandle: 15
   - "#address-cells": 1
     "#size-cells": 0
@@ -267,556 +267,556 @@ device_tree:
     AAPL,phandle: 16
     :children:
     - name: cpu0
-      peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: running
+      peripheral-frequency: 24000000
+      state: 29113321704551794
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 0
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 0
       AAPL,phandle: 17
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       cpu-version: 0
       function-enable_core: ''
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 1
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 1
       AAPL,phandle: 18
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu1
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 2
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 2
       AAPL,phandle: 19
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu2
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 3
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 3
       AAPL,phandle: 20
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu3
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 4
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 4
       AAPL,phandle: 21
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu4
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 5
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 5
       AAPL,phandle: 22
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu5
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 6
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 6
       AAPL,phandle: 23
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu6
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 7
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 7
       AAPL,phandle: 24
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu7
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 8
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 8
       AAPL,phandle: 25
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu8
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 9
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 9
       AAPL,phandle: 26
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu9
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 10
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 10
       AAPL,phandle: 27
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu10
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 11
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 11
       AAPL,phandle: 28
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu11
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 12
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 12
       AAPL,phandle: 29
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu12
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 13
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 13
       AAPL,phandle: 30
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu13
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 14
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 14
       AAPL,phandle: 31
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu14
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 15
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 15
       AAPL,phandle: 32
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu15
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 16
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 16
       AAPL,phandle: 33
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu16
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 17
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 17
       AAPL,phandle: 34
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu17
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 18
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 18
       AAPL,phandle: 35
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu18
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 19
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 19
       AAPL,phandle: 36
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu19
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 20
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 20
       AAPL,phandle: 37
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu20
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 21
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 21
       AAPL,phandle: 38
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu21
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 22
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 22
       AAPL,phandle: 39
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu22
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 23
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 23
       AAPL,phandle: 40
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu23
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 24
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 24
       AAPL,phandle: 41
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu24
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 25
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 25
       AAPL,phandle: 42
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu25
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 26
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 26
       AAPL,phandle: 43
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu26
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 27
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 27
       AAPL,phandle: 44
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu27
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 28
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 28
       AAPL,phandle: 45
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu28
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 29
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 29
       AAPL,phandle: 46
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu29
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 30
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 30
       AAPL,phandle: 47
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu30
-    - peripheral-frequency: "\06n\x01\0\0\0\0"
-      state: waiting
+    - peripheral-frequency: 24000000
+      state: 29113321804882295
       compatible:
       - ARM,v8
       interrupt-parent: 55
       interrupts: "\x01\0\0\0\x01\0\0\0\x17\0\0\0\x01\0\0\0\x01\0\0\0\x01\0\0\0"
       cpu-id: 31
-      memory-frequency: "\06n\x01\0\0\0\0"
+      memory-frequency: 24000000
       reg: 31
       AAPL,phandle: 48
       device_type: 7696483
-      timebase-frequency: "\06n\x01\0\0\0\0"
-      clock-frequency: "\06n\x01\0\0\0\0"
-      fixed-frequency: "\06n\x01\0\0\0\0"
-      bus-frequency: "\06n\x01\0\0\0\0"
+      timebase-frequency: 24000000
+      clock-frequency: 24000000
+      fixed-frequency: 24000000
+      bus-frequency: 24000000
       function-enable_core: ''
       name: cpu31
-  - name: aliases
+  - name: 32481168551668833
     AAPL,phandle: 49
   - AAPL,phandle: 50
     device_type: memory
     name: memory
-    reg: "\0\0\0\0\0\0\0\0"
+    reg: 0
   - compatible:
     - ARM,psci
     name: pmgr
@@ -836,7 +836,7 @@ device_tree:
       compatible:
       - aes,s8000
       reg: "\0\0\" \0\0\0\0\0@\0\0\0\0\0\0\0\0# \0\0\0\0\0@\0\0\0\0\0\0"
-      interrupts: "2\0\0\0\x01\0\0\0"
+      interrupts: 4294967346
       AAPL,phandle: 53
       clock-gates: 48
       device_type: 7562593
@@ -865,10 +865,10 @@ device_tree:
       - qemu,pvpanic-mmio
       "#address-cells": 2
       "#size-cells": 2
-      name: pvpanic
+      name: 27981945496434288
       reg: "\0\0\a\x10\0\0\0\0\x02\0\0\0\0\0\0\0"
     - interrupt-base: 64
-      bus-range: "\0\0\0\0\b\0\0\0"
+      bus-range: 34359738368
       compatible:
       - pcie,vmapple1
       AAPL,phandle: 58
@@ -879,13 +879,12 @@ device_tree:
         AAAAAgAAAFAAAAAAAAAAQAAAAAAAAP8vAAAAAA==
       "#size-cells": 2
       "#address-cells": 3
-      dev-range: !binary |-
-        AAAAAP8AAAA=
+      dev-range: 1095216660480
       name: pcie
     - interrupt-parent: 55
       compatible:
       - ARM,pl061
-      interrupts: "%\0\0\0\0\0\0\0"
+      interrupts: 37
       role: VMA1_BUTTONS
       reg: "\0\0\x06\x10\0\0\0\0\0\x10\0\0\0\0\0\0"
       name: pl061-buttons
@@ -893,7 +892,7 @@ device_tree:
     - interrupt-parent: 55
       compatible:
       - paravirtualizedgraphics,iosurface
-      interrupts: "0\0\0\0\0\0\0\0"
+      interrupts: 48
       role: APV_IOSFC
       reg: "\0\0! \0\0\0\0\0\0\x01\0\0\0\0\0"
       name: iosurface-mapper
@@ -901,8 +900,8 @@ device_tree:
     - interrupt-parent: 55
       compatible:
       - paravirtualizedgraphics,gpu
-      interrupts: "1\0\0\0\0\0\0\0"
-      role: APV_GFX
+      interrupts: 49
+      role: 24847070306652225
       reg: "\0\0  \0\0\0\0\0\0\x01\0\0\0\0\0"
       name: 7890535
       AAPL,phandle: 61
@@ -931,7 +930,7 @@ device_tree:
     product-description: virtual machine for ARM-v8.4 with Apple Silicon extensions
     builtin-mics: 0
     allow-32bit-apps: 1
-    compatible-device-fallback: iPad8,6
+    compatible-device-fallback: 15248269456265321
     mobiledevice-beta-min-ver: 1190.100.2
     sandman-support: 0
     atomic-firmware-update-support: 1
@@ -939,7 +938,7 @@ device_tree:
     single-stage-boot: 1
     dali-mode: 0
     AAPL,phandle: 65
-    name: product
+    name: 32760453145784944
     graphics-featureset-class: APPLE7
     mobiledevice-min-ver: '1351'
     apple-guest-agent-port: 505050
@@ -995,7 +994,7 @@ device_tree:
       - vol.fs_mntopts: nosuid,nodev,nobrowse
         vol.fs_type: ro
         vol.fs_role: 16
-        vol.fs_name: Preboot
+        vol.fs_name: 32773621481304656
         vol.fs_file: "/private/preboot"
         vol.fs_passno: 1
         vol.fs_mntorder: 1
@@ -1045,7 +1044,7 @@ device_tree:
       - vol.fs_mntopts: nosuid,nodev,nobrowse
         vol.fs_type: ro
         vol.fs_role: 16
-        vol.fs_name: Preboot
+        vol.fs_name: 32773621481304656
         vol.fs_file: "/private/preboot"
         vol.fs_passno: 1
         vol.fs_mntorder: 1
@@ -1086,7 +1085,7 @@ device_tree:
       - vol.fs_mntopts: nosuid,nodev,nobrowse
         vol.fs_type: ro
         vol.fs_role: 16
-        vol.fs_name: Preboot
+        vol.fs_name: 32773621481304656
         vol.fs_file: "/private/preboot"
         vol.fs_passno: 1
         vol.fs_mntorder: 1
@@ -1101,7 +1100,7 @@ device_tree:
         vol.fs_mntorder: 6
         name: hardware-vol
         AAPL,phandle: 83
-  - name: buttons
+  - name: 32491047295939938
     AAPL,phandle: 84
   - name: osenvironments
     AAPL,phandle: 85

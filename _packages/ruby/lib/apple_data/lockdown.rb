@@ -4,7 +4,7 @@
 # Schema file for the `lockdownd.yaml` file
 class LockdownData < DataFile
   def initialize
-    super 'lockdownd.yaml'
+    super('lockdownd.yaml')
     @data ||= {}
     @data['clients'] ||= []
     @data['domains'] ||= []

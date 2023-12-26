@@ -4,7 +4,7 @@
 # Data file for the IOReg data
 class IORegData < DataFile
   def initialize
-    super 'ioreg.yaml'
+    super('ioreg.yaml')
 
     @classes = []
 

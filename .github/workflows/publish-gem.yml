@@ -21,7 +21,7 @@ jobs:
       - name: Setup Ruby 3.2
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2.0
+          ruby-version: 3.2.2
 
       - uses: actions/download-artifact@v3
         name: Download Ruby Package Artifacts

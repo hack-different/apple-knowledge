@@ -11,7 +11,7 @@ device_tree:
   secure-root-prefix: md
   AAPL,phandle: 1
   platform-name: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
-  device_type: bootrom
+  device_type: 30803309831876450
   region-info: syscfg/Regn/0x20,zeroes/0x20
   regulatory-model-number: syscfg/RMd#/0x20
   model-number: syscfg/Mod#/0x20,zeroes/0x20
@@ -28,11 +28,11 @@ device_tree:
     disable-transport-rm: 0
     amfi-only-platform-code: 0
     coverglass-color: syscfg/CLCG
-    consistent-debug-root: "\0\0\0\0\0\0\0\0"
+    consistent-debug-root: 0
     dram-vendor: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
     board-id: 0
     root-matching: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
-    unique-chip-id: "\0\0\0\0\0\0\0\0"
+    unique-chip-id: 0
     dram-vendor-id: 0
     mac-address-bluetooth0: macaddr/btaddr,syscfg/BMac/6
     software-behavior: syscfg/SwBh/0x10,zeroes/0x10
@@ -49,7 +49,7 @@ device_tree:
     gid-aes-key: 0
     disable-av-content-protection: 0
     image4-supported: ''
-    boot-nonce: "\0\0\0\0\0\0\0\0"
+    boot-nonce: 0
     display-corner-radius: 0
     uid-aes-key: 0
     firmware-version: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
@@ -81,7 +81,7 @@ device_tree:
     use-recovery-securityd: 0
     marketing-hardware-behavior: syscfg/MkBH
     software-bundle-version: syscfg/SBVr/0x10,zeroes/0x10
-    die-id: "\0\0\0\0\0\0\0\0"
+    die-id: 0
     disable-accessory-firmware: 0
     certificate-production-status: 0
     production-cert: 0
@@ -90,109 +90,109 @@ device_tree:
     sepfw-load-at-boot: 1
     display-scale: 0
     :children:
-    - UnusedIntegerProperty10: "\0\0\0\0\0\0\0\0"
+    - UnusedIntegerProperty10: 0
       UnusedBooleanProperty3: 0
-      UnusedIntegerProperty6: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty6: 0
       UnusedBooleanProperty18: 0
       UnusedBooleanProperty11: 0
-      UnusedIntegerProperty15: "\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty2: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty15: 0
+      UnusedIntegerProperty2: 0
       UnusedBooleanProperty6: 0
-      UnusedIntegerProperty9: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty9: 0
       UnusedStringProperty2: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty16: 0
       UnusedStringProperty5: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty13: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty13: 0
       UnusedBooleanProperty2: 0
-      UnusedIntegerProperty5: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty5: 0
       UnusedBooleanProperty9: 0
       UnusedStringProperty8: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty14: 0
-      UnusedIntegerProperty18: "\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty1: "\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty11: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty18: 0
+      UnusedIntegerProperty1: 0
+      UnusedIntegerProperty11: 0
       UnusedBooleanProperty5: 0
-      UnusedIntegerProperty8: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty8: 0
       UnusedStringProperty0: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty19: 0
       AAPL,phandle: 3
       UnusedBooleanProperty12: 0
-      UnusedIntegerProperty16: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty16: 0
       UnusedStringProperty3: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty1: 0
-      UnusedIntegerProperty4: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty4: 0
       UnusedBooleanProperty8: 0
       name: manifest-properties
       UnusedStringProperty6: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty17: 0
       UnusedBooleanProperty10: 0
-      UnusedIntegerProperty0: "\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty14: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty0: 0
+      UnusedIntegerProperty14: 0
       UnusedBooleanProperty4: 0
-      UnusedIntegerProperty7: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty7: 0
       UnusedStringProperty9: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty15: 0
-      UnusedIntegerProperty19: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty19: 0
       UnusedStringProperty1: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty12: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty12: 0
       UnusedBooleanProperty0: 0
       UnusedBooleanProperty7: 0
-      UnusedIntegerProperty3: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty3: 0
       UnusedStringProperty4: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty13: 0
-      UnusedIntegerProperty17: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty17: 0
       UnusedStringProperty7: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
-    - UnusedIntegerProperty10: "\0\0\0\0\0\0\0\0"
+    - UnusedIntegerProperty10: 0
       UnusedBooleanProperty3: 0
-      UnusedIntegerProperty6: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty6: 0
       UnusedBooleanProperty18: 0
       UnusedBooleanProperty11: 0
-      UnusedIntegerProperty15: "\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty2: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty15: 0
+      UnusedIntegerProperty2: 0
       UnusedBooleanProperty6: 0
-      UnusedIntegerProperty9: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty9: 0
       UnusedStringProperty2: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty16: 0
       UnusedStringProperty5: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty13: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty13: 0
       UnusedBooleanProperty2: 0
-      UnusedIntegerProperty5: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty5: 0
       UnusedBooleanProperty9: 0
       UnusedStringProperty8: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty14: 0
-      UnusedIntegerProperty18: "\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty1: "\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty11: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty18: 0
+      UnusedIntegerProperty1: 0
+      UnusedIntegerProperty11: 0
       UnusedBooleanProperty5: 0
-      UnusedIntegerProperty8: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty8: 0
       UnusedStringProperty0: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty19: 0
       AAPL,phandle: 4
       UnusedBooleanProperty12: 0
-      UnusedIntegerProperty16: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty16: 0
       UnusedStringProperty3: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty1: 0
-      UnusedIntegerProperty4: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty4: 0
       UnusedBooleanProperty8: 0
       name: manifest-object-properties
       UnusedStringProperty6: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty17: 0
       UnusedBooleanProperty10: 0
-      UnusedIntegerProperty0: "\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty14: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty0: 0
+      UnusedIntegerProperty14: 0
       UnusedBooleanProperty4: 0
-      UnusedIntegerProperty7: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty7: 0
       UnusedStringProperty9: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty15: 0
-      UnusedIntegerProperty19: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty19: 0
       UnusedStringProperty1: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
-      UnusedIntegerProperty12: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty12: 0
       UnusedBooleanProperty0: 0
       UnusedBooleanProperty7: 0
-      UnusedIntegerProperty3: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty3: 0
       UnusedStringProperty4: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty13: 0
-      UnusedIntegerProperty17: "\0\0\0\0\0\0\0\0"
+      UnusedIntegerProperty17: 0
       UnusedStringProperty7: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
     - name: boot-object-manifests
       AAPL,phandle: 5
@@ -230,7 +230,7 @@ device_tree:
       start-time: 0
       debug-wait-start: 0
       name: iBoot
-  - name: options
+  - name: 32491047111389295
     AAPL,phandle: 12
   - "#address-cells": 1
     "#size-cells": 0
@@ -246,19 +246,19 @@ device_tree:
       function-error_handler: "\x18\0\0\0HrrE\0\0\0\0"
       interrupt-parent: 25
       name: cpu0
-      reg-private: "\0\0\x01\x10\x02\0\0\0"
+      reg-private: 8858435584
       l2-cache-id: 0
       compatible:
       - apple,tempest
       - ARM,v8
       interrupts: "\0\x02\0\0\x7F\0\0\0\x01\x02\0\0"
-      state: waiting
+      state: 29113321804882295
       function-enable_core: "\e\0\0\0eroC\x01\0\0\0"
       cluster-id: 0
       function-ipi_dispatch: "\x19\0\0\0DIPI\0\x02\0\0"
       cpu-impl-reg: "\0\0\x05\x10\x02\0\0\0\0\0\x01\0\0\0\0\0"
       function-ipi_dispatch_other: "\x19\0\0\0DIPI\x01\x02\0\0"
-      function-cpu_idle: "\e\0\0\0Iupc"
+      function-cpu_idle: 7165355963539521563
       coresight-reg: "\0\0\x01\x10\x02\0\0\0\0\0\x04\0\0\0\0\0"
       device_type: 7696483
       cpm-impl-reg: !binary |-
@@ -273,20 +273,20 @@ device_tree:
       function-error_handler: "\x18\0\0\0HrrE\x01\0\0\0"
       interrupt-parent: 25
       name: cpu1
-      reg-private: "\0\0\x11\x10\x02\0\0\0"
+      reg-private: 8859484160
       l2-cache-id: 0
       compatible:
       - apple,tempest
       - ARM,v8
       interrupts: !binary |-
         AgIAAIIAAAADAgAA
-      state: waiting
+      state: 29113321804882295
       function-enable_core: "\e\0\0\0eroC\x02\0\0\0"
       cluster-id: 0
       function-ipi_dispatch: "\x19\0\0\0DIPI\x02\x02\0\0"
       cpu-impl-reg: "\0\0\x15\x10\x02\0\0\0\0\0\x01\0\0\0\0\0"
       function-ipi_dispatch_other: "\x19\0\0\0DIPI\x03\x02\0\0"
-      function-cpu_idle: "\e\0\0\0Iupc"
+      function-cpu_idle: 7165355963539521563
       coresight-reg: "\0\0\x11\x10\x02\0\0\0\0\0\x04\0\0\0\0\0"
       device_type: 7696483
       cpm-impl-reg: !binary |-
@@ -301,20 +301,20 @@ device_tree:
       function-error_handler: "\x18\0\0\0HrrE\x02\0\0\0"
       interrupt-parent: 25
       name: cpu2
-      reg-private: "\0\0!\x10\x02\0\0\0"
+      reg-private: 8860532736
       l2-cache-id: 0
       compatible:
       - apple,tempest
       - ARM,v8
       interrupts: !binary |-
         BAIAAIUAAAAFAgAA
-      state: waiting
+      state: 29113321804882295
       function-enable_core: "\e\0\0\0eroC\x04\0\0\0"
       cluster-id: 0
       function-ipi_dispatch: "\x19\0\0\0DIPI\x04\x02\0\0"
       cpu-impl-reg: "\0\0%\x10\x02\0\0\0\0\0\x01\0\0\0\0\0"
       function-ipi_dispatch_other: "\x19\0\0\0DIPI\x05\x02\0\0"
-      function-cpu_idle: "\e\0\0\0Iupc"
+      function-cpu_idle: 7165355963539521563
       coresight-reg: "\0\0!\x10\x02\0\0\0\0\0\x04\0\0\0\0\0"
       device_type: 7696483
       cpm-impl-reg: !binary |-
@@ -329,20 +329,20 @@ device_tree:
       function-error_handler: "\x18\0\0\0HrrE\x03\0\0\0"
       interrupt-parent: 25
       name: cpu3
-      reg-private: "\0\01\x10\x02\0\0\0"
+      reg-private: 8861581312
       l2-cache-id: 0
       compatible:
       - apple,tempest
       - ARM,v8
       interrupts: !binary |-
         BgIAAIgAAAAHAgAA
-      state: waiting
+      state: 29113321804882295
       function-enable_core: "\e\0\0\0eroC\b\0\0\0"
       cluster-id: 0
       function-ipi_dispatch: "\x19\0\0\0DIPI\x06\x02\0\0"
       cpu-impl-reg: "\0\05\x10\x02\0\0\0\0\0\x01\0\0\0\0\0"
       function-ipi_dispatch_other: "\x19\0\0\0DIPI\a\x02\0\0"
-      function-cpu_idle: "\e\0\0\0Iupc"
+      function-cpu_idle: 7165355963539521563
       coresight-reg: "\0\01\x10\x02\0\0\0\0\0\x04\0\0\0\0\0"
       device_type: 7696483
       cpm-impl-reg: !binary |-
@@ -357,20 +357,20 @@ device_tree:
       function-error_handler: "\x18\0\0\0HrrE\x04\0\0\0"
       interrupt-parent: 25
       name: cpu4
-      reg-private: "\0\0\x01\x11\x02\0\0\0"
+      reg-private: 8875212800
       l2-cache-id: 0
       compatible:
       - apple,vortex
       - ARM,v8
       interrupts: !binary |-
         CAIAAIsAAAAJAgAA
-      state: waiting
+      state: 29113321804882295
       function-enable_core: "\e\0\0\0eroC\x10\0\0\0"
       cluster-id: 1
       function-ipi_dispatch: "\x19\0\0\0DIPI\b\x02\0\0"
       cpu-impl-reg: "\0\0\x05\x11\x02\0\0\0\0\0\x01\0\0\0\0\0"
       function-ipi_dispatch_other: "\x19\0\0\0DIPI\t\x02\0\0"
-      function-cpu_idle: "\e\0\0\0Iupc"
+      function-cpu_idle: 7165355963539521563
       coresight-reg: "\0\0\x01\x11\x02\0\0\0\0\0\x04\0\0\0\0\0"
       device_type: 7696483
       cpm-impl-reg: !binary |-
@@ -385,31 +385,31 @@ device_tree:
       function-error_handler: "\x18\0\0\0HrrE\x05\0\0\0"
       interrupt-parent: 25
       name: cpu5
-      reg-private: "\0\0\x11\x11\x02\0\0\0"
+      reg-private: 8876261376
       l2-cache-id: 0
       compatible:
       - apple,vortex
       - ARM,v8
       interrupts: !binary |-
         CgIAAI4AAAALAgAA
-      state: waiting
+      state: 29113321804882295
       function-enable_core: "\e\0\0\0eroC \0\0\0"
       cluster-id: 1
       function-ipi_dispatch: "\x19\0\0\0DIPI\n\x02\0\0"
       cpu-impl-reg: "\0\0\x15\x11\x02\0\0\0\0\0\x01\0\0\0\0\0"
       function-ipi_dispatch_other: "\x19\0\0\0DIPI\v\x02\0\0"
-      function-cpu_idle: "\e\0\0\0Iupc"
+      function-cpu_idle: 7165355963539521563
       coresight-reg: "\0\0\x11\x11\x02\0\0\0\0\0\x04\0\0\0\0\0"
       device_type: 7696483
       cpm-impl-reg: !binary |-
         AADkEQIAAAAAAAEAAAAAAA==
       cluster-type: P
-  - name: aliases
+  - name: 32481168551668833
     AAPL,phandle: 20
   - AAPL,phandle: 21
     device_type: memory
     name: memory
-    reg: "\0\0\0\0\0\0\0\0"
+    reg: 0
   - AAPL,phandle: 22
     device_type: pram
     name: pram
@@ -434,8 +434,8 @@ device_tree:
     ranges: "\0\0\0\0\0\0\0\0\0\0\0\0\x02\0\0\0\0\0\0\0\x01\0\0\0\0\0\0\0\x06\0\0\0\0\0\0\0\x06\0\0\0\0\0\0\0\x02\0\0\0"
     "#address-cells": 2
     usbphy-frequency: 0
-    function-clock_gate: "\e\0\0\0Gklc"
-    function-power_gate: "\e\0\0\0Grwp"
+    function-clock_gate: 7164219059926466587
+    function-power_gate: 8104071703744741403
     cpm-impl: !binary |-
       AADkEAIAAAAAgAAAAAAAAAAA5BECAAAAAIAAAAAAAAA=
     name: arm-io
@@ -468,14 +468,14 @@ device_tree:
         AAAAAQAASgBTT0NfVFZNX1RFTVBfMAAAAAAAAgAASwBTT0NfVFZNX1RFTVBfMQAAAAAAAwAATABTT0NfVFZNX1RFTVBfMgAAAAAABAAATQBTT0NfVFZNX1RFTVBfMwAAAAAABQAATgBHRlhfVFZNX1RFTVBfMAAAAAAABgAATwBHRlhfVFZNX1RFTVBfMQAAAAAABwAAUABHRlhfVFZNX1RFTVBfMgAAAAAACAAAUQBHRlhfVFZNX1RFTVBfMwAAAAAACQAAUgBEQ1NfVFZNX1RFTVBfMAAAAAAACgAAUwBEQ1NfVFZNX1RFTVBfMQAAAAAACwAAVABEQ1NfVFZNX1RFTVBfMgAAAAAADAAAVQBEQ1NfVFZNX1RFTVBfMwAAAAABDVcAVgBTT0NIT1QwAAAAAAAAAAAAAAABDlkAWABTT0NIT1QxAAAAAAAAAAAAAAABD3QAdQBTT0NfVk1JTgAAAAAAAAAAAAABEHIAcwBTT0NfVk5PTQAAAAAAAAAAAAABEXAAcQBTT0NfVk1BWAAAAAAAAAAAAAABEqMApABEQ1NfVk1JTgAAAAAAAAAAAAABE6EAogBEQ1NfVk5PTQAAAAAAAAAAAAABFJ8AoABEQ1NfVk1BWAAAAAAAAAAAAAAAFQAAegBBTkVfQ05UMF9BQ0MxAAAAAAAAFgAAewBBTkVfQ05UMV9BQ0MxAAAAAAAAFwAAfABBTkVfQ05UMl9BQ0MxAAAAAQAFGH4AfQBFQ1BVX0FEQ0xLX1RSSUcAAQAFGYAAfwBQQ1BVX0FEQ0xLX1RSSUcAAQAFGoIAgQBBTkVfQURDTEtfVFJJRwAAAwAFG4QAgwBFQ1BVX0RJVEhSX1RSSUcAAwAFHIYAhQBQQ1BVX0RJVEhSX1RSSUcADwAFHYgAhwBBTkVfRElUSFJfVFJJRwAAAAAGHpgAlwBQUkVfVVZMTwAAAAAAAAAAAQAFJAECAAJHUFVfQURDTEtfVFJJRwAABAAFJQMCAgJHUFVfRElUSFJfVFJJRwAAAAAGJgUCBAJHUFVfVVZXQVJOAAAAAAAAAAAGJwcCBgJHUFVfSUxJTUlUAAAAAAAAAAAGKAkCCAJHUFVfRFJPT1BfVFJJRwAAAAABKR0BHAFTTFBfRERSAAAAAAAAAAAAAAABKh8BHgFBV0FLRQAAAAAAAAAAAAAAAAABKyEBIAFTTFBfUzJSAAAAAAAAAAAAAAABLCMBIgFERUVQX1dBSVQAAAAAAAAAAAACLQAAAABFQ1BVX0RQRV9USFJUTAAAAAACLgAADABFQ1BVMAAAAAAAAAAAAAAAAAACLwAAEABFQ1BVMQAAAAAAAAAAAAAAAAACMAAAFABFQ1BVMgAAAAAAAAAAAAAAAAACMQAAGABFQ1BVMwAAAAAAAAAAAAAAAAAHMgAAAABQQ1BVX0RQRV9USFJUTAAAAAAHMwAADABQQ1BVMAAAAAAAAAAAAAAAAAAHNAAAEABQQ1BVMQAAAAAAAAAAAAAAAAAGNZAAjwBQUkVfVVBPAAAAAAAAAAAA
       pwrgate-regs: !binary |-
         AQAAAADACQD/AwAAAAAAEAAAAAAAwAkA/////wAAABAAAAAAAMIJAP///x8AAAAQ
-      clock-ids: "\x01\x01\0\0\x05\x01\0\0"
+      clock-ids: 1120986464513
       dvd-period-us: 8000
       perf-regs: !binary |-
         AAAAAABACwCrAAAAAAAAAAEAAAAAQAsAJAAAAAMAAAAAAAAAAMAPAAoAAAAAAAAA
       total-rails-leakage: 0
       ane-trig: 6
       gfx-tvm: 1
-      function-pmp_control: "A\0\0\0CPMP"
+      function-pmp_control: 5786369344933986369
       ps-regs: !binary |-
         AQAAAAAACAAA+AMAAAAAAAAACAA/AwAAAAAAAAABCAD/////AAAAAAACCAD/////AAAAAAADCAD//7MgAAAAAAAGCAABAAAAAAAAAACACAA9AAAAAQAAAACACAAAAgAA
       reg: !binary |-
@@ -516,14 +516,14 @@ device_tree:
       frc-cpm-on-hack: 0
       rosc-apply: 0
       ap-wake-sources: "\f\0\0\0AOP.GPIO.IRQ4\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x0E\0\0\0AOP.GPIO.IRQ6\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x18\0\0\0AOP.OutboxNotEmpty\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x19\0\0\0AOP.CPUWakeupAP\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0&\0\0\0NUB.WakeupAP\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0)\0\0\0NUB.GPIO.IRQ2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0+\0\0\0NUB.APWatchdog\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0,\0\0\0NUB.APWakeupTime\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0-\0\0\0NUB.SPMIAPIRQ\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0=\0\0\0SMC.CPUWakeupAP\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0B\0\0\0SMC.OutboxNotEmpty\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
-      voltage-states9: "\0\0\0\0\0\0\0\0"
+      voltage-states9: 0
       cpu-tvm: 1
       power-domains: "\09\0\x01\0\0\0\0MCC\0\0\0\0\0\0\0\0\0\0\0\0\0\0:\0\x02\0\0\0\0DCS01\0\0\0\0\0\0\0\0\0\0\0\0;\0\x03\0\0\0\0DCS23\0\0\0\0\0\0\0\0\0\0\0\0<\0\x04\0\0\0\0SMX\0\0\0\0\0\0\0\0\0\0\0\0\0\0=\0\x05\0\0\0\0IMX\0\0\0\0\0\0\0\0\0\0\0\0\0\0>\0\x06\0\0\0\0RMX\0\0\0\0\0\0\0\0\0\0\0\0\0\x01?\0\a\0\0\x17\x01DISP0_GP0\0\0\0\0\0\0\0\x01@\0\b\0\0\x18\x01DISP0_GP1\0\0\0\0\0\0\0\x01A\0\t\0\0\x19\x01DISP0_PPP\0\0\0\0\0\0\0\x01B\0\n\0\0\x1A\x01DISP0_HILO\0\0\0\0\0\0\0C\0\v\0\0\0\0PMP\0\0\0\0\0\0\0\0\0\0\0\0\0\0D\0\f\0\0\0\0PMS_SRAM\0\0\0\0\0\0\0\0\0E\0\r\0\0\0\0APCIE_SYS\0\0\0\0\0\0\0\0F\0\x0E\0\0\0\0GFX\0\0\0\0\0\0\0\0\0\0\0\0\0\0G\0\x0F\0\0\0\0SEP\0\0\0\0\0\0\0\0\0\0\0\0\0\0H\0\x10\0\0\0\0SEP_EISP\0\0\0\0\0\0\0\0\0I\0\x11\0\0\0\0ANS2\0\0\0\0\0\0\0\0\0\0\0\0\0\x15\x01\x12\0\0\0\0NUB_FABRIC\0\0\0\0\0\0\0\x16\x01\x13\0\0\0\0NUB_SRAM\0\0\0\0\0\0\0\0\0\x17\x01\x14\0\0\0\0DEBUG_USB\0\0\0\0\0\0\0\0\x18\x01\x15\0\0\0\0AOP_CPU\0\0\0\0\0\0\0\0\0\0\x19\x01\x16\0\0\0\0AOP_FILTER\0\0\0\0\0\0\0\x1A\x01\x17\0\0\0\0SMC_CPU\0\0\0\0\0\0\0\0\0\0\e\x01\x18\0\0\0\0SMC_FABRIC\0\0\0\0\0\0"
       energy-counters: "\0\0\x03\x05\0\0\0\rECPU0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x03\x06\0\0\0\rECPU1\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x03\a\0\0\0\rECPU2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x03\b\0\0\0\rECPU3\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x03\t\0\0\0\x0EPCPU0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x03\n\0\0\0\x0EPCPU1\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x04\v\0\0\0\rECPM\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x04\f\0\0\0\x0EPCPM\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x02\r\0\0\0\x0FECPU\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x02\x0E\0\0\0\x0FPCPU\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x02\x0F\0\0\0\0CPU
         Energy\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       devices: !binary |-
         AAACAQAAAAAAAAABBQAAAAAAAAAAAAAAAAAAAAAAAABFQ1BVMAAAAAAAAAAAAAAAAAACAgAAAAAAAAEBBgAAAAAAAAAAAAAAAAAAAAAAAABFQ1BVMQAAAAAAAAAAAAAAAAACAwAAAAAAAAIBBwAAAAAAAAAAAAAAAAAAAAAAAABFQ1BVMgAAAAAAAAAAAAAAAAACBAAAAAAAAAMBCAAAAAAAAAAAAAAAAAAAAAAAAABFQ1BVMwAAAAAAAAAAAAAAAAAFBwAAAAAAAAQBCQAAAAAAAAAAAAAAAAAAAAAAAABQQ1BVMAAAAAAAAAAAAAAAAAAFCAAAAAAAAAUBCgAAAAAAAAAAAAAAAAAAAAAAAABQQ1BVMQAAAAAAAAAAAAAAAAACCwAAAAAAAAgBAAAAAAAAAAAAAAAAAAAAAAAAAABFQ1BNAAAAAAAAAAAAAAAAAAAFDAAAAAAAAAkBAAAAAAAAAAAAAAAAAAAAAAAAAABQQ1BNAAAAAAAAAAAAAAAAEAAADQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABDUFUtQlVTWQAAAAAAAAAAEAACDgAAAAAAAAAACwAAAAAAAAAAAAAAAAAAAAAAAABFQ1BVAAAAAAAAAAAAAAAAEAAFDwAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAABQQ1BVAAAAAAAAAAAAAAAACQAAEAAAAAAAAQsAAAAAAAAAAAAAAAAAAAAAAAAAAABERUJVRwAAAAAAAAAAAAAAKQAAEQAAAAAAAQwAAAAAAAAAAAAAAAAAAAAAAAAAAABTUE1JAAAAAAAAAAAAAAAAKQAAEgAAAAABAQ0AAAAAAAAAAAAAAAAAAAAAAAAAAABOVUJfQU9OAAAAAAAAAAAACQAAEwAAAAAAAQ4AAAAAAAAAAAAAAAAAAAAAAAAAAABOVUJfR1BJTwAAAAAAAAAAKQAAFAAAAAADAQ8AAAAAAAAAAAAAAAAAAAAAAAAAAABOVUJfRkFCUklDAAAAAAAAKQAAFQAAAAAEARAAAAAAAAAAAAAAAAAAAAAAAAAAAABOVUJfU1JBTQAAAAAAAAAAKQAAFhAAAAAFAREAAAAAAAAAAAAAAAAAAAAAAAAAAABERUJVR19VU0IAAAAAAAAAAAAAIQAAAAAAAAkHAAAAAAAAAAAAAAAAAAAAAAAAAABTTUMtSTJDTTEAAAAAAAAAMAAAFwAAAAAKAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABBT1BfRklMVEVSAAAAAAAAMAAAGAAAAAAGAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABBT1BfQkFTRQAAAAAAAAAAMAAAGQAAAAAIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABBT1BfU0NNAAAAAAAAAAAAMAAAGgAAAAAJAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABBT1BfQ1BVAAAAAAAAAAAAMAAAGwAAAAAHAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABBT1BfU1JBTQAAAAAAAAAAMAAAHAAAAAALAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABBT1BfTEVBUF9BT1AAAAAAMAAAHQAAAAANAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABTTUNfRkFCUklDAAAAAAAAMAAAHgAAAAACAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABTTUNfQU9OAAAAAAAAAAAAMAAAHwAAAAAMAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABTTUNfQ1BVAAAAAAAAAAAAKQAAMAAAAAAAAAACAAAAAAAAAAAAAAAAAQAAAAkAAABTQlIAAAAAAAAAAAAAAAAAAQAAMQAAAAAAAAECAAAAAAAAAAAAAAAAAAAAAAAAAABBSUMAAAAAAAAAAAAAAAAAAQAAMgAAAAAAAAICAAAAAAAAAAAAAAAAAAAAAAAAAABEV0kAAAAAAAAAAAAAAAAAIQAAMwAAAAABAAMCAAAAAAAAAAAAAAAAAAAAAAAAAABTUE1JX1NPQzAAAAAAAAAAIQAANAAAAAACAAQCAAAAAAAAAAAAAAAAAAAAAAAAAABTUE1JX1NPQzEAAAAAAAAAIQAANQAAAAADAAUCAAAAAAAAAAAAAAAAAAAAAAAAAABTUE1JX1NPQzIAAAAAAAAAAQAANgAAAAAAAAYCAAAAAAAAAAAAAAAAAAAAAAAAAABHUElPAAAAAAAAAAAAAAAAKQAANwAAAAAEAAcCAAAAAAAAAAAAAAAAAAAAAAAAAABQTVMAAAAAAAAAAAAAAAAAIAAAOAAAAAAkAAgCAAAAAAAAAAAAAAAAAAAAAAAAAABJU1BTRU5TMAAAAAAAAAAAIAAAOQAAAAAlAAkCAAAAAAAAAAAAAAAAAAAAAAAAAABJU1BTRU5TMQAAAAAAAAAAIAAAOgAAAAAmAAoCAAAAAAAAAAAAAAAAAAAAAAAAAABJU1BTRU5TMgAAAAAAAAAAIAAAOwAAAAAnAAsCAAAAAAAAAAAAAAAAAAAAAAAAAABJU1BTRU5TMwAAAAAAAAAAIQAAPAAAAAAFAAwCAAAAAAAAAAAAAAAAAAAAAAAAAABQQ0lFX1JFRgAAAAAAAAAAIAAAPQAAAAAGAA0CAAAAAAAAAAAAAAAAAAAAAAAAAABTSU9fQlVTSUYAAAAAAAAAIAAAPj0AAAAHAA4CAAAAAAAAAAAAAAAAAAAAAAAAAABTSU8AAAAAAAAAAAAAAAAAIQAAPz4AAAAIAA8CAAAABAAAAAAAAAAAAAAAAAAAAABTSU9fQ1BVAAAAAAAAAAAAAAAAQD4AAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAABQV00wAAAAAAAAAAAAAAAAAAAAQT4AAAAAABECAAAAAAAAAAAAAAAAAAAAAAAAAABJMkMwAAAAAAAAAAAAAAAAAAAAQj4AAAAAABICAAAAAAAAAAAAAAAAAAAAAAAAAABJMkMxAAAAAAAAAAAAAAAAAAAAQz4AAAAAABMCAAAAAAAAAAAAAAAAAAAAAAAAAABJMkMyAAAAAAAAAAAAAAAAAAAARD4AAAAAABQCAAAAAAAAAAAAAAAAAAAAAAAAAABJMkMzAAAAAAAAAAAAAAAAAQAART0+AAAAABUCAAAAAAAAAAAAAAAAAAAAAAAAAABTUElfUAAAAAAAAAAAAAAAAAAARkUAAAAAABYCAAAAAAAAAAAAAAAAAAAAAAAAAABTUEkwAAAAAAAAAAAAAAAAAAAAR0UAAAAAABcCAAAAAAAAAAAAAAAAAAAAAAAAAABTUEkxAAAAAAAAAAAAAAAAAAAASEUAAAAAABgCAAAAAAAAAAAAAAAAAAAAAAAAAABTUEkyAAAAAAAAAAAAAAAAAAAASUUAAAAAABkCAAAAAAAAAAAAAAAAAAAAAAAAAABTUEkzAAAAAAAAAAAAAAAAAQAASj4AAAAAABoCAAAAAAAAAAAAAAAAAAAAAAAAAABVQVJUX1AAAAAAAAAAAAAAAQAAS0oAAAAAABsCAAAAAAAAAAAAAAAAAAAAAAAAAABVQVJUX04AAAAAAAAAAAAAAQAATEoAAAAAABwCAAAAAAAAAAAAAAAAAAAAAAAAAABVQVJUMAAAAAAAAAAAAAAAAQAATUoAAAAAAB0CAAAAAAAAAAAAAAAAAAAAAAAAAABVQVJUMQAAAAAAAAAAAAAAAQAATkoAAAAAAB4CAAAAAAAAAAAAAAAAAAAAAAAAAABVQVJUMgAAAAAAAAAAAAAAAQAAT0oAAAAAAB8CAAAAAAAAAAAAAAAAAAAAAAAAAABVQVJUMwAAAAAAAAAAAAAAAQAAUEoAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAABVQVJUNAAAAAAAAAAAAAAAAQAAUUoAAAAAAAEDAAAAAAAAAAAAAAAAAAAAAAAAAABVQVJUNQAAAAAAAAAAAAAAAQAAUkoAAAAAAAIDAAAAAAAAAAAAAAAAAAAAAAAAAABVQVJUNgAAAAAAAAAAAAAAAQAAU0oAAAAAAAMDAAAAAAAAAAAAAAAAAAAAAAAAAABVQVJUNwAAAAAAAAAAAAAAAQAAVEoAAAAAAAQDAAAAAAAAAAAAAAAAAAAAAAAAAABVQVJUOAAAAAAAAAAAAAAAAQAAVT4AAAAAAAUDAAAAAAAAAAAAAAAAAAAAAAAAAABBRVMAAAAAAAAAAAAAAAAAIAAAVj4AAAAJAAYDAAAAAAAAAAAAAAAAAAAAAAAAAABBVURJT19DUFUAAAAAAAAAAAAAVz4AAAAAAAcDAAAAAAAAAAAAAAAAAAAAAAAAAABBVURJTwAAAAAAAAAAAAAAAAAAWFcAAAAAAAgDAAAAAAAAAAAAAAAAAAAAAAAAAABNQ0EwAAAAAAAAAAAAAAAAAAAAWVcAAAAAAAkDAAAAAAAAAAAAAAAAAAAAAAAAAABNQ0ExAAAAAAAAAAAAAAAAAAAAWlcAAAAAAAoDAAAAAAAAAAAAAAAAAAAAAAAAAABNQ0EyAAAAAAAAAAAAAAAAAAAAW1cAAAAAAAsDAAAAAAAAAAAAAAAAAAAAAAAAAABNQ0EzAAAAAAAAAAAAAAAAAAAAXFcAAAAAAAwDAAAAAAAAAAAAAAAAAAAAAAAAAABNQ0E0AAAAAAAAAAAAAAAAAAAAXVcAAAAAAA0DAAAAAAAAAAAAAAAAAAAAAAAAAABNQ0E1AAAAAAAAAAAAAAAAAAAAXlcAAAAAAA4DAAAAAAAAAAAAAAAAAAAAAAAAAABEUEEAAAAAAAAAAAAAAAAA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UAIBzQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWRU5DLVNPQy1WTUFYAAAAUAIBzgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABKUEctU09DLVZNQVgAAAAAUAIBzwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBVkQtU09DLVZNQVgAAAAAEAAA0IEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABHRlgtU0dYAAAAAAAAAAAAEAAA0YEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABHRlgtQVNDAAAAAAAAAAAAEAAA0gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABHRlgtQlVTWQAAAAAAAAAAUAEB0wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABNU1ItU09DLVZOT00AAAAAEAAA4HgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABKUEcwLVYAAAAAAAAAAAAAEAAA4XgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABKUEcxLVYAAAAAAAAAAAAAEAAA4z9XAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTSU8tQ1BVLVYAAAAAAAAAEAAA5YIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABJU1AtU1lTLVYAAAAAAAAAEAAA54QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBVkQtU1lTLVYAAAAAAAAAEAAA8HkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABNU1ItVgAAAAAAAAAAAAAAEAAA84UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBTkUtU1lTLVYAAAAAAAAAEAAA9H0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBUENJRS1WAAAAAAAAAAAAEAAA9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABVU0ItQVVESU8tVgAAAAAAEgAA9gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTRVAtUEVBUkwtVgAAAAAA
-      clusters: "\x04\0\0\0\x02\0\0\0"
+      clusters: 8589934596
       aes-domain-hack: 0
       nominal-performance1: 0
       cpu-scw: 0
@@ -538,14 +538,13 @@ device_tree:
       noise-hack: 1
       clpc: 3
       pmgr-dock-fifo-channel: 3
-      function-mcc_ctrl: "\"\0\0\0$meM"
+      function-mcc_ctrl: 5576983714954477602
       :children:
       - mcc-power-gating: 1
         AAPL,phandle: 28
         "#device-sets": 13
-        function-mcc_ctrl: "\"\0\0\0$meM"
-        function-dispidle_ctrl: !binary |-
-          hwAAAGlQREE=
+        function-mcc_ctrl: 5576983714954477602
+        function-dispidle_ctrl: 4702972322783428743
         devices: 48
         name: soc-tuner
         device-set-5: 245
@@ -566,8 +565,7 @@ device_tree:
       - cpu-efficiency-ki-down: 13107
         pkg-avg-limiter-kp: 4565
         cpu-lowpeak-limiter-input-tc: 0
-        function-ane_perf_ctr: !binary |-
-          nQAAAFJDTkE=
+        function-ane_perf_ctr: 4705772680115126429
         pkg-avg-limiter-ki: 285
         cpu-utilization-target: 64880
         pkg-power-zone-filter-tc-0: 70000
@@ -682,16 +680,15 @@ device_tree:
       interrupt-parent: 25
       function-panic_notify: !binary |-
         IQAAAE9JUEfLAAAAAAEAAA==
-      interrupts: !binary |-
-        6AAAAAAAAAA=
+      interrupts: 232
       reg: !binary |-
         AAArPQAAAAAAQAAAAAAAACCAKz0AAAAABAAAAAAAAAA=
       AAPL,phandle: 32
       panic-save-flag-bit: 0
       device_type: 7627895
-      function-panic_flush_helper: "\"\0\0\0@meM"
+      function-panic_flush_helper: 5576983835213561890
       name: 7627895
-      function-panic_halt_helper: "\"\0\0\0!meM"
+      function-panic_halt_helper: 5576983702069575714
     - "#interrupt-cells": 2
       interrupt-controller: ''
       compatible:
@@ -711,7 +708,7 @@ device_tree:
       compatible:
       - mcc,t8020
       dcs_num_channels: 4
-      dramcfg-data: "3\x01\0\0@SUU"
+      dramcfg-data: 6148912400587292979
       config-data: !binary |-
         EAAAAAEAAABfCQAAAQAAAAoAAAAKAAAA6AMAAKCGAQBkAAAAAQAAAAgAAAABAAAAXwkAAAEAAAAKAAAACgAAAOgDAACghgEAZAAAAAEAAAAIAAAAAQAAAF8JAAABAAAACgAAAAoAAADoAwAAoIYBAGQAAAABAAAAEAAAAAEAAABfCQAAAQAAAAoAAAAKAAAA6AMAAKCGAQBkAAAAAQAAABAAAAABAAAAXwkAAAEAAAAKAAAACgAAAOgDAACghgEAZAAAAAEAAAA=
       device_type: 6513517
@@ -722,10 +719,8 @@ device_tree:
       compatible:
       - error-handler,t8020
       AAPL,phandle: 35
-      interrupts: !binary |-
-        aQAAAKYAAAA=
-      error-reflector: !binary |-
-        AMD/PAIAAAA=
+      interrupts: 712964571241
+      error-reflector: 9613328384
       device_type: error-handler
       name: error-handler
       reg: !binary |-
@@ -792,11 +787,10 @@ device_tree:
         - iop-nub,rtbuddy-v2
         coredump-enable: 64
         AAPL,phandle: 40
-        region-base: !binary |-
-          AADgSgIAAAA=
+        region-base: 9846128640
         firmware-name: iphone11aop
         has-baseband: ''
-        region-size: "\0\0\x19\0\0\0\0\0"
+        region-size: 1638400
         aop-fr-timebase: 1
         watchdog-enable: ''
         bb-uart-quiescing: ''
@@ -838,13 +832,13 @@ device_tree:
           compass-orientation: "\x02\0\0\0\x01\0\0\0\0\x01\0\0\0\0\x01\0"
           compass-calibration: syscfg/CPAS
           AAPL,phandle: 43
-          device_type: compass
+          device_type: 32496484656967523
           device-usage: 10
           compass-acc-compensation: ''
           compass-sens-calibration: syscfg/CSCM
           compass-offset-compensation: syscfg/CLOC
           compass-vbus-compensation: syscfg/CVCC
-          name: compass
+          name: 32496484656967523
         - device_type: pressure
           name: pressure
           device-usage: 49
@@ -885,7 +879,7 @@ device_tree:
           mca-master: 0
           mclk-source: 0
           device_type: 6382445
-          name: aop-mca
+          name: 27412393305861985
           frame-channels: 1
         - AAPL,phandle: 49
           compatible:
@@ -962,8 +956,7 @@ device_tree:
       bypass-address: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x02"
       vm-base: 0
       vm-alignment: 8
-      error-reflector: !binary |-
-        AMD/PAIAAAA=
+      error-reflector: 9613328384
       device_type: dart
       power-gates: ''
       reg: !binary |-
@@ -1044,7 +1037,7 @@ device_tree:
       reg: !binary |-
         AACCPgAAAAAAQAAAAAAAAA==
       device_type: interrupt-controller
-      supported-int-groups: "\x05\0\0\0\x06\0\0\0"
+      supported-int-groups: 25769803781
       wake-events: ''
       AAPL,phandle: 63
       "#address-cells": 0
@@ -1055,7 +1048,7 @@ device_tree:
       iommu-parent: 67
       interrupt-parent: 25
       interrupts: "-\x01\0\0,\x01\0\0/\x01\0\0.\x01\0\0"
-      clock-gates: "{\0\0\0|\0\0\0"
+      clock-gates: 532575944827
       clock-ids: ''
       reg: !binary |-
         AADAOwAAAAAAAAYAAAAAAAAAhTsAAAAAAAAgAAAAAAAAAFA7AAAAAAAABAAAAAAAAAACAAAAAAAAQAAAAAAAAAAABgAAAAAAAEAAAAAAAAAAAAoAAAAAAABAAAAAAAAAAAAOAAAAAAAAQAAAAAAAAABAFQAAAAAAAEAAAAAAAAAAQCAAAAAAAABAAAAAAAAAAEAkAAAAAAAAQAAAAAAAAABAKAAAAAAAAEAAAAAAAAAAQCwAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAFEAAAAAAAQAAAAAAAAACAFRAAAAAAAEAAAAAAAAAAgCUQAAAAAABAAAAAAAAAAIA1EAAAAAAAQAAAAAAAAAAA4hAAAAAAAAAGAAAAAAAAgOQQAAAAAABAAAAAAAAAAIAFEQAAAAAAQAAAAAAAAACAFREAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4hEAAAAAAAAGAAAAAAAAgOQRAAAAAABAAAAAAAAAAAAQPQAAAAAAQAEAAAAAAACAEj0AAAAAAAADAAAAAAAAABg9AAAAAABAAAAAAAAAAECFawAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcAAAAAAABAAAAAAAAAAMAANQAAAAAAQAAAAAAAAAAAEDwAAAAAAEAAAAAAAAA=
@@ -1063,7 +1056,7 @@ device_tree:
       iop-version: 1
       device_type: 7368048
       pio-reg-index: 3
-      power-gates: "{\0\0\0|\0\0\0"
+      power-gates: 532575944827
       role: 5262672
       name: 7368048
       :children:
@@ -1075,8 +1068,8 @@ device_tree:
         dram-capacity: 4
         sram-index: 1
         coredump-enable: 64
-        region-size: "\0\0\x04\0\0\0\0\0"
-        region-base: "\0\0P;\x02\0\0\0"
+        region-size: 262144
+        region-base: 9585033216
         user-power-managed: 1
         name: iop-pmp-nub
         AAPL,phandle: 65
@@ -1100,8 +1093,7 @@ device_tree:
       bypass-address: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x02"
       vm-alignment: 8
       pio-granularity: 16777216
-      error-reflector: !binary |-
-        AMD/PAIAAAA=
+      error-reflector: 9613328384
       device_type: dart
       power-gates: ''
       reg: "\0\00;\0\0\0\0\0@\0\0\0\0\0\0"
@@ -1160,8 +1152,7 @@ device_tree:
       reg: "\0\0(A\0\0\0\0\0@\0\0\0\0\0\0"
       AAPL,phandle: 73
       errata-30817686: ''
-      error-reflector: !binary |-
-        AMD/PAIAAAA=
+      error-reflector: 9613328384
       device_type: dart
       dart-options: 5
       sid-mask-override: 65535
@@ -1211,8 +1202,8 @@ device_tree:
         :children:
         - compatible:
           - sio-dma-controller
-          device_type: sio-dma
-          name: sio-dma
+          device_type: 27423349767367027
+          name: 27423349767367027
           AAPL,phandle: 77
     - sids: 32769
       vm-size: 4227858432
@@ -1234,8 +1225,7 @@ device_tree:
       vm-base: 0
       vm-alignment: 8
       pio-granularity: 16777216
-      error-reflector: !binary |-
-        AMD/PAIAAAA=
+      error-reflector: 9613328384
       device_type: dart
       power-gates: 176
       reg: "\0@\05\0\0\0\0\0@\0\0\0\0\0\0"
@@ -1261,7 +1251,7 @@ device_tree:
       iommu-parent: 82
       namespaces: "\x01\0\0\0\x01\0\0\0\0\0\0\0\x02\0\0\0\x02\0\0\0\0\b\0\0\x03\0\0\0\x03\0\0\0
         \0\0\0\x04\0\0\0\x04\0\0\0\x02\0\0\0\x05\0\0\0\x05\0\0\0\x02\0\0\0\x06\0\0\0\x06\0\0\0\x01\0\0\0\a\0\0\0\b\0\0\0\0\x01\0\0\b\0\0\0\n\0\0\0\0\x03\0\0"
-      nand-debug: "\x01\0\0\0\0\0\0\0"
+      nand-debug: 1
       interrupt-parent: 25
       name: 7564897
       s4e-bfh-params: !binary |-
@@ -1283,8 +1273,8 @@ device_tree:
         compatible:
         - iop-nub,rtbuddy-v2
         no-shutdown: ''
-        region-base: "\0\0\0\0\0\0\0\0"
-        region-size: "\0\0\0\0\0\0\0\0"
+        region-base: 0
+        region-size: 0
         name: iop-ans-nub
         power-managed: 1
     - sart-version: 1
@@ -1316,40 +1306,36 @@ device_tree:
         - iop-nub,rtbuddy-v2
         coredump-enable: 64
         AAPL,phandle: 84
-        region-base: !binary |-
-          AADgPwIAAAA=
+        region-base: 9661579264
         firmware-name: t8020smc
         no-shutdown: 1
-        region-size: "\0\0\b\0\0\0\0\0"
+        region-size: 524288
         watchdog-enable: ''
         name: iop-smc-nub
         user-power-managed: 1
         :children:
         - "#interrupt-cells": 1
-          event_name-gpio11: charger
+          event_name-gpio11: 32199642320037987
           interrupt-controller: ''
           compatible:
           - smc-pmu
-          name: smc-pmu
+          name: 33052900840402291
           AAPL,phandle: 85
           event_name-gpio4: wifibt
           device_type: interrupt-controller
           event_name-btn1: hold
           "#address-cells": 0
           event_name-gpio12: codec
-          function-pmu_button: !binary |-
-            4QAAAER0dUI=
+          function-pmu_button: 4788861614184988897
           event_name-gpio5: baseband
         - boot-adapter-id: 0
-          function-dock_parent: !binary |-
-            4gAAAFBjY2E=
+          function-dock_parent: 7017561839621898466
           boot-voltage: 0
           dock-num: 1
           device_type: smc-charger
           name: smc-charger
           AAPL,phandle: 86
-        - function-dock_parent: !binary |-
-            4wAAAFBjY2E=
+        - function-dock_parent: 7017561839621898467
           device_type: smc-ext-charger
           name: smc-ext-charger
           AAPL,phandle: 87
@@ -1357,23 +1343,22 @@ device_tree:
           compatible:
           - portmicro,smc-ccg2
           aagp-name: aod2
-          function-dock_parent: !binary |-
-            4gAAAFBjY2E=
+          function-dock_parent: 7017561839621898466
           function-reset: "U\0\0\04WKp21Pg\0\0\x01\0"
           usbc-fw-personality: HPM,8
           device_type: smc-ccg2
           name: portmicro
           usbc-flash-update: 1
-        - function-link-data_param_set: "8\0\0\0Stad"
-          name: smc-aop
+        - function-link-data_param_set: 7233190376364834872
+          name: 31647660555595123
           AAPL,phandle: 89
-          function-link-data_enable: "8\0\0\0lbne"
-          device_type: smc-aop
-          function-link-data_param_get: "8\0\0\0Gtad"
+          function-link-data_enable: 7308887461264883768
+          device_type: 31647660555595123
+          function-link-data_param_get: 7233190324825227320
           link-tx_config: "\0\0C>\x02\0\0\0 \0\0\0-\0\0\0\0\x10\0\0"
     - compatible:
       - uart-1,samsung
-      clock-ids: "L\x01\0\0\x04\0\0\0"
+      clock-ids: 17179869516
       interrupt-parent: 25
       interrupts: 386
       reg: "\0\0 5\0\0\0\0\0@\0\0\0\0\0\0"
@@ -1390,7 +1375,7 @@ device_tree:
         AAPL,phandle: 91
     - compatible:
       - uart-1,samsung
-      clock-ids: "L\x01\0\0\x04\0\0\0"
+      clock-ids: 17179869516
       interrupt-parent: 25
       interrupts: 387
       dma-channels: "?\0\0\0\0\0\0\0\0\0\0\0$\0\0\0\x12\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0>\0\0\0\0\0\0\0\0\0\0\0$\0\0\0\x12\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
@@ -1400,7 +1385,7 @@ device_tree:
       device_type: uart
       function-rts: "!\0\0\0OIPG \0\0\0\x02\0\0\0"
       function-tx: "!\0\0\0OIPG\x1E\0\0\0\x02\x01\0\0"
-      dma-types: "\x02\0\0\0\x04\0\0\0"
+      dma-types: 17179869186
       dma-parent: 77
       uart-version: 1
       name: uart1
@@ -1411,7 +1396,7 @@ device_tree:
         AAPL,phandle: 93
     - compatible:
       - uart-1,samsung
-      clock-ids: "L\x01\0\0\x04\0\0\0"
+      clock-ids: 17179869516
       interrupt-parent: 25
       interrupts: 389
       dma-channels: "C\0\0\0\0\0\0\0\0\0\0\0\x04\x01\0\0\x12\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0B\0\0\0\0\0\0\0\0\0\0\0$\0\0\0\x12\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
@@ -1422,7 +1407,7 @@ device_tree:
       device_type: uart
       function-rts: "!\0\0\0OIPGt\0\0\0\x02\0\0\0"
       function-tx: "!\0\0\0OIPGr\0\0\0\x02\x01\0\0"
-      dma-types: "\x02\0\0\0\x04\0\0\0"
+      dma-types: 17179869186
       dma-parent: 77
       uart-version: 1
       name: uart3
@@ -1430,7 +1415,7 @@ device_tree:
       - rf-config-tlvs: A00E28F0003E11E4E4E40000000000A78EFFFF2A2A2A2A0A00000001001000040000001740FF0713070507A0AF09119CA02A119C002A00A0980478170C80A00D03610982A06A080000000000008C00A0940A07F40100003100000000
         function-wake_stockholm_soc: "=\0\0\0OIPG \0\0\0\0\0\0\0"
         interrupt-parent: 61
-        interrupts: " \0\0\0\x03\0\0\x04"
+        interrupts: 288230389036613664
         function-enable: !binary |-
           VQAAADRXS3A0MVBnAACAAA==
         calibration: syscfg/NFCl
@@ -1446,7 +1431,7 @@ device_tree:
         name: stockholm
     - compatible:
       - uart-1,samsung
-      clock-ids: "L\x01\0\0\x04\0\0\0"
+      clock-ids: 17179869516
       interrupt-parent: 25
       interrupts: 390
       dma-channels: "E\0\0\0\0\0\0\0\0\0\0\0$\0\0\0\x12\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0D\0\0\0\0\0\0\0\0\0\0\0$\0\0\0\x12\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
@@ -1456,29 +1441,29 @@ device_tree:
       device_type: uart
       function-rts: "!\0\0\0OIPG$\0\0\0\x02\0\0\0"
       function-tx: "!\0\0\0OIPG\"\0\0\0\x02\x01\0\0"
-      dma-types: "\x02\0\0\0\x04\0\0\0"
+      dma-types: 17179869186
       dma-parent: 77
       uart-version: 1
       name: uart4
       :children:
-      - function-gps_reset: "\x01\0\0\0llun"
+      - function-gps_reset: 7959387127559487489
         compatible:
         - gps,bcm4773
-        function-gps_wake: "\x01\0\0\0llun"
-        function-pmu_hostwake: "\x01\0\0\0llun"
+        function-gps_wake: 7959387127559487489
+        function-pmu_hostwake: 7959387127559487489
         interrupt-parent: 33
         function-gps_standby: "U\0\0\04WKp70Pg\x01\x01\0\0"
-        interrupts: ")\0\0\0\x04\0\0\0"
+        interrupts: 17179869225
         function-gps_low-pwr-status: "!\0\0\0OIPG)\0\0\0\0\x01\0\0"
         AAPL,phandle: 97
         device_type: gnss
         function-gps_time-mark: !binary |-
           IQAAAE9JUEeLAAAAAQABAA==
         name: 7565415
-        function-gps_clock: "\x01\0\0\0llun"
+        function-gps_clock: 7959387127559487489
     - compatible:
       - uart-1,samsung
-      clock-ids: "L\x01\0\0\x04\0\0\0"
+      clock-ids: 17179869516
       interrupt-parent: 25
       interrupts: 393
       reg: !binary |-
@@ -1491,8 +1476,7 @@ device_tree:
       uart-version: 1
       name: uart7
       :children:
-      - function-dock_parent: !binary |-
-          4gAAAFBjY2E=
+      - function-dock_parent: 7017561839621898466
         name: 7364969
         AAPL,phandle: 99
     - compatible:
@@ -1517,7 +1501,7 @@ device_tree:
         function-power_ana: "r\0\0\0ELpd\x06\0\0\0"
         poweroff-at-shutdown: ''
         interrupt-parent: 61
-        interrupts: "\x13\0\0\0\x01\0\0\x06"
+        interrupts: 432345568522534931
         luna-pixel-map: syscfg/LPMp
         function-set_int_config: "=\0\0\0cIPG\x13\0\0\0\x01\0\0\x06\x01\0\0\x04"
         hbpp-version: 261
@@ -1565,20 +1549,18 @@ device_tree:
       spi-version: 1
       name: spi3
       :children:
-      - function-external_24mhz_mclk: "2\0\0\0Ekcm"
+      - function-external_24mhz_mclk: 7882261716925415474
         halogen-spadc1-ain: 6
         supports-CLP: ''
-        function-mbus_dock_parent: !binary |-
-          4gAAAFBjY2E=
-        function-haptics_session: !binary |-
-          3wAAAGNzcGg=
+        function-mbus_dock_parent: 7017561839621898466
+        function-haptics_session: 7525641846375055583
         halogen-pdm: 2
         maximum-asp1-drive-strength: ''
         function-msp_master: !binary |-
           pgAAADFEVUF2MnBh
         function-halogen_active: !binary |-
           owAAAEFzMmk1bmlw
-        external-power-provider: "4\0\0\02\0\0\0"
+        external-power-provider: 214748364852
         imic-micbias: 513
         primary-ASP: 2
         reg: "\0\0\0\0S\0\0\0\0\0\x01\b\0\0\0\0\x14\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
@@ -1587,14 +1569,13 @@ device_tree:
         function-dsp-debug1_master: !binary |-
           qAAAADFEVUFlMnBh
         lmic-mic: 4
-        haptics-parking_config: "A\0\0\0\n\0\0\0"
+        haptics-parking_config: 42949673025
         rx-receiver: ''
         lmic-micbias: 516
         receiver-pdm: 1
         function-hawk_active: !binary |-
           owAAAEFzMmk1bmlw
-        function-haptics_reconfigure: !binary |-
-          3wAAAGdkdHc=
+        function-haptics_reconfigure: 8607615181356269791
         function-spkamp_arc_state: !binary |-
           NAAAAFNwbUHIAAAA
         smic-mic: 1794
@@ -1610,7 +1591,7 @@ device_tree:
           owAAAEFzMmkwbmlw
         function-dsp-debug2_master: !binary |-
           uAAAADFEVUFkMnBh
-        function-pdm_rx_control: "p\0\0\0iMDP"
+        function-pdm_rx_control: 5783832934817464432
         function-msp_active: !binary |-
           owAAAEFzMmkwbmlw
         routing-source_clp_asp_tx: "YX\x1E\x1F\0\x14\x1A\e\x1C\x1D\0\0"
@@ -1618,12 +1599,11 @@ device_tree:
         clp-ASP: 1
         function-haptic_master: !binary |-
           vQAAADFEVUFhMnBh
-        interrupts: "\\\0\0\0\x01\0\0\0"
+        interrupts: 4294967388
         firmware-type: 3
         function-halogen_master: !binary |-
           tQAAADFEVUFvbGFo
-        function-thermal_budget: !binary |-
-          3wAAAHJlaHQ=
+        function-thermal_budget: 8388065846278226143
         hawking-adc2: 6
         interrupt-parent: 33
         halogen-spadc2-ain: 8
@@ -1656,15 +1636,13 @@ device_tree:
       "#address-cels": 1
       interrupts: 408
       reg: "\0\0\x015\0\0\0\0\0\x10\0\0\0\0\0\0"
-      filter-tunable: !binary |-
-        //P//wlCM0M=
+      filter-tunable: 4842286635070518271
       "#size-cells": 3
       device_type: 6500969
       AAPL,phandle: 104
       function-device_reset: "\e\0\0\0TSRAA\0\0\0"
       name: i2c0
-      tbuf-tunable: !binary |-
-        AAD//wAANEY=
+      tbuf-tunable: 5058668285738811392
       :children:
       - AAPL,phandle: 105
         device_type: boost
@@ -1676,7 +1654,7 @@ device_tree:
         compatible:
         - halle-sensor,ad5860
         override-config: 1
-        serial-config: "\0\x01\0\0\0\x05@\0"
+        serial-config: 18019896067621120
         halle-calibration: syscfg/PSCl
         slot-config: "\x14\x01\x01\x16\x01\x01\x18\x01\x01\x1A\x01\x01\x1C\x01\x01"
         AAPL,phandle: 106
@@ -1698,7 +1676,7 @@ device_tree:
         - accbuck,fan53740
         reg: !binary |-
           UgAAAMQJAAAAAAAAAAAAAA==
-        name: accbuck
+        name: 30227178321044321
         AAPL,phandle: 108
     - gpio-iic_scl: "\t\0\0\0\x02\x01\x01\0AP\0\0"
       compatible:
@@ -1712,20 +1690,18 @@ device_tree:
       "#address-cels": 1
       interrupts: 409
       reg: "\0@\x015\0\0\0\0\0\x10\0\0\0\0\0\0"
-      filter-tunable: !binary |-
-        //P//wlyZkc=
+      filter-tunable: 5144925011592606719
       "#size-cells": 3
       device_type: 6500969
       AAPL,phandle: 109
       function-device_reset: "\e\0\0\0TSRAB\0\0\0"
       name: i2c1
-      tbuf-tunable: !binary |-
-        AAD//wAANEY=
+      tbuf-tunable: 5058668285738811392
       :children:
       - mic-bias-index: 1
         compatible:
         - mic-temp-sens,ica60
-        function-micbias-enable: "g\0\0\0BciM"
+        function-micbias-enable: 5578098748594061415
         AAPL,phandle: 110
         location-name: mic-temp-sens2
         location-id: 1835623218
@@ -1746,35 +1722,31 @@ device_tree:
       interrupts: 410
       reg: !binary |-
         AIABNQAAAAAAEAAAAAAAAA==
-      filter-tunable: !binary |-
-        //P//wkiMzM=
+      filter-tunable: 3689329946091582463
       "#size-cells": 3
       device_type: 6500969
       AAPL,phandle: 111
       function-device_reset: "\e\0\0\0TSRAC\0\0\0"
       name: i2c2
-      tbuf-tunable: !binary |-
-        AAD//wAABFE=
+      tbuf-tunable: 5837791021273907200
       :children:
-      - output-datasource-selectors: StoBSpoT
+      - output-datasource-selectors: 6084205124500026451
         compatible:
         - audio-control,cs35l27
         interrupt-parent: 33
-        interrupts: !binary |-
-          gwAAAAEAAAA=
+        interrupts: 4294967427
         reg: !binary |-
           QAAAAMQJAAAAAAAAAAAAAA==
         AAPL,phandle: 112
         function-secSpeaker_control: !binary |-
           NAAAAFNwbUHJAAAA
-        function-tdm_enable: "g\0\0\0Cmdt"
+        function-tdm_enable: 8386948540600942695
         device_type: audio-control
         function-reset: !binary |-
           IQAAAE9JUEeIAAAAAQABAA==
-        slot-config: !binary |-
-          EABwgP////8=
+        slot-config: 18446744071569408016
         name: audio-speaker-top
-        function-aopmca-underflow: "3\0\0\0Uacm"
+        function-aopmca-underflow: 7882250790528614451
     - gpio-iic_scl: "\v\0\0\0\x02\x01\x01\0AP\0\0"
       compatible:
       - i2c,t8020
@@ -1788,15 +1760,13 @@ device_tree:
       interrupts: 411
       reg: !binary |-
         AMABNQAAAAAAEAAAAAAAAA==
-      filter-tunable: !binary |-
-        //P//wkyM0M=
+      filter-tunable: 4842269042884473855
       "#size-cells": 3
       device_type: 6500969
       AAPL,phandle: 113
       function-device_reset: "\e\0\0\0TSRAD\0\0\0"
       name: i2c3
-      tbuf-tunable: !binary |-
-        AAD//wAANEY=
+      tbuf-tunable: 5058668285738811392
       :children:
       - enable: 9
         compatible:
@@ -1826,7 +1796,7 @@ device_tree:
           - display-generic-data,rw
           size: !binary |-
             IAAAACAAAAACAAAAwAAAAA==
-          reg: "`%\0\0\x02\x01\0\0"
+          reg: 1108101571936
           name: display-eeprom-generic-data
           AAPL,phandle: 117
     - gpio-iic_scl: "\x05\0\0\0\x02\x01\x01\0SMC\0"
@@ -1853,14 +1823,14 @@ device_tree:
         - tristar,cbtl1612
         forbids-always-usb1: ''
         function-brick_id_voltage: "U\0\0\0RykmDIBa\x04\0\0\0\0\0\0\0\0\0\0\0"
-        interrupts: "\x04\0\0\0\x03\0\0\x02"
+        interrupts: 144115200960757764
         reg: !binary |-
           GgAAAMQJAAAAAAAAAAAAAA==
         requires-eis_afe_arbiter: ''
         AAPL,phandle: 119
         dock: 226
         function-eis_afe_en: "=\0\0\0OIPG(\0\0\0\x01\x01\0\0"
-        name: tristar
+        name: 32195300125405812
     - "#interrupt-cells": 1
       interrupt-controller: ''
       compatible:
@@ -1873,16 +1843,16 @@ device_tree:
       AAPL,phandle: 120
       reg-vers: 1
       device_type: interrupt-controller
-      queue-depth: "\0\x01\0\0\0\x01\0\0"
+      queue-depth: 1099511628032
       "#address-cells": 0
       name: spmi
       :children:
       - info-rtc_alarm_ctrl: 4352
-        info-fault_log: "\0\x18\0\0\x02\0\0\0"
+        info-fault_log: 8589940736
         info-fault_name-12: ldo5_uvlo
         info-fault_name-4: vddov_hi
         function-get_pdod: "U\0\0\0Ryek1DDB"
-        info-fault_name-5: btn_rst
+        info-fault_name-5: 32778032362976354
         info-rtc_alarm_event: 4364
         upo-shutdown-delay: 0
         interrupt-parent: 120
@@ -1898,10 +1868,9 @@ device_tree:
         info-fault_name-14: ntc_shdn
         info-rtc_irq_mask_offset: 4365
         info-scrpad_lpm_ctrl: 45020
-        info-fault_name-9: dbg_rst
+        info-fault_name-9: 32778032362512996
         AAPL,phandle: 121
-        info-scrpad: !binary |-
-          KKAAANgPAAA=
+        info-scrpad: 17420387393576
         name: spmi-pmu
         info-rtc_alarm_monitor_mask: 1
         info-fault_name-0: 7499632
@@ -1917,9 +1886,9 @@ device_tree:
         info-leg_scrpad: 40960
         info-fault_name-11: btn_shdn
         reg: "\x0F\0\0\0\x03\0\0\0\0\0\0\0\x04\0\0\0\0\0\0\0\0\0\0\0"
-        function-suspend_helper: "\e\0\0\0TR2S"
+        function-suspend_helper: 5994944574714282011
         info-fault_name-3: vdd_under
-        info-id: "\0\0\0\0\n\0\0\0"
+        info-id: 42949672960
         function-external_standby: "U\0\0\0WyekESBM"
     - errata: 1
       compatible:
@@ -1952,8 +1921,7 @@ device_tree:
       - publish-criteria: 3
         AAPL,phandle: 124
         configuration-string: stdMuxPTPEthValIDA
-        function-dock_parent: !binary |-
-          4gAAAFBjY2E=
+        function-dock_parent: 7017561839621898466
         product-string: iPhone
         iommu-parent: 130
         host-mac-address: macaddr/wifiaddr,syscfg/WMac/6,zeroes/6
@@ -2039,8 +2007,7 @@ device_tree:
       reg: !binary |-
         AACQOQAAAAAAQAAAAAAAAA==
       errata-30817686: ''
-      error-reflector: !binary |-
-        AMD/PAIAAAA=
+      error-reflector: 9613328384
       device_type: dart
       AAPL,phandle: 129
       dart-options: 5
@@ -2127,25 +2094,21 @@ device_tree:
       display-default-color: 0
       function-bw_req_interrupt0: "\e\0\0\0QRIBn\0\0\0\"\0\0\0\x01\0\0\0"
       subframe-duration-nclks: 400044
-      function-lcd_enable: !binary |-
-        hgAAAEVkY2w=
+      function-lcd_enable: 7810196426306093190
       display-lead-time-nclks: 27333
       max-scaling-ratio: 131072
-      iommu-parent: !binary |-
-        iQAAAIoAAAA=
+      iommu-parent: 592705486985
       first-frame-response-threshold: !binary |-
         KVwPANejEACF6xEAMzMTAD0KFwA=
       name: disp0
-      function-temperature_update: !binary |-
-        hgAAAER1bXQ=
-      function-pcc_update: !binary |-
-        5AAAAFVDQ1A=
+      function-temperature_update: 8389490615779328134
+      function-pcc_update: 5783540378825130212
       interrupt-parent: 25
-      function-brightness_update: "+\0\0\0BLPA"
+      function-brightness_update: 4706345456953720875
       compatible:
       - disp0,t8020
-      clock-ids: "[\x01\0\0Y\x01\0\0"
-      function-gp-fast-gating: "\e\0\0\0GP01"
+      clock-ids: 1481763717467
+      function-gp-fast-gating: 3544421172613480475
       interrupts: "\"\x01\0\0(\x01\0\0\x1F\x01\0\0 \x01\0\0!\x01\0\0#\x01\0\0\x1E\x01\0\0)\x01\0\0*\x01\0\0"
       function-bw_req_interrupt1: "\e\0\0\0QRIB\0\0\0\0#\0\0\0\x01\0\0\0"
       device_type: display-subsystem
@@ -2171,8 +2134,7 @@ device_tree:
       bypass-address: "\0\b\0\0\0\0\0\0\0\0\0\0\0\0\0\x02"
       smmu-clock-gating: ''
       vm-alignment: 8
-      error-reflector: !binary |-
-        AMD/PAIAAAA=
+      error-reflector: 9613328384
       device_type: dart
       power-gates: 179
       reg: "\0@p0\0\0\0\0\0@\0\0\0\0\0\0\0\0p0\0\0\0\0\0@\0\0\0\0\0\0"
@@ -2202,7 +2164,7 @@ device_tree:
       - scaler,s5l8960x
       iommu-parent: 141
       interrupt-parent: 25
-      interrupts: "|\x01\0\0~\x01\0\0"
+      interrupts: 1640677507452
       clock-gates: !binary |-
         8AAAAHoAAADTAAAA
       clock-ids: 350
@@ -2213,7 +2175,7 @@ device_tree:
       coprovider-group: scaler
       power-gates: !binary |-
         8AAAAHoAAADTAAAA
-      name: scaler0
+      name: 13636578817696627
     - vm-size: 4294901760
       compatible:
       - dart,t8020
@@ -2223,8 +2185,7 @@ device_tree:
       clock-gates: 182
       reg: "\0\0 c\0\0\0\0\0@\0\0\0\0\0\0"
       errata-30817686: ''
-      error-reflector: !binary |-
-        AMD/PAIAAAA=
+      error-reflector: 9613328384
       device_type: dart
       AAPL,phandle: 140
       tlimit: 1056980799
@@ -2254,7 +2215,7 @@ device_tree:
       hw-type: a0103
       clock-gates: !binary |-
         4AAAAMMAAADOAAAA
-      clock-ids: "\\\x01\0\0]\x01\0\0"
+      clock-ids: 1498943586652
       reg: "\0\0\0e\0\0\0\0\0@\0\0\0\0\0\0"
       device_type: jpeg
       AAPL,phandle: 142
@@ -2270,8 +2231,7 @@ device_tree:
       clock-gates: 180
       reg: "\0@\0e\0\0\0\0\0@\0\0\0\0\0\0"
       errata-30817686: ''
-      error-reflector: !binary |-
-        AMD/PAIAAAA=
+      error-reflector: 9613328384
       device_type: dart
       AAPL,phandle: 143
       dart-options: 5
@@ -2300,7 +2260,7 @@ device_tree:
       hw-type: a0103
       clock-gates: !binary |-
         4QAAAMMAAADOAAAA
-      clock-ids: "\\\x01\0\0]\x01\0\0"
+      clock-ids: 1498943586652
       reg: !binary |-
         AIAAZQAAAAAAQAAAAAAAAA==
       device_type: jpeg
@@ -2318,8 +2278,7 @@ device_tree:
       reg: !binary |-
         AMAAZQAAAAAAQAAAAAAAAA==
       errata-30817686: ''
-      error-reflector: !binary |-
-        AMD/PAIAAAA=
+      error-reflector: 9613328384
       device_type: dart
       AAPL,phandle: 146
       dart-options: 5
@@ -2345,17 +2304,16 @@ device_tree:
       back-camera-autofocus-recal: syscfg/BCAR
       pearl-calibration-data: syscfg/PrCL
       has-sphere: 1
-      clock-ids: "O\x01\0\0Q\x01\0\0"
-      function-motion_data_param_set: "-\0\0\0Stad"
-      function-ane_data_param_set: !binary |-
-        nQAAAHRlU2Q=
+      clock-ids: 1447403979087
+      function-motion_data_param_set: 7233190376364834861
+      function-ane_data_param_set: 7229233375750389917
       camera-front: 1
       power-gates: !binary |-
         5QAAADgAAAA5AAAAOgAAAMAAAAA=
       camera-rear: 1
       reg: !binary |-
         AAAAKgAAAAAA0OgBAAAAAAAACDsAAAAAANAAAAAAAAA=
-      function-motion_state_set: "-\0\0\0Stsm"
+      function-motion_state_set: 7886775272286978093
       function-saca0: !binary |-
         5gAAAEFDQVMwbWFj
       function-saca1: !binary |-
@@ -2405,7 +2363,7 @@ device_tree:
       rosaline-calibration-current: syscfg/RxCL
       function-saca2c: !binary |-
         5gAAAEFDQVM4bWFj
-      function-motion_data_enable: "-\0\0\0lbne"
+      function-motion_data_enable: 7308887461264883757
       function-saca2d: !binary |-
         5gAAAEFDQVM5bWFj
       function-saca3b: !binary |-
@@ -2417,14 +2375,12 @@ device_tree:
       function-conf_isp_ref2_clk_freq: !binary |-
         GwAAAENQU0kCAAAAnhrBVRaYG1U=
       interrupt-parent: 25
-      function-ane_data_param_get: !binary |-
-        nQAAAHRlR2Q=
-      function-motion_data_param_get: "-\0\0\0Gtad"
+      function-ane_data_param_get: 7225855676029862045
+      function-motion_data_param_get: 7233190324825227309
       device_type: 7369577
       function-conf_isp_ref1_clk_freq: !binary |-
         GwAAAENQU0kBAAAAnhrBVRaYG1U=
-      function-ane_ep_control: !binary |-
-        nQAAAGx0Q2U=
+      function-ane_ep_control: 7296803828475625629
     - sids: 32769
       vm-size: 2684354560
       clock-gates: 183
@@ -2447,8 +2403,7 @@ device_tree:
       smmu-clock-gating: ''
       pio-granularity: 16777216
       vm-alignment: 8
-      error-reflector: !binary |-
-        AMD/PAIAAAA=
+      error-reflector: 9613328384
       device_type: dart
       power-gates: 183
       reg: !binary |-
@@ -2498,8 +2453,7 @@ device_tree:
       vm-base: 0
       smmu-clock-gating: ''
       vm-alignment: 8
-      error-reflector: !binary |-
-        AMD/PAIAAAA=
+      error-reflector: 9613328384
       device_type: dart
       power-gates: 184
       reg: "\0\0\x03g\0\0\0\0\0@\0\0\0\0\0\0\0\0\x04g\0\0\0\0\0@\0\0\0\0\0\0\0\0\x02g\0\0\0\0\0@\0\0\0\0\0\0"
@@ -2518,7 +2472,7 @@ device_tree:
       - avd,t8020
       iommu-parent: 156
       interrupt-parent: 25
-      interrupts: "=\x01\0\0>\x01\0\0"
+      interrupts: 1365799600445
       clock-gates: !binary |-
         5wAAAMQAAADPAAAA
       clock-ids: 342
@@ -2542,8 +2496,7 @@ device_tree:
       clock-gates: 185
       reg: "\0\0\x01i\0\0\0\0\0@\0\0\0\0\0\0"
       errata-30817686: ''
-      error-reflector: !binary |-
-        AMD/PAIAAAA=
+      error-reflector: 9613328384
       device_type: dart
       AAPL,phandle: 155
       dart-options: 5
@@ -2598,8 +2551,7 @@ device_tree:
       vm-base: 0
       vm-alignment: 8
       pio-granularity: 16777216
-      error-reflector: !binary |-
-        AMD/PAIAAAA=
+      error-reflector: 9613328384
       device_type: dart
       power-gates: 178
       reg: !binary |-
@@ -2632,8 +2584,7 @@ device_tree:
       opengl-standard: 768
       gpu-fast-die0-proportional-gain: 1084227584
       has-kf: 1
-      power-gates: !binary |-
-        0AAAANIAAAA=
+      power-gates: 901943132368
       reg: !binary |-
         AAAABAAAAAAAABAAAAAAAAAA0AQAAAAAAAACAAAAAAA=
       gpu-perf-filter-time-constant: 5
@@ -2649,11 +2600,10 @@ device_tree:
         KEAQOwIAAACoQBA7AgAAAAAAAIA=
       name: 7890803
       perf-states: "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
-      gfx-qos: "\x01\0\0\0\x01\0\0\0"
+      gfx-qos: 4294967297
       AAPL,phandle: 160
       gpu-pwr-calc-static: 1125059734
-      clock-gates: !binary |-
-        0AAAANIAAAA=
+      clock-gates: 901943132368
       compatible:
       - gpu,t8020
       gpu-pwr-perf-scale0: 0
@@ -2694,10 +2644,10 @@ device_tree:
       reg: "\0\0@\x06\0\0\0\0\0\0\x02\0\0\0\0\0\0\0\x05\x06\0\0\0\0\b\0\0\0\0\0\0\0"
       AAPL,phandle: 161
       iop-version: 1
-      device_type: gfx-asc
+      device_type: 27992883906242151
       role: 5785159
       power-gates: 209
-      name: gfx-asc
+      name: 27992883906242151
       :children:
       - AAPL,phandle: 162
         compatible:
@@ -2808,7 +2758,7 @@ device_tree:
         external-power-provider: 77
         function-i2s_route: !binary |-
           owAAAFJzMmkyZHVhNG5pcDMDMwA=
-        mclk-config: "\x01\0\0\0\0\0\0\0"
+        mclk-config: 1
         dma-parent: 77
         mca-dusty: 'true'
         device_type: 7549545
@@ -2838,7 +2788,7 @@ device_tree:
       "#address-cells": 0
       name: mca2
       :children:
-      - mclk-config: "\x02\0\0\0\x02\0\0\0"
+      - mclk-config: 8589934594
         mca-identity: 1835217505
         compatible:
         - mca,t8020
@@ -2863,8 +2813,7 @@ device_tree:
           name: audio-speaker-top
           reg: !binary |-
             EBIAAA8QAQAAG7cA+gABADAAAQAAMAAA4AEAAAIEEBAAAAAA
-      - mclk-config: !binary |-
-          AgAAAP////8=
+      - mclk-config: 18446744069414584322
         mca-identity: 1835217506
         compatible:
         - mca,t8020
@@ -3073,20 +3022,18 @@ device_tree:
       AAPL,phandle: 190
       msi-vector-offset: 480
       pci-aer-correctable: 0
-      bus-range: "\0\0\0\0\b\0\0\0"
+      bus-range: 34359738368
       lane-cfg: 0
       function-debug_gpio: !binary |-
         IQAAAE9JUEfLAAAAAQEAAA==
       name: apcie
       interrupt-parent: 25
-      dev-range: !binary |-
-        AAAAAP8AAAA=
+      dev-range: 1095216660480
       compatible:
       - apcie,t8020
       interrupts: !binary |-
         1AEAANcBAADaAQAA3QEAAA==
-      msi-address: !binary |-
-        APD//wAAAAA=
+      msi-address: 4294963200
       pci-aer-uncorrectable: 1
       ranges: !binary |-
         AAAAQwAAACAGAAAAAAAAIAYAAAAAAACgAQAAAAAAAAIAAABAAAAAAAAAAEAGAAAAAAAAQAAAAAA=
@@ -3098,14 +3045,13 @@ device_tree:
       "#msi-vectors": 32
       :children:
       - apcie-port: 2
-        function-dart_force_active: !binary |-
-          xAAAAHRjYUY=
+        function-dart_force_active: 5071444005263245508
         default-apcie-options: 2147483648
         manual-enable-s2r: ''
         msi-vector-base: 16
         name: pci-bridge2
         AAPL,unit-string: '00020000'
-        pci-l1pm-control-a0: "\x0F\x19U@0\0\0\0"
+        pci-l1pm-control-a0: 207237749007
         t-refclk-to-perst: 100
         AAPL,phandle: 191
         function-device_wake: "!\0\0\0OIPG\x06\0\0\0\x01\x01\0\0"
@@ -3114,11 +3060,11 @@ device_tree:
         maximum-link-speed: 2
         "#address-cells": 1
         function-perst: "!\0\0\0OIPGj\0\0\0\0\0\0\0"
-        pci-l1pm-control: "\x0F\x19U@\0\0\0\0"
+        pci-l1pm-control: 1079318799
         manual-enable: ''
         "#msi-vectors": 8
         :children:
-        - pci-l1pm-control: "\x0F\0U@\0\0\0\0"
+        - pci-l1pm-control: 1079312399
           compatible:
           - wlan-pcie,bcm4377
           - wlan-pcie,bcm
@@ -3144,14 +3090,13 @@ device_tree:
           device_type: pcie-device
           name: bluetooth-pcie
       - apcie-port: 3
-        function-dart_force_active: !binary |-
-          xgAAAHRjYUY=
+        function-dart_force_active: 5071444005263245510
         default-apcie-options: 2147483648
         manual-enable-s2r: ''
         msi-vector-base: 24
         name: pci-bridge3
         AAPL,unit-string: '00030000'
-        pci-l1pm-control-a0: "\x0F\x19U@0\0\0\0"
+        pci-l1pm-control-a0: 207237749007
         t-refclk-to-perst: 100
         AAPL,phandle: 194
         "#size-cells": 0
@@ -3159,11 +3104,11 @@ device_tree:
         maximum-link-speed: 2
         "#address-cells": 1
         function-perst: "!\0\0\0OIPGk\0\0\0\0\0\0\0"
-        pci-l1pm-control: "\x0F\bU@0\0\0\0"
+        pci-l1pm-control: 207237744655
         manual-enable: ''
         "#msi-vectors": 8
         :children:
-        - pci-l1pm-control: "\x0F\0U@0\0\0\0"
+        - pci-l1pm-control: 207237742607
           pci-aspm-default: 2
           AAPL,unit-string: '00000000'
           pci-max-latency: 268963848
@@ -3181,10 +3126,9 @@ device_tree:
       interrupts: 475
       reg: !binary |-
         AIAAAwYAAAAAQAAAAAAAAA==
-      vm-offset: "\0\0\0\0\0\0\0\b"
+      vm-offset: 576460752303423488
       errata-30817686: ''
-      error-reflector: !binary |-
-        AMD/PAIAAAA=
+      error-reflector: 9613328384
       device_type: dart
       AAPL,phandle: 196
       dart-options: 7
@@ -3210,10 +3154,9 @@ device_tree:
       interrupts: 478
       reg: !binary |-
         AIAABAYAAAAAQAAAAAAAAA==
-      vm-offset: "\0\0\0\0\0\0\0\b"
+      vm-offset: 576460752303423488
       errata-30817686: ''
-      error-reflector: !binary |-
-        AMD/PAIAAAA=
+      error-reflector: 9613328384
       device_type: dart
       AAPL,phandle: 198
       dart-options: 7
@@ -3240,10 +3183,9 @@ device_tree:
         AQBaAB4ABwACAAAAuv8MALr/DAA=
       wlan.background-scan-cache: 1
       wifi-antenna-sku-info: syscfg/WSKU
-      interrupts: "\x16\0\0\0\x02\0\0\x03"
+      interrupts: 216172790703718422
       amfm-managed-port-control: ''
-      wlan.ccpipe.size: !binary |-
-        gAAAAEAAAAA=
+      wlan.ccpipe.size: 274877907072
       wlan.enhancedlocale.enabled: 0
       bcom.ps.default: !binary |-
         AwA8AAAAAQCgDwAA
@@ -3263,11 +3205,10 @@ device_tree:
       wlan.ops.enabled: 1
       wlan.mimo_ps.enabled: 1
       device_type: wlan
-      wlan.dfrts: !binary |-
-        PADIAAIABQA=
+      wlan.dfrts: 1407383486595132
       local-mac-address: macaddr/wifiaddr,syscfg/WMac/6,zeroes/6
       wlan.tethering.enabled: 1
-      wlan.awdl.params: "\0\0\0\0\0\0\0\0"
+      wlan.awdl.params: 0
       bcom.btc.params: !binary |-
         BgAAAA8AAAAIAAAAyK8AAAkAAACYOgAACgAAACBOAAA=
       bcom.ps.realtime: !binary |-
@@ -3281,7 +3222,7 @@ device_tree:
       compatible:
       - bluetooth,n88
       interrupt-parent: 33
-      interrupts: "+\0\0\0\x02\0\0\x02"
+      interrupts: 144115196665790507
       bluetooth-tx-calibration: syscfg/BTTx/320
       AAPL,phandle: 201
       product-id: 4768
@@ -3330,7 +3271,7 @@ device_tree:
       use_int: 0
       location-name: PMGR sochot
       failsafe_en_ctrl_offset: 4
-      name: sochot0
+      name: 13638820723650419
     - deassert_count_0: 176
       failsafe_ctrl: 63
       trip_temp_0: 144
@@ -3339,7 +3280,7 @@ device_tree:
       location-name: ACCp sochot
       assert_count_0: 160
       reg-64-bit: 1
-      name: sochot1
+      name: 13920295700361075
       deassert_count_1: 184
       compatible:
       - sochot,s5l8955x
@@ -3361,7 +3302,7 @@ device_tree:
       location-name: ACCe sochot
       assert_count_0: 160
       reg-64-bit: 1
-      name: sochot2
+      name: 14201770677071731
       deassert_count_1: 184
       compatible:
       - sochot,s5l8955x
@@ -3764,14 +3705,14 @@ device_tree:
     function-button_voldown: "U\0\0\0RntbNDVb"
     home-button-type: 2
     function-button_ringerab: "U\0\0\0RntbNIRb"
-    device_type: buttons
+    device_type: 32491047295939938
     button-priority_volup: 2
     button-names: "volup\0voldown\0hold\0ringerab\0"
     opposed-power-vol-buttons: 1
     button-priority_voldown: 2
     AAPL,phandle: 225
     function-button_hold: "U\0\0\0RntbDLHb"
-    name: buttons
+    name: 32491047295939938
   - function-accbuck_pwr: "l\0\0\0Oles0kcb"
     needs-brick-war: ''
     compatible:
@@ -3792,11 +3733,9 @@ device_tree:
     device_type: dock-0pin
     name: dock-0pin
     AAPL,phandle: 227
-  - function-backlight_update: !binary |-
-      hgAAAFVrbGI=
+  - function-backlight_update: 7092161526018080902
     display-backlight-calibration: 0
-    function-backlight_enable: !binary |-
-      hgAAAEVsa2I=
+    function-backlight_enable: 7091881081833521286
     max-restriction-thresholds: !binary |-
       AQAeAGQA9AHoA4gT
     restriction-pivoting-l-2: 30
@@ -3808,8 +3747,7 @@ device_tree:
       hAMAAIQDAACEAwAAhAMAAIQDAAA=
     LmaxProduct: 44173121
     LmidProduct: 10158080
-    aab-cap-l: !binary |-
-      MgAsASYC//8=
+    aab-cap-l: 18446464960984514610
     blr-cct-warning: 2700
     DBVMax: 2047
     min-restriction-rise-time: 5000
@@ -3829,8 +3767,7 @@ device_tree:
       AAACAKy8AgACiwMAxmsEAINgBQA9agYAPYoHAMrBCADrEQoA53sLAMQADQAMog4AxGAQADU+EgAiOxQAUVgWAIeWGABF9hoAk3gdALIdIABm5iIAsNIlAAziKAB6FCwAumkvAMrhMgAofDYACjc6ACAQPgAeBUIA9xNGAF46SgBFdk4AocVSAGwnVwDbmVsAIhtgAD2qZABgRWkA4+VtAImBcgAODXcAcH17AO/HfwCJ4YMAN8mHAKOQiwBJTI8A3w+TAN/vlgAAAJsAIFCfALLdowCPoqgAzpetAMi2sgDU+LcAEFi9ALzUwgDrccgA8TLOAGQb1ABWLtoAGm/gAADg5gAMgu0ABFb0AHBd+wCTmAIBNwkKAWKwEQEgkBkBPaohAYkBKgGNlzIBVm47AXKIRAHv500BXI9XAQaBYQF8v2sBT012AYssgQEAYIwBQ+uXAaPQowG2E7ABS7e8ATW+yQFJLNcBoQXlAd139QHBbgYCUe8XAqz9KQKKnjwCOddPAo+rYwLaIHgCOzuNAkEHogI=
     backlight-id: 4294967295
     name: backlight
-    aab-cap-e: !binary |-
-      AAAeAOgDiBM=
+    aab-cap-e: 1407379178522542080
     backlight-update-policy: 4
     gs-i-nominal: !binary |-
       4AEAALoBAABrAgAAOgIAAL0BAAA=
@@ -3849,8 +3786,7 @@ device_tree:
     max-restriction-rise-time: 5000
     aab-constraint-lmax: 675
     pre-strobe-nit: 674
-    function-disp_aap_ctrl: !binary |-
-      hwAAAGFQREE=
+    function-disp_aap_ctrl: 4702972288423690375
     max-restriction-factors: !binary |-
       cgEvAy8DLwMvA+gD
   - class: 3
@@ -3868,14 +3804,13 @@ device_tree:
     function-pmu_exton: "U\0\0\04RKp50Pg\0\0\0\x02"
     function-bb_rst: !binary |-
       IQAAAE9JUEfPAAAAAAAAAA==
-    dart_range_end: !binary |-
-      /z8AAgAAAAA=
+    dart_range_end: 33570815
     backpowering-alias1: function-ppm_bb_ebrake
     function-pcie_port_control: !binary |-
       vgAAAEN0clDCAAAA
     imeisv: 18
     name: baseband
-    interrupt-parent: "!\0\0\0U\0\0\0"
+    interrupt-parent: 365072220193
     AAPL,phandle: 229
     function-bb_ap_time_sync: !binary |-
       IQAAAE9JUEeLAAAAAAEAAA==
@@ -3886,7 +3821,7 @@ device_tree:
     interrupts: !binary |-
       0QAAAAQAAAAMAAAA
     backpowering-alias0: function-coredump
-    dart_range_start: "\0@\0\0\0\0\0\0"
+    dart_range_start: 16384
     device_type: baseband
     function-reset_det: !binary |-
       IQAAAE9JUEfRAAAAAAAAAA==
@@ -3942,14 +3877,14 @@ device_tree:
     supports-burnin-mitigation: 1
     compatible-device-fallback: iPhone10,2
     device-perf-memory-class: 3
-    display-corner-radius: "'\0\0\0\x01\0\0\0"
+    display-corner-radius: 4294967335
     artwork-scale-factor: 3
     baseband-chipset: ice18
     hearingaid-low-energy-audio: 1
     ui-background-quality: 100
     supports-avatars: ''
     public-key-accelerator: 1
-    name: product
+    name: 32760453145784944
     siri-gesture: 1
     artwork-device-idiom: phone
     hme-refresh-rate: 60
@@ -4048,7 +3983,7 @@ device_tree:
       bitrate-lte: 228
       tnr-mode-front: 10
       bitrate-2g: 100
-      pref-decoding: "\0\x04\0\0\x1E\0\0\x03"
+      pref-decoding: 216172910962803712
       bitrate-wifi: 2000
       encoding: !binary |-
         QAEAAA8A8ABAAQAAHgDwAOABAAAPAHAB4AEAAB4AcAGAAgAAHgDgAQAEAAAeAAADAAUAAB4A0AI=
@@ -4062,7 +3997,7 @@ device_tree:
     - closed-loop: 1
       AAPL,phandle: 236
       controller-coeff-cal: syscfg/CLCL
-      name: haptics
+      name: 32478926897963368
       supports-3rd-party-haptics: 1
     - speaker-trim-gains: syscfg/SpGa
       name: audio
@@ -4107,7 +4042,7 @@ device_tree:
       - vol.fs_mntopts: nosuid,nodev,nobrowse
         vol.fs_type: ro
         vol.fs_role: 16
-        vol.fs_name: Preboot
+        vol.fs_name: 32773621481304656
         vol.fs_file: "/private/preboot"
         vol.fs_passno: 1
         vol.fs_mntorder: 1
@@ -4198,7 +4133,7 @@ device_tree:
       - vol.fs_mntopts: nosuid,nodev,nobrowse
         vol.fs_type: ro
         vol.fs_role: 16
-        vol.fs_name: Preboot
+        vol.fs_name: 32773621481304656
         vol.fs_file: "/private/preboot"
         vol.fs_passno: 1
         vol.fs_mntorder: 1

@@ -12,9 +12,7 @@ module AppleData
       end
 
       def save_all
-        @keybags.each do |_key, keybag|
-          keybag.save
-        end
+        @keybags.each_value(&:save)
       end
 
       def [](chip_id)
