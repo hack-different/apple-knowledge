@@ -20,30 +20,34 @@ jobs:
     name: Publish to PyPI
     runs-on: ubuntu-latest
     environment: pypi-push
-    defaults:
-      run:
-        working-directory: ./_packages/python
 
     steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
       - name: Set up Python with Poetry Caching
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.12'
           cache: 'poetry'
+          working-directory: ./_packages/python
 
       - name: Install Poetry
         run: pip install poetry
+        working-directory: ./_packages/python
 
       - name: Download Python Package Artifacts
         uses: actions/download-artifact@v3
         with:
           name: package-python
-          path: dist/
+          path: ./_packages/python/dist/
 
       - name: Publish package
         uses: pypa/gh-action-pypi-publish@v1.5.0
         with:
           packages_dir: dist/
+          working-directory: ./_packages/python
           print_hash: true
           user: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}
