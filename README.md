@@ -105,6 +105,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 
 ## Devices
 
+* [Factory](docs/factory)
 * [Device List](docs/Devices)
 * T2
   * [T2 Dev Team: `t8012` / Apple T2 / bridgeOS](https://t8012.dev)
