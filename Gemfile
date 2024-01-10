@@ -69,4 +69,5 @@ group :development, :test do
   gem 'sqlite3'
   gem 'tapioca', require: false
   gem 'typhoeus'
+  gem 'wikicloth'
 end

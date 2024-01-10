@@ -51,6 +51,10 @@ class DataFileCollection
     @collection_data.each(&)
   end
 
+  def each_key(&)
+    @collection_data.each_key(&)
+  end
+
   def map
     @collection_data.keys.map do |key|
       yield key, @collection_data[key]

@@ -132,7 +132,7 @@ namespace :tipw do
     end
 
     uri_map.each do |file, file_urls|
-      single_file = files_collection.ensure_key file
+      single_file = files_collection.ensure_key file, description: false
       single_file['urls'] ||= []
       single_file['urls'] << { url: single_file.delete('url') } if single_file.key? 'url'
 
