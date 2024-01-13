@@ -409,6 +409,7 @@
               <RakeTaskImpl description="update keybags from TIPW pages in tmp/tipw/firmware_keys" fullCommand="tipw:keydb" id="keydb" />
               <RakeTaskImpl description="update keybags from keydb" fullCommand="tipw:keys" id="keys" />
               <RakeTaskImpl description="update raw data pages in tmp" fullCommand="tipw:pages[force]" id="pages[force]" />
+              <RakeTaskImpl description="reset sync state of pages" fullCommand="tipw:reset" id="reset" />
               <RakeTaskImpl description="" fullCommand="tipw:pages" id="pages" />
             </subtasks>
           </RakeTaskImpl>
