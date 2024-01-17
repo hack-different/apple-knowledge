@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>accessory_id</key>
+	<dict>
+		<key>dcsd</key>
+		<dict>
+			<key>description</key>
+			<string>Apple diagnostic cable from the factory</string>
+			<key>id</key>
+			<string>200000000000</string>
+		</dict>
+		<key>dfu</key>
+		<dict>
+			<key>description</key>
+			<string>Casues the Hydra/Tristar to assert the FORCE_DFU pin</string>
+			<key>id</key>
+			<string>000002000000</string>
+		</dict>
+		<key>haywire</key>
+		<dict>
+			<key>description</key>
+			<string>Apple HDMI adapter</string>
+			<key>id</key>
+			<string>0BF000000000</string>
+		</dict>
+		<key>headphone</key>
+		<dict>
+			<key>description</key>
+			<string>Apple 3.5mm headphone adapter</string>
+			<key>id</key>
+			<string>04F100000000</string>
+		</dict>
+		<key>kanzi_swd</key>
+		<dict>
+			<key>description</key>
+			<string>Apple Kanzi cable in SWD single wire debug</string>
+			<key>id</key>
+			<string>A00C00000000</string>
+		</dict>
+		<key>kanzi_swd_astris</key>
+		<dict>
+			<key>description</key>
+			<string>Apple Kanzi cable in SWD single wire debug with Astris running</string>
+			<key>id</key>
+			<string>200E00000000</string>
+		</dict>
+		<key>kong_swd</key>
+		<dict>
+			<key>description</key>
+			<string>Apple Kong debug cable</string>
+			<key>id</key>
+			<string>A00000000000</string>
+		</dict>
+		<key>kong_swd_astris</key>
+		<dict>
+			<key>description</key>
+			<string>The ID presented by a Kong cable to enter serial wire debug with Astris running</string>
+			<key>id</key>
+			<string>200200000000</string>
+		</dict>
+		<key>reset</key>
+		<dict>
+			<key>description</key>
+			<string>Causes the Hydra/Tristar to pull the device through reset</string>
+			<key>id</key>
+			<string>E00A00000000</string>
+		</dict>
+		<key>uart</key>
+		<dict>
+			<key>description</key>
+			<string>UART serial</string>
+			<key>id</key>
+			<string>200010000000</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>credits</key>
+		<array>
+			<string>https://nyansatan.github.io/lightning/</string>
+		</array>
+		<key>description</key>
+		<string>Lightning Accessory IDs and protocols</string>
+	</dict>
+</dict>
+</plist>

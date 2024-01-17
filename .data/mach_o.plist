@@ -1,0 +1,1126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<dict>
+		<key>LC_BUILD_VERSION</key>
+		<dict>
+			<key>description</key>
+			<string>Contains information about the binaries platform, it&#39;s target and minimum SDK</string>
+			<key>value</key>
+			<integer>50</integer>
+		</dict>
+		<key>LC_CODE_SIGNATURE</key>
+		<dict>
+			<key>description</key>
+			<string>Section of mach-o that contains a signature for the object</string>
+			<key>value</key>
+			<integer>29</integer>
+		</dict>
+		<key>LC_DATA_IN_CODE</key>
+		<dict>
+			<key>description</key>
+			<string>Generic region of a Mach-O file that can contain arbitrary data</string>
+			<key>value</key>
+			<integer>41</integer>
+		</dict>
+		<key>LC_DYLD_CHAINED_FIXUPS</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>2147483700</integer>
+		</dict>
+		<key>LC_DYLD_ENVIRONMENT</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>39</integer>
+		</dict>
+		<key>LC_DYLD_EXPORTS_TRIE</key>
+		<dict>
+			<key>description</key>
+			<string>The exporeted DYLD symbols from this dylib</string>
+			<key>value</key>
+			<integer>2147483699</integer>
+		</dict>
+		<key>LC_DYLD_INFO</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>34</integer>
+		</dict>
+		<key>LC_DYLD_INFO_ONLY</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>2147483682</integer>
+		</dict>
+		<key>LC_DYLIB_CODE_SIGN_DRS</key>
+		<dict>
+			<key>description</key>
+			<string>Classical code signing &quot;designated requirements&quot;.  No longer in common usage as this is now in a LC_CODE_SIGNATURE &quot;magic page&quot;</string>
+			<key>value</key>
+			<integer>43</integer>
+		</dict>
+		<key>LC_DYSYMTAB</key>
+		<dict>
+			<key>description</key>
+			<string>Dynamic or indirect symbol table.</string>
+			<key>value</key>
+			<integer>11</integer>
+		</dict>
+		<key>LC_ENCRYPTION_INFO</key>
+		<dict>
+			<key>description</key>
+			<string>Used by FairPlay / DSMOS to protect a binary from dump / reverse engineering (DRM, be mindful of DMCA)</string>
+			<key>value</key>
+			<integer>33</integer>
+		</dict>
+		<key>LC_ENCRYPTION_INFO_64</key>
+		<dict>
+			<key>description</key>
+			<string>Used by FairPlay / DSMOS to protect a binary from dump / reverse engineering (DRM, be mindful of DMCA)</string>
+			<key>value</key>
+			<integer>44</integer>
+		</dict>
+		<key>LC_FILESET_ENTRY</key>
+		<dict>
+			<key>description</key>
+			<string>An entry of a Mach-O object containing other Mach-O files.  Current usage is in macOS 11+ KernelCollections</string>
+			<key>value</key>
+			<integer>2147483701</integer>
+		</dict>
+		<key>LC_FUNCTION_STARTS</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>38</integer>
+		</dict>
+		<key>LC_FVMFILE</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>9</integer>
+		</dict>
+		<key>LC_IDENT</key>
+		<dict>
+			<key>description</key>
+			<string>Identity of this Mach-O object</string>
+			<key>value</key>
+			<integer>8</integer>
+		</dict>
+		<key>LC_IDFVMLIB</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>7</integer>
+		</dict>
+		<key>LC_ID_DYLIB</key>
+		<dict>
+			<key>description</key>
+			<string>Unique identifier for this dynamic library to be used in locating it for import</string>
+			<key>value</key>
+			<integer>13</integer>
+		</dict>
+		<key>LC_ID_DYLINKER</key>
+		<dict>
+			<key>description</key>
+			<string>The identity of the dynamic linker (dyld) expected to be used to bind this object in memory</string>
+			<key>value</key>
+			<integer>15</integer>
+		</dict>
+		<key>LC_LAZY_LOAD_DYLIB</key>
+		<dict>
+			<key>description</key>
+			<string>Dylibs that should be included in this objects dependencies but should only be loaded and bound when a reference is made to them</string>
+			<key>value</key>
+			<integer>32</integer>
+		</dict>
+		<key>LC_LINKER_OPTIMIZATION_HINT</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>46</integer>
+		</dict>
+		<key>LC_LINKER_OPTION</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>45</integer>
+		</dict>
+		<key>LC_LOADFVMLIB</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>6</integer>
+		</dict>
+		<key>LC_LOAD_DYLIB</key>
+		<dict>
+			<key>description</key>
+			<string>Load a dynamic library (dylib) by it&#39;s identity.  This occurs before process start.</string>
+			<key>value</key>
+			<integer>12</integer>
+		</dict>
+		<key>LC_LOAD_DYLINKER</key>
+		<dict>
+			<key>description</key>
+			<string>Command to load a specific dynamic linker to bind dylibs into this object</string>
+			<key>value</key>
+			<integer>14</integer>
+		</dict>
+		<key>LC_LOAD_UPWARD_DYLIB</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>2147483683</integer>
+		</dict>
+		<key>LC_LOAD_WEAK_DYLIB</key>
+		<dict>
+			<key>description</key>
+			<string>Attempt to load a Dylib but do not fail if binding cannot occur due to its absence</string>
+			<key>value</key>
+			<integer>2147483672</integer>
+		</dict>
+		<key>LC_MAIN</key>
+		<dict>
+			<key>description</key>
+			<string>Mach-O binary entry point</string>
+			<key>value</key>
+			<integer>2147483688</integer>
+		</dict>
+		<key>LC_NOTE</key>
+		<dict>
+			<key>description</key>
+			<string>An arbitrary human readable text note included in this Mach-O.  These should not be used by automated tooling as their unstructured</string>
+			<key>value</key>
+			<integer>49</integer>
+		</dict>
+		<key>LC_PREBIND_CKSUM</key>
+		<dict>
+			<key>description</key>
+			<string>Checksum data to know if this &quot;optimized&quot; or prebound object is still valid for the files it was generated from.</string>
+			<key>value</key>
+			<integer>23</integer>
+		</dict>
+		<key>LC_PREBOUND_DYLIB</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>16</integer>
+		</dict>
+		<key>LC_PREPAGE</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>10</integer>
+		</dict>
+		<key>LC_REEXPORT_DYLIB</key>
+		<dict>
+			<key>description</key>
+			<string>Used to export symbols from an object file that this object imported</string>
+			<key>value</key>
+			<integer>2147483679</integer>
+		</dict>
+		<key>LC_ROUTINES</key>
+		<dict>
+			<key>description</key>
+			<string>Used to define initialize / finalize functions on 32bit platforms.  Historical as _init_func/_term_func are now how this is handled.</string>
+			<key>value</key>
+			<integer>17</integer>
+		</dict>
+		<key>LC_ROUTINES_64</key>
+		<dict>
+			<key>description</key>
+			<string>Used to define initialize / finalize functions on 64bit platforms.  Historical as _init_func/_term_func are now how this is handled.</string>
+			<key>value</key>
+			<integer>26</integer>
+		</dict>
+		<key>LC_RPATH</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>2147483676</integer>
+		</dict>
+		<key>LC_SEGMENT</key>
+		<dict>
+			<key>description</key>
+			<string>Causes the loading of a 32bit segment with a given protection level.  Contains 0 or more sections</string>
+			<key>value</key>
+			<integer>1</integer>
+		</dict>
+		<key>LC_SEGMENT_64</key>
+		<dict>
+			<key>description</key>
+			<string>Causes the loading of a 64bit segment with a given protection level.  Contains 0 or more sections</string>
+			<key>value</key>
+			<integer>25</integer>
+		</dict>
+		<key>LC_SEGMENT_SPLIT_INFO</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>30</integer>
+		</dict>
+		<key>LC_SOURCE_VERSION</key>
+		<dict>
+			<key>description</key>
+			<string>The verion of source code this Mach-O file was built from</string>
+			<key>value</key>
+			<integer>42</integer>
+		</dict>
+		<key>LC_SUB_CLIENT</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>20</integer>
+		</dict>
+		<key>LC_SUB_FRAMEWORK</key>
+		<dict>
+			<key>description</key>
+			<string>Used by &quot;Umbrella Frameworks&quot; to declare the frameworks that the umbrella re-exports.  For an example see Cocoa, AppKit and Foundation</string>
+			<key>value</key>
+			<integer>18</integer>
+		</dict>
+		<key>LC_SUB_LIBRARY</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>21</integer>
+		</dict>
+		<key>LC_SUB_UMBRELLA</key>
+		<dict>
+			<key>description</key>
+			<string>Used by &quot;Umbrella Frameworks&quot; that re-export other frameworks (Cocoa exports Foundation, AppKit for example of this)</string>
+			<key>value</key>
+			<integer>19</integer>
+		</dict>
+		<key>LC_SYMSEG</key>
+		<dict>
+			<key>description</key>
+			<string>Classical GCC compatible &quot;symbol segment&quot;.  Not commonly used as it is replaced with dyld opcodes.</string>
+			<key>value</key>
+			<integer>3</integer>
+		</dict>
+		<key>LC_SYMTAB</key>
+		<dict>
+			<key>description</key>
+			<string>Classical symbol table (direct symbols defined in this object)</string>
+			<key>value</key>
+			<integer>2</integer>
+		</dict>
+		<key>LC_THREAD</key>
+		<dict>
+			<key>description</key>
+			<string>Initial state of the Mach thread for a executable Mach-O</string>
+			<key>value</key>
+			<integer>4</integer>
+		</dict>
+		<key>LC_TWOLEVEL_HINTS</key>
+		<dict>
+			<key>description</key>
+			<string>Two level namespacing allows for the binding to a symbol that may have the same name in two different libraries.  The first namespace is the dylib contining the symbol and the second namespace is the symbol itself.</string>
+			<key>value</key>
+			<integer>22</integer>
+		</dict>
+		<key>LC_UNIXTHREAD</key>
+		<dict>
+			<key>description</key>
+			<string>Initial state of the Unix / POSIX thread for an executable Mach-O</string>
+			<key>value</key>
+			<integer>5</integer>
+		</dict>
+		<key>LC_UUID</key>
+		<dict>
+			<key>description</key>
+			<string>A UUID (GUID) that uniquely identifies this object.  Should only occur once</string>
+			<key>value</key>
+			<integer>27</integer>
+		</dict>
+		<key>LC_VERSION_MIN_IPHONEOS</key>
+		<dict>
+			<key>description</key>
+			<string>A declared minimum SDK for iOS</string>
+			<key>value</key>
+			<integer>37</integer>
+		</dict>
+		<key>LC_VERSION_MIN_MACOSX</key>
+		<dict>
+			<key>description</key>
+			<string>A declared minimum SDK for macOS</string>
+			<key>value</key>
+			<integer>36</integer>
+		</dict>
+		<key>LC_VERSION_MIN_TVOS</key>
+		<dict>
+			<key>description</key>
+			<string>The minimum tvOS to load and execute this binary</string>
+			<key>value</key>
+			<integer>47</integer>
+		</dict>
+		<key>LC_VERSION_MIN_WATCHOS</key>
+		<dict>
+			<key>description</key>
+			<string>The minimum watchOS to laod and execute this binary</string>
+			<key>value</key>
+			<integer>48</integer>
+		</dict>
+	</dict>
+	<key>cpu_types</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+	<data>
+	BAgw
+	</data>
+	<key>file_types</key>
+	<dict>
+		<key>MH_BUNDLE</key>
+		<dict>
+			<key>description</key>
+			<string>A loadable bundle (often essentially a plugin) should be a complete closure on symbols such as a executable but intended to be loaded into another process&#39;s virtual memory space.  A reason for the usage of `MH_BUNDLE` is that the object must be explicitly late bound by calling `dlopen` or related APIs, it cannot be linked to as though it were a library.</string>
+			<key>value</key>
+			<integer>8</integer>
+		</dict>
+		<key>MH_CORE</key>
+		<dict>
+			<key>description</key>
+			<string>A core dump (user or kernel)</string>
+			<key>value</key>
+			<integer>4</integer>
+		</dict>
+		<key>MH_DSYM</key>
+		<dict>
+			<key>description</key>
+			<string>A compile unit containing only debugging symbols</string>
+			<key>value</key>
+			<integer>10</integer>
+		</dict>
+		<key>MH_DYLIB</key>
+		<dict>
+			<key>description</key>
+			<string>A dynamic (read bound at runtime) library</string>
+			<key>value</key>
+			<integer>6</integer>
+		</dict>
+		<key>MH_DYLIB_STUB</key>
+		<dict>
+			<key>description</key>
+			<string>An object used for linking that contains no content.  Somewhat similar in nature to a `.tlb` file and no longer in common usage as Apple uses TLB files as a replacement.</string>
+			<key>value</key>
+			<integer>9</integer>
+		</dict>
+		<key>MH_DYLINKER</key>
+		<dict>
+			<key>description</key>
+			<string>A dynamic linker (typically only one exists and is</string>
+			<key>value</key>
+			<integer>7</integer>
+		</dict>
+		<key>MH_EXECUTE</key>
+		<dict>
+			<key>description</key>
+			<string>A complete executable MachO file (typically a user mode binary)</string>
+			<key>value</key>
+			<integer>2</integer>
+		</dict>
+		<key>MH_FILESET</key>
+		<dict>
+			<key>description</key>
+			<string>A collection of other MachO files, used by KernelCollections</string>
+			<key>value</key>
+			<integer>12</integer>
+		</dict>
+		<key>MH_FVMLIB</key>
+		<dict>
+			<key>description</key>
+			<string>A FVM (fixed virtual memory, or non-relocatable/non-position independenct code PIC) dynamic library</string>
+			<key>value</key>
+			<integer>3</integer>
+		</dict>
+		<key>MH_KEXT_BUNDLE</key>
+		<dict>
+			<key>description</key>
+			<string>A kernel extension bundle.  Name comes from 32bit lineage where MH_BUNDLE were kexts.rake on non-64bit platforms</string>
+			<key>value</key>
+			<integer>11</integer>
+		</dict>
+		<key>MH_OBJECT</key>
+		<dict>
+			<key>description</key>
+			<string>An intermediate object file that results from a compile unit (e.g. single .c file)</string>
+			<key>value</key>
+			<integer>1</integer>
+		</dict>
+		<key>MH_PRELOAD</key>
+		<dict>
+			<key>description</key>
+			<string>\&quot;Preloaded\&quot; images.  Used for firmware payloads</string>
+			<key>value</key>
+			<integer>5</integer>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>credits</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
+	<key>segments</key>
+	<dict>
+		<key>__AUTH</key>
+		<dict>
+			<key>__data</key>
+			<dict>
+				<key>description</key>
+				<string>General purpose PAC authenticated data</string>
+			</dict>
+			<key>__objc_data</key>
+			<dict>
+				<key>description</key>
+				<string>ObjC specific PAC authenticated data</string>
+			</dict>
+			<key>description</key>
+			<string>Used by arm64e for pointer authenticaton codes (PAC) mutable data</string>
+		</dict>
+		<key>__AUTH_CONST</key>
+		<dict>
+			<key>__auth_got</key>
+			<dict>
+				<key>description</key>
+				<string>Authenticated Global offset Table</string>
+			</dict>
+			<key>__auth_ptr</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__cfstring</key>
+			<dict>
+				<key>description</key>
+				<string>Authenticated CoreFoundation strings</string>
+			</dict>
+			<key>__const</key>
+			<dict>
+				<key>description</key>
+				<string>Authenticated constants</string>
+			</dict>
+			<key>__got</key>
+			<dict>
+				<key>description</key>
+				<string>Global offset Table</string>
+			</dict>
+			<key>__objc_const</key>
+			<dict>
+				<key>description</key>
+				<string>Authenticated Objective-C constant values</string>
+			</dict>
+			<key>description</key>
+			<string>Used by arm64e pointer authentication codes (PAC) and read only</string>
+		</dict>
+		<key>__CTF</key>
+		<dict>
+			<key>__ctf</key>
+			<dict>
+				<key>description</key>
+				<string>https://github.com/apple-oss-distributions/dtrace/tree/main/tools/ctfconvert</string>
+			</dict>
+			<key>description</key>
+			<string>Compact C Type Format</string>
+		</dict>
+		<key>__DATA</key>
+		<dict>
+			<key>__bss</key>
+			<dict>
+				<key>description</key>
+				<string>Basic initialized data section</string>
+			</dict>
+			<key>__common</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__const</key>
+			<dict>
+				<key>description</key>
+				<string>Constant data, no longer in common usage, see __DATA_CONST.__const</string>
+			</dict>
+			<key>__data</key>
+			<dict>
+				<key>description</key>
+				<string>General purpose mutable data region</string>
+			</dict>
+			<key>__got</key>
+			<dict>
+				<key>description</key>
+				<string>Global offset table</string>
+			</dict>
+			<key>__la_symbol_ptr</key>
+			<dict>
+				<key>description</key>
+				<string>Lazy symbol pointers</string>
+			</dict>
+			<key>__llvm_orderfile</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__llvm_prf_cnts</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__llvm_prf_data</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__llvm_prf_names</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__llvm_prf_vnds</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__lock_grp</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__mod_init_func</key>
+			<dict>
+				<key>description</key>
+				<string>Module initializer function (called at load)</string>
+			</dict>
+			<key>__mod_term_func</key>
+			<dict>
+				<key>description</key>
+				<string>Module termination function (called at unload)</string>
+			</dict>
+			<key>__nl_symbol_ptr</key>
+			<dict>
+				<key>description</key>
+				<string>Non-lazy symbol pointers</string>
+			</dict>
+			<key>__objc_classrefs</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__objc_imageinfo</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__objc_ivar</key>
+			<dict>
+				<key>description</key>
+				<string>ObjC instance variables (ivar)</string>
+			</dict>
+			<key>__objc_selrefs</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__objc_superrefs</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__percpu</key>
+			<dict>
+				<key>description</key>
+				<string>Local storage per CPU allowing for lock free globals</string>
+			</dict>
+			<key>__sdt</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__sdt_cstring</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>description</key>
+			<string>Mutable data region (rw-)</string>
+		</dict>
+		<key>__DATA_CONST</key>
+		<dict>
+			<key>__const</key>
+			<dict>
+				<key>description</key>
+				<string>Constant initialized data</string>
+			</dict>
+			<key>__got</key>
+			<dict>
+				<key>description</key>
+				<string>Global offset table</string>
+			</dict>
+			<key>__kalloc_type</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__mod_init_func</key>
+			<dict>
+				<key>description</key>
+				<string>Module initializer function</string>
+			</dict>
+			<key>__objc_classlist</key>
+			<dict>
+				<key>description</key>
+				<string>List of ObjC classes exported</string>
+			</dict>
+			<key>__objc_const</key>
+			<dict>
+				<key>description</key>
+				<string>Constant ObjC data</string>
+			</dict>
+			<key>__objc_imageinfo</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__objc_protolist</key>
+			<dict>
+				<key>description</key>
+				<string>List of ObjC protocols (like interfaces)</string>
+			</dict>
+			<key>description</key>
+			<string>Immutable data region (r--)</string>
+		</dict>
+		<key>__HIB</key>
+		<dict>
+			<key>__bootPT</key>
+			<dict>
+				<key>description</key>
+				<string>Initial page table for use during boot up from a hibernation for protected mode</string>
+			</dict>
+			<key>__bss</key>
+			<dict>
+				<key>description</key>
+				<string>Initialized mutable data</string>
+			</dict>
+			<key>__common</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__const</key>
+			<dict>
+				<key>description</key>
+				<string>Constant data</string>
+			</dict>
+			<key>__cstring</key>
+			<dict>
+				<key>description</key>
+				<string>C-Style strings for the sleep image restore function</string>
+			</dict>
+			<key>__data</key>
+			<dict>
+				<key>description</key>
+				<string>General purpose data region for hibernation restore</string>
+			</dict>
+			<key>__desc</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__text</key>
+			<dict>
+				<key>description</key>
+				<string>Executable code used to pull a machine out of hibernation</string>
+			</dict>
+			<key>description</key>
+			<string>Hardware specific information for coming out of hibernation.  This section is solely responsable for ensuring that the sleepimage is restored.  Note that it all operates at the same protection levels (code, const, and data) and therefore doesn&#39;t take advantage of some hardware protections.</string>
+		</dict>
+		<key>__KLD</key>
+		<dict>
+			<key>__text</key>
+			<dict>
+				<key>description</key>
+				<string>The executable code for the kernel linker</string>
+			</dict>
+			<key>description</key>
+			<string>The kernel linker (used to dynamiclly bind a kernel extension) analagous to dyld in user-mode</string>
+		</dict>
+		<key>__KLDDATA</key>
+		<dict>
+			<key>__bss</key>
+			<dict>
+				<key>description</key>
+				<string>Initialized data</string>
+			</dict>
+			<key>__const</key>
+			<dict>
+				<key>description</key>
+				<string>Constant data</string>
+			</dict>
+			<key>__cstring</key>
+			<dict>
+				<key>description</key>
+				<string>C-Style (null terminated) strings for the kernel linker</string>
+			</dict>
+			<key>__init</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__init_entry_set</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__mod_init_func</key>
+			<dict>
+				<key>description</key>
+				<string>Module initializer funtion</string>
+			</dict>
+			<key>__mod_term_func</key>
+			<dict>
+				<key>description</key>
+				<string>Module termination function</string>
+			</dict>
+			<key>description</key>
+			<string>Data region for KLD or kernel linker</string>
+		</dict>
+		<key>__LAST</key>
+		<dict>
+			<key>__last</key>
+			<dict>
+				<key>description</key>
+				<string>Contains `_last_kernel_symbol` which is the last exported kernel symbol</string>
+			</dict>
+			<key>description</key>
+			<string>Segment that contains the last kernel symbol exported</string>
+		</dict>
+		<key>__LASTDATA_CONST</key>
+		<dict>
+			<key>__mod_init_func</key>
+			<dict>
+				<key>description</key>
+				<string>Module initialization function</string>
+			</dict>
+			<key>description</key>
+			<string>Last exported symbol from the const region of the kernel or object</string>
+		</dict>
+		<key>__LINKEDIT</key>
+		<dict>
+			<key>description</key>
+			<string>Though named &quot;LINKEDIT&quot; this segment actually contains any metadata of this Mach-O object.  For example this area contains code signature, as well as dynamic linker opcodes.  This area is always read only.  The contents of this area are described by various `LC_` load commands.</string>
+		</dict>
+		<key>__LINKINFO</key>
+		<dict>
+			<key>__symbolsets</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+		</dict>
+		<key>__OBJC_CONST</key>
+		<dict>
+			<key>__objc_class_ro</key>
+			<dict>
+				<key>description</key>
+				<string>ObjC class info that is read-only to prevent runtime tampering (swizzling for example)</string>
+			</dict>
+			<key>description</key>
+			<string>A region of Objective-C metadata that is read-only</string>
+		</dict>
+		<key>__PAGEZERO</key>
+		<dict>
+			<key>description</key>
+			<string>A dummy page used to mark addresses at low memory as not readable.  This causes a dereference of a low integer to cause a page fault helping not propogate type errors when casting pointers.</string>
+		</dict>
+		<key>__PRELINK_INFO</key>
+		<dict>
+			<key>__info</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>description</key>
+			<string>Descriptive information about the prelinked region of this object</string>
+		</dict>
+		<key>__PRELINK_TEXT</key>
+		<dict>
+			<key>__text</key>
+			<dict>
+				<key>description</key>
+				<string>The prelinked, executable code region</string>
+			</dict>
+			<key>description</key>
+			<string>A region of executable code that is the combination of multiple linkable objects having been prebound</string>
+		</dict>
+		<key>__TEXT</key>
+		<dict>
+			<key>__auth_stubs</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__const</key>
+			<dict>
+				<key>description</key>
+				<string>Constant variables. This region will be non-execute on platforms that support execute never, DEP or NX concepts.  See `__DATA_CONST.__const`</string>
+			</dict>
+			<key>__cstring</key>
+			<dict>
+				<key>description</key>
+				<string>ASCII strings null terminated.  This region can be split on `\0` into strings.</string>
+			</dict>
+			<key>__eh_frame</key>
+			<dict>
+				<key>description</key>
+				<string>Execption handling frame</string>
+			</dict>
+			<key>__gcc_except_tab</key>
+			<dict>
+				<key>description</key>
+				<string>GCC exception handler table</string>
+			</dict>
+			<key>__info_plist</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__init_offsets</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__objc_classname</key>
+			<dict>
+				<key>description</key>
+				<string>A collection of strings that provide the names for Objective-C classes in this object file</string>
+			</dict>
+			<key>__objc_methlist</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__objc_methname</key>
+			<dict>
+				<key>description</key>
+				<string>A colleciton of strings that provide the names of Objective-C methods for a given class (selectors)</string>
+			</dict>
+			<key>__objc_methtype</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>__os_log</key>
+			<dict>
+				<key>description</key>
+				<string>Specific support for Apple OSLog facility containing the patterns used</string>
+			</dict>
+			<key>__stub_helper</key>
+			<dict>
+				<key>description</key>
+				<string>A helper function that when called binds the prior call site to the proper dyld import</string>
+			</dict>
+			<key>__stubs</key>
+			<dict>
+				<key>description</key>
+				<string>Locations that text calls that initially point to a helper thunk (see __stub_helper) but will be late bound to the dynamic symbol</string>
+			</dict>
+			<key>__text</key>
+			<dict>
+				<key>description</key>
+				<string>Generic code region.  This area will have the execute flag set on it&#39;s content</string>
+			</dict>
+			<key>__unwind_info</key>
+			<dict>
+				<key>description</key>
+				<string>Information to help debuggers / exception handlers unwind the stack (info about prolouge etc) allowing for parts of the stack to remain a compiler implementation detail.</string>
+			</dict>
+			<key>description</key>
+			<string>The text region contains any executable code (in the machine code of the platform for this binary) and therefore will always be a read-only (write protected) region of memory when mapped into a process.  (r-x)</string>
+		</dict>
+		<key>__TEXT_EXEC</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+		</dict>
+		<key>__VECTORS</key>
+		<dict>
+			<key>__recover</key>
+			<dict>
+				<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>description</key>
+			<string>Vector table.  Often used to configure a kernel / coprocessor for reset, exception etc.  See ARM-M profile for an example</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,37 @@
+---
+metadata:
+  description: Lightning Accessory IDs and protocols
+  credits:
+  - https://nyansatan.github.io/lightning/
+accessory_id:
+  dcsd:
+    description: Apple diagnostic cable from the factory
+    id: '200000000000'
+  dfu:
+    description: Casues the Hydra/Tristar to assert the FORCE_DFU pin
+    id: '000002000000'
+  haywire:
+    description: Apple HDMI adapter
+    id: 0BF000000000
+  headphone:
+    description: Apple 3.5mm headphone adapter
+    id: 04F100000000
+  kanzi_swd:
+    description: Apple Kanzi cable in SWD single wire debug
+    id: A00C00000000
+  kanzi_swd_astris:
+    description: Apple Kanzi cable in SWD single wire debug with Astris running
+    id: 200E00000000
+  kong_swd:
+    description: Apple Kong debug cable
+    id: A00000000000
+  kong_swd_astris:
+    description: The ID presented by a Kong cable to enter serial wire debug with
+      Astris running
+    id: '200200000000'
+  reset:
+    description: Causes the Hydra/Tristar to pull the device through reset
+    id: E00A00000000
+  uart:
+    description: UART serial
+    id: '200010000000'

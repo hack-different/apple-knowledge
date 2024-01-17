@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>environment_variables</key>
+	<dict>
+		<key>ASL_DISABLE</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+			</array>
+		</dict>
+		<key>CA_ASSERT_MAIN_THREAD_TRANSACTIONS</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+			</array>
+		</dict>
+		<key>CA_DEBUG_TRANSACTIONS</key>
+		<dict>
+			<key>description</key>
+			<string>debug core animation transactions</string>
+			<key>type</key>
+			<string>boolean</string>
+		</dict>
+		<key>CFFIXED_USER_HOME</key>
+		<dict>
+			<key>examples</key>
+			<array>
+				<string>/tmp</string>
+			</array>
+			<key>format</key>
+			<string>path</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>CFNETWORK_STORAGED_TIMERELOFF</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>false</string>
+				<string>true</string>
+			</array>
+		</dict>
+		<key>CHECK_IN</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+			</array>
+		</dict>
+		<key>CLEAN_FILES_OLDER_THAN_DAYS</key>
+		<dict>
+			<key>type</key>
+			<string>integer</string>
+		</dict>
+		<key>COMMAND_MODE</key>
+		<dict>
+			<key>examples</key>
+			<array>
+				<string>unix2003</string>
+			</array>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>CUPS_DEBUG_FILTER</key>
+		<dict>
+			<key>examples</key>
+			<array>
+				<string>^(cupsDo|cupsGet|cupsMake|cupsSet|http|_http|ipp|_ipp|mime).*</string>
+			</array>
+			<key>format</key>
+			<string>regex</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>CUPS_DEBUG_LEVEL</key>
+		<dict>
+			<key>type</key>
+			<string>integer</string>
+		</dict>
+		<key>CUPS_DEBUG_LOG</key>
+		<dict>
+			<key>format</key>
+			<string>path</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>DEBUGSCOPE</key>
+		<dict>
+			<key>separator</key>
+			<string>,</string>
+			<key>type</key>
+			<string>array</string>
+			<key>values</key>
+			<array>
+				<string>all</string>
+				<string>-policy-node</string>
+				<string>policy-set</string>
+				<string>policy</string>
+				<string>alloc</string>
+				<string>trust</string>
+				<string>bind</string>
+				<string>profile</string>
+				<string>trace</string>
+				<string>dbconn</string>
+				<string>OTR</string>
+				<string>serverxpc</string>
+				<string>sqlite3</string>
+				<string>error_thee_well</string>
+				<string>ringSigning</string>
+			</array>
+		</dict>
+		<key>DEFAULT_NETWORK_PRIVACY_LEVEL</key>
+		<dict>
+			<key>type</key>
+			<string>string</string>
+			<key>values</key>
+			<array>
+				<string>public</string>
+			</array>
+		</dict>
+		<key>DYLD_BIND_AT_LAUNCH</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>DYLD_DISABLE_DOFS</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>DYLD_FALLBACK_FRAMEWORK_PATH</key>
+		<dict>
+			<key>default</key>
+			<string>/Library/Frameworks:/System/Library/Frameworks</string>
+			<key>description</key>
+			<string>This is a colon separated list of directories that contain frameworks.  If a framework is not found at its install path, dyld uses this as a list of directories to search for the framework.</string>
+			<key>separator</key>
+			<string>:</string>
+			<key>type</key>
+			<string>array</string>
+		</dict>
+		<key>DYLD_FALLBACK_LIBRARY_PATH</key>
+		<dict>
+			<key>default</key>
+			<string>/usr/local/lib:/usr/lib</string>
+			<key>description</key>
+			<string>This is a colon separated list of directories that contain libraries.  If a dylib is not found at its install
+path, dyld uses this as a list of directories to search for the dylib.  By default, it is set
+to /usr/local/lib:/usr/lib.
+</string>
+			<key>separator</key>
+			<string>:</string>
+			<key>type</key>
+			<string>array</string>
+		</dict>
+		<key>DYLD_FORCE_FLAT_NAMESPACE</key>
+		<dict>
+			<key>description</key>
+			<string>Disable two level namespaces</string>
+		</dict>
+		<key>DYLD_FRAMEWORK_PATH</key>
+		<dict>
+			<key>description</key>
+			<string>This is a colon separated list of directories that contain frameworks.  The dynamic linker searches these
+directories before it searches for the framework by its install name.  It allows you to test new versions of
+existing frameworks. (A framework is a library install name that ends in the form `XXX.framework/Versions/A/XXX`
+or `XXX.framework/XXX`, where `XXX` and `A` are any name.)
+
+For each framework that a program uses, the dynamic linker looks for the framework in each directory in
+`DYLD_FRAMEWORK_PATH` in turn. If it looks in all those directories and can&#39;t find the framework, it uses
+whatever it would have loaded if `DYLD_FRAMEWORK_PATH` had not been set.
+
+Use the -L option to otool(1) to discover the frameworks and shared libraries that the executable is linked
+against.
+</string>
+			<key>separator</key>
+			<string>:</string>
+			<key>type</key>
+			<string>array</string>
+		</dict>
+		<key>DYLD_IMAGE_SUFFIX</key>
+		<dict>
+			<key>description</key>
+			<string>This is set to a string of a suffix to try to be used for all shared libraries used by the program.  For
+libraries ending in &quot;.dylib&quot; the suffix is applied just before the &quot;.dylib&quot;.
+
+For all other libraries the suffix is appended to the library name.  This is useful for using conventional
+&quot;_profile&quot; and &quot;_debug&quot; libraries and frameworks.
+</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>DYLD_INSERT_LIBRARIES</key>
+		<dict>
+			<key>description</key>
+			<string>This is a colon separated list of additional dynamic libraries to load before the ones specified in the program.
+If instead, your goal is to substitute a library that would normally be loaded, use `DYLD_LIBRARY_PATH`
+or `DYLD_FRAMEWORK_PATH` instead.
+</string>
+			<key>separator</key>
+			<string>:</string>
+			<key>type</key>
+			<string>array</string>
+		</dict>
+		<key>DYLD_LIBRARY_PATH</key>
+		<dict>
+			<key>description</key>
+			<string>This is a colon separated list of directories that contain libraries. The dynamic linker searches these
+directories before it searches the default locations for libraries. It allows you to test new versions of
+existing libraries.
+
+For each dylib that a program uses, the dynamic linker looks for its leaf name in each directory in
+`DYLD_LIBRARY_PATH`.
+
+Use the `-L` option to `otool(1)` to discover the frameworks and shared libraries that the executable is linked
+against.
+</string>
+			<key>separator</key>
+			<string>:</string>
+			<key>type</key>
+			<string>array</string>
+		</dict>
+		<key>DYLD_NO_FIX_PREBINDING</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>DYLD_PRINT_APIS</key>
+		<dict>
+			<key>description</key>
+			<string>If set, causes dyld to print a line whenever a dyld API is called (e.g. `dlopen()`).
+</string>
+		</dict>
+		<key>DYLD_PRINT_BINDINGS</key>
+		<dict>
+			<key>description</key>
+			<string>If set, causes dyld to print a line each time a symbolic name is bound.
+</string>
+		</dict>
+		<key>DYLD_PRINT_DOFS</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>DYLD_PRINT_ENV</key>
+		<dict>
+			<key>description</key>
+			<string>If set, causes dyld to print a line of key=value for each environment variable in the process.</string>
+			<key>type</key>
+			<string>presence</string>
+		</dict>
+		<key>DYLD_PRINT_INITIALIZERS</key>
+		<dict>
+			<key>description</key>
+			<string>If set, causes dyld to print out a line when running each initializer in every image.  Initializers run by dyld
+include constructors for C++ statically allocated objects, functions marked with
+`__attribute__((constructor))`, and `-init` functions.
+</string>
+		</dict>
+		<key>DYLD_PRINT_LIBRARIES</key>
+		<dict>
+			<key>description</key>
+			<string>If set, causes dyld to print a line for each mach-o image loaded into a process.  This is useful to make sure
+that the use of DYLD_LIBRARY_PATH is getting what you want.
+</string>
+			<key>type</key>
+			<string>presence</string>
+		</dict>
+		<key>DYLD_PRINT_LIBRARIES_POST_LAUNCH</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>DYLD_PRINT_LOADERS</key>
+		<dict>
+			<key>description</key>
+			<string>If set, causes dyld to print a line whether each image is tracked by a JustInTimeLoader or a PrebuiltLoader.
+Additionally, it prints if a PrebuiltLoaderSet was used to launch the process or if a PrebuiltLoader was
+written to make the next launch faster.
+</string>
+			<key>type</key>
+			<string>presence</string>
+		</dict>
+		<key>DYLD_PRINT_OPTS</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>DYLD_PRINT_REBASINGS</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>DYLD_PRINT_RPATHS</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>DYLD_PRINT_SEARCHING</key>
+		<dict>
+			<key>description</key>
+			<string>If set, causes dyld to print a line about each file system path checked when searching for an image to load.
+</string>
+			<key>type</key>
+			<string>presence</string>
+		</dict>
+		<key>DYLD_PRINT_SEGMENTS</key>
+		<dict>
+			<key>description</key>
+			<string>If set, causes dyld to print out a line containing the name and address range of each mach-o segment that
+dyld maps.  In addition it prints information about if the image was from the dyld shared cache.
+</string>
+		</dict>
+		<key>DYLD_PRINT_STATISTICS</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>DYLD_PRINT_TO_FILE</key>
+		<dict>
+			<key>description</key>
+			<string>This is a path to a (writable) file. Normally, the dynamic linker writes all logging output
+(triggered by `DYLD_PRINT_*` settings) to file descriptor 2 (which is usually stderr).  But
+this setting causes the dynamic linker to write logging output to the specified file.
+</string>
+			<key>format</key>
+			<string>path</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>DYLD_ROOT_PATH</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>DYLD_SHARED_CACHE_DIR</key>
+		<dict>
+			<key>description</key>
+			<string>This is a directory containing dyld shared cache files.  This variable can be used in conjunction with
+`DYLD_SHARED_REGION=private` to run a process with an alternate shared cache.
+</string>
+		</dict>
+		<key>DYLD_SHARED_CACHE_DONT_VALIDATE</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>DYLD_SHARED_REGION</key>
+		<dict>
+			<key>description</key>
+			<string>This can be &quot;use&quot; (the default) or &quot;private&quot;.  Setting it to &quot;private&quot; tells dyld to remove the shared region
+from the process address space and `mmap()` back in a private copy of the dyld shared cache in the shared region
+address range. This is only useful if the shared cache on disk has been updated and is different than the shared
+cache in use.
+</string>
+		</dict>
+		<key>DYLD_VERSIONED_FRAMEWORK_PATH</key>
+		<dict>
+			<key>default</key>
+			<string>/Library/Frameworks:/System/Library/Frameworks</string>
+			<key>description</key>
+			<string>This is a colon separated list of directories that contain potential override frameworks.  The dynamic linker
+searches these directories for frameworks.  For each framework found dyld looks at its `LC_ID_DYLIB` and gets
+the current_version and install name.  Dyld then looks for the framework at the install name path.
+Whichever has the larger current_version value will be used in the process whenever a framework with that
+install name is required.  This is similar to `DYLD_FRAMEWORK_PATH` except instead of always overriding,
+it only overrides if the supplied framework is newer.
+
+Note: dyld does not check the framework&#39;s Info.plist to find its version.  Dyld only checks the `-current_version`
+number supplied when the framework was created.
+</string>
+			<key>separator</key>
+			<string>:</string>
+			<key>type</key>
+			<string>array</string>
+		</dict>
+		<key>DYLD_VERSIONED_LIBRARY_PATH</key>
+		<dict>
+			<key>description</key>
+			<string>This is a colon separated list of directories that contain potential override libraries.  The dynamic linker
+searches these directories for dynamic libraries.  For each library found dyld looks at its `LC_ID_DYLIB` and
+gets the current_version and install name.  Dyld then looks for the library at the install name path.
+Whichever has the larger current_version value will be used in the process whenever a dylib with that install
+name is required.  This is similar to DYLD_LIBRARY_PATH except instead of always overriding, it only
+overrides is the supplied library is newer.
+</string>
+		</dict>
+		<key>HOME</key>
+		<dict>
+			<key>format</key>
+			<string>path</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>LAUNCHD_SOCKET</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>LIBDISPATCH_STRICT</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>false</string>
+				<string>true</string>
+			</array>
+		</dict>
+		<key>LOGNAME</key>
+		<dict>
+			<key>format</key>
+			<string>username</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>LaunchInstanceID</key>
+		<dict>
+			<key>format</key>
+			<string>UUID</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>MallocCorruptionAbort</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+			</array>
+		</dict>
+		<key>MallocMaxMagazines</key>
+		<dict>
+			<key>type</key>
+			<string>integer</string>
+		</dict>
+		<key>MallocNanoZone</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+			</array>
+		</dict>
+		<key>MallocSpaceEfficient</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+			</array>
+		</dict>
+		<key>MallocStackLoggingDirectory</key>
+		<dict>
+			<key>format</key>
+			<string>path</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>NSRunningFromLaunchd</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+			</array>
+		</dict>
+		<key>NSZombieEnabled</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>false</string>
+				<string>true</string>
+			</array>
+		</dict>
+		<key>OS_ACTIVITY_MODE</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>disable</string>
+				<string>enable</string>
+			</array>
+		</dict>
+		<key>PATH</key>
+		<dict>
+			<key>default</key>
+			<array>
+				<string>/usr/bin</string>
+				<string>/bin</string>
+				<string>/usr/sbin</string>
+				<string>/sbin</string>
+			</array>
+			<key>separator</key>
+			<string>:</string>
+			<key>type</key>
+			<string>array</string>
+		</dict>
+		<key>PRINTTOOL_MODE</key>
+		<dict>
+			<key>examples</key>
+			<array>
+				<string>agent</string>
+				<string>daemon</string>
+			</array>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>PRODUCT_INFO_FILTER_DISABLE</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>PWD</key>
+		<dict>
+			<key>format</key>
+			<string>path</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>REACH_DARK_WAKE_CONTROL</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>true</string>
+				<string>false</string>
+			</array>
+		</dict>
+		<key>REACH_DARK_WAKE_NOTIFY</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>true</string>
+				<string>false</string>
+			</array>
+		</dict>
+		<key>RPC_DEBUG</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+			</array>
+		</dict>
+		<key>RUN_WITH_LAUNCHD</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+			</array>
+		</dict>
+		<key>SSH_AUTH_SOCK</key>
+		<dict>
+			<key>format</key>
+			<string>path</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>TMPDIR</key>
+		<dict>
+			<key>format</key>
+			<string>path</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>WAIT4DEBUGGER</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>false</string>
+				<string>true</string>
+			</array>
+		</dict>
+		<key>XPC_FLAGS</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>XPC_NULL_BOOTSTRAP</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+			</array>
+		</dict>
+		<key>XPC_SERVICE_NAME</key>
+		<dict>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>__CFBundleIdentifier</key>
+		<dict>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>__CFPREFERENCES_AVOID_DAEMON</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+			</array>
+		</dict>
+		<key>__CF_USER_TEXT_ENCODING</key>
+		<dict>
+			<key>examples</key>
+			<array>
+				<string>0x0:0:0</string>
+				<string>0x1F5:0x0:0x0</string>
+			</array>
+		</dict>
+		<key>com.apple.CoreData.CloudKitDebug</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+			</array>
+		</dict>
+		<key>com.apple.CoreData.XPCDebug</key>
+		<dict>
+			<key>type</key>
+			<string>boolean</string>
+			<key>values</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+			</array>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>credits</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
+</dict>
+</plist>

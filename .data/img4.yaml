@@ -1,0 +1,535 @@
+---
+metadata:
+  description:
+  credits:
+img4_tags:
+  acfw:
+    description:
+  ache:
+    description:
+  acib:
+    description:
+  aciw:
+    description:
+  ader:
+    description:
+  agfi:
+    description:
+  almo:
+    description:
+  AMNM:
+    description: allow mix-n-match
+    type: boolean
+  anef:
+    description: Apple Neural Engine Firmware
+  anrd:
+    description:
+  aofi:
+    description:
+  aopf:
+    description: Always on processor firmware
+  apmv:
+    description:
+  ater:
+    description:
+  atkh:
+    description:
+  auac:
+    description:
+  aubt:
+    description:
+  augs:
+    description: Included in APTicket CA extensions
+  aupr:
+    description:
+  auxi:
+    description: Auxiliary Kernel Cache Image4 Hash
+  auxk:
+    description: Auxiliary Kernel Cache
+  auxp:
+    description: User Authorized Kext List Hash
+  auxr:
+    description: AuxKC Kext Receipt Hash
+  avef:
+    description: AV Encryption (DRM) Firmware
+  bat0:
+    description: battery image 0
+  bat1:
+    description: battery image 1
+  batf:
+    description: battery full image
+  BLDS:
+    description:
+  bles:
+    description:
+  BNCH:
+    description: Boot Nonce Hash - based on the values of com.apple.System.boot-nonces
+  BORD:
+    description: |-
+      The board the chip is attached to.  With iPhones/iPads this is the variation between device sizes (occasionally
+      also used for low cost devices like the SE/XR).  This is usually expressed as a hex encoded uint8_t.  Some
+      types of board seem to encode a bitfield for non MP (mainline production) boards such as EVT/DVT
+
+      With the T2 this value is unique to all MacBooks with the T2.
+    type: integer
+    alias:
+    - board-id
+  bstc:
+    description:
+  bsys:
+    description:
+  CEPO:
+    description: |-
+      Certificate/Chip Epoch.  This is a unit of roll-forward time (monotonic) that allows for any security issues
+      in the prior epoch to be fixed by a anti-rollback scheme.
+    alias:
+    - chip-epoch
+  cfel:
+    description:
+  chg0:
+    description: Charging Image 0
+  chg1:
+    description: Charging Image 1
+  CHIP:
+    description: Unique identifier for a single Apple designed application processor
+      sharing the same GID key
+    width: 2
+  nsph:
+    description: preboot splat manifest hash
+  CHMH:
+    description: chained manifest hash
+  cker:
+    description:
+  ckih:
+    description:
+  cmsv:
+    description:
+  coih:
+    description:
+  CPRO:
+    description: Chip promotion fuse value (what is burned in)
+    alias:
+    - certificate-production-status
+    type: boolean
+  CSEC:
+    description: Burned-in chip security mode
+    alias:
+    - certificate-security-mode
+  csys:
+    description:
+  dali:
+    description:
+  data:
+    description:
+  DGST:
+    description: payload digest
+  diag:
+    description:
+  disk:
+    description:
+  DPRO:
+    description:
+  DSEC:
+    description:
+  dtre:
+    description: device tree
+  dtrs:
+    description: device tree for recovery
+  ECID:
+    description: Exclusive chip identifier.  This is burned into an eFuse at time
+      of manufacture and unique across all devices sharing the same CHIP
+    width: 8
+  efib:
+    description:
+  eg0n:
+    description: Effective GID 0 Nonce
+  eg0t:
+    description:
+  eg1n:
+    description: Effective GID 1 Nonce
+  eg1t:
+    description:
+  eg3n:
+    description: Effective GID3 Nonce
+  eg3t:
+    description:
+  EKEY:
+    description: Effective chip promoted
+  EPRO:
+    description: Effective chip promotion / demotion state (if CPFM 03 this must be
+      0 to set ESEC)
+    alias:
+    - effective-production-status-ap
+  esca:
+    description:
+  esdm:
+    description: Extended Security Domain fuses
+    alias:
+    - esdm-fuses
+  styp:
+    description: Crytpex Subtype
+    type: u32
+    alias:
+    - cryptex subtype
+  oppd:
+    description: Unknown, used by `stg1`/`sepi` - sha384 hash sized
+  ESEC:
+    description: Effective security mode
+    alias:
+    - effective-security-mode-ap
+  euou:
+    description: engineering use-only unit
+  clas:
+    description: product class
+  psmh:
+    description: previous stage manifest hash
+  fchp:
+  fdrs:
+    description:
+  fdrt:
+    description:
+  file:
+    description:
+  fpgt:
+    description:
+  ftap:
+    description:
+  ftot:
+    description:
+  ftsp:
+    description:
+  fuos:
+    description: Fully Unsigned OS
+  gfxf:
+    description: Graphics Firmware
+  ging:
+    description:
+  glyc:
+    description:
+  glyp:
+    description:
+  hash:
+    description:
+  hclo:
+    description:
+  hime:
+    description:
+  hmmr:
+    description:
+  homr:
+    description:
+  hrlp:
+    description:
+  hypr:
+    description: Hypervisor
+  iBEC:
+    description: iBoot Epoch Change
+  iBoot:
+    description: iBoot
+  iBSS:
+    description: iBoot Second Stage
+  ienv:
+    description:
+  LLB:
+    description: Low Level iBoot
+  IM4M:
+    description:
+  IM4P:
+    description:
+  IM4R:
+    description:
+  IMG4:
+    description:
+  ipdf:
+    description:
+  isor:
+    description:
+  ispf:
+    description: Image Signal Processor Firmware
+  isys:
+    description: iBridge System
+  itst:
+    description:
+  iuob:
+    description:
+  iuos:
+    description:
+  iuou:
+    description:
+  kdlv:
+    description:
+  krnl:
+    description: Kernel
+  kuid:
+    description: KEK Group UUID
+  lamo:
+    description:
+  lckr:
+    description:
+  LNCH:
+    description:
+  lobo:
+    description: Local Boot
+  logo:
+    description: Apple logo image
+  love:
+    description: OS Version - dotted form. Last portion after the version and comma
+      is a cryptex update?
+    type: string
+    example: 21.3.66.0.0,0
+  prtp:
+    description: Product ID String
+    type: string
+    example: iPhone16,2
+  sdkp:
+    description: SEP Product Type
+    type: string
+    example: iphoneos
+  lphp:
+    description:
+  lpnh:
+    description: LocalPolicy nonce hash
+  lpol:
+    description: Local Policy
+  ltrs:
+    description:
+  magg:
+    description:
+  MANB:
+    description:
+  MANP:
+    description: Manifest Payload
+  manx:
+    description:
+  mefi:
+    description: MacEFI (T2 firmware for Intel chip)
+  ment:
+    description:
+  mmap:
+    description:
+  mmer:
+    description:
+  mmsv:
+    description:
+  mpro:
+    description:
+  msec:
+    description:
+  msys:
+    description:
+  mtfw:
+    description:
+  name:
+    description:
+  nrde:
+    description:
+  nsih:
+    description: Next Stage Image Hash
+  nsrv:
+    description:
+  OBJP:
+    description:
+  omer:
+    description:
+  ooth:
+    description:
+  osev:
+    description:
+  osrd:
+    description:
+  otes:
+    description:
+  owns:
+    description:
+  PAYP:
+    description:
+  pcrp:
+    description: Production certificate root
+  pdmg:
+    description: Personalized Disk Image
+  pert:
+    description:
+  pfle:
+    description:
+  pflp:
+    description:
+  phlt:
+    description:
+  pmpf:
+    description: Power Management Processor Firmware
+  pndp:
+    description:
+  prot:
+    description:
+  rbmt:
+    description:
+  rddg:
+    description:
+  rdsk:
+    description: Restore Disk Image
+  rdtr:
+    description:
+  recm:
+    description:
+  rfta:
+    description:
+  rfts:
+    description:
+  rkrn:
+    description: restore kernel
+  rlgo:
+    description:
+  RNCH:
+    description:
+  rolp:
+    description: recoveryOS local policy
+  ronh:
+    description: recoveryOS nonce hash
+  rosi:
+    description:
+  nish:
+    description: preboot splat manifest hash
+  spih:
+    description: Cryptex1 Image4 Hash
+  stng:
+    description: Cryptex1 Generation
+  auxh:
+    description: User Authorized Kext List Hash
+  rpnh:
+    description: RemotePolicy nonce hash
+  RSCH:
+    description: Research mode
+  fgpt:
+    description: factory pre-release global trust
+  UDID:
+    description: universal device identifier
+  rsch:
+    description: research mode
+  vnum:
+    description: maximum restore version
+    type: string
+  rsep:
+    description: Restore SEP Image, paired with oppd/tbms
+    type: string
+    encoding: sha2-384
+  rso0:
+    description:
+  rso1:
+    description:
+  rso2:
+    description:
+  rso3:
+    description:
+  rtpf:
+    description:
+  rtsc:
+    description:
+  scef:
+    description:
+  SDOM:
+    description: |-
+      Security domain, or which set of certificates govern device security.
+
+      Known values:
+        0x01 - Main Production certificates
+    width: 2
+    alias:
+    - security-domain
+  SECM:
+    description:
+  seid:
+    description: Secure Enclave ID
+  stg1:
+    description: stage 1 bootloader
+    type: string
+    encoding: sha2-384
+  sepi:
+    description: SEP Image, contains oppd and tbms in seal
+    type: string
+    encoding: sha2-384
+  sika:
+    description:
+  siof:
+    description: Smart IO Firmware
+  sip0:
+    description: System Integrity Protection (SIP) 0 Status - Overall
+  sip1:
+    description: System Integrity Protection (SIP) 1 Status - Signed System Volume
+      Status
+  sip2:
+    description: System Integrity Protection (SIP) 2 Status - Kernel CTRR Status
+  sip3:
+    description: System Integrity Protection (SIP) 3 Status - Boot Args Filtering
+      Status
+  slvn:
+    description:
+  smb0:
+    description: Secure Multi-Boot 0 - Security Mode - Full Security, Reduced, Disabled
+  smb1:
+    description: Secure Multi-Boot 1
+  smb2:
+    description: Secure Multi-Boot 2 - 3rd Party Kexts Status
+  smb3:
+    description: Secure Multi-Boot 3 - User-allowed MDM Control
+  smb4:
+    description: Secure Multi-Boot 3 - DEP-allowed MDM Control
+  SNON:
+    description: SEP Nonce
+  snon:
+    description: SEP Nonce
+  snuf:
+    description:
+  srnm:
+    description:
+  ster:
+    description:
+  svrn:
+    description: Server nonce
+  tbmr:
+    description: Trusted Boot Measurement (Root?)
+  tbms:
+    description: Trusted Boot Measurement (Signature?)
+    notes: Likely encrypted by the SEP and opaque to the AP
+  tatp:
+    description: Board Name (such as d84)
+  tery:
+    description:
+  test:
+    description:
+  tics:
+    description:
+  trst:
+    description: Trust Cache
+  tsys:
+    description:
+  type:
+    description: Cryptex Type
+  ucer:
+    description: User Cert
+  ucon:
+    description:
+  udid:
+    description: Unique Device ID
+  uidm:
+    description:
+    type: boolean
+  vice:
+    description:
+  vkdl:
+    description:
+  vuid:
+    description: Volume Group UUID
+  ware:
+    description:
+  wchf:
+    description: Wireless Charging Framework
+  xbtc:
+    description: x86 Boot Trust Cache
+  xsys:
+    description: x86 System Root Hash
+  xugs:
+    description:
+  SPTM:
+    description: Secure Page Table Monitor
+  WCHF:
+    description: Wireless Charging Firmware

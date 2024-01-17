@@ -1,0 +1,349 @@
+---
+metadata:
+  description:
+  credits:
+environment_variables:
+  __CFBundleIdentifier:
+    type: string
+  __CFPREFERENCES_AVOID_DAEMON:
+    type: boolean
+    values:
+    - '0'
+    - '1'
+  __CF_USER_TEXT_ENCODING:
+    examples:
+    - 0x0:0:0
+    - 0x1F5:0x0:0x0
+  ASL_DISABLE:
+    type: boolean
+    values:
+    - '0'
+    - '1'
+  CA_ASSERT_MAIN_THREAD_TRANSACTIONS:
+    type: boolean
+    values:
+    - '0'
+    - '1'
+  CA_DEBUG_TRANSACTIONS:
+    description: debug core animation transactions
+    type: boolean
+  CFFIXED_USER_HOME:
+    type: string
+    format: path
+    examples:
+    - "/tmp"
+  CFNETWORK_STORAGED_TIMERELOFF:
+    type: boolean
+    values:
+    - 'false'
+    - 'true'
+  CHECK_IN:
+    type: boolean
+    values:
+    - '0'
+    - '1'
+  CLEAN_FILES_OLDER_THAN_DAYS:
+    type: integer
+  com.apple.CoreData.CloudKitDebug:
+    type: boolean
+    values:
+    - '0'
+    - '1'
+  com.apple.CoreData.XPCDebug:
+    type: boolean
+    values:
+    - '0'
+    - '1'
+  COMMAND_MODE:
+    type: string
+    examples:
+    - unix2003
+  CUPS_DEBUG_FILTER:
+    type: string
+    format: regex
+    examples:
+    - "^(cupsDo|cupsGet|cupsMake|cupsSet|http|_http|ipp|_ipp|mime).*"
+  CUPS_DEBUG_LEVEL:
+    type: integer
+  CUPS_DEBUG_LOG:
+    type: string
+    format: path
+  DEBUGSCOPE:
+    type: array
+    separator: ","
+    values:
+    - all
+    - "-policy-node"
+    - policy-set
+    - policy
+    - alloc
+    - trust
+    - bind
+    - profile
+    - trace
+    - dbconn
+    - OTR
+    - serverxpc
+    - sqlite3
+    - error_thee_well
+    - ringSigning
+  DEFAULT_NETWORK_PRIVACY_LEVEL:
+    type: string
+    values:
+    - public
+  DYLD_BIND_AT_LAUNCH:
+  DYLD_DISABLE_DOFS:
+  DYLD_FALLBACK_FRAMEWORK_PATH:
+    description: This is a colon separated list of directories that contain frameworks.  If
+      a framework is not found at its install path, dyld uses this as a list of directories
+      to search for the framework.
+    type: array
+    separator: ":"
+    default: "/Library/Frameworks:/System/Library/Frameworks"
+  DYLD_FALLBACK_LIBRARY_PATH:
+    description: |
+      This is a colon separated list of directories that contain libraries.  If a dylib is not found at its install
+      path, dyld uses this as a list of directories to search for the dylib.  By default, it is set
+      to /usr/local/lib:/usr/lib.
+    type: array
+    separator: ":"
+    default: "/usr/local/lib:/usr/lib"
+  DYLD_FORCE_FLAT_NAMESPACE:
+    description: Disable two level namespaces
+  DYLD_FRAMEWORK_PATH:
+    description: |
+      This is a colon separated list of directories that contain frameworks.  The dynamic linker searches these
+      directories before it searches for the framework by its install name.  It allows you to test new versions of
+      existing frameworks. (A framework is a library install name that ends in the form `XXX.framework/Versions/A/XXX`
+      or `XXX.framework/XXX`, where `XXX` and `A` are any name.)
+
+      For each framework that a program uses, the dynamic linker looks for the framework in each directory in
+      `DYLD_FRAMEWORK_PATH` in turn. If it looks in all those directories and can't find the framework, it uses
+      whatever it would have loaded if `DYLD_FRAMEWORK_PATH` had not been set.
+
+      Use the -L option to otool(1) to discover the frameworks and shared libraries that the executable is linked
+      against.
+    type: array
+    separator: ":"
+  DYLD_IMAGE_SUFFIX:
+    description: |
+      This is set to a string of a suffix to try to be used for all shared libraries used by the program.  For
+      libraries ending in ".dylib" the suffix is applied just before the ".dylib".
+
+      For all other libraries the suffix is appended to the library name.  This is useful for using conventional
+      "_profile" and "_debug" libraries and frameworks.
+    type: string
+  DYLD_INSERT_LIBRARIES:
+    description: |
+      This is a colon separated list of additional dynamic libraries to load before the ones specified in the program.
+      If instead, your goal is to substitute a library that would normally be loaded, use `DYLD_LIBRARY_PATH`
+      or `DYLD_FRAMEWORK_PATH` instead.
+    type: array
+    separator: ":"
+  DYLD_LIBRARY_PATH:
+    description: |
+      This is a colon separated list of directories that contain libraries. The dynamic linker searches these
+      directories before it searches the default locations for libraries. It allows you to test new versions of
+      existing libraries.
+
+      For each dylib that a program uses, the dynamic linker looks for its leaf name in each directory in
+      `DYLD_LIBRARY_PATH`.
+
+      Use the `-L` option to `otool(1)` to discover the frameworks and shared libraries that the executable is linked
+      against.
+    type: array
+    separator: ":"
+  DYLD_NO_FIX_PREBINDING:
+  DYLD_PRINT_APIS:
+    description: 'If set, causes dyld to print a line whenever a dyld API is called
+      (e.g. `dlopen()`).
+
+      '
+  DYLD_PRINT_BINDINGS:
+    description: 'If set, causes dyld to print a line each time a symbolic name is
+      bound.
+
+      '
+  DYLD_PRINT_DOFS:
+  DYLD_PRINT_ENV:
+    description: If set, causes dyld to print a line of key=value for each environment
+      variable in the process.
+    type: presence
+  DYLD_PRINT_INITIALIZERS:
+    description: |
+      If set, causes dyld to print out a line when running each initializer in every image.  Initializers run by dyld
+      include constructors for C++ statically allocated objects, functions marked with
+      `__attribute__((constructor))`, and `-init` functions.
+  DYLD_PRINT_LIBRARIES:
+    description: |
+      If set, causes dyld to print a line for each mach-o image loaded into a process.  This is useful to make sure
+      that the use of DYLD_LIBRARY_PATH is getting what you want.
+    type: presence
+  DYLD_PRINT_LIBRARIES_POST_LAUNCH:
+  DYLD_PRINT_LOADERS:
+    description: |
+      If set, causes dyld to print a line whether each image is tracked by a JustInTimeLoader or a PrebuiltLoader.
+      Additionally, it prints if a PrebuiltLoaderSet was used to launch the process or if a PrebuiltLoader was
+      written to make the next launch faster.
+    type: presence
+  DYLD_PRINT_OPTS:
+  DYLD_PRINT_REBASINGS:
+  DYLD_PRINT_RPATHS:
+  DYLD_PRINT_SEARCHING:
+    description: 'If set, causes dyld to print a line about each file system path
+      checked when searching for an image to load.
+
+      '
+    type: presence
+  DYLD_PRINT_SEGMENTS:
+    description: |
+      If set, causes dyld to print out a line containing the name and address range of each mach-o segment that
+      dyld maps.  In addition it prints information about if the image was from the dyld shared cache.
+  DYLD_PRINT_STATISTICS:
+  DYLD_PRINT_TO_FILE:
+    description: |
+      This is a path to a (writable) file. Normally, the dynamic linker writes all logging output
+      (triggered by `DYLD_PRINT_*` settings) to file descriptor 2 (which is usually stderr).  But
+      this setting causes the dynamic linker to write logging output to the specified file.
+    type: string
+    format: path
+  DYLD_ROOT_PATH:
+  DYLD_SHARED_CACHE_DIR:
+    description: |
+      This is a directory containing dyld shared cache files.  This variable can be used in conjunction with
+      `DYLD_SHARED_REGION=private` to run a process with an alternate shared cache.
+  DYLD_SHARED_CACHE_DONT_VALIDATE:
+  DYLD_SHARED_REGION:
+    description: |
+      This can be "use" (the default) or "private".  Setting it to "private" tells dyld to remove the shared region
+      from the process address space and `mmap()` back in a private copy of the dyld shared cache in the shared region
+      address range. This is only useful if the shared cache on disk has been updated and is different than the shared
+      cache in use.
+  DYLD_VERSIONED_FRAMEWORK_PATH:
+    description: |
+      This is a colon separated list of directories that contain potential override frameworks.  The dynamic linker
+      searches these directories for frameworks.  For each framework found dyld looks at its `LC_ID_DYLIB` and gets
+      the current_version and install name.  Dyld then looks for the framework at the install name path.
+      Whichever has the larger current_version value will be used in the process whenever a framework with that
+      install name is required.  This is similar to `DYLD_FRAMEWORK_PATH` except instead of always overriding,
+      it only overrides if the supplied framework is newer.
+
+      Note: dyld does not check the framework's Info.plist to find its version.  Dyld only checks the `-current_version`
+      number supplied when the framework was created.
+    type: array
+    separator: ":"
+    default: "/Library/Frameworks:/System/Library/Frameworks"
+  DYLD_VERSIONED_LIBRARY_PATH:
+    description: |
+      This is a colon separated list of directories that contain potential override libraries.  The dynamic linker
+      searches these directories for dynamic libraries.  For each library found dyld looks at its `LC_ID_DYLIB` and
+      gets the current_version and install name.  Dyld then looks for the library at the install name path.
+      Whichever has the larger current_version value will be used in the process whenever a dylib with that install
+      name is required.  This is similar to DYLD_LIBRARY_PATH except instead of always overriding, it only
+      overrides is the supplied library is newer.
+  HOME:
+    type: string
+    format: path
+  LAUNCHD_SOCKET:
+  LIBDISPATCH_STRICT:
+    type: boolean
+    values:
+    - 'false'
+    - 'true'
+  LOGNAME:
+    type: string
+    format: username
+  LaunchInstanceID:
+    type: string
+    format: UUID
+  MallocCorruptionAbort:
+    type: boolean
+    values:
+    - '0'
+    - '1'
+  MallocMaxMagazines:
+    type: integer
+  MallocNanoZone:
+    type: boolean
+    values:
+    - '0'
+    - '1'
+  MallocSpaceEfficient:
+    type: boolean
+    values:
+    - '0'
+    - '1'
+  MallocStackLoggingDirectory:
+    type: string
+    format: path
+  NSRunningFromLaunchd:
+    type: boolean
+    values:
+    - '0'
+    - '1'
+  NSZombieEnabled:
+    type: boolean
+    values:
+    - 'false'
+    - 'true'
+  PATH:
+    type: array
+    separator: ":"
+    default:
+    - "/usr/bin"
+    - "/bin"
+    - "/usr/sbin"
+    - "/sbin"
+  PRINTTOOL_MODE:
+    type: string
+    examples:
+    - agent
+    - daemon
+  PRODUCT_INFO_FILTER_DISABLE:
+  OS_ACTIVITY_MODE:
+    type: boolean
+    values:
+    - disable
+    - enable
+  PWD:
+    type: string
+    format: path
+  REACH_DARK_WAKE_CONTROL:
+    type: boolean
+    values:
+    - 'true'
+    - 'false'
+  REACH_DARK_WAKE_NOTIFY:
+    type: boolean
+    values:
+    - 'true'
+    - 'false'
+  RPC_DEBUG:
+    type: boolean
+    values:
+    - '0'
+    - '1'
+  RUN_WITH_LAUNCHD:
+    type: boolean
+    values:
+    - '0'
+    - '1'
+  SSH_AUTH_SOCK:
+    type: string
+    format: path
+  TMPDIR:
+    type: string
+    format: path
+  WAIT4DEBUGGER:
+    type: boolean
+    values:
+    - 'false'
+    - 'true'
+  XPC_FLAGS:
+  XPC_NULL_BOOTSTRAP:
+    type: boolean
+    values:
+    - '0'
+    - '1'
+  XPC_SERVICE_NAME:
+    type: string

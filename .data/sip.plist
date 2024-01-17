@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>csr_flags</key>
+	<dict>
+		<key>CSR_ALLOW_ANY_RECOVERY_OS</key>
+		<dict>
+			<key>always_enforced</key>
+			<true/>
+			<key>description</key>
+			<string>disable validation of BaseSystem.dmg by ignoring BaseSystem.chunklist</string>
+			<key>value</key>
+			<integer>256</integer>
+		</dict>
+		<key>CSR_ALLOW_APPLE_INTERNAL</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>disable_default</key>
+			<true/>
+			<key>value</key>
+			<integer>16</integer>
+		</dict>
+		<key>CSR_ALLOW_DEVICE_CONFIGURATION</key>
+		<dict>
+			<key>always_enforced</key>
+			<true/>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>128</integer>
+		</dict>
+		<key>CSR_ALLOW_EXECUTABLE_POLICY_OVERRIDE</key>
+		<dict>
+			<key>description</key>
+			<string>override spctl or executable policy</string>
+			<key>value</key>
+			<integer>1024</integer>
+		</dict>
+		<key>CSR_ALLOW_KERNEL_DEBUGGER</key>
+		<dict>
+			<key>description</key>
+			<string>allow using the kernel debugger (KDP) - requires configuring the kernel debugger via boot-args</string>
+			<key>disable_default</key>
+			<true/>
+			<key>value</key>
+			<integer>8</integer>
+		</dict>
+		<key>CSR_ALLOW_TASK_FOR_PID</key>
+		<dict>
+			<key>description</key>
+			<string>allow getting the pid task, required for debugging</string>
+			<key>disable_default</key>
+			<true/>
+			<key>value</key>
+			<integer>4</integer>
+		</dict>
+		<key>CSR_ALLOW_UNAPPROVED_KEXTS</key>
+		<dict>
+			<key>description</key>
+			<string>do not require kext approval (managed in the T2 when it exists)</string>
+			<key>value</key>
+			<integer>512</integer>
+		</dict>
+		<key>CSR_ALLOW_UNAUTHENTICATED_ROOT</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>2048</integer>
+		</dict>
+		<key>CSR_ALLOW_UNRESTRICTED_DTRACE</key>
+		<dict>
+			<key>aliases</key>
+			<array>
+				<string>CSR_ALLOW_DESTRUCTIVE_DTRACE</string>
+			</array>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>disable_default</key>
+			<true/>
+			<key>value</key>
+			<integer>32</integer>
+		</dict>
+		<key>CSR_ALLOW_UNRESTRICTED_FS</key>
+		<dict>
+			<key>description</key>
+			<string>disable SIP protections of various paths (such as write protection of /System)</string>
+			<key>disable_default</key>
+			<true/>
+			<key>value</key>
+			<integer>2</integer>
+		</dict>
+		<key>CSR_ALLOW_UNRESTRICTED_NVRAM</key>
+		<dict>
+			<key>description</key>
+			<string>disable restrictions to writing to restricted NVRAM variables</string>
+			<key>disable_default</key>
+			<true/>
+			<key>value</key>
+			<integer>64</integer>
+		</dict>
+		<key>CSR_ALLOW_UNTRUSTED_KEXTS</key>
+		<dict>
+			<key>description</key>
+			<string>allow loading kernel extensions that are not signed</string>
+			<key>disable_default</key>
+			<true/>
+			<key>value</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>csr_process_capabilities</key>
+	<dict>
+		<key>CSR_CAPABILITY_APPLE_INTERNAL</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>4</integer>
+		</dict>
+		<key>CSR_CAPABILITY_CONFIG</key>
+		<dict>
+			<key>descrption</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>value</key>
+			<integer>2</integer>
+		</dict>
+		<key>CSR_CAPABILITY_UNLIMITED</key>
+		<dict>
+			<key>description</key>
+			<string>process is not restricted by SIP and may bypass</string>
+			<key>value</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>credits</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
+</dict>
+</plist>

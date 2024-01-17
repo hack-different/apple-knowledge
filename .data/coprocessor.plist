@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>metadata</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+	<data>
+	BAgw
+	</data>
+	<key>secondary_cores</key>
+	<dict>
+		<key>AppleNandStorage</key>
+		<dict>
+			<key>description</key>
+			<string>Processor that presents NVMe to the AP and provides both NVMe storage as well as emulated SPI flash for early boot.  This</string>
+			<key>firmware_type</key>
+			<string>ansf</string>
+			<key>restore_firmware_type</key>
+			<string>rans</string>
+			<key>type</key>
+			<string>aarch64</string>
+		</dict>
+		<key>Baseband</key>
+		<dict>
+			<key>description</key>
+			<string>Comes from multiple vendors, encoded in `bbfw` file.  See `baseband.yaml` for more info.</string>
+			<key>firmware_packing</key>
+			<array>
+				<string>zip</string>
+			</array>
+		</dict>
+		<key>ImageSignalProcessor</key>
+		<dict>
+			<key>description</key>
+			<string>Image Signal Processor</string>
+			<key>firmware_type</key>
+			<string>ispf</string>
+		</dict>
+		<key>Juliet</key>
+		<dict>
+			<key>description</key>
+			<string>The Infared FaceID camera</string>
+		</dict>
+		<key>Maggie</key>
+		<dict>
+			<key>description</key>
+			<string>Ultra low power FPGA (iCE5LP4K) / Lattice iCEcube2</string>
+			<key>firmware_type</key>
+			<string>magg</string>
+		</dict>
+		<key>Pearl</key>
+		<dict>
+			<key>description</key>
+			<string>The FaceID assembly</string>
+		</dict>
+		<key>PowerManagementProcessor</key>
+		<dict>
+			<key>description</key>
+			<string>Power Management Processor.  Provides ARM Cortex-M processor for power sequencing and interfaces directly with the PMGR.  Among its other talents, it manages the multi-button reset and DFU process using configured values for `volume-up-debounce` and `volume-down-debounce`.  There have been reported copies of debug firmwares in the wild which might avoid such power sequencing.</string>
+			<key>firmware_type</key>
+			<string>pmpf</string>
+			<key>type</key>
+			<string>arm7m</string>
+		</dict>
+		<key>Savage</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+		</dict>
+		<key>Veridian</key>
+		<dict>
+			<key>is_rtkit</key>
+			<false/>
+			<key>mmio_base</key>
+			<integer>1073741824</integer>
+			<key>ram_base</key>
+			<integer>536870912</integer>
+			<key>stack_size</key>
+			<integer>24576</integer>
+			<key>type</key>
+			<string>arm7m</string>
+		</dict>
+		<key>Vinyl</key>
+		<dict>
+			<key>description</key>
+			<string>the eUICC or eSIM Contains a ZIP file with various hash specifiers, each containing two directories.  One `recovery` is seemingly empty (strange as this would imply a bad eUICC can never be recovered but also is consistent with observed behaviour of a eSIM surviving DFU recovery).  Update seems to contain two folders &quot;main&quot; and &quot;gold&quot;.
+These folders contain a `firmware.der` as well as a `profile.bin`
+These folders contain a number of &quot;root keys&quot; as defined in the eUICC spec.
+</string>
+			<key>firmware_packing</key>
+			<array>
+				<string>zip</string>
+			</array>
+		</dict>
+		<key>Yonkers</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+		</dict>
+	</dict>
+</dict>
+</plist>

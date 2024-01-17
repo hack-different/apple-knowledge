@@ -1,0 +1,6143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bootrom_exploits</key>
+	<array>
+		<string>alloc8</string>
+		<string>checkm8</string>
+	</array>
+	<key>chip_ids</key>
+	<dict>
+		<key>24576</key>
+		<dict>
+			<key>architecture</key>
+			<string>armv8.4</string>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>J316sAP</string>
+					<key>product_id</key>
+					<string>MacBookPro18,1</string>
+					<key>product_name</key>
+					<string>MacBook Pro (M1 Pro, 16-inch, 2021)</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>J314sAP</string>
+					<key>product_id</key>
+					<string>MacBookPro18,3</string>
+					<key>product_name</key>
+					<string>MacBook Pro (M1 Pro, 14-inch, 2021)</string>
+				</dict>
+			</dict>
+			<key>capabilities</key>
+			<dict>
+				<key>address_sizes</key>
+				<array>
+					<integer>64</integer>
+				</array>
+				<key>hypervisor</key>
+				<true/>
+				<key>pointer_authentication</key>
+				<true/>
+				<key>sep</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>cores</key>
+			<dict>
+				<key>efficiency</key>
+				<dict>
+					<key>count</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>performance</key>
+				<dict>
+					<key>count</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>M1 Pro</string>
+			<key>name</key>
+			<string>t6000</string>
+			<key>os</key>
+			<array>
+				<string>macOS</string>
+			</array>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>24577</key>
+		<dict>
+			<key>architecture</key>
+			<string>armv8.4</string>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>J316cAP</string>
+					<key>product_id</key>
+					<string>MacBookPro18,2</string>
+					<key>product_name</key>
+					<string>MacBook Pro (M1 Max, 16-inch, 2021)</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>J375cAP</string>
+					<key>product_id</key>
+					<string>Mac13,1</string>
+					<key>product_name</key>
+					<string>Mac Studio (M1 Max)</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>J314cAP</string>
+					<key>product_id</key>
+					<string>MacBookPro18,4</string>
+					<key>product_name</key>
+					<string>MacBook Pro (M1 Max, 14-inch, 2021)</string>
+				</dict>
+			</dict>
+			<key>capabilities</key>
+			<dict>
+				<key>address_sizes</key>
+				<array>
+					<integer>64</integer>
+				</array>
+				<key>hypervisor</key>
+				<true/>
+				<key>pointer_authentication</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>M1 Max</string>
+			<key>name</key>
+			<string>t6001</string>
+			<key>os</key>
+			<array>
+				<string>macOS</string>
+			</array>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>24578</key>
+		<dict>
+			<key>architecture</key>
+			<string>armv8.4</string>
+			<key>boards</key>
+			<dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>J375dAP</string>
+					<key>product_id</key>
+					<string>Mac13,2</string>
+					<key>product_name</key>
+					<string>Mac Studio (M1 Ultra)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>M1 Ultra</string>
+			<key>name</key>
+			<string>t6002</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>24608</key>
+		<dict>
+			<key>architecture</key>
+			<string>armv8.4</string>
+			<key>boards</key>
+			<dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>J474sAP</string>
+					<key>product_id</key>
+					<string>Mac14,12</string>
+					<key>product_name</key>
+					<string>Mac mini (M2 Pro, 2023)</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>J414sAP</string>
+					<key>product_id</key>
+					<string>Mac14,9</string>
+					<key>product_name</key>
+					<string>MacBook Pro (M2 Pro, 14-inch, 2023)</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>board_name</key>
+					<string>J416sAP</string>
+					<key>product_id</key>
+					<string>Mac14,10</string>
+					<key>product_name</key>
+					<string>MacBook Pro (M2 Pro, 16-inch, 2023)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>M2 Pro</string>
+			<key>name</key>
+			<string>t6020</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>24609</key>
+		<dict>
+			<key>architecture</key>
+			<string>armv8.4</string>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>J475cAP</string>
+					<key>product_id</key>
+					<string>Mac14,13</string>
+					<key>product_name</key>
+					<string>Mac Studio (M2 Max, 2023)</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>J414cAP</string>
+					<key>product_id</key>
+					<string>Mac14,5</string>
+					<key>product_name</key>
+					<string>MacBook Pro (M2 Max, 14-inch, 2023)</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>board_name</key>
+					<string>J416cAP</string>
+					<key>product_id</key>
+					<string>Mac14,6</string>
+					<key>product_name</key>
+					<string>MacBook Pro (M2 Max, 16-inch, 2023)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>M2 Max</string>
+			<key>name</key>
+			<string>t6021</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>24610</key>
+		<dict>
+			<key>architecture</key>
+			<string>armv8.4</string>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>J475dAP</string>
+					<key>product_id</key>
+					<string>Mac14,14</string>
+					<key>product_name</key>
+					<string>Mac Studio (M2 Ultra, 2023)</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>J180dAP</string>
+					<key>product_id</key>
+					<string>Mac14,8</string>
+					<key>product_name</key>
+					<string>Mac Pro (2023)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>M2 Ultra</string>
+			<key>name</key>
+			<string>t6022</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>28672</key>
+		<dict>
+			<key>architecture</key>
+			<string>arm64</string>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>J97AP</string>
+					<key>product_id</key>
+					<string>iPad5,2</string>
+					<key>product_name</key>
+					<string>iPad mini 4 (Cellular)</string>
+				</dict>
+				<key>16</key>
+				<dict>
+					<key>board_name</key>
+					<string>N102AP</string>
+					<key>product_id</key>
+					<string>iPod7,1</string>
+					<key>product_name</key>
+					<string>iPod Touch (6th gen)</string>
+				</dict>
+				<key>26</key>
+				<dict>
+					<key>board_name</key>
+					<string>B238AP</string>
+					<key>product_id</key>
+					<string>AudioAccessory1,2</string>
+					<key>product_name</key>
+					<string>HomePod</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>N56AP</string>
+					<key>product_id</key>
+					<string>iPhone7,1</string>
+					<key>product_name</key>
+					<string>iPhone 6 Plus</string>
+				</dict>
+				<key>52</key>
+				<dict>
+					<key>board_name</key>
+					<string>J42dAP</string>
+					<key>product_id</key>
+					<string>AppleTV5,3</string>
+					<key>product_name</key>
+					<string>Apple TV 4</string>
+				</dict>
+				<key>56</key>
+				<dict>
+					<key>board_name</key>
+					<string>B238aAP</string>
+					<key>product_id</key>
+					<string>AudioAccessory1,1</string>
+					<key>product_name</key>
+					<string>HomePod (1st gen)</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>board_name</key>
+					<string>N61AP</string>
+					<key>product_id</key>
+					<string>iPhone7,2</string>
+					<key>product_name</key>
+					<string>iPhone 6</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>J96AP</string>
+					<key>product_id</key>
+					<string>iPad5,1</string>
+					<key>product_name</key>
+					<string>iPad mini 4 (WiFi)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A8</string>
+			<key>name</key>
+			<string>t7000</string>
+			<key>revisions</key>
+			<dict>
+				<key>17</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+					<string>c4dcd22ae135c14244fc2b62165c85effa566bfe</string>
+					<key>sha256</key>
+					<string>4490b852a94c16024ba853d8f2dc41c0345e344c8b70f33d1051097bf9fd842f</string>
+					<key>version</key>
+					<string>iBoot-1992.0.0.1.19</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+					<integer>6446120960</integer>
+					<key>dfu_load</key>
+					<integer>6442450944</integer>
+					<key>dram_base</key>
+					<integer>34359738368</integer>
+					<key>recovery_image</key>
+					<integer>35391500288</integer>
+					<key>recovery_load</key>
+					<integer>34359738368</integer>
+					<key>rom_base</key>
+					<integer>4294967296</integer>
+					<key>rom_size</key>
+					<integer>524288</integer>
+					<key>sram_base</key>
+					<integer>6442450944</integer>
+					<key>sram_size</key>
+					<integer>4194304</integer>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+					<integer>20</integer>
+					<key>sep_length</key>
+					<integer>20</integer>
+				</dict>
+				<key>registers</key>
+				<dict>
+					<key>demotion</key>
+					<integer>8824987648</integer>
+				</dict>
+				<key>symbols</key>
+				<dict>
+					<key>payload_destination</key>
+					<integer>6443371520</integer>
+					<key>payload_pointer</key>
+					<integer>6443010168</integer>
+					<key>trampoline</key>
+					<integer>6443237376</integer>
+					<key>usb_create_string_descriptor</key>
+					<integer>4295024756</integer>
+					<key>usb_descriptors</key>
+					<integer>6443009888</integer>
+					<key>usb_serial_number</key>
+					<integer>6443010248</integer>
+					<key>usb_srnm_string_descriptor</key>
+					<integer>6442976810</integer>
+				</dict>
+			</dict>
+		</dict>
+		<key>28673</key>
+		<dict>
+			<key>architecture</key>
+			<string>arm64</string>
+			<key>boards</key>
+			<dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>J82AP</string>
+					<key>product_id</key>
+					<string>iPad5,4</string>
+					<key>product_name</key>
+					<string>iPad Air 2 (Cellular)</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>board_name</key>
+					<string>J81AP</string>
+					<key>product_id</key>
+					<string>iPad5,3</string>
+					<key>product_name</key>
+					<string>iPad Air 2 (WiFi)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A8X</string>
+			<key>name</key>
+			<string>t7001</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+					<string>4c17f3566ea2db554d8cd43fa333fa9de15ab0a3</string>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-1991.0.0.2.16</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram_base</key>
+					<integer>34359738368</integer>
+					<key>dram_size</key>
+					<integer>4194304</integer>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom_base</key>
+					<integer>4294967296</integer>
+					<key>rom_size</key>
+					<integer>524288</integer>
+					<key>sram_base</key>
+					<integer>6442450944</integer>
+					<key>sram_size</key>
+					<integer>4194304</integer>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+					<integer>20</integer>
+					<key>sep_length</key>
+					<integer>20</integer>
+				</dict>
+				<key>symbols</key>
+				<dict>
+					<key>payload_destination</key>
+					<integer>6443371520</integer>
+					<key>payload_pointer</key>
+					<integer>6443011576</integer>
+					<key>usb_create_string_descriptor</key>
+					<integer>4295037044</integer>
+					<key>usb_descriptors</key>
+					<integer>6443011296</integer>
+					<key>usb_serial_number</key>
+					<integer>6443011656</integer>
+					<key>usb_srnm_string_descriptor</key>
+					<integer>6442978346</integer>
+				</dict>
+			</dict>
+		</dict>
+		<key>28674</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>N27aAP</string>
+					<key>product_id</key>
+					<string>Watch1,1</string>
+					<key>product_name</key>
+					<string>Apple Watch 38mm (1st gen)</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>N28aAP</string>
+					<key>product_id</key>
+					<string>Watch1,2</string>
+					<key>product_name</key>
+					<string>Apple Watch 42mm (1st gen)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>S1</string>
+			<key>name</key>
+			<string>s7002</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>32768</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>16</key>
+				<dict>
+					<key>board_name</key>
+					<string>J71sAP</string>
+					<key>product_id</key>
+					<string>iPad6,11</string>
+					<key>product_name</key>
+					<string>iPad (5th gen, WiFi)</string>
+				</dict>
+				<key>18</key>
+				<dict>
+					<key>board_name</key>
+					<string>J72sAP</string>
+					<key>product_id</key>
+					<string>iPad6,12</string>
+					<key>product_name</key>
+					<string>iPad (5th gen, Cellular)</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>N69uAP</string>
+					<key>product_id</key>
+					<string>iPhone8,4</string>
+					<key>product_name</key>
+					<string>iPhone SE</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>N71AP</string>
+					<key>product_id</key>
+					<string>iPhone8,1</string>
+					<key>product_name</key>
+					<string>iPhone 6s</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>board_name</key>
+					<string>N66AP</string>
+					<key>product_id</key>
+					<string>iPhone8,2</string>
+					<key>product_name</key>
+					<string>iPhone 6s Plus</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A9</string>
+			<key>name</key>
+			<string>s8000</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+					<string>9979dce30e913c888cf77234c7a7e2a7fa676f4c</string>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-2234.0.0.3.3</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>32769</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>J128AP</string>
+					<key>product_id</key>
+					<string>iPad6,4</string>
+					<key>product_name</key>
+					<string>iPad Pro 9.7-inch (Cellular)</string>
+				</dict>
+				<key>16</key>
+				<dict>
+					<key>board_name</key>
+					<string>J98aAP</string>
+					<key>product_id</key>
+					<string>iPad6,7</string>
+					<key>product_name</key>
+					<string>iPad Pro 12.9-inch (1st gen, WiFi)</string>
+				</dict>
+				<key>18</key>
+				<dict>
+					<key>board_name</key>
+					<string>J99aAP</string>
+					<key>product_id</key>
+					<string>iPad6,8</string>
+					<key>product_name</key>
+					<string>iPad Pro 12.9-inch (1st gen, Cellular)</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>J127AP</string>
+					<key>product_id</key>
+					<string>iPad6,3</string>
+					<key>product_name</key>
+					<string>iPad Pro 9.7-inch (WiFi)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A9X</string>
+			<key>name</key>
+			<string>s8001</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>32770</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>N74AP</string>
+					<key>product_id</key>
+					<string>Watch2,3</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 2 (38mm)</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>N75AP</string>
+					<key>product_id</key>
+					<string>Watch2,4</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 2 (42mm)</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>N27dAP</string>
+					<key>product_id</key>
+					<string>Watch2,6</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 1 (38mm)</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>N28dAP</string>
+					<key>product_id</key>
+					<string>Watch2,7</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 1 (42mm)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>S2 / T1</string>
+			<key>name</key>
+			<string>t8002</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>32771</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>16</key>
+				<dict>
+					<key>board_name</key>
+					<string>J71tAP</string>
+					<key>product_id</key>
+					<string>iPad6,11</string>
+					<key>product_name</key>
+					<string>iPad (5th gen, WiFi)</string>
+				</dict>
+				<key>18</key>
+				<dict>
+					<key>board_name</key>
+					<string>J72tAP</string>
+					<key>product_id</key>
+					<string>iPad6,12</string>
+					<key>product_name</key>
+					<string>iPad (5th gen, Cellular)</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>N69AP</string>
+					<key>product_id</key>
+					<string>iPhone8,4</string>
+					<key>product_name</key>
+					<string>iPhone SE</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>N71mAP</string>
+					<key>product_id</key>
+					<string>iPhone8,1</string>
+					<key>product_name</key>
+					<string>iPhone 6s</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>board_name</key>
+					<string>N66mAP</string>
+					<key>product_id</key>
+					<string>iPhone8,2</string>
+					<key>product_name</key>
+					<string>iPhone 6s Plus</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A9</string>
+			<key>name</key>
+			<string>s8003</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>32772</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>24</key>
+				<dict>
+					<key>board_name</key>
+					<string>N121sAP</string>
+					<key>product_id</key>
+					<string>Watch3,3</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 3 (38mm)</string>
+				</dict>
+				<key>26</key>
+				<dict>
+					<key>board_name</key>
+					<string>N121bAP</string>
+					<key>product_id</key>
+					<string>Watch3,4</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 3 (42mm)</string>
+				</dict>
+				<key>28</key>
+				<dict>
+					<key>board_name</key>
+					<string>N111sAP</string>
+					<key>product_id</key>
+					<string>Watch3,1</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 3 (38mm Cellular)</string>
+				</dict>
+				<key>30</key>
+				<dict>
+					<key>board_name</key>
+					<string>N111bAP</string>
+					<key>product_id</key>
+					<string>Watch3,2</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 3 (42mm Cellular)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>S3</string>
+			<key>name</key>
+			<string>t8004</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>32774</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>N131bAP</string>
+					<key>product_id</key>
+					<string>Watch4,2</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 4 (44mm)</string>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>N141sAP</string>
+					<key>product_id</key>
+					<string>Watch4,3</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 4 (40mm Cellular)</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>N141bAP</string>
+					<key>product_id</key>
+					<string>Watch4,4</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 4 (44mm Cellular)</string>
+				</dict>
+				<key>16</key>
+				<dict>
+					<key>board_name</key>
+					<string>N144sAP</string>
+					<key>product_id</key>
+					<string>Watch5,1</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 5 (40mm)</string>
+				</dict>
+				<key>18</key>
+				<dict>
+					<key>board_name</key>
+					<string>N144bAP</string>
+					<key>product_id</key>
+					<string>Watch5,2</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 5 (44mm)</string>
+				</dict>
+				<key>20</key>
+				<dict>
+					<key>board_name</key>
+					<string>N146sAP</string>
+					<key>product_id</key>
+					<string>Watch5,3</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 5 (40mm Cellular)</string>
+				</dict>
+				<key>22</key>
+				<dict>
+					<key>board_name</key>
+					<string>N146bAP</string>
+					<key>product_id</key>
+					<string>Watch5,4</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 5 (44mm Cellular)</string>
+				</dict>
+				<key>34</key>
+				<dict>
+					<key>board_name</key>
+					<string>B520AP</string>
+					<key>product_id</key>
+					<string>AudioAccessory5,1</string>
+					<key>product_name</key>
+					<string>HomePod mini</string>
+				</dict>
+				<key>40</key>
+				<dict>
+					<key>board_name</key>
+					<string>N140sAP</string>
+					<key>product_id</key>
+					<string>Watch5,9</string>
+					<key>product_name</key>
+					<string>Apple Watch SE (40mm)</string>
+				</dict>
+				<key>42</key>
+				<dict>
+					<key>board_name</key>
+					<string>N140bAP</string>
+					<key>product_id</key>
+					<string>Watch5,10</string>
+					<key>product_name</key>
+					<string>Apple Watch SE (44mm)</string>
+				</dict>
+				<key>44</key>
+				<dict>
+					<key>board_name</key>
+					<string>N142sAP</string>
+					<key>product_id</key>
+					<string>Watch5,11</string>
+					<key>product_name</key>
+					<string>Apple Watch SE (40mm Cellular)</string>
+				</dict>
+				<key>46</key>
+				<dict>
+					<key>board_name</key>
+					<string>N142bAP</string>
+					<key>product_id</key>
+					<string>Watch5,12</string>
+					<key>product_name</key>
+					<string>Apple Watch SE (44mm Cellular)</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>N131sAP</string>
+					<key>product_id</key>
+					<string>Watch4,1</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 4 (40mm)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>S4</string>
+			<key>name</key>
+			<string>t8006</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>32784</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>D11AP</string>
+					<key>product_id</key>
+					<string>iPhone9,2</string>
+					<key>product_name</key>
+					<string>iPhone 7 Plus (Global)</string>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>D101AP</string>
+					<key>product_id</key>
+					<string>iPhone9,3</string>
+					<key>product_name</key>
+					<string>iPhone 7 (GSM)</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>D111AP</string>
+					<key>product_id</key>
+					<string>iPhone9,4</string>
+					<key>product_name</key>
+					<string>iPhone 7 Plus (GSM)</string>
+				</dict>
+				<key>22</key>
+				<dict>
+					<key>board_name</key>
+					<string>N112AP</string>
+					<key>product_id</key>
+					<string>iPod9,1</string>
+					<key>product_name</key>
+					<string>iPod Touch (7th gen)</string>
+				</dict>
+				<key>24</key>
+				<dict>
+					<key>board_name</key>
+					<string>J71bAP</string>
+					<key>product_id</key>
+					<string>iPad7,5</string>
+					<key>product_name</key>
+					<string>iPad (6th gen, WiFi)</string>
+				</dict>
+				<key>26</key>
+				<dict>
+					<key>board_name</key>
+					<string>J72bAP</string>
+					<key>product_id</key>
+					<string>iPad7,6</string>
+					<key>product_name</key>
+					<string>iPad (6th gen, Cellular)</string>
+				</dict>
+				<key>28</key>
+				<dict>
+					<key>board_name</key>
+					<string>J171AP</string>
+					<key>product_id</key>
+					<string>iPad7,11</string>
+					<key>product_name</key>
+					<string>iPad (7th gen, WiFi)</string>
+				</dict>
+				<key>30</key>
+				<dict>
+					<key>board_name</key>
+					<string>J172AP</string>
+					<key>product_id</key>
+					<string>iPad7,12</string>
+					<key>product_name</key>
+					<string>iPad (7th gen, Cellular)</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>D10AP</string>
+					<key>product_id</key>
+					<string>iPhone9,1</string>
+					<key>product_name</key>
+					<string>iPhone 7 (Global)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A10</string>
+			<key>name</key>
+			<string>t8010</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>32785</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>J120AP</string>
+					<key>product_id</key>
+					<string>iPad7,1</string>
+					<key>product_name</key>
+					<string>iPad Pro 12.9-inch (2nd gen, WiFi)</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>J121AP</string>
+					<key>product_id</key>
+					<string>iPad7,2</string>
+					<key>product_name</key>
+					<string>iPad Pro 12.9-inch (2nd gen, Cellular)</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>J105aAP</string>
+					<key>product_id</key>
+					<string>AppleTV6,2</string>
+					<key>product_name</key>
+					<string>Apple TV 4K</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>J207AP</string>
+					<key>product_id</key>
+					<string>iPad7,3</string>
+					<key>product_name</key>
+					<string>iPad Pro 10.5-inch (WiFi)</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>board_name</key>
+					<string>J208AP</string>
+					<key>product_id</key>
+					<string>iPad7,4</string>
+					<key>product_name</key>
+					<string>iPad Pro 10.5-inch (Cellular)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A10X</string>
+			<key>name</key>
+			<string>t8011</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>32786</key>
+		<dict>
+			<key>architecture</key>
+			<string>arm64</string>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>J137AP</string>
+					<key>product_id</key>
+					<string>iBridge2,1</string>
+					<key>product_name</key>
+					<string>Apple T2 iMacPro1,1 (j137)</string>
+				</dict>
+				<key>11</key>
+				<dict>
+					<key>board_name</key>
+					<string>J680AP</string>
+					<key>product_id</key>
+					<string>iBridge2,3</string>
+					<key>product_name</key>
+					<string>Apple T2 MacBookPro15,1 (j680)</string>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>J132AP</string>
+					<key>product_id</key>
+					<string>iBridge2,4</string>
+					<key>product_name</key>
+					<string>Apple T2 MacBookPro15,2 (j132)</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>J174AP</string>
+					<key>product_id</key>
+					<string>iBridge2,5</string>
+					<key>product_name</key>
+					<string>Apple T2 Macmini8,1 (j174)</string>
+				</dict>
+				<key>15</key>
+				<dict>
+					<key>board_name</key>
+					<string>J160AP</string>
+					<key>product_id</key>
+					<string>iBridge2,6</string>
+					<key>product_name</key>
+					<string>Apple T2 MacPro7,1 (j160)</string>
+				</dict>
+				<key>23</key>
+				<dict>
+					<key>board_name</key>
+					<string>J140KAP</string>
+					<key>product_id</key>
+					<string>iBridge2,8</string>
+					<key>product_name</key>
+					<string>Apple T2 MacBookAir8,1 (j140k)</string>
+				</dict>
+				<key>24</key>
+				<dict>
+					<key>board_name</key>
+					<string>J213AP</string>
+					<key>product_id</key>
+					<string>iBridge2,10</string>
+					<key>product_name</key>
+					<string>Apple T2 MacBookPro15,4 (j213)</string>
+				</dict>
+				<key>34</key>
+				<dict>
+					<key>board_name</key>
+					<string>J185AP</string>
+					<key>product_id</key>
+					<string>iBridge2,19</string>
+					<key>product_name</key>
+					<string>Apple T2 iMac20,1 (j185)</string>
+				</dict>
+				<key>35</key>
+				<dict>
+					<key>board_name</key>
+					<string>J185FAP</string>
+					<key>product_id</key>
+					<string>iBridge2,20</string>
+					<key>product_name</key>
+					<string>Apple T2 iMac20,2 (j185f)</string>
+				</dict>
+				<key>55</key>
+				<dict>
+					<key>board_name</key>
+					<string>J140AAP</string>
+					<key>product_id</key>
+					<string>iBridge2,12</string>
+					<key>product_name</key>
+					<string>Apple T2 MacBookAir8,2 (j140a)</string>
+				</dict>
+				<key>56</key>
+				<dict>
+					<key>board_name</key>
+					<string>J215AP</string>
+					<key>product_id</key>
+					<string>iBridge2,22</string>
+					<key>product_name</key>
+					<string>Apple T2 MacBookPro16,4 (j215)</string>
+				</dict>
+				<key>58</key>
+				<dict>
+					<key>board_name</key>
+					<string>J152FAP</string>
+					<key>product_id</key>
+					<string>iBridge2,14</string>
+					<key>product_name</key>
+					<string>Apple T2 MacBookPro16,1 (j152f)</string>
+				</dict>
+				<key>59</key>
+				<dict>
+					<key>board_name</key>
+					<string>J223AP</string>
+					<key>product_id</key>
+					<string>iBridge2,21</string>
+					<key>product_name</key>
+					<string>Apple T2 MacBookPro16,3 (j223)</string>
+				</dict>
+				<key>62</key>
+				<dict>
+					<key>board_name</key>
+					<string>J214KAP</string>
+					<key>product_id</key>
+					<string>iBridge2,16</string>
+					<key>product_name</key>
+					<string>Apple T2 MacBookPro16,2 (j214k)</string>
+				</dict>
+				<key>63</key>
+				<dict>
+					<key>board_name</key>
+					<string>J230KAP</string>
+					<key>product_id</key>
+					<string>iBridge2,15</string>
+					<key>product_name</key>
+					<string>Apple T2 MacBookAir9,1 (j230k)</string>
+				</dict>
+				<key>7</key>
+				<dict>
+					<key>board_name</key>
+					<string>J780AP</string>
+					<key>product_id</key>
+					<string>iBridge2,7</string>
+					<key>product_name</key>
+					<string>Apple T2 MacBookPro15,3 (j780)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>T2</string>
+			<key>name</key>
+			<string>t8012</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>ap_rom_sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>ap_rom_sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>ap_rom_url</key>
+					<string>http://securerom.fun/resources/APROM/SecureROM%20for%20t8012si,%20iBoot-3401.0.0.1.16</string>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>version</key>
+					<string>iBoot-3401.0.0.1.16</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+			<key>vulnerable_to</key>
+			<array>
+				<string>checkm8</string>
+			</array>
+		</dict>
+		<key>32789</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>D201AP</string>
+					<key>product_id</key>
+					<string>iPhone10,4</string>
+					<key>product_name</key>
+					<string>iPhone 8 (GSM)</string>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>D211AP</string>
+					<key>product_id</key>
+					<string>iPhone10,5</string>
+					<key>product_name</key>
+					<string>iPhone 8 Plus (GSM)</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>D221AP</string>
+					<key>product_id</key>
+					<string>iPhone10,6</string>
+					<key>product_name</key>
+					<string>iPhone X (GSM)</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>D20AP</string>
+					<key>product_id</key>
+					<string>iPhone10,1</string>
+					<key>product_name</key>
+					<string>iPhone 8 (Global)</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>D21AP</string>
+					<key>product_id</key>
+					<string>iPhone10,2</string>
+					<key>product_name</key>
+					<string>iPhone 8 Plus (Global)</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>board_name</key>
+					<string>D22AP</string>
+					<key>product_id</key>
+					<string>iPhone10,3</string>
+					<key>product_name</key>
+					<string>iPhone X (Global)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A11</string>
+			<key>name</key>
+			<string>t8015</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>32800</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>D331AP</string>
+					<key>product_id</key>
+					<string>iPhone11,4</string>
+					<key>product_name</key>
+					<string>iPhone XS Max (China)</string>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>N841AP</string>
+					<key>product_id</key>
+					<string>iPhone11,8</string>
+					<key>product_name</key>
+					<string>iPhone XR</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>D321AP</string>
+					<key>product_id</key>
+					<string>iPhone11,2</string>
+					<key>product_name</key>
+					<string>iPhone XS</string>
+				</dict>
+				<key>20</key>
+				<dict>
+					<key>board_name</key>
+					<string>J210AP</string>
+					<key>product_id</key>
+					<string>iPad11,1</string>
+					<key>product_name</key>
+					<string>iPad mini (5th gen, WiFi)</string>
+				</dict>
+				<key>22</key>
+				<dict>
+					<key>board_name</key>
+					<string>J211AP</string>
+					<key>product_id</key>
+					<string>iPad11,2</string>
+					<key>product_name</key>
+					<string>iPad mini (5th gen, Cellular)</string>
+				</dict>
+				<key>26</key>
+				<dict>
+					<key>board_name</key>
+					<string>D331pAP</string>
+					<key>product_id</key>
+					<string>iPhone11,6</string>
+					<key>product_name</key>
+					<string>iPhone XS Max</string>
+				</dict>
+				<key>28</key>
+				<dict>
+					<key>board_name</key>
+					<string>J217AP</string>
+					<key>product_id</key>
+					<string>iPad11,3</string>
+					<key>product_name</key>
+					<string>iPad Air (3rd gen, WiFi)</string>
+				</dict>
+				<key>30</key>
+				<dict>
+					<key>board_name</key>
+					<string>J218AP</string>
+					<key>product_id</key>
+					<string>iPad11,4</string>
+					<key>product_name</key>
+					<string>iPad Air (3rd gen, Cellular)</string>
+				</dict>
+				<key>36</key>
+				<dict>
+					<key>board_name</key>
+					<string>J171aAP</string>
+					<key>product_id</key>
+					<string>iPad11,6</string>
+					<key>product_name</key>
+					<string>iPad (8th gen, WiFi)</string>
+				</dict>
+				<key>38</key>
+				<dict>
+					<key>board_name</key>
+					<string>J172aAP</string>
+					<key>product_id</key>
+					<string>iPad11,7</string>
+					<key>product_name</key>
+					<string>iPad (8th gen, Cellular)</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>J305AP</string>
+					<key>product_id</key>
+					<string>AppleTV11,1</string>
+					<key>product_name</key>
+					<string>Apple TV 4K (2nd gen)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A12</string>
+			<key>name</key>
+			<string>t8020</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>32807</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>J321AP</string>
+					<key>product_id</key>
+					<string>iPad8,7</string>
+					<key>product_name</key>
+					<string>iPad Pro 12.9-inch (3rd gen, Cellular)</string>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>J317AP</string>
+					<key>product_id</key>
+					<string>iPad8,1</string>
+					<key>product_name</key>
+					<string>iPad Pro 11-inch (1st gen, WiFi)</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>J318AP</string>
+					<key>product_id</key>
+					<string>iPad8,3</string>
+					<key>product_name</key>
+					<string>iPad Pro 11-inch (1st gen, Cellular)</string>
+				</dict>
+				<key>24</key>
+				<dict>
+					<key>board_name</key>
+					<string>J320xAP</string>
+					<key>product_id</key>
+					<string>iPad8,6</string>
+					<key>product_name</key>
+					<string>iPad Pro 12.9-inch (3rd gen, WiFi, 1TB)</string>
+				</dict>
+				<key>26</key>
+				<dict>
+					<key>board_name</key>
+					<string>J321xAP</string>
+					<key>product_id</key>
+					<string>iPad8,8</string>
+					<key>product_name</key>
+					<string>iPad Pro 12.9-inch (3rd gen, Cellular, 1TB)</string>
+				</dict>
+				<key>28</key>
+				<dict>
+					<key>board_name</key>
+					<string>J317xAP</string>
+					<key>product_id</key>
+					<string>iPad8,2</string>
+					<key>product_name</key>
+					<string>iPad Pro 11-inch (1st gen, WiFi, 1TB)</string>
+				</dict>
+				<key>30</key>
+				<dict>
+					<key>board_name</key>
+					<string>J318xAP</string>
+					<key>product_id</key>
+					<string>iPad8,4</string>
+					<key>product_name</key>
+					<string>iPad Pro 11-inch (1st gen, Cellular, 1TB)</string>
+				</dict>
+				<key>56</key>
+				<dict>
+					<key>board_name</key>
+					<string>J420AP</string>
+					<key>product_id</key>
+					<string>iPad8,11</string>
+					<key>product_name</key>
+					<string>iPad Pro 12.9-inch (4th gen, WiFi)</string>
+				</dict>
+				<key>58</key>
+				<dict>
+					<key>board_name</key>
+					<string>J421AP</string>
+					<key>product_id</key>
+					<string>iPad8,12</string>
+					<key>product_name</key>
+					<string>iPad Pro 12.9-inch (4th gen, Cellular)</string>
+				</dict>
+				<key>60</key>
+				<dict>
+					<key>board_name</key>
+					<string>J417AP</string>
+					<key>product_id</key>
+					<string>iPad8,9</string>
+					<key>product_name</key>
+					<string>iPad Pro 11-inch (2nd gen, WiFi)</string>
+				</dict>
+				<key>62</key>
+				<dict>
+					<key>board_name</key>
+					<string>J418AP</string>
+					<key>product_id</key>
+					<string>iPad8,10</string>
+					<key>product_name</key>
+					<string>iPad Pro 11-inch (2nd gen, Cellular)</string>
+				</dict>
+				<key>66</key>
+				<dict>
+					<key>board_name</key>
+					<string>J273aAP</string>
+					<key>product_id</key>
+					<string>ADP3,2</string>
+					<key>product_name</key>
+					<string>Developer Transition Kit (2020)</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>J320AP</string>
+					<key>product_id</key>
+					<string>iPad8,5</string>
+					<key>product_name</key>
+					<string>iPad Pro 12.9-inch (3rd gen, WiFi)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A12X/Z</string>
+			<key>name</key>
+			<string>t8027</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>32816</key>
+		<dict>
+			<key>architecture</key>
+			<string>arm8</string>
+			<key>boards</key>
+			<dict>
+				<key>16</key>
+				<dict>
+					<key>board_name</key>
+					<string>D79AP</string>
+					<key>product_id</key>
+					<string>iPhone12,8</string>
+					<key>product_name</key>
+					<string>iPhone SE (2020)</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>D431AP</string>
+					<key>product_id</key>
+					<string>iPhone12,5</string>
+					<key>product_name</key>
+					<string>iPhone 11 Pro Max</string>
+				</dict>
+				<key>24</key>
+				<dict>
+					<key>board_name</key>
+					<string>J181AP</string>
+					<key>product_id</key>
+					<string>iPad12,1</string>
+					<key>product_name</key>
+					<string>iPad (9th gen, WiFi)</string>
+				</dict>
+				<key>26</key>
+				<dict>
+					<key>board_name</key>
+					<string>J182AP</string>
+					<key>product_id</key>
+					<string>iPad12,2</string>
+					<key>product_name</key>
+					<string>iPad (9th gen, Cellular)</string>
+				</dict>
+				<key>34</key>
+				<dict>
+					<key>board_name</key>
+					<string>J327AP</string>
+					<key>product_id</key>
+					<string>AppleDisplay2,1</string>
+					<key>product_name</key>
+					<string>Apple Studio Display</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>N104AP</string>
+					<key>product_id</key>
+					<string>iPhone12,1</string>
+					<key>product_name</key>
+					<string>iPhone 11</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>board_name</key>
+					<string>D421AP</string>
+					<key>product_id</key>
+					<string>iPhone12,3</string>
+					<key>product_name</key>
+					<string>iPhone 11 Pro</string>
+				</dict>
+			</dict>
+			<key>capabilities</key>
+			<dict>
+				<key>address_sizes</key>
+				<array>
+					<integer>64</integer>
+				</array>
+				<key>pointer_authentication</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>A13</string>
+			<key>name</key>
+			<string>t8030</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>33025</key>
+		<dict>
+			<key>architecture</key>
+			<string>arm8</string>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>D52gAP</string>
+					<key>product_id</key>
+					<string>iPhone13,1</string>
+					<key>product_name</key>
+					<string>iPhone 12 mini</string>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>D53gAP</string>
+					<key>product_id</key>
+					<string>iPhone13,2</string>
+					<key>product_name</key>
+					<string>iPhone 12</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>D53pAP</string>
+					<key>product_id</key>
+					<string>iPhone13,3</string>
+					<key>product_name</key>
+					<string>iPhone 12 Pro</string>
+				</dict>
+				<key>20</key>
+				<dict>
+					<key>board_name</key>
+					<string>J271AP</string>
+					<key>product_id</key>
+					<string>iPad13,18</string>
+					<key>product_name</key>
+					<string>iPad (10th gen, WiFi)</string>
+				</dict>
+				<key>22</key>
+				<dict>
+					<key>board_name</key>
+					<string>J272AP</string>
+					<key>product_id</key>
+					<string>iPad13,19</string>
+					<key>product_name</key>
+					<string>iPad (10th gen, Cellular)</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>J307AP</string>
+					<key>product_id</key>
+					<string>iPad13,1</string>
+					<key>product_name</key>
+					<string>iPad Air (4th gen, WiFi)</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>board_name</key>
+					<string>J308AP</string>
+					<key>product_id</key>
+					<string>iPad13,2</string>
+					<key>product_name</key>
+					<string>iPad Air (4th gen, Cellular)</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>D54pAP</string>
+					<key>product_id</key>
+					<string>iPhone13,4</string>
+					<key>product_name</key>
+					<string>iPhone 12 Pro Max</string>
+				</dict>
+			</dict>
+			<key>capabilities</key>
+			<dict>
+				<key>address_sizes</key>
+				<array>
+					<integer>64</integer>
+				</array>
+				<key>hypervisor</key>
+				<true/>
+				<key>pointer_authentication</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>A14</string>
+			<key>name</key>
+			<string>t8101</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>33027</key>
+		<dict>
+			<key>architecture</key>
+			<string>armv8.4</string>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>J517xAP</string>
+					<key>product_id</key>
+					<string>iPad13,5</string>
+					<key>product_name</key>
+					<string>iPad Pro 11-inch (3rd gen, WiFi, 2TB)</string>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>J518AP</string>
+					<key>product_id</key>
+					<string>iPad13,6</string>
+					<key>product_name</key>
+					<string>iPad Pro 11-inch (3rd gen, Cellular)</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>J518xAP</string>
+					<key>product_id</key>
+					<string>iPad13,7</string>
+					<key>product_name</key>
+					<string>iPad Pro 11-inch (3rd gen, Cellular, 2TB)</string>
+				</dict>
+				<key>16</key>
+				<dict>
+					<key>board_name</key>
+					<string>J407AP</string>
+					<key>product_id</key>
+					<string>iPad13,16</string>
+					<key>product_name</key>
+					<string>iPad Air (5th gen, WiFi)</string>
+				</dict>
+				<key>18</key>
+				<dict>
+					<key>board_name</key>
+					<string>J408AP</string>
+					<key>product_id</key>
+					<string>iPad13,17</string>
+					<key>product_name</key>
+					<string>iPad Air (5th gen, Cellular)</string>
+				</dict>
+				<key>24</key>
+				<dict>
+					<key>board_name</key>
+					<string>J522AP</string>
+					<key>product_id</key>
+					<string>iPad13,8</string>
+					<key>product_name</key>
+					<string>iPad Pro 12.9-inch (5th gen, WiFi)</string>
+				</dict>
+				<key>26</key>
+				<dict>
+					<key>board_name</key>
+					<string>J522xAP</string>
+					<key>product_id</key>
+					<string>iPad13,9</string>
+					<key>product_name</key>
+					<string>iPad Pro 12.9-inch (5th gen, WiFi, 2TB)</string>
+				</dict>
+				<key>28</key>
+				<dict>
+					<key>board_name</key>
+					<string>J523AP</string>
+					<key>product_id</key>
+					<string>iPad13,10</string>
+					<key>product_name</key>
+					<string>iPad Pro 12.9-inch (5th gen, Cellular)</string>
+				</dict>
+				<key>30</key>
+				<dict>
+					<key>board_name</key>
+					<string>J523xAP</string>
+					<key>product_id</key>
+					<string>iPad13,11</string>
+					<key>product_name</key>
+					<string>iPad Pro 12.9-inch (5th gen, Cellular, 2TB)</string>
+				</dict>
+				<key>34</key>
+				<dict>
+					<key>board_name</key>
+					<string>J274AP</string>
+					<key>product_id</key>
+					<string>Macmini9,1</string>
+					<key>product_name</key>
+					<string>Mac mini (M1, 2020)</string>
+				</dict>
+				<key>36</key>
+				<dict>
+					<key>board_name</key>
+					<string>J293AP</string>
+					<key>product_id</key>
+					<string>MacBookPro17,1</string>
+					<key>product_name</key>
+					<string>MacBook Pro (M1, 2020)</string>
+				</dict>
+				<key>38</key>
+				<dict>
+					<key>board_name</key>
+					<string>J313AP</string>
+					<key>product_id</key>
+					<string>MacBookAir10,1</string>
+					<key>product_name</key>
+					<string>MacBook Air (M1, 2020)</string>
+				</dict>
+				<key>40</key>
+				<dict>
+					<key>board_name</key>
+					<string>J456AP</string>
+					<key>product_id</key>
+					<string>iMac21,1</string>
+					<key>product_name</key>
+					<string>iMac 24-inch (M1, Two Ports, 2021)</string>
+				</dict>
+				<key>42</key>
+				<dict>
+					<key>board_name</key>
+					<string>J457AP</string>
+					<key>product_id</key>
+					<string>iMac21,2</string>
+					<key>product_name</key>
+					<string>iMac 24-inch (M1, Four Ports, 2021)</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>J517AP</string>
+					<key>product_id</key>
+					<string>iPad13,4</string>
+					<key>product_name</key>
+					<string>iPad Pro 11-inch (3rd gen, WiFi)</string>
+				</dict>
+			</dict>
+			<key>capabilities</key>
+			<dict>
+				<key>64bit</key>
+				<true/>
+				<key>el2</key>
+				<true/>
+				<key>pointer_authentication</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>M1</string>
+			<key>name</key>
+			<string>t8103</string>
+			<key>os</key>
+			<array>
+				<string>macOS</string>
+				<string>padOS</string>
+			</array>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>33040</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>D17AP</string>
+					<key>product_id</key>
+					<string>iPhone14,5</string>
+					<key>product_name</key>
+					<string>iPhone 13</string>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>D63AP</string>
+					<key>product_id</key>
+					<string>iPhone14,2</string>
+					<key>product_name</key>
+					<string>iPhone 13 Pro</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>D64AP</string>
+					<key>product_id</key>
+					<string>iPhone14,3</string>
+					<key>product_name</key>
+					<string>iPhone 13 Pro Max</string>
+				</dict>
+				<key>16</key>
+				<dict>
+					<key>board_name</key>
+					<string>D49AP</string>
+					<key>product_id</key>
+					<string>iPhone14,6</string>
+					<key>product_name</key>
+					<string>iPhone SE (3rd gen)</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>J255AP</string>
+					<key>product_id</key>
+					<string>AppleTV14,1</string>
+					<key>product_name</key>
+					<string>Apple TV 4K (3rd gen)</string>
+				</dict>
+				<key>24</key>
+				<dict>
+					<key>board_name</key>
+					<string>D27AP</string>
+					<key>product_id</key>
+					<string>iPhone14,7</string>
+					<key>product_name</key>
+					<string>iPhone 14</string>
+				</dict>
+				<key>26</key>
+				<dict>
+					<key>board_name</key>
+					<string>D28AP</string>
+					<key>product_id</key>
+					<string>iPhone14,8</string>
+					<key>product_name</key>
+					<string>iPhone 14 Plus</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>J310AP</string>
+					<key>product_id</key>
+					<string>iPad14,1</string>
+					<key>product_name</key>
+					<string>iPad mini (6th gen, WiFi)</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>board_name</key>
+					<string>J311AP</string>
+					<key>product_id</key>
+					<string>iPad14,2</string>
+					<key>product_name</key>
+					<string>iPad mini (6th gen, Cellular)</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>D16AP</string>
+					<key>product_id</key>
+					<string>iPhone14,4</string>
+					<key>product_name</key>
+					<string>iPhone 13 mini</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A15</string>
+			<key>name</key>
+			<string>t8110</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>33042</key>
+		<dict>
+			<key>architecture</key>
+			<string>armv8.4</string>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>J618AP</string>
+					<key>product_id</key>
+					<string>iPad14,4</string>
+					<key>product_name</key>
+					<string>iPad Pro 11-inch (4th gen, Cellular)</string>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>J620AP</string>
+					<key>product_id</key>
+					<string>iPad14,5</string>
+					<key>product_name</key>
+					<string>iPad Pro 12.9-inch (6th gen, WiFi)</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>J621AP</string>
+					<key>product_id</key>
+					<string>iPad14,6</string>
+					<key>product_name</key>
+					<string>iPad Pro 12.9-inch (6th gen, Cellular)</string>
+				</dict>
+				<key>36</key>
+				<dict>
+					<key>board_name</key>
+					<string>J473AP</string>
+					<key>product_id</key>
+					<string>Mac14,3</string>
+					<key>product_name</key>
+					<string>Mac mini (M2, 2023)</string>
+				</dict>
+				<key>40</key>
+				<dict>
+					<key>board_name</key>
+					<string>J413AP</string>
+					<key>product_id</key>
+					<string>Mac14,2</string>
+					<key>product_name</key>
+					<string>MacBook Air (M2, 2022)</string>
+				</dict>
+				<key>42</key>
+				<dict>
+					<key>board_name</key>
+					<string>J493AP</string>
+					<key>product_id</key>
+					<string>Mac14,7</string>
+					<key>product_name</key>
+					<string>MacBook Pro (M2, 2022)</string>
+				</dict>
+				<key>46</key>
+				<dict>
+					<key>board_name</key>
+					<string>J415AP</string>
+					<key>product_id</key>
+					<string>Mac14,15</string>
+					<key>product_name</key>
+					<string>MacBook Air (M2, 2023)</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>J617AP</string>
+					<key>product_id</key>
+					<string>iPad14,3</string>
+					<key>product_name</key>
+					<string>iPad Pro 11-inch (4th gen, WiFi)</string>
+				</dict>
+			</dict>
+			<key>capabilities</key>
+			<dict>
+				<key>address_sizes</key>
+				<array>
+					<integer>64</integer>
+				</array>
+				<key>hypervisor</key>
+				<true/>
+				<key>pointer_authentication</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>M2</string>
+			<key>name</key>
+			<string>t8112</string>
+			<key>os</key>
+			<array>
+				<string>macOS</string>
+			</array>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>33056</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>D38AP</string>
+					<key>product_id</key>
+					<string>iPhone15,5</string>
+					<key>product_name</key>
+					<string>iPhone 15 Plus</string>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>D73AP</string>
+					<key>product_id</key>
+					<string>iPhone15,2</string>
+					<key>product_name</key>
+					<string>iPhone 14 Pro</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>D74AP</string>
+					<key>product_id</key>
+					<string>iPhone15,3</string>
+					<key>product_name</key>
+					<string>iPhone 14 Pro Max</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>D37AP</string>
+					<key>product_id</key>
+					<string>iPhone15,4</string>
+					<key>product_name</key>
+					<string>iPhone 15</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A16</string>
+			<key>name</key>
+			<string>t8120</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>33072</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>D83AP</string>
+					<key>product_id</key>
+					<string>iPhone15,2</string>
+					<key>product_name</key>
+					<string>iPhone 15 Pro</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>board_name</key>
+					<string>D84AP</string>
+					<key>product_id</key>
+					<string>iPhone15,3</string>
+					<key>product_name</key>
+					<string>iPhone 15 Pro Max</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A17 Pro</string>
+			<key>name</key>
+			<string>t8130</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>33537</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>N157bAP</string>
+					<key>product_id</key>
+					<string>Watch6,2</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 6 (44mm)</string>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>N158sAP</string>
+					<key>product_id</key>
+					<string>Watch6,3</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 6 (40mm Cellular)</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>N158bAP</string>
+					<key>product_id</key>
+					<string>Watch6,4</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 6 (44mm Cellular)</string>
+				</dict>
+				<key>16</key>
+				<dict>
+					<key>board_name</key>
+					<string>N187sAP</string>
+					<key>product_id</key>
+					<string>Watch6,6</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 7 (41mm)</string>
+				</dict>
+				<key>18</key>
+				<dict>
+					<key>board_name</key>
+					<string>N187bAP</string>
+					<key>product_id</key>
+					<string>Watch6,7</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 7 (45mm)</string>
+				</dict>
+				<key>20</key>
+				<dict>
+					<key>board_name</key>
+					<string>N188sAP</string>
+					<key>product_id</key>
+					<string>Watch6,8</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 7 (41mm Cellular)</string>
+				</dict>
+				<key>22</key>
+				<dict>
+					<key>board_name</key>
+					<string>N188bAP</string>
+					<key>product_id</key>
+					<string>Watch6,9</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 7 (45mm Cellular)</string>
+				</dict>
+				<key>24</key>
+				<dict>
+					<key>board_name</key>
+					<string>B620AP</string>
+					<key>product_id</key>
+					<string>AudioAccessory6,1</string>
+					<key>product_name</key>
+					<string>HomePod (2nd gen)</string>
+				</dict>
+				<key>38</key>
+				<dict>
+					<key>board_name</key>
+					<string>N199AP</string>
+					<key>product_id</key>
+					<string>Watch6,18</string>
+					<key>product_name</key>
+					<string>Apple Watch Ultra</string>
+				</dict>
+				<key>40</key>
+				<dict>
+					<key>board_name</key>
+					<string>N143sAP</string>
+					<key>product_id</key>
+					<string>Watch6,10</string>
+					<key>product_name</key>
+					<string>Apple Watch SE 2 (40mm)</string>
+				</dict>
+				<key>42</key>
+				<dict>
+					<key>board_name</key>
+					<string>N143bAP</string>
+					<key>product_id</key>
+					<string>Watch6,11</string>
+					<key>product_name</key>
+					<string>Apple Watch SE 2 (44mm)</string>
+				</dict>
+				<key>44</key>
+				<dict>
+					<key>board_name</key>
+					<string>N149sAP</string>
+					<key>product_id</key>
+					<string>Watch6,12</string>
+					<key>product_name</key>
+					<string>Apple Watch SE 2 (40mm Cellular)</string>
+				</dict>
+				<key>46</key>
+				<dict>
+					<key>board_name</key>
+					<string>N149bAP</string>
+					<key>product_id</key>
+					<string>Watch6,13</string>
+					<key>product_name</key>
+					<string>Apple Watch SE 2 (44mm Cellular)</string>
+				</dict>
+				<key>48</key>
+				<dict>
+					<key>board_name</key>
+					<string>N197sAP</string>
+					<key>product_id</key>
+					<string>Watch6,14</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 8 (41mm)</string>
+				</dict>
+				<key>50</key>
+				<dict>
+					<key>board_name</key>
+					<string>N197bAP</string>
+					<key>product_id</key>
+					<string>Watch6,15</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 8 (45mm)</string>
+				</dict>
+				<key>52</key>
+				<dict>
+					<key>board_name</key>
+					<string>N198sAP</string>
+					<key>product_id</key>
+					<string>Watch6,16</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 8 (41mm Cellular)</string>
+				</dict>
+				<key>54</key>
+				<dict>
+					<key>board_name</key>
+					<string>N198bAP</string>
+					<key>product_id</key>
+					<string>Watch6,17</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 8 (45mm Cellular)</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>N157sAP</string>
+					<key>product_id</key>
+					<string>Watch6,1</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 6 (40mm)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>S6 / S7 / S8</string>
+			<key>name</key>
+			<string>t8301</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>33552</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>N207bAP</string>
+					<key>product_id</key>
+					<string>Watch7,2</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 9 (45mm)</string>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>N208sAP</string>
+					<key>product_id</key>
+					<string>Watch7,3</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 9 (41mm Cellular)</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>N208bAP</string>
+					<key>product_id</key>
+					<string>Watch7,4</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 9 (45mm Cellular)</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>N210AP</string>
+					<key>product_id</key>
+					<string>Watch7,5</string>
+					<key>product_name</key>
+					<string>Apple Watch Ultra 2</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>N207sAP</string>
+					<key>product_id</key>
+					<string>Watch7,1</string>
+					<key>product_name</key>
+					<string>Apple Watch Series 9 (41mm)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>S9</string>
+			<key>name</key>
+			<string>t8310</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>34592</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>board_name</key>
+					<string>N72AP</string>
+					<key>product_id</key>
+					<string>iPod2,1</string>
+					<key>product_name</key>
+					<string>iPod Touch (2nd gen)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>name</key>
+			<string>s5L8720</string>
+			<key>revisions</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>ap_rom_sha256</key>
+					<string>55f4d8ea2791ba51dd89934168f38f0fb21ce8762ff614c1e742407c0d3ca054</string>
+					<key>ap_rom_url</key>
+					<string>http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8720xsi,%20iBoot-240.4</string>
+					<key>security_epoch</key>
+					<integer>0</integer>
+					<key>version</key>
+					<string>iBoot-240.4</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>ap_rom_sha256</key>
+					<string>cddedc17eb815cd94276469407e450a923db125b367cacd5139a12efdfcf2143</string>
+					<key>ap_rom_url</key>
+					<string>https://securerom.fun/resources/APROM/SecureROM%20for%20s5l8720xsi,%20iBoot-240.5.1</string>
+					<key>security_epoch</key>
+					<integer>0</integer>
+					<key>version</key>
+					<string>iBoot-240.5.1</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>35072</key>
+		<dict>
+			<key>boards</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>board_name</key>
+					<string>M68AP</string>
+					<key>product_id</key>
+					<string>iPhone1,1</string>
+					<key>product_name</key>
+					<string>iPhone 2G</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>N45AP</string>
+					<key>product_id</key>
+					<string>iPod1,1</string>
+					<key>product_name</key>
+					<string>iPod Touch (1st gen)</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>N82AP</string>
+					<key>product_id</key>
+					<string>iPhone1,2</string>
+					<key>product_name</key>
+					<string>iPhone 3G</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>s5L8900</string>
+			<key>securerom</key>
+			<array>
+				<dict>
+					<key>hash</key>
+					<string>220027d6f8ea24603f8c5ad5e920ab553d85a9cd809d79c7e6f6f0eefdc2bc95</string>
+					<key>url</key>
+					<string>http://securerom.fun/resources/APROM/ROM%20BOOT,%20S5L8900%20Rev.2</string>
+					<key>version</key>
+					<string>Rev.2</string>
+				</dict>
+			</array>
+		</dict>
+		<key>35104</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>board_name</key>
+					<string>N88AP</string>
+					<key>product_id</key>
+					<string>iPhone2,1</string>
+					<key>product_name</key>
+					<string>iPhone 3Gs</string>
+				</dict>
+			</dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>name</key>
+			<string>s5l8920xsi</string>
+			<key>revisions</key>
+			<dict>
+				<key>unknown_0</key>
+				<dict>
+					<key>ap_rom_sha256</key>
+					<string>99fd16f919a506c7f0701620e132e18c0e6f4025a57a85807960ca092e5e3587</string>
+					<key>ap_rom_url</key>
+					<string>http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8920xsi,%20iBoot-359.3</string>
+					<key>security_epoch</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-359.3</string>
+				</dict>
+				<key>unknown_1</key>
+				<dict>
+					<key>ap_rom_sha256</key>
+					<string>0e6feb1144c95b1ee088ecd6c45bfdc2ed17191167555b6ca513d6572e463c86</string>
+					<key>ap_rom_url</key>
+					<string>http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8920xsi,%20iBoot-359.3.2</string>
+					<key>security_epoch</key>
+					<string>iBoot-359.3.2</string>
+					<key>version</key>
+					<string>iBoot-359.3</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>35106</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>N18AP</string>
+					<key>product_id</key>
+					<string>iPod3,1</string>
+					<key>product_name</key>
+					<string>iPod Touch (3rd gen)</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>s5l8922xsi</string>
+			<key>revisions</key>
+			<dict>
+				<key>unknown</key>
+				<dict>
+					<key>ap_rom_sha256</key>
+					<string>07b8a615f00961c5802451b5717c344db287b68c5f6d2331ac6ba7a6acdbac9d</string>
+					<key>ap_rom_url</key>
+					<string>https://securerom.fun/resources/APROM/SecureROM%20for%20s5l8922xsi,%20iBoot-359.5</string>
+					<key>security_epoch</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-359.5</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>35120</key>
+		<dict>
+			<key>boards</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>board_name</key>
+					<string>N90AP</string>
+					<key>product_id</key>
+					<string>iPhone3,1</string>
+					<key>product_name</key>
+					<string>iPhone 4 (GSM)</string>
+				</dict>
+				<key>16</key>
+				<dict>
+					<key>board_name</key>
+					<string>K66AP</string>
+					<key>product_id</key>
+					<string>AppleTV2,1</string>
+					<key>product_name</key>
+					<string>Apple TV 2</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>K48AP</string>
+					<key>product_id</key>
+					<string>iPad1,1</string>
+					<key>product_name</key>
+					<string>iPad</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>N90BAP</string>
+					<key>product_id</key>
+					<string>iPhone3,2</string>
+					<key>product_name</key>
+					<string>iPhone 4 (GSM) R2 2012</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>board_name</key>
+					<string>N92AP</string>
+					<key>product_id</key>
+					<string>iPhone3,3</string>
+					<key>product_name</key>
+					<string>iPhone 4 (CDMA)</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>N81AP</string>
+					<key>product_id</key>
+					<string>iPod4,1</string>
+					<key>product_name</key>
+					<string>iPod Touch (4th gen)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A4</string>
+			<key>name</key>
+			<string>s5l8930xsi</string>
+			<key>securerom</key>
+			<array>
+				<dict>
+					<key>hash</key>
+					<string>4f34652a238a57ae0018b6e66c20a240cdbee8b4cca59a99407d09f83ea8082d</string>
+					<key>url</key>
+					<string>https://securerom.fun/resources/APROM/SecureROM%20for%20s5l8930xsi,%20iBoot-574.4</string>
+					<key>version</key>
+					<string>iBoot-574.4</string>
+				</dict>
+			</array>
+		</dict>
+		<key>35136</key>
+		<dict>
+			<key>boards</key>
+			<dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>K95AP</string>
+					<key>product_id</key>
+					<string>iPad2,3</string>
+					<key>product_name</key>
+					<string>iPad 2 (CDMA)</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>K93AP</string>
+					<key>product_id</key>
+					<string>iPad2,1</string>
+					<key>product_name</key>
+					<string>iPad 2 (WiFi)</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>board_name</key>
+					<string>K94AP</string>
+					<key>product_id</key>
+					<string>iPad2,2</string>
+					<key>product_name</key>
+					<string>iPad 2 (GSM)</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>N94AP</string>
+					<key>product_id</key>
+					<string>iPhone4,1</string>
+					<key>product_name</key>
+					<string>iPhone 4s</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A5</string>
+			<key>name</key>
+			<string>s5l8940xsi</string>
+			<key>securerom</key>
+			<array>
+				<dict>
+					<key>hash</key>
+					<string>b4ac75591fb4240c6978251bec1ce6f1162344612a5691193f35baefa826af95</string>
+					<key>url</key>
+					<string>http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8940xsi,%20iBoot-838.3</string>
+					<key>version</key>
+					<string>iBoot-838.3</string>
+				</dict>
+			</array>
+		</dict>
+		<key>35138</key>
+		<dict>
+			<key>boards</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>board_name</key>
+					<string>N78AP</string>
+					<key>product_id</key>
+					<string>iPod5,1</string>
+					<key>product_name</key>
+					<string>iPod Touch (5th gen)</string>
+				</dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>P105AP</string>
+					<key>product_id</key>
+					<string>iPad2,5</string>
+					<key>product_name</key>
+					<string>iPad mini (WiFi)</string>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>P106AP</string>
+					<key>product_id</key>
+					<string>iPad2,6</string>
+					<key>product_name</key>
+					<string>iPad mini (GSM)</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>P107AP</string>
+					<key>product_id</key>
+					<string>iPad2,7</string>
+					<key>product_name</key>
+					<string>iPad mini (Global)</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>board_name</key>
+					<string>K93aAP</string>
+					<key>product_id</key>
+					<string>iPad2,4</string>
+					<key>product_name</key>
+					<string>iPad 2 (WiFi) R2 2012</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>board_name</key>
+					<string>J33AP</string>
+					<key>product_id</key>
+					<string>AppleTV3,1</string>
+					<key>product_name</key>
+					<string>Apple TV 3</string>
+				</dict>
+			</dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>name</key>
+			<string>S5L8942</string>
+		</dict>
+		<key>35141</key>
+		<dict>
+			<key>boards</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>board_name</key>
+					<string>J1AP</string>
+					<key>product_id</key>
+					<string>iPad3,1</string>
+					<key>product_name</key>
+					<string>iPad (3rd gen, WiFi)</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>J2AP</string>
+					<key>product_id</key>
+					<string>iPad3,2</string>
+					<key>product_name</key>
+					<string>iPad (3rd gen, CDMA)</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>J2aAP</string>
+					<key>product_id</key>
+					<string>iPad3,3</string>
+					<key>product_name</key>
+					<string>iPad (3rd gen, GSM)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>name</key>
+			<string>s5l8945xsi</string>
+			<key>securerom</key>
+			<array>
+				<dict>
+					<key>hash</key>
+					<string>0a74f025a62a55a2beb201f582d104eeecc3e6b069d5a3d2636ccacad25675f7</string>
+					<key>url</key>
+					<string>http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8945xsi,%20iBoot-1062.2</string>
+					<key>version</key>
+					<string>iBoot-1062.2</string>
+				</dict>
+			</array>
+		</dict>
+		<key>35143</key>
+		<dict>
+			<key>boards</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>board_name</key>
+					<string>J33IAP</string>
+					<key>product_id</key>
+					<string>AppleTV3,2</string>
+					<key>product_name</key>
+					<string>Apple TV 3 (2013)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>name</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+		</dict>
+		<key>35152</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>board_name</key>
+					<string>N41AP</string>
+					<key>product_id</key>
+					<string>iPhone5,1</string>
+					<key>product_name</key>
+					<string>iPhone 5 (GSM)</string>
+				</dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>N48AP</string>
+					<key>product_id</key>
+					<string>iPhone5,3</string>
+					<key>product_name</key>
+					<string>iPhone 5c (GSM)</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>N49AP</string>
+					<key>product_id</key>
+					<string>iPhone5,4</string>
+					<key>product_name</key>
+					<string>iPhone 5c (Global)</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>N42AP</string>
+					<key>product_id</key>
+					<string>iPhone5,2</string>
+					<key>product_name</key>
+					<string>iPhone 5 (Global)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A6</string>
+			<key>name</key>
+			<string>s8950</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>ap_rom_url</key>
+					<string>http://securerom.fun/resources/APROM/SecureROM%20for%20s5l8950xsi,%20iBoot-1145.3</string>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+					<string>59b9e3782af4be3aead0ed8196b5bd1f0457a904756df52628f7c6e2532b5405</string>
+					<key>version</key>
+					<string>iBoot-1458.2</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>35157</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>board_name</key>
+					<string>P101AP</string>
+					<key>product_id</key>
+					<string>iPad3,4</string>
+					<key>product_name</key>
+					<string>iPad (4th gen, WiFi)</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>P102AP</string>
+					<key>product_id</key>
+					<string>iPad3,5</string>
+					<key>product_name</key>
+					<string>iPad (4th gen, GSM)</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>board_name</key>
+					<string>P103AP</string>
+					<key>product_id</key>
+					<string>iPad3,6</string>
+					<key>product_name</key>
+					<string>iPad (4th gen, Global)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>name</key>
+			<string>s5l8950xsi</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>35168</key>
+		<dict>
+			<key>architecture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>boards</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>board_name</key>
+					<string>N51AP</string>
+					<key>product_id</key>
+					<string>iPhone6,1</string>
+					<key>product_name</key>
+					<string>iPhone 5s (GSM)</string>
+				</dict>
+				<key>10</key>
+				<dict>
+					<key>board_name</key>
+					<string>J85AP</string>
+					<key>product_id</key>
+					<string>iPad4,4</string>
+					<key>product_name</key>
+					<string>iPad mini 2 (WiFi)</string>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>board_name</key>
+					<string>J86AP</string>
+					<key>product_id</key>
+					<string>iPad4,5</string>
+					<key>product_name</key>
+					<string>iPad mini 2 (Cellular)</string>
+				</dict>
+				<key>14</key>
+				<dict>
+					<key>board_name</key>
+					<string>J87AP</string>
+					<key>product_id</key>
+					<string>iPad4,6</string>
+					<key>product_name</key>
+					<string>iPad mini 2 (China)</string>
+				</dict>
+				<key>16</key>
+				<dict>
+					<key>board_name</key>
+					<string>J71AP</string>
+					<key>product_id</key>
+					<string>iPad4,1</string>
+					<key>product_name</key>
+					<string>iPad Air (WiFi)</string>
+				</dict>
+				<key>18</key>
+				<dict>
+					<key>board_name</key>
+					<string>J72AP</string>
+					<key>product_id</key>
+					<string>iPad4,2</string>
+					<key>product_name</key>
+					<string>iPad Air (Cellular)</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>board_name</key>
+					<string>N53AP</string>
+					<key>product_id</key>
+					<string>iPhone6,2</string>
+					<key>product_name</key>
+					<string>iPhone 5s (Global)</string>
+				</dict>
+				<key>20</key>
+				<dict>
+					<key>board_name</key>
+					<string>J73AP</string>
+					<key>product_id</key>
+					<string>iPad4,3</string>
+					<key>product_name</key>
+					<string>iPad Air (China)</string>
+				</dict>
+				<key>50</key>
+				<dict>
+					<key>board_name</key>
+					<string>J85mAP</string>
+					<key>product_id</key>
+					<string>iPad4,7</string>
+					<key>product_name</key>
+					<string>iPad mini 3 (WiFi)</string>
+				</dict>
+				<key>52</key>
+				<dict>
+					<key>board_name</key>
+					<string>J86mAP</string>
+					<key>product_id</key>
+					<string>iPad4,8</string>
+					<key>product_name</key>
+					<string>iPad mini 3 (Cellular)</string>
+				</dict>
+				<key>54</key>
+				<dict>
+					<key>board_name</key>
+					<string>J87mAP</string>
+					<key>product_id</key>
+					<string>iPad4,9</string>
+					<key>product_name</key>
+					<string>iPad mini 3 (China)</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>A7</string>
+			<key>name</key>
+			<string>s8960</string>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+		<key>65024</key>
+		<dict>
+			<key>architecture</key>
+			<string>armv8.4</string>
+			<key>boards</key>
+			<dict>
+				<key>32</key>
+				<dict>
+					<key>board_name</key>
+					<string>VMA2MACOSAP</string>
+					<key>product_id</key>
+					<string>VirtualMac2,1</string>
+					<key>product_name</key>
+					<string>Apple Virtual Machine 1</string>
+				</dict>
+			</dict>
+			<key>description</key>
+			<string>VMApple2</string>
+			<key>name</key>
+			<string>VMApple2</string>
+			<key>os</key>
+			<array>
+				<string>macOS</string>
+			</array>
+			<key>revisions</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>security_epoch</key>
+					<integer>1</integer>
+					<key>sha1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sha256</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>version</key>
+					<string>iBoot-</string>
+				</dict>
+			</dict>
+			<key>securerom</key>
+			<dict>
+				<key>demotion_reg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>memory_layout</key>
+				<dict>
+					<key>dfu_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dfu_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>dram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_image</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>recovery_load</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>rom</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sram</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>trampoline</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nonce</key>
+				<dict>
+					<key>ap_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>sep_length</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>credits</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>description</key>
+		<string>attributes about various Apple SoCs and Boards</string>
+	</dict>
+	<key>templates</key>
+	<array>
+		<dict>
+			<key>dfu_image_base</key>
+			<integer>6442450944</integer>
+			<key>dfu_load_base</key>
+			<integer>34359738368</integer>
+			<key>recovery_image_base</key>
+			<integer>6442450944</integer>
+			<key>recovery_load_base</key>
+			<integer>34359738368</integer>
+		</dict>
+		<dict>
+			<key>dfu_image_base</key>
+			<integer>872415232</integer>
+			<key>dfu_load_base</key>
+			<integer>2683305984</integer>
+			<key>recovery_image_base</key>
+			<integer>2683305984</integer>
+			<key>recovery_load_base</key>
+			<integer>2147483648</integer>
+		</dict>
+		<dict>
+			<key>dfu_image_base</key>
+			<integer>268435456</integer>
+			<key>dfu_load_base</key>
+			<integer>3220176896</integer>
+			<key>recovery_image_base</key>
+			<integer>3220176896</integer>
+			<key>recovery_load_base</key>
+			<integer>2147483648</integer>
+		</dict>
+		<dict>
+			<key>dfu_image_base</key>
+			<integer>1216446464</integer>
+			<key>dfu_load_base</key>
+			<integer>2147483648</integer>
+			<key>recovery_image_base</key>
+			<integer>1216446464</integer>
+			<key>recovery_load_base</key>
+			<integer>2147483648</integer>
+		</dict>
+		<dict>
+			<key>dfu_image_base</key>
+			<integer>6443171840</integer>
+			<key>dfu_load_base</key>
+			<integer>34359738368</integer>
+			<key>recovery_image_base</key>
+			<integer>6443171840</integer>
+			<key>recovery_load_base</key>
+			<integer>34359738368</integer>
+		</dict>
+		<dict>
+			<key>dfu_image_base</key>
+			<integer>6442565632</integer>
+			<key>dfu_load_base</key>
+			<integer>34359738368</integer>
+			<key>heap_base</key>
+			<integer>6444449792</integer>
+			<key>heap_offset</key>
+			<integer>20480</integer>
+			<key>page_offset</key>
+			<integer>1024</integer>
+			<key>recovery_image_base</key>
+			<integer>6442565632</integer>
+			<key>recovery_load_base</key>
+			<integer>34359738368</integer>
+			<key>trampoline_base</key>
+			<integer>6442549248</integer>
+			<key>trampoline_offset</key>
+			<integer>1568</integer>
+		</dict>
+		<dict>
+			<key>dfu_image_base</key>
+			<integer>6446120960</integer>
+			<key>dfu_load_base</key>
+			<integer>6442450944</integer>
+			<key>recovery_image_base</key>
+			<integer>35391500288</integer>
+			<key>recovery_load_base</key>
+			<integer>34359738368</integer>
+			<key>trampoline_base</key>
+			<integer>6443237376</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

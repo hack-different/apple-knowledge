@@ -1,0 +1,1310 @@
+---
+metadata:
+  description: Listing of known firmware types included in a restore package
+  credits:
+  - rickmark
+firmware_types:
+  ANE:
+    description: Apple Neural Engine
+    type: anef
+  ANS:
+    description: Apple NAND Storage
+    type: ansf
+    tipw_key_name: ANSF
+  AOP:
+    description:
+    type: aopf
+    tipw_key_name: AOPFirmware
+    filenames:
+    - aopfw.im4p
+    - aopfw-s8000aop.im4p
+    - aopfw-ipad6faop.im4p
+    - aopfw-ipad7aop.im4p
+  Ap,HapticAssets:
+    description:
+    type:
+    tipw_key_name: HapticAssets
+  Ap,Scorpius:
+    description:
+    type:
+    tipw_key_name: MConnector
+  AppleLogo:
+    type: logo
+    description: The Apple Logo
+    filenames:
+    - applelogo@2x~iphone.s5l8950x.img3
+    - applelogo@2x~iphone.s8003.im4p
+    - applelogo@2x~iphone.s5l8960x.im4p
+    - applelogo@2x~iphone.s8000.im4p
+    - applelogo@2x~ipad.im4p
+    - applelogo@2x~iphone.im4p
+    - applelogo@2x~ipad.s5l8955x.img3
+    - applelogo@3x~iphone.im4p
+    - applelogo@3x~iphone.t7000.im4p
+    - applelogo@3x~iphone.s8003.im4p
+    - applelogo@3x~iphone.s8000.im4p
+    - applelogo@2x~iphone.t7000.im4p
+    - applelogo@2x~ipad.s8000.im4p
+    - applelogo@2x~ipad.s8000.im4p
+    - applelogo@2x~ipad.s8003.im4p
+    - applelogo~appletv.im4p
+    - applelogo@2732~ipad.im4p
+    - applelogo@2224~ipad.im4p
+    - applelogo@2732~ipad.t8011.im4p
+    - applelogo@2224~ipad.t8011.im4p
+  AppleMaggie:
+    description:
+    type: magg
+  AudioCodecFirmware:
+    description:
+    type:
+  AVE:
+    description: Audio/Video Encryption
+    type: avef
+    tipw_key_name: AppleAVE
+  BasebandFirmware:
+    description: Baseband (Radios)
+    type: bbfw
+    filenames:
+    - Mav5-11.51.00.Release.bbfw
+    - Mav7Mav8-7.51.00.Release.bbfw
+    - Mav5-11.50.00.Release.bbfw
+    - Mav7Mav8-7.50.01.Release.bbfw
+    - Mav5-11.60.00.Release.bbfw
+    - Mav7Mav8-7.60.00.Release.bbfw
+    - Mav10-5.62.00.Release.bbfw
+    - Mav7Mav8-8.01.00.Release.bbfw
+    - Mav10-6.17.00.Release.bbfw
+    - Mav5-11.00.02.Release.bbfw
+    - Mav5-11.01.00.Release.bbfw
+    - Mav5-11.20.00.Release.bbfw
+    - Mav5-11.21.00.Release.bbfw
+    - Mav7Mav8-8.30.01.Release.bbfw
+    - Mav7Mav8-8.00.04.Release.bbfw
+    - Mav7Mav8-8.55.00.Release.bbfw
+    - Mav10-6.16.01.Release.bbfw
+    - Mav7Mav8-8.30.00.Release.bbfw
+    - Mav10-6.30.03.Release.bbfw
+    - Mav10-6.30.04.Release.bbfw
+    - Mav7Mav8-8.54.00.Release.bbfw
+    - Mav10-6.54.01.Release.bbfw
+    - Mav10-6.55.00.Release.bbfw
+    - Mav13-4.00.01.Release.bbfw
+    - Mav13-4.30.02.Release.bbfw
+    - Mav13-4.56.00.Release.bbfw
+    - Mav10-5.24.00.Release.bbfw
+    - Mav13-2.30.00.Release.bbfw
+    - Mav10-5.26.00.Release.bbfw
+    - Mav13-2.36.00.Release.bbfw
+    - Mav10-5.32.00.Release.bbfw
+    - Mav13-2.41.00.Release.bbfw
+    - Mav10-5.51.00.Release.bbfw
+    - Mav13-2.54.00.Release.bbfw
+    - Mav13-2.61.00.Release.bbfw
+    - Mav10-5.60.00.Release.bbfw
+    - Mav10-5.60.01.Release.bbfw
+    - Mav10-5.70.00.Release.bbfw
+    - Mav10-6.16.00.Release.bbfw
+    - Mav10-6.11.01.Release.bbfw
+    - Mav10-6.14.00.Release.bbfw
+    - Mav10-5.25.00.Release.bbfw
+    - Mav13-2.35.00.Release.bbfw
+    - Mav10-5.30.03.Release.bbfw
+    - Mav13-2.40.04.Release.bbfw
+    - Mav10-5.48.00.Release.bbfw
+    - Mav13-2.52.04.Release.bbfw
+    - Mav13-2.52.06.Release.bbfw
+    - Mav10-5.49.01.Release.bbfw
+    - Mav13-2.52.07.Release.bbfw
+    - Mav10-5.50.00.Release.bbfw
+    - Mav13-2.53.00.Release.bbfw
+    - Mav13-2.60.00.Release.bbfw
+    - Mav13-2.70.00.Release.bbfw
+    - Mav13-3.08.00.Release.bbfw
+    - Mav13-3.11.00.Release.bbfw
+    - Mav13-3.13.00.Release.bbfw
+    - Mav13-3.13.02.Release.bbfw
+    - Mav13-4.00.00.Release.bbfw
+    - Mav13-4.20.00.Release.bbfw
+    - Mav13-4.30.01.Release.bbfw
+    - Mav13-4.55.01.Release.bbfw
+    - Mav7Mav8-7.70.00.Release.bbfw
+    - Mav10-9.00.01.Release.bbfw
+    - vinyl_02_Mav16-3.66.00.Release.bbfw
+    - Mav16-3.42.00.Release.bbfw
+    - Mav16-3.21.01.Release.bbfw
+    - Mav16-3.00.00.Release.bbfw
+    - Mav16-1.91.00.Release.bbfw
+    - Mav16-1.81.01.Release.bbfw
+  BatteryCharging0:
+    description:
+    type:
+    filenames:
+    - batterycharging0@2x~iphone.s5l8950x.img3
+    - batterycharging0@2x~iphone.s8003.im4p
+    - batterycharging0@2x~iphone.s5l8960x.im4p
+    - batterycharging0@2x~iphone.s8000.im4p
+    - batterycharging0@2x~ipad.im4p
+    - batterycharging0@2x~iphone.im4p
+    - batterycharging0@2x~ipad.s5l8955x.img3
+    - batterycharging0@3x~iphone.im4p
+    - batterycharging0@3x~iphone.t7000.im4p
+    - batterycharging0@3x~iphone.s8003.im4p
+    - batterycharging0@3x~iphone.s8000.im4p
+    - batterycharging0@2x~iphone.t7000.im4p
+    - batterycharging0@2x~ipad.s8000.im4p
+    - batterycharging0@2x~ipad.s8003.im4p
+    - batterycharging0@2732~ipad.im4p
+    - batterycharging0@2224~ipad.im4p
+    - batterycharging0@2732~ipad.t8011.im4p
+    - batterycharging0@2224~ipad.t8011.im4p
+  BatteryCharging1:
+    description:
+    type:
+    filenames:
+    - batterycharging1@2x~iphone.s5l8950x.img3
+    - batterycharging1@2x~iphone.s8003.im4p
+    - batterycharging1@2x~iphone.s5l8960x.im4p
+    - batterycharging1@2x~iphone.s8000.im4p
+    - batterycharging1@2x~ipad.im4p
+    - batterycharging1@2x~iphone.im4p
+    - batterycharging1@2x~ipad.s5l8955x.img3
+    - batterycharging1@3x~iphone.im4p
+    - batterycharging1@3x~iphone.t7000.im4p
+    - batterycharging1@3x~iphone.s8003.im4p
+    - batterycharging1@3x~iphone.s8000.im4p
+    - batterycharging1@2x~iphone.t7000.im4p
+    - batterycharging1@2x~ipad.s8000.im4p
+    - batterycharging1@2x~ipad.s8003.im4p
+    - batterycharging1@2732~ipad.im4p
+    - batterycharging1@2224~ipad.im4p
+    - batterycharging1@2732~ipad.t8011.im4p
+    - batterycharging1@2224~ipad.t8011.im4p
+  BatteryFull:
+    description:
+    type:
+    filenames:
+    - batteryfull@2x~iphone.s5l8950x.img3
+    - batteryfull@2x~iphone.s8003.im4p
+    - batteryfull@2x~iphone.s5l8960x.im4p
+    - batteryfull@2x~iphone.s8000.im4p
+    - batteryfull@2x~ipad.im4p
+    - batteryfull@2x~iphone.im4p
+    - batteryfull@2x~ipad.s5l8955x.img3
+    - batteryfull@3x~iphone.im4p
+    - batteryfull@3x~iphone.t7000.im4p
+    - batteryfull@3x~iphone.s8003.im4p
+    - batteryfull@3x~iphone.s8000.im4p
+    - batteryfull@2x~iphone.t7000.im4p
+    - batteryfull@2x~ipad.s8000.im4p
+    - batteryfull@2x~ipad.s8003.im4p
+    - batteryfull@2732~ipad.im4p
+    - batteryfull@2224~ipad.im4p
+    - batteryfull@2732~ipad.t8011.im4p
+    - batteryfull@2224~ipad.t8011.im4p
+  BatteryLow0:
+    description:
+    type:
+    filenames:
+    - batterylow0@2x~iphone.s5l8950x.img3
+    - batterylow0@2x~iphone.s8003.im4p
+    - batterylow0@2x~iphone.s5l8960x.im4p
+    - batterylow0@2x~iphone.s8000.im4p
+    - batterylow0@2x~ipad.im4p
+    - batterylow0@2x~iphone.im4p
+    - batterylow0@2x~ipad.s5l8955x.img3
+    - batterylow0@3x~iphone.im4p
+    - batterylow0@3x~iphone.t7000.im4p
+    - batterylow0@3x~iphone.s8003.im4p
+    - batterylow0@3x~iphone.s8000.im4p
+    - batterylow0@2x~iphone.t7000.im4p
+    - batterylow0@2x~ipad.s8000.im4p
+    - batterylow0@2x~ipad.s8003.im4p
+    - batterylow0@2732~ipad.im4p
+    - batterylow0@2224~ipad.im4p
+    - batterylow0@2732~ipad.t8011.im4p
+    - batterylow0@2224~ipad.t8011.im4p
+  BatteryLow1:
+    description:
+    type:
+    filenames:
+    - batterylow1@2x~iphone.s5l8950x.img3
+    - batterylow1@2x~iphone.s8003.im4p
+    - batterylow1@2x~iphone.s5l8960x.im4p
+    - batterylow1@2x~iphone.s8000.im4p
+    - batterylow1@2x~ipad.im4p
+    - batterylow1@2x~iphone.im4p
+    - batterylow1@2x~ipad.s5l8955x.img3
+    - batterylow1@3x~iphone.im4p
+    - batterylow1@3x~iphone.t7000.im4p
+    - batterylow1@3x~iphone.s8003.im4p
+    - batterylow1@3x~iphone.s8000.im4p
+    - batterylow1@2x~iphone.t7000.im4p
+    - batterylow1@2x~ipad.s8000.im4p
+    - batterylow1@2x~ipad.s8003.im4p
+    - batterylow1@2732~ipad.im4p
+    - batterylow1@2224~ipad.im4p
+    - batterylow1@2732~ipad.t8011.im4p
+    - batterylow1@2224~ipad.t8011.im4p
+  BatteryPlugin:
+    description:
+    type:
+    filenames:
+    - glyphplugin@1136~iphone-lightning.s5l8950x.img3
+    - glyphplugin@1136~iphone-lightning.s8003.im4p
+    - glyphplugin@1136~iphone-lightning.s5l8960x.im4p
+    - glyphplugin@1136~iphone-lightning.s8000.im4p
+    - glyphplugin@2x~ipad-lightning.im4p
+    - glyphplugin@1136~iphone-lightning.im4p
+    - glyphplugin@2x~ipad-lightning.s5l8955x.img3
+    - glyphplugin@1334~iphone-lightning.im4p
+    - glyphplugin@1920~iphone-lightning.im4p
+    - glyphplugin@1920~iphone-lightning.t7000.im4p
+    - glyphplugin@1920~iphone-lightning.s8003.im4p
+    - glyphplugin@1920~iphone-lightning.s8000.im4p
+    - glyphplugin@1334~iphone-lightning.t7000.im4p
+    - glyphplugin@1334~iphone-lightning.s8003.im4p
+    - glyphplugin@1334~iphone-lightning.s8000.im4p
+    - glyphplugin@2x~ipad-lightning.s8000.im4p
+    - glyphplugin@2x~ipad-lightning.s8003.im4p
+    - glyphplugin@2732~ipad-lightning.im4p
+    - glyphplugin@2224~ipad-lightning.im4p
+    - glyphplugin@2732~ipad-lightning.t8011.im4p
+    - glyphplugin@2224~ipad-lightning.t8011.im4p
+  DeviceTree:
+    description: Normal mode device tree
+    type: dtre
+    filenames:
+    - DeviceTree.n42ap.img3
+    - DeviceTree.n49ap.img3
+    - DeviceTree.n41ap.img3
+    - DeviceTree.n48ap.img3
+    - DeviceTree.n69ap.im4p
+    - DeviceTree.n53ap.im4p
+    - DeviceTree.n51ap.im4p
+    - DeviceTree.n69uap.im4p
+    - DeviceTree.j85ap.im4p
+    - DeviceTree.j73ap.im4p
+    - DeviceTree.j72ap.im4p
+    - DeviceTree.j71ap.im4p
+    - DeviceTree.j87ap.im4p
+    - DeviceTree.j86ap.im4p
+    - DeviceTree.j86map.im4p
+    - DeviceTree.j82ap.im4p
+    - DeviceTree.j81ap.im4p
+    - DeviceTree.j85map.im4p
+    - DeviceTree.j97ap.im4p
+    - DeviceTree.j87map.im4p
+    - DeviceTree.j96ap.im4p
+    - DeviceTree.p102ap.img3
+    - DeviceTree.p103ap.img3
+    - DeviceTree.p101ap.img3
+    - DeviceTree.n71map.im4p
+    - DeviceTree.n71ap.im4p
+    - DeviceTree.n61ap.im4p
+    - DeviceTree.n66map.im4p
+    - DeviceTree.n66ap.im4p
+    - DeviceTree.n56ap.im4p
+    - DeviceTree.j72sap.im4p
+    - DeviceTree.j71sap.im4p
+    - DeviceTree.j72tap.im4p
+    - DeviceTree.j71tap.im4p
+    - DeviceTree.n102ap.im4p
+    - DeviceTree.j42dap.im4p
+    - DeviceTree.j120ap.im4p
+    - DeviceTree.j121ap.im4p
+    - DeviceTree.j207ap.im4p
+    - DeviceTree.j208ap.im4p
+  ftap:
+    description:
+    type:
+  ftsp:
+    description:
+    type:
+  GFX:
+    description: Graphics Firmware
+    type:
+    tipw_key_name: ARMFW
+  Homer:
+    description:
+    type: homr
+  iBEC:
+    description: iBoot Epoch Change
+    type: ibec
+    filenames:
+    - iBEC.iphone5.RELEASE.dfu
+    - iBEC.iphone5b.RELEASE.dfu
+    - iBEC.n69.RELEASE.im4p
+    - iBEC.iphone6.RELEASE.im4p
+    - iBEC.n69u.RELEASE.im4p
+    - iBEC.ipad4b.RELEASE.im4p
+    - iBEC.ipad4.RELEASE.im4p
+    - iBEC.ipad4bm.RELEASE.im4p
+    - iBEC.ipad5b.RELEASE.im4p
+    - iBEC.ipad5.RELEASE.im4p
+    - iBEC.p102.RELEASE.dfu
+    - iBEC.p103.RELEASE.dfu
+    - iBEC.p101.RELEASE.dfu
+    - iBEC.n71m.RELEASE.im4p
+    - iBEC.n71.RELEASE.im4p
+    - iBEC.n61.RELEASE.im4p
+    - iBEC.n66m.RELEASE.im4p
+    - iBEC.n66.RELEASE.im4p
+    - iBEC.n56.RELEASE.im4p
+    - iBEC.ipad6f.RELEASE.im4p
+    - iBEC.j72t.RELEASE.im4p
+    - iBEC.j71t.RELEASE.im4p
+    - iBEC.n102.RELEASE.im4p
+    - iBEC.j42d.RELEASE.im4p
+    - iBEC.j120.RELEASE.im4p
+    - iBEC.j207.RELEASE.im4p
+  iBoot:
+    description: iBoot
+    type: ibot
+    filenames:
+    - iBoot.iphone5.RELEASE.img3
+    - iBoot.iphone5b.RELEASE.img3
+    - iBoot.n69.RELEASE.im4p
+    - iBoot.iphone6.RELEASE.im4p
+    - iBoot.n69u.RELEASE.im4p
+    - iBoot.ipad4b.RELEASE.im4p
+    - iBoot.ipad4.RELEASE.im4p
+    - iBoot.ipad4bm.RELEASE.im4p
+    - iBoot.ipad5b.RELEASE.im4p
+    - iBoot.ipad5.RELEASE.im4p
+    - iBoot.p102.RELEASE.img3
+    - iBoot.p103.RELEASE.img3
+    - iBoot.p101.RELEASE.img3
+    - iBoot.n71m.RELEASE.im4p
+    - iBoot.n71.RELEASE.im4p
+    - iBoot.n61.RELEASE.im4p
+    - iBoot.n66m.RELEASE.im4p
+    - iBoot.n66.RELEASE.im4p
+    - iBoot.n56.RELEASE.im4p
+    - iBoot.ipad6f.RELEASE.im4p
+    - iBoot.j72t.RELEASE.im4p
+    - iBoot.j71t.RELEASE.im4p
+    - iBoot.n102.RELEASE.im4p
+    - iBoot.j42d.RELEASE.im4p
+    - iBoot.j120.RELEASE.im4p
+    - iBoot.j207.RELEASE.im4p
+  iBootData:
+    description: iBoot Data
+    type: ibdt
+  iBSS:
+    description: iBoot Second Stage
+    type: ibss
+    filenames:
+    - iBSS.iphone5.RELEASE.dfu
+    - iBSS.iphone5b.RELEASE.dfu
+    - iBSS.n69.RELEASE.im4p
+    - iBSS.iphone6.RELEASE.im4p
+    - iBSS.n69u.RELEASE.im4p
+    - iBSS.ipad4b.RELEASE.im4p
+    - iBSS.ipad4.RELEASE.im4p
+    - iBSS.ipad4bm.RELEASE.im4p
+    - iBSS.ipad5b.RELEASE.im4p
+    - iBSS.ipad5.RELEASE.im4p
+    - iBSS.p102.RELEASE.dfu
+    - iBSS.p103.RELEASE.dfu
+    - iBSS.p101.RELEASE.dfu
+    - iBSS.n71m.RELEASE.im4p
+    - iBSS.n71.RELEASE.im4p
+    - iBSS.n61.RELEASE.im4p
+    - iBSS.n66m.RELEASE.im4p
+    - iBSS.n66.RELEASE.im4p
+    - iBSS.n56.RELEASE.im4p
+    - iBSS.ipad6f.RELEASE.im4p
+    - iBSS.j72t.RELEASE.im4p
+    - iBSS.j71t.RELEASE.im4p
+    - iBSS.n102.RELEASE.im4p
+    - iBSS.j42d.RELEASE.im4p
+    - iBSS.j120.RELEASE.im4p
+    - iBSS.j207.RELEASE.im4p
+  KernelCache:
+    description:
+    type: krnl
+    tipw_key_name: Kernelcache
+    filenames:
+    - kernelcache.release.iphone5
+    - kernelcache.release.iphone5b
+    - kernelcache.release.iphone8b
+    - kernelcache.release.iphone6
+    - kernelcache.release.ipad4b
+    - kernelcache.release.ipad4
+    - kernelcache.release.ipad4bm
+    - kernelcache.release.ipad5b
+    - kernelcache.release.ipad5
+    - kernelcache.release.p102
+    - kernelcache.release.p103
+    - kernelcache.release.p101
+    - kernelcache.release.n71
+    - kernelcache.release.iphone7
+    - kernelcache.release.n66
+    - kernelcache.release.n56
+    - kernelcache.release.n66m
+    - kernelcache.release.n61
+    - kernelcache.release.n71m
+    - kernelcache.release.ipad6f
+    - kernelcache.release.n69
+    - kernelcache.release.n69u
+    - kernelcache.release.n102
+    - kernelcache.release.j42d
+    - kernelcache.release.ipad7
+  Liquid:
+    description:
+    type:
+    tipw_key_name: LiquidDetect
+  LLB:
+    description: Low Level Boot (iBoot)
+    type: illb
+    filenames:
+    - LLB.iphone5.RELEASE.img3
+    - LLB.iphone5b.RELEASE.img3
+    - LLB.n69.RELEASE.im4p
+    - LLB.iphone6.RELEASE.im4p
+    - LLB.n69u.RELEASE.im4p
+    - LLB.ipad4b.RELEASE.im4p
+    - LLB.ipad4.RELEASE.im4p
+    - LLB.ipad4bm.RELEASE.im4p
+    - LLB.ipad5b.RELEASE.im4p
+    - LLB.ipad5.RELEASE.im4p
+    - LLB.p102.RELEASE.img3
+    - LLB.p103.RELEASE.img3
+    - LLB.p101.RELEASE.img3
+    - LLB.n71m.RELEASE.im4p
+    - LLB.n71.RELEASE.im4p
+    - LLB.n61.RELEASE.im4p
+    - LLB.n66m.RELEASE.im4p
+    - LLB.n66.RELEASE.im4p
+    - LLB.n56.RELEASE.im4p
+    - LLB.ipad6f.RELEASE.im4p
+    - LLB.j72t.RELEASE.im4p
+    - LLB.j71t.RELEASE.im4p
+    - LLB.n102.RELEASE.im4p
+    - LLB.j42d.RELEASE.im4p
+    - LLB.j120.RELEASE.im4p
+    - LLB.j207.RELEASE.im4p
+  LowPowerWallet0:
+    description:
+    type:
+    tipw_key_name: LowPowerMode
+  LowPowerWallet1:
+    description:
+    type:
+    tipw_key_name: LowPowerFindMyMode
+  OS:
+    description:
+    type:
+    tipw_key_name: RootFS
+    filenames:
+    - '058-73953-011.dmg'
+    - '058-74314-014.dmg'
+    - '058-74314-017.dmg'
+    - '058-74279-020.dmg'
+    - '058-74314-023.dmg'
+    - '058-45552-478.dmg'
+    - '058-88752-040.dmg'
+    - '058-70297-264.dmg'
+    - '058-52327-060.dmg'
+    - '058-52327-072.dmg'
+    - '058-52327-076.dmg'
+    - '058-62858-016.dmg'
+    - '058-62858-020.dmg'
+    - '058-62858-024.dmg'
+    - '058-45552-481.dmg'
+    - '058-94682-064.dmg'
+    - '048-02503-020.dmg'
+    - '058-90613-034.dmg'
+    - '058-89609-016.dmg'
+    - '048-02503-014.dmg'
+    - '058-97295-127.dmg'
+    - '058-86080-130.dmg'
+    - '058-45552-484.dmg'
+    - '058-45552-483.dmg'
+    - '058-84862-096.dmg'
+    - '058-84862-098.dmg'
+    - '058-84862-099.dmg'
+    - '058-86080-124.dmg'
+    - '058-86080-127.dmg'
+    - '058-89516-016.dmg'
+    - '058-89516-024.dmg'
+    - '058-89609-024.dmg'
+    - '058-89516-027.dmg'
+    - '058-89609-027.dmg'
+    - '058-84862-095.dmg'
+    - '058-88777-068.dmg'
+    - '058-90759-026.dmg'
+    - '058-90613-026.dmg'
+    - '058-90613-030.dmg'
+    - '058-90759-030.dmg'
+    - '058-90613-038.dmg'
+    - '058-90759-038.dmg'
+    - '058-90759-039.dmg'
+    - '058-90613-039.dmg'
+    - '048-02252-011.dmg'
+    - '048-02503-011.dmg'
+    - '048-02503-013.dmg'
+    - '048-02252-013.dmg'
+    - '048-02252-014.dmg'
+    - '048-02252-016.dmg'
+    - '048-02503-016.dmg'
+    - '048-02503-017.dmg'
+    - '048-02252-017.dmg'
+    - '048-02252-020.dmg'
+    - '048-04691-046.dmg'
+    - '048-04514-045.dmg'
+    - '048-04514-051.dmg'
+    - '048-04691-052.dmg'
+    - '058-89502-016.dmg'
+    - '058-89502-024.dmg'
+    - '058-89502-027.dmg'
+    - '058-84705-095.dmg'
+    - '058-90731-030.dmg'
+    - '058-90731-038.dmg'
+    - '048-02322-011.dmg'
+    - '048-02322-013.dmg'
+    - '048-02322-014.dmg'
+    - '048-02322-016.dmg'
+    - '048-02322-020.dmg'
+    - '048-04708-049.dmg'
+    - '048-04708-051.dmg'
+    - '048-04691-050.dmg'
+    - '058-45615-478.dmg'
+    - '058-45615-481.dmg'
+    - '058-45615-483.dmg'
+    - '058-45615-487.dmg'
+    - '058-84586-097.dmg'
+    - '058-84586-099.dmg'
+    - '058-84586-100.dmg'
+    - '058-85719-124.dmg'
+    - '058-85719-129.dmg'
+    - '058-85719-132.dmg'
+    - '058-94803-065.dmg'
+    - '058-97232-127.dmg'
+    - '058-45584-478.dmg'
+    - '058-45584-481.dmg'
+    - '058-45584-483.dmg'
+    - '058-45584-484.dmg'
+    - '058-84846-096.dmg'
+    - '058-84846-099.dmg'
+    - '058-84846-098.dmg'
+    - '058-86124-125.dmg'
+    - '058-86124-130.dmg'
+    - '058-86124-133.dmg'
+    - '058-95345-064.dmg'
+    - '058-96998-126.dmg'
+    - '058-70297-267.dmg'
+    - '058-70297-269.dmg'
+    - '058-70297-270.dmg'
+    - '058-84705-096.dmg'
+    - '058-84705-098.dmg'
+    - '058-84705-099.dmg'
+    - '058-86088-125.dmg'
+    - '058-86088-130.dmg'
+    - '058-86088-133.dmg'
+    - '058-95294-064.dmg'
+    - '058-97190-126.dmg'
+    - '058-41226-210.dmg'
+    - '058-41249-210.dmg'
+    - '058-41249-217.dmg'
+    - '058-51823-077.dmg'
+    - '058-51823-078.dmg'
+    - '058-51823-079.dmg'
+    - '058-54986-095.dmg'
+    - '058-67253-028.dmg'
+    - '058-41578-311.dmg'
+    - '058-41578-314.dmg'
+    - '058-75017-062.dmg'
+    - '058-41226-217.dmg'
+    - '058-51105-077.dmg'
+    - '058-51105-078.dmg'
+    - '058-54339-094.dmg'
+    - '058-66993-028.dmg'
+    - '058-41328-325.dmg'
+    - '058-41328-328.dmg'
+    - '058-69079-072.dmg'
+    - '058-69079-075.dmg'
+    - '058-79622-053.dmg'
+    - '058-88746-039.dmg'
+    - '058-88746-042.dmg'
+    - '058-88746-044.dmg'
+    - '058-88746-045.dmg'
+    - '058-88767-069.dmg'
+    - '058-88767-071.dmg'
+    - '058-88767-072.dmg'
+    - '058-88789-097.dmg'
+    - '058-88789-100.dmg'
+    - '058-88789-103.dmg'
+    - '058-97650-127.dmg'
+    - '058-94689-064.dmg'
+    - '058-74903-003.dmg'
+    - '058-74903-009.dmg'
+    - '058-74903-012.dmg'
+    - '058-74903-015.dmg'
+    - '058-74903-018.dmg'
+    - '058-82465-004.dmg'
+    - '058-82465-009.dmg'
+    - '058-82465-016.dmg'
+    - '058-82465-020.dmg'
+    - '058-82465-021.dmg'
+    - '058-79622-051.dmg'
+    - '058-83614-051.dmg'
+    - '058-83614-034.dmg'
+    - '058-83614-043.dmg'
+    - '058-88862-007.dmg'
+    - '058-88862-010.dmg'
+    - '058-88862-015.dmg'
+    - '058-88862-020.dmg'
+    - '058-88862-022.dmg'
+    - '058-88862-025.dmg'
+    - '058-89881-016.dmg'
+    - '058-89881-024.dmg'
+    - '058-89881-027.dmg'
+    - '058-90712-026.dmg'
+    - '058-90712-030.dmg'
+    - '058-90712-034.dmg'
+    - '058-90712-038.dmg'
+    - '058-90712-039.dmg'
+    - '058-88767-068.dmg'
+    - '058-83614-033.dmg'
+    - '048-02192-011.dmg'
+    - '048-02192-013.dmg'
+    - '048-02192-014.dmg'
+    - '048-02192-016.dmg'
+    - '048-02192-017.dmg'
+    - '048-02192-020.dmg'
+    - '048-04730-045.dmg'
+    - '048-04730-049.dmg'
+    - '048-04730-051.dmg'
+    - '058-52111-060.dmg'
+    - '058-52111-072.dmg'
+    - '058-52111-076.dmg'
+    - '058-62923-016.dmg'
+    - '058-62923-020.dmg'
+    - '058-62923-024.dmg'
+    - '058-54986-087.dmg'
+    - '058-54986-092.dmg'
+    - '058-54986-093.dmg'
+    - '058-67253-011.dmg'
+    - '058-67253-016.dmg'
+    - '058-67253-024.dmg'
+    - '058-68409-027.dmg'
+    - '058-68409-034.dmg'
+    - '058-68409-042.dmg'
+    - '058-73958-002.dmg'
+    - '058-73958-008.dmg'
+    - '058-73958-011.dmg'
+    - '058-74329-008.dmg'
+    - '058-74329-014.dmg'
+    - '058-74329-017.dmg'
+    - '058-74329-020.dmg'
+    - '058-74329-023.dmg'
+    - '058-82605-004.dmg'
+    - '058-82605-009.dmg'
+    - '058-82605-018.dmg'
+    - '058-82605-022.dmg'
+    - '058-82605-023.dmg'
+    - '058-75017-059.dmg'
+    - '058-76196-056.dmg'
+    - '058-76196-066.dmg'
+    - '058-76196-075.dmg'
+    - '058-76196-083.dmg'
+    - '058-76196-086.dmg'
+    - '058-76196-091.dmg'
+    - '058-76196-096.dmg'
+    - '058-76196-101.dmg'
+    - '058-76196-098.dmg'
+    - '058-89500-016.dmg'
+    - '058-89500-024.dmg'
+    - '058-89500-027.dmg'
+    - '058-90867-026.dmg'
+    - '058-90867-030.dmg'
+    - '058-90867-034.dmg'
+    - '058-90867-038.dmg'
+    - '058-90867-039.dmg'
+    - '058-84586-096.dmg'
+    - '048-02298-011.dmg'
+    - '048-02298-013.dmg'
+    - '048-02298-014.dmg'
+    - '048-02298-016.dmg'
+    - '048-02298-017.dmg'
+    - '048-02298-020.dmg'
+    - '048-04196-045.dmg'
+    - '048-04196-049.dmg'
+    - '048-04196-051.dmg'
+    - '058-52403-061.dmg'
+    - '058-52403-073.dmg'
+    - '058-52403-077.dmg'
+    - '058-62966-016.dmg'
+    - '058-62966-020.dmg'
+    - '058-62966-024.dmg'
+    - '058-54339-086.dmg'
+    - '058-54339-091.dmg'
+    - '058-54339-092.dmg'
+    - '058-66993-011.dmg'
+    - '058-66993-016.dmg'
+    - '058-66993-024.dmg'
+    - '058-68359-027.dmg'
+    - '058-68359-034.dmg'
+    - '058-68359-042.dmg'
+    - '058-73960-002.dmg'
+    - '058-73960-008.dmg'
+    - '058-73960-011.dmg'
+    - '058-74242-008.dmg'
+    - '058-74242-014.dmg'
+    - '058-74242-017.dmg'
+    - '058-74242-020.dmg'
+    - '058-74242-023.dmg'
+    - '058-82315-004.dmg'
+    - '058-82315-009.dmg'
+    - '058-82315-018.dmg'
+    - '058-82315-022.dmg'
+    - '058-82315-023.dmg'
+    - '058-75287-059.dmg'
+    - '058-76232-056.dmg'
+    - '058-76232-066.dmg'
+    - '058-76232-074.dmg'
+    - '058-76232-082.dmg'
+    - '058-76232-085.dmg'
+    - '058-76232-090.dmg'
+    - '058-76232-095.dmg'
+    - '058-76232-097.dmg'
+    - '058-76232-100.dmg'
+    - '058-89794-016.dmg'
+    - '058-89794-024.dmg'
+    - '058-89794-027.dmg'
+    - '058-84846-095.dmg'
+    - '058-90992-026.dmg'
+    - '058-90992-030.dmg'
+    - '058-90992-034.dmg'
+    - '058-90992-038.dmg'
+    - '058-90992-039.dmg'
+    - '048-04607-051.dmg'
+    - '048-02270-011.dmg'
+    - '048-02270-013.dmg'
+    - '048-02270-014.dmg'
+    - '048-02270-016.dmg'
+    - '048-02270-017.dmg'
+    - '048-02270-020.dmg'
+    - '048-04607-045.dmg'
+    - '048-04607-049.dmg'
+    - '058-76243-056.dmg'
+    - '058-76243-057.dmg'
+    - '058-76243-066.dmg'
+    - '058-76243-074.dmg'
+    - '058-76243-082.dmg'
+    - '058-76243-085.dmg'
+    - '058-76243-090.dmg'
+    - '058-76243-095.dmg'
+    - '058-76243-097.dmg'
+    - '058-76243-100.dmg'
+    - '058-90731-026.dmg'
+    - '058-90731-034.dmg'
+    - '058-90731-039.dmg'
+    - '048-02322-017.dmg'
+    - '048-04708-045.dmg'
+    - '058-21724-438.dmg'
+    - '058-21724-445.dmg'
+    - '058-50621-077.dmg'
+    - '058-50621-078.dmg'
+    - '058-50621-079.dmg'
+    - '058-54949-094.dmg'
+    - '058-67114-028.dmg'
+    - '058-67581-067.dmg'
+    - '058-67581-070.dmg'
+    - '058-74917-062.dmg'
+    - '058-52451-060.dmg'
+    - '058-52451-072.dmg'
+    - '058-52451-076.dmg'
+    - '058-63022-016.dmg'
+    - '058-63022-020.dmg'
+    - '058-63022-024.dmg'
+    - '058-54949-086.dmg'
+    - '058-54949-091.dmg'
+    - '058-54949-092.dmg'
+    - '058-67114-011.dmg'
+    - '058-67114-016.dmg'
+    - '058-67114-024.dmg'
+    - '058-70337-022.dmg'
+    - '058-70337-029.dmg'
+    - '058-70337-037.dmg'
+    - '058-73952-002.dmg'
+    - '058-73952-008.dmg'
+    - '058-73952-011.dmg'
+    - '058-74279-008.dmg'
+    - '058-74279-014.dmg'
+    - '058-74279-017.dmg'
+    - '058-74314-020.dmg'
+    - '058-74279-023.dmg'
+    - '058-82161-004.dmg'
+    - '058-82161-009.dmg'
+    - '058-82161-018.dmg'
+    - '058-82161-022.dmg'
+    - '058-82161-023.dmg'
+    - '058-74917-059.dmg'
+    - '058-97413-127.dmg'
+    - '058-45574-478.dmg'
+    - '058-45574-481.dmg'
+    - '058-45574-483.dmg'
+    - '058-45574-484.dmg'
+    - '058-84501-097.dmg'
+    - '058-84501-099.dmg'
+    - '058-84501-100.dmg'
+    - '058-85967-124.dmg'
+    - '058-85967-127.dmg'
+    - '058-85967-130.dmg'
+    - '058-95101-064.dmg'
+    - '048-95869-019.dmg'
+    - '058-86508-084.dmg'
+    - '058-97588-126.dmg'
+    - '058-94973-065.dmg'
+    - '058-85986-130.dmg'
+    - '058-85986-127.dmg'
+    - '058-85986-124.dmg'
+    - '058-84665-100.dmg'
+    - '058-84665-099.dmg'
+    - '058-84665-098.dmg'
+    - '058-78202-160.dmg'
+    - '058-78202-159.dmg'
+    - '058-78202-157.dmg'
+    - '058-78202-154.dmg'
+    - '058-78225-040.dmg'
+    - '058-70532-087.dmg'
+    - '058-78236-040.dmg'
+    - '058-70758-087.dmg'
+    - '058-97468-126.dmg'
+    - '058-94970-064.dmg'
+    - '058-88788-103.dmg'
+    - '058-88788-100.dmg'
+    - '058-88788-097.dmg'
+    - '058-88777-072.dmg'
+    - '058-88777-071.dmg'
+    - '058-88777-069.dmg'
+    - '058-88752-046.dmg'
+    - '058-88752-045.dmg'
+    - '058-88752-043.dmg'
+  RecoveryMode:
+    description: Image showing "connect to iTunes"
+    type:
+    filenames:
+    - recoverymode@1136~iphone-lightning.s5l8950x.img3
+    - recoverymode@1136~iphone-lightning.s8003.im4p
+    - recoverymode@1136~iphone-lightning.s5l8960x.im4p
+    - recoverymode@1136~iphone-lightning.s8000.im4p
+    - recoverymode@2x~ipad-lightning.im4p
+    - recoverymode@1136~iphone-lightning.im4p
+    - recoverymode@2x~ipad-lightning.s5l8955x.img3
+    - recoverymode@1334~iphone-lightning.im4p
+    - recoverymode@1920~iphone-lightning.im4p
+    - recoverymode@1920~iphone-lightning.t7000.im4p
+    - recoverymode@1920~iphone-lightning.s8003.im4p
+    - recoverymode@1920~iphone-lightning.s8000.im4p
+    - recoverymode@1334~iphone-lightning.t7000.im4p
+    - recoverymode@1334~iphone-lightning.s8003.im4p
+    - recoverymode@1334~iphone-lightning.s8000.im4p
+    - recoverymode@2x~ipad-lightning.s8000.im4p
+    - recoverymode@2x~ipad-lightning.s8003.im4p
+    - recoverymode@1136~ipod-lightning.im4p
+    - recoverymode@1080~appletv5.im4p
+    - recoverymode@2732~ipad-lightning.im4p
+    - recoverymode@2224~ipad-lightning.im4p
+    - recoverymode@2732~ipad-lightning.t8011.im4p
+    - recoverymode@2224~ipad-lightning.t8011.im4p
+  RestoreANS:
+    description: Restore Apple NAND Storage
+    type: rans
+    tipw_key_name: RANS
+  RestoreDeviceTree:
+    description: DeviceTree that is used when booted into Restore mode (via DFU/recovery)
+    type:
+    filenames:
+    - DeviceTree.n42ap.img3
+    - DeviceTree.n49ap.img3
+    - DeviceTree.n41ap.img3
+    - DeviceTree.n48ap.img3
+    - DeviceTree.n69ap.im4p
+    - DeviceTree.n53ap.im4p
+    - DeviceTree.n51ap.im4p
+    - DeviceTree.n69uap.im4p
+    - DeviceTree.j85ap.im4p
+    - DeviceTree.j73ap.im4p
+    - DeviceTree.j72ap.im4p
+    - DeviceTree.j71ap.im4p
+    - DeviceTree.j87ap.im4p
+    - DeviceTree.j86ap.im4p
+    - DeviceTree.j86map.im4p
+    - DeviceTree.j82ap.im4p
+    - DeviceTree.j81ap.im4p
+    - DeviceTree.j85map.im4p
+    - DeviceTree.j97ap.im4p
+    - DeviceTree.j87map.im4p
+    - DeviceTree.j96ap.im4p
+    - DeviceTree.p102ap.img3
+    - DeviceTree.p103ap.img3
+    - DeviceTree.p101ap.img3
+    - DeviceTree.n71map.im4p
+    - DeviceTree.n71ap.im4p
+    - DeviceTree.n61ap.im4p
+    - DeviceTree.n66map.im4p
+    - DeviceTree.n66ap.im4p
+    - DeviceTree.n56ap.im4p
+    - DeviceTree.j72sap.im4p
+    - DeviceTree.j71sap.im4p
+    - DeviceTree.j72tap.im4p
+    - DeviceTree.j71tap.im4p
+    - DeviceTree.n102ap.im4p
+    - DeviceTree.j42dap.im4p
+    - DeviceTree.j120ap.im4p
+    - DeviceTree.j121ap.im4p
+    - DeviceTree.j207ap.im4p
+    - DeviceTree.j208ap.im4p
+  RestoreKernelCache:
+    description:
+    type:
+    filenames:
+    - kernelcache.release.iphone5
+    - kernelcache.release.iphone5b
+    - kernelcache.release.iphone8b
+    - kernelcache.release.iphone6
+    - kernelcache.release.ipad4b
+    - kernelcache.release.ipad4
+    - kernelcache.release.ipad4bm
+    - kernelcache.release.ipad5b
+    - kernelcache.release.ipad5
+    - kernelcache.release.p102
+    - kernelcache.release.p103
+    - kernelcache.release.p101
+    - kernelcache.release.n71
+    - kernelcache.release.iphone7
+    - kernelcache.release.n66
+    - kernelcache.release.n56
+    - kernelcache.release.n66m
+    - kernelcache.release.n61
+    - kernelcache.release.n71m
+    - kernelcache.release.ipad6f
+    - kernelcache.release.n69
+    - kernelcache.release.n69u
+    - kernelcache.release.n102
+    - kernelcache.release.j42d
+    - kernelcache.release.ipad7
+  RestoreLogo:
+    description:
+    type:
+    filenames:
+    - applelogo@2x~iphone.s5l8950x.img3
+    - applelogo@2x~iphone.s8003.im4p
+    - applelogo@2x~iphone.s5l8960x.im4p
+    - applelogo@2x~iphone.s8000.im4p
+    - applelogo@2x~ipad.im4p
+    - applelogo@2x~iphone.im4p
+    - applelogo@2x~ipad.s5l8955x.img3
+    - applelogo@3x~iphone.im4p
+    - applelogo@3x~iphone.t7000.im4p
+    - applelogo@3x~iphone.s8003.im4p
+    - applelogo@3x~iphone.s8000.im4p
+    - applelogo@2x~iphone.t7000.im4p
+    - applelogo@2x~ipad.s8000.im4p
+    - applelogo@2x~ipad.s8003.im4p
+    - applelogo~appletv.im4p
+    - applelogo@2732~ipad.im4p
+    - applelogo@2224~ipad.im4p
+    - applelogo@2732~ipad.t8011.im4p
+    - applelogo@2224~ipad.t8011.im4p
+  RestoreRamDisk:
+    description:
+    type:
+    tipw_key_name: RestoreRamdisk
+    filenames:
+    - '058-68591-063.dmg'
+    - '058-68402-063.dmg'
+    - '058-74338-014.dmg'
+    - '058-74268-014.dmg'
+    - '058-74338-017.dmg'
+    - '058-74268-017.dmg'
+    - '058-74288-020.dmg'
+    - '058-74254-020.dmg'
+    - '058-74338-023.dmg'
+    - '058-74268-023.dmg'
+    - '058-59982-349.dmg'
+    - '058-59988-347.dmg'
+    - '058-52516-060.dmg'
+    - '058-52514-060.dmg'
+    - '058-52516-072.dmg'
+    - '058-52514-072.dmg'
+    - '058-52516-076.dmg'
+    - '058-52514-076.dmg'
+    - '058-62912-016.dmg'
+    - '058-63045-016.dmg'
+    - '058-62912-020.dmg'
+    - '058-63045-020.dmg'
+    - '058-62912-024.dmg'
+    - '058-63045-024.dmg'
+    - '058-59982-352.dmg'
+    - '058-59988-350.dmg'
+    - '058-94922-065.dmg'
+    - '058-95281-064.dmg'
+    - '048-02458-020.dmg'
+    - '048-02344-020.dmg'
+    - '058-90917-034.dmg'
+    - '058-91090-034.dmg'
+    - '058-89947-016.dmg'
+    - '058-89971-016.dmg'
+    - '048-02458-014.dmg'
+    - '048-02344-014.dmg'
+    - '058-97541-133.dmg'
+    - '058-97112-133.dmg'
+    - '058-85846-133.dmg'
+    - '058-85997-132.dmg'
+    - '058-59982-359.dmg'
+    - '058-59988-357.dmg'
+    - '058-59982-355.dmg'
+    - '058-59988-353.dmg'
+    - '058-84556-096.dmg'
+    - '058-85048-096.dmg'
+    - '058-84556-099.dmg'
+    - '058-85048-099.dmg'
+    - '058-84556-102.dmg'
+    - '058-85048-102.dmg'
+    - '058-85846-125.dmg'
+    - '058-85997-124.dmg'
+    - '058-85846-130.dmg'
+    - '058-85997-129.dmg'
+    - '058-89947-024.dmg'
+    - '058-89971-024.dmg'
+    - '058-89947-027.dmg'
+    - '058-89971-027.dmg'
+    - '058-84556-095.dmg'
+    - '058-85048-095.dmg'
+    - '058-90917-026.dmg'
+    - '058-91090-026.dmg'
+    - '058-90917-030.dmg'
+    - '058-91090-030.dmg'
+    - '058-90917-038.dmg'
+    - '058-91090-038.dmg'
+    - '058-90917-039.dmg'
+    - '058-91090-039.dmg'
+    - '048-02458-011.dmg'
+    - '048-02344-011.dmg'
+    - '048-02458-013.dmg'
+    - '048-02344-013.dmg'
+    - '048-02458-016.dmg'
+    - '048-02344-016.dmg'
+    - '048-02458-017.dmg'
+    - '048-02344-017.dmg'
+    - '048-04861-048.dmg'
+    - '048-04452-048.dmg'
+    - '048-04861-054.dmg'
+    - '048-04452-054.dmg'
+    - '048-04861-052.dmg'
+    - '048-04452-052.dmg'
+    - '058-50463-070.dmg'
+    - '058-50460-069.dmg'
+    - '058-50463-077.dmg'
+    - '058-50460-076.dmg'
+    - '058-52511-077.dmg'
+    - '058-52518-077.dmg'
+    - '058-52511-081.dmg'
+    - '058-52518-081.dmg'
+    - '058-52511-082.dmg'
+    - '058-52518-082.dmg'
+    - '058-54560-094.dmg'
+    - '058-54853-094.dmg'
+    - '058-67088-028.dmg'
+    - '058-66862-028.dmg'
+    - '058-55512-165.dmg'
+    - '058-55484-164.dmg'
+    - '058-55512-168.dmg'
+    - '058-55484-167.dmg'
+    - '058-74940-063.dmg'
+    - '058-75381-062.dmg'
+    - '058-74288-008.dmg'
+    - '058-74254-008.dmg'
+    - '058-74288-014.dmg'
+    - '058-74254-014.dmg'
+    - '058-74288-017.dmg'
+    - '058-74254-017.dmg'
+    - '058-74288-023.dmg'
+    - '058-74254-023.dmg'
+    - '058-82477-004.dmg'
+    - '058-82645-004.dmg'
+    - '058-82477-009.dmg'
+    - '058-82645-009.dmg'
+    - '058-82477-018.dmg'
+    - '058-82645-018.dmg'
+    - '058-82477-022.dmg'
+    - '058-82645-022.dmg'
+    - '058-82477-023.dmg'
+    - '058-82645-023.dmg'
+    - '058-74940-061.dmg'
+    - '058-75381-060.dmg'
+    - '058-76235-074.dmg'
+    - '058-76156-074.dmg'
+    - '058-76235-057.dmg'
+    - '058-76156-057.dmg'
+    - '058-76235-066.dmg'
+    - '058-76156-066.dmg'
+    - '058-76235-082.dmg'
+    - '058-76156-082.dmg'
+    - '058-76235-085.dmg'
+    - '058-76156-085.dmg'
+    - '058-76235-090.dmg'
+    - '058-76156-090.dmg'
+    - '058-76235-095.dmg'
+    - '058-76156-095.dmg'
+    - '058-76235-097.dmg'
+    - '058-76156-097.dmg'
+    - '058-76235-100.dmg'
+    - '058-76156-100.dmg'
+    - '058-76235-056.dmg'
+    - '058-76156-056.dmg'
+    - '058-52511-060.dmg'
+    - '058-52518-060.dmg'
+    - '058-52511-072.dmg'
+    - '058-52518-072.dmg'
+    - '058-52511-076.dmg'
+    - '058-52518-076.dmg'
+    - '058-63035-016.dmg'
+    - '058-62941-016.dmg'
+    - '058-63035-020.dmg'
+    - '058-62941-020.dmg'
+    - '058-63035-024.dmg'
+    - '058-62941-024.dmg'
+    - '058-54560-086.dmg'
+    - '058-54853-086.dmg'
+    - '058-54560-091.dmg'
+    - '058-54853-091.dmg'
+    - '058-54560-092.dmg'
+    - '058-54853-092.dmg'
+    - '058-67088-011.dmg'
+    - '058-66862-011.dmg'
+    - '058-67088-016.dmg'
+    - '058-66862-016.dmg'
+    - '058-67088-024.dmg'
+    - '058-66862-024.dmg'
+    - '058-68765-027.dmg'
+    - '058-68641-027.dmg'
+    - '058-68765-034.dmg'
+    - '058-68641-034.dmg'
+    - '058-68765-042.dmg'
+    - '058-68641-042.dmg'
+    - '058-68765-054.dmg'
+    - '058-68641-054.dmg'
+    - '058-68765-060.dmg'
+    - '058-68641-060.dmg'
+    - '058-68765-063.dmg'
+    - '058-68641-063.dmg'
+    - '058-74940-060.dmg'
+    - '058-75381-059.dmg'
+    - '058-74338-020.dmg'
+    - '058-74268-020.dmg'
+    - '048-95747-019.dmg'
+    - '048-95940-019.dmg'
+    - '058-86523-084.dmg'
+    - '058-86546-084.dmg'
+    - '058-84556-098.dmg'
+    - '058-85048-098.dmg'
+    - '058-70513-087.dmg'
+    - '058-70359-087.dmg'
+  RestoreSEP:
+    description:
+    type: rsep
+    filenames:
+    - sep-firmware.n69.RELEASE.im4p
+    - sep-firmware.n53.RELEASE.im4p
+    - sep-firmware.n51.RELEASE.im4p
+    - sep-firmware.n69u.RELEASE.im4p
+    - sep-firmware.j85.RELEASE.im4p
+    - sep-firmware.j73.RELEASE.im4p
+    - sep-firmware.j72.RELEASE.im4p
+    - sep-firmware.j71.RELEASE.im4p
+    - sep-firmware.j87.RELEASE.im4p
+    - sep-firmware.j86.RELEASE.im4p
+    - sep-firmware.j86m.RELEASE.im4p
+    - sep-firmware.j82.RELEASE.im4p
+    - sep-firmware.j81.RELEASE.im4p
+    - sep-firmware.j85m.RELEASE.im4p
+    - sep-firmware.j97.RELEASE.im4p
+    - sep-firmware.j87m.RELEASE.im4p
+    - sep-firmware.j96.RELEASE.im4p
+    - sep-firmware.n71m.RELEASE.im4p
+    - sep-firmware.n71.RELEASE.im4p
+    - sep-firmware.n61.RELEASE.im4p
+    - sep-firmware.n66m.RELEASE.im4p
+    - sep-firmware.n66.RELEASE.im4p
+    - sep-firmware.n56.RELEASE.im4p
+    - sep-firmware.j72s.RELEASE.im4p
+    - sep-firmware.j71s.RELEASE.im4p
+    - sep-firmware.j72t.RELEASE.im4p
+    - sep-firmware.j71t.RELEASE.im4p
+    - sep-firmware.n102.RELEASE.im4p
+    - sep-firmware.j42d.RELEASE.im4p
+    - sep-firmware.j120.RELEASE.im4p
+    - sep-firmware.j121.RELEASE.im4p
+    - sep-firmware.j207.RELEASE.im4p
+    - sep-firmware.j208.RELEASE.im4p
+  RestoreTrustCache:
+    description:
+    type:
+    filenames:
+    - '048-95747-019.dmg.trustcache'
+    - '048-95940-019.dmg.trustcache'
+  Rose:
+    description: The U1 ultra-wideband chip
+  rfta:
+    description:
+    type:
+    filenames:
+  rfts:
+    description:
+    type:
+    filenames:
+  SEP:
+    description: Secure Enclave Processor firmware (SEPOS)
+    type: sepi
+    tipw_key_name: SEPFirmware
+    filenames:
+    - sep-firmware.n69.RELEASE.im4p
+    - sep-firmware.n53.RELEASE.im4p
+    - sep-firmware.n51.RELEASE.im4p
+    - sep-firmware.n69u.RELEASE.im4p
+    - sep-firmware.j85.RELEASE.im4p
+    - sep-firmware.j73.RELEASE.im4p
+    - sep-firmware.j72.RELEASE.im4p
+    - sep-firmware.j71.RELEASE.im4p
+    - sep-firmware.j87.RELEASE.im4p
+    - sep-firmware.j86.RELEASE.im4p
+    - sep-firmware.j86m.RELEASE.im4p
+    - sep-firmware.j82.RELEASE.im4p
+    - sep-firmware.j81.RELEASE.im4p
+    - sep-firmware.j85m.RELEASE.im4p
+    - sep-firmware.j97.RELEASE.im4p
+    - sep-firmware.j87m.RELEASE.im4p
+    - sep-firmware.j96.RELEASE.im4p
+    - sep-firmware.n71m.RELEASE.im4p
+    - sep-firmware.n71.RELEASE.im4p
+    - sep-firmware.n61.RELEASE.im4p
+    - sep-firmware.n66m.RELEASE.im4p
+    - sep-firmware.n66.RELEASE.im4p
+    - sep-firmware.n56.RELEASE.im4p
+    - sep-firmware.j72s.RELEASE.im4p
+    - sep-firmware.j71s.RELEASE.im4p
+    - sep-firmware.j72t.RELEASE.im4p
+    - sep-firmware.j71t.RELEASE.im4p
+    - sep-firmware.n102.RELEASE.im4p
+    - sep-firmware.j42d.RELEASE.im4p
+    - sep-firmware.j120.RELEASE.im4p
+    - sep-firmware.j121.RELEASE.im4p
+    - sep-firmware.j207.RELEASE.im4p
+    - sep-firmware.j208.RELEASE.im4p
+  SIO:
+    description: SmartIO Firmware (iPad smart-case)
+    type: siof
+    tipw_key_name: SmartIOFirmware
+  StaticTrustCache:
+    description: A listing of approved CDHashes
+    type:
+    filenames:
+    - '048-95869-019.dmg.trustcache'
+  WCHFirmwareUpdater:
+    tipw_key_name: WirelessPower

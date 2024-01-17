@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>derrived_keys</key>
+	<dict>
+		<key>2101</key>
+		<dict>
+			<key>data</key>
+			<integer>1334440654591915542993625911497130241</integer>
+			<key>description</key>
+			<string>Used for data protection.
+</string>
+			<key>type</key>
+			<string>uid</string>
+		</dict>
+		<key>2102</key>
+		<dict>
+			<key>data</key>
+			<integer>1192299414131223233912285359034425728</integer>
+			<key>description</key>
+			<string>This is computed by the kernel during a restore, but is zeroed out during a normal boot. It is also computed by
+the Secure Bootloader, and its only known use is to decrypt LLB in NOR. Like `0x835`, it is different
+for each device.
+</string>
+			<key>type</key>
+			<string>uid</string>
+		</dict>
+		<key>2103</key>
+		<dict>
+			<key>chip_id</key>
+			<integer>8900</integer>
+			<key>data</key>
+			<integer>69588083788013974478752691731509087765</integer>
+			<key>description</key>
+			<string>It is used as the encryption key for IMG2 files. With the introduction of IMG3 in iPhone OS 2.0, KBAGs are now
+used instead of the `0x837` key. Because iPhone OS versions 1.x were used only on the iPhone and iPod touch
+(both use the S5L8900) the encrypted values for other processors don&#39;t matter.
+</string>
+			<key>type</key>
+			<string>gid</string>
+			<key>value</key>
+			<integer>32588653152864007722841128035178264436</integer>
+		</dict>
+		<key>2104</key>
+		<dict>
+			<key>data</key>
+			<integer>186772609949988273681485834769094998241</integer>
+			<key>description</key>
+			<string>Another UID-AES-key-based key, it is used to encrypt everything but LLB in the NOR (iBoot,
+DeviceTree, pictures).
+</string>
+			<key>type</key>
+			<string>uid</string>
+		</dict>
+		<key>2201</key>
+		<dict>
+			<key>data</key>
+			<integer>279018389515453073819669168862421701808</integer>
+			<key>description</key>
+			<string>Usage unknown.</string>
+			<key>type</key>
+			<string>uid</string>
+		</dict>
+		<key>2202</key>
+		<dict>
+			<key>data</key>
+			<integer>291263742049262950426416465193106933345</integer>
+			<key>description</key>
+			<string>Used on A4 devices. A device-specific key. It is used to encrypt the SHSH blobs on the device.
+</string>
+			<key>type</key>
+			<string>uid</string>
+		</dict>
+		<key>2203</key>
+		<dict>
+			<key>data</key>
+			<integer>32226505706565189832158137978565999945</integer>
+			<key>description</key>
+			<string>It is used to encrypt the data partition key.
+</string>
+			<key>type</key>
+			<string>uid</string>
+		</dict>
+		<key>2211</key>
+		<dict>
+			<key>data</key>
+			<integer>114989932619137914553416987311769025007</integer>
+			<key>description</key>
+			<string>It is used during software upgrades on A12 and later to encrypt the &quot;generator&quot; value (using AES-128-CBC)
+before hashing it to become the nonce.
+</string>
+			<key>mode</key>
+			<string>AES-256-CBC</string>
+			<key>type</key>
+			<string>uid</string>
+		</dict>
+	</dict>
+	<key>keys</key>
+	<dict>
+		<key>1000</key>
+		<string>gid</string>
+		<key>2000</key>
+		<string>uid</string>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>credits</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>metadata</key>
+	<dict>
+		<key>credits</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
+	<key>pmu_errors</key>
+	<dict>
+		<key>btn_rst</key>
+		<dict>
+			<key>subtypes</key>
+			<dict>
+				<key>btn_seq_reset</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>two_finger_rst</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+		</dict>
+		<key>btn_shdn</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>crash</key>
+		<dict>
+			<key>subtypes</key>
+			<dict>
+				<key>crash_in</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+		</dict>
+		<key>dbg_rst</key>
+		<dict>
+			<key>description</key>
+			<string>debug based reset</string>
+			<key>subtypes</key>
+			<dict>
+				<key>reset_in_2</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+		</dict>
+		<key>ntc_shdn</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>ot</key>
+		<dict>
+			<key>description</key>
+			<string>over-temprature</string>
+			<key>subtypes</key>
+			<dict>
+				<key>overtemp</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+		</dict>
+		<key>otp_crc</key>
+		<dict>
+			<key>description</key>
+			<string>one-type-passcode, cyclic redundancy check</string>
+		</dict>
+		<key>ov</key>
+		<dict>
+			<key>description</key>
+			<string>over-voltage</string>
+			<key>subtypes</key>
+			<dict>
+				<key>vddmain_ovlo</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+		</dict>
+		<key>por</key>
+		<dict>
+			<key>description</key>
+			<string>power-on reset</string>
+		</dict>
+		<key>rst</key>
+		<dict>
+			<key>description</key>
+			<string>reset</string>
+		</dict>
+		<key>sochot</key>
+		<dict>
+			<key>subtypes</key>
+			<dict>
+				<key>reset_in_3</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+		</dict>
+		<key>spmi</key>
+		<dict>
+			<key>subtypes</key>
+			<dict>
+				<key>spmi_fault</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+		</dict>
+		<key>sstate</key>
+		<dict>
+			<key>subtypes</key>
+			<dict>
+				<key>btn_dfu_recover</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>wallet_crash_seq</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+		</dict>
+		<key>timeout</key>
+		<dict>
+			<key>subytpes</key>
+			<dict>
+				<key>dblclick_timeout</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>watchdog_timeout</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+		</dict>
+		<key>uv</key>
+		<dict>
+			<key>description</key>
+			<string>under-voltage</string>
+			<key>subtypes</key>
+			<dict>
+				<key>vdd_boost_uvlo</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>vddmain_uvlo</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>vddmain_uvlo_hold</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+		</dict>
+		<key>wdog</key>
+		<dict>
+			<key>description</key>
+			<string>watchdog timer</string>
+			<key>subtypes</key>
+			<dict>
+				<key>reset_in_1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

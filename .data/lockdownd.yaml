@@ -1,0 +1,1042 @@
+---
+metadata:
+  description: Services that can be contacted over usbmuxd via lockdownd
+  credits:
+  - rickmark
+clients:
+- AMPDeviceDiscoveryAgent
+- Safari
+- SpringBoard
+- accountsd
+- atwakeup
+- backupd
+services:
+  com.apple.accessibility.axAuditDaemon.remoteserver:
+    description: Accessibility features including audit/testing for Developers
+    developer_disk_image: true
+    allow_proxy: true
+    xpc_service: com.apple.accessibility.axAuditDaemon.deviceservice.lockdown
+  com.apple.afc:
+    description: Apple File Conduit - File system access for `/var/mobile/Media`
+    allow_unactivated: true
+    xpc_service: com.apple.afcd
+  com.apple.afc2:
+    description: afc but with root privledge and full OS access (for `/` without sandbox)
+    user: root
+  com.apple.ait.aitd:
+    description:
+    usb_only: true
+    xpc_service: com.apple.ait.client
+  com.apple.amfi.lockdown:
+    description: Used to enable developer-mode for Apple Silicon macOS
+  com.apple.atc:
+    description: AirTraffic (also known as iTunes Wi-Fi sync)
+    allow_unactivated: true
+    xpc_service: com.apple.atc
+  com.apple.bluetooth.BTPacketLogger:
+    description: Allows logging bluetooth packets for development and debugging
+  com.apple.carkit.service:
+    description: CarKit is the in car display and media subsystem
+  com.apple.commcenter.mobile-helper-cbupdateservice:
+    description: Ability to update carrier bundles (`*.ipcc` files)
+  com.apple.companion_proxy:
+    description: access and management of paired companion (so far the Watch) devices
+  com.apple.crashreportcopymobile:
+    description: File access to crash reports stored in `/var/mobile/Library/Logs/CrashReports`
+    allow_unactivated: true
+    xpc_service: com.apple.crashreportcopymobile
+  com.apple.crashreportmover:
+    description: Moves crash reports into synable directory
+    allow_unactivated: true
+    xpc_service: com.apple.crash_mover
+  com.apple.debugserver:
+    description: Communicate with debugserver on the device. (to launch an app under
+      debug)
+    developer_disk_image: true
+  com.apple.debugserver.DVTSecureSocketProxy:
+    description:
+    allow_proxy: true
+    developer_disk_image: true
+    binary_path: "/Developer/usr/bin/debugserver"
+    arguments:
+    - "--lockdown"
+    - "--launch=frontboard"
+    - "--secure-socket-proxy"
+  com.apple.debugserver.DVTSecureSocketProxy.applist:
+    description:
+    allow_proxy: true
+    developer_disk_image: true
+    binary_path: "/Developer/usr/bin/debugserver"
+    arguments:
+    - "--lockdown"
+    - "--applist"
+    - "--secure-socket-proxy"
+  com.apple.dt.devicearbitration:
+    description: Multiple access to the same device
+    allow_proxy: true
+    xpc_service: com.apple.dt.devicearbitration
+  com.apple.dt.fetchsymbols:
+    description: Used to get symbols from device to symbolicate a crash dump
+    developer_disk_image: true
+    binary_path: "/Developer/Library/Daemons/DTFetchSymbols"
+  com.apple.dt.remotepairingdeviced.lockdown:
+    description:
+  com.apple.dt.simulatelocation:
+    description: Allow over-riding CoreLocation for development and testing
+    allow_proxy: true
+    developer_disk_image: true
+    binary_path: "/Developer/Library/Daemons/DTSimulateLocation"
+  com.apple.GPUTools.MobileService:
+    description:
+    developer_disk_image: true
+    allow_proxy: true
+    binary_path: "/Developer/usr/libexec/gputoolsd"
+    mach_services:
+      com.apple.GPUTools.SimulatorService: true
+  com.apple.hpd.mobile:
+    description: Highland Park?
+    allow_unactivated: true
+    binary_path: "/usr/libexec/hpd"
+  com.apple.idamd:
+    description: Allows settings the IDAM configuration (something to do with loading
+      of AppleUSBDeviceAudioDevice)
+  com.apple.instruments.remoteserver:
+    description: Used for instruments / DTrace
+  com.apple.instruments.remoteserver.DVTSecureSocketProxy:
+    description:
+    developer_disk_image: true
+    allow_proxy: true
+    xpc_service: com.apple.instruments.deviceservice.lockdown.secure
+  com.apple.iosdiagnostics.relay:
+    allow_unactivated: true
+    binary_path: "/usr/libexec/ios_diagnostics_relay"
+  com.apple.misagent:
+    description: Mobile provisioning profile (development) management service
+    binary_path: "/usr/libexec/misagent"
+  com.apple.mobile.assertion_agent:
+    description: Power Manager assertion manager (keep device from sleeping)
+    allow_unactivated: true
+    xpc_service: com.apple.mobile.assertion_agent
+  com.apple.mobile.debug_image_mount:
+    description: legacy developer disk image mounter
+    allow_unactivated: true
+    binary_path: "/usr/libexec/debug_image_mount"
+  com.apple.mobile.diagnostics_relay:
+    description: Request iOS diagnostic information from device.
+    allow_unactivated: true
+    binary_path: "/usr/libexec/mobile_diagnostics_relay"
+  com.apple.mobile.file_relay:
+    description: Legacy method to move files between host and device (Retrieve compressed
+      CPIO archives)
+    allow_unactivated: true
+    binary_path: "/usr/libexec/mobile_file_relay"
+  com.apple.mobile.heartbeat:
+    description: Periodic heartbeet to check connectivity with a device
+    allow_unactivated: true
+    xpc_service: com.apple.lockdown.host_watcher
+  com.apple.mobile.house_arrest:
+    description: Per application file transfer support
+    allow_unactivated: true
+    instance_limit: 5
+    binary_path: "/usr/libexec/mobile_house_arrest"
+  com.apple.mobile.insecure_notification_proxy:
+    description:
+    allow_unactivated: true
+    xpc_service: com.apple.mobile.insecure_notification_proxy
+  com.apple.mobile.installation_proxy:
+    description: Manage applications on a device.
+    xpc_service: com.apple.mobile.installation_proxy
+  com.apple.mobile.MCInstall:
+    description: Mobile Configuration profile management service
+    allow_unactivated: true
+    binary_path: "/usr/libexec/mc_mobile_tunnel"
+  com.apple.mobile.MDMService:
+    allow_unactivated: true
+    binary_path: "/usr/libexec/MDMService"
+  com.apple.mobile.mobile_image_mounter:
+    description: Used to mount the developer disk image on the device to add Xcode
+      tools
+    allow_unactivated: true
+    binary_path: "/usr/libexec/mobile_storage_proxy"
+  com.apple.mobile.notification_proxy:
+    description: Observe and post notifications.
+    allow_unactivated: true
+    xpc_service: com.apple.mobile.notification_proxy
+  com.apple.mobile.screenshotr:
+    description: Ability to take a capture of the device screen
+    developer_disk_image: true
+    allow_unactivated: true
+    allow_proxy: true
+    binary_path: "/Developer/usr/bin/ScreenShotr"
+  com.apple.mobileactivationd:
+    description: used to activate the celluar components of an iDevice
+  com.apple.mobilebackup:
+    description: Legacy backup service
+    binary_path: "/usr/libexec/BackupAgent"
+  com.apple.mobilebackup2:
+    description: Moden backup to itunes
+    binary_path: "/usr/libexec/BackupAgent2"
+  com.apple.mobilesync:
+    description: Classic iTunes media sync
+    binary_path: "/usr/libexec/SyncAgent"
+  com.apple.os_trace_relay:
+    description: full os trace capiability (more verbose then syslog_relay)
+  com.apple.pcapd:
+    description: Access to packet capture (network logging)
+    usb_only: true
+    instance_limit: 1
+    binary_path: "/usr/libexec/pcapd"
+  com.apple.preboardservice:
+    description:
+    xpc_service: com.apple.preboardservice
+  com.apple.preboardservice_v2:
+    description: Service to 'preboard' a device, which allows to ask for passcode
+      during firmware updates.
+  com.apple.PurpleReverseProxy.Conn:
+    description: Data pipe multiplexer setup from com.apple.PurpleReverseProxy.Ctrl
+  com.apple.PurpleReverseProxy.Ctrl:
+    description: Provide a reverse proxy to allow the device to communicate throught
+      to the internet, which is used during firmware restore.
+  com.apple.purpletestr:
+    description: Used in factories to test device / hardware
+    allow_unactivated: true
+    binary_path: "/usr/libexec/PurpleTestr"
+  com.apple.radios.wirelesstester.mobile:
+    description:
+    allow_unactivated: true
+    binary_path: "/usr/local/bin/WirelessTester"
+  com.apple.radios.wirelesstester.root:
+    description:
+    allow_unactivated: true
+    user: root
+    binary_path: "/usr/local/bin/WirelessTester"
+  com.apple.rasd:
+    description:
+    allow_unactivated: true
+    binary_path: "/usr/libexec/rasd"
+  com.apple.restored:
+    description: Used to restore or update Devices
+    no_tls: true
+    fixed_port: 62078
+  com.apple.springboardservices:
+    description: Home screen layout services
+    binary_path: "/usr/libexec/springboardservicesrelay"
+  com.apple.streaming_zip_conduit:
+    description: Replacement to file_relay using ZIP instead of CPIO
+  com.apple.syslog_relay:
+    description: Stream of log events from a connected device
+    allow_unactivated: true
+    xpc_service: com.apple.syslog_relay
+  com.apple.testmanagerd.lockdown.secure:
+    description:
+    developer_disk_image: true
+    allow_proxy: true
+    xpc_service: com.apple.testmanagerd.lockdown.secure
+  com.apple.testmanagerd.remote-automation.lockdown.secure:
+    description:
+    developer_disk_image: true
+    allow_proxy: true
+    binary_path: com.apple.testmanagerd.remote-automation.lockdown.secure
+  com.apple.thermalmonitor.thermtgraphrelay:
+    description:
+    binary_path: "/usr/local/bin/thermtgraphrelay"
+  com.apple.webinspector:
+    description: Used to access Safari / WebKit web inspector to debug mobile websites
+    usb_only: true
+    xpc_service: com.apple.webinspector
+base_domain:
+  ActivationState:
+    type: string
+    values:
+    - Activated
+  ActivationStateAcknowledged:
+    type: boolean
+  BasebandActivationTicketVersion:
+    type: string
+    values:
+    - V2
+  BasebandCertId:
+    type: integer
+  BasebandChipID:
+    type: integer
+  BasebandKeyHashInformation:
+    type: dictionary
+    properties:
+      AKeyStatus:
+        type: integer
+      SKeyHash:
+        type: data
+      SKeyStatus:
+        type: integer
+  BasebandMasterKeyHash:
+    type: string
+    format: hex
+  BasebandRegionSKU:
+    type: data
+  BasebandSerialNumber:
+    type: data
+  BasebandStatus:
+    type: string
+    values:
+    - BBInfoAvailable
+  BasebandVersion:
+    type: string
+  BluetoothAddress:
+    type: string
+  BoardId:
+    type: integer
+  BootSessionID:
+    type: string
+    format: uuid
+  BrickState:
+    type: boolean
+  BuildVersion:
+    type: string
+  CarrierBundleInfoArray:
+    type: array
+    values: dictionary
+    properties:
+      CFBundleIdentifier:
+        type: string
+        format: reverse-dns
+      CFBundleVersion:
+        type: string
+        format: version
+      GID1:
+        description: carrier GSM group identifier 1
+        type: string
+        format: hex
+      GID2:
+        description: carrier GSM group identifier 2
+        type: string
+        format: hex
+      IntegratedCircuitCardIdentity:
+        description: the SIM/UICC/eSIM/eUICC ICCID
+        type: string
+      InternationalMobileSubscriberIdentity:
+        description: the GSM ISMI
+        type: string
+        format: integer
+      MCC:
+        description: Mobile country code
+        type: string
+        format: integer
+      MNC:
+        description: Mobile network code
+        type: string
+        format: integer
+      MobileEquipmentIdentifier:
+        description: IMEI
+        type: string
+        format: integer
+      SIMGID1:
+        description: SIM GSM group identifier 1
+        type: data
+      SIMGID2:
+        description: SIM GSM group identifier 1
+        type: data
+      Slot:
+        description: SIM tray slot
+        type: string
+        values:
+        - kOne
+      kCTPostponementInfoAvailable:
+        description:
+        type: string
+        values:
+        - SIMCarrierInfo
+  CertID:
+    type: integer
+  ChipID:
+    type: integer
+  ChipSerialNo:
+    type: data
+  CPUArchitecture:
+    type: string
+    values:
+    - arm64e
+  DeviceClass:
+    type: string
+    values:
+    - iPhone
+  DeviceColor:
+    type: integer
+  DeviceName:
+    type: string
+  DieID:
+    type: integer
+  EthernetAddress:
+    type: string
+    format: mac-address
+  FirmwareVersion:
+    description: Version of iBoot firmware
+    type: string
+  FusingStatus:
+    type: integer
+    values:
+    - 3
+  GID1:
+    type: string
+    format: hex
+  GID2:
+    type: string
+    format: hex
+  HardwareModel:
+    description: the string board id of the Device (related to BDID)
+    type: string
+  HardwarePlatform:
+    description: the string description of the CPU type (related to CHIP)
+    type: stirng
+  HasSiDP:
+    description:
+    type: boolean
+  HostAttached:
+    description: is currenlty attached to a usbmuxd host
+    type: boolean
+  IntegratedCircuitCardIdentity:
+    description: the active SIM ICCID
+    type: string
+    format: integer
+  InternationalMobileEquipmentIdentity:
+    description: SIM1 IMEI
+    type: string
+    format: integer
+  InternationalMobileEquipmentIdentity2:
+    description: SIM2 IMEI
+    type: string
+    format: integer
+  InternationalMobileSubscriberIdentity:
+    description: The carrier subscriber identity for SIM1
+    type: string
+    format: integer
+  InternationalMobileSubscriberIdentityOverride:
+    type: boolean
+  kCTPostponementInfoPRIVersion:
+    type: string
+    format: version
+  kCTPostponementInfoPRLName:
+    type: integer
+  kCTPostponementInfoServiceProvisioningState:
+    type: boolean
+  kCTPostponementStatus:
+    type: string
+    values:
+    - kCTPostponementStatus
+  MLBSerialNumber:
+    description: Serial number of the main logic Board
+    type: string
+  MobileEquipmentIdentifier:
+    description: Cellular MEID (often IMEI1 without check digit)
+    type: string
+    format: integer
+  MobileSubscriberCountryCode:
+    description: mobile country code
+    type: string
+    format: integer
+  MobileSubscriberNetworkCode:
+    description: mobile network code
+    type: string
+    format: integer
+  ModelNumber:
+    description:
+    type: string
+  NonVolatileRAM:
+    description: values of NVRAM (see nvram.yaml)
+    type: dictionary
+  PairRecordProtectionClass:
+    type: integer
+    values:
+    - 4
+  PartitionType:
+    type: string
+    values:
+    - GUID_partition_scheme
+  PasswordProtected:
+    type: boolean
+  PhoneNumber:
+    type: string
+  PkHash:
+    type: data
+  PRIVersion_Major:
+    description:
+    type: integer
+  PRIVersion_Minor:
+    type: integer
+  PRIVersion_ReleaseNo:
+    type: integer
+  ProductionSOC:
+    type: boolean
+  ProductName:
+    type: string
+  ProductType:
+    description: Product ID name
+    type: string
+  ProductVersion:
+    description: OS version string
+    type: stirng
+  ProtocolVersion:
+    description: version of USBMUXD
+    type: string
+    format: integer
+  ProximitySensorCalibration:
+    type: data
+  RegionInfo:
+    type: string
+  SerialNumber:
+    type: string
+  SIM1IsEmbedded:
+    type: boolean
+  SIMGID1:
+    type: data
+  SIMGID2:
+    type: data
+  SIMStatus:
+    type: string
+    values:
+    - kCTSIMSupportSIMStatusReady
+  SIMTrayStatus:
+    type: string
+    values:
+    - kCTSIMSupportSIMTrayInsertedWithSIM
+  SoftwareBehavior:
+    description: see com.apple.mobile.software_behavior
+    type: data
+  SoftwareBundleVersion:
+    type: string
+  SupportedDeviceFamilies:
+    type: array
+  TelephonyCapability:
+    type: boolean
+  TimeIntervalSince1970:
+    type: decimal
+  TimeZone:
+    type: string
+  TimeZoneOffsetFromUTC:
+    type: decimal
+  TrustedHostAttached:
+    description: if the attached host has a pairing relationship to the device
+    type: boolean
+  UniqueChipID:
+    description: the exclusive chip id (ECID)
+    type: integer
+  UniqueDeviceID:
+    description: either legacy UUID or CHIP/ECID pair
+    type: string
+  UseRaptorCerts:
+    description:
+    type: boolean
+  Uses24HourClock:
+    type: boolean
+  WiFiAddress:
+    type: string
+    format: mac-address
+lockdownd_domains:
+  com.apple.Accessibility:
+    description: Provides the ability to configure accessability features from iTunes
+    properties:
+      ClosedCaptioningEnabledByiTunes:
+      InvertDisplayEnabledByiTunes:
+      MonoAudioEnabledByiTunes:
+      SpeakAutoCorrectionsEnabledByiTunes:
+      VoiceOverTouchEnabledByiTunes:
+      ZoomTouchEnabledByiTunes:
+  com.apple.disk_usage:
+    description: Current storage usage of the iDevice
+    properties:
+      AmountDataAvailable:
+        description: number of free bytes for user storage
+        type: integer
+      AmountDataReserved:
+        description: number of bytes reserved by the system and not available for
+          user data
+        type: integer
+      AmountRestoreAvailable:
+        description: the number of bytes available if the data is wiped of the iDevice
+        type: integer
+      CalculateDiskUsage:
+        description:
+        type: string
+        values:
+        - OkilyDokily
+      NANDInfo:
+        description:
+        type: data
+      TotalDataAvailable:
+        description: the number of the bytes in NAND
+        type: integer
+      TotalDataCapacity:
+        description:
+        type: integer
+      TotalDiskCapacity:
+        description:
+        type: integer
+      TotalSystemAvailable:
+        description: Number of bytes available in the system volume (should be 0 with
+          APFS and signed system volumes)
+        type: integer
+      TotalSystemCapacity:
+        description: Size of the system volume
+        type: integer
+  com.apple.disk_usage.factory:
+    description:
+    properties:
+      AmountDataAvailable:
+        type: integer
+      AmountDataReserved:
+        type: integer
+      AmountRestoreAvailable:
+        type: integer
+      CalculateDiskUsage:
+        type: string
+      CalendarUsage:
+        type: integer
+      CameraUsage:
+        type: integer
+      MediaCacheUsage:
+        type: integer
+      NANDInfo:
+        type: data
+      NotesUsage:
+        type: integer
+      PhotoUsage:
+        type: integer
+      TotalDataAvailable:
+        type: integer
+      TotalDataCapacity:
+        type: integer
+      TotalDiskCapacity:
+        type: integer
+      TotalSystemAvailable:
+        type: integer
+      TotalSystemCapacity:
+        type: integer
+      VoicemailUsage:
+        type: integer
+      WebAppCacheUsage:
+        type: integer
+  com.apple.fairplay:
+  com.apple.fmip:
+  com.apple.international:
+    description:
+    properties:
+      Language:
+        type: string
+      Locale:
+        type: string
+      SupportedKeyboards:
+        type: array
+      SupportedLanguages:
+        type: array
+      SupportedLocales:
+        type: array
+  com.apple.iqagent:
+  com.apple.iTunes:
+  com.apple.mobile.backup:
+    description: Provides iDevice backup to local computer in encrypted or unencrypted
+      format
+    properties:
+      CloudBackupEnabled:
+        description: If the device is configured to backup to iCloud
+        type: boolean
+      RequiresEncryption:
+        type: integer
+      Version:
+        type: string
+      LastCloudBackupDate:
+      LastCloudBackupTZ:
+      WillEncrypt:
+  com.apple.mobile.battery:
+    description:
+    properties:
+      BatteryCurrentCapacity:
+        description: percentage of charge for the battery
+        type: integer
+      BatteryIsCharging:
+        type: boolean
+      ExternalChargeCapable:
+        type: boolean
+      ExternalConnected:
+        type: boolean
+      FullyCharged:
+        type: boolean
+      GasGaugeCapability:
+        type: boolean
+      HasBattery:
+        type: boolean
+  com.apple.mobile.chaperone:
+  com.apple.mobile.data_sync:
+    description:
+    properties:
+      Bookmarks:
+        type: dictionary
+        properties:
+          AccountNames:
+            type: array
+          Sources:
+            type: array
+      Calendars:
+        type: dictionary
+        properties:
+          AccountNames:
+            type: array
+          Sources:
+            type: array
+      Contacts:
+        type: dictionary
+        properties:
+          AccountNames:
+            type: array
+          Sources:
+            type: array
+      Notes:
+        type: dictionary
+        properties:
+          AccountNames:
+            type: array
+          Sources:
+            type: array
+  com.apple.mobile.debug:
+  com.apple.mobile.internal:
+    description:
+    properties:
+      CarrierBuild:
+        type: boolean
+      IsInternal:
+        type: boolean
+      UIBuild:
+        type: boolean
+  com.apple.mobile.iTunes:
+    description:
+    properties:
+      64Bit:
+        type: integer
+      AccessibilityLanguages:
+        type: array
+      AlbumArt:
+        type: array
+      AppleDRMVersion:
+        type: dictionary
+        properties:
+          Format:
+            type: integer
+          Maximum:
+            type: integer
+          Minimum:
+            type: integer
+      AudioCodecs:
+        type: dictionary
+        properties:
+      BatteryPollInterval:
+        type: integer
+      ChapterImageSpecs:
+        type: array
+      ConnectedBus:
+        type: string
+        values:
+        - USB
+      CustomerRingtones:
+        type: boolean
+      DBVersion:
+        type: integer
+      FairPlayCBMaxVersion:
+        type: integer
+      FairPlayCBMinVersion:
+        type: integer
+      FairPlayCertificate:
+        type: data
+      FairPlayDeviceType:
+        type: integer
+      FairPlayGUID:
+        type: string
+        format: uuid
+      FairPlayID:
+        type: data
+      FamilyID:
+        type: integer
+      GeniusConfigMaxVersion:
+        type: integer
+      GeniusConfigMinVersion:
+        type: integer
+      GeniusMetadataMaxVersion:
+        type: integer
+      GeniusMetadataMinVersion:
+        type: integer
+      GeniusSimilaritiesMaxVersion:
+        type: integer
+      GeniusSimilaritiesMinVersion:
+        type: integer
+      HomeScreenIconColumns:
+        type: integer
+      HomeScreenIconDockMaxCount:
+        type: integer
+      HomeScreenIconHeight:
+        type: integer
+      HomeScreenIconRows:
+        type: integer
+      HomeScreenIconWidth:
+        type: integer
+      HomeScreenMaxPages:
+        type: integer
+      HomeVideosSupported:
+        type: boolean
+      IconFolderColumns:
+        type: integer
+      IconFolderMaxPages:
+        type: integer
+      IconFolderRows:
+        type: integer
+      IconStateSaves:
+        type: boolean
+      ImageSpecifications:
+        type: array
+      KeyTypeSupportVersion:
+        type: integer
+      MinITunesVersion:
+        type: string
+      MinMacOSVersion:
+        type: string
+      NeedsAntiPhishingDB:
+        type: boolean
+      OEMA:
+        type: integer
+      OEMID:
+        type: integer
+      PhotoEventsSupported:
+        type: boolean
+      PhotoFacesSupported:
+        type: boolean
+      PhotoVideosSupported:
+        type: boolean
+      PlaylistFoldersSupported:
+        type: boolean
+      PodcastsSupported:
+        type: boolean
+      RentalsSupported:
+        type: boolean
+      Ringtones:
+        type: boolean
+      ScreenHeight:
+        type: integer
+      ScreenScaleFactor:
+        type: integer
+      ScreenWidth:
+        type: integer
+      SupportedKeyboards:
+        type: array
+        values: string
+      SupportsAccessibility:
+        type: boolean
+      SupportsAirTraffic:
+        type: boolean
+      SupportsAlertTones:
+        type: boolean
+      SupportsAntiPhishing:
+        type: boolean
+      SupportsApplicationInstall:
+        type: boolean
+      SupportsCarrierBundleInstall:
+        type: boolean
+      SupportsConfigurationBlobs:
+        type: boolean
+      SupportsDownloadedPodcasts:
+        type: boolean
+      SupportsGenius:
+        type: boolean
+      SupportsGeniusMixes:
+        type: boolean
+      SupportsProvisioningBlobs:
+        type: boolean
+      SyncDataClasses:
+        type: array
+      TVShowRentalsSupported:
+        type: boolean
+      UseVoiceMemosFolder:
+        type: boolean
+      VideoCodecs:
+        type: dictionary
+      VideoPlaylistsSupported:
+        type: boolean
+      VoiceMemoFormats:
+        type: dictionary
+      VoiceMemosSupported:
+        type: boolean
+      iPhoneCheckpointVersion:
+        type: integer
+      iTunesStoreCapable:
+        type: boolean
+      iTunesUSupported:
+        type: boolean
+  com.apple.mobile.iTunes.accessories:
+    description:
+    properties:
+  com.apple.mobile.iTunes.SQLMusicLibraryPostProcessCommands:
+  com.apple.mobile.iTunes.store:
+  com.apple.mobile.lockdown_cache:
+  com.apple.mobile.lockdownd:
+  com.apple.mobile.mobile_application_usage:
+  com.apple.mobile.nikita:
+  com.apple.mobile.restriction:
+    description: Apple Configurator device restrictions (supervision)
+    properties:
+      ClosedCaptioningEnabledByiTunes:
+      CloudBackupEnabled:
+      DeveloperStatus:
+      EnableWifiConnections:
+      EnableWifiDebugging:
+      InvertDisplayEnabledByiTunes:
+      LastCloudBackupDate:
+      LastCloudBackupTZ:
+      MonoAudioEnabledByiTunes:
+      Notes:
+      ProhibitAppDelete:
+        type: boolean
+      ProhibitAppInstall:
+        type: boolean
+      RestoreState:
+      SetupState:
+      SpeakAutoCorrectionsEnabledByiTunes:
+      VoiceOverTouchEnabledByiTunes:
+      WillEncrypt:
+      ZoomTouchEnabledByiTunes:
+  com.apple.mobile.software_behavior:
+    description:
+    properties:
+      ChinaBrick:
+        type: boolean
+      GoogleMail:
+        type: boolean
+      NTSC:
+        type: boolean
+      NoVOIP:
+        type: boolean
+      NoWiFi:
+        type: boolean
+      ShutterClick:
+        type: boolean
+      Valid:
+        type: boolean
+      VolumeLimit:
+        type: boolean
+  com.apple.mobile.sync_data_class:
+    description:
+    properties:
+      Bookmarks:
+        type: dictionary
+      Calendars:
+        type: dictionary
+      Contacts:
+        type: dictionary
+      DeviceHandlesDefaultCalendar:
+        type: boolean
+      DeviceSupportsClearingData:
+        type: boolean
+      Mail Accounts:
+        type: dictionary
+      Notes:
+        type: dictionary
+      SupportsEncryptedBackups:
+        type: boolean
+      SyncSupportsCalDAV:
+        type: boolean
+  com.apple.mobile.tethered_sync:
+    description:
+    properties:
+      Notes:
+  com.apple.mobile.third_party_termination:
+  com.apple.mobile.user_preferences:
+  com.apple.mobile.wireless_lockdown:
+    description:
+    properties:
+      BonjourFullServiceName:
+        type: string
+      SupportsWifi:
+        type: boolean
+      SupportsWifiSyncing:
+        type: boolean
+      EnableWifiConnections:
+        description: Wheather the device will accept network connections to usbmuxd
+          (iTunes Wi-Fi Sync)
+        type: boolean
+      EnableWifiDebugging:
+        description: Wheather the device will accept network connections for debugging
+          / developer services to usbmuxd
+        type: boolean
+  com.apple.MobileDeviceCrashCopy:
+    description:
+    properties:
+  com.apple.PurpleBuddy:
+    description:
+    properties:
+      CKPerBootTasks:
+        description:
+          type: array
+          values:
+          - CKAcccountInfoCacheReset
+      CKStartupTime:
+        type: integer
+      GuessedCountry:
+        description: Country code of country guessed in the setup experiance
+        type: string
+      HSA2UpgradeMiniBuddy3Ran:
+        type: boolean
+      Language:
+        description: Current Language / Country code pair
+        type: string
+      Locale:
+        type: string
+      PBAppActivity2Presented:
+        type: boolean
+      PBDiagnostics4Presented:
+        type: boolean
+      Passcode4Presented:
+        description: If the user was prompted for a simple (4 number) passcode at
+          setup
+        type: boolean
+      PaymentMiniBuddy4Ran:
+        description: If setup Apple Pay was run
+        type: boolean
+      PhoneNumberPermissionPresentedKey:
+        type: boolean
+      RestoreChoice:
+        type: boolean
+      SetupDone:
+        type: boolean
+      SetupFinishedAllSteps:
+        type: boolean
+      SetupLastExit:
+        type: string
+        format: datetime
+      SetupState:
+        type: string
+        values:
+        - SetupUsingAssistant
+      SetupVersion:
+        type: integer
+      UserChoseLanguage:
+        type: boolean
+      WebKitAcceleratedDrawingEnabled:
+        type: boolean
+      chronicle:
+        type: dictionary
+      lastPrepareLaunchSentinel:
+        type: array
+      setupMigratorVersion:
+        type: integer
+  com.apple.purplebuddy:
+    description:
+    properties:
+      RestoreState:
+      SetupState:
+  com.apple.security.mac.amfi:
+    properties:
+      DeveloperModeStatus:
+  com.apple.TerminalFlashr:
+    description:
+    properties:
+  com.apple.xcode.developerdomain:
+    description:
+    properties:
+      DeveloperStatus:
+        type: string
+        values:
+        - Development

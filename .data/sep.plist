@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>metadata</key>
+	<dict>
+		<key>credits</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
+	<key>sep_services</key>
+	<dict>
+		<key>SEPD</key>
+		<dict>
+			<key>description</key>
+			<string>Incorrect: fixed at ID 0, sepd is a play on launchd</string>
+			<key>fixed_endpoint</key>
+			<integer>0</integer>
+			<key>opcodes</key>
+			<array>
+				<dict>
+					<key>const</key>
+					<string>kOpCode_NOP</string>
+					<key>description</key>
+					<string>No operation</string>
+					<key>id</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>const</key>
+					<string>kOpCode_SET_OOL_IN_ADDR</string>
+					<key>description</key>
+					<string>set the address of a block of AP memory to be transfered to the SEP for the next request</string>
+					<key>id</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>const</key>
+					<string>kOpCode_SET_OOL_OUT_ADDR</string>
+					<key>description</key>
+					<string>set the address of a block of AP memory to be used to return the result of a given SEP response</string>
+					<key>id</key>
+					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>const</key>
+					<string>kOpCode_SET_OOL_IN_SIZE</string>
+					<key>description</key>
+					<string>set the size of the memory block to be transfered to the endpoint as a parameter</string>
+					<key>id</key>
+					<integer>4</integer>
+				</dict>
+				<dict>
+					<key>const</key>
+					<string>kOpCode_SET_OOL_OUT_SIZE</string>
+					<key>description</key>
+					<string>set the size of the memory block allocated to the be written to as a response to a SEP request</string>
+					<key>id</key>
+					<integer>5</integer>
+				</dict>
+				<dict>
+					<key>const</key>
+					<string>kOpCode_TTYIN</string>
+					<key>id</key>
+					<integer>10</integer>
+				</dict>
+				<dict>
+					<key>const</key>
+					<string>kOpCode_Sleep</string>
+					<key>description</key>
+					<string>put the SEP into low power and wait for an external IRQ</string>
+					<key>id</key>
+					<integer>12</integer>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>put the SEP into low power and wake after a timeout</string>
+					<key>id</key>
+					<integer>19</integer>
+					<key>name</key>
+					<string>kOpCode_Nap</string>
+				</dict>
+				<dict>
+					<key>const</key>
+					<string>kOpCode_SECMODE_REQUEST</string>
+					<key>description</key>
+					<string>get the current effective security mode of the SEP</string>
+					<key>id</key>
+					<integer>20</integer>
+				</dict>
+				<dict>
+					<key>const</key>
+					<string>kOpCode_SELFTEST</string>
+					<key>description</key>
+					<string>perform diagnostics and internal consistancy checks on the the SEP</string>
+					<key>id</key>
+					<integer>24</integer>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Queue the system for a wipe and install of IPSW</string>
+					<key>id</key>
+					<integer>37</integer>
+					<key>name</key>
+					<string>kOpCode_ERASE_INSTALL</string>
+				</dict>
+				<dict>
+					<key>const</key>
+					<string>kOpCode_L4_PANIC</string>
+					<key>description</key>
+					<string>Panic the L4 microkernel</string>
+					<key>id</key>
+					<integer>38</integer>
+				</dict>
+				<dict>
+					<key>const</key>
+					<string>kOpCode_SEPOSPANIC</string>
+					<key>description</key>
+					<string>Panic the SEPOS</string>
+					<key>id</key>
+					<integer>39</integer>
+				</dict>
+			</array>
+			<key>xnu_kext</key>
+			<string>AppleSEPManager</string>
+			<key>xnu_name</key>
+			<string>AppleSEPControl</string>
+		</dict>
+		<key>artr</key>
+		<dict>
+			<key>description</key>
+			<string>Anti-replay token request</string>
+			<key>xnu_name</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+		</dict>
+		<key>arts</key>
+		<dict>
+			<key>description</key>
+			<string>Anti-replay Token Storage</string>
+			<key>xnu_kext</key>
+			<string>AppleSEPManager</string>
+			<key>xnu_name</key>
+			<string>AppleSEPARTStorage</string>
+		</dict>
+		<key>cntl</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+		</dict>
+		<key>debg</key>
+		<dict>
+			<key>description</key>
+			<string>Debug</string>
+			<key>xnu_kext</key>
+			<string>AppleSEPManager</string>
+			<key>xnu_name</key>
+			<string>AppleSEPDebug</string>
+		</dict>
+		<key>disc</key>
+		<dict>
+			<key>description</key>
+			<string>First advertise, then expose
+`id` is endpoint number `name` is `&#39;scrd&#39;` or `&#39;sks\0&#39;` for example. (4 char code)
+struct app_info {
+  uint64_t physical_addr;
+  uint32_t virtual_base;
+  uint32_t size;
+  uint32_t entry;
+  uint8_t name[12];
+  uint8_t hash[16];
+}</string>
+			<key>fixed_endpoint</key>
+			<integer>253</integer>
+			<key>name</key>
+			<string>discovery</string>
+			<key>opcodes</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>advertise</string>
+					<key>request_struct</key>
+					<string>// Credit: ntrung03
+struct ep_advertise_data {
+  uint8_t id; /* param */
+  uint32_t name; /* data, Apple 4CC for the applet name */
+};
+</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>expose</string>
+					<key>request_struct</key>
+					<string>// Credit: ntrung03
+struct ep_expose_data {
+  uint8_t id; /* param */
+  char ool_in_min_pages;
+  char ool_in_max_pages;
+  char ool_out_min_pages;
+  char ool_out_max_pages;
+};
+</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>enti</key>
+		<dict>
+			<key>description</key>
+			<string>Entitlement Service</string>
+		</dict>
+		<key>krnl</key>
+		<dict>
+			<key>fixed_endpoint</key>
+			<integer>254</integer>
+			<key>name</key>
+			<string>L4info</string>
+			<key>opcodes</key>
+			<array>
+				<dict>
+					<key>desciption</key>
+					<string>Set up ipc between two threads</string>
+					<key>id</key>
+					<integer>0</integer>
+					<key>name</key>
+					<string>L4_Ipc</string>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Yield execution to thread</string>
+					<key>id</key>
+					<integer>4</integer>
+					<key>name</key>
+					<string>L4_ThreadSwitch</string>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Create or delete threads</string>
+					<key>id</key>
+					<integer>8</integer>
+					<key>name</key>
+					<string>L4_ThreadControl</string>
+					<key>privileged</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Exchange registers</string>
+					<key>id</key>
+					<integer>12</integer>
+					<key>name</key>
+					<string>L4_ExchangeRegisters</string>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Set thread scheduling information</string>
+					<key>id</key>
+					<integer>16</integer>
+					<key>name</key>
+					<string>L4_Schedule</string>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Map or free virtual memory</string>
+					<key>id</key>
+					<integer>20</integer>
+					<key>name</key>
+					<string>L4_MapControl</string>
+					<key>privileged</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Create a new address space</string>
+					<key>id</key>
+					<integer>24</integer>
+					<key>name</key>
+					<string>L4_SpaceControl</string>
+					<key>privileged</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Sets processor attributes</string>
+					<key>id</key>
+					<integer>28</integer>
+					<key>name</key>
+					<string>L4_ProcessorControl</string>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Cache flushing</string>
+					<key>id</key>
+					<integer>32</integer>
+					<key>name</key>
+					<string>L4_CacheControl</string>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Adjust IPC access</string>
+					<key>id</key>
+					<integer>36</integer>
+					<key>name</key>
+					<string>L4_IpcControl</string>
+					<key>privileged</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Enable or disable an interrupt</string>
+					<key>id</key>
+					<integer>40</integer>
+					<key>name</key>
+					<string>L4_InterruptControl</string>
+					<key>privileged</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Gets the system time</string>
+					<key>id</key>
+					<integer>44</integer>
+					<key>name</key>
+					<string>L4_GetTimebase</string>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Set timeout for IPC sessions</string>
+					<key>id</key>
+					<integer>48</integer>
+					<key>name</key>
+					<string>L4_SetTimeout</string>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Set up a shared mapping</string>
+					<key>id</key>
+					<integer>52</integer>
+					<key>name</key>
+					<string>L4_SharedMappingControl</string>
+					<key>privileged</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>cause the SEP kernel to sleep until an external inturupt occurs</string>
+					<key>id</key>
+					<integer>56</integer>
+					<key>name</key>
+					<string>L4_SleepKernel</string>
+				</dict>
+				<dict>
+					<key>id</key>
+					<integer>60</integer>
+					<key>name</key>
+					<string>L4_PowerControl</string>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Get information about the running L4 kernel</string>
+					<key>id</key>
+					<integer>64</integer>
+					<key>name</key>
+					<string>L4_KernelInterface</string>
+				</dict>
+			</array>
+		</dict>
+		<key>lpol</key>
+		<dict>
+			<key>description</key>
+			<string>Manage Apple Silicon macOS boot policy</string>
+			<key>name</key>
+			<string>boot_policy</string>
+			<key>opcodes</key>
+			<array>
+				<dict>
+					<key>description</key>
+					<string>Begin a boot policy update operation</string>
+					<key>id</key>
+					<integer>2</integer>
+					<key>name</key>
+					<string>begin_update_policy</string>
+				</dict>
+				<dict>
+					<key>id</key>
+					<integer>3</integer>
+					<key>name</key>
+					<string>end_update_policy</string>
+				</dict>
+			</array>
+		</dict>
+		<key>sars</key>
+		<dict>
+			<key>description</key>
+			<string>Secure Anti-Replay Service</string>
+		</dict>
+		<key>sbio</key>
+		<dict>
+			<key>description</key>
+			<string>Secure Biometic Services</string>
+		</dict>
+		<key>scrd</key>
+		<dict>
+			<key>description</key>
+			<string>Secure Credential Manager (AppleCredentialStore)</string>
+			<key>xnu_kext</key>
+			<string>AppleCredentialManager</string>
+		</dict>
+		<key>sepS</key>
+		<dict>
+			<key>description</key>
+			<string>SEP services endpoint</string>
+		</dict>
+		<key>sepr</key>
+		<dict>
+			<key>fixed_endpoint</key>
+			<integer>255</integer>
+			<key>name</key>
+			<string>seprom</string>
+			<key>opcodes</key>
+			<array>
+				<dict>
+					<key>description</key>
+					<string>request a pong from the SEP</string>
+					<key>id</key>
+					<integer>1</integer>
+					<key>name</key>
+					<string>ping</string>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Common to all Apps, panic</string>
+					<key>id</key>
+					<integer>15</integer>
+					<key>name</key>
+					<string>panic</string>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>get random bytes from the SEP</string>
+					<key>id</key>
+					<integer>10</integer>
+					<key>name</key>
+					<string>random</string>
+				</dict>
+			</array>
+		</dict>
+		<key>sidv</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+		</dict>
+		<key>skgs</key>
+		<dict>
+			<key>description</key>
+			<string>Secure Key Generation Service</string>
+		</dict>
+		<key>sks </key>
+		<dict>
+			<key>description</key>
+			<string>Secure Key Storage (AppleKeyStore)</string>
+			<key>xnu_kext</key>
+			<string>AppleSEPKeyStore</string>
+			<key>xnu_name</key>
+			<string>AppleSEPKeyStore</string>
+		</dict>
+		<key>slog</key>
+		<dict>
+			<key>description</key>
+			<string>SEP logging service</string>
+			<key>xnu_kext</key>
+			<string>AppleSEPManager</string>
+			<key>xnu_name</key>
+			<string>AppleSEPLogger</string>
+		</dict>
+		<key>sse </key>
+		<dict>
+			<key>description</key>
+			<string>Proxy access to the SE (secure element)</string>
+			<key>xnu_kext</key>
+			<string>AppleSSE</string>
+		</dict>
+		<key>test</key>
+		<dict>
+			<key>description</key>
+			<string>Test Service</string>
+		</dict>
+		<key>xarm</key>
+		<dict>
+			<key>description</key>
+			<string>xART</string>
+		</dict>
+		<key>xars</key>
+		<dict>
+			<key>description</key>
+			<string>xART</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
