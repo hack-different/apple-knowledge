@@ -8,7 +8,7 @@ require 'wikicloth'
 # Module for interacting with theiphonewiki.com
 module TIPW
   SYNC_DATAFILE = DataFile.new 'tipw_sync'
-  CLIENT = MediawikiApi::Client.new 'https://www.theiphonewiki.com/w/api.php'
+  CLIENT = MediawikiApi::Client.new 'https://www.theapplewiki.com/api.php'
 
   KEY_VALUE_PAIR = /^\s\|\s(\w+)\s+=\s(.*)$/
 

@@ -54,7 +54,7 @@ group :development, :test do
   gem 'kramdown'
   gem 'manpages'
   gem 'mdl'
-  gem 'mediawiki_api', github: 'rickmark/mediawiki-ruby-api'
+  gem 'mediawiki_api', github: 'rickmark/mediawiki-ruby-api', branch: 'faraday_2'
   gem 'nokogiri'
   gem 'octokit'
   gem 'overcommit'
