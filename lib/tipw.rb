@@ -8,7 +8,7 @@ require 'wikicloth'
 # Module for interacting with theiphonewiki.com
 module TIPW
   SYNC_DATAFILE = DataFile.new 'tipw_sync'
-  CLIENT = MediawikiApi::Client.new 'https://www.theapplewiki.com/api.php'
+  CLIENT = MediawikiApi::Client.new 'https://www.theapplewiki.com/api.php', log: true, index_url: 'https://theapplewiki.com/index.php'
 
   KEY_VALUE_PAIR = /^\s\|\s(\w+)\s+=\s(.*)$/
 
@@ -34,7 +34,13 @@ module TIPW
   end
 
   def self.get_page_content(title)
-    CLIENT.get_wikitext(title).body
+    response = CLIENT.get_wikitext(title)
+    unless response.status == 200
+      puts "Got non-200 response (#{response.status}) when getting content for '#{title}'"
+      return nil
+    end
+
+    response.body
   end
 
   # A object representing a parsed TIPW firmware key page

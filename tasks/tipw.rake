@@ -2,6 +2,8 @@
 
 require_relative '../lib/tipw'
 
+THREAD_COUNT = 1
+
 namespace :tipw do
   desc 'update category listings'
   task :categories do
@@ -38,7 +40,7 @@ namespace :tipw do
       end
 
       threads = []
-      16.times do
+      THREAD_COUNT.times do
         threads << Thread.new do
           until work_queue.empty?
             begin
