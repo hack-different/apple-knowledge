@@ -157,6 +157,8 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [*OS iBoot](https://newosxbook.com/bonus/iBoot.pdf)
 * SecureROM
   * [SecureROM Binaries](https://github.com/hekapooios/hekapooios.github.io/tree/master/resources/APROM)
+* TXM - Trusted eXecutation Monitor
+  * [TXM & SPTM](https://www.df-f.com/blog/ios17)
 
 ### Archive / Disk Formats
 
