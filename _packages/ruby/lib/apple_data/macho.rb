@@ -1,5 +1,7 @@
 # typed: strict
 # frozen_string_literal: true
 
-class MachoData < DataFile
+module AppleData
+  class MachoData < AppleData::DataFile
+  end
 end

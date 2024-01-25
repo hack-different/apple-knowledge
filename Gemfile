@@ -23,6 +23,8 @@ gem 'mootool', '~> 0.2.2'
 
 gem 'sorbet-runtime'
 
+gem 'apple-data', path: File.join(File.dirname(__FILE__), '_packages/ruby')
+
 # If you have any plugins, put them here!
 # RESOURCE: https://github.com/planetjekyll/awesome-jekyll-plugins
 group :jekyll_plugins do

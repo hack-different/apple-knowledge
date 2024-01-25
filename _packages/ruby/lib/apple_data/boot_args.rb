@@ -1,5 +1,5 @@
 # typed: strict
 # frozen_string_literal: true
 
-class BootArgsData < DataFile
+class BootArgsData < AppleData::DataFile
 end

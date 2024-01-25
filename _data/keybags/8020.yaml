@@ -2,7 +2,7 @@
 metadata:
   description:
   credits:
-    - theiphonewiki.org
+  - theiphonewiki.org
 constants:
   chip_id: 8020
 keybag_boards:
@@ -2451,6 +2451,30 @@ keybag_boards:
           filename: sep-firmware.n841.RELEASE.im4p
           iv: deb9921b3934429d866a582413c0ea2a
           key: db12629a9a3daf3c472d1f2b96b0fe4915be7d4cdd9e5d3e9b98eb5788c75e9d
+    19F77:
+      components:
+        iBEC:
+          filename: iBEC.d331.RELEASE.im4p
+          iv: 1f51be2506ea9ed491dde473f1cf2105
+          key: be1ce11b5d15b0a9120cad9cc05d49ba17ffc9ad0140dbc5f86dd528f2985b87
+        iBoot:
+          filename: iBoot.d331.RELEASE.im4p
+          iv: 5e104db0045b2b728a5db99c1783bb2d
+          key: d849fac6e5b1c778da233db8fcd9c90abee3b1344619d248fa132d607dcb7053
+        iBSS:
+          filename: iBSS.d331.RELEASE.im4p
+          iv: 96ed1b43c8778abd1736c7cb273c781f
+          key: b72f3506e091dc242daaf22e56508d00db9d244027042d2344b908fbeca61687
+        LLB:
+          filename: LLB.d331.RELEASE.im4p
+          iv: 9fb32cc4fc66067b6c3632ea5cfe9273
+          key: 11961755d46f6f0f476f2378128b66d58ccc4952d64d3b4ab78d3ad33191e60a
+        SEPFirmware:
+          filename: sep-firmware.d331.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: 919de228145ea3c0dbbb6e2bea84c6f8287b4ca283dbd335ab370de37044ef26
+              encrypted_key: 8a1acfd20721219de2dd15d855a2f977
   1:
     16F156:
       components:
@@ -4028,6 +4052,30 @@ keybag_boards:
             production:
               encrypted_iv: 5c7f280c57a6dd72acee00a2f02795fec5b60baefe2552ea85933de662666052
               encrypted_key: e9e2fa432873254f6a3600609392ce6c
+    16D40:
+      components:
+        iBEC:
+          filename: iBEC.d331p.RELEASE.im4p
+          iv: eecf2ab53cbf41687a2ce904a541d800
+          key: 0d36453eba91bb288032d1d7c08614bf09a7d5fa5395b8b703c1467668e6424f
+        iBoot:
+          filename: iBoot.d331p.RELEASE.im4p
+          iv: 7e7c2fabe23f302db451ce30e9d1c2f9
+          key: db1ce9553f8d7f6e10e5948f23cc04537c31b9404af360ed91aa10f2846fe858
+        iBSS:
+          filename: iBSS.d331p.RELEASE.im4p
+          iv: d560e04b1fbc06e91fc0bc2ad4abc461
+          key: e6d1c96e904f923e3c4cce7dc42688700ea0fba20582592e6e380526d0d3183e
+        LLB:
+          filename: LLB.d331p.RELEASE.im4p
+          iv: ffef990c60c8f9cd88fca239d5753f22
+          key: 5f6b074cff83cfc80311c4f1160019c8a06de48e9d47aa3232d76aa630fda8c4
+        SEPFirmware:
+          filename: sep-firmware.d331p.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: 34b959038ffa608b05f8d859a8c4143e4f47c39f975a26f8321d9a9eb7abcc0f
+              encrypted_key: 41b09732f56d9c6ba4a1fc13b88c91b0
   16:
     16F156:
       components:

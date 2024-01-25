@@ -11,7 +11,7 @@ END_PROPERTIES_REGEX = /\}$/
 
 namespace :data do
   task :ioreg do |example_dir|
-    data_file = DataFile.new 'ioreg'
+    data_file = AppleData::DataFile.new 'ioreg'
     data_file.data['classes'] ||= []
 
     unique_classes = data_file.data['classes'].select { |entry| IORegClass.load_one(entry) }

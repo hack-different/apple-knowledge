@@ -1,0 +1,44 @@
+---
+metadata:
+  description:
+  credits:
+  - theiphonewiki.org
+constants:
+  chip_id: 8120
+keybag_boards:
+- 21D5044a:
+    components:
+      iBEC:
+        filename: iBEC.d73.RELEASE.im4p
+        keybags:
+          production:
+            encrypted_iv: aa8a03fdc86a5d2db66a2efbc566a62d9d9bf41bff09c742c9dd5a51cc7a2764
+            encrypted_key: 23adeb342efc3be10748a152ce59e795
+      iBoot:
+        filename: iBoot.d73.RELEASE.im4p
+        iv: 0f063b2a58a7d0ed99de64038532db39
+        key: e26e03a50b2000c88a987f99ad8725c79400159a4016c3d1c1e37132b448eea8
+      iBootData:
+        filename: iBootData.d73.RELEASE.im4p
+        keybags:
+          production:
+            encrypted_iv: 66dba831423bd492e2fa2d4e852fa241135bb645cddc696634fc0fa013f6ee24
+            encrypted_key: 8e7544c9fd63861c93884e44e6c76f20
+      iBSS:
+        filename: iBSS.d73.RELEASE.im4p
+        keybags:
+          production:
+            encrypted_iv: ca61f39fbfc254d1bb7d397259a13db48b035f2dcf18a39b7eba37937804f696
+            encrypted_key: 28d720519fecf81eed589aae8ddc135c
+      LLB:
+        filename: LLB.d64.RELEASE.im4p
+        keybags:
+          production:
+            encrypted_iv: 460d11f935def7ce7e510a7ecd50993344745ee5f0ef12382757f724277b8962
+            encrypted_key: e1afddf3a99c88d8dd27279989713b90
+      SEPFirmware:
+        filename: sep-firmware.d73.RELEASE.im4p
+        keybags:
+          production:
+            encrypted_iv: 47ad1bcbbadc54b0cc55366aaac88f441e70969d2aea05065aad96e5d6baaf97
+            encrypted_key: c5823d952edef6a32b253aeb3b658240

@@ -12,7 +12,7 @@ namespace :data do
       Base64.encode64(hashed).delete('=').squish
     end
 
-    data_file = DataFile.new 'mobile_gestalt'
+    data_file = AppleData::DataFile.new 'mobile_gestalt'
 
     data_file.data['known_keys'] ||= {}
     data_file.data['known_keys'].each do |key|

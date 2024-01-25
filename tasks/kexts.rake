@@ -9,7 +9,7 @@ KERNEL_COLLECTION_DIR = '/System/Library/KernelCollections'
 
 namespace :data do
   task :kexts do
-    data_file = DataFile.new 'kext'
+    data_file = AppleData::DataFile.new 'kext'
     data_file.data['kexts'] ||= []
 
     result.each { |entry| entries[entry['id']] = entry }
@@ -47,7 +47,7 @@ namespace :data do
     task :dumpstate do
       state = KextStatDumpState.new $stdin.read
 
-      data_file = DataFile.new 'kext'
+      data_file = AppleData::DataFile.new 'kext'
       kexts = data_file.collection :kexts
       state.entries.each do |entry|
         kext = kexts.ensure_key entry.id

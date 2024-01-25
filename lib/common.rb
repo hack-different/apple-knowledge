@@ -24,6 +24,7 @@ require 'zlib'
 require 'byebug'
 require 'pry'
 require 'sorbet-runtime'
+require 'apple_data'
 
 BASE_PATH = File.expand_path('..', __dir__) unless defined? BASE_PATH
 
@@ -31,6 +32,8 @@ DATA_DIR = File.realdirpath File.join(BASE_PATH, '_data')
 TMP_DIR = File.join(BASE_PATH, 'tmp')
 
 SCHEMAS_DIR = File.join(BASE_PATH, '_schema')
+
+AppleData.data_location = DATA_DIR
 
 # Represents a DataFile element collection, which is a hash of uniquely identified entries with a hash for a value.
 # The hash will contain 'description' as a first element for human annotation
@@ -53,6 +56,10 @@ class DataFileCollection
 
   def each_key(&)
     @collection_data.each_key(&)
+  end
+
+  def each_value(&)
+    @collection_data.each_value(&)
   end
 
   def map
@@ -83,59 +90,17 @@ class DataFileCollection
   end
 end
 
-# Base class for all data files
-class DataFile
-  extend T::Sig
-  attr_reader :data
-
-  sig { params(parts: String).void }
-  def initialize(*parts)
-    @parts = parts
-    @collections = {}
-    T.unsafe(self).load_file(*parts)
-    ensure_metadata
-  end
-
-  sig { params(parts: String).returns(T::Hash[T.untyped, T.untyped]) }
-  def load_file(*parts)
-    parts[-1] = "#{parts[-1]}.yaml" unless T.must(parts[-1]).end_with? '.yaml'
-    @filename = File.join(DATA_DIR, T.unsafe(File).join(*parts))
-    @data = {}
-    @data = YAML.load_file @filename if File.exist? @filename
-  end
-
-  def save!
-    save_data data
-  end
-
-  def save
-    save!
-  end
-
-  def collection(name)
-    @collections[name.to_s] ||= DataFileCollection.new(self, name)
-  end
-
-  private
-
-  def save_data(data)
-    File.write(@filename, data.to_yaml)
-  end
-
-  def ensure_metadata
-    @data['metadata'] ||= {}
-    @data['metadata'].reverse_merge!({ 'description' => nil, 'credits' => [] })
-  end
-end
-
 SCHEMAS = File.join(SCHEMAS_DIR, '*.rb')
 
 Dir.glob(SCHEMAS).each do |schema|
   require schema
 end
 
-def find_chip_board(product_id)
+def find_chip_board(product_id, chip_type: :ap)
   CORES_DATA.collection(:chip_ids).each do |chip_id, chip|
+    current_chip_type = chip['type'] || 'ap'
+    next unless current_chip_type == chip_type.to_s
+
     chip['boards'].each do |board_id, board|
       return [format('%04X', chip_id), format('%02X', board_id)] if board['product_id'] == product_id
     end
@@ -144,4 +109,4 @@ def find_chip_board(product_id)
   nil
 end
 
-CORES_DATA = DataFile.new 'cores'
+CORES_DATA = AppleData::DataFile.new 'cores'

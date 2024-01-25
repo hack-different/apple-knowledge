@@ -315,7 +315,18 @@ chip_ids:
         board_name: J475dAP
 
 
+  0x6500:
+    name: R1
+    description: Vision Pro R1
+    architecture: arm64
+    type: AVISP
 
+    revisions:
+    boards:
+      0x01:
+        product_name: Apple Vision Pro (R1)
+        product_id:
+        board_name:
 
   0x7000:
     name: t7000
@@ -1594,6 +1605,10 @@ chip_ids:
         product_name: MacBook Air (M2, 2023)
         product_id: Mac14,15
         board_name: J415AP
+      0x42:
+        product_name: Apple Vision Pro
+        product_id: RealityDevice14,1
+        board_name: n301
 
   0x8120:
     name: t8120

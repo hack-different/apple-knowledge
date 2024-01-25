@@ -6,7 +6,7 @@ namespace :data do
   namespace :boot_args do
     desc 'update boot-args from XNU source tree'
     task :scan_xnu_source, [:xnu_directory] do |_task, args|
-      data_file = DataFile.new 'boot_args'
+      data_file = AppleData::DataFile.new 'boot_args'
 
       boot_args_collection = data_file.collection :boot_args
 

@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 # Factory Device Restore
-class FDRData < DataFile
+class FDRData < AppleData::DataFile
   def initialize
     super('fdr.yaml')
 

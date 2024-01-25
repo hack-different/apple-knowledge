@@ -7,7 +7,7 @@ namespace :data do
   namespace :ipsw do
     desc 'process ipsw manifests'
     task :manifests do
-      data_file = DataFile.new 'ipsw'
+      data_file = AppleData::DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
 
       file_path = File.join(TMP_DIR, 'ipsw', 'build_manifests')
@@ -35,7 +35,7 @@ namespace :data do
     namespace :manifests do
       desc 'download ipsw manifests'
       task :download do
-        data_file = DataFile.new 'ipsw'
+        data_file = AppleData::DataFile.new 'ipsw'
         collection = data_file.collection :ipsw_files
 
         file_path = File.join(TMP_DIR, 'ipsw', 'build_manifests')
@@ -69,7 +69,7 @@ namespace :data do
       task :local, [:dir] do |_task, args|
         raise("No directory exists at #{args[:dir]}") unless File.directory? args[:dir]
 
-        data_file = DataFile.new 'ipsw'
+        data_file = AppleData::DataFile.new 'ipsw'
         collection = data_file.collection :ipsw_files
 
         file_path = File.join(TMP_DIR, 'ipsw', 'build_manifests')
@@ -103,7 +103,7 @@ namespace :data do
     task :dt, [:dir] do |_task, args|
       raise("No directory exists at #{args[:dir]}") unless File.directory? args[:dir]
 
-      data_file = DataFile.new 'ipsw'
+      data_file = AppleData::DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
 
       file_path = File.join(TMP_DIR, 'ipsw', 'device_trees')
@@ -129,7 +129,7 @@ namespace :data do
       filename = args[:shasums]
       raise("File #{filename} does not exist") unless File.exist?(filename)
 
-      data_file = DataFile.new 'ipsw'
+      data_file = AppleData::DataFile.new 'ipsw'
 
       sum = SHASum.from_file filename
       sum.update_collection(data_file.collection(:ipsw_files))
@@ -138,7 +138,7 @@ namespace :data do
 
     desc 'missing IPSWs that have URLs but no hashes'
     task :missing_hashes, [:batch_size] do |_task, args|
-      data_file = DataFile.new 'ipsw'
+      data_file = AppleData::DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
 
       urls = collection.map do |_filename, entry|
@@ -176,7 +176,7 @@ namespace :data do
 
     desc 'total order each IPSW'
     task :total_order do
-      data_file = DataFile.new 'ipsw'
+      data_file = AppleData::DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
 
       collection.each_value do |entry|
@@ -198,7 +198,7 @@ namespace :data do
     task :missing, [:dir] do |_task, args|
       raise("No directory exists at #{args[:dir]}") unless File.directory? args[:dir]
 
-      data_file = DataFile.new 'ipsw'
+      data_file = AppleData::DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
 
       result = []
@@ -222,7 +222,7 @@ namespace :data do
     task :invalid, [:dir] do |_task, args|
       raise("No directory exists at #{args[:dir]}") unless File.directory? args[:dir]
 
-      data_file = DataFile.new 'ipsw'
+      data_file = AppleData::DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
 
       collection.each_key do |key|

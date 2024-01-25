@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../lib/tipw'
+require 'apple_data'
 
 THREAD_COUNT = 1
 
@@ -53,7 +54,7 @@ namespace :tipw do
 
               finished_queue.push(entry)
 
-              File.write result_file_name, page.to_json
+              File.write result_file_name, page
             rescue StandardError
               puts "Error getting page #{page_id} (#{entry['title']})"
             end
@@ -78,13 +79,14 @@ namespace :tipw do
   task :keydb do
     input_key_files = File.join(TMP_DIR, 'tipw', 'tipw_firmware_keys', '*.page')
     keys = Dir.glob(input_key_files).map do |keyfile|
-      TIPW::TIPWKeyPage.new(File.read(keyfile))
+      content = File.read(keyfile)
+      TIPW::TIPWKeyPage.new(content)
     rescue StandardError => e
       puts "Error parsing #{keyfile}\n\n#{e}"
       raise
     end
 
-    keys = keys.compact.map(&:to_h).group_by { |key| key['device'] }
+    keys = keys.compact.map(&:to_h).group_by { |key| key['device'] }.reject { |key, _builds| key.nil? }
     keys = keys.map do |key, collection|
       [key, collection.group_by { |item| item['build'] }]
     end
@@ -103,6 +105,8 @@ namespace :tipw do
     keydb = YAML.load_file(File.join(TMP_DIR, 'tipw', 'keydb.yaml'))
     keydb.each do |product, builds|
       chip, board = find_chip_board(product)
+      raise "Unable to find #{product} (#{builds})" unless chip && board
+
       chip_keybag = AppleData::GIDKeyBag[chip]
       board_keybag = chip_keybag.get_board board
       builds.each do |build_id, build_list|
@@ -115,7 +119,7 @@ namespace :tipw do
 
   desc 'update IPSWs from downloaded TIPW pages'
   task :ipsws do
-    data_file = DataFile.new 'ipsw'
+    data_file = AppleData::DataFile.new 'ipsw'
     files_collection = data_file.collection :ipsw_files
     input_files = File.join(TMP_DIR, 'tipw', '**', '*.page')
     urls = Dir.glob(input_files).flat_map do |file|

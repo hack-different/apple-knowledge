@@ -2,11 +2,11 @@
 metadata:
   description:
   credits:
-    - theiphonewiki.org
+  - theiphonewiki.org
 constants:
   chip_id: 8010
 keybag_boards:
-  0x42:
+  66:
     20A5299w:
       components:
         LLB:
@@ -24,7 +24,7 @@ keybag_boards:
         sepi:
           iv: b256110697b8353467de0ebb99bbfa6b
           key: e824615720d52d61333ae8a7cac441821625808588f24fee502600e86e8ea509
-  0x24:
+  36:
     20A5299w:
       components:
         LLB:
@@ -42,3 +42,179 @@ keybag_boards:
         sepi:
           iv: 2cd0364d3145ba5d70f5079ab483eb74
           key: 1f982a0648791bd316390153b6f9c16c7bab7ec8995c55d4aa4b18c5f5363560
+  38:
+    21A329:
+      components:
+        iBEC:
+          filename: iBEC.j420.RELEASE.im4p
+          iv: ccfb8271c0dc3ec9e12353bfb1ac2a17
+          key: 60485829ff1a1f93746af601eb2acf336acd6c347d9c410624ec9b62b99ecd3e
+        iBoot:
+          filename: iBoot.j420.RELEASE.im4p
+          iv: 738480b441b2df259b589ed9460ac1cd
+          key: 2f265490e75b99272b8b735a7dc4acedc5634817be1d34a918755c3c154145be
+        iBSS:
+          filename: iBSS.j420.RELEASE.im4p
+          iv: 278a9fa347224ec9fb912271eb55fda6
+          key: 88039af152baea7c6d4251e754d4253c7bb179e17b0e619988bee2e29a6bd252
+        LLB:
+          filename: LLB.j420.RELEASE.im4p
+          iv: b2efd78cf60a165d546e45608f212d52
+          key: 298e3988d52e3a256ecaf9fe36114a14ebe8b9347d1b66e7c2ab68a8d19ceaad
+        SEPFirmware:
+          filename: sep-firmware.j420.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: 20a7bd8c03319735368fff05520ffc4b183b55b87627efc1858f5720daeb696a
+              encrypted_key: 239774f6a9e0956b5d5083b26db0907f
+    21A360:
+      components:
+        iBEC:
+          filename: iBEC.j420.RELEASE.im4p
+          iv: a953a60f8e3cbd31a65b55b5c4421c40
+          key: 787211f5cba0d2ef6d863af5a2ccc810e4a9bf6bc7890353d473e8a0fd7944cc
+        iBoot:
+          filename: iBoot.j420.RELEASE.im4p
+          iv: b071de6ad658b5e5665b396f1ebacfb0
+          key: 71ef7531bdc21b3a099a4d4362fe6b718e9fb2b77f2c963b2864a8934c938c51
+        iBSS:
+          filename: iBSS.j420.RELEASE.im4p
+          iv: 454d5ca792ca3eb97da3261a395a5642
+          key: 4632b6eedc75d83c12b8d7681bfcf9b9f2d64203f41f825327010c52eba1c0a4
+        LLB:
+          filename: LLB.j420.RELEASE.im4p
+          iv: ba65409b9d280879df31a8fa2708cbf7
+          key: 6f4d5bf1e8f6657cc89ba569bb078accffc45fdd20c63c14ab139bf675f394db
+        SEPFirmware:
+          filename: sep-firmware.j420.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: be573af2870a875f7234fd018dcbe7018f2678a91563a339f7d60ba7d1ff9d25
+              encrypted_key: f7e8edea56c9dec5ac5f7397176df5cd
+    21C62:
+      components:
+        iBEC:
+          filename: iBEC.j420.RELEASE.im4p
+          iv: 5a63a2e5118fc30ef288d9f4620901b7
+          key: 8423f5a943ad5c81dec83767655c77340ced189c0d5d0108ca10f72be440ec8f
+        iBoot:
+          filename: iBoot.j420.RELEASE.im4p
+          iv: 21af1559d493ec417fc44a92acf0725d
+          key: d1fed903188aa7fc3f705596596173cf2a8497e41f0f13616391277f64a2518d
+        iBSS:
+          filename: iBSS.j420.RELEASE.im4p
+          iv: 3557aa2f4ede578cf3b54ee939c7e1ba
+          key: 4b2f023074e107ca973cb47751e0ee8143251ce341a39768c71eeb5ad3c5f762
+        LLB:
+          filename: LLB.j420.RELEASE.im4p
+          iv: db52f05f9e68f21f5e8b5687e6fd4fa1
+          key: bbdf862726fca8858990744879b11b22c02a1972d3906ff280ff7e42b324b4fe
+        SEPFirmware:
+          filename: sep-firmware.j420.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: c2e1e778421c241b15ecc070f9400030716ed7113e019685bc1e19a827117b60
+              encrypted_key: 4f1cdd0062951f1d59ab5720d12c16ce
+    21B74:
+      components:
+        iBEC:
+          filename: iBEC.j420.RELEASE.im4p
+          iv: 1fea7f5526f85d4c9030d598aa0c36ae
+          key: 9bec56ab4649ec0eddfc111b5c5e75566b4b01e028d009349ee0bf96b4cce1be
+        iBoot:
+          filename: iBoot.j420.RELEASE.im4p
+          iv: 8241c77f6c1bbb5538a9c55fe1049a00
+          key: 7c006e9ac4a9f1a4af87038bfd81e708f7d32151be56d5f0c95f56141c673c9e
+        iBSS:
+          filename: iBSS.j420.RELEASE.im4p
+          iv: d82de569b30b988c973d529771e921f4
+          key: e921249fd8525ae00eacc8ce209aface4d131075382922cfd8fffd127850a120
+        LLB:
+          filename: LLB.j420.RELEASE.im4p
+          iv: ff9a45963e444ee455d6325d8a895919
+          key: f6c1949159a4994d97634f204f73b6197dd754fab9dc352d07249003e35db03d
+        SEPFirmware:
+          filename: sep-firmware.j420.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: 6057b70d6bbaa9abda3490d537ca08309bde29d5563506a95bb0a85f2df8561b
+              encrypted_key: a0e0a4db7a67a1b1c588e4f175aa86cd
+    21B91:
+      components:
+        iBEC:
+          filename: iBEC.j420.RELEASE.im4p
+          iv: 4a01c0da8b71f2af22d03a4e1ec80f16
+          key: 52c37ea248c66af6234f5945bf859e0614a8d755ee5af5f93dd18a905515b09b
+        iBoot:
+          filename: iBoot.j420.RELEASE.im4p
+          iv: e79dec4a67164511584dd754c8aefc86
+          key: bd7230e39e1159bc06533339baf19256d757a5e8d509a3468ceea1f525c6005f
+        iBSS:
+          filename: iBSS.j420.RELEASE.im4p
+          iv: fc1a9040adce509bcdf19e254576e78b
+          key: 8d827395e76e25ffd861863a153a941c24c2bcf6888210d61209d37768359997
+        LLB:
+          filename: LLB.j420.RELEASE.im4p
+          iv: 630698d70152cba8d1f0b9f7af6ccd7f
+          key: '07469ed696657b75f142fb30d055b72695a973cdd487528557faffbe35972e0d'
+        SEPFirmware:
+          filename: sep-firmware.j420.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: 741e2ced031fe5d09ca00891fb96f72a11f3e5d8a0e8497bed6c7e3ad997b280
+              encrypted_key: bd600e107c7cf5e3b0d535ed94d3bf1c
+    21B101:
+      components:
+        iBEC:
+          filename: iBEC.j420.RELEASE.im4p
+          iv: 05e304146cc0ed02f4bc956c7d9e4edd
+          key: '096d1a6e0fc8f2427af84216cf5febb52d6418c0b6c2c730fd59cebb2a6e854d'
+        iBoot:
+          filename: iBoot.j420.RELEASE.im4p
+          iv: b9aa8694612f72f16da765881442fda1
+          key: 50d6daa608e638d7ecbea779809d694bcb9aa54238da6c6d62618da2a49b96cd
+        iBSS:
+          filename: iBSS.j420.RELEASE.im4p
+          iv: 11eb1e7964d70dcd22dc92ce0e48571e
+          key: a45e31e5311df72c373f84bcfdc3c7c44ec9757b26f8458020b67ad367405dcc
+        LLB:
+          filename: LLB.j420.RELEASE.im4p
+          iv: 06700f7c3222013b43f59aca54cb1bfb
+          key: 3d3b01fdfd97e2072690979beb08f811ba2682924421b91121fa127f9ba4ac2b
+        SEPFirmware:
+          filename: sep-firmware.j420.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: 4ba36267a5e8f6b8dcea6b43fdf0d292ff36228436e2464e53faf37354658415
+              encrypted_key: 885d6ad814f5cc7e7105bda3eccf52b2
+  3:
+    21A5312c:
+      components:
+        iBEC:
+          filename: iBEC.j417.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: 2a4e5c82900f8e7f715ebc3d359a72d9dfeaf62bdc62eac3692bafeeb088fcb1
+              encrypted_key: a8e8e48d21179cba2fc9b736204b0aa7
+        iBoot:
+          filename: iBoot.j417.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: 7fb19175afefe63eefaa304050e7e6c413ce6536b13542b9e29991afe7a56f42
+              encrypted_key: dc96bc0e280b77ea6ffd8233af094164
+        iBSS:
+          filename: iBSS.j417.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: c0211c362cfde037ef0f8c9a849f47691c43887b8d34393cbd4766325553aec1
+              encrypted_key: d5e2fda791152c07a68b36e0fd3714b3
+        LLB:
+          filename: LLB.j417.RELEASE.im4p
+          iv: 985f97a90cf7f3afe03217960a4c39be
+          key: 4f2e50ff8cb0664cac08a57e0667fd8310a37c38894d5032f1b2a03b8037992f
+        SEPFirmware:
+          filename: sep-firmware.j417.RELEASE.im4p
+          keybags:
+            production:
+              encrypted_iv: 7b94d2842a20774a59d264c00eec5737cb3bdcb8385e02ff208bdccfcb9d10cc
+              encrypted_key: 1e1b4e9f2acb3f004f034f435c360b91
