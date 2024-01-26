@@ -15,6 +15,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install OS Packages
+        run: apt-get install -y libidn-dev
+
       - name: Checkout Repository with History
         uses: actions/checkout@v3
         with:
