@@ -387,3 +387,652 @@ apns_commands:
         name:  redirect_reason
         label: Redirect Reason
         type: FT_STRING
+topics:
+  com.apple.mobileassetd:
+  com.apple.idmsauth:
+  com.apple.symptomsd-diag:
+  com.apple.mobileme.fmip:
+  "com.icloud.family":
+  com.apple.icloud-container.com.apple.amsengagementd:
+  com.apple.icloud-container.clouddocs.com.apple.TextInput:
+  com.apple.icloud-container.com.apple.appleaccount.custodian:
+  com.applepay.ccs.account.physicalcards.prod:
+  com.apple.pay.auxiliary.registration.requirement.prod:
+  com.apple.icloud-container.com.apple.protectedcloudstorage.protectedcloudkeysyncing:
+  com.apple.icloud-container.com.apple.UsageTrackingAgent:
+  com.apple.icloud-container.com.apple.icloud.searchpartyuseragent:
+  com.apple.icloud-container.clouddocs.com.apple.CloudDocs:
+  com.apple.findmy:
+  com.apple.icloud-container.com.apple.SafariShared.WBSCloudBookmarksStore:
+  com.apple.pay.ccs.account.sharedAccountCloudStore.prod:
+  com.apple.icloud-container.clouddocs.com.apple.Keynote:
+  com.apple.icloud-container.com.apple.keyboardservicesd:
+  com.apple.icloud-container.com.apple.TrustedPeersHelper:
+  com.me.cal:
+  com.apple.icloud-container.com.apple.appleaccount.identity:
+  com.apple.icloud-container.com.apple.appleaccount.custodian.private:
+  com.apple.icloud-container.com.apple.reminders:
+  com.apple.storekit:
+  paymentpass.com.apple:
+  com.apple.icloud-container.clouddocs.com.apple.ScriptEditor2:
+  com.icloud.askpermission:
+  com.apple.pay.services.devicecheckin.prod.us:
+  com.apple.jalisco:
+  com.apple.icloud-container.clouddocs.com.apple.shoebox:
+  com.apple.icloud-container.com.apple.suggestd:
+  com.apple.icloud-container.clouddocs.com.apple.Numbers:
+  com.apple.idmsauthagent:
+  com.apple.icloud-container.com.apple.siriknowledged:
+  com.apple.icloud-container.clouddocs.iCloud.com.apple.Playgrounds:
+  com.apple.icloud-container.com.apple.security.kcsharing:
+  com.apple.icloud-container.clouddocs.F3LWYJ7GM7.com.apple.garageband10:
+  com.apple.passd.usernotifications:
+  com.apple.pay.provision:
+  com.apple.aa.idms:
+  com.apple.gamed:
+  com.apple.icloud-container.clouddocs.iCloud.com.apple.iBooks:
+  com.apple.pay.services.ownershipTokens.prod:
+  com.apple.aa.setupservice:
+  com.apple.icloud-container.clouddocs.iCloud.com.apple.MobileSMS:
+  com.apple.pay.services.account.applications.prod:
+  com.applepay.ccs.account.virtualcards.prod:
+  com.apple.icloud-container.com.apple.transparencyd:
+  com.apple.icloud-container.clouddocs.F6266T9T75.com.apple.iMovie:
+  com.apple.icloud-container.clouddocs.com.apple.TextEdit:
+  com.apple.icloud-container.com.apple.appleaccount.beneficiary:
+  com.apple.icloud-container.com.apple.security.cuttlefish:
+  com.apple.pay.services.products.prod:
+  com.apple.icloud-container.com.apple.icloud.fmfd:
+  com.apple.icloud-container.clouddocs.com.apple.Grab:
+  com.apple.icloud-container.com.apple.appleaccount.identity.private:
+  com.apple.icloud-container.clouddocs.com.apple.Preview:
+  com.apple.pay.services.account.users.prod:
+  com.apple.appstored:
+  com.apple.pay.services.ck.zone.prod:
+  com.apple.icloud-container.com.apple.gamed:
+  com.apple.icloud-container.com.apple.upload-request-proxy.com.apple.photos.cloud:
+  com.apple.icloud-container.com.apple.findmy.findmylocateagent:
+  com.apple.icloud-container.com.apple.appleaccount.beneficiary.private:
+  com.apple.wallet.sharing:
+  com.apple.pay.account.payments.prod:
+  com.apple.pay.services.account.full.prod:
+  com.apple.icloud-container.com.apple.bluetoothuserd:
+  com.apple.icloud.fmip.voiceassistantsync:
+  com.me.setupservice:
+  com.apple.icloud-container.clouddocs.com.apple.Mica:
+  com.apple.icloud-container.com.apple.cloudpaird:
+  com.apple.icloud-container.com.apple.Safari:
+  com.apple.pay.services.apply.prod:
+  com.apple.icloud-container.com.apple.sociallayerd:
+  com.apple.icloud-container.clouddocs.com.apple.CloudDocs.container-metadata:
+  com.apple.mobileme.fmf3:
+  com.apple.icloud-container.clouddocs.iCloud.com.polishedplay.coreanimator:
+  com.apple.icloud-container.clouddocs.F3LWYJ7GM7.com.apple.mobilegarageband:
+  com.apple.icloud-container.com.apple.assistant.assistantd:
+  com.apple.icloud-container.com.apple.syncdefaultsd:
+  com.apple.askpermissiond:
+  com.apple.icloud-container.clouddocs.iCloud.com.apple.configurator.ui:
+  com.apple.pay.services.account.summary.prod:
+  com.apple.icloud-container.clouddocs.com.apple.QuickTimePlayerX:
+  com.icloud.family:
+  com.apple.icloud-container.clouddocs.com.apple.iBooks.cloudData:
+  com.apple.icloud-container.clouddocs.com.apple.Automator:
+  com.apple.icloud-container.clouddocs.com.apple.mail:
+  com.apple.icloud-container.clouddocs.iCloud.is.workflow.my.workflows:
+  com.apple.icloud-container.clouddocs.com.apple.CloudDocs.pp-metadata:
+  com.apple.icloud-container.clouddocs.F3LWYJ7GM7.com.apple.musicmemos.ideas:
+  com.apple.icloud-container.com.apple.securityd:
+  com.apple.icloud-container.clouddocs.com.apple.Pages:
+  com.me.contacts:
+  com.apple.idmsauth:
+  com.apple.pay.services.account.prod:
+  com.apple.wallet.sharing.qa:
+  com.apple.icloud-container.clouddocs.com.apple.CloudDocs.health:
+  com.apple.amsaccountsd:
+  com.apple.icloud-container.com.apple.SafariShared.CloudTabs:
+  com.icloud.quota:
+  com.applepay.ccs.account.servicingToken.prod:
+  com.apple.sagad:
+  com.apple.icloud-container.com.apple.SafariShared.Settings:
+  com.apple.icloud-container.com.apple.imagent:
+  com.apple.icloud-container.clouddocs.iCloud.com.apple.iBooks.iTunesU:
+  com.applepay.ccs.account.recoveryPaymentPlans.prod:
+  com.apple.peerpayment:
+  com.apple.itunesstored:
+  com.apple.icloud-container.com.apple.avatarsd:
+  com.apple.icloud-container.com.apple.willowd:
+  "com.apple.appstored-testflight":
+  com.apple.private.alloy.icloudpairing:
+  com.apple.private.ids:
+  com.apple.private.alloy.accessibility.switchcontrol:
+  com.apple.private.alloy.sms:
+  com.apple.private.alloy.avconference.icloud:
+  com.apple.private.alloy.facetime.video:
+  com.apple.private.alloy.quickrelay:
+  com.apple.private.alloy.hearing:
+  com.apple.private.alloy.home.invite:
+  com.apple.private.alloy.status.keysharing:
+  com.apple.private.alloy.messagenotification:
+  com.apple.private.alloy.arcade.gftaas:
+  com.apple.private.alloy.home:
+  com.apple.private.alloy.tips:
+  com.apple.private.alloy.status.personal:
+  com.apple.private.alloy.sleep.icloud:
+  com.apple.ess:
+  com.apple.private.alloy.groupkit.invite:
+  com.apple.private.alloy.carmelsync:
+  com.apple.private.alloy.continuity.activity:
+  com.apple.private.alloy.safeview:
+  com.apple.private.alloy.nameandphoto:
+  com.apple.private.alloy.continuity.tethering:
+  com.apple.private.alloy.applepay:
+  com.apple.private.alloy.fmd:
+  com.apple.private.alloy.contextsync:
+  com.apple.private.alloy.facetime.sync:
+  com.apple.private.alloy.gamecenter.imessage:
+  com.apple.private.alloy.notes:
+  com.apple.private.alloy.maps:
+  com.apple.private.alloy.groupRemoteControl.messaging:
+  com.apple.private.alloy.widgets:
+  com.apple.private.alloy.kcsharing.invite:
+  com.apple.private.alloy.groupRemoteControl.cloud:
+  com.apple.private.alloy.ded:
+  com.apple.icloud-container.com.apple.photos.cloud:
+  com.apple.private.alloy.itunes:
+  com.apple.private.alloy.safetymonitor.ownaccount:
+  com.apple.private.alloy.willow:
+  com.apple.private.alloy.ids.cloudmessaging:
+  com.apple.private.alloy.screentime.invite:
+  com.apple.private.alloy.screentime:
+  com.apple.private.alloy.fmf:
+  com.apple.private.alloy.facetime.multi:
+  com.apple.private.alloy.willow.stream:
+  com.apple.private.alloy.usagetracking:
+  com.apple.private.alloy.bulletinboard:
+  com.apple.private.alloy.facetime.audio:
+  com.apple.private.alloy.continuity.unlock:
+  com.apple.private.alloy.maps.eta:
+  com.apple.private.alloy.nearby:
+  com.apple.private.alloy.gelato:
+  com.apple.private.alloy.screensharing:
+  com.apple.madrid:
+  com.apple.private.alloy.phonecontinuity:
+  com.apple.private.alloy.alarms-timers:
+  com.apple.private.alloy.photostream:
+  com.apple.triald:
+  com.apple.private.alloy.continuity.encryption:
+  com.apple.private.alloy.clockface.sharing:
+  com.apple.private.alloy.amp.potluck:
+  com.apple.private.alloy.accounts.representative:
+  com.apple.private.alloy.findmy.itemsharing-crossaccount:
+  com.apple.private.alloy.biz:
+  com.apple.private.alloy.airdrop.walkaway:
+  com.apple.private.alloy.digitalhealth:
+  com.apple.private.alloy.facetime.lp:
+  com.apple.private.alloy.classroom:
+  com.apple.private.alloy.coreduet.sync:
+  com.apple.private.alloy.multiplex1:
+  com.apple.icloud-container.com.apple.knowledge-agent:
+  com.apple.private.alloy.phone.auth:
+  com.apple.private.alloy.askto:
+  com.apple.private.alloy.keytransparency.accountkey.pinning:
+  com.apple.private.alloy.arcade.fastsync:
+  com.apple.private.alloy.groupRemoteControl.session:
+  com.apple.private.alloy.thumper.keys:
+  com.apple.private.alloy.proxiedcrashcopier.icloud:
+  com.apple.private.alloy.safari.groupactivities:
+  com.apple.private.ac:
+  com.apple.private.alloy.safetymonitor:
+  com.apple.private.alloy.screensharing.qr:
+  com.apple.private.alloy.safetymonitor.multiplex:
+  com.apple.private.alloy.electrictouch:
+  com.apple.private.alloy.groupkit:
+  com.apple.icloud-container.com.apple.callhistory.sync-helper:
+  com.apple.weather:
+  com.apple.sharedstreams:
+  com.apple.icloud-container.com.apple.passd:
+  com.visa.TokenPush:
+  com.apple.icloud-container.clouddocs.com.apple.Notes:
+  com.apple.icloud-container.clouddocs.com.apple.finder:
+  com.apple.icloud.presence.shared.experience:
+  com.apple.iWork.Numbers:
+  com.apple.dt.Xcode:
+  com.apple.icloud-container.com.apple.iWork.Numbers:
+  com.apple.icloud.presence.mode.status:
+apns_environments:
+  development:
+    endpoints:
+      - sandbox.push.apple.com
+    root:
+      mach_ports:
+        "com.apple.aps.mdmclient.daemon.push.development":
+        "com.apple.icloud.findmydeviced.aps-development":
+    user:
+      mach_ports:
+        "com.apple.aps.mdmclient.agent.push.development":
+        "com.apple.telephonyutilities.callservicesdaemon.voip.push.development":
+        "com.apple.fileprovider.extension.push.development":
+        "com.apple.aps.remindd.dataaccess.dev":
+        "com.apple.dataaccess.dataaccessd.aps.dev":
+      processes:
+        - cloudd
+    "_applepay":
+  production:
+    endpoints:
+      - push.apple.com
+    root:
+      channels:
+        - com.apple.mobileassetd
+        - com.apple.symptomsd-diag
+      mach_ports:
+        "com.apple.icloud.findmydeviced.aps-production":
+          dark_wake: true
+          topics:
+            com.apple.mobileme.fmip:
+              in: true
+        "com.apple.aps.mobileassetd":
+          topics:
+            com.apple.mobileassetd:
+        "com.apple.aps.diagnosticpipeline.tasking":
+          topics:
+            com.apple.symptomsd-diag:
+              in: true
+        "com.apple.aps.mdmclient.daemon.push.production":
+          dark_wake: true
+        "com.apple.ak.aps":
+          com.apple.idmsauth:
+    enabled:
+      - com.apple.mobileassetd
+      - com.apple.idmsauth
+      - com.apple.symptomsd-diag
+      - com.apple.mobileme.fmip
+    paused:
+      - com.icloud.family
+  user:
+    mach_ports:
+      "com.apple.aps.mdmclient.agent.push.production":
+        dark_wake: true
+      "com.apple.securityd.aps":
+        topics:
+          com.apple.icloud-container.com.apple.securityd:
+            in: true
+          com.apple.icloud-container.com.apple.TrustedPeersHelper:
+          com.apple.icloud-container.com.apple.security.cuttlefish:
+            in: true
+      "com.apple.coreduet.knowledge.sync.push":
+        topics:
+          com.apple.icloud-container.com.apple.knowledge-agent:
+            in: true
+      "com.apple.aps.bluetoothuserd":
+        topics:
+          "com.apple.icloud-container.com.apple.bluetoothuserd":
+      "com.apple.identityservicesd.aps":
+        topics:
+          com.apple.private.alloy.icloudpairing:
+          com.apple.private.alloy.accessibility.switchcontrol:
+          com.apple.private.alloy.groupkit:
+          com.apple.private.alloy.sms:
+          com.apple.private.alloy.avconference.icloud:
+          com.apple.private.alloy.facetime.video:
+          com.apple.private.alloy.quickrelay:
+          com.apple.private.alloy.hearing:
+            in: true
+          com.apple.private.alloy.home.invite:
+          com.apple.private.alloy.status.keysharing:
+          com.apple.private.alloy.messagenotification:
+          com.apple.private.alloy.arcade.gftaas:
+          com.apple.private.alloy.home:
+          com.apple.private.alloy.tips:
+          com.apple.private.alloy.status.personal:
+            in: true
+          com.apple.private.alloy.sleep.icloud:
+          com.apple.ess:
+          com.apple.private.alloy.continuity.activity:
+          com.apple.private.alloy.groupkit.invite:
+          com.apple.private.alloy.carmelsync:
+          com.apple.private.alloy.safeview:
+          com.apple.private.alloy.nameandphoto:
+            in: true
+          com.apple.private.alloy.continuity.tethering:
+          com.apple.private.alloy.applepay:
+          com.apple.private.alloy.fmd:
+            in: true
+          com.apple.private.alloy.contextsync:
+            in: true
+          com.apple.private.alloy.facetime.sync:
+          com.apple.private.alloy.gamecenter.imessage:
+          com.apple.private.alloy.notes:
+          com.apple.private.alloy.maps:
+          com.apple.private.alloy.groupRemoteControl.messaging:
+          com.apple.private.alloy.widgets:
+          com.apple.private.alloy.kcsharing.invite:
+          com.apple.private.alloy.groupRemoteControl.cloud:
+          com.apple.private.alloy.ded:
+          com.apple.private.alloy.itunes:
+          com.apple.private.alloy.safetymonitor.ownaccount:
+          com.apple.private.alloy.willow:
+            in: true
+          com.apple.private.alloy.ids.cloudmessaging:
+          com.apple.private.alloy.screentime.invite:
+          com.apple.private.alloy.screentime:
+            in: true
+          com.apple.private.alloy.fmf:
+          com.apple.private.alloy.facetime.multi:
+          com.apple.private.alloy.willow.stream:
+          com.apple.private.alloy.usagetracking:
+          com.apple.private.alloy.bulletinboard:
+            in: true
+          com.apple.private.alloy.facetime.audio:
+          com.apple.private.alloy.continuity.unlock:
+          com.apple.private.alloy.maps.eta:
+          com.apple.private.alloy.nearby:
+            in: true
+          com.apple.private.alloy.gelato:
+          com.apple.private.alloy.screensharing:
+          com.apple.madrid:
+            in: true
+          com.apple.private.alloy.phonecontinuity:
+          com.apple.private.alloy.alarms-timers:
+          com.apple.private.alloy.photostream:
+          com.apple.private.alloy.continuity.encryption:
+          com.apple.private.alloy.clockface.sharing:
+          com.apple.private.alloy.amp.potluck:
+          com.apple.private.alloy.accounts.representative:
+          com.apple.private.alloy.findmy.itemsharing-crossaccount:
+          com.apple.private.alloy.biz:
+          com.apple.private.alloy.airdrop.walkaway:
+          com.apple.private.alloy.digitalhealth:
+            in: true
+          com.apple.private.alloy.facetime.lp:
+          com.apple.private.alloy.classroom:
+          com.apple.private.alloy.coreduet.sync:
+          com.apple.private.alloy.multiplex1:
+          com.apple.private.alloy.phone.auth:
+          com.apple.private.alloy.askto:
+          com.apple.private.alloy.keytransparency.accountkey.pinning:
+          com.apple.private.alloy.arcade.fastsync:
+          com.apple.private.alloy.groupRemoteControl.session:
+          com.apple.private.alloy.thumper.keys:
+          com.apple.private.alloy.proxiedcrashcopier.icloud:
+          com.apple.private.alloy.safari.groupactivities:
+          com.apple.private.ac:
+          com.apple.private.alloy.safetymonitor:
+          com.apple.private.alloy.screensharing.qr:
+          com.apple.private.ids:
+            in: true
+          com.apple.private.alloy.safetymonitor.multiplex:
+          com.apple.private.alloy.electrictouch:
+      "com.apple.aps.kvsd":
+        dark_wake: true
+        topics:
+          com.apple.icloud-container.com.apple.syncdefaultsd:
+      "com.apple.aps.transparencyd":
+        topics:
+          com.apple.icloud-container.com.apple.transparencyd:
+      "com.apple.icloud.fmfd.aps":
+        topics:
+          com.apple.icloud-container.com.apple.icloud.fmfd:
+          com.apple.mobileme.fmf3:
+      "com.apple.telephonyutilities.callservicesdaemon.voip.push":
+      "com.apple.coreservices.appleid.aps":
+      "com.apple.fileprovider.extension.push":
+      "com.apple.ak.aps":
+        topics:
+          "com.apple.idmsauth":
+      "com.apple.homed.aps":
+        topics:
+          "com.apple.icloud-container.com.apple.willowd":
+      "com.apple.aps.assistantd.fmip":
+        topics:
+          "com.apple.icloud.fmip.voiceassistantsync"
+      "com.apple.aps.StatusKit":
+        topics:
+          com.apple.icloud.presence.mode.status:
+            in: true
+          com.apple.icloud.presence.shared.experience:
+      "com.apple.aps.amsaccountsd":
+        topics:
+          "com.apple.amsaccountsd":
+      "com.apple.aps.family":
+        topics:
+          "com.icloud.family":
+      "com.apple.ind.aps":
+        topics:
+          "com.icloud.quota":
+      "com.apple.assistantd.aps":
+        topics:
+          "com.apple.icloud-container.com.apple.assistant.assistantd":
+      "com.apple.aps.suggestd":
+        topics:
+          "com.apple.icloud-container.com.apple.suggestd":
+      "com.apple.aps.amsengagementd":
+        topics:
+          "com.apple.icloud-container.com.apple.amsengagementd":
+            in: true
+      "com.apple.aps.ScreenTime":
+      "com.apple.aps.triald":
+        topics:
+          "com.apple.triald":
+      "com.apple.aps.imagent":
+        topics:
+          "com.apple.icloud-container.com.apple.imagent":
+      "com.apple.aps.storekitservice":
+        topics:
+          "com.apple.storekit":
+      "com.apple.aps.itunescloudd":
+        topics:
+          "com.apple.itunesstored":
+      "com.apple.aps.SafariCloudHistoryPushAgent":
+        topics:
+          "com.apple.icloud-container.com.apple.Safari":
+      "com.apple.SafariBookmarksSyncAgent.Push":
+        topics:
+          "com.apple.icloud-container.com.apple.SafariShared.Settings":
+          "com.apple.icloud-container.com.apple.SafariShared.CloudTabs":
+            in: true
+          "com.apple.icloud-container.com.apple.SafariShared.WBSCloudBookmarksStore":
+      "com.apple.aps.remindd.dataaccess":
+      "com.apple.passd.aps":
+        description: This also includes various topics in the form `pass.<bundle_dns_name` for third party apps
+        topics:
+          com.apple.pay.auxiliary.registration.requirement.prod:
+          com.apple.pay.services.account.full.prod:
+          com.applepay.ccs.account.servicingToken.prod:
+          com.apple.pay.provision:
+          com.apple.wallet.sharing:
+          com.apple.pay.services.apply.prod:
+          com.apple.pay.services.account.users.prod:
+          com.apple.passd.usernotifications:
+          com.apple.pay.services.devicecheckin.prod.us:
+          paymentpass.com.apple:
+          com.apple.pay.services.ownershipTokens.prod:
+          com.apple.wallet.sharing.qa:
+          com.apple.peerpayment:
+          com.applepay.ccs.account.recoveryPaymentPlans.prod:
+          com.applepay.ccs.account.physicalcards.prod:
+          com.applepay.ccs.account.virtualcards.prod:
+          com.apple.pay.services.products.prod:
+          com.apple.pay.services.account.summary.prod:
+            in: true
+          com.apple.pay.services.account.applications.prod:
+          com.apple.pay.account.payments.prod:
+          com.apple.pay.ccs.account.sharedAccountCloudStore.prod:
+          com.apple.pay.services.ck.zone.prod:
+          com.apple.pay.services.account.prod:
+            in: true
+      "com.apple.aps.webkit.webpushd.incoming-push":
+        description: This also includes topics in the form of URLs such as `https://somesite.com`
+        topics:
+          "com.apple.Safari":
+      "com.apple.photos.cloud.pushnotification":
+        topics:
+          "com.apple.icloud-container.com.apple.photos.cloud":
+      "com.apple.aps.financed":
+        topics:
+      "com.apple.dataaccess.dataaccessd.aps":
+        topics:
+          "com.me.cal":
+      "com.apple.aps.remindd":
+        topics:
+          "com.apple.icloud-container.com.apple.reminders":
+      "com.apple.aps.photos.cloud.datarepair":
+        topics:
+          "com.apple.icloud-container.com.apple.upload-request-proxy.com.apple.photos.cloud":
+      "com.apple.siriknowledged.aps":
+        topics:
+          "com.apple.icloud-container.com.apple.siriknowledged":
+      "com.apple.aps.weather":
+      "com.apple.aps.aa":
+        "com.apple.aa.idms":
+        "com.apple.aa.setupservice":
+      "com.apple.aps.appleaccountd":
+        topics:
+          "com.apple.icloud-container.com.apple.appleaccount.custodian.private":
+          "com.apple.icloud-container.com.apple.appleaccount.beneficiary.private":
+          "com.apple.icloud-container.com.apple.appleaccount.identity.private":
+          "com.apple.icloud-container.com.apple.appleaccount.custodian":
+          "com.apple.icloud-container.com.apple.appleaccount.beneficiary":
+          "com.apple.icloud-container.com.apple.appleaccount.identity":
+      "com.apple.aps.cloudpaird":
+        topics:
+          "com.apple.icloud-container.com.apple.cloudpaird":
+      "com.apple.aps.askpermission":
+        topics:
+          "com.apple.askpermissiond":
+          com.icloud.askpermission:
+      "com.apple.aps.UsageTrackingAgent":
+        topics:
+          "com.apple.icloud-container.com.apple.UsageTrackingAgent":
+      "com.apple.AddressBook.PushNotification":
+        topics:
+          "com.me.contacts":
+      "com.apple.aps.appstoreagent":
+        topics:
+          "com.apple.appstored":
+            in: true
+          "com.apple.appstored-testflight":
+          "com.apple.storekit":
+      "com.apple.aps.searchpartyuseragent":
+        topics:
+          "com.apple.icloud-container.com.apple.icloud.searchpartyuseragent":
+            in: true
+      "com.apple.AOSPushRelay.push":
+        topics:
+          "com.me.setupservice":
+      "com.apple.keyboardServices.textReplacementServer.aps":
+        topics:
+          "com.apple.icloud-container.com.apple.keyboardservicesd":
+            in: true
+      "com.apple.aps.avatar.service":
+        topics:
+          "com.apple.icloud-container.com.apple.avatarsd":
+      "com.apple.bird.push":
+        topics:
+          "com.apple.icloud-container.clouddocs.iCloud.com.apple.iBooks.iTunesU":
+          "com.apple.icloud-container.clouddocs.com.apple.TextEdit":
+          "com.apple.icloud-container.clouddocs.com.apple.shoebox":
+          "com.apple.icloud-container.clouddocs.com.apple.Mica":
+          "com.apple.icloud-container.clouddocs.com.apple.Pages":
+          "com.apple.icloud-container.clouddocs.iCloud.com.apple.Playgrounds":
+          "com.apple.icloud-container.clouddocs.com.apple.Automator":
+          "com.apple.icloud-container.clouddocs.com.apple.CloudDocs":
+          "com.apple.icloud-container.clouddocs.com.apple.TextInput":
+          "com.apple.icloud-container.clouddocs.com.apple.Keynote":
+          "com.apple.icloud-container.clouddocs.com.apple.QuickTimePlayerX":
+          "com.apple.icloud-container.clouddocs.com.apple.iBooks.cloudData":
+          "com.apple.icloud-container.clouddocs.com.apple.CloudDocs.health":
+          "com.apple.icloud-container.clouddocs.iCloud.is.workflow.my.workflows":
+          "com.apple.icloud-container.clouddocs.com.apple.mail":
+          "com.apple.icloud-container.clouddocs.com.apple.ScriptEditor2":
+          "com.apple.icloud-container.clouddocs.com.apple.CloudDocs.container-metadata":
+          "com.apple.icloud-container.clouddocs.iCloud.com.apple.MobileSMS":
+          "com.apple.icloud-container.clouddocs.F3LWYJ7GM7.com.apple.musicmemos.ideas":
+          "com.apple.icloud-container.clouddocs.iCloud.com.apple.configurator.ui":
+          "com.apple.icloud-container.clouddocs.com.apple.Grab":
+          "com.apple.icloud-container.clouddocs.com.apple.Preview":
+          "com.apple.icloud-container.clouddocs.F3LWYJ7GM7.com.apple.mobilegarageband":
+          "com.apple.icloud-container.clouddocs.iCloud.com.apple.iBooks":
+          "com.apple.icloud-container.clouddocs.F3LWYJ7GM7.com.apple.garageband10":
+          "com.apple.icloud-container.clouddocs.com.apple.CloudDocs.pp-metadata":
+          "com.apple.icloud-container.clouddocs.com.apple.Numbers":
+      "com.apple.gamed.aps":
+        topics:
+          "com.apple.gamed":
+      "com.apple.aps.gamed.CK":
+        topics:
+          "com.apple.icloud-container.com.apple.gamed":
+    processes:
+      "usernoted":
+        description: User notification - The process that listens for UI alert for Apple and non-apple or third
+          party apps.  The topics are based on the installed applications of the user, and safari seems to
+          create `web.<domain>` variants as well for HTML based notifications.  Updates to Ubiquity containers
+          have the pattern `com.apple.icloud-container.<bundle_dns_name>`
+        topics:
+          com.apple.icloud-container.com.apple.iWork.Numbers:
+          com.apple.icloud-container.com.apple.findmy:
+          com.apple.findmy:
+            in: true
+          com.apple.dt.Xcode:
+          com.apple.iWork.Numbers:
+      "identityservicesd":
+        dark_wake: true
+        topics:
+          com.apple.madrid:
+            out: true
+            in: true
+          "com.apple.private.alloy.fmd":
+            out: true
+            in: true
+          "com.apple.private.alloy.status.personal":
+            out: true
+            in: true
+          "com.apple.private.alloy.digitalhealth":
+            out: true
+            in: true
+          "com.apple.private.alloy.hearing":
+            out: true
+            in: true
+          "com.apple.private.alloy.nearby":
+            out: true
+            in: true
+          "com.apple.private.alloy.willow":
+            out: true
+            in: true
+          "com.apple.private.alloy.screentime":
+            out: true
+            in: true
+      "secd":
+        dark_wake: true
+        topics:
+          "com.apple.icloud-container.com.apple.security.kcsharing":
+      "callservicesd":
+      "homed":
+      "ProtectedCloudKeySyncing":
+        topics:
+          "com.apple.icloud-container.com.apple.protectedcloudstorage.protectedcloudkeysyncing":
+      "imagent":
+        dark_wake: true
+        topics:
+          com.apple.ess:
+          com.apple.private.ac:
+      "StatusKitAgent":
+      "sociallayerd":
+        topics:
+          "com.apple.icloud-container.com.apple.sociallayerd":
+      "findmylocateagent":
+        topics:
+          "com.apple.icloud-container.com.apple.findmy.findmylocateagent":
+          "com.apple.findmy":
+            in: true
+          "com.apple.mobileme.fmf3":
+      "cloudd":
+      "AMPLibraryAgent":
+        topics:
+          "com.apple.itunesstored":
+          "com.apple.sagad":
+          "com.apple.jalisco":
+    "_applepay":
+      mach_ports:
+        "com.apple.seld.aps":
+          topics:
+            "com.apple.seld":

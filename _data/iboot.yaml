@@ -18,14 +18,26 @@ commands:
   setenv:
     description: sets a key to a value in memory
   getenv:
-    description:
+    description: gets an environment variable
   reset:
   reboot:
-  setenvnp:
-  clearenvp:
+  setenvnp: Set environment - non-persistent
+  clearenvp: Clear environment - persistent
+  bootx:
+  go:
+    secure_disabled: true
+  memboot:
+  nvme_firmware0:
+  spi_nand0:
   alamo:
   rtos:
   diags:
+  bgcolor:
+  setpicture:
+  firmware:
+  devicetree:
+  ramdisk:
+  rsepfirmware:
   fsboot:
     description: Perform a "normal" boot from the disk
   upgrade:
