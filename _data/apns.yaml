@@ -575,7 +575,7 @@ apns_environments:
         com.apple.aps.remindd.dataaccess.dev:
         com.apple.dataaccess.dataaccessd.aps.dev:
       processes:
-      - cloudd
+        cloudd:
     _applepay:
   production:
     endpoints:

@@ -1,0 +1,340 @@
+---
+terms:
+  ace:
+  - title: USB-C Port Controller
+  aht:
+  - title: Apple Hardware Test
+  ane:
+  - title: Apple Neural Engine
+  anps:
+  - title: Apple Push Notification Service
+    description:
+  aop:
+  - title: Always-On Processor
+  AP:
+  - title: Application Processor
+  aps:
+    see:
+    - apns
+  APTicket:
+  mach:
+  tfp0:
+  gcd:
+    - title: Grand Central Dispatch
+  xnu:
+  seatbelt:
+    see:
+      - sandbox
+  dfu:
+    - title: Device Firmware Update
+  recovery:
+  restore:
+  mdm:
+    - title: Mobile Device Management
+  dep:
+    - title: Device Enrollment Program
+  se:
+    - title: Secure Element
+  register:
+    - title: Processor Register
+  msr:
+    - title: Model/Machine Specific Register
+      see:
+        - register
+  ecore:
+    - title: Efficienty Core
+  pcore:
+    - title: Performance Core
+  x86:
+  x86_64:
+  x86_64h:
+  arm:
+  armv7:
+  aarch64:
+  aarch64e:
+  sp:
+    - title: Stack Pointer
+  fp:
+    - title: Frame Pointer
+  baseband:
+  bluetooth:
+  wlan:
+  bridge:
+  bridgeOS:
+  eOS:
+  OHCI:
+  EHCI:
+  VHCI:
+  XPC:
+  RemoteXPC:
+  "Mach Port":
+    see:
+      - mach_port
+  mach_port:
+  bundle:
+  AppKit:
+  UIKit:
+  entitlement:
+  cs:
+    - title: Code Signing
+  ioreg:
+  macho:
+  dylib:
+  dsc:
+  syscall:
+  plist:
+  asn:
+  asn1:
+  der:
+  pdu:
+  quarantine:
+  dyld:
+  executable:
+  service:
+  launchd:
+  Framework:
+  defaults:
+  iv:
+    - title: Initialization Vector (Encryption)
+  key:
+    - title: Encryption Key
+  pem:
+  efi:
+  nub:
+  aes:
+    - title: Advanced Encryption Standard
+  pki:
+    - title: Public Key Infrastructure
+  ecc:
+    - title: Elliptic Curve Cryptograph
+    - title: Error Checking and Correction
+  hid:
+    - title: Human Interface Device
+  uart:
+  amfm:
+  i2c:
+    - title: Inter Integrated Circuit
+  spmi:
+  smmu:
+  mmu:
+  pa:
+    - title: Physical Address
+  tc:
+    see:
+      - TrustCache
+  iboot:
+  reg:
+    see:
+      - register
+  ean:
+  ans:
+    - title: Apple NAND Storage
+  soc:
+    - title: System-on-a-Chip
+  fpga:
+  AuxKC:
+  BootKC:
+  sio:
+    - title: SmartIO (iPad keyboard covers)
+  tss:
+    - title: Tatsu Signing Server
+  kc:
+    see:
+      - kernelcache
+  rsep:
+    - title: Restore SEP Firmware Image
+  keynag:
+  asmb:
+  - title: Apple Secure Multi Boot
+  awdl:
+  csr:
+    see:
+    - sip
+  ctrr:
+  dart:
+  - title: Device Address Resolution Table
+  dext:
+  dmg:
+  - title: Disk Image
+  dt:
+  - title: Device Tree
+  en:
+  - title: Ethernet Adapter (generic)
+    description: Often `en` in the form `enX` where X is a number is used to identify
+      a network adapter.
+  esim:
+  - title: Embedded Subscriber Identificaton Module
+    see:
+    - sim
+  euicc:
+    see:
+    - esim
+  FindMy:
+  - title: FindMy iPhone / Mac
+    description: A set of technologies that both help find the location of a lost
+      Apple device, as well as prevent theft from being able to reset the device for
+      sale or use.
+  FireWire:
+  - title: FireWire
+  fmm:
+    see:
+    - FindMy
+  fw:
+    see:
+    - FireWire
+    - firmware
+  isp:
+  - title: Image Signal Processor
+  kdp:
+  - title: Kernel Debug Port / Protocol
+    description: KDP is a general way in which XNU allows for the kernel itself to
+      be attached to a debugger. Attaching a kernel debugger allows for the complete
+      control of a device and subverts all security guarantees, therefore should be
+      exercised with care.  Apple makes majority of the KDP for external users available
+      through Kernel Debug Kits.  These are components that help with two machine
+      debugging, but nearly all kernels shipped by Apple can be debugged if the proper
+      `boot-args` are passed on startup.
+  kernel:
+  kernelcache:
+  - title: Kernel Cache
+    description: A kernel cache is a combined object that contains the kernel itself
+      as well as various kexts (Kernel Extensions).  Older macs would load the kernel
+      itself, then load the various kexts from disk. The process of loading the kexts
+      and then binding the symbols was a process that slowed the starup of a mac.  Apple
+      then started doing the combine of the kernel and the extensions into a BootCache
+      that allowed the system to load one large monolithic binary.
+  kext:
+  ktrr:
+  - title: Kernel Text Readonly Region
+  lpddr:
+  - title: Low-Power Double Data Rate RAM
+    description: LPDDR differs as it uses techniques to minimize the amount of power
+      needed to maintain the memory.  Most RAM requires that the RAM controller occasionally
+      read each value, and write it again as the data is stored in capacitors that
+      leak current over time.  Were the cells not refreshed, every 1 in memory would
+      eventually leak enough current that it would become a zero.
+    see:
+    - ddr
+  lr:
+  - title: Link Register (ARM)
+    description: The LR is populated when a `bx` is called to inform a function of
+      the address to return to.
+  nand:
+  - title: Not-AND Based Non-volatile Memory
+    see:
+    - nvme
+  nmi:
+  - title: Non-maskable Interrupt
+  nor:
+  - title: Not-OR Based Non-volatile Memory
+    see:
+    - spi
+  nvram:
+  - title: Non-Volatile RAM
+  ota:
+  - title: Over-the-Air Update - Incremental Update (Somewhat arcane)
+    description: In the earliest days of the iPhone, users had to connect the device
+      to a computer with iTunes to download and Apply updates to the operating system.  Eventually
+      Apple produced a system called OTA (because at the time it was mostly focused
+      on download of these updates over cellular - therefore over-the-air as in wireless)
+      to allow users to keep a device updated without being tied to a computer. This
+      is somewhat of a misnomer now because OTA updates can be delivered over several
+      means, some of which include over ethernet for example which, ironically isn't
+      over any wireless protocol.  Some types of devices and restore flows make use
+      of 'full OTAs' which are a delta update in OTA format, but includes the entire
+      set of data to restore devices.  These are typically employed for devices that
+      lack the port needed for DFU/iBoot/IPSW based recovery.
+  otg:
+  - title: USB On-the-go
+    description: USB-OTG is a way to describe a device that is typically a peripheral
+      acting instead as a USB host.  The technology evolved as phones became not just
+      devices you could attach to a computer such as to sync with iTunes, but hosts
+      in their own right such as to access a flash drive.
+  panic:
+  - title: Kernel / Device Panic
+    description:
+  pc:
+  - title: Program Counter (ARM/Intel)
+    description: The PC or Program Counter is the address (typically virtual address)
+      which the processor is currently executing.  When a subroutine is called, the
+      PC is the address passed to LR so that the called function knows where to return
+      to.
+  pio:
+  - title: Programmed IO
+  pmgr:
+  - title: Power Manager
+  pmp:
+  - title: Power Management Processor
+  pram:
+  - title: Parameter RAM
+    see:
+    - nvram
+  rtkit:
+  - title: RealtimeKit (Realtime OS)
+  sart:
+  - title: Secure Address Resolution Table
+  sep:
+  - title: Secure Enclave Processor
+  sim:
+  - title: Subscriber Identification Module
+  SIP:
+  - title: System Integrity Protection
+    description: System Integrity Protection is a set of technologies employed by
+      Apple to ensure that even when a process executes as root (UID0) it cannot modify
+      a system in such a way as to disable security features.  The feature is also
+      known as `csr` due to it being managed by `csrutil` and stored in Intel macs
+      in the nvram variable `csr-status`.
+  smc:
+  - title: System Management Controller
+  spi:
+  - title: Serial Peripheral Interconnect
+    description: SPI is a physical pin layer used to pass data between chips.  It's
+      primary use is in SPI Flash, which is a simple, low level way to read and write
+      firmware from flash storage.  This was used to load the BIOS/Firmware for Intel
+      macs before the T2. (The T2 uses eSPI or enhanced SPI to expose a "synthetic"
+      or fake SPI Flash chip to the Intel chip from the T2).  Often SPI is used by
+      Apple devices to load and store non-volatile data prior to bringing up the NAND/NVMe
+      chip, this historically was called NOR as it was a distinct component.  NOR
+      Flash is usually more expensive compared to NAND which is why the early iPhone
+      models made use of a smaller (in the few megabytes range) NOR chip to load iBoot,
+      and stored the user's data on a larger NAND flash chip. In newer devices the
+      NOR/SPI flash is synthetic and provided by ANS2/3.
+  SysCfg:
+    see:
+    - SysConfig
+  SysConfig:
+  - title: System Configuration
+    description: SysCfg / SysConfig is a portion of non-volatile memory of Apple devices
+      that encodes various data that is only to be set by Apple.  The most canonical
+      example is this is the location of the serial number.  This is because the device
+      serial number cannot be burned in as it is the whole device, not any one component.  SysCfg
+      is a series of key/value pairs and is documented in `syscfg.yaml`.
+  tbm:
+  - title: Trusted Boot Monitor
+  tcon:
+  - title: Timing Controller (Displays)
+    description: The TCON is used to control the refresh of a LED/OLED display, ensuring
+      that each frame is shown for the right amount of time, and that new frames are
+      updated all at once / not-torn.
+  tdm:
+  - title: Target Disk Mode
+  trustcache:
+  - title:
+  tz:
+  - title: ARM TrustZone
+    see:
+    - tz0
+    - tz1
+  tz0:
+  tz1:
+  uicc:
+    see:
+    - sim
+  usb-pd:
+  - title: USB Power Delivery
+  vm:
+  - title: Virtual Memory
+  - title: Virtual Machine
+metadata:
+  description:
+  credits: []

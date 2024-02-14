@@ -75,6 +75,8 @@ fdr_properties:
     description:
   jlnl:
     description:
+  esdm:
+    description: Extended Security Domain Fuse
   jlnm:
     description:
   jlnv:
@@ -85,6 +87,29 @@ fdr_properties:
     description:
   jlsk:
     description:
+  mmap:
+    description: The memory map passed from the iBoot loader to the Kernel
+  sePK:
+    description: Point Compressed Elliptic Curve point sering as the master Public Key for the SE
+  comb:
+    description: Combined FDR object
+  rssl:
+    description: Root SSL / TLS certificate
+  trst:
+    description: Trust Object
+  rvok:
+    description: Trust Object Revocation
+  fdrd:
+    description: FDR2 Data
+  secb:
+  sreq:
+    description: Sealing request
+  fdr2:
+  mft2:
+  trpk:
+    description: Trusted Public Key
+  IM4C:
+    description: Img4 Certificate
   lcrt:
     description:
     contexts:
