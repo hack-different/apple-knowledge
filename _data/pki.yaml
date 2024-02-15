@@ -12,9 +12,18 @@ certificate_names:
   tcrt: test certificate?
   ucrt: user certificate (mapps to a single iCloud account)
   vcrt: virtual certificate?
+keys:
+  uik:
+    description: User Identity Key
+  sik:
+    description: System Identity Key
+  oik:
+    description: Owner Identity Key (the first password after restore)
 constants:
   private_oid_root: 1.2.840.113635
 oids:
+  - oid: 1.2.840.113635.100.6.17
+    description: Contains the name of the key
   - oid: 1.2.840.113635.100.5.3
     apple_description: ADC Certificate Policy
   - oid: 1.2.840.113635.100.5.4
@@ -31,8 +40,15 @@ oids:
     apple_description: Apple World Wide Developer Relations Certificates for Code Signing for Test Release through the iTMS
   - oid: 1.2.840.113635.100.6.1.4
     apple_description: Apple World Wide Developer Relations Certificates for Code Signing GM from developer to Apple
+  - oid: 1.2.840.113635.100.6.16
+    description:
+      A sequence of FDR programming commands, seperated by ";".  Each command is "PUT" or "GET" prior to a
+      4CC value, followed by a ":" then the value of the key.
+    example:
+      PUT/FSCl:sik-FXFYFXFFYFFEX-QQRRRDEETFEFYCEIESLIREILCILESCLSELRESERSER
   - oid: 1.2.840.113635.100.6.1.15
     description:
+      To be signed certificate...
       Contains the boot policy of the machine during certificate issuance
       based on boot policy.  includes BORD, ronh, lobo, SDOM, lpnh, rpnh
       BNCH, CSEC, CHIP, ECID, CPEO, OBJP, EPRO, DPRO, ESEC, DSEC and DGST
@@ -172,3 +188,5 @@ known_symbols:
     - _oidAppleSecureBootTicketCertSpec
     - _oidAppleTVOSApplicationSigningProd
     - _oidAppleTVOSApplicationSigningProdQA
+roots:
+  FDR-CA1-ROOT-CM:

@@ -100,6 +100,9 @@ img4_tags:
     description: battery full image
   BLDS:
     description:
+
+  prid:
+    description: Encrypted Private Key / Private Key Info
   bles:
     description:
   BNCH:
@@ -128,6 +131,10 @@ img4_tags:
     description:
   chg0:
     description: Charging Image 0
+  faic:
+    description:
+    type: integer
+    default: 0
   chg1:
     description: Charging Image 1
   CHIP:
@@ -240,7 +247,7 @@ img4_tags:
   euou:
     description: engineering use-only unit
   clas:
-    description: product class
+    description: product class (often used in FDR specificatons)
   psmh:
     description: previous stage manifest hash
   fchp:
@@ -682,6 +689,8 @@ img4_tags:
       - macOS
   ware:
     description:
+  inst:
+    descryption: The key or file to install
   wchf:
     description: Wireless Charging Framework
   xbtc:

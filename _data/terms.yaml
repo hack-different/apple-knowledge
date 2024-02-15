@@ -195,6 +195,25 @@ terms:
       debugging, but nearly all kernels shipped by Apple can be debugged if the proper
       `boot-args` are passed on startup.
   kernel:
+  baa:
+  - title: Basic Attestation Authority (BAA)
+  oik:
+    - title: Owner Identity Key (OIK)
+  uik:
+    - title: User Identity Key (UIK)
+  ucrt:
+    - title: User identity Certificate (ucrt)
+  oic:
+    - title: Owner Identity Certificate (OIC)
+  LLB:
+  LocalPolicy:
+  RemotePolicy:
+  1TR:
+  sik:
+  oid:
+  pka:
+  siK:
+    - title: System Identity Key
   kernelcache:
   - title: Kernel Cache
     description: A kernel cache is a combined object that contains the kernel itself

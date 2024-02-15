@@ -25,7 +25,7 @@ fdr_properties:
   CmCl:
     description:
   dCfg:
-    description:
+    description: Display LCD
     contexts:
     - base
     - mansta
@@ -48,10 +48,14 @@ fdr_properties:
     contexts:
     - mandev
     - mansta
+    data:
+      comb:
+        fdrd:
+        secb:
   GpC2:
     description:
   HmCA:
-    description:
+    description: Ambient Light Sensor
     contexts:
     - base
     - mansta
@@ -167,7 +171,7 @@ fdr_properties:
   rSCl:
     description:
   scrt:
-    description:
+    description: SEP Certificate
     contexts:
     - base
   SDOM:
@@ -194,5 +198,11 @@ fdr_properties:
     description:
   vcrt:
     description:
+  ADCL:
+    description: Raw Panel / Coverglass
   WMac:
     description: Wireless MAC Address
+to_be_signed_keys:
+  DGST:
+  clid:
+  inst:
