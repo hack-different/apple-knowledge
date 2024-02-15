@@ -16,7 +16,7 @@
 * mlb# - Main Logic Board Serial
 * prd# - Product Number
 * arc#
-* wsku - Wireless Product SKU
+* wsku - WiFi Chip SKU
 * srvn - Server Nonce
 * time
 * clid
@@ -48,7 +48,7 @@
 ## Sealed Values (A17)
 
 * seal - Format looks like CHIP-ECID
-* AlsH
+* AlsH HslA
 * scrt - Format looks like CHIP - ECID
 * lcrt
 * dCfg
@@ -95,3 +95,12 @@
 * nuid - ANS (Apple NAND Storage) - Serial Number
 * eeid - ESIM EID
 * ime2 - International Mobile Equipment Identifier 2 (IMEI)
+
+## SysCfg Entitlements
+
+* fsca
+* faus
+* faic
+* SrvP
+* esca
+* SrvT

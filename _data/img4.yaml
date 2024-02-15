@@ -43,13 +43,53 @@ img4_tags:
   aupr:
     description:
   auxi:
-    description: Auxiliary Kernel Cache Image4 Hash
+    title: Auxiliary Kernel Collection (AuxKC) Image4 Manifest Hash (`auxi`)
+    description: >
+      After the system verifies that the UAKL hash matches what’s found in the `auxp` field of the
+      LocalPolicy, it requests that the AuxKC be signed by the Secure Enclave processor application that’s
+      responsible for LocalPolicy signing. Next, an SHA384 hash of the AuxKC Image4 manifest signature is placed
+      into the LocalPolicy to avoid the potential for mixing and matching previously signed AuxKCs to an operating
+      system at boot time. If iBoot finds the auxi field in the LocalPolicy, it attempts to load the AuxKC from
+      storage and validate its signature. It also verifies that the hash of the Image4 manifest attached to the
+      AuxKC matches the value found in the auxi field. If the AuxKC fails to load for any reason, the system
+      continues to boot without this boot object and (so) without any third-party kexts loaded. The auxp field
+      is a prerequisite for setting the auxi field in the LocalPolicy. Users change the auxi value implicitly
+      when they change the UAKL by approving a kext from the Security & Privacy pane in System Preferences.
+    type: binary
+    subtype: sha2-384
+    access:
+      write:
+        - macOS
   auxk:
     description: Auxiliary Kernel Cache
   auxp:
-    description: User Authorized Kext List Hash
+    title: Auxiliary Kernel Collection (AuxKC) Policy Hash (auxp)
+    description: >
+      The `auxp` is an SHA384 hash of the user-authorized kext list (UAKL) policy. This is used at
+      AuxKC generation time to help ensure that only user-authorized kexts are included in the AuxKC. `smb2`
+      is a prerequisite for setting this field. Users change the `auxp` value implicitly when they change the
+      UAKL by approving a kext from the Security & Privacy pane in System Preferences.
+    type: binary
+    subtype: sha2-384
+    access:
+      write:
+        - macOS
   auxr:
-    description: AuxKC Kext Receipt Hash
+    title: Auxiliary Kernel Collection (AuxKC) Receipt Hash (auxr)
+    description: >
+      The `auxr` is an SHA384 hash of the AuxKC receipt, which indicates the exact set of kexts that
+      were included into the AuxKC. The AuxKC receipt can be a subset of the UAKL, because kexts can be excluded
+      from the AuxKC even if they’re user authorized if they’re known to be used for attacks. In addition,
+      some kexts that can be used to break the user-kernel boundary may lead to decreased functionality,
+      such as an inability to use Apple Pay or play 4K and HDR content. Users who want these capabilities
+      opt in to a more restrictive AuxKC inclusion. The auxp field is a prerequisite for setting the auxr
+      field in the LocalPolicy. Users change the auxr value implicitly when they build a new AuxKC from
+      the Security & Privacy pane in System Preferences.
+    type: binary
+    subtype: sha2-384
+    access:
+      write:
+        - macOS
   avef:
     description: AV Encryption (DRM) Firmware
   bat0:
@@ -105,7 +145,16 @@ img4_tags:
   cmsv:
     description:
   coih:
-    description:
+    title: CustomOS Image4 Manifest Hash (coih)
+    description: >
+      The `coih` is an SHA384 hash of CustomOS Image4 manifest. The payload for that manifest is used
+      by iBoot (instead of the XNU kernel) to transfer control. Users change the `coih` value implicitly when
+      they use the `kmutil` configure-boot command-line tool in 1TR.
+    type: binary
+    subtype: sha2-384
+    access:
+      write:
+        - 1TR
   CPRO:
     description: Chip promotion fuse value (what is burned in)
     alias:
@@ -161,6 +210,18 @@ img4_tags:
       - effective-production-status-ap
   esca:
     description:
+  hrlp:
+    title: Has Secure Enclave Signed recoveryOS Local Policy (hrlp)
+    description: >
+      The `hrlp` indicates whether or not the `prot` value is the measurement of a Secure Enclave–signed
+      recoveryOS LocalPolicy. If not, then the recoveryOS LocalPolicy is signed by the Apple online signing server,
+      which signs things such as macOS Image4 files.
+    type: boolean
+    access:
+      write:
+        - 1TR
+        - recoveryOS
+        - macOS
   esdm:
     description: Extended Security Domain fuses
     alias:
@@ -261,7 +322,18 @@ img4_tags:
   krnl:
     description: Kernel
   kuid:
-    description: KEK Group UUID
+    title: Key encryption key (KEK) Group UUID (kuid)
+    description: >
+      The kuid indicates the volume that was booted. The key encryption key has typically been used
+      for Data Protection. For each LocalPolicy, it’s used to protect the LocalPolicy signing key. The
+      kuid is set by the user implicitly when creating a new operating system install.
+    type: binary
+    subtype: sha2-384
+    access:
+      write:
+        - 1TR
+        - recoveryOS
+        - macOS
   lamo:
     description:
   lckr:
@@ -273,9 +345,17 @@ img4_tags:
   logo:
     description: Apple logo image
   love:
-    description: OS Version - dotted form. Last portion after the version and comma is a cryptex update?
+    title: Local Operating System Version (love)
+    description: >
+      The love indicates the OS version that the LocalPolicy is created for. The version is obtained from the
+      next state manifest during LocalPolicy creation and is used to enforce recoveryOS pairing restrictions.
     type: string
     example: "21.3.66.0.0,0"
+    access:
+      write:
+        - 1TR
+        - recoveryOS
+        - macOS
   prtp:
     description: Product ID String
     type: string
@@ -287,7 +367,26 @@ img4_tags:
   lphp:
     description:
   lpnh:
-    description: LocalPolicy nonce hash
+    title: LocalPolicy Nonce Hash (lpnh)
+    description: >
+      The lpnh is used for anti-replay of the LocalPolicy. This is an SHA384 hash of the LocalPolicy Nonce
+      (LPN), which is stored in the Secure Storage Component and accessible using the Secure Enclave Boot
+      ROM or Secure Enclave. The raw nonce is never visible to the Application Processor, only to the
+      sepOS. An attacker wanting to convince LLB that a previous LocalPolicy they had captured was valid
+      would need to place a value into the Secure Storage Component, which hashes to the same lpnh value
+      found in the LocalPolicy they want to replay. Normally there is a single LPN valid on the system—except
+      during software updates, when two are simultaneously valid—to allow for the possibility of falling back
+      to booting the old software in the event of an update error. When any LocalPolicy for any operating
+      system is changed, all policies are re-signed with the new lpnh value corresponding to the new LPN
+      found in the Secure Storage Component. This change happens when the user changes security settings
+      or creates new operating systems with a new LocalPolicy for each.
+    type: binary
+    subtype: sha2-384
+    access:
+      write:
+        - 1TR
+        - recoveryOS
+        - macOS
   lpol:
     description: Local Policy
   ltrs:
@@ -359,7 +458,20 @@ img4_tags:
   pndp:
     description:
   prot:
-    description:
+    title: Paired recoveryOS Trusted Boot Policy Measurement (prot)
+    description: >
+      A paired recoveryOS Trusted Boot Policy Measurement (TBPM) is a special iterative SHA384 hash calculation
+      over the Image4 manifest of a LocalPolicy, excluding nonces, in order to give a consistent measurement
+      over time (because nonces like lpnh are frequently updated). The prot field, which is found only in each
+      macOS LocalPolicy, provides a pairing to indicate the recoveryOS LocalPolicy that corresponds to the
+      macOS LocalPolicy.
+    type: binary
+    subtype: sha2-384
+    access:
+      write:
+        - 1TR
+        - recoveryOS
+        - macOS
   rbmt:
     description:
   rddg:
@@ -383,11 +495,42 @@ img4_tags:
   rolp:
     description: recoveryOS local policy
   ronh:
-    description: recoveryOS nonce hash
+    title: recoveryOS Nonce Hash (ronh)
+    description: >
+      The ronh behaves the same way as the lpnh, but is found exclusively in the LocalPolicy for system
+      recoveryOS. It’s updated when the system recoveryOS is updated, such as on software updates. A
+      separate nonce from the lpnh and rpnh is used so that when a device is put into a disabled state
+      by Find My, existing operating systems can be disabled (by removing their LPN and RPN from the
+      Secure Storage Component), while still leaving the system recoveryOS bootable. In this way, the
+      operating systems can be reenabled when the system owner proves their control over the system by
+      putting in their iCloud password used for the Find My account. This change happens when a user updates
+      the system recoveryOS or creates new operating systems.
+    type: binary
+    subtype: sha2-384
+    access:
+      write:
+        - 1TR
+        - recoveryOS
+        - macOS
   rosi:
     description:
   nish:
-    description: preboot splat manifest hash
+    title: Next Stage Image4 Manifest Hash (nsih)
+    description: >
+      The nsih field represents an SHA384 hash of the Image4 manifest data structure that describes the booted
+      macOS. The macOS Image4 manifest contains measurements for all the boot objects—such as iBoot, the static
+      trust cache, device tree, Boot Kernel Collection, and signed system volume (SSV) volume root hash. When
+      LLB is directed to boot a given macOS, it’s designed to ensure that the hash of the macOS Image4 manifest
+      attached to iBoot matches what’s captured in the nsih field of the LocalPolicy. In this way, the nsih
+      captures the user intention of what operating system the user has created a LocalPolicy for. Users
+      change the nsih value implicitly when they perform a software update.
+    type: binary
+    subtype: sha2-384
+    access:
+      write:
+        - 1TR
+        - recoveryOS
+        - macOS
   spih:
     description: Cryptex1 Image4 Hash
   stng:
@@ -395,7 +538,18 @@ img4_tags:
   auxh:
     description: User Authorized Kext List Hash
   rpnh:
-    description: RemotePolicy nonce hash
+    title: Remote Policy Nonce Hash (rpnh)
+    description: >
+      The rpnh behaves the same way as the lpnh but is updated only when the remote policy is updated, such as when
+      changing the state of Find My enrollment. This change happens when the user changes the state of Find My on
+      their Mac.
+    type: binary
+    subtype: sha2-384
+    access:
+      write:
+        - 1TR
+        - recoveryOS
+        - macOS
   RSCH:
     description: Research mode
   fgpt:
@@ -515,7 +669,17 @@ img4_tags:
   vkdl:
     description:
   vuid:
-    description: Volume Group UUID
+    title: APFS volume group UUID (vuid)
+    description: >
+      The vuid indicates the volume group the kernel should use as root. This field is primarily informational
+      and isn’t used for security constraints. This vuid is set by the user implicitly when creating a new
+      operating system install.
+    type: binary
+    subtype: sha2-384
+    access:
+      - 1TR
+      - recoveryOS
+      - macOS
   ware:
     description:
   wchf:
