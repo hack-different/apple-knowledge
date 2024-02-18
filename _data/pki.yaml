@@ -5,10 +5,10 @@ metadata:
 certificate_names:
   dcrt: device certificate
   dcrt-oid: device owner certificate
-  lcrt: local certificate?
+  lcrt: Lynx / Secure Storage for SEP Certificate
   pcrt: product/production certificate?
   rcrt: remote/recovery certificate?
-  scrt: server certificate?
+  scrt: SEP Certificate
   tcrt: test certificate?
   ucrt: user certificate (mapps to a single iCloud account)
   vcrt: virtual certificate?
@@ -47,17 +47,23 @@ oids:
     example:
       PUT/FSCl:sik-FXFYFXFFYFFEX-QQRRRDEETFEFYCEIESLIREILCILESCLSELRESERSER
   - oid: 1.2.840.113635.100.6.1.15
+    name: TSS Signing Delegation Constraints
     description:
-      To be signed certificate...
-      Contains the boot policy of the machine during certificate issuance
-      based on boot policy.  includes BORD, ronh, lobo, SDOM, lpnh, rpnh
-      BNCH, CSEC, CHIP, ECID, CPEO, OBJP, EPRO, DPRO, ESEC, DSEC and DGST
+      Constriction on values that can be specified or signed by this certificate.  Conatins two sub-sequesnces, the MANP (Manifest Properties)
+      and the OBJP (Object Properties).  Manifest properties are at the issued IM4M, and object properties are per signed object (firmware).
+      Values of NULL mean tha tthis certificate can sign any value for that property, values that are set are values that must be signed
+      with that value by this certificate.  This is how for example `T6031-SDOM1` is enforced.  The certificate for that set of servers
+      have a null value for ECID (meaning it can be used for any ECID) and have fixed values for CHIP / Security Domain SDOM.
+
+      This is how Live TSS for customers differs from factory signing in what properties it can include.  Factory only manifest properties
+      include `augs`, `uidm`
     found_in:
       - ucrt
       - dcrt-oid
     issuers:
       - Basic Attestation User Sub CA2
       - FDRDC-UCRT-SUBCA
+      - T6031-SDOM1-TssLive-ManifestKey-RevA-Factory
     ous:
       - BAA Certification
       - ucrt Leaf Certificate
@@ -80,7 +86,7 @@ oids:
   - oid: 1.2.840.113635.100.7.1.1
     apple_description: 'Apple FairPlay certificate extended Application Authentication & Authorization: Policy'
   - oid: 1.2.840.113635.100.8.4
-    description: contains 3 integer values in ASN1, the second of which seems to be a 64bit mask of 0xFE000000
+    description: Contains a sequence of integer values.  Some are 0, some are 1, others appear to be int32 bitmasks.
     is_asn_body: true
     is_extension: true
     found_in:
@@ -91,6 +97,7 @@ oids:
     ous:
       - BAA Certification
   - oid: 1.2.840.113635.100.8.5
+    description: Similar in nature to `1.2.840.113635.100.8.4`. Non-integer values observed of `ssca`.
     is_asn_body: true
     is_extension: true
     found_in:
@@ -190,3 +197,28 @@ known_symbols:
     - _oidAppleTVOSApplicationSigningProdQA
 roots:
   FDR-CA1-ROOT-CM:
+  FDR-DC-SSL-ROOT:
+  FDR Sealing Server CA 1:
+    subordinate_cas:
+      FDR-SS-CM-E1:
+  Basic Attestation User Root CA:
+    subordinate_cas:
+      Basic Attestation User Sub CA2:
+        description:
+          Issues `ucrt` subordinate CA's that are used for user level signing.  Under this `BAA Certification`
+          certs are issued.
+  Apple Secure Boot Root CA - G6:
+    subordinate_cas:
+      T6031-SDOM1-RecoveryBoot-RevA-Factory:
+        description:
+      T6031-SDOM1-TssLive-ManifestKey-RevA-Factory:
+  Apple X86 Secure Boot Root CA - G1:
+    subject_key_id: 301680147D73CE0A3B41A1A352D2B1141EF6F5B4DD76E6E8
+    subordinate_cas:
+      T6031-SDOM1-TssLive-ManifestKey-Global-RevA-DataCenter:
+        subject_key_id: 0414D8B9E3E9C4A1C542ECB72FC2CF0C2F861E1B3EEF
+  Apple Extra Content Global Root CA - G1:
+    subject_key_id: 30168014AA63251D082C72A381536C94D2864995881CB0D0
+    subordinate_cas:
+      ZFF10-SDOM1-TssLive-ManifestKey-ExtraContent-Global-RevA-DataCenter:
+        subject_key_id: 041442FEAB470561CE2A7471B55AC0D81AB7536F4B36
