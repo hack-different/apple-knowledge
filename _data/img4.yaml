@@ -10,9 +10,9 @@ types:
       They can contain additional properties per object, some of which are standard
       and others that are object specific.
     common_properties:
-      ESEC:
-      EPRO:
-      EKEY:
+      ESEC: Effective Security Mode - The security mode after evaluating the chip and any demotion request
+      EPRO: Effective Production Mode - The peoduction mode after evaluating the chip production and demotation request
+      EKEY: Effective Key Access - The effective access to teh SEP, used to protect data during demotion
     subtypes:
       local-boot-object:
       trust-measurement:
@@ -42,9 +42,11 @@ img4_tags:
   agfi:
     description:
   almo:
-    description:
+    description: Some internal iBootable image.  Unknown purpose
   AMNM:
     description: allow mix-n-match
+      When set to true, img4s can be any valid signed version, allowing for unusual AP tickets where some
+      components may be from a prior verson
     type: boolean
   anef:
     description: Apple Neural Engine Firmware
@@ -345,6 +347,11 @@ img4_tags:
     roots:
     - ExtraContent
   acid:
+  stID:
+    description: Station IDentifier
+  AcID:
+    description: Apple Account DSID
+    type: integer
   WSKU:
     description: Wireless SKU
   WMac:
@@ -463,7 +470,9 @@ img4_tags:
   ibot:
     description: iBoot
   ibdt:
+    description: iBoot Data
   ibd1:
+    description: iBoot Data Stage 1
   glyP:
   ibss:
   dven:
