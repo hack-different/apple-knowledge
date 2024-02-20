@@ -10,203 +10,324 @@ certificate_names:
   rcrt: remote/recovery certificate?
   scrt: SEP Certificate
   tcrt: test certificate?
-  ucrt: user certificate (mapps to a single iCloud account)
+  ucrt:
+    name: User Identity Certificate
+    issuer: Basic Attestation User Root CA
   vcrt: virtual certificate?
 keys:
   uik:
-    description: User Identity Key
+    title: User Identity Key
+    certificates:
+    - ucrt
   sik:
-    description: System Identity Key
+    title: System Identity Key
+    certificates:
+    - dcrt
   oik:
-    description: Owner Identity Key (the first password after restore)
+    title: Owner Identity Key
 constants:
   private_oid_root: 1.2.840.113635
 oids:
-  - oid: 1.2.840.113635.100.6.17
-    description: Contains the name of the key
-  - oid: 1.2.840.113635.100.5.3
+  1.2.840.113635.100.10:
+    description: >
+      `ucrt` extension root
+  1.2.840.113635.100.10.1:
+    description: Hardware device identifiers of the machine the certificate is issued
+      to contains BORD, CHIP, ECID, srnm, udid, seid
+    found_in:
+    - ucrt
+    issuers:
+    - FDRDC-UCRT-SUBCA
+    ous:
+    - ucrt Leaf Certificate
+  1.2.840.113635.100.10.2:
+    found_in:
+    - ucrt
+    issuers:
+    - FDRDC-UCRT-SUBCA
+    ous:
+    - ucrt Leaf Certificate
+  1.2.840.113635.100.4.1:
+    symbol: oidAppleExtendedKeyUsageCodeSigning
+  1.2.840.113635.100.4.1.1:
+    symbol: oidAppleExtendedKeyUsageCodeSigningDev
+  1.2.840.113635.100.4.11:
+    symbol: oidAppleCertExtOSXProvisioningProfileSigning
+  1.2.840.113635.100.5.12:
+    symbol: oidApplePolicyMobileStore
+  1.2.840.113635.100.5.12.1:
+    symbol: oidApplePolicyMobileStoreProdQA
+  1.2.840.113635.100.5.3:
     apple_description: ADC Certificate Policy
-  - oid: 1.2.840.113635.100.5.4
-    apple_description: Markers for iPhone OS Device Certificate Policies, used for external sources to trust iPhone OS devices
-  - oid: 1.2.840.113635.100.5.4.1
+  1.2.840.113635.100.5.4:
+    apple_description: Markers for iPhone OS Device Certificate Policies, used for
+      external sources to trust iPhone OS devices
+  1.2.840.113635.100.5.4.1:
     apple_description: BBC's Policy
-  - oid: 1.2.840.113635.100.6.1.1
+  1.2.840.113635.100.6.1.1:
     apple_description: Apple Released Code Signature
-  - oid: 1.2.840.113635.100.6.1.2
-    apple_description: Apple World Wide Developer Relations Certificates for Code Signing during development
-  - oid: 1.2.840.113635.100.6.1.3
-    apple_description: Apple World Wide Developer Relations Certificates for Code Signing for General Release through the iTMS
-  - oid: 1.2.840.113635.100.6.1.3.1
-    apple_description: Apple World Wide Developer Relations Certificates for Code Signing for Test Release through the iTMS
-  - oid: 1.2.840.113635.100.6.1.4
-    apple_description: Apple World Wide Developer Relations Certificates for Code Signing GM from developer to Apple
-  - oid: 1.2.840.113635.100.6.16
-    description:
-      A sequence of FDR programming commands, seperated by ";".  Each command is "PUT" or "GET" prior to a
-      4CC value, followed by a ":" then the value of the key.
-    example:
-      PUT/FSCl:sik-FXFYFXFFYFFEX-QQRRRDEETFEFYCEIESLIREILCILESCLSELRESERSER
-  - oid: 1.2.840.113635.100.6.1.15
-    name: TSS Signing Delegation Constraints
-    description:
-      Constriction on values that can be specified or signed by this certificate.  Conatins two sub-sequesnces, the MANP (Manifest Properties)
-      and the OBJP (Object Properties).  Manifest properties are at the issued IM4M, and object properties are per signed object (firmware).
-      Values of NULL mean tha tthis certificate can sign any value for that property, values that are set are values that must be signed
-      with that value by this certificate.  This is how for example `T6031-SDOM1` is enforced.  The certificate for that set of servers
-      have a null value for ECID (meaning it can be used for any ECID) and have fixed values for CHIP / Security Domain SDOM.
-
-      This is how Live TSS for customers differs from factory signing in what properties it can include.  Factory only manifest properties
-      include `augs`, `uidm`
+    symbol: oidAppleSecureBootCertSpec
+  1.2.840.113635.100.6.1.11:
+    symbol: oidAppleSecureBootTicketCertSpec
+  1.2.840.113635.100.6.1.15:
+    name: IMG4 Manifest Certificate Specification
+    description: "Constriction on values that can be specified or signed by this certificate.
+      \ Conatins two sub-sequesnces, \nthe MANP (Manifest Properties) and the OBJP
+      (Object Properties).  Manifest properties are at the issued \nIM4M, and object
+      properties are per signed object (firmware). Values of NULL mean tha tthis certificate\ncan
+      sign any value for that property, values that are set are values that must be
+      signed with that value\nby this certificate.  This is how for example `T6031-SDOM1`
+      is enforced.  The certificate for that set of\nservers have a null value for
+      ECID (meaning it can be used for any ECID) and have fixed values for CHIP /\nSecurity
+      Domain SDOM.\nThis is how Live TSS for customers differs from factory signing
+      in what properties it can include.  Factory\nonly manifest properties include
+      `augs`, `uidm`"
     found_in:
-      - ucrt
-      - dcrt-oid
+    - ucrt
+    - dcrt-oid
+    symbol: oidAppleImg4ManifestCertSpec
     issuers:
-      - Basic Attestation User Sub CA2
-      - FDRDC-UCRT-SUBCA
-      - T6031-SDOM1-TssLive-ManifestKey-RevA-Factory
+    - Basic Attestation User Sub CA2
+    - FDRDC-UCRT-SUBCA
+    - T6031-SDOM1-TssLive-ManifestKey-RevA-Factory
     ous:
-      - BAA Certification
-      - ucrt Leaf Certificate
-  - oid: 1.2.840.113635.100.6.2.1
+    - BAA Certification
+    - ucrt Leaf Certificate
+  1.2.840.113635.100.6.1.16:
+    symbol: oidAppleInstallerPackagingSigningExternal
+  1.2.840.113635.100.6.1.2:
+    apple_description: Apple World Wide Developer Relations Certificates for Code
+      Signing during development
+  1.2.840.113635.100.6.1.24:
+    symbol: oidAppleTVOSApplicationSigningProd
+  1.2.840.113635.100.6.1.24.1:
+    symbol: oidAppleCertExtATVAppSigningProdQA
+  1.2.840.113635.100.6.1.28:
+    symbol: oidAppleCertExtTrustCacheSigning
+  1.2.840.113635.100.6.1.28.1:
+    symbol: oidAppleCertExtTrustCacheSigningTest
+  1.2.840.113635.100.6.1.3:
+    apple_description: Apple World Wide Developer Relations Certificates for Code
+      Signing for General Release through the iTMS
+    symbol: oidAppleApplicationSigning
+  1.2.840.113635.100.6.1.3.1:
+    apple_description: Apple World Wide Developer Relations Certificates for Code
+      Signing for Test Release through the iTMS
+  1.2.840.113635.100.6.1.36:
+    symbol: oidAppleXROSApplicationSigningProd
+  1.2.840.113635.100.6.1.36.1:
+    symbol: oidAppleXROSApplicationSigningProdQA
+  1.2.840.113635.100.6.1.4:
+    apple_description: Apple World Wide Developer Relations Certificates for Code
+      Signing GM from developer to Apple
+  1.2.840.113635.100.6.16:
+    description: A sequence of FDR programming commands, seperated by ";".  Each command
+      is "PUT" or "GET" prior to a 4CC value, followed by a ":" then the value of
+      the key.
+    example: PUT/FSCl:sik-FXFYFXFFYFFEX-QQRRRDEETFEFYCEIESLIREILCILESCLSELRESERSER
+  1.2.840.113635.100.6.17:
+    description: Contains the name of the key
+  1.2.840.113635.100.6.2.1:
     apple_description: Marker for the WWDR Intermediate Certificate
-  - oid: 1.2.840.113635.100.6.2.2
+    symbol: oidAppleProvisioningProfile
+  1.2.840.113635.100.6.2.10:
+    symbol: oidAppleIntmMarkerAppleSystemIntg2
+  1.2.840.113635.100.6.2.12:
+    symbol: oidAppleIntmMarkerAppleServerAuthentication
+  1.2.840.113635.100.6.2.13:
+    symbol: oidAppleIntmMarkerAppleSystemIntgG3
+  1.2.840.113635.100.6.2.16:
+    symbol: oidAppleIntmMarkerAppleHomeKitServerCA
+  1.2.840.113635.100.6.2.2:
     apple_description: Marker for the iTunes Store Intermediate Certificate
-  - oid: 1.2.840.113635.100.6.3.1
-    apple_description: Apple World Wide Developer Relations Client SSL Certificates for Accessing the Development Apple Push Service
-  - oid: 1.2.840.113635.100.6.3.2
-    apple_description: Apple World Wide Developer Relations Client SSL Certificates for Accessing the Production Apple Push Service
-  - oid: 1.2.840.113635.100.6.4.1
-    apple_description: Extension Markers for device version string, expects UTF8 to follow in SubjectAltName
-  - oid: 1.2.840.113635.100.6 4.2
-    apple_description: Extension Markers for OS version string, expects UTF8 to follow in SubjectAltName
-  - oid: 1.2.840.113635.100.6.5.1
-    apple_description: Apple iTunes Store Certificates for Signing Receipts of Purchases from the iTS
-  - oid: 1.2.840.113635.100.6.5.2
-    apple_description: Apple iTunes Store Certificates for Signing Requests to Purchase for the iTS
-  - oid: 1.2.840.113635.100.7.1.1
-    apple_description: 'Apple FairPlay certificate extended Application Authentication & Authorization: Policy'
-  - oid: 1.2.840.113635.100.8.4
-    description: Contains a sequence of integer values.  Some are 0, some are 1, others appear to be int32 bitmasks.
+  1.2.840.113635.100.6.2.3:
+    symbol: oidAppleIntmMarkerAppleID
+  1.2.840.113635.100.6.2.7:
+    symbol: oidAppleIntmMarkerAppleID2
+  1.2.840.113635.100.6.23.1:
+    symbol: oidApplePolicyEscrowService
+  1.2.840.113635.100.6.25:
+    symbol: oidAppleCertExtensionAppleIDRecordValidationSigning
+  1.2.840.113635.100.6.27.1:
+    symbol: oidAppleCertExtAppleServerAuthentication
+  1.2.840.113635.100.6.27.11.1:
+    symbol: oidAppleCertExtMMCSServerAuthProdQA
+  1.2.840.113635.100.6.27.11.2:
+    symbol: oidAppleCertExtMMCSServerAuthProd
+  1.2.840.113635.100.6.27.15.1:
+    symbol: oidAppleCertExtiCloudSetupServerAuthProdQA
+  1.2.840.113635.100.6.27.15.2:
+    symbol: oidAppleCertExtiCloudSetupServerAuthProd
+  1.2.840.113635.100.6.27.2:
+    symbol: oidAppleCertExtAppleServerAuthenticationGS
+  1.2.840.113635.100.6.27.3.1:
+    symbol: oidAppleCertExtAppleServerAuthenticationPPQProdQA
+  1.2.840.113635.100.6.27.3.2:
+    symbol: oidAppleCertExtAppleServerAuthenticationPPQProd
+  1.2.840.113635.100.6.27.4.1:
+    symbol: oidAppleCertExtAppleServerAuthenticationIDSProdQA
+  1.2.840.113635.100.6.27.4.2:
+    symbol: oidAppleCertExtAppleServerAuthenticationIDSProd
+  1.2.840.113635.100.6.27.5.1:
+    symbol: oidAppleCertExtAppleServerAuthenticationAPNProdQA
+  1.2.840.113635.100.6.27.5.2:
+    symbol: oidAppleCertExtAppleServerAuthenticationAPNProd
+  1.2.840.113635.100.6.27.6.1:
+    symbol: oidAppleCertExtFMiPServerAuthProdQA
+  1.2.840.113635.100.6.27.6.2:
+    symbol: oidAppleCertExtFMiPServerAuthProd
+  1.2.840.113635.100.6.27.7.1:
+    symbol: oidAppleCertExtEscrowProxyServerAuthProdQA
+  1.2.840.113635.100.6.27.7.2:
+    symbol: oidAppleCertExtEscrowProxyServerAuthProd
+  1.2.840.113635.100.6.27.8.1:
+    symbol: oidAppleCertExtAST2DiagnosticsServerAuthProdQA
+  1.2.840.113635.100.6.27.8.2:
+    symbol: oidAppleCertExtAST2DiagnosticsServerAuthProd
+  1.2.840.113635.100.6.27.9:
+    symbol: oidAppleCertExtHomeKitServerAuth
+  1.2.840.113635.100.6.3.1:
+    apple_description: Apple World Wide Developer Relations Client SSL Certificates
+      for Accessing the Development Apple Push Service
+  1.2.840.113635.100.6.3.2:
+    apple_description: Apple World Wide Developer Relations Client SSL Certificates
+      for Accessing the Production Apple Push Service
+  1.2.840.113635.100.6.30:
+    symbol: oidAppleCertExtAppleSMPEncryption
+  1.2.840.113635.100.6.38.1:
+    symbol: oidAppleCertExtApplePPQSigningProdQA
+  1.2.840.113635.100.6.38.2:
+    symbol: oidAppleCertExtApplePPQSigningProd
+  1.2.840.113635.100.6.39:
+    symbol: oidAppleCertExtCryptoServicesExtEncryption
+  1.2.840.113635.100.6.4.1:
+    apple_description: Extension Markers for device version string, expects UTF8 to
+      follow in SubjectAltName
+  1.2.840.113635.100.6.4.2:
+    apple_description: Extension Markers for OS version string, expects UTF8 to follow
+      in SubjectAltName
+  1.2.840.113635.100.6.43:
+    symbol: oidAppleCertExtATVVPNProfileSigning
+  1.2.840.113635.100.6.5.1:
+    apple_description: Apple iTunes Store Certificates for Signing Receipts of Purchases
+      from the iTS
+  1.2.840.113635.100.6.5.2:
+    apple_description: Apple iTunes Store Certificates for Signing Requests to Purchase
+      for the iTS
+  1.2.840.113635.100.7.1.1:
+    apple_description: 'Apple FairPlay certificate extended Application Authentication
+      & Authorization: Policy'
+  1.2.840.113635.100.8:
+    description: Local Policy OID Root
+  1.2.840.113635.100.8.4:
+    description: Contains a sequence of integer values.  Some are 0, some are 1, others
+      appear to be int32 bitmasks.
     is_asn_body: true
     is_extension: true
     found_in:
-      - dcrt
-      - dcrt-oid
+    - dcrt
+    - dcrt-oid
     issuers:
-      - Basic Attestation User Sub CA2
+    - Basic Attestation User Sub CA2
     ous:
-      - BAA Certification
-  - oid: 1.2.840.113635.100.8.5
-    description: Similar in nature to `1.2.840.113635.100.8.4`. Non-integer values observed of `ssca`.
+    - BAA Certification
+    symbol:
+  1.2.840.113635.100.8.5:
+    description: Similar in nature to `1.2.840.113635.100.8.4`. Non-integer values
+      observed of `ssca`.
     is_asn_body: true
     is_extension: true
     found_in:
-      - dcrt
-      - dcrt-oid
+    - dcrt
+    - dcrt-oid
     issuers:
-      - Basic Attestation User Sub CA2
+    - Basic Attestation User Sub CA2
     ous:
-      - BAA Certification
-  - oid: 1.2.840.113635.100.8.7
+    - BAA Certification
+  1.2.840.113635.100.8.7:
     description: ASN1 data for the version of macOS for the issued under (e.g. 12.2)
     is_asn_body: true
     is_extension: true
     found_in:
-      - dcrt
-      - dcrt-oid
+    - dcrt
+    - dcrt-oid
     issuers:
-      - Basic Attestation User Sub CA2
+    - Basic Attestation User Sub CA2
     ous:
-      - BAA Certification
-  - oid: 1.2.840.113635.100.10.1
-    description:
-      Hardware device identifiers of the machine the certificate is issued to
-      contains BORD, CHIP, ECID, srnm, udid, seid
-    found_in:
-      - ucrt
-    issuers:
-      - FDRDC-UCRT-SUBCA
-    ous:
-      - ucrt Leaf Certificate
-  - oid: 1.2.840.113635.100.10.2
-    found_in:
-      - ucrt
-    issuers:
-      - FDRDC-UCRT-SUBCA
-    ous:
-      - ucrt Leaf Certificate
+    - BAA Certification
+  1.3.6.1.4.1.311.2.1.12:
+    symbol: oidMicrosoftSpcSpOpusInfo
+  1.3.6.1.4.1.311.2.1.15:
+    symbol: oidMicrosoftSpcPEImageData
+  1.3.6.1.4.1.311.2.1.4:
+    symbol: oidMicrosoftSpcIndirectDataContext
 known_symbols:
   ekus:
-    - _oidAppleExtendedKeyUsageAppleID
-    - _oidAppleExtendedKeyUsageCodeSigning
-    - _oidAppleExtendedKeyUsageCodeSigningDev
-    - _oidAppleExtendedKeyUsagePassbook
-    - _oidAppleExtendedKeyUsageProfileSigning
-    - _oidAppleExtendedKeyUsageQAProfileSigning
+  - _oidAppleExtendedKeyUsageAppleID
+  - _oidAppleExtendedKeyUsageCodeSigning
+  - _oidAppleExtendedKeyUsageCodeSigningDev
+  - _oidAppleExtendedKeyUsagePassbook
+  - _oidAppleExtendedKeyUsageProfileSigning
+  - _oidAppleExtendedKeyUsageQAProfileSigning
   purposes:
-    - _oidAppleApplicationSigning
-    - _oidAppleProvisioningProfile
-    - _oidAppleInstallerPackagingSigningExternal
-    - _oidApplePushServiceClient
+  - _oidAppleApplicationSigning
+  - _oidAppleProvisioningProfile
+  - _oidAppleInstallerPackagingSigningExternal
+  - _oidApplePushServiceClient
   extensions:
-    - _oidAppleCertExtAST2DiagnosticsServerAuthProd
-    - _oidAppleCertExtAST2DiagnosticsServerAuthProdQA
-    - _oidAppleCertExtATVAppSigningProd
-    - _oidAppleCertExtATVAppSigningProdQA
-    - _oidAppleCertExtATVVPNProfileSigning
-    - _oidAppleCertExtApplePPQSigningProd
-    - _oidAppleCertExtApplePPQSigningProdQA
-    - _oidAppleCertExtAppleSMPEncryption
-    - _oidAppleCertExtAppleServerAuthentication
-    - _oidAppleCertExtAppleServerAuthenticationAPNProd
-    - _oidAppleCertExtAppleServerAuthenticationAPNProdQA
-    - _oidAppleCertExtAppleServerAuthenticationGS
-    - _oidAppleCertExtAppleServerAuthenticationIDSProd
-    - _oidAppleCertExtAppleServerAuthenticationIDSProdQA
-    - _oidAppleCertExtAppleServerAuthenticationMMCSProd
-    - _oidAppleCertExtAppleServerAuthenticationMMCSProdQA
-    - _oidAppleCertExtAppleServerAuthenticationPPQProd
-    - _oidAppleCertExtAppleServerAuthenticationPPQProdQA
-    - _oidAppleCertExtAppleServerAuthenticationiCloudSetupProd
-    - _oidAppleCertExtAppleServerAuthenticationiCloudSetupProdQA
-    - _oidAppleCertExtCryptoServicesExtEncryption
-    - _oidAppleCertExtEscrowProxyServerAuthProd
-    - _oidAppleCertExtEscrowProxyServerAuthProdQA
-    - _oidAppleCertExtFMiPServerAuthProd
-    - _oidAppleCertExtFMiPServerAuthProdQA
-    - _oidAppleCertExtHomeKitServerAuth
-    - _oidAppleCertExtOSXProvisioningProfileSigning
-    - _oidAppleCertExtTrustCacheSigning
-    - _oidAppleCertExtTrustCacheSigningTest
-    - _oidAppleCertExtensionAppleIDRecordValidationSigning
+  - _oidAppleCertExtAST2DiagnosticsServerAuthProd
+  - _oidAppleCertExtAST2DiagnosticsServerAuthProdQA
+  - _oidAppleCertExtATVAppSigningProd
+  - _oidAppleCertExtATVAppSigningProdQA
+  - _oidAppleCertExtATVVPNProfileSigning
+  - _oidAppleCertExtApplePPQSigningProd
+  - _oidAppleCertExtApplePPQSigningProdQA
+  - _oidAppleCertExtAppleSMPEncryption
+  - _oidAppleCertExtAppleServerAuthentication
+  - _oidAppleCertExtAppleServerAuthenticationAPNProd
+  - _oidAppleCertExtAppleServerAuthenticationAPNProdQA
+  - _oidAppleCertExtAppleServerAuthenticationGS
+  - _oidAppleCertExtAppleServerAuthenticationIDSProd
+  - _oidAppleCertExtAppleServerAuthenticationIDSProdQA
+  - _oidAppleCertExtAppleServerAuthenticationMMCSProd
+  - _oidAppleCertExtAppleServerAuthenticationMMCSProdQA
+  - _oidAppleCertExtAppleServerAuthenticationPPQProd
+  - _oidAppleCertExtAppleServerAuthenticationPPQProdQA
+  - _oidAppleCertExtAppleServerAuthenticationiCloudSetupProd
+  - _oidAppleCertExtAppleServerAuthenticationiCloudSetupProdQA
+  - _oidAppleCertExtCryptoServicesExtEncryption
+  - _oidAppleCertExtEscrowProxyServerAuthProd
+  - _oidAppleCertExtEscrowProxyServerAuthProdQA
+  - _oidAppleCertExtFMiPServerAuthProd
+  - _oidAppleCertExtFMiPServerAuthProdQA
+  - _oidAppleCertExtHomeKitServerAuth
+  - _oidAppleCertExtOSXProvisioningProfileSigning
+  - _oidAppleCertExtTrustCacheSigning
+  - _oidAppleCertExtTrustCacheSigningTest
+  - _oidAppleCertExtensionAppleIDRecordValidationSigning
   unknown:
-    - _oidAppleImg4ManifestCertSpec
-    - _oidAppleIntmMarkerAppleHomeKitServerCA
-    - _oidAppleIntmMarkerAppleID
-    - _oidAppleIntmMarkerAppleID2
-    - _oidAppleIntmMarkerAppleServerAuthentication
-    - _oidAppleIntmMarkerAppleSystemIntg2
-    - _oidAppleIntmMarkerAppleSystemIntgG3
-    - _oidAppleIntmMarkerAppleWWDR
-    - _oidApplePolicyEscrowService
-    - _oidApplePolicyMobileStore
-    - _oidApplePolicyMobileStoreProdQA
-    - _oidAppleSecureBootCertSpec
-    - _oidAppleSecureBootTicketCertSpec
-    - _oidAppleTVOSApplicationSigningProd
-    - _oidAppleTVOSApplicationSigningProdQA
+  - _oidAppleImg4ManifestCertSpec
+  - _oidAppleIntmMarkerAppleHomeKitServerCA
+  - _oidAppleIntmMarkerAppleID
+  - _oidAppleIntmMarkerAppleID2
+  - _oidAppleIntmMarkerAppleServerAuthentication
+  - _oidAppleIntmMarkerAppleSystemIntg2
+  - _oidAppleIntmMarkerAppleSystemIntgG3
+  - _oidAppleIntmMarkerAppleWWDR
+  - _oidApplePolicyEscrowService
+  - _oidApplePolicyMobileStore
+  - _oidApplePolicyMobileStoreProdQA
+  - _oidAppleSecureBootCertSpec
+  - _oidAppleSecureBootTicketCertSpec
+  - _oidAppleTVOSApplicationSigningProd
+  - _oidAppleTVOSApplicationSigningProdQA
 roots:
-  FDR-CA1-ROOT-CM:
-  FDR-DC-SSL-ROOT:
-  FDR Sealing Server CA 1:
+  Apple Extra Content Global Root CA - G1:
+    subject_key_id: 30168014AA63251D082C72A381536C94D2864995881CB0D0
     subordinate_cas:
-      FDR-SS-CM-E1:
-  Basic Attestation User Root CA:
-    subordinate_cas:
-      Basic Attestation User Sub CA2:
-        description:
-          Issues `ucrt` subordinate CA's that are used for user level signing.  Under this `BAA Certification`
-          certs are issued.
+      ZFF10-SDOM1-TssLive-ManifestKey-ExtraContent-Global-RevA-DataCenter:
+        subject_key_id: 041442FEAB470561CE2A7471B55AC0D81AB7536F4B36
+  Apple Secure Boot Root CA - G2:
   Apple Secure Boot Root CA - G6:
     subordinate_cas:
       T6031-SDOM1-RecoveryBoot-RevA-Factory:
@@ -217,8 +338,13 @@ roots:
     subordinate_cas:
       T6031-SDOM1-TssLive-ManifestKey-Global-RevA-DataCenter:
         subject_key_id: 0414D8B9E3E9C4A1C542ECB72FC2CF0C2F861E1B3EEF
-  Apple Extra Content Global Root CA - G1:
-    subject_key_id: 30168014AA63251D082C72A381536C94D2864995881CB0D0
+  Basic Attestation User Root CA:
     subordinate_cas:
-      ZFF10-SDOM1-TssLive-ManifestKey-ExtraContent-Global-RevA-DataCenter:
-        subject_key_id: 041442FEAB470561CE2A7471B55AC0D81AB7536F4B36
+      Basic Attestation User Sub CA2:
+        description: Issues `ucrt` subordinate CA's that are used for user level signing.  Under
+          this `BAA Certification` certs are issued.
+  FDR Sealing Server CA 1:
+    subordinate_cas:
+      FDR-SS-CM-E1:
+  FDR-CA1-ROOT-CM:
+  FDR-DC-SSL-ROOT:

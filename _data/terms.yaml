@@ -1,195 +1,95 @@
 ---
 terms:
+  1TR:
+  - title: 1 True Recovery / 1 Touch Recovery
+    description: Alternate boot mode provided on Apple Silicon based Mac computers
+      to enter high integrity and privledged changes such as to boot policy / ASMB
+  aarch64:
+  aarch64e:
   ace:
   - title: USB-C Port Controller
+  aes:
+  - title: Advanced Encryption Standard
   aht:
   - title: Apple Hardware Test
+  AID:
+  - title: Apple ID
+  AltDSID:
+  AMfD:
+  amfm:
   ane:
   - title: Apple Neural Engine
   anps:
   - title: Apple Push Notification Service
     description:
+  ans:
+  - title: Apple NAND Storage
   aop:
   - title: Always-On Processor
-  AID:
-  - title: Apple ID
-  AltDSID:
-  DvF:
-  nbAc:
-  - title: Nearby Action
-  nbIF:
-  - title: Nearby Interface Type
-  DsFl:
-  AMfD:
-  nbAf:
-  DSID:
-  MRI:
-  MRtI:
-  IDS:
-  - title: Identity Services
-  RSSI:
-  - title: Receive Signal Stength Indicator
-  XPC:
-  RemoteXPC:
-  eOS:
-  - title: embeddedOS (Touch Bar OS for T1)
-  bridgeOS:
-  - title: bridgeOS (Touch Bar / Security OS for T2)
   AP:
   - title: Application Processor
+  AppKit:
   aps:
     see:
     - apns
   APTicket:
-  Md:
-  - title: Model
-  Nm:
-  - title: User Assigned Name
-  mach:
-  tfp0:
-  gcd:
-    - title: Grand Central Dispatch
-  xnu:
-  seatbelt:
-    see:
-      - sandbox
-  dfu:
-    - title: Device Firmware Update
-  recovery:
-  restore:
-  mdm:
-    - title: Mobile Device Management
-  dep:
-    - title: Device Enrollment Program
-  se:
-    - title: Secure Element
-  register:
-    - title: Processor Register
-  msr:
-    - title: Model/Machine Specific Register
-      see:
-        - register
-  ecore:
-    - title: Efficienty Core
-  pcore:
-    - title: Performance Core
-  x86:
-  x86_64:
-  x86_64h:
   arm:
   armv7:
-  aarch64:
-  aarch64e:
-  sp:
-    - title: Stack Pointer
-  fp:
-    - title: Frame Pointer
-  baseband:
-  bluetooth:
-  wlan:
-  bridge:
-  bridgeOS:
-  eOS:
-  OHCI:
-  EHCI:
-  VHCI:
-  XPC:
-  RemoteXPC:
-  "Mach Port":
-    see:
-      - mach_port
-  mach_port:
-  bundle:
-  AppKit:
-  UIKit:
-  entitlement:
-  cs:
-    - title: Code Signing
-  ioreg:
-  macho:
-  dylib:
-  dsc:
-  syscall:
-  plist:
-  asn:
-  asn1:
-  der:
-  pdu:
-  quarantine:
-  dyld:
-  executable:
-  service:
-  launchd:
-  Framework:
-  defaults:
-  iv:
-    - title: Initialization Vector (Encryption)
-  key:
-    - title: Encryption Key
-  pem:
-  efi:
-  nub:
-  aes:
-    - title: Advanced Encryption Standard
-  pki:
-    - title: Public Key Infrastructure
-  ecc:
-    - title: Elliptic Curve Cryptograph
-    - title: Error Checking and Correction
-  hid:
-    - title: Human Interface Device
-  uart:
-  amfm:
-  i2c:
-    - title: Inter Integrated Circuit
-  spmi:
-  smmu:
-  mmu:
-  pa:
-    - title: Physical Address
-  tc:
-    see:
-      - TrustCache
-  iboot:
-  reg:
-    see:
-      - register
-  ean:
-  ans:
-    - title: Apple NAND Storage
-  soc:
-    - title: System-on-a-Chip
-  fpga:
-  AuxKC:
-  BootKC:
-  sio:
-    - title: SmartIO (iPad keyboard covers)
-  tss:
-    - title: Tatsu Signing Server
-  kc:
-    see:
-      - kernelcache
-  rsep:
-    - title: Restore SEP Firmware Image
-  keynag:
   asmb:
   - title: Apple Secure Multi Boot
+  asn:
+  asn1:
+  AuxKC:
   awdl:
+  baa:
+  - title: Basic Attestation Authority (BAA)
+  baseband:
+  BDA:
+  bluetooth:
+  BootKC:
+  BootPolicy:
+  bridge:
+  bridgeOS:
+  bundle:
+  cs:
+  - title: Code Signing
   csr:
     see:
     - sip
   ctrr:
   dart:
   - title: Device Address Resolution Table
+  defaults:
+  dep:
+  - title: Device Enrollment Program
+  der:
   dext:
+  dfu:
+  - title: Device Firmware Update
   dmg:
   - title: Disk Image
+  dsc:
+  DsFl:
+  DSID:
   dt:
   - title: Device Tree
+  DvF:
+  dyld:
+  dylib:
+  ean:
+  ecc:
+  - title: Elliptic Curve Cryptograph
+  - title: Error Checking and Correction
+  ecore:
+  - title: Efficienty Core
+  efi:
+  EHCI:
   en:
   - title: Ethernet Adapter (generic)
     description: Often `en` in the form `enX` where X is a number is used to identify
       a network adapter.
+  entitlement:
+  eOS:
   esim:
   - title: Embedded Subscriber Identificaton Module
     see:
@@ -197,6 +97,7 @@ terms:
   euicc:
     see:
     - esim
+  executable:
   FindMy:
   - title: FindMy iPhone / Mac
     description: A set of technologies that both help find the location of a lost
@@ -207,12 +108,31 @@ terms:
   fmm:
     see:
     - FindMy
+  fp:
+  - title: Frame Pointer
+  fpga:
+  Framework:
   fw:
     see:
     - FireWire
     - firmware
+  gcd:
+  - title: Grand Central Dispatch
+  hid:
+  - title: Human Interface Device
+  i2c:
+  - title: Inter Integrated Circuit
+  iboot:
+  IDS:
+  - title: Identity Services
+  ioreg:
   isp:
   - title: Image Signal Processor
+  iv:
+  - title: Initialization Vector (Encryption)
+  kc:
+    see:
+    - kernelcache
   kdp:
   - title: Kernel Debug Port / Protocol
     description: KDP is a general way in which XNU allows for the kernel itself to
@@ -223,25 +143,6 @@ terms:
       debugging, but nearly all kernels shipped by Apple can be debugged if the proper
       `boot-args` are passed on startup.
   kernel:
-  baa:
-  - title: Basic Attestation Authority (BAA)
-  oik:
-    - title: Owner Identity Key (OIK)
-  uik:
-    - title: User Identity Key (UIK)
-  ucrt:
-    - title: User identity Certificate (ucrt)
-  oic:
-    - title: Owner Identity Certificate (OIC)
-  LLB:
-  LocalPolicy:
-  RemotePolicy:
-  1TR:
-  sik:
-  oid:
-  pka:
-  siK:
-    - title: System Identity Key
   kernelcache:
   - title: Kernel Cache
     description: A kernel cache is a combined object that contains the kernel itself
@@ -251,8 +152,14 @@ terms:
       then started doing the combine of the kernel and the extensions into a BootCache
       that allowed the system to load one large monolithic binary.
   kext:
+  key:
+  - title: Encryption Key
+  keynag:
   ktrr:
   - title: Kernel Text Readonly Region
+  launchd:
+  LLB:
+  LocalPolicy:
   lpddr:
   - title: Low-Power Double Data Rate RAM
     description: LPDDR differs as it uses techniques to minimize the amount of power
@@ -266,18 +173,52 @@ terms:
   - title: Link Register (ARM)
     description: The LR is populated when a `bx` is called to inform a function of
       the address to return to.
+  mach:
+  Mach Port:
+    see:
+    - mach_port
+  mach_port:
+  macho:
+  Md:
+  - title: Model
+  mdm:
+  - title: Mobile Device Management
+  MiLo:
+  mmu:
+  MRI:
+  MRtI:
+  msr:
+  - title: Model/Machine Specific Register
+    see:
+    - register
   nand:
   - title: Not-AND Based Non-volatile Memory
     see:
     - nvme
+  nbAc:
+  - title: Nearby Action
+    context: nearbyd
+  nbAf:
+  nbIF:
+  - title: Nearby Interface Type
+    context: nearbyd
+  Nm:
+  - title: User Assigned Name
   nmi:
   - title: Non-maskable Interrupt
   nor:
   - title: Not-OR Based Non-volatile Memory
     see:
     - spi
+  nub:
   nvram:
   - title: Non-Volatile RAM
+  OHCI:
+  oic:
+  - title: Owner Identity Certificate (OIC)
+  oid:
+  oik:
+  - title: Owner Identity Key (OIK)
   ota:
   - title: Over-the-Air Update - Incremental Update (Somewhat arcane)
     description: In the earliest days of the iPhone, users had to connect the device
@@ -297,6 +238,8 @@ terms:
       acting instead as a USB host.  The technology evolved as phones became not just
       devices you could attach to a computer such as to sync with iTunes, but hosts
       in their own right such as to access a flash drive.
+  pa:
+  - title: Physical Address
   panic:
   - title: Kernel / Device Panic
     description:
@@ -306,8 +249,16 @@ terms:
       which the processor is currently executing.  When a subroutine is called, the
       PC is the address passed to LR so that the called function knows where to return
       to.
+  pcore:
+  - title: Performance Core
+  pdu:
+  pem:
   pio:
   - title: Programmed IO
+  pka:
+  pki:
+  - title: Public Key Infrastructure
+  plist:
   pmgr:
   - title: Power Manager
   pmp:
@@ -316,14 +267,39 @@ terms:
   - title: Parameter RAM
     see:
     - nvram
+  quarantine:
+  recovery:
+  reg:
+    see:
+    - register
+  register:
+  - title: Processor Register
+  RemotePolicy:
+  RemoteXPC:
+  restore:
+  rsep:
+  - title: Restore SEP Firmware Image
+  RSSI:
+  - title: Receive Signal Stength Indicator
   rtkit:
   - title: RealtimeKit (Realtime OS)
   sart:
   - title: Secure Address Resolution Table
+  se:
+  - title: Secure Element
+  seatbelt:
+    see:
+    - sandbox
   sep:
   - title: Secure Enclave Processor
+  service:
+  sik:
+  siK:
+  - title: System Identity Key
   sim:
   - title: Subscriber Identification Module
+  sio:
+  - title: SmartIO (iPad keyboard covers)
   SIP:
   - title: System Integrity Protection
     description: System Integrity Protection is a set of technologies employed by
@@ -333,6 +309,11 @@ terms:
       in the nvram variable `csr-status`.
   smc:
   - title: System Management Controller
+  smmu:
+  soc:
+  - title: System-on-a-Chip
+  sp:
+  - title: Stack Pointer
   spi:
   - title: Serial Peripheral Interconnect
     description: SPI is a physical pin layer used to pass data between chips.  It's
@@ -346,6 +327,9 @@ terms:
       models made use of a smaller (in the few megabytes range) NOR chip to load iBoot,
       and stored the user's data on a larger NAND flash chip. In newer devices the
       NOR/SPI flash is synthetic and provided by ANS2/3.
+  spmi:
+  SSID:
+  syscall:
   SysCfg:
     see:
     - SysConfig
@@ -356,8 +340,12 @@ terms:
       example is this is the location of the serial number.  This is because the device
       serial number cannot be burned in as it is the whole device, not any one component.  SysCfg
       is a series of key/value pairs and is documented in `syscfg.yaml`.
+  SystemPolicy:
   tbm:
   - title: Trusted Boot Monitor
+  tc:
+    see:
+    - TrustCache
   tcon:
   - title: Timing Controller (Displays)
     description: The TCON is used to control the refresh of a LED/OLED display, ensuring
@@ -365,8 +353,11 @@ terms:
       updated all at once / not-torn.
   tdm:
   - title: Target Disk Mode
+  tfp0:
   trustcache:
   - title:
+  tss:
+  - title: Tatsu Signing Server
   tz:
   - title: ARM TrustZone
     see:
@@ -374,14 +365,27 @@ terms:
     - tz1
   tz0:
   tz1:
+  uart:
+  ucrt:
+  - title: User identity Certificate (ucrt)
   uicc:
     see:
     - sim
+  uik:
+  - title: User Identity Key (UIK)
+  UIKit:
   usb-pd:
   - title: USB Power Delivery
+  VHCI:
   vm:
   - title: Virtual Memory
   - title: Virtual Machine
+  wlan:
+  x86:
+  x86_64:
+  x86_64h:
+  xnu:
+  XPC:
 metadata:
   description:
   credits: []
