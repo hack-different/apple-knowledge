@@ -1,138 +1,301 @@
 ---
-terms:
+metadata:
+  description:
+  credits:
+  collections:
+    - term_list
+term_list:
   1TR:
   - title: 1 True Recovery / 1 Touch Recovery
     description: Alternate boot mode provided on Apple Silicon based Mac computers
-      to enter high integrity and privledged changes such as to boot policy / ASMB
+      to enter high integrity and privileged changes such as to boot policy / ASMB
+    see:
+    - ASMB
+  4CC:
+  - title: 4 Character Code
   aarch64:
+    - title: 64bit ARM v8+ Architecture
   aarch64e:
-  ace:
+    - title: 64bit ARM v8.3+ Architecture with Pointer Authentication
+  ACC:
+  - title: Apple Core Cluster
+  ACE:
   - title: USB-C Port Controller
-  aes:
+  AES:
   - title: Advanced Encryption Standard
-  aht:
+  AGX:
+  - title: Apple Graphics
+  AHT:
   - title: Apple Hardware Test
   AID:
   - title: Apple ID
   AltDSID:
+  AMCC:
+  - title: Apple Memory Cache Controller
   AMfD:
+  AMFI:
+  - title: Apple Mobile Firmware Integrity
   amfm:
-  ane:
+  ANE:
   - title: Apple Neural Engine
-  anps:
-  - title: Apple Push Notification Service
-    description:
-  ans:
+  anpi:
+  - title:
+  ANS:
   - title: Apple NAND Storage
-  aop:
+  AOP:
   - title: Always-On Processor
+  AoT:
+  - title: Ahead-of Time Compilation
   AP:
   - title: Application Processor
+  - title: Access Point (WiFi)
+  APNonce:
+  - title: Application Processor Boot Nonce
+  APNS:
+  - title: Apple Push Notification Service
+    description:
   AppKit:
-  aps:
+  APRR:
+  - title: Access Permission Remapping Registers
+  APS:
+  - title: Apple Push Service
     see:
-    - apns
+    - APNS
   APTicket:
-  arm:
+  ARM:
+  - title: Advanced RISC Machines
+  - title: ARM Architecture Reference Manual
   armv7:
-  asmb:
-  - title: Apple Secure Multi Boot
-  asn:
+  ASID:
+  - title: Address Space ID
+  ASMB:
+  - title: Apple Secure Multi-Boot
+  ASN:
+  - title: Abstract Syntax Notation v1 (asn1)
+    see:
+    - asn1
   asn1:
   AuxKC:
-  awdl:
-  baa:
+  AVD:
+  - title: Apple Virtual Device
+  AVP:
+  - title: Apple Virtual Platform
+  AWDL:
+  - title: Apple Wireless Direct Link
+  BAA:
   - title: Basic Attestation Authority (BAA)
   baseband:
+  - title:
+    see:
+    - msm
   BDA:
+  BER:
+  - title: Basic Encoding Rules
   bluetooth:
+  BNCH:
+  - title: Boot Nonce Cryptographic Hash
+    description: |
+      For root domain tickets (those directly for hardware) this is the APNonce. MacOS shadows this value by
+      entangling this for particular scopes, and the shadow is enforced by KTRR / Secure Monitor.  This allows
+      multiple kernels and boot modes on a system to have distinct APTicket/APNonce pairings.
+      The value is backed by special NVRAM values for `com.apple.System.boot-nonce`
+    see:
+    - APTicket
+    - APNonce
   BootKC:
   BootPolicy:
   bridge:
   bridgeOS:
+  BRK:
+  - title: Breakpoint
   bundle:
+  CC:
+  - title: CoreCrypto
+  CL4:
+  - title:
+    see:
+    - L4
+  core:
+  - title: Processor Core
+    description: 'A distinct processing element (has own state) in a multi-core system.'
+  - title: Core Memory Dump
+  CPSR:
+  CRAM:
+  - title: Cache-as-RAM
+  CRNG:
+  - title: Cryptographic Random Number Generator
+  CS:
+  - title: Code Signing
   cs:
   - title: Code Signing
-  csr:
+  CSPRNG:
+  - title: Cryptographically Secure Pseudorandom Number Generator
+  CSR:
+  - title: Constrained System Rights (Rootless)
     see:
     - sip
-  ctrr:
-  dart:
+  CTRR:
+  DART:
   - title: Device Address Resolution Table
+  DCC:
+  - title: Debug Communications Channel
   defaults:
-  dep:
+  DEP:
+  - title: Data Execute Prevention
+    see:
+    - XN
   - title: Device Enrollment Program
-  der:
-  dext:
+  DER:
+  - title: Distinguished Encoding Rules
+  dExt:
   dfu:
   - title: Device Firmware Update
   dmg:
   - title: Disk Image
-  dsc:
+  DRAM:
+  DRBG:
+  - title: Deterministic Random Bit Generator
+  DSC:
+  - title: Dylib Shared Cache
   DsFl:
   DSID:
-  dt:
+  - title: Directory Services Identity
+  DT:
   - title: Device Tree
   DvF:
   dyld:
-  dylib:
-  ean:
-  ecc:
-  - title: Elliptic Curve Cryptograph
+  DyLib:
+  EAN:
+  - title: Emulated Apple NOR
+  ECC:
+  - title: Elliptic Curve Cryptography
   - title: Error Checking and Correction
-  ecore:
-  - title: Efficienty Core
-  efi:
+  eCore:
+  - title: Efficiency Core
+  EFI:
+  - title: Extensible Firmware Interface
   EHCI:
+  - title: Enhanced Host Controller Interface (USB)
+  EL0:
+  - title: Exception Level 0 - User Mode
+  EL1:
+  - title: Exception Level 1 - Kernel Mode
+  EL2:
+  - title: Exception Level 2 - Hypervisor
+  EL3:
+  - title: Exception Level 3 - TrustZone
   en:
   - title: Ethernet Adapter (generic)
     description: Often `en` in the form `enX` where X is a number is used to identify
       a network adapter.
   entitlement:
   eOS:
-  esim:
-  - title: Embedded Subscriber Identificaton Module
+  - title: embeddedOS - T1 TouchBar OS
+  eSIM:
+  - title: Embedded Subscriber Identification Module
     see:
-    - sim
-  euicc:
+    - SIM
+  eUICC:
+  - title: Embedded Universal Integrated Circuit Card
     see:
-    - esim
+    - eSIM
+    - SIM
+    - UICC
+  Exclave:
+  - title: Microkernel Based Secure Applet System
   executable:
   FindMy:
   - title: FindMy iPhone / Mac
     description: A set of technologies that both help find the location of a lost
       Apple device, as well as prevent theft from being able to reset the device for
       sale or use.
+  FIPS:
+  - title: Federal Information Processing Standard
+  FIQ:
   FireWire:
   - title: FireWire
-  fmm:
+  FMM:
+  - title: Find-My-Mac
     see:
     - FindMy
-  fp:
+  FP:
   - title: Frame Pointer
-  fpga:
+  FPGA:
+  - title: Field Programmable Gate Array
+    description: 'Typically used for pre-final chip designs as they can be updated
+      with newer gates to correct silicon level defects before mass production.
+
+      '
   Framework:
-  fw:
-    see:
+  FW:
+  - see:
     - FireWire
+  - see:
     - firmware
-  gcd:
+  GCD:
   - title: Grand Central Dispatch
-  hid:
+    description: 'Framework and supporting kernel scheduler for multi-core computation
+      in XNU. Work is divided into tasks/blocks/closures which are then scheduled
+      for a particular queue.
+
+      '
+  GENTER:
+  GEXIT:
+  gif:
+  GL0:
+  - title: Guarded Level 0
+  GL1:
+  - title: Guarded Level 1
+  GL2:
+  - title: Guarded Level 2
+    see:
+    - GXF
+  GXF:
+  - title: Guarded Execution Feature
+  HID:
   - title: Human Interface Device
-  i2c:
-  - title: Inter Integrated Circuit
-  iboot:
+  HV:
+  - title: HyperVisor (Play on Supervisor)
+    see:
+    - el2
+    - VHE
+  HVC:
+  - title: Hypervisor Call (el2)
+  I2C:
+    - title: Inter-Integrated Circuit
+      url: https://web.archive.org/web/20221006073143/http://www.nxp.com/docs/en/user-guide/UM10204.pdf
+  iBoot:
   IDS:
   - title: Identity Services
+  IOP:
+  - title: Instant-On Processor
   ioreg:
+    - title: IOKit registry
+      see:
+        - IOKIt
+  IORVBAR:
+  - title: Reset Vector Base Address Register accessible via MMIO
+  IPI:
+  - title: Inter-processor Interrupt
+  IRQ:
+    - title: Interrupt Request
   isp:
   - title: Image Signal Processor
-  iv:
+  ITR:
+  - title: Instruction Transfer Register
+  IV:
   - title: Initialization Vector (Encryption)
+  JIT:
+  - title: Just-in Time Compilation
+  JTAG:
+  - tile: Joint Test Action Group (Used for Debug)
+  kalloc:
+  - title: Kernel Memory Allocator
+  KASLR:
+  - title: Kernel Address Space Layout Randomization
   kc:
-    see:
-    - kernelcache
+  - see: kernelcache
+  - see: KextCollection
   kdp:
   - title: Kernel Debug Port / Protocol
     description: KDP is a general way in which XNU allows for the kernel itself to
@@ -142,56 +305,141 @@ terms:
       through Kernel Debug Kits.  These are components that help with two machine
       debugging, but nearly all kernels shipped by Apple can be debugged if the proper
       `boot-args` are passed on startup.
+  VG:
+    - see: VolumeGroup
+  VolumeGroup:
+    - title: APFS Volume Group
+      description: A volume group collects volumes of roles into a composite system.  Typically
+        used to connect a System volume to a Data volume.
+  Container:
+    - see: VolumeContainer
+    - see: SandboxContainer
+  VolumeContainer:
+    - title: APFS Volume Container
+      description: A logical collection of physical stores that are aggregated to create a logical
+        pool of storage to be used for volume groups and loose volumes.
+  PhysicalStore:
+    - title: APFS Physical Store
+      description: A partition in a GPT partition table that provides storage to the APFS Container.  Almost
+        always synonymous with a container now, but in the past was used when a container had storage both
+        on SSD and HDD disks (see CoreStorage)
+      see:
+        - APFS
+        - CoreStorage
+        - VolumeContainer
+        - VolumeGroup
+  Volume:
+    - title: APFS Disk Volume
+      description:
+  KEC:
+  - title: Kernel External Component
+  KEK:
+  - title: Key Exchange Key
+  APFS:
+    - title: Apple File System
+  HFS:
+    - title: Hierarchical File System (HFS/HFS+)
+      description:
   kernel:
+  KernelCollection:
+    - title: Kernel Collection
+      description: A Mach-O Object containing a series of KEXTs (Kernel Extensions) to be loaded
+        alongside the kernel itself.  Usually one of three types, the Boot, the System and the
+        Auxiliary.
   kernelcache:
   - title: Kernel Cache
     description: A kernel cache is a combined object that contains the kernel itself
       as well as various kexts (Kernel Extensions).  Older macs would load the kernel
       itself, then load the various kexts from disk. The process of loading the kexts
-      and then binding the symbols was a process that slowed the starup of a mac.  Apple
+      and then binding the symbols was a process that slowed the startup of a mac.  Apple
       then started doing the combine of the kernel and the extensions into a BootCache
       that allowed the system to load one large monolithic binary.
   kext:
+    - title: Kernel Extension
   key:
   - title: Encryption Key
-  keynag:
-  ktrr:
+  keybag:
+    - title: Wrapped Encryption Key Bag
+      description: An encryption key that is wrapped by the GID used in IMG4
+      see:
+        - key
+  KLD:
+  - title: Kernel Linker
+  KTRR:
   - title: Kernel Text Readonly Region
+  KTRW:
+  - title: Kernel Text Read/Write
+  L4:
+  - title: L4 Microkernel
+    description: 'L4 Microkernel (For Apple usually L4 Darbat) is a kernel designed
+      for high security or reliability workloads due to having been formally verified
+      for correctness.  This ensures that the kernel guarantees are mathematically
+      verified against defects.'
   launchd:
+  LDM:
+  - title: Lock Down Mode
   LLB:
+  - title: Low-Level Boot
+  LLC:
+  LLDB:
+  - title: Low Level Debugger (LLVM compiler project)
+  LLW:
+  - title: Low Latency WiFi
+  lo:
+  lo0:
+    - title: Loopback Interface
+      see: lo
   LocalPolicy:
-  lpddr:
+    - title: Local Policy
+      description: A method used in macOS (and recently A17 devices on iOS 17) to allow for the AP to have a
+        primary TSS signed APTicket, and the SEP to sign the local boot policy which modifies the boot flow
+        or security.
+  LP:
+  - see: LocalPolicy
+  LP-DDR:
   - title: Low-Power Double Data Rate RAM
-    description: LPDDR differs as it uses techniques to minimize the amount of power
+    description: LP-DDR differs as it uses techniques to minimize the amount of power
       needed to maintain the memory.  Most RAM requires that the RAM controller occasionally
       read each value, and write it again as the data is stored in capacitors that
       leak current over time.  Were the cells not refreshed, every 1 in memory would
       eventually leak enough current that it would become a zero.
     see:
-    - ddr
-  lr:
+    - DDR
+    - DRAM
+  LR:
   - title: Link Register (ARM)
     description: The LR is populated when a `bx` is called to inform a function of
       the address to return to.
+  LSB:
+  - title: Least Significant Byte/Bit
+  - title: Lower Side-Band
+  LZFSE:
   mach:
-  Mach Port:
-    see:
-    - mach_port
   mach_port:
   macho:
+  MachPort:
+  - see: mach_port
   Md:
   - title: Model
   mdm:
   - title: Mobile Device Management
+  MDSCR:
+  - title: Monitor Debug System Control Register
   MiLo:
-  mmu:
+  MMIO:
+  MMU:
+  - title: Memory Management Unit
   MRI:
   MRtI:
-  msr:
+  MSB:
+  - title: Most Significant Byte/Bit
+  msm:
+  - title: Qualcomm Baseband (Models are MSM) Motorola SoC Modem?
+  MSR:
   - title: Model/Machine Specific Register
     see:
     - register
-  nand:
+  NAND:
   - title: Not-AND Based Non-volatile Memory
     see:
     - nvme
@@ -206,19 +454,37 @@ terms:
   - title: User Assigned Name
   nmi:
   - title: Non-maskable Interrupt
-  nor:
-  - title: Not-OR Based Non-volatile Memory
+  NOR:
+  - title: Not-OR Based Non-Volatile Memory
     see:
     - spi
+  NSID:
+  - title: Non-Secure Invasive Debug
+  - title: NVMe Namespace ID
+  NSNID:
+  - title: Non-Secure Non-Invasive Debug
   nub:
   nvram:
   - title: Non-Volatile RAM
+  NVV3:
+  - title: NVRAM Version 3
+  OAH:
+  - title: Other Architecture Handler (Rosetta2)
   OHCI:
+  - title: Open Host Controller Interface (USB)
   oic:
   - title: Owner Identity Certificate (OIC)
   oid:
+  - title: Object ID (ASN1)
+    description: 'OIDs are namespaced, hierarchical identities'
   oik:
   - title: Owner Identity Key (OIK)
+  OOB:
+  - title: Out-of-Band
+  OSLAR:
+  - title:
+  OTA:
+  - title: Over-the-Air Update
   ota:
   - title: Over-the-Air Update - Incremental Update (Somewhat arcane)
     description: In the earliest days of the iPhone, users had to connect the device
@@ -232,71 +498,121 @@ terms:
       of 'full OTAs' which are a delta update in OTA format, but includes the entire
       set of data to restore devices.  These are typically employed for devices that
       lack the port needed for DFU/iBoot/IPSW based recovery.
-  otg:
+  OTG:
   - title: USB On-the-go
     description: USB-OTG is a way to describe a device that is typically a peripheral
       acting instead as a USB host.  The technology evolved as phones became not just
       devices you could attach to a computer such as to sync with iTunes, but hosts
       in their own right such as to access a flash drive.
-  pa:
+  PA:
   - title: Physical Address
+    see:
+      - MMU
+      - DART
+  VA:
+  - title: Virtual Address
+    see:
+      - MMU
+  PAC:
+  - title: Pointer Authentication Code
+  TaggedPointer:
   panic:
   - title: Kernel / Device Panic
     description:
-  pc:
+  PC:
   - title: Program Counter (ARM/Intel)
     description: The PC or Program Counter is the address (typically virtual address)
       which the processor is currently executing.  When a subroutine is called, the
       PC is the address passed to LR so that the called function knows where to return
       to.
-  pcore:
+  PCIe:
+  pCore:
   - title: Performance Core
-  pdu:
-  pem:
-  pio:
+    see:
+    - core
+  PDU:
+  - title: Protocol Data Unit
+  PEM:
+  - title: Privacy Enhanced Mail (Method for encoding ASN1)
+  PIO:
   - title: Programmed IO
-  pka:
-  pki:
+  PKA:
+    - title: Public Key Accelerator
+  PKI:
   - title: Public Key Infrastructure
   plist:
-  pmgr:
+    - title: Property List
+  PMAP:
+  - title: Page Map
+  PMGR:
   - title: Power Manager
-  pmp:
+  PMP:
   - title: Power Management Processor
+  POC:
+  - title: Proof-of-Concept
+  - title: Point-of-Contact
+  PPC:
+  PPL:
+  - title: Page Protection Layer
   pram:
   - title: Parameter RAM
     see:
     - nvram
+  PRNG:
+  - title: Pseudo-Random Number Generator
+  PSTATE:
+  - title: Process State
+  PXN:
+  - title: Privileged Execute Never
+    see:
+    - XN
   quarantine:
   recovery:
   reg:
-    see:
-    - register
+  - see: register
   register:
   - title: Processor Register
   RemotePolicy:
   RemoteXPC:
   restore:
+  Rosetta:
   rsep:
   - title: Restore SEP Firmware Image
   RSSI:
-  - title: Receive Signal Stength Indicator
-  rtkit:
-  - title: RealtimeKit (Realtime OS)
-  sart:
+  - title: Receive Signal Strength Indicator
+  RTKit:
+  - title: RealTimeKit (Realtime OS)
+  SART:
   - title: Secure Address Resolution Table
-  se:
+  SE:
   - title: Secure Element
   seatbelt:
+  - see: sandbox
+  SecureROM:
+  seL4:
+  - title: Security Enhanced L4
     see:
-    - sandbox
-  sep:
+    - L4
+  SEP:
   - title: Secure Enclave Processor
+    see:
+    - sepOS
+    - SEPROM
+  SEPNonce:
+  - title: Secure Enclave Processor Boot Nonce
+  sepOS:
+    - title: Secure Enclave Processor Operating System
+      see:
+        - SEPROM
+        - SEP
+        - L4
+  SEPROM:
   service:
+  SID:
+  - title: Secure Invasive Debug
   sik:
-  siK:
   - title: System Identity Key
-  sim:
+  SIM:
   - title: Subscriber Identification Module
   sio:
   - title: SmartIO (iPad keyboard covers)
@@ -307,14 +623,18 @@ terms:
       a system in such a way as to disable security features.  The feature is also
       known as `csr` due to it being managed by `csrutil` and stored in Intel macs
       in the nvram variable `csr-status`.
-  smc:
+    see:
+    - CSR
+  SMC:
   - title: System Management Controller
-  smmu:
-  soc:
+  - title: Secure Monitor Call (el3)
+  SMMU:
+  - title: Secure Memory Management Unit
+  SoC:
   - title: System-on-a-Chip
-  sp:
+  SP:
   - title: Stack Pointer
-  spi:
+  SPI:
   - title: Serial Peripheral Interconnect
     description: SPI is a physical pin layer used to pass data between chips.  It's
       primary use is in SPI Flash, which is a simple, low level way to read and write
@@ -327,10 +647,51 @@ terms:
       models made use of a smaller (in the few megabytes range) NOR chip to load iBoot,
       and stored the user's data on a larger NAND flash chip. In newer devices the
       NOR/SPI flash is synthetic and provided by ANS2/3.
-  spmi:
+  SPMI:
+    - title: System Power Management Interface
+      url: https://www.mipi.org/specifications/system-power-management-interface
+  I3C:
+    - title: Improved Inter-Integrated Circuit
+      url: https://www.mipi.org/specifications/i3c-sensor-specification
+      see:
+        - I2C
+  SPRR:
+  - title: Secure Permission Remapping Registers
+  SPTM:
+  - title: Secure Page Table Monitor
+    see:
+    - TXM
+  RAM:
+    - title: Random Access Memory
+      see:
+        - DRAM
+        - CRAM
+        - SRAM
+  SRAM:
+    - title: Static RAM
+      see:
+        - DRAM
+        - CRAM
+  SRD:
+  - title: Security Research Device
+  SRDP:
+  - title: Security Research Device Program
+    url: https://www.mipi.org/specifications/i3c-sensor-specification
+    see: SRD
   SSID:
+  - title: Service Set Identity (WiFi)
+  stf:
+  - title: Six-to-Four Tunnel Interface
+  SVC:
+  - title: ARM Supervisor Call (el1)
+    see:
+    - kernel
   syscall:
+    - title: User Mode to Kernel Mode Request
+      see:
+        - SVC
   SysCfg:
+  - title: System Config
     see:
     - SysConfig
   SysConfig:
@@ -341,9 +702,10 @@ terms:
       serial number cannot be burned in as it is the whole device, not any one component.  SysCfg
       is a series of key/value pairs and is documented in `syscfg.yaml`.
   SystemPolicy:
-  tbm:
+  TBM:
   - title: Trusted Boot Monitor
   tc:
+  - title: TrustCache
     see:
     - TrustCache
   tcon:
@@ -351,41 +713,77 @@ terms:
     description: The TCON is used to control the refresh of a LED/OLED display, ensuring
       that each frame is shown for the right amount of time, and that new frames are
       updated all at once / not-torn.
-  tdm:
+  TCR:
+  - title: Translation Control Register
+  TDM:
   - title: Target Disk Mode
   tfp0:
+  trpk:
+  - title: Trusted Public Keys
+    description: Occurs in `trst` objects
   trustcache:
   - title:
-  tss:
+  TSS:
   - title: Tatsu Signing Server
-  tz:
+  TTBCR:
+  - title: Translation Table Base Control Register
+  TTBR:
+  - title: Translation Table Base Register
+  TXM:
+  - title: Trusted Execution Monitor
+  TZ:
   - title: ARM TrustZone
     see:
     - tz0
     - tz1
+  - title: Time Zone
   tz0:
   tz1:
-  uart:
+  UART:
+  - title: Universal Asynchronous Receiver / Transmitter
   ucrt:
   - title: User identity Certificate (ucrt)
-  uicc:
+  UICC:
+  - title: Universal Integrated Circuit Card
     see:
     - sim
   uik:
   - title: User Identity Key (UIK)
   UIKit:
-  usb-pd:
+  USB-PD:
   - title: USB Power Delivery
+    see:
+    - PDU
+  UXN:
+  - title: Unprivileged Execute Never
+    see:
+    - XN
+  xHCI:
+    - title: Extensible Host Controller Interface (USB 3.0)
   VHCI:
-  vm:
+  - title: Virtual Host Controller Interface (USB)
+    description: The virtualized (as in no actual USB wires, but same protocol and PDUs) used as an interconnect
+      between the t8012 (T2) and the Intel processor.
+  VHE:
+  - title: Virtualization Host Extensions
+    see:
+    - https://developer.arm.com/documentation/102142/0100/
+  VM:
   - title: Virtual Memory
   - title: Virtual Machine
+    see:
+      - VMM
+      - HVC
+      - VHE
+  VMSA:
+  - title: Virtual Memory System Architecture
   wlan:
   x86:
   x86_64:
   x86_64h:
-  xnu:
+  XN:
+  - title: Execute Never (DEP)
+  XNU:
+  - title: XNUs not Unix (Darwin)
   XPC:
-metadata:
-  description:
-  credits: []
+  - title: Cross Process Connection

@@ -14,6 +14,18 @@ module AppleData
       ensure_metadata
     end
 
+    sig { params(path: String).returns(DataFile) }
+    def self.from_file(path)
+      instance = DataFile.allocate
+      instance.instance_eval do
+        @filename = path
+        @collections = {}
+        @data = YAML.load_file @filename if File.exist? @filename
+        ensure_metadata
+      end
+      instance
+    end
+
     sig { params(parts: String).returns(T::Hash[T.untyped, T.untyped]) }
     def load_file(*parts)
       parts[-1] = "#{parts[-1]}.yaml" unless T.must(parts[-1]).end_with? '.yaml'
@@ -41,9 +53,18 @@ module AppleData
       File.write(@filename, data.to_yaml)
     end
 
+    def sort!
+      @collections.each do |c|
+        c.sort!
+      end
+    end
+
     def ensure_metadata
       @data['metadata'] ||= {}
       @data['metadata'].reverse_merge!({ 'description' => nil, 'credits' => [] })
+      (@data['metadata']['collections'] || []).each do |name|
+        self.collection(name)
+      end
     end
   end
 end

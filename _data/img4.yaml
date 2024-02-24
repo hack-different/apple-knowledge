@@ -2,18 +2,20 @@
 metadata:
   description:
   credits:
+  collections:
+    - img4_tags
 types:
   digest-object:
-    description: Digest Objects are Firmare or Other Hashable Datastreams. They will
-      exist in NOR, Disk, or be received over USB.  These objects will contain a `DGST`
-      value that is the cryptographic hash of the contents. They can contain additional
-      properties per object, some of which are standard and others that are object
-      specific.
+    description: Digest Objects are Firmware or Other Hash-able binary streams. They
+      will exist in NOR, Disk, or be received over USB.  These objects will contain
+      a `DGST` value that is the cryptographic hash of the contents. They can contain
+      additional properties per object, some of which are standard and others that
+      are object specific.
     common_properties:
       ESEC: Effective Security Mode - The security mode after evaluating the chip
         and any demotion request
-      EPRO: Effective Production Mode - The peoduction mode after evaluating the chip
-        production and demotation request
+      EPRO: Effective Production Mode - The production mode after evaluating the chip
+        production and demotion request
       EKEY: Effective Key Access - The effective access to teh SEP, used to protect
         data during demotion
     subtypes:
@@ -24,9 +26,9 @@ types:
           taken. To date the trust measurement is commonly found on SEP firmware images.
       ssv-root-hash:
         description: Root Hash values are used to validate the Signature of an APFS
-          Signed volume or snapshot.  They will be paired to a coresponding disk image.  Some
-          also are paired with `ssv-merkle-tree` which includes the metadata for the
-          volume.
+          Signed volume or snapshot.  They will be paired to a corresponding disk
+          image. Some also are paired with `ssv-merkle-tree` which includes the metadata
+          for the volume.
       trust-cache:
       img4-disk-image:
         description: Disk images are often signed IMG4 payloads used for USB boot
@@ -42,10 +44,9 @@ img4_tags:
     description:
   acib:
     description:
-  AcID:
-    description: Apple Account DSID
-    type: integer
   acid:
+    description: Apple Account Directory Services ID (DSID)
+    type: integer
   aciw:
     description:
   ADCL:
@@ -58,7 +59,7 @@ img4_tags:
   AMNM:
     description: allow mix-n-match When set to true, img4s can be any valid signed
       version, allowing for unusual AP tickets where some components may be from a
-      prior verson
+      prior version
     type: boolean
   anef:
     description: Apple Neural Engine Firmware
@@ -88,8 +89,8 @@ img4_tags:
   augs:
     description: Auxiliary System Image Included in APTicket CA extensions, as well
       as factory manifests.  All cryptex manifests, and APTickets other then the root
-      APTicket (the one that is used directly from NOR) have this set to 1, indidcating
-      that it is an an addition or replacement to APTicket, but only if authroized.  It
+      APTicket (the one that is used directly from NOR) have this set to 1, indicating
+      that it is an an addition or replacement to APTicket, but only if authorized.  It
       also seems to travel with `aubt` and `aupr`
     roots:
     - ExtraContent
@@ -101,7 +102,7 @@ img4_tags:
     context:
   auxi:
     title: Auxiliary Image4 Manifest Hash (`auxi`)
-    description: 'After the system verifies that the UAKL hash matches what’s found
+    description: After the system verifies that the UAKL hash matches what’s found
       in the `auxp` field of the LocalPolicy, it requests that the AuxKC be signed
       by the Secure Enclave processor application that’s responsible for LocalPolicy
       signing. Next, an SHA384 hash of the AuxKC Image4 manifest signature is placed
@@ -115,8 +116,6 @@ img4_tags:
       for setting the auxi field in the LocalPolicy. Users change the auxi value implicitly
       when they change the UAKL by approving a kext from the Security & Privacy pane
       in System Preferences.
-
-      '
     type: digest-object
     subtype: manifest
     access:
@@ -126,13 +125,11 @@ img4_tags:
     description: Auxiliary Kernel Cache
   auxp:
     title: Auxiliary Policy Hash (auxp)
-    description: 'The `auxp` is an SHA384 hash of the user-authorized kext list (UAKL)
+    description: The `auxp` is an SHA384 hash of the user-authorized kext list (UAKL)
       policy. This is used at AuxKC generation time to help ensure that only user-authorized
       kexts are included in the AuxKC. `smb2` is a prerequisite for setting this field.
       Users change the `auxp` value implicitly when they change the UAKL by approving
       a kext from the Security & Privacy pane in System Preferences.
-
-      '
     type: binary
     subtype: sha2-384
     access:
@@ -140,7 +137,7 @@ img4_tags:
       - macOS
   auxr:
     title: Auxiliary Kernel Collection (AuxKC) Receipt Hash (auxr)
-    description: 'The `auxr` is an SHA384 hash of the AuxKC receipt, which indicates
+    description: The `auxr` is an SHA384 hash of the AuxKC receipt, which indicates
       the exact set of kexts that were included into the AuxKC. The AuxKC receipt
       can be a subset of the UAKL, because kexts can be excluded from the AuxKC even
       if they’re user authorized if they’re known to be used for attacks. In addition,
@@ -150,8 +147,6 @@ img4_tags:
       The auxp field is a prerequisite for setting the auxr field in the LocalPolicy.
       Users change the auxr value implicitly when they build a new AuxKC from the
       Security & Privacy pane in System Preferences.
-
-      '
     type: digest-object
     subtype: sha2-384
     access:
@@ -177,27 +172,26 @@ img4_tags:
     description: Bluetooth MAC Address
     manifest: true
   BNCH:
-    title: Boot Nonce Hash
+    title: Boot Nonce Cryptographic Hash
     description: Based on the values of com.apple.System.boot-nonces
     type: nonce
     subtype:
   BORD:
     description: |-
-      The board the chip is attached to.  With iPhones/iPads this is the variation between device sizes (occasionally
-      also used for low cost devices like the SE/XR).  This is usually expressed as a hex encoded uint8_t.  Some
-      types of board seem to encode a bitfield for non MP (mainline production) boards such as EVT/DVT
+      The board the chip is attached to.  With iPhones/iPads this is the variation between
+      device sizes (occasionally also used for low cost devices like the SE/XR).  This is
+      usually expressed as a hex encoded uint8_t.  Some types of board seem to encode a
+      bitfield for non MP (mainline production) boards such as EVT/DVT
 
       With the T2 this value is unique to all MacBooks with the T2.
     type: integer
     alias:
     - board-id
   bstc:
-    title: Base Sysetm Trust Cache
-    description: 'The Base System Trust Cache is the static trust cache (a file containing
+    title: Base System Trust Cache
+    description: The Base System Trust Cache is the static trust cache (a file containing
       a list of CDHashes that is to be trusted and executed at platform trust.) that
-      coresponds to the Base System (typically arm64BaseSystem.dmg).
-
-      '
+      corresponds to the Base System (typically arm64BaseSystem.dmg).
     type: digest-object
     subtype: trust-cache
   bsys:
@@ -217,8 +211,8 @@ img4_tags:
     - ExtraContent
   CEPO:
     description: |-
-      Certificate/Chip Epoch.  This is a unit of roll-forward time (monotonic) that allows for any security issues
-      in the prior epoch to be fixed by a anti-rollback scheme.
+      Certificate/Chip Epoch.  This is a unit of roll-forward time (monotonic) that
+      allows for any security issues in the prior epoch to be fixed by a anti-rollback scheme.
     nullable: true
     type: boolean
     alias:
@@ -240,7 +234,7 @@ img4_tags:
     width: 2
   CHMH:
     title: Chained Manifest Hash
-    description: Appears in manfiest / APTickets where the ticket is chained from
+    description: Appears in manifest / APTickets where the ticket is chained from
       another via `nish` or `nsph`.
   ciof:
   cker:
@@ -261,25 +255,23 @@ img4_tags:
     - ExtraContent
   coih:
     title: CustomOS Image4 Manifest Hash (coih)
-    description: 'The `coih` is an SHA384 hash of CustomOS Image4 manifest. The payload
+    description: The `coih` is an SHA384 hash of CustomOS Image4 manifest. The payload
       for that manifest is used by iBoot (instead of the XNU kernel) to transfer control.
       Users change the `coih` value implicitly when they use the `kmutil` configure-boot
       command-line tool in 1TR.
-
-      '
     type: digest-object
     subtype: IM4M
     access:
       write:
       - 1TR
   CPRO:
-    description: Chip promotion fuse value (what is burned in)
+    description: Certificate Promotion Mode
     alias:
     - certificate-production-status
     nullable: true
     type: boolean
   CSEC:
-    description: Burned-in chip security mode
+    description: Certificate Security Mode
     type: boolean
     nullable: true
     alias:
@@ -312,7 +304,7 @@ img4_tags:
     description:
   DPRO:
     description: Demote from Production Request Value is used by TSS sever to issue
-      EPRO values, or effective AP prodctuion state.
+      EPRO values, or effective AP production state.
   DSEC:
     description: Demote from Secure Request Value is used by TSS server to issue ESEC
       values, or effective AP Security Mode should the requester be authorized.  These
@@ -389,23 +381,19 @@ img4_tags:
     description:
   FSCl:
   ftab:
-    description: 'Factory Trust - Auto Boot FTAB images (used for devices such as
-      AirPods, etc) are "hacktivated" or pre-APTicket''ed devices as they lack either
-      a restore connection, or persistet memory.  Common early usage of this was the
-      Heywire dongles used for video conversion on the Mac.  It was simplest for the
-      device to lack NAND and simply receive the firmware from a host on powerup.  FTAB
+    description: Factory Trust - Auto Boot FTAB images (used for devices such as AirPods,
+      etc) are "hacktivated" or pre-APTicket'ed devices as they lack either a restore
+      connection, or persistent memory.  Common early usage of this was the Haywire
+      dongles used for video conversion on the Mac.  It was simplest for the device
+      to lack NAND and simply receive the firmware from a host on power-up.  FTAB
       files are fully ready to run blobs often including RTKit OS based memory images.
-
-      '
   ftap:
-    description: 'Factory Trust - Application Processor
-
-      '
+    description: Factory Trust/FIPS Test? - Application Processor
     type: hash
   ftot:
-    description: Factory Trust - Other
+    description: Factory Trust/FIPS Test? - Other
   ftsp:
-    description: Factory Trust - SEP
+    description: Factory Trust/FIPS Test? - SEP
     type: hash
   fuos:
     description: Fully Unsigned OS
@@ -432,12 +420,10 @@ img4_tags:
   hop0:
   hrlp:
     title: Has Secure Enclave Signed recoveryOS Local Policy (hrlp)
-    description: 'The `hrlp` indicates whether or not the `prot` value is the measurement
+    description: The `hrlp` indicates whether or not the `prot` value is the measurement
       of a Secure Enclave–signed recoveryOS LocalPolicy. If not, then the recoveryOS
       LocalPolicy is signed by the Apple online signing server, which signs things
       such as macOS Image4 files.
-
-      '
     type: boolean
     access:
       write:
@@ -468,7 +454,7 @@ img4_tags:
   IMG4:
     description:
   inst:
-    descryption: The key or file to install
+    description: The key or file to install
   ipdf:
     description:
   isor:
@@ -491,12 +477,10 @@ img4_tags:
     description: Kernel
   kuid:
     title: Key encryption key (KEK) Group UUID (kuid)
-    description: 'The kuid indicates the volume that was booted. The key encryption
+    description: The kuid indicates the volume that was booted. The key encryption
       key has typically been used for Data Protection. For each LocalPolicy, it’s
       used to protect the LocalPolicy signing key. The kuid is set by the user implicitly
       when creating a new operating system install.
-
-      '
     type: binary
     subtype: sha2-384
     access:
@@ -511,7 +495,7 @@ img4_tags:
   LLB:
     description: Low Level iBoot
   LNCH:
-    description:
+    description: Local Policy Nonce Cryptographic Hash
   lobo:
     description: Local Boot Object.  Indicates that the object is to be used as the
       target of a local boot only and not provided by the server for remote / DFU
@@ -520,11 +504,9 @@ img4_tags:
     description: Apple logo image
   love:
     title: Long Operating System Version (love)
-    description: 'The love indicates the OS version that the LocalPolicy is created
+    description: The love indicates the OS version that the LocalPolicy is created
       for. The version is obtained from the next state manifest during LocalPolicy
       creation and is used to enforce recoveryOS pairing restrictions.
-
-      '
     type: string
     example: 21.3.66.0.0,0
     access:
@@ -538,22 +520,20 @@ img4_tags:
     description:
   lpnh:
     title: LocalPolicy Nonce Hash (lpnh)
-    description: 'The lpnh is used for anti-replay of the LocalPolicy. This is an
-      SHA384 hash of the LocalPolicy Nonce (LPN), which is stored in the Secure Storage
-      Component and accessible using the Secure Enclave Boot ROM or Secure Enclave.
-      The raw nonce is never visible to the Application Processor, only to the sepOS.
-      An attacker wanting to convince LLB that a previous LocalPolicy they had captured
-      was valid would need to place a value into the Secure Storage Component, which
-      hashes to the same lpnh value found in the LocalPolicy they want to replay.
-      Normally there is a single LPN valid on the system—except during software updates,
-      when two are simultaneously valid—to allow for the possibility of falling back
-      to booting the old software in the event of an update error. When any LocalPolicy
+    description: The lpnh is used for anti-replay of the LocalPolicy. This is an SHA384
+      hash of the LocalPolicy Nonce (LPN), which is stored in the Secure Storage Component
+      and accessible using the Secure Enclave Boot ROM or Secure Enclave. The raw
+      nonce is never visible to the Application Processor, only to the sepOS. An attacker
+      wanting to convince LLB that a previous LocalPolicy they had captured was valid
+      would need to place a value into the Secure Storage Component, which hashes
+      to the same lpnh value found in the LocalPolicy they want to replay. Normally
+      there is a single LPN valid on the system—except during software updates, when
+      two are simultaneously valid—to allow for the possibility of falling back to
+      booting the old software in the event of an update error. When any LocalPolicy
       for any operating system is changed, all policies are re-signed with the new
       lpnh value corresponding to the new LPN found in the Secure Storage Component.
       This change happens when the user changes security settings or creates new operating
       systems with a new LocalPolicy for each.
-
-      '
     type: binary
     subtype: sha2-384
     access:
@@ -590,15 +570,13 @@ img4_tags:
     description:
   mspr:
   msys:
-    description: 'System Volume Cannonical Metadata Contains a Merkle Tree of the
-      System Volume.  The Merkle-Tree is used to verify Signed System Volume, in a
-      similar way to a Git repository, where every file is included in the tree of
-      the folder and so on up to the root node. The root node is validated against
-      the coresponding `root_hash`.  The inclusion of the merkle tree allows for discovery
-      of where the system volume''s data is broken, as the root_hash can only tell
-      you if it is broken.
-
-      '
+    description: System Volume Canonical Metadata Contains a Merkle Tree of the System
+      Volume.  The Merkle-Tree is used to verify Signed System Volume, in a similar
+      way to a Git repository, where every file is included in the tree of the folder
+      and so on up to the root node. The root node is validated against the corresponding
+      `root_hash`.  The inclusion of the merkle tree allows for discovery of where
+      the system volume's data is broken, as the root_hash can only tell you if it
+      is broken.
   mtfw:
     description:
   mtpf:
@@ -609,8 +587,8 @@ img4_tags:
     - ExtraContent
   nish:
     title: Next Stage Image4 Manifest Hash (nsih)
-    description: 'The nsih field represents an SHA384 hash of the Image4 manifest
-      data structure that describes the booted macOS. The macOS Image4 manifest contains
+    description: The nsih field represents an SHA384 hash of the Image4 manifest data
+      structure that describes the booted macOS. The macOS Image4 manifest contains
       measurements for all the boot objects—such as iBoot, the static trust cache,
       device tree, Boot Kernel Collection, and signed system volume (SSV) volume root
       hash. When LLB is directed to boot a given macOS, it’s designed to ensure that
@@ -618,8 +596,6 @@ img4_tags:
       in the nsih field of the LocalPolicy. In this way, the nsih captures the user
       intention of what operating system the user has created a LocalPolicy for. Users
       change the nsih value implicitly when they perform a software update.
-
-      '
     type: binary
     subtype: sha2-384
     context:
@@ -634,11 +610,11 @@ img4_tags:
   nsih:
     description: Next Stage Image Hash
   nsph:
-    description: Next Stage preboot splat manifest hash
+    description: Next Stage pre-boot splat manifest hash
   nsrv:
     description:
   OBJP:
-    description: Object Properties - Values that may be assigned per "object" (firmawres)
+    description: Object Properties - Values that may be assigned per "object" (firmwares)
       that contain a `DGST`
     type: sequence
   omer:
@@ -656,10 +632,7 @@ img4_tags:
   owns:
     description:
   pave:
-    description: 'Pre-authorization Version (XNU) The version of a pre-authorized
-      Cryptex.
-
-      '
+    description: Pre-authorization Version (XNU) The version of a pre-authorized Cryptex.
     type: string
     roots:
     - ExtraContent
@@ -687,14 +660,12 @@ img4_tags:
     description: Encrypted Private Key / Private Key Info
   prot:
     title: Paired recoveryOS Trusted Boot Policy Measurement (prot)
-    description: 'A paired recoveryOS Trusted Boot Policy Measurement (TBPM) is a
-      special iterative SHA384 hash calculation over the Image4 manifest of a LocalPolicy,
+    description: A paired recoveryOS Trusted Boot Policy Measurement (TBPM) is a special
+      iterative SHA384 hash calculation over the Image4 manifest of a LocalPolicy,
       excluding nonces, in order to give a consistent measurement over time (because
       nonces like lpnh are frequently updated). The prot field, which is found only
       in each macOS LocalPolicy, provides a pairing to indicate the recoveryOS LocalPolicy
       that corresponds to the macOS LocalPolicy.
-
-      '
     type: digest-object
     subtype: trust-measurement
     access:
@@ -717,10 +688,8 @@ img4_tags:
   rbmt:
     description:
   rcfg:
-    description: 'Appears in certificates issues by factory such as `T6031-SDOM1-TssLive-ManifestKey-RevA-Factory`.
-      Potentially indicates that the policy is for a recovery boot only.
-
-      '
+    description: Appears in certificates issues by factory such as `T6031-SDOM1-TssLive-ManifestKey-RevA-Factory`.  Potentially
+      indicates that the policy is for a recovery boot only.
     type: boolean
   rcio:
     description: Restore CIO
@@ -755,18 +724,16 @@ img4_tags:
     type: boolean
   ronh:
     title: recoveryOS Nonce Hash (ronh)
-    description: 'The ronh behaves the same way as the lpnh, but is found exclusively
+    description: The ronh behaves the same way as the lpnh, but is found exclusively
       in the LocalPolicy for system recoveryOS. It’s updated when the system recoveryOS
       is updated, such as on software updates. A separate nonce from the lpnh and
       rpnh is used so that when a device is put into a disabled state by Find My,
       existing operating systems can be disabled (by removing their LPN and RPN from
       the Secure Storage Component), while still leaving the system recoveryOS bootable.
-      In this way, the operating systems can be reenabled when the system owner proves
+      In this way, the operating systems can be re-enabled when the system owner proves
       their control over the system by putting in their iCloud password used for the
       Find My account. This change happens when a user updates the system recoveryOS
       or creates new operating systems.
-
-      '
     type: binary
     subtype: sha2-384
     access:
@@ -778,11 +745,9 @@ img4_tags:
     description:
   rpnh:
     title: Remote Policy Nonce Hash (rpnh)
-    description: 'The rpnh behaves the same way as the lpnh but is updated only when
+    description: The rpnh behaves the same way as the lpnh but is updated only when
       the remote policy is updated, such as when changing the state of Find My enrollment.
       This change happens when the user changes the state of Find My on their Mac.
-
-      '
     type: binary
     subtype: sha2-384
     access:
@@ -841,16 +806,17 @@ img4_tags:
     alias:
     - security-domain
   secb:
-    description: Sets a security value such as `trst` or the FDR signing trust object.  "security
-      blob?".  Known to include `trst` (yes a `trst` partition with a `secb` object with a `trst` object),
-      `rssl` (Factory SSL root CA), `rvok` (Revocation list) and `trpk` (trusted public keys?)
+    description: Sets a security value such as `trst` or the FDR signing trust object.
+      "security blob?".  Known to include `trst` (yes a `trst` partition with a `secb`
+      object with a `trst` object), `rssl` (Factory SSL root CA), `rvok` (Revocation
+      list) and `trpk` (trusted public keys?)
   SECM:
     description:
+  sei3:
+    description: Secure Enclave ID (alternate)? Appears to have a value identical
+      to `seid`.
   seid:
     description: Secure Enclave ID
-  sei3:
-    description: Secure Enclave ID (alternate)?
-      Appears to have a value identical to `seid`.
   sepi:
     description: SEP Image, contains oppd and tbms in seal
     type: string
@@ -910,7 +876,7 @@ img4_tags:
     type: string
     encoding: sha2-384
   stID:
-    description: Station IDentifier
+    description: Station Identifier
   stng:
     description: Cryptex1 Generation / Cryptex type?
   styp:
@@ -985,12 +951,10 @@ img4_tags:
     - ExtraContent
   vuid:
     title: APFS volume group UUID (vuid)
-    description: 'The vuid indicates the volume group the kernel should use as root.
+    description: The vuid indicates the volume group the kernel should use as root.
       This field is primarily informational and isn’t used for security constraints.
       This vuid is set by the user implicitly when creating a new operating system
       install.
-
-      '
     type: binary
     subtype: sha2-384
     access:
