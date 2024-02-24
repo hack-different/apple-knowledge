@@ -56,4 +56,3 @@ with open("sepos", "rb") as fd:
 
 Thanks to the wonderful `sepsplit-rs` [`usttryingthingsout/sepsplit-rs`](https://github.com/justtryingthingsout/sepsplit-rs)
 tool we can then split out the SEP image into its modules.
-

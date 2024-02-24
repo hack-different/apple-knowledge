@@ -48,9 +48,7 @@ module AppleData
     end
 
     def sort!
-      @collections.each do |_, c|
-        c.sort
-      end
+      @collections.each_value(&:sort)
     end
 
     def auto_sort?
@@ -71,7 +69,7 @@ module AppleData
       @data['metadata'] ||= {}
       @data['metadata'].reverse_merge!({ 'description' => nil, 'credits' => [] })
       (@data['metadata']['collections'] || []).each do |name|
-        self.collection(name)
+        collection(name)
       end
     end
   end

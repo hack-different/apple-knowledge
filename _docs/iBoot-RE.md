@@ -142,6 +142,3 @@ Notes:
   Some of the differences are:
   - Instead of vector of dwords it has 0x80 bytes of code for each exception
   - There are multiple entries for the same exception depending on the circumstances of where the exception is taken from
-
-
-
