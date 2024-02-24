@@ -3,54 +3,58 @@ metadata:
   description:
   credits:
 keys:
-  0x07D0: uid
-  0x03E8: gid
+  2000: uid
+  1000: gid
 derrived_keys:
-  0x835:
+  2101:
     type: uid
-    data: 0x01010101010101010101010101010101
-    description: |
-      Used for data protection.
-  0x836:
+    data: 1334440654591915542993625911497130241
+    description: 'Used for data protection.
+
+      '
+  2102:
     type: uid
-    data: 0x00E5A0E6526FAE66C5C1C6D4F16D6180
+    data: 1192299414131223233912285359034425728
     description: |
       This is computed by the kernel during a restore, but is zeroed out during a normal boot. It is also computed by
       the Secure Bootloader, and its only known use is to decrypt LLB in NOR. Like `0x835`, it is different
       for each device.
-  0x837:
+  2103:
     type: gid
     chip_id: 8900
-    data: 0x345A2D6C5050D058780DA431F0710E15
-    value: 0x188458A6D15034DFE386F23B61D43774
+    data: 69588083788013974478752691731509087765
+    value: 32588653152864007722841128035178264436
     description: |
       It is used as the encryption key for IMG2 files. With the introduction of IMG3 in iPhone OS 2.0, KBAGs are now
       used instead of the `0x837` key. Because iPhone OS versions 1.x were used only on the iPhone and iPod touch
       (both use the S5L8900) the encrypted values for other processors don't matter.
-  0x838:
+  2104:
     type: uid
-    data: 0x8C8318A27D7F030717D2B8FC5514F8E1
+    data: 186772609949988273681485834769094998241
     description: |
       Another UID-AES-key-based key, it is used to encrypt everything but LLB in the NOR (iBoot,
       DeviceTree, pictures).
-  0x899:
+  2201:
     type: uid
-    data: 0xD1E8FCB53937BF8DEFC74CD1D0F1D4B0
+    data: 279018389515453073819669168862421701808
     description: Usage unknown.
-  0x89A:
+  2202:
     type: uid
-    data: 0xDB1F5B33606C5F1C1934AA66589C0661
-    description: |
-      Used on A4 devices. A device-specific key. It is used to encrypt the SHSH blobs on the device.
-  0x89B:
+    data: 291263742049262950426416465193106933345
+    description: 'Used on A4 devices. A device-specific key. It is used to encrypt
+      the SHSH blobs on the device.
+
+      '
+  2203:
     type: uid
-    data: 0x183E99676BB03C546FA468F51C0CBD49
-    description: |
-      It is used to encrypt the data partition key.
-  0x8A3:
+    data: 32226505706565189832158137978565999945
+    description: 'It is used to encrypt the data partition key.
+
+      '
+  2211:
     type: uid
     mode: AES-256-CBC
-    data: 0x568241656551e0cdf56ff84cc11a79ef
+    data: 114989932619137914553416987311769025007
     description: |
       It is used during software upgrades on A12 and later to encrypt the "generator" value (using AES-128-CBC)
       before hashing it to become the nonce.

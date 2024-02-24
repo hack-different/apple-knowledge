@@ -2,28 +2,30 @@
 metadata:
   description:
   credits:
+  collections:
+  - environment_variables
 environment_variables:
+  __CF_USER_TEXT_ENCODING:
+    examples:
+    - 0x0:0:0
+    - 0x1F5:0x0:0x0
   __CFBundleIdentifier:
     type: string
   __CFPREFERENCES_AVOID_DAEMON:
     type: boolean
     values:
-    - "0"
-    - "1"
-  __CF_USER_TEXT_ENCODING:
-    examples:
-    - "0x0:0:0"
-    - "0x1F5:0x0:0x0"
+    - '0'
+    - '1'
   ASL_DISABLE:
     type: boolean
     values:
-    - "0"
-    - "1"
+    - '0'
+    - '1'
   CA_ASSERT_MAIN_THREAD_TRANSACTIONS:
     type: boolean
     values:
-    - "0"
-    - "1"
+    - '0'
+    - '1'
   CA_DEBUG_TRANSACTIONS:
     description: debug core animation transactions
     type: boolean
@@ -35,25 +37,25 @@ environment_variables:
   CFNETWORK_STORAGED_TIMERELOFF:
     type: boolean
     values:
-    - "false"
-    - "true"
+    - 'false'
+    - 'true'
   CHECK_IN:
     type: boolean
     values:
-    - "0"
-    - "1"
+    - '0'
+    - '1'
   CLEAN_FILES_OLDER_THAN_DAYS:
     type: integer
   com.apple.CoreData.CloudKitDebug:
     type: boolean
     values:
-    - "0"
-    - "1"
+    - '0'
+    - '1'
   com.apple.CoreData.XPCDebug:
     type: boolean
     values:
-    - "0"
-    - "1"
+    - '0'
+    - '1'
   COMMAND_MODE:
     type: string
     examples:
@@ -109,7 +111,7 @@ environment_variables:
     separator: ":"
     default: "/usr/local/lib:/usr/lib"
   DYLD_FORCE_FLAT_NAMESPACE:
-    description: 'Disable two level namespaces'
+    description: Disable two level namespaces
   DYLD_FRAMEWORK_PATH:
     description: |
       This is a colon separated list of directories that contain frameworks.  The dynamic linker searches these
@@ -166,8 +168,8 @@ environment_variables:
       '
   DYLD_PRINT_DOFS:
   DYLD_PRINT_ENV:
-    description: 'If set, causes dyld to print a line of key=value for each environment
-      variable in the process.'
+    description: If set, causes dyld to print a line of key=value for each environment
+      variable in the process.
     type: presence
   DYLD_PRINT_INITIALIZERS:
     description: |
@@ -245,47 +247,52 @@ environment_variables:
     type: string
     format: path
   LAUNCHD_SOCKET:
-  LIBDISPATCH_STRICT:
-    type: boolean
-    values:
-    - "false"
-    - "true"
-  LOGNAME:
-    type: string
-    format: username
   LaunchInstanceID:
     type: string
     format: UUID
+  LIBDISPATCH_STRICT:
+    type: boolean
+    values:
+    - 'false'
+    - 'true'
+  LOGNAME:
+    type: string
+    format: username
   MallocCorruptionAbort:
     type: boolean
     values:
-    - "0"
-    - "1"
+    - '0'
+    - '1'
   MallocMaxMagazines:
     type: integer
   MallocNanoZone:
     type: boolean
     values:
-    - "0"
-    - "1"
+    - '0'
+    - '1'
   MallocSpaceEfficient:
     type: boolean
     values:
-    - "0"
-    - "1"
+    - '0'
+    - '1'
   MallocStackLoggingDirectory:
     type: string
     format: path
   NSRunningFromLaunchd:
     type: boolean
     values:
-    - "0"
-    - "1"
+    - '0'
+    - '1'
   NSZombieEnabled:
     type: boolean
     values:
-    - "false"
-    - "true"
+    - 'false'
+    - 'true'
+  OS_ACTIVITY_MODE:
+    type: boolean
+    values:
+    - disable
+    - enable
   PATH:
     type: array
     separator: ":"
@@ -300,34 +307,29 @@ environment_variables:
     - agent
     - daemon
   PRODUCT_INFO_FILTER_DISABLE:
-  OS_ACTIVITY_MODE:
-    type: boolean
-    values:
-    - "disable"
-    - "enable"
   PWD:
     type: string
     format: path
   REACH_DARK_WAKE_CONTROL:
     type: boolean
     values:
-    - "true"
-    - "false"
+    - 'true'
+    - 'false'
   REACH_DARK_WAKE_NOTIFY:
     type: boolean
     values:
-    - "true"
-    - "false"
+    - 'true'
+    - 'false'
   RPC_DEBUG:
     type: boolean
     values:
-    - "0"
-    - "1"
+    - '0'
+    - '1'
   RUN_WITH_LAUNCHD:
     type: boolean
     values:
-    - "0"
-    - "1"
+    - '0'
+    - '1'
   SSH_AUTH_SOCK:
     type: string
     format: path
@@ -337,14 +339,13 @@ environment_variables:
   WAIT4DEBUGGER:
     type: boolean
     values:
-    - "false"
-    - "true"
+    - 'false'
+    - 'true'
   XPC_FLAGS:
   XPC_NULL_BOOTSTRAP:
     type: boolean
     values:
-    - "0"
-    - "1"
+    - '0'
+    - '1'
   XPC_SERVICE_NAME:
     type: string
-

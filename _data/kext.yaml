@@ -81,17 +81,19 @@ kexts:
       com.apple.developer.driverkit.builtin: true
       com.apple.developer.driverkit.transport.hid: true
       com.apple.developer.driverkit.transport.usb:
-        - bInterfaceSubClass: false
-          bInterfaceClass: 3
-        - bInterfaceSubClass: true
-          bInterfaceClass: 3
-        - bInterfaceProtocol: true
-          bInterfaceSubClass: true
-          bInterfaceClass: 3
-        - idVendor: 1452
-          bInterfaceNumber: false
-          idProductArray: [635, 636]
-          bConfigurationValue: true
+      - bInterfaceSubClass: false
+        bInterfaceClass: 3
+      - bInterfaceSubClass: true
+        bInterfaceClass: 3
+      - bInterfaceProtocol: true
+        bInterfaceSubClass: true
+        bInterfaceClass: 3
+      - idVendor: 1452
+        bInterfaceNumber: false
+        idProductArray:
+        - 635
+        - 636
+        bConfigurationValue: true
       com.apple.developer.driverkit.family.hid.eventservice: true
     uuids:
     - 61C57C9C-7609-3B7C-BB74-EF61A455462E
@@ -1873,386 +1875,386 @@ kexts:
     entitlements:
       com.apple.developer.driverkit.family.serial: true
       com.apple.developer.driverkit.transport.usb:
-        - idVendor: 1027
-          idProduct: 24577
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 24592
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 24592
-          bInterfaceNumber: true
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 24593
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 24593
-          bInterfaceNumber: true
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 24593
-          bInterfaceNumber: 2
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 24593
-          bInterfaceNumber: 3
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 24596
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 24597
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 2652
-          idProduct: 17402
-          bInterfaceNumber: true
-          bConfigurationValue: true
-        - idVendor: 3154
-          idProduct: 8449
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 42704
-          bInterfaceNumber: true
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 42705
-          bInterfaceNumber: true
-          bConfigurationValue: true
-        - idVendor: 2652
-          idProduct: 25634
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 2652
-          idProduct: 25634
-          bInterfaceNumber: true
-          bConfigurationValue: true
-        - idVendor: 1204
-          idProduct: 155
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1204
-          idProduct: 155
-          bInterfaceNumber: true
-          bConfigurationValue: true
-        - idVendor: 1204
-          idProduct: 63749
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1204
-          idProduct: 63750
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1204
-          idProduct: 63744
-          bInterfaceNumber: true
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 4
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40528
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40529
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40530
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40531
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40532
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40533
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40534
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40535
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1412
-          idProduct: 45114
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36865
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36912
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36913
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36914
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36920
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36921
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36944
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36945
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36946
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36947
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36948
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36949
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36950
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36966
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36967
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36968
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36969
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36976
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36977
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36978
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36979
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36980
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36981
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36982
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36983
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36984
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 36985
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40536
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40537
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40538
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40539
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40540
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40541
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40542
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40543
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40544
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40545
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40546
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40547
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40548
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40549
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40550
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40551
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40552
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40553
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 40554
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 8448
-          idProduct: 3670
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 40584
-          idProduct: 40591
-          bInterfaceNumber: true
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 34768
-          bInterfaceNumber: true
-          bConfigurationValue: true
-        - idVendor: 1245
-          idProduct: 38823
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 55920
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 55921
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 55922
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 55923
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 55924
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 55925
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 55926
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 55927
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1105
-          idProduct: 64771
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1105
-          idProduct: 64771
-          bInterfaceNumber: true
-          bConfigurationValue: true
-        - idVendor: 1105
-          idProduct: 64771
-          bInterfaceNumber: 2
-          bConfigurationValue: true
-        - idVendor: 1105
-          idProduct: 64771
-          bInterfaceNumber: 3
-          bConfigurationValue: true
-        - idVendor: 10264
-          idProduct: 8
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 63104
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1027
-          idProduct: 29032
-          bInterfaceNumber: false
-          bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 24577
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 24592
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 24592
+        bInterfaceNumber: true
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 24593
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 24593
+        bInterfaceNumber: true
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 24593
+        bInterfaceNumber: 2
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 24593
+        bInterfaceNumber: 3
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 24596
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 24597
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 2652
+        idProduct: 17402
+        bInterfaceNumber: true
+        bConfigurationValue: true
+      - idVendor: 3154
+        idProduct: 8449
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 42704
+        bInterfaceNumber: true
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 42705
+        bInterfaceNumber: true
+        bConfigurationValue: true
+      - idVendor: 2652
+        idProduct: 25634
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 2652
+        idProduct: 25634
+        bInterfaceNumber: true
+        bConfigurationValue: true
+      - idVendor: 1204
+        idProduct: 155
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1204
+        idProduct: 155
+        bInterfaceNumber: true
+        bConfigurationValue: true
+      - idVendor: 1204
+        idProduct: 63749
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1204
+        idProduct: 63750
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1204
+        idProduct: 63744
+        bInterfaceNumber: true
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 4
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40528
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40529
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40530
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40531
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40532
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40533
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40534
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40535
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1412
+        idProduct: 45114
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36865
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36912
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36913
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36914
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36920
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36921
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36944
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36945
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36946
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36947
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36948
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36949
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36950
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36966
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36967
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36968
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36969
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36976
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36977
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36978
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36979
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36980
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36981
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36982
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36983
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36984
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 36985
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40536
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40537
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40538
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40539
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40540
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40541
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40542
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40543
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40544
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40545
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40546
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40547
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40548
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40549
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40550
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40551
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40552
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40553
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 40554
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 8448
+        idProduct: 3670
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 40584
+        idProduct: 40591
+        bInterfaceNumber: true
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 34768
+        bInterfaceNumber: true
+        bConfigurationValue: true
+      - idVendor: 1245
+        idProduct: 38823
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 55920
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 55921
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 55922
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 55923
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 55924
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 55925
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 55926
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 55927
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1105
+        idProduct: 64771
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1105
+        idProduct: 64771
+        bInterfaceNumber: true
+        bConfigurationValue: true
+      - idVendor: 1105
+        idProduct: 64771
+        bInterfaceNumber: 2
+        bConfigurationValue: true
+      - idVendor: 1105
+        idProduct: 64771
+        bInterfaceNumber: 3
+        bConfigurationValue: true
+      - idVendor: 10264
+        idProduct: 8
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 63104
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1027
+        idProduct: 29032
+        bInterfaceNumber: false
+        bConfigurationValue: true
       com.apple.developer.driverkit: true
     uuids:
     - 990AEDCE-2D9D-3E95-AA61-21477C4CD665
@@ -2264,26 +2266,26 @@ kexts:
     entitlements:
       com.apple.developer.driverkit.family.serial: true
       com.apple.developer.driverkit.transport.usb:
-        - idVendor: 1659
-          idProduct: 8963
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1659
-          idProduct: 8964
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1659
-          idProduct: 41216
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1659
-          idProduct: 57841
-          bInterfaceNumber: false
-          bConfigurationValue: true
-        - idVendor: 1367
-          idProduct: 8200
-          bInterfaceNumber: false
-          bConfigurationValue: true
+      - idVendor: 1659
+        idProduct: 8963
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1659
+        idProduct: 8964
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1659
+        idProduct: 41216
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1659
+        idProduct: 57841
+        bInterfaceNumber: false
+        bConfigurationValue: true
+      - idVendor: 1367
+        idProduct: 8200
+        bInterfaceNumber: false
+        bConfigurationValue: true
       com.apple.developer.driverkit: true
     uuids:
     - A32CC71A-3413-3E37-831B-3CB4EDD5E890
@@ -2296,10 +2298,10 @@ kexts:
       com.apple.developer.driverkit.family.serial: true
       com.apple.developer.driverkit: true
       com.apple.developer.driverkit.transport.usb:
-        - idVendor: 6353
-          idProduct: 20539
-          bInterfaceNumber: false
-          bConfigurationValue: true
+      - idVendor: 6353
+        idProduct: 20539
+        bInterfaceNumber: false
+        bConfigurationValue: true
     uuids:
     - C1AEEB25-30CB-3ED2-93B6-D76EE0FCDA57
   com.apple.DriverKit-AppleUSBSLCOM:
@@ -2309,10 +2311,10 @@ kexts:
     type: dext
     entitlements:
       com.apple.developer.driverkit.transport.usb:
-        - idVendor: 4292
-          idProduct: 60000
-          bInterfaceNumber: false
-          bConfigurationValue: true
+      - idVendor: 4292
+        idProduct: 60000
+        bInterfaceNumber: false
+        bConfigurationValue: true
       com.apple.developer.driverkit.family.serial: true
       com.apple.developer.driverkit: true
     uuids:
@@ -2336,12 +2338,12 @@ kexts:
     type: dext
     entitlements:
       com.apple.developer.driverkit.transport.usb:
-        - bInterfaceProtocol: "*"
-          bInterfaceSubClass: 6
-          bInterfaceClass: 2
-        - bInterfaceProtocol: false
-          bInterfaceSubClass: false
-          bInterfaceClass: 10
+      - bInterfaceProtocol: "*"
+        bInterfaceSubClass: 6
+        bInterfaceClass: 2
+      - bInterfaceProtocol: false
+        bInterfaceSubClass: false
+        bInterfaceClass: 10
       com.apple.developer.driverkit.family.networking: true
       com.apple.developer.driverkit: true
     uuids:

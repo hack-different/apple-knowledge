@@ -50,7 +50,8 @@ services:
     allow_unactivated: true
     xpc_service: com.apple.crash_mover
   com.apple.debugserver:
-    description: Communicate with debugserver on the device. (to launch an app under debug)
+    description: Communicate with debugserver on the device. (to launch an app under
+      debug)
     developer_disk_image: true
   com.apple.debugserver.DVTSecureSocketProxy:
     description:

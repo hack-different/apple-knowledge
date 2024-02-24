@@ -5,12 +5,11 @@ metadata:
 ota_nvram:
   boot-breadcrumbs:
   OTA-pre-conversion:
-
 ota_stages:
-  - fdr_verify_sealed_manifest
-  - update_appletcon
-  - update_veridian
-  - update_rose
-  - update_se
-  - update_stockholm
-  - update_baseband
+- fdr_verify_sealed_manifest
+- update_appletcon
+- update_veridian
+- update_rose
+- update_se
+- update_stockholm
+- update_baseband

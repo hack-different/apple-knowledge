@@ -3,7 +3,7 @@ metadata:
   description:
   credits:
   collections:
-    - term_list
+  - term_list
 term_list:
   1TR:
   - title: 1 True Recovery / 1 Touch Recovery
@@ -14,9 +14,9 @@ term_list:
   4CC:
   - title: 4 Character Code
   aarch64:
-    - title: 64bit ARM v8+ Architecture
+  - title: 64bit ARM v8+ Architecture
   aarch64e:
-    - title: 64bit ARM v8.3+ Architecture with Pointer Authentication
+  - title: 64bit ARM v8.3+ Architecture with Pointer Authentication
   ACC:
   - title: Apple Core Cluster
   ACE:
@@ -49,6 +49,8 @@ term_list:
   AP:
   - title: Application Processor
   - title: Access Point (WiFi)
+  APFS:
+  - title: Apple File System
   APNonce:
   - title: Application Processor Boot Nonce
   APNS:
@@ -115,18 +117,21 @@ term_list:
   - title:
     see:
     - L4
+  Container:
+  - see: VolumeContainer
+  - see: SandboxContainer
   core:
   - title: Processor Core
-    description: 'A distinct processing element (has own state) in a multi-core system.'
+    description: A distinct processing element (has own state) in a multi-core system.
   - title: Core Memory Dump
   CPSR:
   CRAM:
   - title: Cache-as-RAM
   CRNG:
   - title: Cryptographic Random Number Generator
-  CS:
-  - title: Code Signing
   cs:
+  - title: Code Signing
+  CS:
   - title: Code Signing
   CSPRNG:
   - title: Cryptographically Secure Pseudorandom Number Generator
@@ -252,6 +257,9 @@ term_list:
     - GXF
   GXF:
   - title: Guarded Execution Feature
+  HFS:
+  - title: Hierarchical File System (HFS/HFS+)
+    description:
   HID:
   - title: Human Interface Device
   HV:
@@ -262,23 +270,28 @@ term_list:
   HVC:
   - title: Hypervisor Call (el2)
   I2C:
-    - title: Inter-Integrated Circuit
-      url: https://web.archive.org/web/20221006073143/http://www.nxp.com/docs/en/user-guide/UM10204.pdf
+  - title: Inter-Integrated Circuit
+    url: https://web.archive.org/web/20221006073143/http://www.nxp.com/docs/en/user-guide/UM10204.pdf
+  I3C:
+  - title: Improved Inter-Integrated Circuit
+    url: https://www.mipi.org/specifications/i3c-sensor-specification
+    see:
+    - I2C
   iBoot:
   IDS:
   - title: Identity Services
   IOP:
   - title: Instant-On Processor
   ioreg:
-    - title: IOKit registry
-      see:
-        - IOKIt
+  - title: IOKit registry
+    see:
+    - IOKIt
   IORVBAR:
   - title: Reset Vector Base Address Register accessible via MMIO
   IPI:
   - title: Inter-processor Interrupt
   IRQ:
-    - title: Interrupt Request
+  - title: Interrupt Request
   isp:
   - title: Image Signal Processor
   ITR:
@@ -305,47 +318,11 @@ term_list:
       through Kernel Debug Kits.  These are components that help with two machine
       debugging, but nearly all kernels shipped by Apple can be debugged if the proper
       `boot-args` are passed on startup.
-  VG:
-    - see: VolumeGroup
-  VolumeGroup:
-    - title: APFS Volume Group
-      description: A volume group collects volumes of roles into a composite system.  Typically
-        used to connect a System volume to a Data volume.
-  Container:
-    - see: VolumeContainer
-    - see: SandboxContainer
-  VolumeContainer:
-    - title: APFS Volume Container
-      description: A logical collection of physical stores that are aggregated to create a logical
-        pool of storage to be used for volume groups and loose volumes.
-  PhysicalStore:
-    - title: APFS Physical Store
-      description: A partition in a GPT partition table that provides storage to the APFS Container.  Almost
-        always synonymous with a container now, but in the past was used when a container had storage both
-        on SSD and HDD disks (see CoreStorage)
-      see:
-        - APFS
-        - CoreStorage
-        - VolumeContainer
-        - VolumeGroup
-  Volume:
-    - title: APFS Disk Volume
-      description:
   KEC:
   - title: Kernel External Component
   KEK:
   - title: Key Exchange Key
-  APFS:
-    - title: Apple File System
-  HFS:
-    - title: Hierarchical File System (HFS/HFS+)
-      description:
   kernel:
-  KernelCollection:
-    - title: Kernel Collection
-      description: A Mach-O Object containing a series of KEXTs (Kernel Extensions) to be loaded
-        alongside the kernel itself.  Usually one of three types, the Boot, the System and the
-        Auxiliary.
   kernelcache:
   - title: Kernel Cache
     description: A kernel cache is a combined object that contains the kernel itself
@@ -354,15 +331,20 @@ term_list:
       and then binding the symbols was a process that slowed the startup of a mac.  Apple
       then started doing the combine of the kernel and the extensions into a BootCache
       that allowed the system to load one large monolithic binary.
+  KernelCollection:
+  - title: Kernel Collection
+    description: A Mach-O Object containing a series of KEXTs (Kernel Extensions)
+      to be loaded alongside the kernel itself.  Usually one of three types, the Boot,
+      the System and the Auxiliary.
   kext:
-    - title: Kernel Extension
+  - title: Kernel Extension
   key:
   - title: Encryption Key
   keybag:
-    - title: Wrapped Encryption Key Bag
-      description: An encryption key that is wrapped by the GID used in IMG4
-      see:
-        - key
+  - title: Wrapped Encryption Key Bag
+    description: An encryption key that is wrapped by the GID used in IMG4
+    see:
+    - key
   KLD:
   - title: Kernel Linker
   KTRR:
@@ -371,10 +353,10 @@ term_list:
   - title: Kernel Text Read/Write
   L4:
   - title: L4 Microkernel
-    description: 'L4 Microkernel (For Apple usually L4 Darbat) is a kernel designed
+    description: L4 Microkernel (For Apple usually L4 Darbat) is a kernel designed
       for high security or reliability workloads due to having been formally verified
       for correctness.  This ensures that the kernel guarantees are mathematically
-      verified against defects.'
+      verified against defects.
   launchd:
   LDM:
   - title: Lock Down Mode
@@ -387,13 +369,13 @@ term_list:
   - title: Low Latency WiFi
   lo:
   lo0:
-    - title: Loopback Interface
-      see: lo
+  - title: Loopback Interface
+    see: lo
   LocalPolicy:
-    - title: Local Policy
-      description: A method used in macOS (and recently A17 devices on iOS 17) to allow for the AP to have a
-        primary TSS signed APTicket, and the SEP to sign the local boot policy which modifies the boot flow
-        or security.
+  - title: Local Policy
+    description: A method used in macOS (and recently A17 devices on iOS 17) to allow
+      for the AP to have a primary TSS signed APTicket, and the SEP to sign the local
+      boot policy which modifies the boot flow or security.
   LP:
   - see: LocalPolicy
   LP-DDR:
@@ -476,15 +458,13 @@ term_list:
   - title: Owner Identity Certificate (OIC)
   oid:
   - title: Object ID (ASN1)
-    description: 'OIDs are namespaced, hierarchical identities'
+    description: OIDs are namespaced, hierarchical identities
   oik:
   - title: Owner Identity Key (OIK)
   OOB:
   - title: Out-of-Band
   OSLAR:
   - title:
-  OTA:
-  - title: Over-the-Air Update
   ota:
   - title: Over-the-Air Update - Incremental Update (Somewhat arcane)
     description: In the earliest days of the iPhone, users had to connect the device
@@ -498,6 +478,8 @@ term_list:
       of 'full OTAs' which are a delta update in OTA format, but includes the entire
       set of data to restore devices.  These are typically employed for devices that
       lack the port needed for DFU/iBoot/IPSW based recovery.
+  OTA:
+  - title: Over-the-Air Update
   OTG:
   - title: USB On-the-go
     description: USB-OTG is a way to describe a device that is typically a peripheral
@@ -507,15 +489,10 @@ term_list:
   PA:
   - title: Physical Address
     see:
-      - MMU
-      - DART
-  VA:
-  - title: Virtual Address
-    see:
-      - MMU
+    - MMU
+    - DART
   PAC:
   - title: Pointer Authentication Code
-  TaggedPointer:
   panic:
   - title: Kernel / Device Panic
     description:
@@ -534,14 +511,24 @@ term_list:
   - title: Protocol Data Unit
   PEM:
   - title: Privacy Enhanced Mail (Method for encoding ASN1)
+  PhysicalStore:
+  - title: APFS Physical Store
+    description: A partition in a GPT partition table that provides storage to the
+      APFS Container.  Almost always synonymous with a container now, but in the past
+      was used when a container had storage both on SSD and HDD disks (see CoreStorage)
+    see:
+    - APFS
+    - CoreStorage
+    - VolumeContainer
+    - VolumeGroup
   PIO:
   - title: Programmed IO
   PKA:
-    - title: Public Key Accelerator
+  - title: Public Key Accelerator
   PKI:
   - title: Public Key Infrastructure
   plist:
-    - title: Property List
+  - title: Property List
   PMAP:
   - title: Page Map
   PMGR:
@@ -567,6 +554,12 @@ term_list:
     see:
     - XN
   quarantine:
+  RAM:
+  - title: Random Access Memory
+    see:
+    - DRAM
+    - CRAM
+    - SRAM
   recovery:
   reg:
   - see: register
@@ -601,11 +594,11 @@ term_list:
   SEPNonce:
   - title: Secure Enclave Processor Boot Nonce
   sepOS:
-    - title: Secure Enclave Processor Operating System
-      see:
-        - SEPROM
-        - SEP
-        - L4
+  - title: Secure Enclave Processor Operating System
+    see:
+    - SEPROM
+    - SEP
+    - L4
   SEPROM:
   service:
   SID:
@@ -648,30 +641,19 @@ term_list:
       and stored the user's data on a larger NAND flash chip. In newer devices the
       NOR/SPI flash is synthetic and provided by ANS2/3.
   SPMI:
-    - title: System Power Management Interface
-      url: https://www.mipi.org/specifications/system-power-management-interface
-  I3C:
-    - title: Improved Inter-Integrated Circuit
-      url: https://www.mipi.org/specifications/i3c-sensor-specification
-      see:
-        - I2C
+  - title: System Power Management Interface
+    url: https://www.mipi.org/specifications/system-power-management-interface
   SPRR:
   - title: Secure Permission Remapping Registers
   SPTM:
   - title: Secure Page Table Monitor
     see:
     - TXM
-  RAM:
-    - title: Random Access Memory
-      see:
-        - DRAM
-        - CRAM
-        - SRAM
   SRAM:
-    - title: Static RAM
-      see:
-        - DRAM
-        - CRAM
+  - title: Static RAM
+    see:
+    - DRAM
+    - CRAM
   SRD:
   - title: Security Research Device
   SRDP:
@@ -687,9 +669,9 @@ term_list:
     see:
     - kernel
   syscall:
-    - title: User Mode to Kernel Mode Request
-      see:
-        - SVC
+  - title: User Mode to Kernel Mode Request
+    see:
+    - SVC
   SysCfg:
   - title: System Config
     see:
@@ -702,6 +684,7 @@ term_list:
       serial number cannot be burned in as it is the whole device, not any one component.  SysCfg
       is a series of key/value pairs and is documented in `syscfg.yaml`.
   SystemPolicy:
+  TaggedPointer:
   TBM:
   - title: Trusted Boot Monitor
   tc:
@@ -758,12 +741,16 @@ term_list:
   - title: Unprivileged Execute Never
     see:
     - XN
-  xHCI:
-    - title: Extensible Host Controller Interface (USB 3.0)
+  VA:
+  - title: Virtual Address
+    see:
+    - MMU
+  VG:
+  - see: VolumeGroup
   VHCI:
   - title: Virtual Host Controller Interface (USB)
-    description: The virtualized (as in no actual USB wires, but same protocol and PDUs) used as an interconnect
-      between the t8012 (T2) and the Intel processor.
+    description: The virtualized (as in no actual USB wires, but same protocol and
+      PDUs) used as an interconnect between the t8012 (T2) and the Intel processor.
   VHE:
   - title: Virtualization Host Extensions
     see:
@@ -772,15 +759,28 @@ term_list:
   - title: Virtual Memory
   - title: Virtual Machine
     see:
-      - VMM
-      - HVC
-      - VHE
+    - VMM
+    - HVC
+    - VHE
   VMSA:
   - title: Virtual Memory System Architecture
+  Volume:
+  - title: APFS Disk Volume
+    description:
+  VolumeContainer:
+  - title: APFS Volume Container
+    description: A logical collection of physical stores that are aggregated to create
+      a logical pool of storage to be used for volume groups and loose volumes.
+  VolumeGroup:
+  - title: APFS Volume Group
+    description: A volume group collects volumes of roles into a composite system.  Typically
+      used to connect a System volume to a Data volume.
   wlan:
   x86:
   x86_64:
   x86_64h:
+  xHCI:
+  - title: Extensible Host Controller Interface (USB 3.0)
   XN:
   - title: Execute Never (DEP)
   XNU:

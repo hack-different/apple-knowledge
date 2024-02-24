@@ -2,6 +2,8 @@
 metadata:
   description:
   credits:
+  collections:
+  - boot_args
 boot_args:
   "-arm64e_preview_abi":
     description:
@@ -10,9 +12,6 @@ boot_args:
   "-corpse_threshold_system_limit":
     description:
   "-cpuid":
-  "medetect_panic":
-  "no_medetect":
-    description:
   "-disable_aslr":
     description:
   "-disable_atm":
@@ -145,12 +144,6 @@ boot_args:
     description:
   "-zt":
     description:
-  IgnoreFBTBlacklist:
-    description:
-  TSC_deadline_timer:
-    description:
-  TSC_sync_margin:
-    description:
   _fpu:
     description:
   _panicd_corename:
@@ -255,9 +248,9 @@ boot_args:
     description:
   direct_handoff:
     description:
-  disable_NO_SMT_threads:
-    description:
   disable_exc_resource:
+    description:
+  disable_NO_SMT_threads:
     description:
   disable_persona_propagate_check:
     description:
@@ -338,6 +331,8 @@ boot_args:
   ifclassq_update_interval:
     description:
   ifnet_debug:
+    description:
+  IgnoreFBTBlacklist:
     description:
   immediate_NMI:
     description:
@@ -431,13 +426,13 @@ boot_args:
     description:
   kern.thread_group_set_by_bankvoucher:
     description:
-  kernPOST:
-    description:
-  kernPOST_config:
-    description:
   kernel_stack_pages:
     description:
   kernelmanagerd:
+    description:
+  kernPOST:
+    description:
+  kernPOST_config:
     description:
   kevent_debug:
     description:
@@ -487,6 +482,7 @@ boot_args:
     description:
   md:
     description: The "memory device"
+  medetect_panic:
   memmap:
     description:
   meter:
@@ -528,6 +524,8 @@ boot_args:
   no32exec:
     description:
   no_interrupt_masked_debug:
+    description:
+  no_medetect:
     description:
   noidle:
     description:
@@ -717,6 +715,10 @@ boot_args:
     description:
   ts_htable_buckets:
     description:
+  TSC_deadline_timer:
+    description:
+  TSC_sync_margin:
+    description:
   turnstile_max_hop:
     description:
   uncore_pmi_mask:
@@ -833,6 +835,8 @@ boot_args:
     description:
   zc_mag_size:
     description:
+  zc_mag_size():
+    description:
   zc_recirc_denom:
     description:
   zclear_size:
@@ -859,6 +863,3 @@ boot_args:
     description:
   zsize:
     description:
-  zc_mag_size():
-    description:
-

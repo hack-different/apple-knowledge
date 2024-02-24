@@ -2,7 +2,11 @@
 metadata:
   description:
   credits:
+  collections:
+  - fdr_properties
 fdr_properties:
+  ADCL:
+    description: Raw Panel / Coverglass
   AlsH:
     description:
   appv:
@@ -24,6 +28,8 @@ fdr_properties:
     description: Board ID
   CmCl:
     description:
+  comb:
+    description: Combined FDR object
   dCfg:
     description: Display LCD
     contexts:
@@ -37,12 +43,17 @@ fdr_properties:
     description:
   eeid:
     description: eSIM Embedded ID (EID)
+  esdm:
+    description: Extended Security Domain Fuse
   fCfg:
     description:
     contexts:
     - base
     - mandev
     - mansta
+  fdr2:
+  fdrd:
+    description: FDR2 Data
   FSCl:
     description:
     contexts:
@@ -69,6 +80,8 @@ fdr_properties:
     - mansta
   IfCl:
     description:
+  IM4C:
+    description: Img4 Certificate
   ime2:
     description: International Mobile Equipment Identifier 2
   imei:
@@ -79,8 +92,6 @@ fdr_properties:
     description:
   jlnl:
     description:
-  esdm:
-    description: Extended Security Domain Fuse
   jlnm:
     description:
   jlnv:
@@ -91,29 +102,6 @@ fdr_properties:
     description:
   jlsk:
     description:
-  mmap:
-    description: The memory map passed from the iBoot loader to the Kernel
-  sePK:
-    description: Point Compressed Elliptic Curve point sering as the master Public Key for the SE
-  comb:
-    description: Combined FDR object
-  rssl:
-    description: Root SSL / TLS certificate
-  trst:
-    description: Trust Object
-  rvok:
-    description: Trust Object Revocation
-  fdrd:
-    description: FDR2 Data
-  secb:
-  sreq:
-    description: Sealing request
-  fdr2:
-  mft2:
-  trpk:
-    description: Trusted Public Key
-  IM4C:
-    description: Img4 Certificate
   lcrt:
     description:
     contexts:
@@ -121,8 +109,11 @@ fdr_properties:
     - mansta
   meid:
     description: Mobile Equipment Identifier (CMDA)
+  mft2:
   mlb#:
     description: Main Logic Board Serial Number
+  mmap:
+    description: The memory map passed from the iBoot loader to the Kernel
   nuid:
     description:
   NvMR:
@@ -170,6 +161,10 @@ fdr_properties:
     description:
   rSCl:
     description:
+  rssl:
+    description: Root SSL / TLS certificate
+  rvok:
+    description: Trust Object Revocation
   scrt:
     description: SEP Certificate
     contexts:
@@ -180,12 +175,18 @@ fdr_properties:
     description:
     contexts:
     - base
+  secb:
   seid:
     description: Secure Element ID (for NFC / Payments)
+  sePK:
+    description: Point Compressed Elliptic Curve point sering as the master Public
+      Key for the SE
   ShMC:
     description:
   ShSC:
     description:
+  sreq:
+    description: Sealing request
   SrNm:
     description: Serial Number
   tCfg:
@@ -194,12 +195,14 @@ fdr_properties:
     - mansta
   tcrt:
     description:
+  trpk:
+    description: Trusted Public Key
+  trst:
+    description: Trust Object
   tsid:
     description:
   vcrt:
     description:
-  ADCL:
-    description: Raw Panel / Coverglass
   WMac:
     description: Wireless MAC Address
 to_be_signed_keys:

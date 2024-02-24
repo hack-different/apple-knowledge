@@ -15,7 +15,7 @@ module AppleData
     end
 
     sig { params(path: String).returns(DataFile) }
-    def self.from_file(path)
+    def self.from_path(path)
       instance = DataFile.allocate
       instance.instance_eval do
         @filename = path
@@ -47,16 +47,24 @@ module AppleData
       @collections[name.to_s] ||= DataFileCollection.new(self, name)
     end
 
+    def sort!
+      @collections.each do |_, c|
+        c.sort
+      end
+    end
+
+    def auto_sort?
+      if @data['metadata']['auto_sort'].nil?
+        true
+      else
+        @data['metadata']['auto_sort']
+      end
+    end
+
     private
 
     def save_data(data)
       File.write(@filename, data.to_yaml)
-    end
-
-    def sort!
-      @collections.each do |c|
-        c.sort!
-      end
     end
 
     def ensure_metadata

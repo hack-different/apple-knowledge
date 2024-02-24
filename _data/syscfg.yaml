@@ -2,102 +2,128 @@
 metadata:
   description:
   credits:
-
+  collections:
+  - values
+  - stores
+  - entitlements
+stores:
+  0Cfg:
+  ADCL:
+    name: Apple Display Calibration Store
+  ADDA:
+  appv:
+  dCfg:
+    name: Display Config Store
+  eCfg:
+    name: NVMe Config Store
+  fCfg:
+    name: Firmware SysCfg Store
+  seal:
+    name: Seal of FDR Data
+  trst:
+    name: Trust Object
+entitlements:
+  esca:
+  faic:
+  faus:
+  fsca:
+  SrvP:
+  SrvT:
 values:
-  RMd#:
-    description: Regulatory Model Number
+  AICl:
+  ARNC:
+  AROC:
+  ARot:
+  ARSC:
+  ARXC:
+  ARXN:
+  ASCl:
+  BCAL:
+  BCAR:
+  BGMt:
+  BMac:
+    description: Bluetooth MAC Address
+  BTBF:
+  BTRx:
+  BTTx:
+  CDCC:
+  CFG#:
+    description: Configuration Number
+  CGMt:
+  CGSp:
+  CLBG:
+  CLCG:
+    description: Cover glass (gloss or opaque)
+  CLCL:
+  CLHS:
+  CMOC:
   Coor:
     description: Country of Origin
     values:
-      - C
-  CFG#:
-    description: Configuration Number
-  SrNm:
-    description: Serial Number
-  MLB#:
-    description: Main Logic Board Serial Number
-  Regn:
-    description: Region Info
-  Mod#:
-    description: Model Number
-  MdlC:
-    description: Model Configuration (key value seperated by ";" and "key=value")
-  CLCG:
-    description: Cover glass (gloss or opaque)
-  BMac:
-    description: Bluetooth MAC Address
-  SwBh:
-    description: Software Behavior
-  CLBG:
-  MkBS:
-  CLHS:
-  CGMt:
-  EMac:
-  EnMt:
-  BGMt:
-  EMc2:
-  rpcp:
-  MkBH:
-  WMac:
-  SBVr:
-  AROC:
-  LTAO:
-  ARSC:
-  ASCl:
-  ARXN:
-  AICl:
-  ARot:
-  ARNC:
-  ARXC:
-  GICl:
-  GRXC:
-  GRXN:
-  GRNC:
-  GRSC:
-  GSCl:
-  GYTT:
-  GRot:
-  MDCC:
-  CRot:
-  CVCC:
-  CDCC:
-  CMOC:
-  CSCM:
-  JRot:
+    - C
   CPAS:
-  PRTT: (Pressure Sensor / Barometer) temp-compensation-table
-  SPPO: (Pressure Sensor / Barometer) pressure-offset-calibration
-  PxCl: (Proximity Sensor) prox-calibration
-  PSCl:
-  STRB:
-  BCAR:
-  PrCL:
-  RACa:
-  RACm:
-  RxCL:
-  TCal:
-  WSKU:
-    description: WiFi Chip / Product SKU
-  WCAL:
-    description: WiFi Calibration Data
-  RFEM:
-  BCAL:
-  BTTx:
-  BTBF:
-  MBac:
-  BTRx:
-  RSKU:
-    description: Region SKU (in US "/LLA")
-  DClr:
+  CRot:
+  CSCM:
+  CVCC:
   DBCl:
+  DClr:
   DPCl:
   DTCl:
-  CGSp:
-  CLCL:
-  MiGH:
-  SpPH:
-  SpGH:
-  MiGB:
-  TMac:
+  EMac:
+  EMc2:
+  EnMt:
+  GICl:
+  GRNC:
+  GRot:
+  GRSC:
+  GRXC:
+  GRXN:
+  GSCl:
+  GYTT:
+  JRot:
   ksku:
+  LTAO:
+  MBac:
+  MDCC:
+  MdlC:
+    description: Model Configuration (key value seperated by ";" and "key=value")
+  MiGB:
+  MiGH:
+  MkBH:
+  MkBS:
+  MLB#:
+    description: Main Logic Board Serial Number
+  Mod#:
+    description: Model Number
+  PrCL:
+  PRTT: "(Pressure Sensor / Barometer) temp-compensation-table"
+  PSCl:
+  PxCl: "(Proximity Sensor) prox-calibration"
+  RACa:
+  RACm:
+  Regn:
+    description: Region Info
+  RFEM:
+  RMd#:
+    description: Regulatory Model Number
+  rpcp:
+  RSKU:
+    description: Region SKU (in US "/LLA")
+  RxCL:
+  SBVr:
+  SpGH:
+  SpPH:
+  SPPO: "(Pressure Sensor / Barometer) pressure-offset-calibration"
+  SrNm:
+    description: Serial Number
+  STRB:
+  SwBh:
+    description: Software Behavior
+  TCal:
   TCID:
+  TMac:
+  WCAL:
+    description: WiFi Calibration Data
+  WMac:
+  WSKU:
+    description: WiFi Chip / Product SKU

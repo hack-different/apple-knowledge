@@ -2,6 +2,10 @@
 metadata:
   description:
   credits:
+  collections:
+  - certificate_names
+  - keys
+  - oids
 certificate_names:
   dcrt: device certificate
   dcrt-oid: device owner certificate
@@ -15,22 +19,21 @@ certificate_names:
     issuer: Basic Attestation User Root CA
   vcrt: virtual certificate?
 keys:
-  uik:
-    title: User Identity Key
-    certificates:
-    - ucrt
+  oik:
+    title: Owner Identity Key
   sik:
     title: System Identity Key
     certificates:
     - dcrt
-  oik:
-    title: Owner Identity Key
+  uik:
+    title: User Identity Key
+    certificates:
+    - ucrt
 constants:
   private_oid_root: 1.2.840.113635
 oids:
   1.2.840.113635.100.10:
-    description: >
-      `ucrt` extension root
+    description: "`ucrt` extension root"
   1.2.840.113635.100.10.1:
     description: Hardware device identifiers of the machine the certificate is issued
       to contains BORD, CHIP, ECID, srnm, udid, seid
