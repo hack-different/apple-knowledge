@@ -1,0 +1,54 @@
+---
+metadata:
+  description:
+  credits:
+  collections:
+non_volatile_storage:
+  NVMe:
+    parts:
+      fsys:
+        dsecription: The user filesystem.
+      EAN:
+      diagnostics:
+  NAND:
+    parts:
+      none:
+        title:
+      boot:
+        title: Boot Block
+      diag:
+        title: Diagnostic Data
+      scfg:
+        title: System Config
+      firm:
+        title: Firmware
+      nvrm:
+        title: Firmware
+      fsys:
+        title: Filesystem
+      plog:
+        title: Effaceable
+      fbbt:
+        title: Bad Block Table
+  NOR:
+  EAN:
+    description: Emulated Apple NOR?
+    parts:
+  SysCfg:
+  nvram:
+    parts:
+      anvram: ARM NVRAM (Default for iDevices)
+      rnvram: Intel NVRAM (For devices with a T2)
+      system: The "system" layer NVRAM for Apple Silicon (for the domain of the SFR
+        and core APTicket)
+      common: Classical NVRAM for OS specific installs
+    formats:
+      NVV3:
+  ramrod_shadow:
+    formats:
+      nvram.plist:
+  xarts:
+    formats:
+      GigaLocker:
+  SEP:
+    description: The Lynx or Ocelot directly attached to the SEP

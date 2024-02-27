@@ -17,10 +17,14 @@ term_list:
   - title: 64bit ARM v8+ Architecture
   aarch64e:
   - title: 64bit ARM v8.3+ Architecture with Pointer Authentication
+  AASP:
+  - title: Apple Authorised Service Partner
   ACC:
   - title: Apple Core Cluster
   ACE:
   - title: USB-C Port Controller
+  ACM:
+  - title: Apple Credential Manager Service
   AES:
   - title: Advanced Encryption Standard
   AGX:
@@ -29,6 +33,8 @@ term_list:
   - title: Apple Hardware Test
   AID:
   - title: Apple ID
+  AKS:
+  - title: Apple Key Storage Service
   AltDSID:
   AMCC:
   - title: Apple Memory Cache Controller
@@ -39,7 +45,7 @@ term_list:
   ANE:
   - title: Apple Neural Engine
   anpi:
-  - title:
+  - title: Apple NCM Private Interface
   ANS:
   - title: Apple NAND Storage
   AOP:
@@ -85,7 +91,7 @@ term_list:
   AWDL:
   - title: Apple Wireless Direct Link
   BAA:
-  - title: Basic Attestation Authority (BAA)
+  - title: Basic Attestation Authority (BAA) - Used for Local Policy signing
   baseband:
   - title:
     see:
@@ -106,6 +112,9 @@ term_list:
     - APNonce
   BootKC:
   BootPolicy:
+  BootROM:
+  - see: SEPROM
+  - see: SecureROM
   bridge:
   bridgeOS:
   BRK:
@@ -127,11 +136,13 @@ term_list:
   CPSR:
   CRAM:
   - title: Cache-as-RAM
+  CRC:
+  - title: Cyclic Redundancy Check
   CRNG:
   - title: Cryptographic Random Number Generator
-  cs:
-  - title: Code Signing
   CS:
+  - title: Code Signing
+  cs:
   - title: Code Signing
   CSPRNG:
   - title: Cryptographically Secure Pseudorandom Number Generator
@@ -140,10 +151,13 @@ term_list:
     see:
     - sip
   CTRR:
+  - title: Configurable Text Readonly Region
   DART:
   - title: Device Address Resolution Table
   DCC:
   - title: Debug Communications Channel
+  dcrt:
+  - title: Device Certificate
   defaults:
   DEP:
   - title: Data Execute Prevention
@@ -177,6 +191,11 @@ term_list:
   - title: Error Checking and Correction
   eCore:
   - title: Efficiency Core
+  EEPROM:
+  - title: Electronically Erasable Programmable Read Only Memory
+  EffaceableStorage:
+  - title: Effaceable Storage
+    description:
   EFI:
   - title: Extensible Firmware Interface
   EHCI:
@@ -200,6 +219,10 @@ term_list:
   - title: Embedded Subscriber Identification Module
     see:
     - SIM
+  eSPI:
+  - title: Enhanced Serial Peripheral Interconnect
+    description: Used by the T2 to provide MacEFI to the Intel Chip
+    url: https://www.intel.com/content/dam/support/us/en/documents/software/chipset-software/327432-004_espi_base_specification_rev1.0_cb.pdf
   eUICC:
   - title: Embedded Universal Integrated Circuit Card
     see:
@@ -232,6 +255,8 @@ term_list:
 
       '
   Framework:
+  fuOS:
+  - title: Fully Unsigned OS
   FW:
   - see:
     - FireWire
@@ -246,6 +271,10 @@ term_list:
       '
   GENTER:
   GEXIT:
+  GID:
+  - title: Group Identity Key (Chip group key)
+    description: An AES key used to encrypt objects for all Apple CPUs with the same
+      CHIP identity
   gif:
   GL0:
   - title: Guarded Level 0
@@ -257,6 +286,8 @@ term_list:
     - GXF
   GXF:
   - title: Guarded Execution Feature
+  HDCP:
+  - title: High Definition Content Protection
   HFS:
   - title: Hierarchical File System (HFS/HFS+)
     description:
@@ -336,6 +367,18 @@ term_list:
     description: A Mach-O Object containing a series of KEXTs (Kernel Extensions)
       to be loaded alongside the kernel itself.  Usually one of three types, the Boot,
       the System and the Auxiliary.
+  KernelIdentityProtection:
+  - title: Kernel Identity Protection
+    description: After the operating system kernel completes initialization, Kernel
+      Integrity Protection (KIP) is enabled to help prevent modifications of kernel
+      and driver code. The memory controller provides a protected physical memory
+      region that iBoot uses to load the kernel and kernel extensions. After startup
+      is complete, the memory controller denies writes to the protected physical memory
+      region. The Application Processor’s Memory Management Unit (MMU) is configured
+      to help prevent mapping privileged code from physical memory outside the protected
+      memory region and to help prevent writeable mappings of physical memory within
+      the kernel memory region. To prevent reconfiguration, the hardware used to enable
+      KIP is locked after the boot process is complete.
   kext:
   - title: Kernel Extension
   key:
@@ -358,6 +401,8 @@ term_list:
       for correctness.  This ensures that the kernel guarantees are mathematically
       verified against defects.
   launchd:
+  lcrt:
+  - title: Lynx (SEP Secure Storage) Certificate
   LDM:
   - title: Lock Down Mode
   LLB:
@@ -395,6 +440,8 @@ term_list:
   LSB:
   - title: Least Significant Byte/Bit
   - title: Lower Side-Band
+  LVDS:
+  - title: Low Voltage Differential Signaling
   LZFSE:
   mach:
   mach_port:
@@ -412,11 +459,15 @@ term_list:
   MMU:
   - title: Memory Management Unit
   MRI:
+  - title: Mobile Resource Inspector
+    see:
+    - diags
   MRtI:
   MSB:
   - title: Most Significant Byte/Bit
   msm:
   - title: Qualcomm Baseband (Models are MSM) Motorola SoC Modem?
+  - title: Thunderbolt IP - Cactus Ridge Thunderbolt Controller
   MSR:
   - title: Model/Machine Specific Register
     see:
@@ -432,6 +483,8 @@ term_list:
   nbIF:
   - title: Nearby Interface Type
     context: nearbyd
+  NHI:
+  - title: Native Host Interface
   Nm:
   - title: User Assigned Name
   nmi:
@@ -454,6 +507,8 @@ term_list:
   - title: Other Architecture Handler (Rosetta2)
   OHCI:
   - title: Open Host Controller Interface (USB)
+  OIC:
+  - title: Owner Identity Certificate
   oic:
   - title: Owner Identity Certificate (OIC)
   oid:
@@ -560,6 +615,10 @@ term_list:
     - DRAM
     - CRAM
     - SRAM
+  ramrod:
+  - title: Ramrod Plugin
+    description: A plugin to `patchd` (the OTA system) to allow for full restores
+      via the OTA system.  (Such as with the Watch which lacks consumer USB connections).
   recovery:
   reg:
   - see: register
@@ -569,6 +628,8 @@ term_list:
   RemoteXPC:
   restore:
   Rosetta:
+  RSA:
+  - title: RSA (Rivest–Shamir–Adleman) Public Key Cryptography
   rsep:
   - title: Restore SEP Firmware Image
   RSSI:
@@ -618,6 +679,11 @@ term_list:
       in the nvram variable `csr-status`.
     see:
     - CSR
+  SKP:
+  - title: Sealed Key Protection
+  SKS:
+  - title: Secure Key Store Service
+  SMBus:
   SMC:
   - title: System Management Controller
   - title: Secure Monitor Call (el3)
@@ -640,6 +706,10 @@ term_list:
       models made use of a smaller (in the few megabytes range) NOR chip to load iBoot,
       and stored the user's data on a larger NAND flash chip. In newer devices the
       NOR/SPI flash is synthetic and provided by ANS2/3.
+  SPIFlash:
+  - title: Serial Peripheral Interconnect Flash Memory Protocol
+    see:
+    - NOR
   SPMI:
   - title: System Power Management Interface
     url: https://www.mipi.org/specifications/system-power-management-interface
@@ -701,6 +771,7 @@ term_list:
   TDM:
   - title: Target Disk Mode
   tfp0:
+  - title: Task for PID 0 (Kernel)
   trpk:
   - title: Trusted Public Keys
     description: Occurs in `trst` objects
@@ -721,7 +792,9 @@ term_list:
     - tz1
   - title: Time Zone
   tz0:
+  - title: TrustZone for SEP
   tz1:
+  - title: TrustZone for AP (Trusted Boot Monitor)
   UART:
   - title: Universal Asynchronous Receiver / Transmitter
   ucrt:
@@ -730,6 +803,9 @@ term_list:
   - title: Universal Integrated Circuit Card
     see:
     - sim
+  UID:
+  - title: User Identity Key (Device specific key)
+    description: A unique AES key per device.
   uik:
   - title: User Identity Key (UIK)
   UIKit:

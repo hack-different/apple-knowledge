@@ -2,8 +2,34 @@
 metadata:
   description:
   credits:
+  - https://www.theiphonewiki.com/wiki/IMG4_File_Format
+  - rickmark
   collections:
   - img4_tags
+  - manifest_properties
+  - objects
+  - lpol_properties
+  - core
+  - types
+  - cryptex_properties
+core:
+  IM4M:
+    description: Image4 Manifest Object (No payload, only manifest).  IM4M, verion,
+  IM4P:
+    description: Image4 Payload (No Manifest, Only Data).  Contains IM4P, type, description,
+      data and optional keybags
+  IM4R:
+    description: Image4 Recovery
+  IMG4:
+    description: Wrapper for all Image4 Objects (Payload, Manifest, Recovery)
+  MANB:
+    description: Manifest Body
+  MANP:
+    description: Manifest Properties
+  OBJP:
+    description: Object Properties - Values that may be assigned per "object" (firmwares)
+      that contain a `DGST`
+    type: sequence
 types:
   digest-object:
     description: Digest Objects are Firmware or Other Hash-able binary streams. They
@@ -12,12 +38,25 @@ types:
       additional properties per object, some of which are standard and others that
       are object specific.
     common_properties:
-      ESEC: Effective Security Mode - The security mode after evaluating the chip
-        and any demotion request
-      EPRO: Effective Production Mode - The production mode after evaluating the chip
-        production and demotion request
-      EKEY: Effective Key Access - The effective access to teh SEP, used to protect
-        data during demotion
+      DGST: The cryptographic digest of the object
+      EKEY:
+        description: Effective Key Access - The effective access to teh SEP, used
+          to protect data during demotion.  Effective chip promoted
+        nullable: false
+        type: boolean
+      ESEC:
+        description: Effective Security Mode - The security mode after evaluating
+          the chip and any demotion request
+        alias:
+        - effective-security-mode-ap
+      EPRO:
+        description: Effective Production Mode - The production mode after evaluating
+          the chip production and demotion request.  Effective chip promotion / demotion
+          state (if CPFM 03 this must be 0 to set ESEC)
+        alias:
+        - effective-production-status-ap
+        nullable: false
+        type: boolean
     subtypes:
       local-boot-object:
       trust-measurement:
@@ -35,71 +74,33 @@ types:
           or as the arm64BaseSystem.dmg.  IMG4 is used for smaller disk images that
           can be entirely validated "single shot" unlike larger disks which use SSV
           and validate on read.
-img4_tags:
-  acdc:
-    description:
-  acfw:
-    description:
-  ache:
-    description:
-  acib:
-    description:
-  acid:
-    description: Apple Account Directory Services ID (DSID)
-    type: integer
-  aciw:
-    description:
-  ADCL:
-  ader:
-    description:
-  agfi:
-    description:
-  almo:
-    description: Some internal iBootable image.  Unknown purpose
-  AMNM:
-    description: allow mix-n-match When set to true, img4s can be any valid signed
-      version, allowing for unusual AP tickets where some components may be from a
-      prior version
-    type: boolean
-  anef:
-    description: Apple Neural Engine Firmware
-    type: digest-object
-    roots:
-    - ManifestKey-DataCenter
-  anrd:
-    description:
-  ansf:
-  aofi:
-    description:
-  aopf:
-    description: Always on processor firmware
-    type: digest-object
-    roots:
-    - ManifestKey-DataCenter
-  apmv:
-    description:
-  ater:
-    description:
-  atkh:
-    description:
-  auac:
-    description:
-  aubt:
-    description: Audio Boot Chime
-  augs:
-    description: Auxiliary System Image Included in APTicket CA extensions, as well
-      as factory manifests.  All cryptex manifests, and APTickets other then the root
-      APTicket (the one that is used directly from NOR) have this set to 1, indicating
-      that it is an an addition or replacement to APTicket, but only if authorized.  It
-      also seems to travel with `aubt` and `aupr`
-    roots:
-    - ExtraContent
-    - ManifestKey
-  aupr:
-    description: Audio Power Attach Chime
-  auxh:
-    description: User Authorized Kext List Hash
-    context:
+      firmware:
+        object_properties:
+          oppd:
+            description: Unknown, used by `stg1`/`sepi` - sha384 hash sized
+          tbms:
+            description: Trusted Boot Measurement (Signature?)
+            notes: Likely encrypted by the SEP and opaque to the AP
+  trust:
+    objects:
+      rssl:
+        description: The valid CA used for secure communications with the FDR server
+          to obtain the FDR objects.  This differs from the `trst` object as `rssl`
+          is in transit and `trst` is at rest.
+      trpk:
+        description: Trust public keys
+      trst:
+        description: The certificate used for the `seal` object
+      rvok:
+        description: Trust object revocation list
+      inst:
+        description: The key or file to install
+      secb:
+        description: Sets a security value such as `trst` or the FDR signing trust
+          object. "security blob?".  Known to include `trst` (yes a `trst` partition
+          with a `secb` object with a `trst` object), `rssl` (Factory SSL root CA),
+          `rvok` (Revocation list) and `trpk` (trusted public keys?)
+lpol_properties:
   auxi:
     title: Auxiliary Image4 Manifest Hash (`auxi`)
     description: After the system verifies that the UAKL hash matches what’s found
@@ -121,8 +122,6 @@ img4_tags:
     access:
       write:
       - macOS
-  auxk:
-    description: Auxiliary Kernel Cache
   auxp:
     title: Auxiliary Policy Hash (auxp)
     description: The `auxp` is an SHA384 hash of the user-authorized kext list (UAKL)
@@ -152,107 +151,6 @@ img4_tags:
     access:
       write:
       - macOS
-  avef:
-    description: AV Encryption (DRM) Firmware
-    type: digest-object
-    roots:
-    - ManifestKey-DataCenter
-  bat0:
-    description: battery image 0
-  bat1:
-    description: battery image 1
-  batf:
-    description: battery full image
-  batF:
-  BLDS:
-    description:
-  bles:
-    description:
-  BMac:
-    description: Bluetooth MAC Address
-    manifest: true
-  BNCH:
-    title: Boot Nonce Cryptographic Hash
-    description: Based on the values of com.apple.System.boot-nonces
-    type: nonce
-    subtype:
-  BORD:
-    description: |-
-      The board the chip is attached to.  With iPhones/iPads this is the variation between
-      device sizes (occasionally also used for low cost devices like the SE/XR).  This is
-      usually expressed as a hex encoded uint8_t.  Some types of board seem to encode a
-      bitfield for non MP (mainline production) boards such as EVT/DVT
-
-      With the T2 this value is unique to all MacBooks with the T2.
-    type: integer
-    alias:
-    - board-id
-  bstc:
-    title: Base System Trust Cache
-    description: The Base System Trust Cache is the static trust cache (a file containing
-      a list of CDHashes that is to be trusted and executed at platform trust.) that
-      corresponds to the Base System (typically arm64BaseSystem.dmg).
-    type: digest-object
-    subtype: trust-cache
-  bsys:
-    title: Base System Root Hash
-    type: digest-object
-    subtype: ssv-root-hash
-  caos:
-    description:
-    type: digest-object
-    root:
-    - ExtraContent
-  casy:
-    description: App Cryptex SSV Root Hash
-    type: digest-object
-    subtype: ssv-root-hash
-    roots:
-    - ExtraContent
-  CEPO:
-    description: |-
-      Certificate/Chip Epoch.  This is a unit of roll-forward time (monotonic) that
-      allows for any security issues in the prior epoch to be fixed by a anti-rollback scheme.
-    nullable: true
-    type: boolean
-    alias:
-    - chip-epoch
-  cfel:
-    description:
-  chg0:
-    description: Charging Image 0
-    type: digest-object
-    subtype: graphic
-  chg1:
-    description: Charging Image 1
-    type: digest-object
-    subtype: graphic
-  CHIP:
-    description: Unique identifier for a single Apple designed application processor
-      sharing the same GID key
-    type: integer
-    width: 2
-  CHMH:
-    title: Chained Manifest Hash
-    description: Appears in manifest / APTickets where the ticket is chained from
-      another via `nish` or `nsph`.
-  ciof:
-  cker:
-    description:
-  ckih:
-    description:
-  clas:
-    description: Class for Key / Object - Found in FDR objects
-    examples:
-    roots:
-    - ExtraContent
-  CLHS:
-  clid:
-  cmsv:
-    description:
-  cnch:
-    roots:
-    - ExtraContent
   coih:
     title: CustomOS Image4 Manifest Hash (coih)
     description: The `coih` is an SHA384 hash of CustomOS Image4 manifest. The payload
@@ -264,160 +162,6 @@ img4_tags:
     access:
       write:
       - 1TR
-  CPRO:
-    description: Certificate Promotion Mode
-    alias:
-    - certificate-production-status
-    nullable: true
-    type: boolean
-  CSEC:
-    description: Certificate Security Mode
-    type: boolean
-    nullable: true
-    alias:
-    - certificate-security-mode
-  csos:
-    description:
-    type: digest-object
-    roots:
-    - ExtraContent
-  cssy:
-    description: System Cryptex SSV Root Hash
-    type: digest-object
-    subtype: ssv-root-hash
-    roots:
-    - ExtraContent
-  csys:
-    description: Install / Restore SSV Root Hash
-    type: digest-object
-    subtype: ssv-root-hash
-  dali:
-    description:
-  data:
-    description:
-  dcp2:
-  DGST:
-    description: payload digest
-  diag:
-    description:
-  disk:
-    description:
-  DPRO:
-    description: Demote from Production Request Value is used by TSS sever to issue
-      EPRO values, or effective AP production state.
-  DSEC:
-    description: Demote from Secure Request Value is used by TSS server to issue ESEC
-      values, or effective AP Security Mode should the requester be authorized.  These
-      requests are not available to consumers, only to Apple Internal.
-  dtre:
-    description: device tree
-    type: digest-object
-    subtype: device-tree
-  dtrs:
-    description: device tree for recovery
-    type: digest-object
-    subtype: device-tree
-    recovery: true
-  dven:
-  ECID:
-    description: Exclusive chip identifier.  This is burned into an eFuse at time
-      of manufacture and unique across all devices sharing the same CHIP
-    width: 8
-  efib:
-    description:
-  eg0n:
-    description: Effective GID 0 Nonce
-  eg0t:
-    description:
-  eg1n:
-    description: Effective GID 1 Nonce
-  eg1t:
-    description:
-  eg3n:
-    description: Effective GID3 Nonce
-  eg3t:
-    description:
-  EKEY:
-    description: Effective chip promoted
-    nullable: false
-    type: boolean
-  EPRO:
-    description: Effective chip promotion / demotion state (if CPFM 03 this must be
-      0 to set ESEC)
-    alias:
-    - effective-production-status-ap
-    nullable: false
-    type: boolean
-  esca:
-    description:
-  esdm:
-    description: Extended Security Domain fuses
-    type: integer
-    alias:
-    - esdm-fuses
-  ESEC:
-    description: Effective security mode
-    alias:
-    - effective-security-mode-ap
-  euou:
-    description: engineering use-only unit
-  faic:
-    description:
-    type: integer
-    default: 0
-  fchp:
-    description: Cryptex1,ChipID - Mask
-    roots:
-    - ExtraContent
-  fdrs:
-    description:
-  fdrt:
-    description:
-  fgpt:
-    description: factory glob al pre-release trust
-  file:
-    description:
-  fpgt:
-    description:
-  FSCl:
-  ftab:
-    description: Factory Trust - Auto Boot FTAB images (used for devices such as AirPods,
-      etc) are "hacktivated" or pre-APTicket'ed devices as they lack either a restore
-      connection, or persistent memory.  Common early usage of this was the Haywire
-      dongles used for video conversion on the Mac.  It was simplest for the device
-      to lack NAND and simply receive the firmware from a host on power-up.  FTAB
-      files are fully ready to run blobs often including RTKit OS based memory images.
-  ftap:
-    description: Factory Trust/FIPS Test? - Application Processor
-    type: hash
-  ftot:
-    description: Factory Trust/FIPS Test? - Other
-  ftsp:
-    description: Factory Trust/FIPS Test? - SEP
-    type: hash
-  fuos:
-    description: Fully Unsigned OS
-  gfxf:
-    description: Graphics Firmware
-  ging:
-    description:
-  glyc:
-    description: Gyroscope Calibration
-  glyP:
-  glyp:
-    description:
-  hash:
-    description:
-  hclo:
-    description:
-  hime:
-    description:
-  HmCA:
-  hmmr:
-    description:
-  homr:
-    description:
-  hop0:
   hrlp:
     title: Has Secure Enclave Signed recoveryOS Local Policy (hrlp)
     description: The `hrlp` indicates whether or not the `prot` value is the measurement
@@ -430,51 +174,6 @@ img4_tags:
       - 1TR
       - recoveryOS
       - macOS
-  hypr:
-    description: Hypervisor
-  ibd1:
-    description: iBoot Data Stage 1
-  ibdt:
-    description: iBoot Data
-  iBEC:
-    description: iBoot Epoch Change
-  ibot:
-    description: iBoot
-  ibss:
-  iBSS:
-    description: iBoot Second Stage
-  ienv:
-    description:
-  IM4M:
-    description:
-  IM4P:
-    description:
-  IM4R:
-    description:
-  IMG4:
-    description:
-  inst:
-    description: The key or file to install
-  ipdf:
-    description:
-  isor:
-    description:
-  ispf:
-    description: Image Signal Processor Firmware
-  isys:
-    description: Install System SSV Root Hash
-  itst:
-    description:
-  iuob:
-    description:
-  iuos:
-    description: Internal Use Only Software
-  iuou:
-    description: Internal Use Only Unit
-  kdlv:
-    description:
-  krnl:
-    description: Kernel
   kuid:
     title: Key encryption key (KEK) Group UUID (kuid)
     description: The kuid indicates the volume that was booted. The key encryption
@@ -488,36 +187,10 @@ img4_tags:
       - 1TR
       - recoveryOS
       - macOS
-  lamo:
-    description:
-  lckr:
-    description:
-  LLB:
-    description: Low Level iBoot
-  LNCH:
-    description: Local Policy Nonce Cryptographic Hash
   lobo:
     description: Local Boot Object.  Indicates that the object is to be used as the
       target of a local boot only and not provided by the server for remote / DFU
       boots.
-  logo:
-    description: Apple logo image
-  love:
-    title: Long Operating System Version (love)
-    description: The love indicates the OS version that the LocalPolicy is created
-      for. The version is obtained from the next state manifest during LocalPolicy
-      creation and is used to enforce recoveryOS pairing restrictions.
-    type: string
-    example: 21.3.66.0.0,0
-    access:
-      write:
-      - 1TR
-      - recoveryOS
-      - macOS
-    roots:
-    - ManifestKey-DataCenter
-  lphp:
-    description:
   lpnh:
     title: LocalPolicy Nonce Hash (lpnh)
     description: The lpnh is used for anti-replay of the LocalPolicy. This is an SHA384
@@ -541,50 +214,6 @@ img4_tags:
       - 1TR
       - recoveryOS
       - macOS
-  lpol:
-    description: Local Policy
-  ltrs:
-    description:
-  magg:
-    description:
-  MANB:
-    description: Manifest B
-  MANP:
-    description: Manifest Payload
-  manx:
-    description:
-  mefi:
-    description: MacEFI (T2 firmware for Intel chip)
-  ment:
-    description:
-  mmap:
-    description:
-  mmer:
-    description:
-  mmsv:
-    description:
-  Mod#:
-  mpro:
-    description:
-  msec:
-    description:
-  mspr:
-  msys:
-    description: System Volume Canonical Metadata Contains a Merkle Tree of the System
-      Volume.  The Merkle-Tree is used to verify Signed System Volume, in a similar
-      way to a Git repository, where every file is included in the tree of the folder
-      and so on up to the root node. The root node is validated against the corresponding
-      `root_hash`.  The inclusion of the merkle tree allows for discovery of where
-      the system volume's data is broken, as the root_hash can only tell you if it
-      is broken.
-  mtfw:
-    description:
-  mtpf:
-  name:
-    description:
-  ndom:
-    roots:
-    - ExtraContent
   nish:
     title: Next Stage Image4 Manifest Hash (nsih)
     description: The nsih field represents an SHA384 hash of the Image4 manifest data
@@ -605,59 +234,6 @@ img4_tags:
       - 1TR
       - recoveryOS
       - macOS
-  nrde:
-    description:
-  nsih:
-    description: Next Stage Image Hash
-  nsph:
-    description: Next Stage pre-boot splat manifest hash
-  nsrv:
-    description:
-  OBJP:
-    description: Object Properties - Values that may be assigned per "object" (firmwares)
-      that contain a `DGST`
-    type: sequence
-  omer:
-    description:
-  ooth:
-    description:
-  oppd:
-    description: Unknown, used by `stg1`/`sepi` - sha384 hash sized
-  osev:
-    description:
-  osrd:
-    description:
-  otes:
-    description:
-  owns:
-    description:
-  pave:
-    description: Pre-authorization Version (XNU) The version of a pre-authorized Cryptex.
-    type: string
-    roots:
-    - ExtraContent
-  PAYP:
-    description:
-  pcrp:
-    description: Production certificate root
-  pdmg:
-    description: Personalized Disk Image
-  pert:
-    description:
-  pfle:
-    description:
-  pflp:
-    description:
-  phlt:
-    description:
-  pmpf:
-    description: Power Management Processor Firmware
-    type: digest-object
-    subtype:
-  pndp:
-    description:
-  prid:
-    description: Encrypted Private Key / Private Key Info
   prot:
     title: Paired recoveryOS Trusted Boot Policy Measurement (prot)
     description: A paired recoveryOS Trusted Boot Policy Measurement (TBPM) is a special
@@ -673,52 +249,6 @@ img4_tags:
       - 1TR
       - recoveryOS
       - macOS
-  prtp:
-    description: Product Type String
-    type: string
-    example: iPhone16,2
-    roots:
-    - ManifestKey-DataCenter
-  psmh:
-    description: previous stage manifest hash
-  ptrp:
-  rans:
-    description: Restore Apple NAND Storage Firmware
-    type: digest-object
-  rbmt:
-    description:
-  rcfg:
-    description: Appears in certificates issues by factory such as `T6031-SDOM1-TssLive-ManifestKey-RevA-Factory`.  Potentially
-      indicates that the policy is for a recovery boot only.
-    type: boolean
-  rcio:
-    description: Restore CIO
-  rdcp:
-  rddg:
-    description:
-  rdsk:
-    description: Restore Disk Image / ramdisk
-  rdtr:
-    description:
-  recm:
-    description:
-  Regn:
-    description: Region Code
-    example: LL/A
-    type: string
-    manifest: true
-  rfcg:
-    type: boolean
-  rfta:
-    description:
-  rfts:
-    description:
-  rkrn:
-    description: restore kernel
-  rlgo:
-    description:
-  RNCH:
-    description:
   rolp:
     description: recoveryOS local policy
     type: boolean
@@ -741,8 +271,6 @@ img4_tags:
       - 1TR
       - recoveryOS
       - macOS
-  rosi:
-    description:
   rpnh:
     title: Remote Policy Nonce Hash (rpnh)
     description: The rpnh behaves the same way as the lpnh but is updated only when
@@ -755,39 +283,310 @@ img4_tags:
       - 1TR
       - recoveryOS
       - macOS
-  rsch:
-    description: research mode
+  sip0:
+    title: System Integrity Protection (SIP) 0 Status - Overall
+    description: The sip0 holds the existing System Integrity Protection (SIP) policy
+      bits that previously were stored in NVRAM. New SIP policy bits are added here
+      (instead of using LocalPolicy fields like the below) if they’re used only in
+      macOS and not used by LLB. Users can change this field using csrutil from 1TR
+      to disable SIP and downgrade to Permissive Security.
+    access:
+      write:
+      - 1TR
+  sip1:
+    title: System Integrity Protection (SIP) 1 Status - Signed System Volume
+    description: If sip1 is present and true, iBoot will allow failures to verify
+      the SSV volume root hash. Users can change this field using csrutil or bputil
+      from 1TR.
+  sip2:
+    title: System Integrity Protection (SIP) 2 Status - Kernel CTRR Status
+    description: If sip2 is present and true, iBoot will not lock the Configurable
+      Text Read- only Region (CTRR) hardware register that marks kernel memory as
+      non-writable. Users can change this field using csrutil or bputil from 1TR.
+  sip3:
+    title: System Integrity Protection (SIP) 3 Status - Boot Args Filtering
+    description: If sip3 is present and true, iBoot will not enforce its built-in
+      allow list for the boot-args NVRAM variable, which would otherwise filter the
+      options passed to the kernel. Users can change this field using csrutil or bputil
+      from 1TR.
+  smb0:
+    description: Secure Multi-Boot 0 - Security Mode - Full Security, Reduced, Disabled
+      - Setting to 1 sets to reduced
+  smb1:
+    description: Secure Multi-Boot 1 - Setting to 1 allows Permissive
+  smb2:
+    description: Secure Multi-Boot 2 - 3rd Party Kexts Status
+  smb3:
+    description: Secure Multi-Boot 3 - User-allowed MDM Control
+  smb4:
+    description: Secure Multi-Boot 3 - DEP-allowed MDM Control
+  smb5:
+    description: Unknown - but known to exist in Factory signing
+  snuf:
+    description: Software Nonce For Update Freshness
+  spih:
+    description: Cryptex1 Image4 Hash
+  vuid:
+    title: APFS volume group UUID (vuid)
+    description: The vuid indicates the volume group the kernel should use as root.
+      This field is primarily informational and isn’t used for security constraints.
+      This vuid is set by the user implicitly when creating a new operating system
+      install.
+    type: binary
+    subtype: sha2-384
+    access:
+    - 1TR
+    - recoveryOS
+    - macOS
+cryptex_properties:
+  augs:
+    description: Auxiliary System Image Included in APTicket CA extensions, as well
+      as factory manifests.  All cryptex manifests, and APTickets other then the root
+      APTicket (the one that is used directly from NOR) have this set to 1, indicating
+      that it is an an addition or replacement to APTicket, but only if authorized.  It
+      also seems to travel with `aubt` and `aupr`
+    roots:
+    - ExtraContent
+    - ManifestKey
+  auxh:
+    description: User Authorized Kext List Hash
+    context:
+  clas:
+    description: Class for Key / Object - Found in FDR objects
+    examples:
+    roots:
+    - ExtraContent
+  cnch:
+    roots:
+    - ExtraContent
+  fchp:
+    description: Family of the CHIP - Cryptex1,ChipID - Mask
+    roots:
+    - ExtraContent
+  ndom:
+    description: Nonce Domain
+    roots:
+    - ExtraContent
+    - ExtraContent
+  pave:
+    description: Pre-authorization Version (XNU) The version of a pre-authorized Cryptex.
+    type: string
+    roots:
+    - ExtraContent
+  snuf:
+    description: SoftwareNonceForUpdateFreshness
+  styp:
+    description: Crytpex Subtype
+    type: u32
+    alias:
+    - cryptex subtype
+    roots:
+    - ExtraContent
+  type:
+    description: Cryptex Type
+    type: integer
+    roots:
+    - ExtraContent
+  UDID:
+    description: universal device identifier
+  vnum:
+    description: Version Number - Update Maximum
+    type: string
+    roots:
+    - ExtraContent
+cryptex_objects:
+  caos:
+    description:
+    type: digest-object
+    root:
+    - ExtraContent
+  casy:
+    description: App Cryptex SSV Root Hash
+    type: digest-object
+    subtype: ssv-root-hash
+    roots:
+    - ExtraContents
+  csos:
+    description:
+    type: digest-object
+    roots:
+    - ExtraContent
+  cssy:
+    description: System Cryptex SSV Root Hash
+    type: digest-object
+    subtype: ssv-root-hash
+    roots:
+    - ExtraContent
+  trcs:
+    description:
+    type: digest-object
+    roots:
+    - ExtraContent
+  trca:
+    description:
+    type: digest-object
+    roots:
+    - ExtraContent
+manifest_properties:
+  acdc:
+    description: Apple Certified Diagnostics Center/Certificate?
+  acid:
+    description: Apple Account Directory Services ID (DSID)
+    type: integer
+  AMNM:
+    description: allow mix-n-match When set to true, img4s can be any valid signed
+      version, allowing for unusual AP tickets where some components may be from a
+      prior version
+    type: boolean
+  BMac:
+    description: Bluetooth MAC Address
+    manifest: true
+  BNCH:
+    title: Boot Nonce Cryptographic Hash
+    description: Based on the values of com.apple.System.boot-nonces, this is either
+      the true APNonce (in the case of SFR or the root APTicket where no scope or
+      tweak is applied) or a shadowed BNCH in the case of macOS. If it is a root boot
+      nonce the value is stored in com.apple.System.boot-nonce, for scoped or shadowed
+      BNCH values this is stored in `nonce-seeds` (A list of random values per domain)
+    metadata:
+      domains:
+        IMG4_NONCE_DOMAIN_INDEX_TEST:
+          value: 0
+        IMG4_NONCE_DOMAIN_INDEX_TRUST_CACHE:
+          value: 1
+        IMG4_NONCE_DOMAIN_INDEX_PDI:
+          value: 2
+          description: Personalized Disk Image
+        IMG4_NONCE_DOMAIN_INDEX_CRYPTEX:
+          value: 3
+          description: Cryptex / Rapid Security Response Domain
+        IMG4_NONCE_DOMAIN_INDEX_DDI:
+          value: 4
+          description: Developer Disk Image
+        IMG4_NONCE_DOMAIN_INDEX_EPHEMERAL_CRYPTEX:
+          value: 5
+        IMG4_NONCE_DOMAIN_INDEX_CRYPTEX1_SNUF_STUB:
+          value: 6
+          description: Staged Next Update Firmware
+        IMG4_NONCE_DOMAIN_INDEX_CRYPTEX1_BOOT:
+          value: 7
+          description: Boot Cryptex (OS Usually)
+        IMG4_NONCE_DOMAIN_INDEX_CRYPTEX1_ASSET:
+          value: 8
+          description: Asset Cryptex (App Usually)
+    type: nonce
+    subtype:
+  BORD:
+    description: |-
+      The board the chip is attached to.  With iPhones/iPads this is the variation between
+      device sizes (occasionally also used for low cost devices like the SE/XR).  This is
+      usually expressed as a hex encoded uint8_t.  Some types of board seem to encode a
+      bitfield for non MP (mainline production) boards such as EVT/DVT
+
+      With the T2 this value is unique to all MacBooks with the T2.
+    type: integer
+    alias:
+    - board-id
+  CEPO:
+    description: |-
+      Chip Epoch.  This is a unit of roll-forward time (monotonic) that
+      allows for any security issues in the prior epoch to be fixed by a anti-rollback scheme.
+    nullable: true
+    type: boolean
+    alias:
+    - chip-epoch
+  CHIP:
+    description: Unique identifier for a single Apple designed application processor
+      sharing the same GID key
+    type: integer
+    width: 2
+  CHMH:
+    title: Chained Manifest Hash
+    description: Appears in manifest / APTickets where the ticket is chained from
+      another via `nish` or `nsph`.
+  CPRO:
+    description: Certificate Promotion Mode
+    alias:
+    - certificate-production-status
+    nullable: true
+    type: boolean
+  CSEC:
+    description: Certificate Security Mode
+    type: boolean
+    nullable: true
+    alias:
+    - certificate-security-mode
+  ECID:
+    description: Exclusive chip identifier.  This is burned into an eFuse at time
+      of manufacture and unique across all devices sharing the same CHIP
+    width: 8
+  esdm:
+    description: Extended Security Domain fuses
+    type: integer
+    alias:
+    - esdm-fuses
+  euou:
+    description: engineering use-only unit
+  faic:
+    description:
+    type: integer
+    default: 0
+  iuob:
+    description: Internal Use Only Build
+  iuos:
+    description: Internal Use Only Software
+  iuou:
+    description: Internal Use Only Unit
+  LNCH:
+    description: Local Policy Next Cryptographic Hash
+  love:
+    title: Long Operating System Version (love)
+    description: The love indicates the OS version that the LocalPolicy is created
+      for. The version is obtained from the next state manifest during LocalPolicy
+      creation and is used to enforce recoveryOS pairing restrictions.
+    type: string
+    example: 21.3.66.0.0,0
+    access:
+      write:
+      - 1TR
+      - recoveryOS
+      - macOS
+    roots:
+    - ManifestKey-DataCenter
+  lpol:
+    description: Local Policy
+  mmap:
+    description: Memory Map
+  Mod#:
+  nsih:
+    description: Next Stage Image4 Hash
+  nsph:
+    description: Next Stage pre-boot splat manifest hash
+  prtp:
+    description: Product Type String
+    type: string
+    example: iPhone16,2
+    roots:
+    - ManifestKey-DataCenter
+  psmh:
+    description: previous stage manifest hash
+  rcfg:
+    description: Appears in certificates issues by factory such as `T6031-SDOM1-TssLive-ManifestKey-RevA-Factory`.  Potentially
+      indicates that the policy is for a recovery boot only.
+    type: boolean
+  Regn:
+    description: Region Code
+    example: LL/A
+    type: string
+    manifest: true
+  rfcg:
+    type: boolean
+  RNCH:
+    description:
   RSCH:
     description: Research mode
-  rsep:
-    description: Restore SEP Image, paired with oppd/tbms
-    type: string
-    encoding: sha2-384
-  rso0:
-    description:
-  rso1:
-    description:
-  rso2:
-    description:
-  rso3:
-    description:
-  rssl:
-    description: The valid CA used for secure communications with the FDR server to
-      obtain the FDR objects.  This differs from the `trst` object as `rssl` is in
-      transit and `trst` is at rest.
-  rtmu:
-    description: Restore TMU for AP
-    type: digest-object
-    firmware: true
-    recovery: true
-  rtpf:
-    description:
-  rtsc:
-    description:
-  rvok:
-    description: Trust object revocation list
-  scef:
-    description:
+  rsch:
+    description: research mode
   sdkp:
     description: SDK Platform
     type: string
@@ -805,175 +604,475 @@ img4_tags:
     width: 2
     alias:
     - security-domain
-  secb:
-    description: Sets a security value such as `trst` or the FDR signing trust object.
-      "security blob?".  Known to include `trst` (yes a `trst` partition with a `secb`
-      object with a `trst` object), `rssl` (Factory SSL root CA), `rvok` (Revocation
-      list) and `trpk` (trusted public keys?)
   SECM:
-    description:
+    description: Security Mode
   sei3:
     description: Secure Enclave ID (alternate)? Appears to have a value identical
-      to `seid`.
+      to `seid`.  Used for non domain0 (`hyp0`)
   seid:
-    description: Secure Enclave ID
-  sepi:
-    description: SEP Image, contains oppd and tbms in seal
-    type: string
-    encoding: sha2-384
+    description: Secure Enclave ID - Root Domain
   sika:
-    description:
-  siof:
-    description: Smart IO Firmware
-  sip0:
-    description: System Integrity Protection (SIP) 0 Status - Overall
-  sip1:
-    description: System Integrity Protection (SIP) 1 Status - Signed System Volume
-      Status
-  sip2:
-    description: System Integrity Protection (SIP) 2 Status - Kernel CTRR Status
-  sip3:
-    description: System Integrity Protection (SIP) 3 Status - Boot Args Filtering
-      Status
-  slvn:
-    description:
-  smb0:
-    description: Secure Multi-Boot 0 - Security Mode - Full Security, Reduced, Disabled
-      - Setting to 1 sets to reduced
-  smb1:
-    description: Secure Multi-Boot 1 - Setting to 1 allows Permissive
-  smb2:
-    description: Secure Multi-Boot 2 - 3rd Party Kexts Status
-  smb3:
-    description: Secure Multi-Boot 3 - User-allowed MDM Control
-  smb4:
-    description: Secure Multi-Boot 3 - DEP-allowed MDM Control
-  smb5:
-    description: Unknown - but known to exist in Factory signing
-  snon:
-    description: SEP Nonce
+    description: System/Sealed Identity Key Protection? (Fuee)
   SNON:
     description: SEP Nonce
-  snuf:
-    description: Staged next update firmware?
-  spih:
-    description: Cryptex1 Image4 Hash
-  SPTM:
-    description: Secure Page Table Monitor
-  srnm:
-    description:
+  snon:
+    description: SEP Nonce
   SrNm:
     description: Unit Serial Number
     manifest: true
-  ssca:
   sski:
-    description: SHA2 os some kind
+    description: SHA2 os some kind - sep/system subject key identifier?
     type: binary
-  ster:
-    description:
-  stg1:
-    description: stage 1 bootloader
-    type: string
-    encoding: sha2-384
-  stID:
-    description: Station Identifier
   stng:
     description: Cryptex1 Generation / Cryptex type?
-  styp:
-    description: Crytpex Subtype
-    type: u32
-    alias:
-    - cryptex subtype
-    roots:
-    - ExtraContent
   svrn:
     description: Server nonce
   tatp:
     description: Target Type (board name)
     roots:
     - ManifestKey-DataCenter
+  TMac:
+    description: Thunderbolt MAC Address
+    manifest: true
+  UID_MODE:
+    type: boolean
+    request: true
+    description: Use UID key instead of GID key for firmware keybags
+    see:
+    - uidm
+  uidm:
+    description: UID Mode
+    type: boolean
+    roots:
+    - ManifestKey-DataCenter
+  WMac:
+    description: Wireless MAC Address
+  WSKU:
+    description: Wireless SKU
+objects:
+  acfw:
+    description:
+  almo:
+    description: Some internal iBootable image.  Unknown purpose
+  anef:
+    description: Apple Neural Engine Firmware
+    type: digest-object
+    roots:
+    - ManifestKey-DataCenter
+  ansf:
+    description: Apple NAND Storage Firmware
+  aopf:
+    description: Always on processor firmware
+    type: digest-object
+    roots:
+    - ManifestKey-DataCenter
+  aubt:
+    description: Audio Boot Chime
+  aupr:
+    description: Audio Power Attach Chime
+  auxk:
+    description: Auxiliary Kernel Cache
+  avef:
+    description: AV Encryption (DRM) Firmware
+    type: digest-object
+    roots:
+    - ManifestKey-DataCenter
+  bat0:
+    description: battery image 0
+  bat1:
+    description: battery image 1
+  batF:
+    description: Battery Full Image
+    type: digest-object
+    subtype: graphic
+    firmware: true
+  bstc:
+    title: Base System Trust Cache
+    description: The Base System Trust Cache is the static trust cache (a file containing
+      a list of CDHashes that is to be trusted and executed at platform trust.) that
+      corresponds to the Base System (typically arm64BaseSystem.dmg).
+    type: digest-object
+    subtype: trust-cache
+  bsys:
+    title: Base System Root Hash
+    type: digest-object
+    subtype: ssv-root-hash
+  chg0:
+    description: Charging Image 0
+    type: digest-object
+    subtype: graphic
+  chg1:
+    description: Charging Image 1
+    type: digest-object
+    subtype: graphic
+  ciof:
+    description: TypeC IO Firmware
+  csys:
+    description: Install / Restore SSV Root Hash
+    type: digest-object
+    subtype: ssv-root-hash
+  dcp2:
+  dcpf:
+  dtre:
+    description: device tree
+    type: digest-object
+    subtype: device-tree
+  dtrs:
+    description: device tree for recovery
+    type: digest-object
+    subtype: device-tree
+    recovery: true
+  dven:
+    description: Display Vendor Data
+  ftab:
+    description: Factory Trust - Auto Boot FTAB images (used for devices such as AirPods,
+      etc) are "hacktivated" or pre-APTicket'ed devices as they lack either a restore
+      connection, or persistent memory.  Common early usage of this was the Haywire
+      dongles used for video conversion on the Mac.  It was simplest for the device
+      to lack NAND and simply receive the firmware from a host on power-up.  FTAB
+      files are fully ready to run blobs often including RTKit OS based memory images.
+    ghost_object: true
+  ftap:
+    description: Factory Trust/FIPS Test? - Application Processor
+    type: hash
+    ghost_object: true
+  ftsp:
+    description: Factory Trust/FIPS Test? - SEP
+    type: hash
+    ghost_object: true
+  gfxf:
+    description: Graphics Firmware
+  glyP:
+  ibd1:
+    description: iBoot Data Stage 1
+  ibdt:
+    description: iBoot Data
+  iBEC:
+    description: iBoot Epoch Change
+  ibot:
+    description: iBoot
+    subtype: firmware
+  iBSS:
+    description: iBoot Second Stage
+  illb:
+    description: Low-Level iBoot
+  ipdf:
+    description:
+  ispf:
+    description: Image Signal Processor Firmware
+  isys:
+    description: Install System SSV Root Hash
+  krnl:
+    description: Kernel
+  logo:
+    description: Apple Logo Image
+    type: digest-object
+    subtype: graphic
+    firmware: true
+  lpol:
+    description: Local Policy Payload
+  magg:
+    description: Maggie Firmware
+  mefi:
+    description: MacEFI (T2 firmware for Intel chip)
+  msys:
+    description: System Volume Canonical Metadata Contains a Merkle Tree of the System
+      Volume.  The Merkle-Tree is used to verify Signed System Volume, in a similar
+      way to a Git repository, where every file is included in the tree of the folder
+      and so on up to the root node. The root node is validated against the corresponding
+      `root_hash`.  The inclusion of the merkle tree allows for discovery of where
+      the system volume's data is broken, as the root_hash can only tell you if it
+      is broken.
+  mtfw:
+    description: MultiTouch Firmware
+  mtpf:
+  pdmg:
+    description: Personalized Disk Image
+  pmpf:
+    description: Power Management Processor Firmware
+    type: digest-object
+    subtype:
+  rans:
+    description: Restore Apple NAND Storage Firmware
+    type: digest-object
+    subtype: firmware
+    firmware: apple-nand-storage
+    restore: true
+  rcio:
+    description: Restore TypeC IO
+    restore: true
+  rdcp:
+    description: Recovery DCP Firmware
+    restore: true
+  rdsk:
+    description: Restore Disk Image / ramdisk
+  rdtr:
+    description: Ramdisk Trust
+  recm:
+    description: Recovery/Refurbish Mode
+  rfta:
+    description: Recovery/Refurbish Factory Trust AP
+  rfts:
+    description: Recovery/Refurbish Factory Trust SEP
+  rkrn:
+    description: Restore Kernel
+    restore: true
+  rlg1:
+  rlg2:
+  rlgo:
+    description: Restore Logo
+    restore: true
+  rosi:
+    description:
+  rsep:
+    description: Restore SEP Image, paired with oppd/tbms
+    type: string
+    encoding: sha2-384
+  rtmu:
+    description: Restore TMU for AP
+    type: digest-object
+    firmware: true
+    recovery: true
+  rtsc:
+    description: Recovery
+  scef:
+    description: SEP Firmware (Boot Firmware without RAM Image)
+  sepi:
+    description: SEP Image (Boot and RAM Image)
+    type: string
+    encoding: sha2-384
+    metadata:
+      oppd: Original Processed Parameter Data
+      tbms: Trusted Boot Measurement Strings
+  siof:
+    description: Smart IO Firmware
+  tmuf:
+    description: Trusted MultiUpdater Firmware
+  trst:
+    description: Trust Object
+    type: digest-object
+    subtype: trust-object
+  tsys:
+    description: Test System Volume
+  WCHF:
+    description: Wireless Charging Firmware
+  wchf:
+    description: Wireless Charging Framework
+  xbtc:
+    description: x86 Boot Trust Cache
+  xsys:
+    description: x86 System Root Hash
+img4_tags:
+  ache:
+    description:
+  acib:
+    description:
+  aciw:
+    description:
+  ADCL:
+    description: Apple Display Calibration
+  ader:
+    description:
+  agfi:
+    description:
+  anrd:
+    description: Apple Notarized Ram Disk
+  aofi:
+    description: Always on Firmware Image
+  apmv:
+    description:
+  ater:
+    description:
+  atkh:
+    description:
+  auac:
+    description:
+  BLDS:
+    description: Boot LocalPolicy Digest String?
+  bles:
+    description:
+  cfel:
+    description: Current Firmware Efffective LocalPolicy?
+  cker:
+    description: Chained Kernel for Recovery
+    recovery: true
+  ckih:
+    description: Chained Kernel Image4 Hash
+  CLHS:
+    description: Chained LocalPolicy Hash String
+  clid:
+    description: Class Identifier
+  cmsv:
+    description:
+  dali:
+    description:
+  data:
+    description:
+  diag:
+    description: Diagnostic (AHT) Image
+  disk:
+    description:
+  DPRO:
+    description: Demote from Production Request Value is used by TSS sever to issue
+      EPRO values, or effective AP production state.
+  DSEC:
+    description: Demote from Secure Request Value is used by TSS server to issue ESEC
+      values, or effective AP Security Mode should the requester be authorized.  These
+      requests are not available to consumers, only to Apple Internal.
+  efib:
+    description: EFI Bootloader
+  eg0n:
+    description: Emulated GID0 Nonce
+  eg0t:
+    description: Emulated GID0 Type
+  eg1n:
+    description: Emulated GID1 Nonce
+  eg1t:
+    description: Emulated GID1 Type
+  eg3n:
+    description: Emulated GID3 Nonce
+  eg3t:
+    description: Emulated GID3 Type
+  esca:
+    description: Emulated System Certificate Authority
+  fdrs:
+    description: Factory Debug Recovery System
+  fdrt:
+    description: Factory Debug Recovery Trust
+  fgpt:
+    description: Factory Global Pre-Release Trust
+  file:
+    description:
+  fpgt:
+    description:
+  ftot:
+    description: Factory Trust/FIPS Test? - Other / Original Trust
+  ging:
+    description:
+  glyc:
+    description: Gyroscope Calibration
+  hash:
+    description:
+  hclo:
+    description: Hypervisor Custom/Current LocalPolicy Object?
+  hime:
+    description: HyperVisor Install Management Environment?
+  hmmr:
+    description: Host M M Recovery
+  homr:
+    description: Host OS M... Recovery
+  hop0:
+    description: Hypervisor OS Partition 0 (`dom0`)
+  hypr:
+    description: Hypervisor (EL2) Image
+  ienv:
+    description: Install Environment?
+  isor:
+    description:
+  itst:
+    description: Installer Test?
+  kdlv:
+    description: Kernel Linker Version
+  lamo:
+    description:
+  lckr:
+    description: Locker?
+  lphp:
+    description: Local Policy Hash Protection?
+  ltrs:
+    description: Local TrustStore Recovery System?
+  manx:
+    description:
+  ment:
+    description: Memory Map Entitlements
+  mmer:
+    description: Memory Map Entitlements for Recovery
+    recovery: true
+  mmsv:
+    description: Memory Map System
+  mpro:
+    description: Memory Promotion
+  msec:
+    description: Memory Security
+  mspr:
+  name:
+    description:
+  nrde:
+    description: N Ramdisk Environment
+  nsrv:
+    description:
+  omer:
+    description:
+  ooth:
+    description:
+  osev:
+    description: OS Environment
+  osrd:
+    description: OS Ramdisk
+  otes:
+    description:
+  owns:
+    description:
+  PAYP:
+    description:
+  pcrp:
+    description: Production certificate root
+  pert:
+    description: Pre-OS Environment Root Trust
+  pfle:
+    description: Pre-OS Firmware Launch Environment?
+  pflp:
+    description: Pre-OS Firmware Local Policy
+  phlt:
+    description: Pre-OS/Per-OS Host Local Trust
+  pndp:
+    description:
+  prid:
+    description: Encrypted Private Key / Private Key Info / Private Recovery Identity?
+  ptrp:
+  rbmt:
+    description:
+  rddg:
+    description: Ramdisk for Debugging
+  rso0:
+    description:
+  rso1:
+    description:
+  rso2:
+    description:
+  rso3:
+    description:
+  rtpf:
+    description:
+  slvn:
+    description:
+  SPTM:
+    description: Secure Page Table Monitor
+  ssca:
+    description: SEP Subject Certificate Authority?
+  ster:
+    description:
+  stg1:
+    description: stage 1 bootloader
+    type: string
+    encoding: sha2-384
   tbmr:
     description: Trusted Boot Measurement (Recovery/Root?)
-  tbms:
-    description: Trusted Boot Measurement (Signature?)
-    notes: Likely encrypted by the SEP and opaque to the AP
   tery:
     description:
   test:
     description:
   tics:
     description:
-  TMac:
-    description: Thunderbolt MAC Address
-    manifest: true
-  trca:
-    description:
-    type: digest-object
-    roots:
-    - ExtraContent
-  trcs:
-    description:
-    type: digest-object
-    roots:
-    - ExtraContent
-  trpk:
-    description: Trust public keys
-  trst:
-    description: Trust Object
-  tsys:
-    description:
-  type:
-    description: Cryptex Type
-    type: integer
-    roots:
-    - ExtraContent
   ucer:
     description: User Cert
   ucon:
-    description:
-  UDID:
-    description: universal device identifier
-  udid:
-    description: Unique Device ID
-  uidm:
-    description:
-    type: boolean
-    roots:
-    - ManifestKey-DataCenter
+    description: User Console Connection
   vice:
     description:
   vkdl:
-    description:
-  vnum:
-    description: Version Number - Update Maximum
-    type: string
-    roots:
-    - ExtraContent
-  vuid:
-    title: APFS volume group UUID (vuid)
-    description: The vuid indicates the volume group the kernel should use as root.
-      This field is primarily informational and isn’t used for security constraints.
-      This vuid is set by the user implicitly when creating a new operating system
-      install.
-    type: binary
-    subtype: sha2-384
-    access:
-    - 1TR
-    - recoveryOS
-    - macOS
+    description: Virtual Kernel ??
   ware:
     description:
-  WCHF:
-    description: Wireless Charging Firmware
-  wchf:
-    description: Wireless Charging Framework
-  WMac:
-    description: Wireless MAC Address
-  WSKU:
-    description: Wireless SKU
-  xbtc:
-    description: x86 Boot Trust Cache
-  xsys:
-    description: x86 System Root Hash
   xugs:
-    description:
+    description: x64 User System Disk

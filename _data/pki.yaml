@@ -7,8 +7,8 @@ metadata:
   - keys
   - oids
 certificate_names:
-  dcrt: device certificate
-  dcrt-oid: device owner certificate
+  dcrt: Device Identity Certificate
+  dcrt-oid: Device Owner Identity Certificate
   lcrt: Lynx / Secure Storage for SEP Certificate
   pcrt: product/production certificate?
   rcrt: remote/recovery certificate?
@@ -50,6 +50,8 @@ oids:
     - FDRDC-UCRT-SUBCA
     ous:
     - ucrt Leaf Certificate
+  1.2.840.113635.100.11.1:
+    description: Component Certificate - Component Type
   1.2.840.113635.100.4.1:
     symbol: oidAppleExtendedKeyUsageCodeSigning
   1.2.840.113635.100.4.1.1:
@@ -167,6 +169,8 @@ oids:
     symbol: oidAppleCertExtAppleServerAuthenticationPPQProdQA
   1.2.840.113635.100.6.27.3.2:
     symbol: oidAppleCertExtAppleServerAuthenticationPPQProd
+  1.2.840.113635.100.6.27.32:
+    description: Apple SSL Certificate
   1.2.840.113635.100.6.27.4.1:
     symbol: oidAppleCertExtAppleServerAuthenticationIDSProdQA
   1.2.840.113635.100.6.27.4.2:
@@ -197,6 +201,8 @@ oids:
       for Accessing the Production Apple Push Service
   1.2.840.113635.100.6.30:
     symbol: oidAppleCertExtAppleSMPEncryption
+  1.2.840.113635.100.6.36:
+    description: Made for iDevice (MFi) - Authentication v3
   1.2.840.113635.100.6.38.1:
     symbol: oidAppleCertExtApplePPQSigningProdQA
   1.2.840.113635.100.6.38.2:
@@ -217,11 +223,18 @@ oids:
   1.2.840.113635.100.6.5.2:
     apple_description: Apple iTunes Store Certificates for Signing Requests to Purchase
       for the iTS
+  1.2.840.113635.100.6.59.1:
+    description: Software Authentication GeneralCapabilities
+  1.2.840.113635.100.6.71.1:
+    description: Made for iDevice (MFi) - Authentication v4 - Apple Accessory Properties
+      Extension
   1.2.840.113635.100.7.1.1:
     apple_description: 'Apple FairPlay certificate extended Application Authentication
       & Authorization: Policy'
   1.2.840.113635.100.8:
-    description: Local Policy OID Root
+    description: Apple Local Device Attestation (BAA)
+  1.2.840.113635.100.8.2:
+    symbol: CTOidItemAppleDeviceAttestationNonce
   1.2.840.113635.100.8.4:
     description: Contains a sequence of integer values.  Some are 0, some are 1, others
       appear to be int32 bitmasks.
@@ -234,10 +247,11 @@ oids:
     - Basic Attestation User Sub CA2
     ous:
     - BAA Certification
-    symbol:
+    symbol: CTOidItemAppleDeviceAttestationHardwareProperties
   1.2.840.113635.100.8.5:
     description: Similar in nature to `1.2.840.113635.100.8.4`. Non-integer values
       observed of `ssca`.
+    symbol: CTOidItemAppleDeviceAttestationKeyUsageProperties
     is_asn_body: true
     is_extension: true
     found_in:
@@ -248,7 +262,8 @@ oids:
     ous:
     - BAA Certification
   1.2.840.113635.100.8.7:
-    description: ASN1 data for the version of macOS for the issued under (e.g. 12.2)
+    description: Information about the OS environment that performed that local attestation
+    symbol: CTOidItemAppleDeviceAttestationDeviceOSInformation
     is_asn_body: true
     is_extension: true
     found_in:
@@ -331,7 +346,11 @@ roots:
       ZFF10-SDOM1-TssLive-ManifestKey-ExtraContent-Global-RevA-DataCenter:
         subject_key_id: 041442FEAB470561CE2A7471B55AC0D81AB7536F4B36
   Apple Secure Boot Root CA - G2:
+    description: Primary iDevice SecureROM - Root of Trust
+    subordinate_cas:
+      T6031-SDOM1-TssLive-ManifestKey-RevA-DataCenter:
   Apple Secure Boot Root CA - G6:
+    description: Seems to be a CA for local policy signatures of boot firmware
     subordinate_cas:
       T6031-SDOM1-RecoveryBoot-RevA-Factory:
         description:
@@ -351,3 +370,6 @@ roots:
       FDR-SS-CM-E1:
   FDR-CA1-ROOT-CM:
   FDR-DC-SSL-ROOT:
+  Apple DDI Secure Boot Root CA - G1:
+    subordinate_cas:
+      ZFF10-SDOM1-TssLive-ManifestKey-ExtraContent-RevA-DataCenter:

@@ -5309,6 +5309,16 @@ entitlements:
     description:
     types:
     - boolean
+  com.apple.private.driverkit.allows-publish:
+    description: 'Entitlement allows a DK driver to publish services to other dexts,
+      using the standard IOKit registerService() or DriverKit RegisterService() api.
+      Those client dexts must have an entitlement specified by the kIODriverKitPublishEntitlementsKey
+      property in the IOService being published, and subscribed in the client dext
+      with IOServiceNotificationDispatchSource.
+
+      '
+    checks:
+    - kernel
   com.apple.private.dt.automationmode.writer-client:
     description:
     types:
@@ -5905,7 +5915,7 @@ entitlements:
     types:
     - boolean
   com.apple.private.img4.nonce.trust-cache:
-    description:
+    description: Provides access to the AppleImage4 IOKit Services
     types:
     - boolean
   com.apple.private.in-app-payments:
@@ -5994,10 +6004,19 @@ entitlements:
     description:
     types:
     - boolean
+  com.apple.private.iokit.system-nvram-hidden-allow:
+    description: Internal only key to give access to hidden system region variables
+    checks:
+    - kernel
   com.apple.private.iokit.system-nvram-internal-allow:
-    description:
+    description: Internal only key to give access to system region on internal builds
     types:
     - boolean
+    checks:
+    - kernel
+  com.apple.private.iokit.systemstate:
+    checks:
+    - kernel
   com.apple.private.iopol.case_sensitivity:
     description:
     types:
@@ -6981,7 +7000,7 @@ entitlements:
     types:
     - boolean
   com.apple.private.security.AppleImage4.user-client:
-    description:
+    description: Used to authorize user space applications to access the
     types:
     - boolean
   com.apple.private.security.bootpolicy:
@@ -7354,6 +7373,9 @@ entitlements:
     description:
     types:
     - boolean
+  com.apple.private.security.waitquiet-panics:
+    checks:
+    - kernel
   com.apple.private.securityuploadd:
     description:
     types:

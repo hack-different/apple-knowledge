@@ -4,6 +4,13 @@ metadata:
   credits:
   collections:
   - nvram_variables
+nvram_scopes:
+  system:
+    description: For Apple Silicon Macs - The SFR / System Level NVRAM
+    uuid: 40A0DDD2-77F8-4392-B4A3-1E7304206516
+  common:
+    description: For Apple Silicon Macs - The Per OS or Non-SFR / System NVRAM
+    uuid:
 nvram_variables:
   _csegbufsz_experiment:
   _libmalloc_experiment:
@@ -63,6 +70,9 @@ nvram_variables:
   bluetoothInternalControllerInfo:
   BluetoothUHEDevices:
   board-id:
+  boop-storage-nonces:
+    scopes:
+    - system
   boot-args:
     description: String passed to the XNU kernel at boot (M1's do filter this though)
     type: string
@@ -99,7 +109,7 @@ nvram_variables:
   boot-stage:
   boot-volume:
   bootdelay:
-    description: Seconds to pause before autoboot
+    description: Seconds to pause before `auto-boot`
     type: number
     persistent: true
   BOSCatalogURL:
@@ -109,6 +119,11 @@ nvram_variables:
   build-version:
   cam-use-ext-ldo:
   com.apple.System.boot-nonce:
+    description: The persisted random seed that is hashed to become APNonce.  While
+      this value is not changed, the APNonce remains the same.  When a device is booted
+      from DFU, a new value is computed for this which is later in restore saved to
+      ensure that the APTicket remains valid.  Upgrades to APTicket will generate
+      a new nonce value.
   com.apple.System.fp-state:
   com.apple.System.sep.art:
   com.apple.System.tz0-size:
@@ -250,6 +265,12 @@ nvram_variables:
     - PPC
   IOBusyInterest:
   IODeviceMemory:
+  IONVRAM-FORCESYNCNOW-PROPERTY:
+    description: 'Embedded still throttles NVRAM commits via kIONVRAMSyncNowPropertyKey,
+      but some clients still need a stricter NVRAM commit contract. Please use this
+      with care.
+
+      '
   IOPlatformActiveAction:
   IOPlatformHaltRestartAction:
   IOPlatformPanicAction:
@@ -288,6 +309,7 @@ nvram_variables:
   oem-logo:
   oem-logo?:
   one-time-boot-command:
+    description: A boot command to be used on the next reboot, which is then cleared
   ota-anomalies:
   ota-brain-version:
   ota-breadcrumbs:
@@ -356,6 +378,7 @@ nvram_variables:
   pmgr_cpu_override:
   pmgr_gpu_override:
   policy-nonce-digests:
+    description: The hashed digests of the recoveryOS, remote and local policies.
   pre-recovery-ota-failure-uuid:
   preferred-count:
     scopes:
@@ -366,7 +389,7 @@ nvram_variables:
   preserve-debuggability:
   prev-lang-diags:kbd:
   prev-lang:kbd:
-    description: Default keyboard layout
+    description: The last selected language and keyboard layout pair
     type: string
     scopes:
     - common
@@ -425,6 +448,7 @@ nvram_variables:
   security-password:
   selftest-#megs:
     type: number
+  sep-debug-args:
   serverip:
   SleepWakeFailurePanic:
   SleepWakeFailureString:

@@ -21,9 +21,12 @@ commands:
   alamo:
   bgcolor:
   bootx:
-  clearenvp: Clear environment - persistent
+  clearenvp:
+    description: Clear Environment - Persistent
   devicetree:
+    description: Sends the DeviceTree for the XNU Kernel
   diags:
+  enter-tdm-mode:
   firmware:
   fsboot:
     description: Perform a "normal" boot from the disk
@@ -31,12 +34,17 @@ commands:
     description: gets an environment variable
   go:
     secure_disabled: true
+  lpolrestore:
+    description: Restores Local Policy to Known Good State
   memboot:
   nvme_firmware0:
   ramdisk:
+    description: Sends the Restore or Upgrade disk image for `rd=md0`
   reboot:
   recover:
   recover-once:
+  recover-system:
+    description: Boot to System Firmware Recovery
   reset:
   rsepfirmware:
   rtos:
@@ -53,14 +61,17 @@ environment_vars:
     description: boolean if the device should wait or proceed to boot (usually true)
   backlight-level:
   boot-args:
-    description: the boot args passed to the kernel
+    description: The boot args passed to the XNU Kernel (subject to filtering with
+      `sip3`)
   boot-breadcrumbs:
   boot-command:
-    description: the command to run if auto-boot is true (usually fsboot on idevices)
+    description: the command to run if auto-boot is true (usually `fsboot` on iDevices)
   com.apple.System.boot-nonce:
   com.apple.System.rtc-offset:
   com.apple.System.tz0-size:
-    description: the size of the AP's trustzone
+    description: The size of the SEP TrustZone
+  com.apple.System.tz1-size:
+    description: The size of the CPU TrustZone
   darkboot:
     description: "(maybe) if the device should power on and not turn on the display
       (seems like a huge security isseue)"
