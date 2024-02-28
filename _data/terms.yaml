@@ -388,6 +388,8 @@ term_list:
     description: An encryption key that is wrapped by the GID used in IMG4
     see:
     - key
+  KIP:
+  - title: Kernel Integrity Protection
   KLD:
   - title: Kernel Linker
   KTRR:
@@ -520,6 +522,8 @@ term_list:
   - title: Out-of-Band
   OSLAR:
   - title:
+  OTA:
+  - title: Over-the-Air Update
   ota:
   - title: Over-the-Air Update - Incremental Update (Somewhat arcane)
     description: In the earliest days of the iPhone, users had to connect the device
@@ -533,8 +537,6 @@ term_list:
       of 'full OTAs' which are a delta update in OTA format, but includes the entire
       set of data to restore devices.  These are typically employed for devices that
       lack the port needed for DFU/iBoot/IPSW based recovery.
-  OTA:
-  - title: Over-the-Air Update
   OTG:
   - title: USB On-the-go
     description: USB-OTG is a way to describe a device that is typically a peripheral
@@ -632,12 +634,17 @@ term_list:
   - title: RSA (Rivest–Shamir–Adleman) Public Key Cryptography
   rsep:
   - title: Restore SEP Firmware Image
+  rsm:
+  - title: Restore State Machine
+  - title: Restore Service Mode
   RSSI:
   - title: Receive Signal Strength Indicator
   RTKit:
   - title: RealTimeKit (Realtime OS)
   SART:
   - title: Secure Address Resolution Table
+  SCIP:
+  - title: System Coprocessor Integrity Protection
   SE:
   - title: Secure Element
   seatbelt:
@@ -793,10 +800,6 @@ term_list:
   - title: Time Zone
   tz0:
   - title: TrustZone for SEP
-  SCIP:
-    - title: System Coprocessor Integrity Protection
-  KIP:
-    - title: Kernel Integrity Protection
   tz1:
   - title: TrustZone for AP (Trusted Boot Monitor)
   UART:

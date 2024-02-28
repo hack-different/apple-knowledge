@@ -41,7 +41,7 @@ allow for non-customer restore flows.
 
 ## RamRod
 
-Ramrod is a plugin to the OTA process (patchd) that allows for the restore of a full OTA, as well
+Ramrod is a plugin to the OTA process (`patchd`) that allows for the restore of a full OTA, as well
 as other unusual features, such as NVRAM shadowing, custom sequencing and skipped phases.  It will
 often end up as `(null)` as the component in some OTA logs.  The combination of a restore of a
 lower macOS version, plus the usage of `ramrod` to update it permits the security of the
@@ -56,6 +56,16 @@ By fixing hashes to a sequence of zeros, once a APTicket is issued it may be re-
 Zero keys can be observed both the for xART root UUID (00000000-0000-0000-0000-000000000000) as well
 as the initial values for BNCH domain nonces.
 
+The usage of `uidm` and `UID_MODE` can be used to disable the UID key entirely, preventing the usage
+of hardware specific tweaks.  Even though this APTicket is "personalized" in that the ECID is set,
+because of explicit UID disable, there's no cryptographic material typing to the device, which
+broadly prevent the usefulness of the BNCH boot nonce, as it is not entangled with any device
+specific key material.  In this case, any other ECID can generate valid BNCH values for any other
+ECID.
+
+This combined with the usage of Zero nonces for the boot nonce domains further extends predictable
+concerning to the other components of the boot path.
+
 ## HyperVisor `hypr`, Application Partitions `appv`, Root Domain (`hyp0`) and `hyp0`'s SysCfg `0Cfg`
 
 For Apple systems historically the `hypr` role is filled by the SPTM, but with newer Apple Silicon
@@ -66,20 +76,41 @@ a `hypX` partition is the restored station.  This manifests in the FDR cached da
 parts (those without any prefix such as `fCfg`, `dCfg`, etc), those of the `hyp0` host station
 (`mansta`) and those of the restored device station `mandev`.  This allows the `fSys` or Firmware
 SysCfg and `0Cfg` or `hyp0` domain 0 SysCfg to be stored at the root NOR part, while EAN can be
-leveraged for the per OS `fCfg`
+leveraged for the per OS `fCfg`.
 
-### `hyp0` XNU and the TXM
+The hypervisor for XNU systems is configured by setting the boot argument `-entry` for the initial
+EL2 setup, then it is called again with `-virtual` for hypervisor domain zero (`hyp0`).  The domain
+zero kernel is privileged above other virtual machine instance, and `hypX` lacks root level permission.
+An example of this would be access to the `system` NVRAM namespace.  This means that should an
+attacker gain control of `hyp0` they can start a blue-pill like environment for any other domains.
+To do so would typically require a local recovery policy with lowered security settings, as
+non-recovery is a limited permission boot mode.
 
-EL2 execution begins for consumer builds with the setup of the PPM (Largely replaced by Trusted
-Execution Monitor and Exclaves).  For classical setup, the hypervisor component is loaded, followed
-by `hyp0` (analogous to XEN `dom0`).
+### The Trusted Execution Monitor
+
+`appv` is considered a boot image to begin execution once a new EL1 domain is established.  Typically
+this is simply a small shim to begin execution of the XNU kernel once EL1 is properly configured and
+to service minimal HVC requests.
 
 ## Re-entrant iBoot and SEP
 
-To support differing versions of the SEPOS and related services the device root SEPROM will load
-the system level `sepf`,`sepi`
+To support differing versions of the sepOS and related services the device root SEPROM will load
+the system level `sepf`,`sepi`.  SEP Firmware or `sepf` payloads are de-novo images that are
+decrypted by the SEP GID and then executed at the root firmware level.  Image files (`sepi`) are
+combinations of the firmware as well as initial data structure that is launched per-operating system.
 
-## iBoot (`ibot`), iBoot Data (`ibdt`), secondary iBoot (`)
+## iBoot (`ibot`), iBoot Data (`ibdt`), secondary iBoot (``)
+
+### iBoot Data
+
+Typically provides DDR timing data, which can affect the security of the system by reducing the
+time for a bank clear operation (the number of nano/pico seconds) a cell must be drained to be
+considered to be a zero state.  Additionally lengthening the charge time for a cell can cause it
+to be over-charged, increasing its durability across a PoR or Power-on-Reset event.  The combination
+of these two properties can allow for conditions where memory is retained across a PoR, permitting
+situations such as the existence of a SecureROM copy at the DRAM address thereby subverting the
+typical assurances of being copied from ROM (The header stub copes from ROM to memory, and is
+only tested by if the execution location is greater or less then the SecureROM base address).
 
 ## Usage of Local Policy and Local Trust Keys
 
@@ -114,11 +145,57 @@ On systems where a hypervisor is used, typically two such endpoints can be obser
 "root" endpoint, as well as a shadow mapping used for the guest operating system thereby allowing
 a different set of namespaces and their LBAs
 
+* `afi-ns-name`
+  * NS1
+  * NS2
+  * NS3
+  * NS4
+  * NS5
+  * NS6
+  * NS0
+  * NS9
+  * NS7
+  * NS8
+  * NS10
+  * NS11
+  * NS12
+  * NS13
+  * NS14
+  * NS15
+  * NS16
+  * NS17
+* `afc-ns-names`
+  * NS1
+  * NS2
+  * NS3
+  * NS4
+  * NS0
+  * NS5
+* `afr-ns-names`
+  * 0SN
+  * NS1
+  * NS2
+  * NS3
+  * NS4
+  * NS5
+  * NS6
+  * NS7
+  * NS46
+  * NS56
+
 ## Custom Sequencing via the PMGR
+
+The Mac contains multiple PMGR devices
 
 ## The Trust Object, and Embedded Trust Keys `trpk`
 
+The firmware object `trst` sets non mask ROM security certificate and public keys.
+
 ## Authentication to the Device via MoPED
+
+The `MdlC` SysConfig value (Model Configuration) contains the key `MoPED` which is used to authenticate
+factory based sessions from the station device to the Device-Under-Test.  Given it is the length of a SHA1
+hash, ... (insert HMAC parameters here from `FactoryProcess`).
 
 ## Passing out of USB via Synthetic Network from Host to Guest
 
