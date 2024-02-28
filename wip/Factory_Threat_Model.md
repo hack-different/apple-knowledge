@@ -16,18 +16,24 @@ privileged operations such as:
 * Calibration
 * Configuration of device specific identity (setting of wireless and bluetooth MAC addresses)
 * Creating the device parts manifest (the wrapped set of serial numbers that make up the unit,
-  including main logic board, display, TouchID, etc)
+  including main logic board, display, TouchID, etc) which is then stored in FDR (SysCfg in the
+  cloud) and placed onto the device storage.
 * Pairing, or the process of cryptographically binding the SEP with the TouchID or FaceID
   components.  Because these use a secure channel, they must exchange keys before use.
   (This lead to numerous issues related to FaceID and TouchID with unauthorized repairs,
-  as the repairing worker was unable to modify the SysCfg manifest and pair the new components)
-* Generation of key material.  The UID is generated on the SEP itself during an initial run
+  as the repairing worker was unable to modify the SysCfg manifest and pair the new components).
+* Generation of key material.  The UID is generated on the AP/SEP itself during an initial run
   and stored in non-extractable fused memory of the AES hardware.  Should this not occur the
-  UID would be a "clear key" consisting of all zeros, and would not provide protection for user
+  UID would be a "clear key" consisting of all zeros/ones, and would not provide protection for user
   data.
 * Fusing.  Devices must be moved from PVT (Production Validation Test) to MP (Mainline Production)
   after successful testing to put it into a customer ready state.  This takes devices and lowers
   them to `CPFM:03` which is a secure production device.
+  * There are additional OPCODE based operations that can be executed when the boot manifest
+    includes the `rcfg` (reconfigure boot) and `recm` (reconfigure mode) or "Reconfigure"
+    entitlement.  These operations center around the reading, modification and writing of
+    protected registers.  This is likely how key components setting board ID, of fusing and
+    device identity change in refurbishment.
 * Refurbishment.  Refurbishment of a unit requires that components be re-tested and paired.
 * Installing the initial operating system and firmware
 
@@ -38,6 +44,12 @@ some of which include `sika`, `ftap`, `ftsp`, `rfta`, `rfts`, `uidm`, `sidm`, al
 `DPRO`, `DSEC`, `MPRO`, and `MSEC` properties to establish the effective security mode.
 These properties, in addition to the Factory Boot Disks, Developer Disks and Personal Disk Images
 allow for non-customer restore flows.
+
+## Reconfigure to PVT, and Factory Trust
+
+The usage of `rcfg` boot to alter the board ID down to the PVT variant permits the usage of
+factory trust keys for boot.  By switching down to these keys, the protections of TSS can
+be avoid, and other privileged IM4M keys can be utilized.
 
 ## RamRod
 
@@ -50,23 +62,19 @@ This is advantages for a few reasons, one it uses a supported component to enter
 environment, which has lower security settings to enable the laying down of firmware to hardware
 component and lacks System Integrity Protection.
 
+Ramrod also has native support for NVRAM shadowing, or the ability to redirect writes to protected
+keys to a backing NVRAM plist.
+
 ## Clear (Zero) Hashes and Keys
 
 By fixing hashes to a sequence of zeros, once a APTicket is issued it may be re-placed onto a device.
 Zero keys can be observed both the for xART root UUID (00000000-0000-0000-0000-000000000000) as well
 as the initial values for BNCH domain nonces.
 
-The usage of `uidm` and `UID_MODE` can be used to disable the UID key entirely, preventing the usage
-of hardware specific tweaks.  Even though this APTicket is "personalized" in that the ECID is set,
-because of explicit UID disable, there's no cryptographic material typing to the device, which
-broadly prevent the usefulness of the BNCH boot nonce, as it is not entangled with any device
-specific key material.  In this case, any other ECID can generate valid BNCH values for any other
-ECID.
-
 This combined with the usage of Zero nonces for the boot nonce domains further extends predictable
 concerning to the other components of the boot path.
 
-## HyperVisor `hypr`, Application Partitions `appv`, Root Domain (`hyp0`) and `hyp0`'s SysCfg `0Cfg`
+## HyperVisor `hypr`, Application Virtualization (Rosetta) `appv`, Root Domain (`hyp0`) and `hyp0`'s SysCfg `0Cfg`
 
 For Apple systems historically the `hypr` role is filled by the SPTM, but with newer Apple Silicon
 this have moved from EL2 to Guarded Execution Roles.
@@ -78,8 +86,7 @@ parts (those without any prefix such as `fCfg`, `dCfg`, etc), those of the `hyp0
 SysCfg and `0Cfg` or `hyp0` domain 0 SysCfg to be stored at the root NOR part, while EAN can be
 leveraged for the per OS `fCfg`.
 
-The hypervisor for XNU systems is configured by setting the boot argument `-entry` for the initial
-EL2 setup, then it is called again with `-virtual` for hypervisor domain zero (`hyp0`).  The domain
+ The domain
 zero kernel is privileged above other virtual machine instance, and `hypX` lacks root level permission.
 An example of this would be access to the `system` NVRAM namespace.  This means that should an
 attacker gain control of `hyp0` they can start a blue-pill like environment for any other domains.
@@ -96,8 +103,12 @@ to service minimal HVC requests.
 
 To support differing versions of the sepOS and related services the device root SEPROM will load
 the system level `sepf`,`sepi`.  SEP Firmware or `sepf` payloads are de-novo images that are
-decrypted by the SEP GID and then executed at the root firmware level.  Image files (`sepi`) are
-combinations of the firmware as well as initial data structure that is launched per-operating system.
+decrypted by the SEP GID and then executed at the root firmware level.  Booted Image Firmware
+(`sepi`) are combinations of the firmware as well as memory data that is launched per-operating
+system (typically used for restoring the SEP memory after hibernation).
+
+To support updates to the booted image, supplemental `sep-patches` images can be applied to
+alter the code and readonly regions on the fly.
 
 ## iBoot (`ibot`), iBoot Data (`ibdt`), secondary iBoot (``)
 
@@ -139,13 +150,18 @@ system's `remoted` service.
 
 ## Dual NVMe Endpoints, and Emulated Apple NOR
 
-The Apple NAND Storage 2/3 components are capable of multiple endpoints, where each endpoint
+The ANS3 (Apple NAND Storage components) are capable of multiple endpoints (a capability of
+the RTKit system, whereby RTBuddy has various service endpoints), where each endpoint
 is a configuration of mappings of LBAs (Logical Block Addresses) to Namespaces, with a given type.
 On systems where a hypervisor is used, typically two such endpoints can be observed, the "true" or
 "root" endpoint, as well as a shadow mapping used for the guest operating system thereby allowing
-a different set of namespaces and their LBAs
+a different set of namespaces and their LBAs.  This is the reason that `eCfg` becomes problematic
+in FDR as the one component that cannot truly be virtualized is the NAND storage component, due
+to the need to service both the `dom0` guest as well as the boot component.  Errors will includes
+`eCfg` being missing from sealing keys, or that it is not required to seal depending on which
+personality the message originates from.
 
-* `afi-ns-name`
+* `afi-ns-name` - Apple Firmware Image?
   * NS1
   * NS2
   * NS3
@@ -164,14 +180,14 @@ a different set of namespaces and their LBAs
   * NS15
   * NS16
   * NS17
-* `afc-ns-names`
+* `afc-ns-names` - Apple File Conduit?
   * NS1
   * NS2
   * NS3
   * NS4
   * NS0
   * NS5
-* `afr-ns-names`
+* `afr-ns-names` - Apple Firmware Restore?
   * 0SN
   * NS1
   * NS2
@@ -202,3 +218,10 @@ hash, ... (insert HMAC parameters here from `FactoryProcess`).
 ## Using Rosetta to Weaken Platform Security
 
 ## Keeping a Place of Privilege - The Never Ending Update
+
+## Using AVD and Multiple Hypervisor Domains to Simulate iDevices
+
+In addition to an attacker controlled `hyp0`, additional domain can be used with any
+number of developer disk images (DDIs).  This allows an attacker to use an internal build of
+iOS / padOS / watchOS to pretend to be a device.  Since the Apple Silicon mac is a full fledged
+Apple ARM Device, it can gather nearly identical rights to systems like APNS and iCloud.

@@ -571,8 +571,8 @@ manifest_properties:
   psmh:
     description: previous stage manifest hash
   rcfg:
-    description: Appears in certificates issues by factory such as `T6031-SDOM1-TssLive-ManifestKey-RevA-Factory`.  Potentially
-      indicates that the policy is for a recovery boot only.
+    description: Appears in certificates issues by factory such as `T6031-SDOM1-TssLive-ManifestKey-RevA-Factory`.
+      Potentially indicates that the policy is for a recovery boot only.
     type: boolean
   Regn:
     description: Region Code
@@ -582,7 +582,7 @@ manifest_properties:
   rfcg:
     type: boolean
   RNCH:
-    description:
+    description: Remote Nonce Cryptographic Hash
   RSCH:
     description: Research mode
   rsch:
@@ -607,12 +607,11 @@ manifest_properties:
   SECM:
     description: Security Mode
   sei3:
-    description: Secure Enclave ID (alternate)? Appears to have a value identical
-      to `seid`.  Used for non domain0 (`hyp0`)
+    description: Secure Enclave ID for EL3 Appears to have a value identical to `seid`.
   seid:
     description: Secure Enclave ID - Root Domain
   sika:
-    description: System/Sealed Identity Key Protection? (Fuee)
+    description: System Identity Key Access
   SNON:
     description: SEP Nonce
   snon:
@@ -635,13 +634,16 @@ manifest_properties:
     description: Thunderbolt MAC Address
     manifest: true
   UID_MODE:
+    title: UID as GID Key Mode
     type: boolean
     request: true
-    description: Use UID key instead of GID key for firmware keybags
+    description: Used to create keybags for the UID instead of the GID key, such as
+      the use of `sepi` or booted SEP image firmware (as SEP hibernation data is crypted
+      with the devices UID rather then the GID).
     see:
     - uidm
   uidm:
-    description: UID Mode
+    description: UID Mode (Enabled)
     type: boolean
     roots:
     - ManifestKey-DataCenter
@@ -724,6 +726,10 @@ objects:
     recovery: true
   dven:
     description: Display Vendor Data
+  esca:
+    description: Effective Software CA
+  fsca:
+    description: Factory Software CA
   ftab:
     description: Factory Trust - Auto Boot FTAB images (used for devices such as AirPods,
       etc) are "hacktivated" or pre-APTicket'ed devices as they lack either a restore
@@ -838,7 +844,7 @@ objects:
   scef:
     description: SEP Firmware (Boot Firmware without RAM Image)
   sepi:
-    description: SEP Image (Boot and RAM Image)
+    description: SEP Image (Booted RAM Image / Hibernation Data)
     type: string
     encoding: sha2-384
     metadata:
