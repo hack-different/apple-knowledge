@@ -7,10 +7,10 @@ the misuse of which drives this research.
 
 From data gathered by looking at disk images in the wild, it appears that
 there are not just "customer" variants of the Restore and Upgrade disk images
-typically used in DFU based recovery, but also factory variants.  The factory
-variants, unlike customer, do not use a strict, internal state machine to
-perform this process.  This is logical as factory needs to do additional
-privileged operations such as:
+typically used in DFU based recovery, but also factory versions used in initial
+imaging and refurbishment.  The factory variants, unlike customer, do not use a strict,
+internal state machine to perform this process.  This is logical as factory
+needs to do additional privileged operations such as:
 
 * Component Testing / Quality Control (burn-in)
 * Calibration
@@ -22,10 +22,13 @@ privileged operations such as:
   components.  Because these use a secure channel, they must exchange keys before use.
   (This lead to numerous issues related to FaceID and TouchID with unauthorized repairs,
   as the repairing worker was unable to modify the SysCfg manifest and pair the new components).
+  This key exchange ensures that the components are protected from MitM (Man-in-the-Middle)
+  attacks.
 * Generation of key material.  The UID is generated on the AP/SEP itself during an initial run
   and stored in non-extractable fused memory of the AES hardware.  Should this not occur the
   UID would be a "clear key" consisting of all zeros/ones, and would not provide protection for user
-  data.
+  data.  Furthermore, it's likely that a blank board can run a "less then authorized" payload
+  to fixate the key to a known value (Key Pre-imaging Attack)
 * Fusing.  Devices must be moved from PVT (Production Validation Test) to MP (Mainline Production)
   after successful testing to put it into a customer ready state.  This takes devices and lowers
   them to `CPFM:03` which is a secure production device.
@@ -34,6 +37,8 @@ privileged operations such as:
     entitlement.  These operations center around the reading, modification and writing of
     protected registers.  This is likely how key components setting board ID, of fusing and
     device identity change in refurbishment.
+  * Additional details in iBoot indicate that the fuses are "sealed" (meaning its cryptographically
+    validated) and that it is somewhat mutable via the correct `rcfg` provider.
 * Refurbishment.  Refurbishment of a unit requires that components be re-tested and paired.
 * Installing the initial operating system and firmware
 

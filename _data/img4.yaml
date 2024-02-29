@@ -162,6 +162,8 @@ lpol_properties:
     access:
       write:
       - 1TR
+  gaid:
+    description: Gaia Authentication ID (Apple Internal)
   hrlp:
     title: Has Secure Enclave Signed recoveryOS Local Policy (hrlp)
     description: The `hrlp` indicates whether or not the `prot` value is the measurement
@@ -429,9 +431,9 @@ cryptex_objects:
     - ExtraContent
 manifest_properties:
   acdc:
-    description: Apple Certified Diagnostics Center/Certificate?
+    description: Apple Connect Developer Certificate
   acid:
-    description: Apple Account Directory Services ID (DSID)
+    description: Apple Connect ID (AppleInternal)
     type: integer
   AMNM:
     description: allow mix-n-match When set to true, img4s can be any valid signed
@@ -792,6 +794,7 @@ objects:
   mtfw:
     description: MultiTouch Firmware
   mtpf:
+  nefw:
   pdmg:
     description: Personalized Disk Image
   pmpf:
