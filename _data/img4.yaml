@@ -857,6 +857,15 @@ objects:
     description: Smart IO Firmware
   tmuf:
     description: Trusted MultiUpdater Firmware
+  trbb:
+    title: Trust Cache for Boot-ability Brain (iSim)
+    alias:
+    - Ap,BootabilityBrainTrustCache
+    supported_product_types:
+      iSim1,1:
+        chip: 65286
+        board: 240
+        security_domain: 1
   trst:
     description: Trust Object
     type: digest-object
