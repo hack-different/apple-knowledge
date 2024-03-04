@@ -965,15 +965,15 @@ img4_tags:
   hclo:
     description: Hypervisor Custom/Current LocalPolicy Object?
   hime:
-    description: HyperVisor Install Management Environment?
+    description: Hypervisor Related
   hmmr:
-    description: Host M M Recovery
+    description: Hypervisor Related
   homr:
-    description: Host OS M... Recovery
+    description: Hypervisor Related
   hop0:
     description: Hypervisor OS Partition 0 (`dom0`)
   hypr:
-    description: Hypervisor (EL2) Image
+    description: Hypervisor Related
   ienv:
     description: Install Environment?
   isor:
@@ -985,7 +985,7 @@ img4_tags:
   lamo:
     description:
   lckr:
-    description: Locker?
+    description: Locker - Used for Effaceable Storage end Obliteration
   lphp:
     description: Local Policy Hash Protection?
   ltrs:
@@ -1007,17 +1007,17 @@ img4_tags:
   name:
     description:
   nrde:
-    description: N Ramdisk Environment
+    description: Native Ramdisk Environment
   nsrv:
     description:
   omer:
-    description:
+    description: O M E Receipt?
   ooth:
-    description:
+    description: Other OS Translator (Rosetta) Hash?
   osev:
-    description: OS Environment
+    description: Other System (Rosetta) Environment?
   osrd:
-    description: OS Ramdisk
+    description: Other System (Rosetta) Ramdisk?
   otes:
     description:
   owns:
@@ -1029,9 +1029,9 @@ img4_tags:
   pert:
     description: Pre-OS Environment Root Trust
   pfle:
-    description: Pre-OS Firmware Launch Environment?
+    description: Pre-OS Factory Launch Environment?
   pflp:
-    description: Pre-OS Firmware Local Policy
+    description: Pre-OS Factory Local Policy
   phlt:
     description: Pre-OS/Per-OS Host Local Trust
   pndp:
@@ -1062,7 +1062,7 @@ img4_tags:
   ster:
     description:
   stg1:
-    description: stage 1 bootloader
+    description: Stage 1 Bootloader
     type: string
     encoding: sha2-384
   tbmr:
@@ -1080,8 +1080,8 @@ img4_tags:
   vice:
     description:
   vkdl:
-    description: Virtual Kernel ??
+    description: Virtual Kernel Linker
   ware:
-    description:
+    description: VMWare?
   xugs:
     description: x64 User System Disk

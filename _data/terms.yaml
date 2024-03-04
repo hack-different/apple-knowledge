@@ -156,6 +156,7 @@ term_list:
   - title: Device Address Resolution Table
   DCC:
   - title: Debug Communications Channel
+  DCP:
   dcrt:
   - title: Device Certificate
   defaults:
@@ -232,6 +233,8 @@ term_list:
   Exclave:
   - title: Microkernel Based Secure Applet System
   executable:
+  FDR:
+  - title: Factory Data Restore (SysCfg in the Cloud)
   FindMy:
   - title: FindMy iPhone / Mac
     description: A set of technologies that both help find the location of a lost
@@ -255,6 +258,8 @@ term_list:
 
       '
   Framework:
+  FUD:
+  - title: Firmware Update
   fuOS:
   - title: Fully Unsigned OS
   FW:
@@ -276,6 +281,8 @@ term_list:
     description: An AES key used to encrypt objects for all Apple CPUs with the same
       CHIP identity
   gif:
+  GigaLocker:
+  - title: File Format for xART
   GL0:
   - title: Guarded Level 0
   GL1:
@@ -288,9 +295,13 @@ term_list:
   - title: Guarded Execution Feature
   HDCP:
   - title: High Definition Content Protection
+  hdcp:
+  - title: High Definition Content Protection
   HFS:
   - title: Hierarchical File System (HFS/HFS+)
     description:
+  hibe:
+  - title: SEP Hibernation Service
   HID:
   - title: Human Interface Device
   HV:
@@ -444,6 +455,8 @@ term_list:
   - title: Lower Side-Band
   LVDS:
   - title: Low Voltage Differential Signaling
+  lynx:
+  - title: Apple Gen1 Secure Storage Component
   LZFSE:
   mach:
   mach_port:
@@ -507,12 +520,14 @@ term_list:
   - title: NVRAM Version 3
   OAH:
   - title: Other Architecture Handler (Rosetta2)
+  ocelot:
+  - title: Apple Gen2 Secure Storage Component
   OHCI:
   - title: Open Host Controller Interface (USB)
-  OIC:
-  - title: Owner Identity Certificate
   oic:
   - title: Owner Identity Certificate (OIC)
+  OIC:
+  - title: Owner Identity Certificate
   oid:
   - title: Object ID (ASN1)
     description: OIDs are namespaced, hierarchical identities
@@ -643,8 +658,13 @@ term_list:
   - title: RealTimeKit (Realtime OS)
   SART:
   - title: Secure Address Resolution Table
+  Savage:
+  sbio:
+  - title: SEP Biometric Service
   SCIP:
   - title: System Coprocessor Integrity Protection
+  scrd:
+  - title: Apple Secure Credential Service
   SE:
   - title: Secure Element
   seatbelt:
@@ -688,6 +708,8 @@ term_list:
     - CSR
   SKP:
   - title: Sealed Key Protection
+  sks:
+  - title: Apple Secure Key Storage
   SKS:
   - title: Secure Key Store Service
   SMBus:
@@ -739,12 +761,16 @@ term_list:
     see: SRD
   SSID:
   - title: Service Set Identity (WiFi)
+  stac:
+  - title: SEP Trusted Accessory
   stf:
   - title: Six-to-Four Tunnel Interface
   SVC:
   - title: ARM Supervisor Call (el1)
     see:
     - kernel
+  SVID:
+  - title: Standard or Vendor ID (USB-PD)
   syscall:
   - title: User Mode to Kernel Mode Request
     see:
@@ -783,7 +809,7 @@ term_list:
   - title: Trusted Public Keys
     description: Occurs in `trst` objects
   trustcache:
-  - title:
+  - title: Static Listing of Platform CDHashes
   TSS:
   - title: Tatsu Signing Server
   TTBCR:
@@ -828,6 +854,7 @@ term_list:
   - title: Virtual Address
     see:
     - MMU
+  Veridian:
   VG:
   - see: VolumeGroup
   VHCI:
@@ -858,10 +885,13 @@ term_list:
   - title: APFS Volume Group
     description: A volume group collects volumes of roles into a composite system.  Typically
       used to connect a System volume to a Data volume.
+  Vynal:
   wlan:
   x86:
   x86_64:
   x86_64h:
+  xART:
+  - title: Extensible Anti-Replay Token
   xHCI:
   - title: Extensible Host Controller Interface (USB 3.0)
   XN:
@@ -870,3 +900,4 @@ term_list:
   - title: XNUs not Unix (Darwin)
   XPC:
   - title: Cross Process Connection
+  Yonkers:

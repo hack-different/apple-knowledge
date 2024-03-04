@@ -79,22 +79,21 @@ as the initial values for BNCH domain nonces.
 This combined with the usage of Zero nonces for the boot nonce domains further extends predictable
 concerning to the other components of the boot path.
 
-## HyperVisor `hypr`, Application Virtualization (Rosetta) `appv`, Root Domain (`hyp0`) and `hyp0`'s SysCfg `0Cfg`
+## HyperVisor `hypr`, Application Virtualization (Rosetta) `appv`, Root Domain (`hop0`) and `hop0`'s SysCfg `0Cfg`
 
 For Apple systems historically the `hypr` role is filled by the SPTM, but with newer Apple Silicon
 this have moved from EL2 to Guarded Execution Roles.
 
-In "self hosted factory trust" the `hyp0` partition is used to act as the restoring station, and
+In "self hosted factory trust" the `hop0` partition is used to act as the restoring station, and
 a `hypX` partition is the restored station.  This manifests in the FDR cached data as unlabeled
-parts (those without any prefix such as `fCfg`, `dCfg`, etc), those of the `hyp0` host station
+parts (those without any prefix such as `fCfg`, `dCfg`, etc), those of the `hop0` host station
 (`mansta`) and those of the restored device station `mandev`.  This allows the `fSys` or Firmware
-SysCfg and `0Cfg` or `hyp0` domain 0 SysCfg to be stored at the root NOR part, while EAN can be
+SysCfg and `0Cfg` or `hop0` domain 0 SysCfg to be stored at the root NOR part, while EAN can be
 leveraged for the per OS `fCfg`.
 
- The domain
-zero kernel is privileged above other virtual machine instance, and `hypX` lacks root level permission.
+The domain zero kernel is privileged above other virtual machine instance, and `hypX` lacks root level permission.
 An example of this would be access to the `system` NVRAM namespace.  This means that should an
-attacker gain control of `hyp0` they can start a blue-pill like environment for any other domains.
+attacker gain control of `hop0` they can start a blue-pill like environment for any other domains.
 To do so would typically require a local recovery policy with lowered security settings, as
 non-recovery is a limited permission boot mode.
 
@@ -226,7 +225,7 @@ hash, ... (insert HMAC parameters here from `FactoryProcess`).
 
 ## Using AVD and Multiple Hypervisor Domains to Simulate iDevices
 
-In addition to an attacker controlled `hyp0`, additional domain can be used with any
+In addition to an attacker controlled `hop0`, additional domain can be used with any
 number of developer disk images (DDIs).  This allows an attacker to use an internal build of
 iOS / padOS / watchOS to pretend to be a device.  Since the Apple Silicon mac is a full fledged
 Apple ARM Device, it can gather nearly identical rights to systems like APNS and iCloud.
