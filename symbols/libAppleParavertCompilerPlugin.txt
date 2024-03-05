@@ -1,0 +1,82 @@
+/System/Library/Extensions/AppleParavirtGPUMetal.bundle/Contents/Resources/libAppleParavirtCompilerPlugin.dylib [arm64e, 0.040686 seconds]:
+    6D831920-9D7C-3E16-B6B9-5C9928621E39 /System/Library/Extensions/AppleParavirtGPUMetal.bundle/Contents/Resources/libAppleParavirtCompilerPlugin.dylib [DYLIB, DYLDSHAREDCACHE, FaultedFromDiskDyldSharedCache, MMap64]  
+        0x00000001e766e000 (  0x4000) __TEXT SEGMENT
+            0x00000001e766e000 (  0x3240) MACH_HEADER
+            0x00000001e7671240 (   0x8a8) __TEXT __text
+                0x00000001e7671240 (    0x68) MTLCompilerCreate [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e76712a8 (    0x74) AppleParavirtCompiler::init(AppleParavirtCompilerTargetInfo const*) [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e767131c (    0x14) MTLCompilerBuildRequestWithOptions [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e7671330 (   0x244) AppleParavirtCompiler::buildRequestWithOptions(void const*, unsigned long, unsigned int, llvm::Module*, void const**, unsigned long*, void const**, unsigned long*, void const**, unsigned long*, char const**) [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e7671574 (    0x2c) MTLCompilerDelete [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e76715a0 (    0x30) MTLCompilerReleaseReply [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e76715d0 (    0x30) AppleParavirtCompiler::deleteCompilerReply() [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e7671600 (    0x50) AppleParavirtCompiler::~AppleParavirtCompiler() [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e7671650 (     0xc) (null) [FUNC, FunctionStarts] 
+                0x00000001e767165c (     0x4) AppleParavirtCompiler::~AppleParavirtCompiler() [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e7671660 (    0x28) AppleParavirtCompiler::~AppleParavirtCompiler() [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e7671688 (    0x58) (null) [FUNC, FunctionStarts] 
+                0x00000001e76716e0 (    0x88) (null) [FUNC, FunctionStarts] 
+                0x00000001e7671768 (    0x98) (null) [FUNC, FunctionStarts] 
+                0x00000001e7671800 (    0x18) (null) [FUNC, FunctionStarts] 
+                0x00000001e7671818 (    0x5c) (null) [FUNC, FunctionStarts] 
+                0x00000001e7671874 (    0x34) (null) [FUNC, FunctionStarts] 
+                0x00000001e76718a8 (    0x88) (null) [FUNC, FunctionStarts] 
+                0x00000001e7671930 (    0x2c) (null) [FUNC, FunctionStarts] 
+                0x00000001e767195c (    0x2c) (null) [FUNC, FunctionStarts] 
+                0x00000001e7671988 (    0x2c) (null) [FUNC, FunctionStarts] 
+                0x00000001e76719b4 (    0x2c) (null) [FUNC, FunctionStarts] 
+                0x00000001e76719e0 (    0x2c) (null) [FUNC, FunctionStarts] 
+                0x00000001e7671a0c (    0x2c) (null) [FUNC, FunctionStarts] 
+                0x00000001e7671a38 (    0x2c) (null) [FUNC, FunctionStarts] 
+                0x00000001e7671a64 (    0x2c) (null) [FUNC, FunctionStarts] 
+                0x00000001e7671a90 (    0x2c) (null) [FUNC, FunctionStarts] 
+                0x00000001e7671abc (    0x2c) (null) [FUNC, FunctionStarts] 
+            0x00000001e7671ae8 (   0x1f0) __TEXT __auth_stubs
+                0x00000001e7671ae8 (    0x10) DYLD-STUB$$LLVMDisposeMemoryBuffer [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671af8 (    0x10) DYLD-STUB$$LLVMExtraDisposeSharedModule [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671b08 (    0x10) DYLD-STUB$$LLVMExtraMakeSharedModule [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671b18 (    0x10) DYLD-STUB$$LLVMGetBufferSize [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671b28 (    0x10) DYLD-STUB$$LLVMGetBufferStart [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671b38 (    0x10) DYLD-STUB$$LLVMGetTarget [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671b48 (    0x10) DYLD-STUB$$MTLDowngradeAIRModule [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671b58 (    0x10) DYLD-STUB$$MTLGPUCompilerCreate [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671b68 (    0x10) DYLD-STUB$$MTLGPUCompilerDestroy [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671b78 (    0x10) DYLD-STUB$$MTLMetalFunctionCreate [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671b88 (    0x10) DYLD-STUB$$MTLMetalLibCreateExecutableWithTriple [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671b98 (    0x10) DYLD-STUB$$MTLMetalLibDestroy [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671ba8 (    0x10) DYLD-STUB$$MTLMetalLibInsertFunction [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671bb8 (    0x10) DYLD-STUB$$MTLWriteMetalLibToMemoryBuffer [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671bc8 (    0x10) DYLD-STUB$$_Unwind_Resume [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671bd8 (    0x10) DYLD-STUB$$llvm::NamedMDNode::getOperand(unsigned int) const [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671be8 (    0x10) DYLD-STUB$$llvm::Value::getName() const [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671bf8 (    0x10) DYLD-STUB$$llvm::Module::getNamedMetadata(llvm::Twine const&) const [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671c08 (    0x10) DYLD-STUB$$std::logic_error::logic_error(char const*) [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671c18 (    0x10) DYLD-STUB$$std::terminate() [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671c28 (    0x10) DYLD-STUB$$operator delete(void*) [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671c38 (    0x10) DYLD-STUB$$operator new(unsigned long) [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671c48 (    0x10) DYLD-STUB$$__assert_rtn [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671c58 (    0x10) DYLD-STUB$$__cxa_allocate_exception [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671c68 (    0x10) DYLD-STUB$$__cxa_begin_catch [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671c78 (    0x10) DYLD-STUB$$__cxa_free_exception [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671c88 (    0x10) DYLD-STUB$$__cxa_throw [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671c98 (    0x10) DYLD-STUB$$__stack_chk_fail [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671ca8 (    0x10) DYLD-STUB$$_os_log_error_impl [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671cb8 (    0x10) DYLD-STUB$$memmove [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e7671cc8 (    0x10) DYLD-STUB$$os_log_type_enabled [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+            0x00000001e7671cd8 (    0x38) __TEXT __gcc_except_tab
+            0x00000001e7671d10 (    0x1e) __TEXT __oslogstring
+            0x00000001e7671d2e (   0x1b7) __TEXT __cstring
+            0x00000001e7671ee5 (    0x2e) __TEXT __const
+            0x00000001e7671f14 (    0xb4) __TEXT __unwind_info
+            0x00000001e7671fc8 (    0x38) __TEXT __eh_frame
+        0x000000022dfeec70 (    0x28) __DATA_CONST SEGMENT
+            0x000000022dfeec70 (    0x20) __DATA_CONST __got
+            0x000000022dfeec90 (     0x8) __DATA_CONST __objc_imageinfo
+        0x000000023646acf8 (   0x160) __AUTH_CONST SEGMENT
+            0x000000023646acf8 (    0x60) __AUTH_CONST __const
+                0x000000023646acf8 (    0x60) vtable for AppleParavirtCompiler [EXT, NameNList, MangledNameNList, NList] 
+            0x000000023646ad58 (   0x100) __AUTH_CONST __auth_got
+        0x00000002308ac208 (    0x18) __DATA SEGMENT
+            0x00000002308ac208 (    0x18) __DATA __data
+                0x00000002308ac208 (    0x18) entryPointsMetadata [EXT, NameNList, MangledNameNList, NList] 
+        0x000000023a910000 (0x37bf0000) __LINKEDIT SEGMENT

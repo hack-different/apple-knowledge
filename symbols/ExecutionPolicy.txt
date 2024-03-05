@@ -1,0 +1,197 @@
+/System/Library/Frameworks/ExecutionPolicy.framework/Versions/A/ExecutionPolicy [arm64e, 0.038906 seconds]:
+    C08F7329-444C-347A-841F-FDB73C19BF67 /System/Library/Frameworks/ExecutionPolicy.framework/Versions/A/ExecutionPolicy [DYLIB, DYLDSHAREDCACHE, FaultedFromDiskDyldSharedCache, MMap64]  
+        0x00000001eda24000 (  0x4000) __TEXT SEGMENT
+            0x00000001eda24000 (  0x18ec) MACH_HEADER
+            0x00000001eda258ec (  0x154c) __TEXT __text
+                0x00000001eda258ec (     0x8) doBooleanXPCFunction [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda258f4 (   0x26c) BooleanXPCImpl [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda25b60 (     0x8) doBooleanXPCFunctionSilent [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda25b68 (   0x298) doObjectXPCFunction [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda25e00 (    0x10) __Block_byref_object_copy_ [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda25e10 (     0x8) __Block_byref_object_dispose_ [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda25e18 (    0xc8) __doObjectXPCFunction_block_invoke [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda25ee0 (    0x50) __copy_helper_block_e8_32r40r [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda25f30 (    0x44) __destroy_helper_block_e8_32r40r [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda25f74 (    0x18) __doObjectXPCFunction_block_invoke.1 [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda25f8c (    0x10) __copy_helper_block_e8_32b [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda25f9c (     0x8) __destroy_helper_block_e8_32s [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda25fa4 (   0x19c) isConnectionEntitled [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26140 (    0xb0) __BooleanXPCImpl_block_invoke [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda261f0 (    0x20) __BooleanXPCImpl_block_invoke.9 [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26210 (    0x50) __copy_helper_block_e8_32b40r [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26260 (    0x40) __destroy_helper_block_e8_32s40r [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda262a0 (    0x18) OUTLINED_FUNCTION_0 [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda262b8 (    0x1c) OUTLINED_FUNCTION_1 [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda262d4 (    0x54) +[SPLog generic] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26328 (    0x48) __16+[SPLog generic]_block_invoke [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26370 (    0x54) +[SPLog kext] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda263c4 (    0x48) __13+[SPLog kext]_block_invoke [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda2640c (    0x54) +[SPLog exec] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26460 (    0x48) __13+[SPLog exec]_block_invoke [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda264a8 (    0x54) +[SPLog measurements] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda264fc (    0x48) __21+[SPLog measurements]_block_invoke [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26544 (    0x54) +[SPLog signposts] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26598 (    0x48) __18+[SPLog signposts]_block_invoke [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda265e0 (    0x44) +[SPLog verboseLoggingEnabled] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26624 (   0x124) __30+[SPLog verboseLoggingEnabled]_block_invoke [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26748 (     0xc) +[SPLog setVerboseLogging:] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26754 (    0x48) +[SPLog generateSignpostID] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda2679c (    0x24) isKextSecurityDisabledMachine [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda267c0 (    0x24) isSIPDisabledMachine [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda267e4 (    0x24) isSKELDisabledMachine [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26808 (    0x24) isAppleInternalMachine [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda2682c (     0xc) isDarwinOSEnvironment [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26838 (    0x3c) isInstallerOrRecoveryEnvironment [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26874 (    0x14) isBehavioralEngineEnabledMachine [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26888 (    0x14) isProvenanceTrackingEnabled [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda2689c (    0xb4) -[EPExecutionPolicy init] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26950 (    0x4c) -[EPExecutionPolicy dealloc] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda2699c (    0xc8) -[EPExecutionPolicy addPolicyExceptionForURL:error:] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26a64 (    0x10) __52-[EPExecutionPolicy addPolicyExceptionForURL:error:]_block_invoke [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26a74 (     0x8) __copy_helper_block_e8_32s [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26a7c (    0x44) -[EPExecutionPolicy .cxx_destruct] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26ac0 (    0xb4) -[EPDeveloperTool init] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26b74 (    0x4c) -[EPDeveloperTool dealloc] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26bc0 (    0x3c) -[EPDeveloperTool authorizationStatus] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26bfc (    0x68) -[EPDeveloperTool requestDeveloperToolAccessWithCompletionHandler:] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26c64 (     0x8) __67-[EPDeveloperTool requestDeveloperToolAccessWithCompletionHandler:]_block_invoke [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26c6c (    0x44) -[EPDeveloperTool .cxx_destruct] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26cb0 (    0x5c) __doObjectXPCFunction_block_invoke.cold.1 [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26d0c (    0x5c) isConnectionEntitled.cold.1 [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26d68 (    0x5c) __BooleanXPCImpl_block_invoke.cold.1 [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001eda26dc4 (    0x74) __30+[SPLog verboseLoggingEnabled]_block_invoke.cold.1 [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+            0x00000001eda26e38 (   0x1c0) __TEXT __auth_stubs
+                0x00000001eda26e38 (    0x10) DYLD-STUB$$TCCAccessPreflight [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26e48 (    0x10) DYLD-STUB$$_Block_object_assign [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26e58 (    0x10) DYLD-STUB$$_Block_object_dispose [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26e68 (    0x10) DYLD-STUB$$_Unwind_Resume [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26e78 (    0x10) DYLD-STUB$$__stack_chk_fail [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26e88 (    0x10) DYLD-STUB$$_os_feature_enabled_impl [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26e98 (    0x10) DYLD-STUB$$_os_log_error_impl [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26ea8 (    0x10) DYLD-STUB$$_os_log_impl [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26eb8 (    0x10) DYLD-STUB$$csr_check [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26ec8 (    0x10) DYLD-STUB$$dispatch_once [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26ed8 (    0x10) DYLD-STUB$$getenv [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26ee8 (    0x10) DYLD-STUB$$objc_alloc [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26ef8 (    0x10) DYLD-STUB$$objc_autoreleaseReturnValue [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26f08 (    0x10) DYLD-STUB$$objc_msgSendSuper2 [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26f18 (    0x10) DYLD-STUB$$objc_opt_class [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26f28 (    0x10) DYLD-STUB$$objc_opt_isKindOfClass [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26f38 (    0x10) DYLD-STUB$$objc_release [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26f48 (    0x10) DYLD-STUB$$objc_retain [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26f58 (    0x10) DYLD-STUB$$objc_retainAutorelease [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26f68 (    0x10) DYLD-STUB$$objc_retainAutoreleaseReturnValue [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26f78 (    0x10) DYLD-STUB$$objc_retainAutoreleasedReturnValue [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26f88 (    0x10) DYLD-STUB$$objc_retainBlock [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26f98 (    0x10) DYLD-STUB$$objc_storeStrong [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26fa8 (    0x10) DYLD-STUB$$os_log_create [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26fb8 (    0x10) DYLD-STUB$$os_log_type_enabled [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26fc8 (    0x10) DYLD-STUB$$os_signpost_id_generate [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26fd8 (    0x10) DYLD-STUB$$os_variant_is_darwinos [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001eda26fe8 (    0x10) DYLD-STUB$$sysctlbyname [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+            0x00000001eda26ff8 (    0xe4) __TEXT __objc_methlist
+                0x00000001eda26ff8 (    0x68) _OBJC_$_CLASS_METHODS_SPLog [NameNList, MangledNameNList, NList] 
+                0x00000001eda27060 (    0x38) _OBJC_$_INSTANCE_METHODS_EPExecutionPolicy [NameNList, MangledNameNList, NList] 
+                0x00000001eda27098 (    0x44) _OBJC_$_INSTANCE_METHODS_EPDeveloperTool [NameNList, MangledNameNList, NList] 
+            0x00000001eda270e0 (    0x58) __TEXT __const
+                0x00000001eda270e0 (    0x38) ExecutionPolicyVersionString [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001eda27118 (    0x20) ExecutionPolicyVersionNumber [EXT, NameNList, MangledNameNList, NList] 
+            0x00000001eda27138 (    0x50) __TEXT __gcc_except_tab
+                0x00000001eda27138 (    0x28) GCC_except_table1 [NameNList, MangledNameNList, NList] 
+                0x00000001eda27160 (    0x28) GCC_except_table3 [NameNList, MangledNameNList, NList] 
+            0x00000001eda27188 (    0x78) __TEXT __oslogstring
+            0x00000001eda27200 (   0x16f) __TEXT __cstring
+            0x00000001eda27370 (    0xe4) __TEXT __unwind_info
+            0x00000001eda27454 (    0x36) __TEXT __objc_classname
+            0x00000001eda2748a (   0x5cf) __TEXT __objc_methname
+            0x00000001eda27a59 (   0x3e5) __TEXT __objc_methtype
+            0x00000001eda27e40 (   0x1c0) __TEXT __objc_stubs
+                0x00000001eda27e40 (    0x20) objc_msgSend$addExceptionForURL:withReply: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001eda27e60 (    0x20) objc_msgSend$boolValue [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001eda27e80 (    0x20) objc_msgSend$code [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001eda27ea0 (    0x20) objc_msgSend$generic [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001eda27ec0 (    0x20) objc_msgSend$initWithMachServiceName:options: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001eda27ee0 (    0x20) objc_msgSend$interfaceWithProtocol: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001eda27f00 (    0x20) objc_msgSend$invalidate [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001eda27f20 (    0x20) objc_msgSend$requestDeveloperToolAccessWithReply: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001eda27f40 (    0x20) objc_msgSend$resume [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001eda27f60 (    0x20) objc_msgSend$setRemoteObjectInterface: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001eda27f80 (    0x20) objc_msgSend$signposts [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001eda27fa0 (    0x20) objc_msgSend$stringWithFormat: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001eda27fc0 (    0x20) objc_msgSend$synchronousRemoteObjectProxyWithErrorHandler: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001eda27fe0 (    0x20) objc_msgSend$valueForEntitlement: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+        0x00000002366e7f58 (   0x5c0) __DATA_CONST SEGMENT
+            0x00000002366e7f58 (    0x18) __DATA_CONST __got
+            0x00000002366e7f70 (    0x48) __DATA_CONST __const
+                0x00000002366e7f70 (    0x20) __block_descriptor_32_e5_v8?0l [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000002366e7f90 (     0x8) EPErrorDomain [EXT, NameNList, MangledNameNList, NList] 
+                0x00000002366e7f98 (    0x20) __block_descriptor_32_e28_v24?08?<v?B"NSError">16l [PEXT, NameNList, MangledNameNList, NList] 
+            0x00000002366e7fb8 (    0x18) __DATA_CONST __objc_classlist
+            0x00000002366e7fd0 (     0x8) __DATA_CONST __objc_protolist
+                0x00000002366e7fd0 (     0x8) _OBJC_LABEL_PROTOCOL_$_ExecManager [PEXT, NameNList, MangledNameNList, NList] 
+            0x00000002366e7fd8 (     0x8) __DATA_CONST __objc_imageinfo
+            0x00000002366e7fe0 (   0x468) __DATA_CONST __objc_const
+                0x00000002366e7fe0 (    0x48) _OBJC_CLASS_RO_$_SPLog [NameNList, MangledNameNList, NList] 
+                0x00000002366e8028 (   0x230) _OBJC_$_PROTOCOL_INSTANCE_METHODS_ExecManager [NameNList, MangledNameNList, NList] 
+                0x00000002366e8258 (    0xb8) _OBJC_$_PROTOCOL_METHOD_TYPES_ExecManager [NameNList, MangledNameNList, NList] 
+                0x00000002366e8310 (    0x48) _OBJC_METACLASS_RO_$_EPExecutionPolicy [NameNList, MangledNameNList, NList] 
+                0x00000002366e8358 (    0x48) _OBJC_$_INSTANCE_VARIABLES_EPExecutionPolicy [NameNList, MangledNameNList, NList] 
+                0x00000002366e83a0 (    0x48) _OBJC_METACLASS_RO_$_EPDeveloperTool [NameNList, MangledNameNList, NList] 
+                0x00000002366e83e8 (    0x48) _OBJC_$_INSTANCE_VARIABLES_EPDeveloperTool [NameNList, MangledNameNList, NList] 
+                0x00000002366e8430 (    0x18) _OBJC_$_PROP_LIST_EPDeveloperTool [NameNList, MangledNameNList, NList] 
+            0x00000002366e8448 (    0xd0) __DATA_CONST __objc_selrefs
+        0x00000002366e8518 (   0x3f8) __AUTH_CONST SEGMENT
+            0x00000002366e8518 (   0x1d0) __AUTH_CONST __const
+                0x00000002366e8518 (    0x30) __block_descriptor_48_e8_32r40r_e20_v24?08"NSError"16l [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000002366e8548 (    0x30) __block_descriptor_40_e8_32bs_e17_v16?0"NSError"8l [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000002366e8578 (    0x30) __block_descriptor_49_e8_32r40r_e20_v20?0B8"NSError"12l [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000002366e85a8 (    0x30) __block_descriptor_48_e8_32bs40r_e17_v16?0"NSError"8l [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000002366e85d8 (    0x20) __block_literal_global [NameNList, MangledNameNList, NList] 
+                0x00000002366e85f8 (    0x20) __block_literal_global.4 [NameNList, MangledNameNList, NList] 
+                0x00000002366e8618 (    0x20) __block_literal_global.7 [NameNList, MangledNameNList, NList] 
+                0x00000002366e8638 (    0x20) __block_literal_global.10 [NameNList, MangledNameNList, NList] 
+                0x00000002366e8658 (    0x20) __block_literal_global.13 [NameNList, MangledNameNList, NList] 
+                0x00000002366e8678 (    0x20) __block_literal_global.16 [NameNList, MangledNameNList, NList] 
+                0x00000002366e8698 (    0x30) __block_descriptor_40_e8_32s_e28_v24?08?<v?B"NSError">16l [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000002366e86c8 (    0x20) __block_literal_global [NameNList, MangledNameNList, NList] 
+            0x00000002366e86e8 (    0x60) __AUTH_CONST __cfstring
+            0x00000002366e8748 (    0xd8) __AUTH_CONST __objc_const
+                0x00000002366e8748 (    0x48) _OBJC_METACLASS_RO_$_SPLog [NameNList, MangledNameNList, NList] 
+                0x00000002366e8790 (    0x48) _OBJC_CLASS_RO_$_EPExecutionPolicy [NameNList, MangledNameNList, NList] 
+                0x00000002366e87d8 (    0x48) _OBJC_CLASS_RO_$_EPDeveloperTool [NameNList, MangledNameNList, NList] 
+            0x00000002366e8820 (    0xf0) __AUTH_CONST __auth_got
+        0x0000000232219d08 (    0xf0) __AUTH SEGMENT
+            0x0000000232219d08 (    0xf0) __AUTH __objc_data
+                0x0000000232219d08 (    0x28) OBJC_CLASS_$_SPLog [EXT, NameNList, MangledNameNList, NList] 
+                0x0000000232219d30 (    0x28) OBJC_METACLASS_$_SPLog [EXT, NameNList, MangledNameNList, NList] 
+                0x0000000232219d58 (    0x28) OBJC_CLASS_$_EPExecutionPolicy [EXT, NameNList, MangledNameNList, NList] 
+                0x0000000232219d80 (    0x28) OBJC_METACLASS_$_EPExecutionPolicy [EXT, NameNList, MangledNameNList, NList] 
+                0x0000000232219da8 (    0x28) OBJC_CLASS_$_EPDeveloperTool [EXT, NameNList, MangledNameNList, NList] 
+                0x0000000232219dd0 (    0x28) OBJC_METACLASS_$_EPDeveloperTool [EXT, NameNList, MangledNameNList, NList] 
+        0x0000000230944750 (   0x111) __DATA SEGMENT
+            0x0000000230944750 (     0x8) __DATA __objc_protorefs
+                0x0000000230944750 (     0x8) _OBJC_PROTOCOL_REFERENCE_$_ExecManager [PEXT, NameNList, MangledNameNList, NList] 
+            0x0000000230944758 (    0x28) __DATA __objc_classrefs
+            0x0000000230944780 (    0x10) __DATA __objc_superrefs
+            0x0000000230944790 (    0x10) __DATA __objc_ivar
+                0x0000000230944790 (     0x4) OBJC_IVAR_$_EPExecutionPolicy._interface [PEXT, NameNList, MangledNameNList, NList] 
+                0x0000000230944794 (     0x4) OBJC_IVAR_$_EPExecutionPolicy._connection [PEXT, NameNList, MangledNameNList, NList] 
+                0x0000000230944798 (     0x4) OBJC_IVAR_$_EPDeveloperTool._interface [PEXT, NameNList, MangledNameNList, NList] 
+                0x000000023094479c (     0x4) OBJC_IVAR_$_EPDeveloperTool._connection [PEXT, NameNList, MangledNameNList, NList] 
+            0x00000002309447a0 (    0x68) __DATA __data
+                0x00000002309447a0 (     0x8) sSystemPolicySubsystem [EXT, NameNList, MangledNameNList, NList] 
+                0x00000002309447a8 (    0x60) _OBJC_PROTOCOL_$_ExecManager [PEXT, NameNList, MangledNameNList, NList] 
+            0x0000000230944808 (    0x59) __DATA __bss
+                0x0000000230944808 (     0x8) generic.sLogInit [NameNList, MangledNameNList, NList] 
+                0x0000000230944810 (     0x8) generic.sLog [NameNList, MangledNameNList, NList] 
+                0x0000000230944818 (     0x8) kext.sLogInit [NameNList, MangledNameNList, NList] 
+                0x0000000230944820 (     0x8) kext.sLog [NameNList, MangledNameNList, NList] 
+                0x0000000230944828 (     0x8) exec.sLogInit [NameNList, MangledNameNList, NList] 
+                0x0000000230944830 (     0x8) exec.sLog [NameNList, MangledNameNList, NList] 
+                0x0000000230944838 (     0x8) measurements.sLogInit [NameNList, MangledNameNList, NList] 
+                0x0000000230944840 (     0x8) measurements.sLog [NameNList, MangledNameNList, NList] 
+                0x0000000230944848 (     0x8) signposts.sLogInit [NameNList, MangledNameNList, NList] 
+                0x0000000230944850 (     0x8) signposts.sLog [NameNList, MangledNameNList, NList] 
+                0x0000000230944858 (     0x8) verboseLoggingEnabled.sOnceToken [NameNList, MangledNameNList, NList] 
+                0x0000000230944860 (     0x1) sVerboseLogging [NameNList, MangledNameNList, NList] 
+        0x000000023a910000 (0x37bf0000) __LINKEDIT SEGMENT
