@@ -1,0 +1,80 @@
+/usr/lib/libAccountPolicyTranslation.dylib [arm64e, 0.037206 seconds]:
+    BAD13934-6B62-349C-8FE2-FFD6B20A2607 /usr/lib/libAccountPolicyTranslation.dylib [DYLIB, DYLDSHAREDCACHE, FaultedFromDiskDyldSharedCache, MMap64]  
+        0x00000001a4ba6000 (  0x4000) __TEXT SEGMENT
+            0x00000001a4ba6000 (  0x3828) MACH_HEADER
+            0x00000001a4ba9828 (    0x9c) __TEXT __text
+                0x00000001a4ba9828 (    0x4c) APPolicySetWithLegacyPolicies [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a4ba9874 (    0x4c) APLegacyPoliciesWithPolicySet [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a4ba98c0 (     0x4) APCategoryAndIdentifierForLegacyPolicyName [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+            0x00000001a4ba98c4 (    0x60) __TEXT __auth_stubs
+                0x00000001a4ba98c4 (    0x10) DYLD-STUB$$APPolicySetCategoryAndIdentifierForLegacyPolicyName [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a4ba98d4 (    0x10) DYLD-STUB$$APPolicySetCopyAccountPolicies [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a4ba98e4 (    0x10) DYLD-STUB$$APPolicySetCopyLegacyPolicies [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a4ba98f4 (    0x10) DYLD-STUB$$APPolicySetCreateWithAccountPolicies [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a4ba9904 (    0x10) DYLD-STUB$$APPolicySetCreateWithLegacyPolicies [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a4ba9914 (    0x10) DYLD-STUB$$CFRelease [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+            0x00000001a4ba9924 (   0x679) __TEXT __cstring
+            0x00000001a4ba9fa0 (    0x10) __TEXT __const
+                0x00000001a4ba9fa0 (     0x8) kAPExpirationTimeExpired [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001a4ba9fa8 (     0x8) kAPExpirationTimeNeverExpires [EXT, NameNList, MangledNameNList, NList] 
+            0x00000001a4ba9fb0 (    0x50) __TEXT __unwind_info
+        0x00000001d3b25c58 (   0x1b0) __DATA_CONST SEGMENT
+            0x00000001d3b25c58 (     0x8) __DATA_CONST __got
+            0x00000001d3b25c60 (   0x1a8) __DATA_CONST __const
+                0x00000001d3b25c60 (     0x8) kAPPolicyKeyIdentifier [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25c68 (     0x8) kAPPolicyKeyParameters [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25c70 (     0x8) kAPPolicyKeyContent [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25c78 (     0x8) kAPPolicyKeyContentDescription [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25c80 (     0x8) kAPPolicyKeyEvaluationDetails [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25c88 (     0x8) kAPPolicyKeyPolicySatisfied [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25c90 (     0x8) kAPPolicyKeyDefaultContentDescription [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25c98 (     0x8) kAPPolicyCategoryAuthentication [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25ca0 (     0x8) kAPPolicyCategoryPasswordChange [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25ca8 (     0x8) kAPPolicyCategoryPasswordContent [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25cb0 (     0x8) kAPPolicyKeyPasswordContentSummaries [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25cb8 (     0x8) kAPPolicyKeyDefaultPasswordContentSummary [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25cc0 (     0x8) kAPAttributeRecordName [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25cc8 (     0x8) kAPAttributeRecordType [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25cd0 (     0x8) kAPAttributePassword [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25cd8 (     0x8) kAPAttributePasswordHashes [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25ce0 (     0x8) kAPAttributePasswordHistory [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25ce8 (     0x8) kAPAttributePasswordHistoryDepth [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25cf0 (     0x8) kAPAttributeCurrentDate [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25cf8 (     0x8) kAPAttributeCurrentTime [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d00 (     0x8) kAPAttributeCurrentDayOfWeek [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d08 (     0x8) kAPAttributeCurrentTimeOfDay [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d10 (     0x8) kAPAttributeFailedAuthentications [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d18 (     0x8) kAPAttributeMaximumFailedAuthentications [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d20 (     0x8) kAPAttributeLastFailedAuthenticationTime [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d28 (     0x8) kAPAttributeLastAuthenticationTime [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d30 (     0x8) kAPAttributeMinutesUntilFailedAuthenticationReset [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d38 (     0x8) kAPAttributeLastPasswordChangeTime [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d40 (     0x8) kAPAttributeNewPasswordRequiredTime [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d48 (     0x8) kAPAttributeCreationTime [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d50 (     0x8) kAPAttributeConsecutiveCharacters [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d58 (     0x8) kAPAttributeMaximumConsecutiveCharacters [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d60 (     0x8) kAPAttributeSequentialCharacters [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d68 (     0x8) kAPAttributeMaximumSequentialCharacters [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d70 (     0x8) kAPAttributeIsAdmin [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d78 (     0x8) kAPAttributeIsAdministrativelyDisabled [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d80 (     0x8) kAPAttributeGlobalPoliciesGUID [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d88 (     0x8) kAPAttributeRecordPoliciesGUID [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d90 (     0x8) kAPAttributeGlobalPolicies [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25d98 (     0x8) kAPAttributeRecordPolicies [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25da0 (     0x8) kAPAttributeExpiresEveryNDays [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25da8 (     0x8) kAPAttributeDaysUntilExpiration [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25db0 (     0x8) kAPAttributeEnableOnDate [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25db8 (     0x8) kAPAttributeExpiresOnDate [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25dc0 (     0x8) kAPAttributeEnableOnDayOfWeek [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25dc8 (     0x8) kAPAttributeExpiresOnDayOfWeek [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25dd0 (     0x8) kAPAttributeEnableAtTimeOfDay [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25dd8 (     0x8) kAPAttributeExpiresAtTimeOfDay [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25de0 (     0x8) kAPAttributeIsMemberOfGroup [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25de8 (     0x8) kAPAttributeRecordTypeComputer [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25df0 (     0x8) kAPAttributeRecordTypeUser [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25df8 (     0x8) kAPLegacyPolicyCategory [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b25e00 (     0x8) kAPLegacyPolicyIdentifier [EXT, NameNList, MangledNameNList, NList] 
+        0x00000001dd8812c8 (   0x6d0) __AUTH_CONST SEGMENT
+            0x00000001dd8812c8 (   0x6a0) __AUTH_CONST __cfstring
+            0x00000001dd881968 (    0x30) __AUTH_CONST __auth_got
+        0x000000023a910000 (0x37bf0000) __LINKEDIT SEGMENT
