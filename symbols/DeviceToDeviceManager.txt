@@ -1,0 +1,55 @@
+/System/Library/PrivateFrameworks/DeviceToDeviceManager.framework/Versions/A/DeviceToDeviceManager [arm64e, 0.040543 seconds]:
+    558BE076-4CFB-3C39-8E3C-A00E7D9AB511 /System/Library/PrivateFrameworks/DeviceToDeviceManager.framework/Versions/A/DeviceToDeviceManager [DYLIB, DYLDSHAREDCACHE, FaultedFromDiskDyldSharedCache, MMap64]  
+        0x00000001aaea2000 (  0x1ffc) __TEXT SEGMENT
+            0x00000001aaea2000 (  0x10a0) MACH_HEADER
+            0x00000001aaea30a0 (   0xc10) __TEXT __text
+                0x00000001aaea30a0 (   0x284) D2DInitialize [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001aaea3324 (    0xd4) D2DStartAdvertisingPairOnTransport [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001aaea33f8 (    0x4c) D2DTerminate [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001aaea3444 (    0xd8) D2DStartAdvertisingPair [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001aaea351c (    0xd8) D2DStopAdvertisingPair [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001aaea35f4 (    0xd4) D2DStopAdvertisingPairOnTransport [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001aaea36c8 (    0x88) D2DStartBrowsingForKey [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001aaea3750 (    0x7c) D2DStartBrowsingForKeyOnTransport [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001aaea37cc (    0x88) D2DStopBrowsingForKey [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001aaea3854 (    0x7c) D2DStopBrowsingForKeyOnTransport [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001aaea38d0 (    0xe4) D2DStartResolvingPair [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001aaea39b4 (    0xe4) D2DStartResolvingPairOnTransport [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001aaea3a98 (    0xdc) D2DStopResolvingPair [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001aaea3b74 (    0xe4) D2DStopResolvingPairOnTransport [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001aaea3c58 (    0x2c) D2DRetain [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001aaea3c84 (    0x2c) D2DRelease [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+            0x00000001aaea3cb0 (   0x100) __TEXT __auth_stubs
+                0x00000001aaea3cb0 (    0x10) DYLD-STUB$$CFArrayGetCount [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001aaea3cc0 (    0x10) DYLD-STUB$$CFArrayGetValueAtIndex [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001aaea3cd0 (    0x10) DYLD-STUB$$CFBundleCopyBuiltInPlugInsURL [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001aaea3ce0 (    0x10) DYLD-STUB$$CFBundleCreateBundlesFromDirectory [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001aaea3cf0 (    0x10) DYLD-STUB$$CFBundleGetBundleWithIdentifier [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001aaea3d00 (    0x10) DYLD-STUB$$CFBundleGetDataPointerForName [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001aaea3d10 (    0x10) DYLD-STUB$$CFBundleGetInfoDictionary [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001aaea3d20 (    0x10) DYLD-STUB$$CFDataCreate [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001aaea3d30 (    0x10) DYLD-STUB$$CFDictionaryGetValue [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001aaea3d40 (    0x10) DYLD-STUB$$CFGetTypeID [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001aaea3d50 (    0x10) DYLD-STUB$$CFNumberGetTypeID [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001aaea3d60 (    0x10) DYLD-STUB$$CFNumberGetValue [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001aaea3d70 (    0x10) DYLD-STUB$$CFRelease [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001aaea3d80 (    0x10) DYLD-STUB$$CFStringGetTypeID [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001aaea3d90 (    0x10) DYLD-STUB$$fprintf [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001aaea3da0 (    0x10) DYLD-STUB$$fwrite [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+            0x00000001aaea3db0 (    0x50) __TEXT __const
+                0x00000001aaea3db0 (    0x48) DeviceToDeviceManagerVersionString [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001aaea3df8 (     0x8) DeviceToDeviceManagerVersionNumber [EXT, NameNList, MangledNameNList, NList] 
+            0x00000001aaea3e00 (   0x16d) __TEXT __cstring
+            0x00000001aaea3f70 (    0x8c) __TEXT __unwind_info
+        0x00000001d3b4da38 (    0x10) __DATA_CONST SEGMENT
+            0x00000001d3b4da38 (    0x10) __DATA_CONST __got
+        0x00000001de2004b8 (   0x100) __AUTH_CONST SEGMENT
+            0x00000001de2004b8 (    0x80) __AUTH_CONST __cfstring
+            0x00000001de200538 (    0x80) __AUTH_CONST __auth_got
+        0x00000001d623b640 (     0x8) __DATA SEGMENT
+            0x00000001d623b640 (     0x8) __DATA __data
+        0x00000001d6fbc548 (    0x28) __DATA_DIRTY SEGMENT
+            0x00000001d6fbc548 (    0x28) __DATA_DIRTY __bss
+                0x00000001d6fbc548 (     0x8) loadedPlugins [NameNList, MangledNameNList, NList] 
+                0x00000001d6fbc550 (    0x20) plugins [NameNList, MangledNameNList, NList] 
+        0x000000023a910000 (0x37bf0000) __LINKEDIT SEGMENT

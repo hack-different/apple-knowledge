@@ -1,0 +1,41 @@
+/System/Library/PrivateFrameworks/AVConference.framework/Frameworks/LegacyHandle.framework/Versions/A/LegacyHandle [arm64e, 0.036580 seconds]:
+    963B1EC7-C728-3668-AAE8-E08AA7E3AE85 /System/Library/PrivateFrameworks/AVConference.framework/Frameworks/LegacyHandle.framework/Versions/A/LegacyHandle [DYLIB, DYLDSHAREDCACHE, FaultedFromDiskDyldSharedCache, MMap64]  
+        0x00000001c2a72000 (  0x1000) __TEXT SEGMENT
+            0x00000001c2a72000 (   0x724) MACH_HEADER
+            0x00000001c2a72724 (   0x794) __TEXT __text
+                0x00000001c2a72724 (    0x80) CloseAllHandles [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c2a727a4 (   0x1e0) CreateHandle [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c2a72984 (   0x178) CheckInHandleDebug [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c2a72afc (   0x280) CheckOutHandleDebug [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c2a72d7c (   0x12c) FindHandle [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c2a72ea8 (    0x10) GetNumHandles [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+            0x00000001c2a72eb8 (    0xb0) __TEXT __auth_stubs
+                0x00000001c2a72eb8 (    0x10) DYLD-STUB$$bzero [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c2a72ec8 (    0x10) DYLD-STUB$$free [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c2a72ed8 (    0x10) DYLD-STUB$$malloc [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c2a72ee8 (    0x10) DYLD-STUB$$memcpy [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c2a72ef8 (    0x10) DYLD-STUB$$pthread_cond_broadcast [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c2a72f08 (    0x10) DYLD-STUB$$pthread_cond_init [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c2a72f18 (    0x10) DYLD-STUB$$pthread_cond_signal [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c2a72f28 (    0x10) DYLD-STUB$$pthread_cond_wait [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c2a72f38 (    0x10) DYLD-STUB$$pthread_mutex_init [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c2a72f48 (    0x10) DYLD-STUB$$pthread_mutex_lock [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c2a72f58 (    0x10) DYLD-STUB$$pthread_mutex_unlock [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+            0x00000001c2a72f68 (    0x40) __TEXT __const
+                0x00000001c2a72f68 (    0x38) LegacyHandleVersionString [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001c2a72fa0 (     0x8) LegacyHandleVersionNumber [PEXT, NameNList, MangledNameNList, NList] 
+            0x00000001c2a72fa8 (    0x58) __TEXT __unwind_info
+        0x00000001df54ef10 (    0x58) __AUTH_CONST SEGMENT
+            0x00000001df54ef10 (    0x58) __AUTH_CONST __auth_got
+        0x00000001d683ddc8 (  0x14a0) __DATA SEGMENT
+            0x00000001d683ddc8 (   0xe70) __DATA __data
+                0x00000001d683ddc8 (   0x840) g_axHandles [NameNList, MangledNameNList, NList] 
+                0x00000001d683e608 (   0x630) g_acHandles [NameNList, MangledNameNList, NList] 
+            0x00000001d683ec38 (   0x630) __DATA __bss
+                0x00000001d683ec38 (   0x108) g_apHObjs [NameNList, MangledNameNList, NList] 
+                0x00000001d683ed40 (   0x108) g_adwHandles [NameNList, MangledNameNList, NList] 
+                0x00000001d683ee48 (   0x108) g_adwReaders [NameNList, MangledNameNList, NList] 
+                0x00000001d683ef50 (   0x108) g_adwHeads [NameNList, MangledNameNList, NList] 
+                0x00000001d683f058 (   0x108) g_adwTails [NameNList, MangledNameNList, NList] 
+                0x00000001d683f160 (   0x108) g_adwNumHandles [NameNList, MangledNameNList, NList] 
+        0x000000023a910000 (0x37bf0000) __LINKEDIT SEGMENT
