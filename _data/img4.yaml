@@ -721,6 +721,7 @@ objects:
     description: device tree
     type: digest-object
     subtype: device-tree
+    firmware_name: DeviceTree
   dtrs:
     description: device tree for recovery
     type: digest-object
@@ -755,15 +756,21 @@ objects:
     description: iBoot Data Stage 1
   ibdt:
     description: iBoot Data
-  iBEC:
+  ibec:
     description: iBoot Epoch Change
+    firmware_name: iBEC
   ibot:
     description: iBoot
     subtype: firmware
-  iBSS:
+    firmware_name: iBoot
+    symbol:
+  ibss:
     description: iBoot Second Stage
+    firmware_name: iBSS
   illb:
     description: Low-Level iBoot
+    firmware_name: LLB
+    symbol:
   ipdf:
     description:
   ispf:
@@ -772,10 +779,12 @@ objects:
     description: Install System SSV Root Hash
   krnl:
     description: Kernel
+    firmware_name: KernelCache
   logo:
     description: Apple Logo Image
     type: digest-object
     subtype: graphic
+    firmware_name: AppleLogo
     firmware: true
   lpol:
     description: Local Policy Payload
@@ -815,10 +824,13 @@ objects:
     restore: true
   rdsk:
     description: Restore Disk Image / ramdisk
+    firmware_name: RestoreRamDisk
   rdtr:
-    description: Ramdisk Trust
+    description:
+      firmware_name: RestoreDeviceTree
   recm:
     description: Recovery/Refurbish Mode
+    firmware_name: RecoveryMode
   rfta:
     description: Recovery/Refurbish Factory Trust AP
   rfts:
@@ -826,16 +838,19 @@ objects:
   rkrn:
     description: Restore Kernel
     restore: true
+    firmware_name: RestoreKernelCache
   rlg1:
   rlg2:
   rlgo:
     description: Restore Logo
     restore: true
+    firmware_name: RestoreLogo
   rosi:
     description:
   rsep:
     description: Restore SEP Image, paired with oppd/tbms
     type: string
+    firmware_name: RestoreSEP
     encoding: sha2-384
   rtmu:
     description: Restore TMU for AP
@@ -850,6 +865,7 @@ objects:
     description: SEP Image (Booted RAM Image / Hibernation Data)
     type: string
     encoding: sha2-384
+    firmware_name: SEP
     metadata:
       oppd: Original Processed Parameter Data
       tbms: Trusted Boot Measurement Strings
@@ -910,7 +926,8 @@ img4_tags:
   bles:
     description:
   cfel:
-    description: Current Firmware Efffective LocalPolicy?
+    description:
+    firmware_name: CFELoader
   cker:
     description: Chained Kernel for Recovery
     recovery: true
@@ -928,6 +945,7 @@ img4_tags:
     description:
   diag:
     description: Diagnostic (AHT) Image
+    firmware_name: Diags
   disk:
     description:
   DPRO:
@@ -976,7 +994,8 @@ img4_tags:
   hime:
     description: Hypervisor Related
   hmmr:
-    description: Hypervisor Related
+    description: PEHammer
+    firmware_name: PEHammer
   homr:
     description: Hypervisor Related
   hop0:
@@ -1018,7 +1037,8 @@ img4_tags:
   nrde:
     description: Native Ramdisk Environment
   nsrv:
-    description:
+    description: Needs Service
+    firmware_name: NeedService
   omer:
     description: O M E Receipt?
   ooth:
@@ -1036,20 +1056,23 @@ img4_tags:
   pcrp:
     description: Production certificate root
   pert:
-    description: Pre-OS Environment Root Trust
+    description: PERTOS
+    firmware_name: PERTOS
   pfle:
     description: Pre-OS Factory Launch Environment?
   pflp:
     description: Pre-OS Factory Local Policy
   phlt:
-    description: Pre-OS/Per-OS Host Local Trust
+    description: PHLEET
+    firmware_name: PHLEET
   pndp:
     description:
   prid:
     description: Encrypted Private Key / Private Key Info / Private Recovery Identity?
   ptrp:
   rbmt:
-    description:
+    description: Restore Boot Monitor?
+    firmware_name: RBM
   rddg:
     description: Ramdisk for Debugging
   rso0:
