@@ -25,7 +25,6 @@ provisioning:
   kAMAuthinstallProvisioningICCID:
   kAMAuthinstallProvisioningMANIFESTDATA:
   kAMAuthinstallProvisioningRequest:
-
 install:
   monet:
     kAMAuthInstallMonetLocalDefaultTrustURL:
@@ -127,7 +126,6 @@ application_processor:
     kAMAuthInstallTagCryptex1Version:
     kAMAuthInstallTagCryptex1PreauthorizationVersion:
     kAMAuthInstallTagCryptex1FakeRoot:
-
   options:
     kAMAuthInstallApParameterAllowMixAndMatch:
     kAMAuthInstallApParameterApInternalUseOnlySW:
@@ -200,8 +198,13 @@ application_processor:
     kAMAuthInstallApImg4LocalTicketTagnsrv:
     kAMAuthInstallApImg4LocalTicketTagrsep:
     kAMAuthInstallApImg4LocalTicketTagsepi:
-
 secondary_cores:
+  AppleNandStorage:
+    type: aarch64
+    description: Processor that presents NVMe to the AP and provides both NVMe storage
+      as well as emulated SPI flash for early boot.  This
+    firmware_type: ansf
+    restore_firmware_type: rans
   AppleTypeCRetimer:
     options:
       kATCRTTicketNameFormat:
@@ -221,53 +224,6 @@ secondary_cores:
       kATCRTHardwareIDKeyChipID:
       kATCRTDeviceInfoKeyHardwareID:
       kATCRTDeviceInfoKeyInfoArray:
-  TCON:
-    options:
-      kAppleTCONCommonIORegPropProdFuseValue:
-      kAppleTCONCommonIORegPropNonce:
-      kAppleTCONCommonIORegPropECID:
-      kAppleTCONCommonIORegPropPRODStatus:
-      kAppleTCONCommonIORegPropSDOMStatus:
-      kAppleTCONCommonIORegPropFirmwareVer:
-      kAppleTCONCommonIORegPropBundleVer:
-      kAppleTCONCommonIORegPropDeviceID:
-      kAppleTCONCommonOptionFuseProd:
-      kAppleTCONCommonOptionFuseSDOM:
-      kAppleTCONCommonOptionSkipSameVersion:
-      kAppleTCONCommonOptionInternalBundle:
-      kAppleTCONCommonTagBuildIdentityPathKey:
-      kAppleTCONCommonTagBuildIdentityInfoKey:
-      kAppleTCONCommonTagMeasurementDigest:
-  TCON2:
-    options:
-  Vynal:
-    options:
-      kAMAuthInstallPROverrideVinylFirmwareKey:
-      kAMAuthInstallTagVinylApProductionMode:
-      kAMAuthInstallTagVinylRootKeyID:
-      kAMAuthInstallTagVinylDigest:
-      kAMAuthInstallTagVinylNonce:
-      kAMAuthInstallTagVinylMain:
-      kAMAuthInstallTagVinylGold:
-      kAMAuthInstallTagVinylEID:
-      kAMAuthInstallTagVinylChipID:
-      kAMAuthInstallTagVinylTicketResponse:
-      kAMAuthInstallTagVinylTicket:
-      kAMAuthInstallVinylIm4pVersion:
-      kAMAuthInstallVinyl4CCManpMain:
-      kAMAuthInstallVinyl4CCManpGold:
-      kAMAuthInstallTagVinylVendorAuthDataGold:
-      kAMAuthInstallTagVinylVendorAuthDataMain:
-      kAMAuthInstallTagVinylFwLoaderVersionPlist:
-      kAMAuthInstallTagVinylRootKeyIdentifierPlist:
-
-
-  AppleNandStorage:
-    type: aarch64
-    description: Processor that presents NVMe to the AP and provides both NVMe storage
-      as well as emulated SPI flash for early boot.  This
-    firmware_type: ansf
-    restore_firmware_type: rans
   Baseband:
     description: Comes from multiple vendors, encoded in `bbfw` file.  See `baseband.yaml`
       for more info.
@@ -393,37 +349,6 @@ secondary_cores:
       kAMAuthInstallTagBbAppsDownloadDigest:
       kAMAuthInstallTagBbDsp3HashSectionDigest:
       kAMAuthInstallTagBbDsp3DownloadDigest:
-
-  ImageSignalProcessor:
-    firmware_type: ispf
-    description: Image Signal Processor
-  Juliet:
-    description: The Infared FaceID camera
-  Maggie:
-    description: Ultra low power FPGA (iCE5LP4K) / Lattice iCEcube2
-    firmware_type: magg
-  Pearl:
-    description: The FaceID assembly
-    options:
-      kAMAuthInstallTagPearlCertificationRootPub:
-  x86:
-    options:
-      kAMAuthInstallTagX86ProductionMode:
-      kAMAuthInstallTagX86SecurityMode:
-      kAMAuthInstallTagX86Nonce:
-      kAMAuthInstallTagX86UseGlobalSigning:
-      kAMAuthInstallTagX86AllowMixAndMatch:
-      kAMAuthInstallTagX86OSLongVersion:
-      kAMAuthInstallTagX86Img4Ticket:
-      kAMAuthInstallTagX86RequestImg4Ticket:
-  PowerManagementProcessor:
-    type: arm7m
-    description: Power Management Processor.  Provides ARM Cortex-M processor for
-      power sequencing and interfaces directly with the PMGR.  Among its other talents,
-      it manages the multi-button reset and DFU process using configured values for
-      `volume-up-debounce` and `volume-down-debounce`.  There have been reported copies
-      of debug firmwares in the wild which might avoid such power sequencing.
-    firmware_type: pmpf
   eUICC:
     options:
       eUICCprofileObjectSpec:
@@ -445,224 +370,11 @@ secondary_cores:
       kAMAuthInstallTagEuiccFirmwareLoaderVersion:
       kAMAuthInstallTagEuiccSignedProfileMain:
       kAMAuthInstallTagEuiccSignedProfileGold:
-  Savage:
-    description:
-    options:
-      kSavageSkipOption:
-      kSavageFusingOption:
-      kSavageCertificationURL:
-      kSavagePersonalizationOption:
-      kSavageRestoreSystemPartition:
-      kSavageRestoreInternal:
-      kSavagePostFDRSealingOption:
-      kSavagePreflightRequiredOption:
-      kSavageSeaCookieProvisioningOption:
-      kSavageSeaCookiePairingOption:
-      kSavageFirmwareData:
-      kSavageOptionDebugArgs:
-      kSavageOptionFirmwareData:
-      kSavageOptionFirmwareVTData:
-      kSavageOptionFirmwareIsOverride:
-      kSavageOptionOptions:
-      kSavageOptionReceiptManifest:
-      kSavageOptionDeviceInfo:
-      kSavageOptionBuildIdentity:
-      kSavageOptionBundleDataDict:
-      kSavageOptionTicket:
-      kSavageOptionSourceBundlePath:
-      kSavageOptionDestinationBundlePath:
-      kSavageReturnTagsInBI:
-      kSavageReturnTagsInTssResponse:
-      kSavageBuildIdentityInfoKey:
-      kSavageBuildIdentityPathKey:
-
-
-    tags:
-      kSavageTagRequestTicket:
-      kSavageTagResponseTicket:
-      kSavageTagDeviceChipID:
-      kSavageTagDeviceNonce:
-      kSavageTagDeviceUID:
-      kSavageTagDeviceRev:
-      kSavageTagDeviceProductionMode:
-      kSavageTagDeviceRootPublicKeyIdentifier:
-      kSavageTagPatchEpoch:
-      kSavageTagReadECKey:
-      kSavageTagWriteECKey:
-      kSavageTagWriteUID:
-      kSavageTagWriteEpoch:
-      kSavageTagReadGID:
-      kSavageTagReadFWKey:
-      kSavageTagAllowOfflineBoot:
-      kSavageTagTempDemote:
-      kSavageTagAccessSensor:
-      kSavageTagAccessSecurity:
-      kSavageTagFADemote:
-      kSavageTagDebugStatus:
-      kSavageTagProvisioning:
-      kSavageTagMeasurementDigest:
-    measurements:
-      kSavageTagMeasurementB0DevPatch:
-      kSavageTagMeasurementB0DevPatchVT:
-      kSavageTagMeasurementB0ProdPatch:
-      kSavageTagMeasurementB0ProdPatchVT:
-      kSavageTagMeasurementB2DevPatch:
-      kSavageTagMeasurementB2DevPatchVT:
-      kSavageTagMeasurementB2ProdPatch:
-      kSavageTagMeasurementB2ProdPatchVT:
-      kSavageTagMeasurementBADevPatch:
-      kSavageTagMeasurementBADevPatchVT:
-      kSavageTagMeasurementBAProdPatch:
-      kSavageTagMeasurementBAProdPatchVT:
-      kSavageTagMeasurementBEDevPatch:
-      kSavageTagMeasurementBEDevPatchVT:
-      kSavageTagMeasurementBEProdPatch:
-      kSavageTagMeasurementBEProdPatchVT:
-      kSavageTagMeasurementBFDevPatch:
-      kSavageTagMeasurementBFDevPatchVT:
-      kSavageTagMeasurementBFProdPatch:
-      kSavageTagMeasurementBFProdPatchVT:
-      kSavageMeasurementDictPatch:
-      kSavageMeasurementDictPatchVT:
-  Veridian:
-    type: arm7m
-    is_rtkit: false
-    stack_size: 24576
-    ram_base: 536870912
-    mmio_base: 1073741824
-  Vinyl:
-    description: |
-      the eUICC or eSIM Contains a ZIP file with various hash specifiers, each containing two directories.  One `recovery` is seemingly empty (strange as this would imply a bad eUICC can never be recovered but also is consistent with observed behaviour of a eSIM surviving DFU recovery).  Update seems to contain two folders "main" and "gold".
-      These folders contain a `firmware.der` as well as a `profile.bin`
-      These folders contain a number of "root keys" as defined in the eUICC spec.
-    firmware_packing:
-    - zip
-  Yonkers:
-    description:
-    options:
-      kYonkersPreflightRequiredOption:
-      kYonkersOptions:
-      kYonkersSkipOption:
-      kYonkersFirmwareData:
-      kYonkersTagRequestTicket:
-      kYonkersTagResponseTicket:
-      kYonkersDeviceInfo:
-      kYonkersTagDeviceBoardID:
-      kYonkersTagDeviceChipID:
-      kYonkersTagDeviceNonce:
-      kYonkersTagDeviceECID:
-      kYonkersTagDeviceFabRevision:
-      kYonkersTagDeviceProductionMode:
-      kYonkersTagDeviceRootPublicKeyIdentifier:
-      kYonkersTagPatchEpoch:
-      kYonkersTagSepObject:
-      kYonkersTagReadECKey:
-      kYonkersTagWriteECKey:
-      kYonkersTagWriteECID:
-      kYonkersTagWriteEpoch:
-      kYonkersTagReadGID:
-      kYonkersTagReadFWKey:
-      kYonkersTagAllowOfflineBoot:
-      kYonkersTagTempDemote:
-      kYonkersTagAccessSensor:
-      kYonkersTagAccessSecurity:
-      kYonkersTagFADemote:
-      kYonkersTagDebugStatus:
-      kYonkersTagProvisioning:
-  Rose:
-    tags:
-      kRoseTagDigest:
-      kRoseTagMeasurementRTKitOS:
-      kRoseTagMeasurementSwBinDsp1:
-    options:
-      kRoseSwDsp1:
-      kRoseRtkitos:
-      kRoseRestoreRtkitos:
-      kRoseRtkitosICNF:
-  PS190:
-    options:
-      kPS190SecurityDomainTagFormat:
-      kPS190BoardIDTagFormat:
-      kPS190FirmwareTagFormat:
-      kPS190SecurityDomainTagSuffix:
-      kPS190BoardIDTagSuffix:
-      kPS190FirmwareTagSuffix:
-      kPS190TagNameFormatString:
-      kPS190TicketNameFormatString:
-      kPS190FirmwareKeySecurityDomain:
-      kPS190FirmwareKeyBoardID:
-      kPS190FirmwareKeyFirmwareData:
-    info:
-      kPS190DeviceInfoKeyApplicationProcessorInfo:
-      kPS190DeviceInfoKeyFWFeatureConfig:
-      kPS190DeviceInfokeyUseHDCPEntitlement:
-      kPS190DeviceInfoKeyDebugEnableOverride:
-      kPS190DeviceInfoKeyTagNumber:
-      kPS190DeviceInfoKeyTicketName:
-      kPS190DeviceInfoKeyAuthlistFormattedECID:
-      kPS190DeviceInfoKeyNeedsOTPProgramming:
-      kPS190DeviceInfoKeyRequiresPersonalization:
-      kPS190DeviceInfoKeySecurityMode:
-      kPS190DeviceInfoKeySecurityDomain:
-      kPS190DeviceInfoKeyRealHDCPKeysPresent:
-      kPS190DeviceInfoKeyProductionMode:
-      kPS190DeviceInfoKeyNonce:
-      kPS190DeviceInfokeyECID:
-      kPS190DeviceInfoKeyDebugDisable:
-      kPS190DeviceInfoKeyChipID:
-      kPS190DeviceInfoKeyCertificateEpoch:
-      kPS190DeviceInfoKeyBoardID:
-      kPS190DeviceInfoKeyHardwareID:
-      kPS190DeviceInfoKeyInfoArray:
-  SecureEnclaveProcessor:
-    options:
-      kSEOptionDebugSESA:
-      kSEOptionDebugSERS:
-      kSEOptionDebugSEAC:
-      kSEOptionRoseInfoSoftwareBinaryDsp1:
-      kSEOptionRoseInfoRTKitOS:
-      kSEOptionRoseInfo:
-      kSEOptionSharedInfo:
-      kSEOptionSourceBundlePath:
-      kSEOptionApduFile:
-      kSEOptionBuildIdentity:
-      kSEOptionDeviceInfo:
-      kSEOptionPerformFactoryConfiguration:
-      kSEOptionsInternalRestore:
-      kSEOptionseHealthTest:
-      kSEOptionEnableFactoryRFTest:
-      kSEOptionOption:
-      kSEOptionFirmwareIsOverride:
-      kSEOptionFirmwareData:
-      kSEOptionDebugArgs:
-    tags:
-      kSETagVersionProd:
-      kSETagVersionDev:
-      kSEReturnTagsInTssResponse:
-      kSEBuildIdentityInfoKey:
-      kSEBuildIdentityPathKey:
-      kSETagRequestTicket:
-      kSETagRequestTicketEC384:
-      kSETagResponseTicket:
-      kSETagResponseTicketEC384:
-      kSETagDeviceNonce:
-      kSETagDeviceRootPublicKeyIdentifier:
-      kSETagDeviceSeid:
-      kSETagDeviceChipID:
-      kSETagDeviceIsDev:
-      kSETagFactoryMode:
-      kSETagDeviceOSUPubKeyID:
-      kSETagDeviceBlFwImageKeysIdentifier:
-      kSETagDeviceOsImageKeysIdentifier:
-      kSETagMeasurementBL:
-      kSETagMeasurementFW:
-      kSETagMeasurementMOS:
-      kSETagMeasurementOS:
-      kSETagMeasurementDevCMAC:
-      kSETagMeasurementProdCMAC:
-      kSETagMeasurementUpdatePayload:
-      kSETagMeasurementDevHash:
-      kSETagMeasurementProdHash:
+  ImageSignalProcessor:
+    firmware_type: ispf
+    description: Image Signal Processor
+  Juliet:
+    description: The Infared FaceID camera
   kT200:
     kT200CertificationURL:
     kT200PersonalizationOption;:
@@ -719,7 +431,286 @@ secondary_cores:
     kT200ReturnTagsInTssResponse:
     kT200BuildIdentityInfoKey:
     kT200BuildIdentityPathKey:
-
+  Maggie:
+    description: Ultra low power FPGA (iCE5LP4K) / Lattice iCEcube2
+    firmware_type: magg
+  Pearl:
+    description: The FaceID assembly
+    options:
+      kAMAuthInstallTagPearlCertificationRootPub:
+  PowerManagementProcessor:
+    type: arm7m
+    description: Power Management Processor.  Provides ARM Cortex-M processor for
+      power sequencing and interfaces directly with the PMGR.  Among its other talents,
+      it manages the multi-button reset and DFU process using configured values for
+      `volume-up-debounce` and `volume-down-debounce`.  There have been reported copies
+      of debug firmwares in the wild which might avoid such power sequencing.
+    firmware_type: pmpf
+  PS190:
+    options:
+      kPS190SecurityDomainTagFormat:
+      kPS190BoardIDTagFormat:
+      kPS190FirmwareTagFormat:
+      kPS190SecurityDomainTagSuffix:
+      kPS190BoardIDTagSuffix:
+      kPS190FirmwareTagSuffix:
+      kPS190TagNameFormatString:
+      kPS190TicketNameFormatString:
+      kPS190FirmwareKeySecurityDomain:
+      kPS190FirmwareKeyBoardID:
+      kPS190FirmwareKeyFirmwareData:
+    info:
+      kPS190DeviceInfoKeyApplicationProcessorInfo:
+      kPS190DeviceInfoKeyFWFeatureConfig:
+      kPS190DeviceInfokeyUseHDCPEntitlement:
+      kPS190DeviceInfoKeyDebugEnableOverride:
+      kPS190DeviceInfoKeyTagNumber:
+      kPS190DeviceInfoKeyTicketName:
+      kPS190DeviceInfoKeyAuthlistFormattedECID:
+      kPS190DeviceInfoKeyNeedsOTPProgramming:
+      kPS190DeviceInfoKeyRequiresPersonalization:
+      kPS190DeviceInfoKeySecurityMode:
+      kPS190DeviceInfoKeySecurityDomain:
+      kPS190DeviceInfoKeyRealHDCPKeysPresent:
+      kPS190DeviceInfoKeyProductionMode:
+      kPS190DeviceInfoKeyNonce:
+      kPS190DeviceInfokeyECID:
+      kPS190DeviceInfoKeyDebugDisable:
+      kPS190DeviceInfoKeyChipID:
+      kPS190DeviceInfoKeyCertificateEpoch:
+      kPS190DeviceInfoKeyBoardID:
+      kPS190DeviceInfoKeyHardwareID:
+      kPS190DeviceInfoKeyInfoArray:
+  Rose:
+    tags:
+      kRoseTagDigest:
+      kRoseTagMeasurementRTKitOS:
+      kRoseTagMeasurementSwBinDsp1:
+    options:
+      kRoseSwDsp1:
+      kRoseRtkitos:
+      kRoseRestoreRtkitos:
+      kRoseRtkitosICNF:
+  Savage:
+    description:
+    options:
+      kSavageSkipOption:
+      kSavageFusingOption:
+      kSavageCertificationURL:
+      kSavagePersonalizationOption:
+      kSavageRestoreSystemPartition:
+      kSavageRestoreInternal:
+      kSavagePostFDRSealingOption:
+      kSavagePreflightRequiredOption:
+      kSavageSeaCookieProvisioningOption:
+      kSavageSeaCookiePairingOption:
+      kSavageFirmwareData:
+      kSavageOptionDebugArgs:
+      kSavageOptionFirmwareData:
+      kSavageOptionFirmwareVTData:
+      kSavageOptionFirmwareIsOverride:
+      kSavageOptionOptions:
+      kSavageOptionReceiptManifest:
+      kSavageOptionDeviceInfo:
+      kSavageOptionBuildIdentity:
+      kSavageOptionBundleDataDict:
+      kSavageOptionTicket:
+      kSavageOptionSourceBundlePath:
+      kSavageOptionDestinationBundlePath:
+      kSavageReturnTagsInBI:
+      kSavageReturnTagsInTssResponse:
+      kSavageBuildIdentityInfoKey:
+      kSavageBuildIdentityPathKey:
+    tags:
+      kSavageTagRequestTicket:
+      kSavageTagResponseTicket:
+      kSavageTagDeviceChipID:
+      kSavageTagDeviceNonce:
+      kSavageTagDeviceUID:
+      kSavageTagDeviceRev:
+      kSavageTagDeviceProductionMode:
+      kSavageTagDeviceRootPublicKeyIdentifier:
+      kSavageTagPatchEpoch:
+      kSavageTagReadECKey:
+      kSavageTagWriteECKey:
+      kSavageTagWriteUID:
+      kSavageTagWriteEpoch:
+      kSavageTagReadGID:
+      kSavageTagReadFWKey:
+      kSavageTagAllowOfflineBoot:
+      kSavageTagTempDemote:
+      kSavageTagAccessSensor:
+      kSavageTagAccessSecurity:
+      kSavageTagFADemote:
+      kSavageTagDebugStatus:
+      kSavageTagProvisioning:
+      kSavageTagMeasurementDigest:
+    measurements:
+      kSavageTagMeasurementB0DevPatch:
+      kSavageTagMeasurementB0DevPatchVT:
+      kSavageTagMeasurementB0ProdPatch:
+      kSavageTagMeasurementB0ProdPatchVT:
+      kSavageTagMeasurementB2DevPatch:
+      kSavageTagMeasurementB2DevPatchVT:
+      kSavageTagMeasurementB2ProdPatch:
+      kSavageTagMeasurementB2ProdPatchVT:
+      kSavageTagMeasurementBADevPatch:
+      kSavageTagMeasurementBADevPatchVT:
+      kSavageTagMeasurementBAProdPatch:
+      kSavageTagMeasurementBAProdPatchVT:
+      kSavageTagMeasurementBEDevPatch:
+      kSavageTagMeasurementBEDevPatchVT:
+      kSavageTagMeasurementBEProdPatch:
+      kSavageTagMeasurementBEProdPatchVT:
+      kSavageTagMeasurementBFDevPatch:
+      kSavageTagMeasurementBFDevPatchVT:
+      kSavageTagMeasurementBFProdPatch:
+      kSavageTagMeasurementBFProdPatchVT:
+      kSavageMeasurementDictPatch:
+      kSavageMeasurementDictPatchVT:
+  SecureEnclaveProcessor:
+    options:
+      kSEOptionDebugSESA:
+      kSEOptionDebugSERS:
+      kSEOptionDebugSEAC:
+      kSEOptionRoseInfoSoftwareBinaryDsp1:
+      kSEOptionRoseInfoRTKitOS:
+      kSEOptionRoseInfo:
+      kSEOptionSharedInfo:
+      kSEOptionSourceBundlePath:
+      kSEOptionApduFile:
+      kSEOptionBuildIdentity:
+      kSEOptionDeviceInfo:
+      kSEOptionPerformFactoryConfiguration:
+      kSEOptionsInternalRestore:
+      kSEOptionseHealthTest:
+      kSEOptionEnableFactoryRFTest:
+      kSEOptionOption:
+      kSEOptionFirmwareIsOverride:
+      kSEOptionFirmwareData:
+      kSEOptionDebugArgs:
+    tags:
+      kSETagVersionProd:
+      kSETagVersionDev:
+      kSEReturnTagsInTssResponse:
+      kSEBuildIdentityInfoKey:
+      kSEBuildIdentityPathKey:
+      kSETagRequestTicket:
+      kSETagRequestTicketEC384:
+      kSETagResponseTicket:
+      kSETagResponseTicketEC384:
+      kSETagDeviceNonce:
+      kSETagDeviceRootPublicKeyIdentifier:
+      kSETagDeviceSeid:
+      kSETagDeviceChipID:
+      kSETagDeviceIsDev:
+      kSETagFactoryMode:
+      kSETagDeviceOSUPubKeyID:
+      kSETagDeviceBlFwImageKeysIdentifier:
+      kSETagDeviceOsImageKeysIdentifier:
+      kSETagMeasurementBL:
+      kSETagMeasurementFW:
+      kSETagMeasurementMOS:
+      kSETagMeasurementOS:
+      kSETagMeasurementDevCMAC:
+      kSETagMeasurementProdCMAC:
+      kSETagMeasurementUpdatePayload:
+      kSETagMeasurementDevHash:
+      kSETagMeasurementProdHash:
+  TCON:
+    options:
+      kAppleTCONCommonIORegPropProdFuseValue:
+      kAppleTCONCommonIORegPropNonce:
+      kAppleTCONCommonIORegPropECID:
+      kAppleTCONCommonIORegPropPRODStatus:
+      kAppleTCONCommonIORegPropSDOMStatus:
+      kAppleTCONCommonIORegPropFirmwareVer:
+      kAppleTCONCommonIORegPropBundleVer:
+      kAppleTCONCommonIORegPropDeviceID:
+      kAppleTCONCommonOptionFuseProd:
+      kAppleTCONCommonOptionFuseSDOM:
+      kAppleTCONCommonOptionSkipSameVersion:
+      kAppleTCONCommonOptionInternalBundle:
+      kAppleTCONCommonTagBuildIdentityPathKey:
+      kAppleTCONCommonTagBuildIdentityInfoKey:
+      kAppleTCONCommonTagMeasurementDigest:
+  TCON2:
+    options:
+  Veridian:
+    type: arm7m
+    is_rtkit: false
+    stack_size: 24576
+    ram_base: 536870912
+    mmio_base: 1073741824
+  Vinyl:
+    description: |
+      the eUICC or eSIM Contains a ZIP file with various hash specifiers, each containing two directories.  One `recovery` is seemingly empty (strange as this would imply a bad eUICC can never be recovered but also is consistent with observed behaviour of a eSIM surviving DFU recovery).  Update seems to contain two folders "main" and "gold".
+      These folders contain a `firmware.der` as well as a `profile.bin`
+      These folders contain a number of "root keys" as defined in the eUICC spec.
+    firmware_packing:
+    - zip
+  Vynal:
+    options:
+      kAMAuthInstallPROverrideVinylFirmwareKey:
+      kAMAuthInstallTagVinylApProductionMode:
+      kAMAuthInstallTagVinylRootKeyID:
+      kAMAuthInstallTagVinylDigest:
+      kAMAuthInstallTagVinylNonce:
+      kAMAuthInstallTagVinylMain:
+      kAMAuthInstallTagVinylGold:
+      kAMAuthInstallTagVinylEID:
+      kAMAuthInstallTagVinylChipID:
+      kAMAuthInstallTagVinylTicketResponse:
+      kAMAuthInstallTagVinylTicket:
+      kAMAuthInstallVinylIm4pVersion:
+      kAMAuthInstallVinyl4CCManpMain:
+      kAMAuthInstallVinyl4CCManpGold:
+      kAMAuthInstallTagVinylVendorAuthDataGold:
+      kAMAuthInstallTagVinylVendorAuthDataMain:
+      kAMAuthInstallTagVinylFwLoaderVersionPlist:
+      kAMAuthInstallTagVinylRootKeyIdentifierPlist:
+  x86:
+    options:
+      kAMAuthInstallTagX86ProductionMode:
+      kAMAuthInstallTagX86SecurityMode:
+      kAMAuthInstallTagX86Nonce:
+      kAMAuthInstallTagX86UseGlobalSigning:
+      kAMAuthInstallTagX86AllowMixAndMatch:
+      kAMAuthInstallTagX86OSLongVersion:
+      kAMAuthInstallTagX86Img4Ticket:
+      kAMAuthInstallTagX86RequestImg4Ticket:
+  Yonkers:
+    description:
+    options:
+      kYonkersPreflightRequiredOption:
+      kYonkersOptions:
+      kYonkersSkipOption:
+      kYonkersFirmwareData:
+      kYonkersTagRequestTicket:
+      kYonkersTagResponseTicket:
+      kYonkersDeviceInfo:
+      kYonkersTagDeviceBoardID:
+      kYonkersTagDeviceChipID:
+      kYonkersTagDeviceNonce:
+      kYonkersTagDeviceECID:
+      kYonkersTagDeviceFabRevision:
+      kYonkersTagDeviceProductionMode:
+      kYonkersTagDeviceRootPublicKeyIdentifier:
+      kYonkersTagPatchEpoch:
+      kYonkersTagSepObject:
+      kYonkersTagReadECKey:
+      kYonkersTagWriteECKey:
+      kYonkersTagWriteECID:
+      kYonkersTagWriteEpoch:
+      kYonkersTagReadGID:
+      kYonkersTagReadFWKey:
+      kYonkersTagAllowOfflineBoot:
+      kYonkersTagTempDemote:
+      kYonkersTagAccessSensor:
+      kYonkersTagAccessSecurity:
+      kYonkersTagFADemote:
+      kYonkersTagDebugStatus:
+      kYonkersTagProvisioning:
 other:
   keys:
     KeyCellIDSkip:

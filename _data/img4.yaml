@@ -12,6 +12,62 @@ metadata:
   - core
   - types
   - cryptex_properties
+unmapped:
+- ApRelaxedImageVerification
+- "@BCert"
+- "@Managed"
+- "@AlternateSU"
+- Ap,UseGlobalSigning
+- AllowNeRDBoot
+- NeRDEpoch
+- PermitNeRDPivot
+- Ap,OSEnvironment
+- Ap,CurrentOSSecurityVersion
+- Ap,MinimumOSSecurityVersion
+- Ap,EnableGroundhog
+- Ap,SoftwareUpdateDeviceID
+- ApCertificateEpoch
+- ApLeafCertStatus
+- BuildString
+- Name
+- UID_MODE
+- "@Cryptex1,Ticket"
+- Cryptex1,Ticket
+- Cryptex1,ChipID
+- Cryptex1,ProductClass
+- Cryptex1,UseProductClass
+- Cryptex1,Nonce
+- Cryptex1,NonceDomain
+- Cryptex1,ProductionMode
+- Cryptex1,UseGlobalSigning
+- Cryptex1,Version
+- Cryptex1,FakeRoot
+- PearlCertificationRootPub
+- x86,ProductionMode
+- x86,SecurityMode
+- x86,Nonce
+- x86,UseGlobalSigning
+- x86,AllowMixAndMatch
+- x86,OSLongVersion
+- x86,Ticket
+- "@x86,Ticket"
+- "@Locality"
+- "@BBTicket"
+- BbSNUM
+- BbGoldCertId
+- BbSkeyId
+- BbNonce
+- BpApBindingDigest
+- BbServerNonce
+- BbVendorData
+- BbFieldDiagsEnable
+- "@EUICCTicket"
+- EuiccMainTicket
+- EuiccGoldTicket
+- EUICCSignedProfileMain
+- EUICCSignedProfileGold
+- BbAntennaType
+- BbBehavior
 core:
   IM4M:
     description: Image4 Manifest Object (No payload, only manifest).  IM4M, verion,
@@ -29,6 +85,7 @@ core:
   OBJP:
     description: Object Properties - Values that may be assigned per "object" (firmwares)
       that contain a `DGST`
+    name: ObjectPayloadPropertyDigest
     type: sequence
 types:
   digest-object:
@@ -38,7 +95,9 @@ types:
       additional properties per object, some of which are standard and others that
       are object specific.
     common_properties:
-      DGST: The cryptographic digest of the object
+      DGST:
+        description: The cryptographic digest of the object
+        name: Digest
       EKEY:
         description: Effective Key Access - The effective access to teh SEP, used
           to protect data during demotion.  Effective chip promoted
@@ -101,6 +160,7 @@ types:
           with a `secb` object with a `trst` object), `rssl` (Factory SSL root CA),
           `rvok` (Revocation list) and `trpk` (trusted public keys?)
 lpol_properties:
+  AMNM:
   auxi:
     title: Auxiliary Image4 Manifest Hash (`auxi`)
     description: After the system verifies that the UAKL hash matches what’s found
@@ -151,6 +211,15 @@ lpol_properties:
     access:
       write:
       - macOS
+  bat0:
+  bat1:
+  batf:
+  BNCH:
+  BORD:
+  CEPO:
+  chg0:
+  chg1:
+  CHIP:
   coih:
     title: CustomOS Image4 Manifest Hash (coih)
     description: The `coih` is an SHA384 hash of CustomOS Image4 manifest. The payload
@@ -162,8 +231,20 @@ lpol_properties:
     access:
       write:
       - 1TR
+  CPRO:
+  CSEC:
+  DGST:
+  diag:
+  DPRO:
+  DSEC:
+  dtre:
+  ECID:
+  EPRO:
+  ESEC:
   gaid:
     description: Gaia Authentication ID (Apple Internal)
+  glyc:
+  glyp:
   hrlp:
     title: Has Secure Enclave Signed recoveryOS Local Policy (hrlp)
     description: The `hrlp` indicates whether or not the `prot` value is the measurement
@@ -176,6 +257,9 @@ lpol_properties:
       - 1TR
       - recoveryOS
       - macOS
+  ibot:
+  illb:
+  krnl:
   kuid:
     title: Key encryption key (KEK) Group UUID (kuid)
     description: The kuid indicates the volume that was booted. The key encryption
@@ -189,10 +273,13 @@ lpol_properties:
       - 1TR
       - recoveryOS
       - macOS
+  LCST:
+  LNCH:
   lobo:
     description: Local Boot Object.  Indicates that the object is to be used as the
       target of a local boot only and not provided by the server for remote / DFU
       boots.
+  logo:
   lpnh:
     title: LocalPolicy Nonce Hash (lpnh)
     description: The lpnh is used for anti-replay of the LocalPolicy. This is an SHA384
@@ -228,6 +315,7 @@ lpol_properties:
       intention of what operating system the user has created a LocalPolicy for. Users
       change the nsih value implicitly when they perform a software update.
     type: binary
+    name: Ap,NextStageCryptex1IM4MHash
     subtype: sha2-384
     context:
       lpol:
@@ -236,6 +324,7 @@ lpol_properties:
       - 1TR
       - recoveryOS
       - macOS
+  nsrv:
   prot:
     title: Paired recoveryOS Trusted Boot Policy Measurement (prot)
     description: A paired recoveryOS Trusted Boot Policy Measurement (TBPM) is a special
@@ -251,6 +340,8 @@ lpol_properties:
       - 1TR
       - recoveryOS
       - macOS
+  recm:
+  RNCH:
   rolp:
     description: recoveryOS local policy
     type: boolean
@@ -285,6 +376,9 @@ lpol_properties:
       - 1TR
       - recoveryOS
       - macOS
+  rsep:
+  SDOM:
+  sepi:
   sip0:
     title: System Integrity Protection (SIP) 0 Status - Overall
     description: The sip0 holds the existing System Integrity Protection (SIP) policy
@@ -324,10 +418,13 @@ lpol_properties:
     description: Secure Multi-Boot 3 - DEP-allowed MDM Control
   smb5:
     description: Unknown - but known to exist in Factory signing
+  snon:
   snuf:
     description: Software Nonce For Update Freshness
   spih:
     description: Cryptex1 Image4 Hash
+  tbmr:
+  tbms:
   vuid:
     title: APFS volume group UUID (vuid)
     description: The vuid indicates the volume group the kernel should use as root.
@@ -373,12 +470,14 @@ cryptex_properties:
   pave:
     description: Pre-authorization Version (XNU) The version of a pre-authorized Cryptex.
     type: string
+    name: Cryptex1,PreauthorizationVersion
     roots:
     - ExtraContent
   snuf:
     description: SoftwareNonceForUpdateFreshness
   styp:
     description: Crytpex Subtype
+    name: Cryptex1,SubType
     type: u32
     alias:
     - cryptex subtype
@@ -386,10 +485,12 @@ cryptex_properties:
     - ExtraContent
   type:
     description: Cryptex Type
+    name: Cryptex1,Type
     type: integer
     roots:
     - ExtraContent
   UDID:
+    name: Cryptex1,UDID
     description: universal device identifier
   vnum:
     description: Version Number - Update Maximum
@@ -539,8 +640,10 @@ manifest_properties:
     description: Internal Use Only Software
   iuou:
     description: Internal Use Only Unit
+    name: Ap,InternalUseOnlyUnit
   LNCH:
     description: Local Policy Next Cryptographic Hash
+    name: ApLocalNonceHash
   love:
     title: Long Operating System Version (love)
     description: The love indicates the OS version that the LocalPolicy is created
@@ -548,6 +651,7 @@ manifest_properties:
       creation and is used to enforce recoveryOS pairing restrictions.
     type: string
     example: 21.3.66.0.0,0
+    name: Ap,OSLongVersion
     access:
       write:
       - 1TR
@@ -557,6 +661,7 @@ manifest_properties:
     - ManifestKey-DataCenter
   lpol:
     description: Local Policy
+  manx:
   mmap:
     description: Memory Map
   Mod#:
@@ -567,6 +672,7 @@ manifest_properties:
   prtp:
     description: Product Type String
     type: string
+    name: Ap,ProductType
     example: iPhone16,2
     roots:
     - ManifestKey-DataCenter
@@ -589,9 +695,18 @@ manifest_properties:
     description: Research mode
   rsch:
     description: research mode
+  rso0:
+    name: Ap,RestoreSecurityOverrides0
+  rso1:
+    name: Ap,RestoreSecurityOverrides1
+  rso2:
+    name: Ap,RestoreSecurityOverrides2
+  rso3:
+    name: Ap,RestoreSecurityOverrides3
   sdkp:
     description: SDK Platform
     type: string
+    name: Ap,SDKPlatform
     roots:
     - ManifestKey-DataCenter
     values:
@@ -613,11 +728,12 @@ manifest_properties:
   seid:
     description: Secure Enclave ID - Root Domain
   sika:
-    description: System Identity Key Access
+    description: System Identity Key Access/Attestation?
+    name: Ap,SikaFuse
   SNON:
     description: SEP Nonce
   snon:
-    description: SEP Nonce
+    description: SEP Nonce (Yes it differs by case)
   SrNm:
     description: Unit Serial Number
     manifest: true
@@ -630,6 +746,7 @@ manifest_properties:
     description: Server nonce
   tatp:
     description: Target Type (board name)
+    name: Ap,TargetType
     roots:
     - ManifestKey-DataCenter
   TMac:
@@ -903,12 +1020,14 @@ img4_tags:
     description:
   aciw:
     description:
+  adba:
   ADCL:
     description: Apple Display Calibration
   ader:
     description:
   agfi:
     description:
+  anid:
   anrd:
     description: Apple Notarized Ram Disk
   aofi:
@@ -921,10 +1040,13 @@ img4_tags:
     description:
   auac:
     description:
+  batf:
+  berb:
   BLDS:
     description: Boot LocalPolicy Digest String?
   bles:
     description:
+  BNCN:
   cfel:
     description:
     firmware_name: CFELoader
@@ -969,6 +1091,7 @@ img4_tags:
     description: Emulated GID3 Nonce
   eg3t:
     description: Emulated GID3 Type
+  eply:
   esca:
     description: Emulated System Certificate Authority
   fdrs:
@@ -983,10 +1106,15 @@ img4_tags:
     description:
   ftot:
     description: Factory Trust/FIPS Test? - Other / Original Trust
+  fuos:
+  gdmg:
+  ginf:
   ging:
     description:
   glyc:
     description: Gyroscope Calibration
+  gtcd:
+  gtgv:
   hash:
     description:
   hclo:
@@ -1016,6 +1144,7 @@ img4_tags:
     description: Locker - Used for Effaceable Storage end Obliteration
   lphp:
     description: Local Policy Hash Protection?
+  lpol:
   ltrs:
     description: Local TrustStore Recovery System?
   manx:
@@ -1044,7 +1173,8 @@ img4_tags:
   ooth:
     description: Other OS Translator (Rosetta) Hash?
   osev:
-    description: Other System (Rosetta) Environment?
+    description: Operating System Environment
+    name: Ap,OSEnvironment
   osrd:
     description: Other System (Rosetta) Ramdisk?
   otes:
@@ -1069,26 +1199,22 @@ img4_tags:
     description:
   prid:
     description: Encrypted Private Key / Private Key Info / Private Recovery Identity?
+  prot:
   ptrp:
   rbmt:
     description: Restore Boot Monitor?
     firmware_name: RBM
   rddg:
     description: Ramdisk for Debugging
-  rso0:
-    description:
-  rso1:
-    description:
-  rso2:
-    description:
-  rso3:
-    description:
+  refk:
   rtpf:
     description:
   slvn:
     description:
+  snid:
   SPTM:
     description: Secure Page Table Monitor
+  srvn:
   ssca:
     description: SEP Subject Certificate Authority?
   ster:
@@ -1117,3 +1243,54 @@ img4_tags:
     description: VMWare?
   xugs:
     description: x64 User System Disk
+der:
+  uikp:
+    description: UIK Public
+  kid:
+    description: Key UUID
+  aonm:
+    description: AON Mask
+  rkm:
+    description: Ref Key Mask / Key Ref MAC (message authentication code)
+  bid:
+    description: Key BID
+  cpo:
+    description: Key ACL Constraint Policy
+  ckon:
+    description: Key ACL Constraint K of N (Shamir Key Split)
+  cup:
+    description: Key ACL Constraint User Passcode
+  kv:
+    description: Key Version
+  kt:
+    description: Key Type
+  pub:
+    description: Public Key
+  id:
+    description: Key ID
+  ag:
+    description: Access Groups
+  p:
+    description: Passcode
+  iter:
+    description: Iterations (Hash Rounds)
+  acmh:
+    description: ACM (Apple Credential Manager) Handle
+  wk:
+    description: Wrapped Key
+  pad:
+    description: Key Padding (Block alignment bytes)
+  tag:
+    description: Key Tag
+  ed:
+    description: External Data
+  pd:
+    description: Protected Data
+  ad:
+    description: Authentication Data
+  d:
+    description: Data
+  bc:
+    description: Keybag Class
+  rk:
+    description: Key Ref Key
