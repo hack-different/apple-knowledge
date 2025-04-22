@@ -1,0 +1,72 @@
+# Rick’s Basic Forensics Toolset
+
+# Tools Rick Has / Recommends
+- USB Mass Storage Write Isolator
+    - https://www.cru-inc.com/products/wiebetech/usb-3.0-writeblocker/
+    - Optional Recommended: https://www.cru-inc.com/products/wiebetech/media_writeblocker/
+    - Optional Recommended: https://www.cru-inc.com/products/wiebetech/forensic-ultradock-v5-5/
+- Multiple High Quality Faraday Bags
+    - https://edecdf.com/?gclid=EAIaIQobChMIs6Xtwtbh6AIV-RitBh1LlQoqEAAYASAAEgKoJvD_BwE
+    - Discount code (10%) LOYAL
+- USB Armory MK II (a few)
+    - https://inversepath.com/usbarmory.html
+- Write Protect USB Drives
+    - [https://www.kanguru.com/storage-accessories/kanguru-ss3.shtml](https://www.kanguru.com/storage-accessories/kanguru-ss3.shtml)
+- Filming Setup, Like this product but can be done cheeper
+    - https://edecdf.com/products/eclipse-3-pro-kit?variant=30205372268626
+- Thunderbolt 2 cable
+    - https://www.apple.com/shop/product/MD862LL/A/apple-thunderbolt-cable-05-m?afid=p238%7Cscv0ve4qN-dc_mtid_1870765e38482_pcrid_246386725857_pgrid_14874603490_&cid=aos-us-kwgo-pla-btb--slid---product-MD862LL/A
+- Thunderbolt 3 cable
+    - https://www.apple.com/shop/product/MQ4H2AM/A/thunderbolt-3-usb%E2%80%91c-cable-08-m?afid=p238%7CsNCpGMqvc-dc_mtid_1870765e38482_pcrid_246386725857_pgrid_14874603490_&cid=aos-us-kwgo-pla-btb--slid---product-MQ4H2AM/A
+- For Two Machine Kernel Debug
+    - Two Thunderbolt 3 to 2 adapters
+        - https://www.apple.com/shop/product/MMEL2AM/A/thunderbolt-3-usb-c-to-thunderbolt-2-adapter?afid=p238%7CsXJVdwN9q-dc_mtid_1870765e38482_pcrid_246386725857_pgrid_14874603490_&cid=aos-us-kwgo-pla-btb--slid---product-MMEL2AM/A
+    - Two Apple Thunderbolt to Ethernet adapters
+        - https://www.apple.com/shop/product/MD463LL/A/thunderbolt-to-gigabit-ethernet-adapter?afid=p238%7Csb0pt5CRz-dc_mtid_1870765e38482_pcrid_246386725857_pgrid_14874603490_&cid=aos-us-kwgo-pla-btb--slid---product-MD463LL/A
+    - Two Thunderbolt 2 to Firewire adapters
+        - https://www.fullcompass.com/prod/219303-apple-thunderbolt-to-firewire-adapter-thunderbolt-male-to-firewire-800-female-md464ll-a?gclid=EAIaIQobChMIy9DNpNrh6AIVpx-tBh3FcAB7EAQYASABEgJ6vfD_BwE
+    - Firewire 800 cable
+        - https://www.walmart.com/ip/IEEE-1394B-FireWire-800-9-Pin-Male-to-9-Pin-Male-Cable-1-M-Black/345568976?wmlspartner=wlpa&selectedSellerId=3851&adid=22222222227070216388&wl0=&wl1=g&wl2=c&wl3=178019872776&wl4=pla-312965635884&wl5=9033703&wl6=&wl7=&wl8=&wl9=pla&wl10=115057149&wl11=online&wl12=345568976&veh=sem&gclid=EAIaIQobChMI3dyPnNrh6AIViT2tBh14eQthEAQYAiABEgLob_D_BwE
+- USB Drive Duplicator
+    - https://www.amazon.com/StarTech-com-Standalone-Duplicator-Sanitizer-multi-pass/dp/B00LCOB4Z8/ref=sr_1_2?dchild=1&keywords=startech+usb+3+duplicator&qid=1586653119&sr=8-2
+    - Big Spender Version (Tableau): https://digitalintelligence.com/products/imagers
+- RaspberryPi’s and Lots of SD cards
+    - Mix of 2/3/4 maybe 2-3 each
+    - https://www.raspberrypi.org/
+- PacketSquirrel (simple VPN/firewall device) - get several
+    - https://shop.hak5.org/products/packet-squirrel
+- Ubertooth
+    - https://hackerwarehouse.com/product/ubertooth-one/?gclid=EAIaIQobChMIvo-z7Nvh6AIVpCCtBh3LuAqWEAAYASAAEgK_O_D_BwE
+- External Blu-Ray Writer
+    - https://www.bhphotovideo.com/c/product/1213045-REG/owc_other_world_computing_owcmr3ubdrw16_mercury_pro_16x_blu_ray.html/?ap=y&smp=y&lsft=BI%3A514&gclid=EAIaIQobChMIx6f6ttnh6AIVJh6tBh06gwCIEAQYAiABEgK-g_D_BwE
+- BusPirate
+    - Version 3: https://www.seeedstudio.com/Bus-Pirate-v3-6-universal-serial-interface-p-609.html
+    - Version 4: https://www.seeedstudio.com/Bus-Pirate-v4.html
+- WinBond SPI compatible Chip-read/writer
+    - https://www.amazon.com/slp/eeprom-programmer/8m5pbfknuqh649j
+- Intel NUC which BIOS can be reflashed ~1500 depending on spec
+    - https://system76.com/desktops/meerkat
+- USB Protocol Analyzer (Beagle 480 - 5000)
+    - Beagle 480 (2.0) ($1200 retail)
+        - https://www.totalphase.com/products/beagle-usb480/
+    - Beagle 5000 (3.0) Super ($5000 retail, got one for $1200 on eBay)
+        - https://www.totalphase.com/products/beagle-usb5000-v2-ultimate/
+- CMI Zapper Medusa (useful for T1 and prior)
+    - http://www.cmizapper.com/products/medusa-3.html
+- WiFi Pineapple (can scan for stations, etc)
+    - https://shop.hak5.org/products/wifi-pineapple
+- Ethernet Tap: 
+    - https://www.amazon.com/Dualcomm-1000Base-T-Gigabit-Ethernet-Network/dp/B004EWVFAY/ref=sr_1_1_sspa?dchild=1&keywords=gigabit+ethernet+tap&qid=1586653982&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFMT0g5WlIyMTdHSkYmZW5jcnlwdGVkSWQ9QTA3NjQ5MThJQ05ESDI3UkhCNyZlbmNyeXB0ZWRBZElkPUEwMDk3MTE0M0hVMlJFMDQ1MzBSOSZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=
+    - https://www.amazon.com/midBit-Technologies-LLC-100-1000/dp/B0175EODCE/ref=sr_1_5?dchild=1&keywords=gigabit+ethernet+tap&qid=1586654003&sr=8-5
+# Things Rick Wants
+- A crap ton of blank drives
+- USB-C PD analyzer 
+- eSPI (for monitoring Firmware as transferred to processor: $4,350.00)
+    - https://www.totalphase.com/products/promira-serial/#product-options-wrapper
+- Full Forensic Disk Capture
+    - https://digitalintelligence.com/store/products/d6281?taxon_id=21 (**$3,424.00)**
+    - https://digitalintelligence.com/store/products/a1640 (**$189.00)**
+- Mac Pro (aprox $12k)
+- **XYNC Quadro 6 GHz RX (**$6,150)
+    - https://www.crowdsupply.com/fairwaves/xync
+
