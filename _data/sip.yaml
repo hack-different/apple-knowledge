@@ -21,15 +21,16 @@ csr_flags:
     always_enforced: true
   CSR_ALLOW_APPLE_INTERNAL:
     value: 16
-    description:
+    description: Allows for AppleInternal (non-production signed code)
     disable_default: true
   CSR_ALLOW_DEVICE_CONFIGURATION:
     value: 128
-    description:
+    description: This indicates that the device is booted into a mode whereby `bputil`
+      will allow changes
     always_enforced: true
   CSR_ALLOW_EXECUTABLE_POLICY_OVERRIDE:
     value: 1024
-    description: override spctl or executable policy
+    description: override trust-cache or executable policy
   CSR_ALLOW_KERNEL_DEBUGGER:
     value: 8
     description: allow using the kernel debugger (KDP) - requires configuring the
@@ -37,14 +38,14 @@ csr_flags:
     disable_default: true
   CSR_ALLOW_TASK_FOR_PID:
     value: 4
-    description: allow getting the pid task, required for debugging
+    description: allow getting the pid task, required for privileged debugging
     disable_default: true
   CSR_ALLOW_UNAPPROVED_KEXTS:
     value: 512
     description: do not require kext approval (managed in the T2 when it exists)
   CSR_ALLOW_UNAUTHENTICATED_ROOT:
     value: 2048
-    description:
+    description: Permits the root filesystem to lack SSV (signed system volume) protection
   CSR_ALLOW_UNRESTRICTED_DTRACE:
     aliases:
     - CSR_ALLOW_DESTRUCTIVE_DTRACE
@@ -64,3 +65,36 @@ csr_flags:
     value: 1
     description: allow loading kernel extensions that are not signed
     disable_default: true
+csrutil:
+  flags:
+    "--no-internal":
+    "--with":
+    "--without":
+  options:
+    basesystem:
+      name: BaseSystem Verification
+      flag: CSR_ALLOW_ANY_RECOVERY_OS
+    nvram:
+      name: NVRAM Protections
+      flag: CSR_ALLOW_UNRESTRICTED_NVRAM
+    debug:
+      name:
+      flag: CSR_ALLOW_KERNEL_DEBUGGER
+    dtrace:
+      name: DTrace Restrictions
+      flag: CSR_ALLOW_UNRESTRICTED_DTRACE
+    fs:
+      name: Filesystem Protections
+      flag: CSR_ALLOW_UNRESTRICTED_FS
+    kext:
+      name: Kext Signing
+      flag: CSR_ALLOW_UNTRUSTED_KEXTS
+  commands:
+    status:
+      description: Shows
+    enable:
+    disable:
+    netboot:
+    report:
+    authenticated-root:
+    verify-factory-sip:

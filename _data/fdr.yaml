@@ -4,6 +4,35 @@ metadata:
   credits:
   collections:
   - fdr_properties
+fdr_modes:
+  '':
+    description: Objects for the device directly, indicates no factory process or
+      mode in use.
+  mansta:
+    description: The "Management Station", or factory station being used to configure
+      a device at an Apple factory using factory tooling and images
+  mandev:
+    description: The "Managed Device", or the device attached to the `mansta` to be
+      configured or tested at a factory
+fdr_objects:
+  trst:
+    description: The trust object establishes the signing root for FDR objects, the
+      SSL CA for connections to FDR, the set of revoked keys, as well as trusted public
+      keys
+  fCfg:
+  eCfg:
+  dCfg:
+  appv:
+  ADCL:
+  FSCl:
+  HmCA:
+  hop0:
+  lcrt:
+  NvMR:
+  sePk:
+  pcrt:
+  scrt:
+  seal:
 fdr_properties:
   ADCL:
     description: Raw Panel / Coverglass

@@ -1,0 +1,104 @@
+---
+metadata:
+  description: A breakdown of all USB-C / USB-PD non-standard data (Vendor Defined
+    Messages)
+  credits:
+  - rickmark
+usbc_alternate_modes:
+  intel:
+    svid: 32903
+    modes:
+      1:
+  display_port:
+    svid: 65281
+  apple:
+    svid: 1452
+    modes:
+      2:
+        description: Shortly after transitioning to this mode, non-standard "Get_Battery_Cap"
+          commands are issued, indicating this may be a Apple specific charge / power
+          mode (it is also possible that the commands share the command ID with that
+          standard command causing the parsing issue)
+      5:
+        appears_in:
+        - Apple Silicon Mac in Recovery Mode
+    pids:
+      29458:
+        devices_bcd:
+          8261:
+apple_vdm:
+  1:
+    vdo: []
+  5:
+  21:
+  33:
+    vdo: []
+  257:
+    description: This VDM appears, followed immediately by a `0x0111` - It appears
+      to be the generic "command" VDM
+    vdo:
+    - 0
+    - 4
+    - 16777216
+    - 8
+    - 16777220
+    - 12
+    - 100663296
+    - 16
+    - 50331648
+    - 0
+  258:
+    attention:
+      0:
+      4:
+      268435456:
+      268435460:
+    object_count: 2
+    vdo:
+    - objects:
+      - 0
+      - 536870914
+    - objects:
+      - 4
+      - 196628
+    - objects:
+      - 268435456
+      - 4
+    - objects:
+      - 268435460
+      - 76
+    - objects:
+      - 4
+      - 196628
+  261:
+  273:
+    description: This VDM appears in response to the 0x0101 VDM, seeming to be a generic
+      "response"
+    vdo:
+    - 536870914
+    - 196628
+    - 4
+    - 76
+    - 196628
+    - 16777216
+    - 536870914
+  274:
+  32786:
+    command:
+      261:
+        description: Reboot (two uint32, mode bitflag then 00 to null)
+        vdm_objects:
+          0:
+            name:
+            values:
+              2147483648:
+                description: Reboot
+      262:
+        description: Enter DFU
+        vdm_objects:
+          0:
+            name:
+              values:
+                2147549184:
+                  description:
+      25428742:

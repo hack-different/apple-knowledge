@@ -5,46 +5,82 @@ metadata:
   collections:
   - bundles
 bundles:
+  app_mode_loader:
   com.apple.accessibility.universalAccessAuthWarn:
   com.apple.AirPlayUIAgent:
   com.apple.appkit.xpc.openAndSavePanelService:
   com.apple.AppSSOAgent:
   com.apple.AppStore:
+  com.apple.appstore.AppDownloadLauncher:
+  com.apple.apreceivermac:
   com.apple.AquaAppearanceHelper:
   com.apple.AssistantServices:
+  com.apple.Authorization.LAContextAuthorizationTestApp:
   com.apple.AVKit.RoutePickerViewService:
+  com.apple.avkittester:
+  com.apple.bni.AppleNetInstall:
+  com.apple.Cauldron:
   com.apple.controlcenter:
   com.apple.controlstrip:
   com.apple.CoreLocationAgent:
   com.apple.coreservices.uiagent:
   com.apple.CoreSimulator.CoreSimulatorService:
   com.apple.CoreSimulator.SimulatorTrampoline:
+  com.apple.dashboardlauncher:
+  com.apple.DCSD:
   com.apple.dock:
   com.apple.dock.extra:
+  com.apple.dt.uxi.client:
   com.apple.dt.Xcode:
+  com.apple.dt.XCPreviewAgent:
+  com.apple.factory.SNIFF:
   com.apple.finder:
+  com.apple.finder.Open-iCloudDrive:
+  com.apple.frontrowlauncher:
+  com.apple.FruitBasket:
+  com.apple.green-restore:
   com.apple.imdpersistence.IMDPersistenceAgent:
   com.apple.imtransferservices.IMTransferAgent:
   com.apple.inputmethod.EmojiFunctionRowItem:
+  com.apple.internal.ApplePayAutomation:
+  com.apple.internal.Blade.xctrunner:
+  com.apple.internal.CarDisplaySim:
+  com.apple.iOS-Menu:
+  com.apple.iPhoneMenu:
+  com.apple.iRemoteX:
+  com.apple.ist.Radar7:
+  com.apple.jett.Switch:
   com.apple.LocalAuthentication.UIAgent:
   com.apple.locationd:
   com.apple.locationmenu:
   com.apple.loginwindow:
   com.apple.LookupViewService:
+  com.apple.macFieldDiags.DiagsLoader:
   com.apple.nbagent:
   com.apple.notificationcenterui:
   com.apple.NowPlayingTouchUI:
   com.apple.OSDUIHelper:
   com.apple.PowerChime:
+  com.apple.PowerWarriorX:
   com.apple.Preferences:
+  com.apple.PurpleCrashReporter:
+  com.apple.PurplePod:
+  com.apple.purpleRegister:
+  com.apple.PurpleRestore:
   com.apple.quicklook.QuickLookUIService:
   com.apple.QuickLookThumbnailing.extension.ThumbnailExtension-macOS:
   com.apple.QuickLookUIFramework.QLPreviewGenerationExtension:
+  com.apple.Redwood.app.SafeViewAgent:
+  com.apple.remoteinstallmacosx:
   com.apple.Safari:
   com.apple.Safari.SandboxBroker:
+  com.apple.ScreenShotr:
   com.apple.security.Keychain-Circle-Notification:
   com.apple.SoftwareUpdateNotificationManager:
   com.apple.Spotlight:
+  com.apple.stack:
+  com.apple.SumacUI:
+  com.apple.SwiftUIColorGrid:
   com.apple.systemuiserver:
   com.apple.talagent:
   com.apple.Terminal:
@@ -52,6 +88,8 @@ bundles:
   com.apple.TextInputSwitcher:
   com.apple.TV:
   com.apple.UIKitSystemApp:
+  com.apple.UIKitSystemApp.HelloWorld:
+  com.apple.usbqa.USBProber:
   com.apple.ViewBridgeAuxiliary:
   com.apple.WebKit.GPU:
   com.apple.WebKit.Networking:

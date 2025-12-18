@@ -1,0 +1,89 @@
+/usr/lib/libIOGTrace.dylib [arm64e, 0.041610 seconds]:
+    E52367F4-C45B-3D56-BD3F-454F37894B61 /usr/lib/libIOGTrace.dylib [DYLIB, DYLDSHAREDCACHE, FaultedFromDiskDyldSharedCache, MMap64]  
+        0x00000001e5ba3000 (  0x3ffc) __TEXT SEGMENT
+            0x00000001e5ba3000 (  0x2780) MACH_HEADER
+            0x00000001e5ba5780 (  0x1214) __TEXT __text
+                0x00000001e5ba5780 (   0x6ac) IOGTrace::IOGTrace(char const*, char const*, unsigned int, unsigned short) [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba5e2c (     0x4) (anonymous namespace)::IOReturnException::~IOReturnException() [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba5e30 (     0x4) IOGTrace::IOGTrace(char const*, char const*, unsigned int, unsigned short) [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba5e34 (   0x114) IOGTrace::~IOGTrace() [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba5f48 (     0xc) __clang_call_terminate [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba5f54 (     0x4) IOGTrace::~IOGTrace() [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba5f58 (    0xc8) IOGTrace::formatToken(unsigned short, unsigned short, unsigned long long, unsigned short, unsigned long long, unsigned short, unsigned long long, unsigned short, unsigned long long, unsigned long long) [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6020 (    0x34) IOGTrace::recordToken(GTraceEntry const&) [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6054 (    0xc4) createGTrace [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6118 (    0x38) destroyGTrace [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6150 (     0xc) getBufferID [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba615c (    0x1c) getBreadcrumbBase [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6178 (    0xc8) formatToken [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6240 (    0x34) recordToken [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6274 (    0xf0) recordTokenNow [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6364 (    0xd4) recordTokenNT [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6438 (    0xd8) recordTokenNowNT [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6510 (    0x28) (anonymous namespace)::IOReturnException::~IOReturnException() [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6538 (    0x20) (anonymous namespace)::IOReturnException::what() const [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6558 (    0x3c) IOConnect::~IOConnect() [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6594 (    0x78) std::__1::vector<GTraceEntry, std::__1::allocator<GTraceEntry>>::vector(unsigned long) [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba660c (    0x44) std::__1::vector<GTraceEntry, std::__1::allocator<GTraceEntry>>::__vallocate[abi:v160006](unsigned long) [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6650 (    0x18) std::__1::vector<GTraceEntry, std::__1::allocator<GTraceEntry>>::__throw_length_error[abi:v160006]() const [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6668 (    0x38) std::__1::__allocation_result<std::__1::allocator_traits<std::__1::allocator<GTraceEntry>>::pointer> std::__1::__allocate_at_least[abi:v160006]<std::__1::allocator<GTraceEntry>>(std::__1::allocator<GTraceEntry>&, unsigned long) [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba66a0 (    0x5c) std::__1::__throw_length_error[abi:v160006](char const*) [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba66fc (    0x34) std::length_error::length_error[abi:v160006](char const*) [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6730 (    0x34) std::__throw_bad_array_new_length[abi:v160006]() [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6764 (     0xc) openDiagnostics(IOConnect*, char const**) [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6770 (   0x1e0) (anonymous namespace)::openWranglerUC(IOConnect*, unsigned int, char const**) [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba6950 (     0xc) openGTrace(IOConnect*, char const**) [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001e5ba695c (    0x38) IOObject::~IOObject() [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+            0x00000001e5ba6994 (   0x1c0) __TEXT __auth_stubs
+                0x00000001e5ba6994 (    0x10) DYLD-STUB$$IOConnectCallMethod [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba69a4 (    0x10) DYLD-STUB$$IOObjectRelease [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba69b4 (    0x10) DYLD-STUB$$IORegistryEntryFromPath [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba69c4 (    0x10) DYLD-STUB$$IOServiceClose [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba69d4 (    0x10) DYLD-STUB$$IOServiceOpen [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba69e4 (    0x10) DYLD-STUB$$_Unwind_Resume [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba69f4 (    0x10) DYLD-STUB$$std::logic_error::logic_error(char const*) [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6a04 (    0x10) DYLD-STUB$$std::bad_array_new_length::bad_array_new_length() [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6a14 (    0x10) DYLD-STUB$$std::exception::~exception() [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6a24 (    0x10) DYLD-STUB$$std::terminate() [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6a34 (    0x10) DYLD-STUB$$operator delete(void*) [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6a44 (    0x10) DYLD-STUB$$operator new(unsigned long) [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6a54 (    0x10) DYLD-STUB$$__cxa_allocate_exception [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6a64 (    0x10) DYLD-STUB$$__cxa_begin_catch [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6a74 (    0x10) DYLD-STUB$$__cxa_end_catch [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6a84 (    0x10) DYLD-STUB$$__cxa_free_exception [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6a94 (    0x10) DYLD-STUB$$__cxa_throw [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6aa4 (    0x10) DYLD-STUB$$__stack_chk_fail [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6ab4 (    0x10) DYLD-STUB$$_os_log_impl [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6ac4 (    0x10) DYLD-STUB$$asprintf [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6ad4 (    0x10) DYLD-STUB$$bzero [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6ae4 (    0x10) DYLD-STUB$$mach_continuous_time [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6af4 (    0x10) DYLD-STUB$$mach_error_string [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6b04 (    0x10) DYLD-STUB$$os_log_type_enabled [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6b14 (    0x10) DYLD-STUB$$pthread_threadid_np [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6b24 (    0x10) DYLD-STUB$$snprintf [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6b34 (    0x10) DYLD-STUB$$strlcpy [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6b44 (    0x10) DYLD-STUB$$strnlen [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+            0x00000001e5ba6b54 (    0xec) __TEXT __gcc_except_tab
+                0x00000001e5ba6b54 (    0x48) GCC_except_table0 [NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6b9c (    0x18) GCC_except_table3 [NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6bb4 (    0x24) GCC_except_table8 [NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6bd8 (    0x10) GCC_except_table18 [NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6be8 (    0x10) GCC_except_table19 [NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6bf8 (     0xc) GCC_except_table20 [NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6c04 (    0x10) GCC_except_table24 [NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6c14 (    0x1c) GCC_except_table1 [NameNList, MangledNameNList, NList] 
+                0x00000001e5ba6c30 (    0x10) GCC_except_table5 [NameNList, MangledNameNList, NList] 
+            0x00000001e5ba6c40 (   0x174) __TEXT __oslogstring
+            0x00000001e5ba6db4 (    0xba) __TEXT __cstring
+            0x00000001e5ba6e6e (    0x24) __TEXT __const
+                0x00000001e5ba6e6e (    0x24) typeinfo name for (anonymous namespace)::IOReturnException [NameNList, MangledNameNList, NList] 
+            0x00000001e5ba6e94 (   0x11c) __TEXT __unwind_info
+            0x00000001e5ba6fb0 (    0x4c) __TEXT __eh_frame
+        0x000000022dfec2e8 (    0x58) __DATA_CONST SEGMENT
+            0x000000022dfec2e8 (    0x58) __DATA_CONST __got
+        0x000000023636b8d8 (   0x128) __AUTH_CONST SEGMENT
+            0x000000023636b8d8 (    0x40) __AUTH_CONST __const
+                0x000000023636b8d8 (    0x18) typeinfo for (anonymous namespace)::IOReturnException [NameNList, MangledNameNList, NList] 
+                0x000000023636b8f0 (    0x28) vtable for (anonymous namespace)::IOReturnException [NameNList, MangledNameNList, NList] 
+            0x000000023636b918 (    0xe8) __AUTH_CONST __auth_got
+        0x000000023a910000 (0x37bf0000) __LINKEDIT SEGMENT

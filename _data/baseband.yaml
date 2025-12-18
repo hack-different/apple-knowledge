@@ -6,6 +6,46 @@ metadata:
   - product_basebands
 esim:
   root_keys:
+baseband_behaviors:
+- FlashPSI-Version
+- ModemStack-Digest
+- ModemStack-Length
+- RamPSI-Version
+- FlashPSI-SecPackDigest
+- ModemStack-SecPackDigest
+- FlashPSI-Digest
+- EBL-Digest
+- RamPSI-PartialDigest
+- FlashPSI-PartialDigest
+- RamPSI-Blob
+- RestoreRamPSI-Blob
+- PSI-Blob
+- RestorePSI-Blob
+- PSI2-Blob
+- RestorePSI2-Blob
+- FlashPSI-Blob
+- BBTicket
+- DBL-Version
+- DBL-PartialDigest
+- ENANDPRG-Version
+- ENANDPRG-PartialDigest
+- DBL-Blob
+- ENANDPRG-Blob
+- OSBL-DownloadDigest
+- AMSS-DownloadDigest
+- AMSS-HashTableDigest
+- PartitionTable-Digest
+- eDBL-Version
+- eDBL-PartialDigest
+- eDBL-Blob
+- RestoreDBL-Version
+- RestoreDBL-PartialDigest
+- RestoreDBL-Blob
+- DSP1-DownloadDigest
+- DSP1-HashTableDigest
+- DSP2-DownloadDigest
+- DSP2-HashTableDigest
+- SBL1-Version
 products: {}
 product_basebands:
   iPad11,2:

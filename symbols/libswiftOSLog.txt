@@ -1,0 +1,134 @@
+/usr/lib/swift/libswiftOSLog.dylib [arm64e, 0.040189 seconds]:
+    98EA38EB-5B58-3A73-87A0-AD0EB778CADA /usr/lib/swift/libswiftOSLog.dylib [DYLIB, DYLDSHAREDCACHE, FaultedFromDiskDyldSharedCache, MMap64]  
+        0x00000001bd6be000 (  0x1ffc) __TEXT SEGMENT
+            0x00000001bd6be000 (  0x126c) MACH_HEADER
+            0x00000001bd6bf26c (   0x83c) __TEXT __text
+                0x00000001bd6bf26c (    0xb8) OSLogStore.PrivateIterator.next() [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf324 (    0x2c) protocol witness for IteratorProtocol.next() in conformance OSLogStore.PrivateIterator [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf350 (   0x11c) OSLogStore.getEntries(with:at:matching:) [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf46c (    0x38) (null) [FUNC, FunctionStarts] 
+                0x00000001bd6bf4a4 (     0xc) partial apply for closure #1 in OSLogStore.getEntries(with:at:matching:) [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf4b0 (    0x44) __swift_instantiateConcreteTypeFromMangledName [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf4f4 (   0x150) OSLogMessageComponent.argument.getter [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf644 (    0x14) (null) [FUNC, FunctionStarts] 
+                0x00000001bd6bf658 (    0x4c) initializeBufferWithCopyOfBuffer for OSLogMessageComponent.Argument [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf6a4 (    0x20) outlined copy of OSLogMessageComponent.Argument [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf6c4 (    0x64) outlined copy of Data._Representation [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf728 (    0x10) destroy for OSLogMessageComponent.Argument [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf738 (    0x20) outlined consume of OSLogMessageComponent.Argument [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf758 (    0x58) outlined consume of Data._Representation [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf7b0 (    0x4c) initializeWithCopy for OSLogMessageComponent.Argument [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf7fc (    0x58) assignWithCopy for OSLogMessageComponent.Argument [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf854 (    0x14) __swift_memcpy17_8 [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf868 (    0x48) assignWithTake for OSLogMessageComponent.Argument [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf8b0 (    0x48) getEnumTagSinglePayload for OSLogMessageComponent.Argument [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf8f8 (    0x44) storeEnumTagSinglePayload for OSLogMessageComponent.Argument [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf93c (    0x18) getEnumTag for OSLogMessageComponent.Argument [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf954 (     0x4) destructiveProjectEnumData for OSLogMessageComponent.Argument [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf958 (    0x18) destructiveInjectEnumTag for OSLogMessageComponent.Argument [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf970 (    0x10) type metadata accessor for OSLogMessageComponent.Argument [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf980 (    0x10) type metadata accessor for OSLogStore.PrivateIterator [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf990 (    0x68) outlined init with take of Any? [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bf9f8 (    0x60) outlined destroy of Any? [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bfa58 (    0x10) outlined init with take of Any [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001bd6bfa68 (    0x40) type metadata accessor for OSLogEntry [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+            0x00000001bd6bfaa8 (   0x150) __TEXT __auth_stubs
+                0x00000001bd6bfaa8 (    0x10) DYLD-STUB$$_convertNSErrorToError(_:) [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfab8 (    0x10) DYLD-STUB$$static Data._unconditionallyBridgeFromObjectiveC(_:) [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfac8 (    0x10) DYLD-STUB$$static String._unconditionallyBridgeFromObjectiveC(_:) [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfad8 (    0x10) DYLD-STUB$$_bridgeAnyObjectToAny(_:) [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfae8 (    0x10) DYLD-STUB$$__stack_chk_fail [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfaf8 (    0x10) DYLD-STUB$$objc_msgSend [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfb08 (    0x10) DYLD-STUB$$objc_opt_self [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfb18 (    0x10) DYLD-STUB$$objc_release [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfb28 (    0x10) DYLD-STUB$$objc_retain [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfb38 (    0x10) DYLD-STUB$$objc_retainAutoreleasedReturnValue [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfb48 (    0x10) DYLD-STUB$$swift_allocObject [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfb58 (    0x10) DYLD-STUB$$swift_bridgeObjectRelease [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfb68 (    0x10) DYLD-STUB$$swift_bridgeObjectRetain [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfb78 (    0x10) DYLD-STUB$$swift_deallocObject [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfb88 (    0x10) DYLD-STUB$$swift_dynamicCast [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfb98 (    0x10) DYLD-STUB$$swift_getObjCClassMetadata [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfba8 (    0x10) DYLD-STUB$$swift_getTypeByMangledNameInContext2 [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfbb8 (    0x10) DYLD-STUB$$swift_release [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfbc8 (    0x10) DYLD-STUB$$swift_retain [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfbd8 (    0x10) DYLD-STUB$$swift_unknownObjectRelease [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfbe8 (    0x10) DYLD-STUB$$swift_willThrow [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+            0x00000001bd6bfbf8 (    0x93) __TEXT __swift5_typeref
+                0x00000001bd6bfbf8 (    0x12) symbolic So12NSEnumeratorC [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfc0a (    0x14) symbolic _____y_____y_____GG s12_SequenceBoxC s013_ClosureBasedA0V So10OSLogStoreC0E0E15PrivateIterator33_A983D55EFF15D70AF9FA0E38A33507C0LLV [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfc1e (    0x1c) symbolic So21OSLogMessageComponentC [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfc3a (     0x6) symbolic _____ So21OSLogMessageComponentC0A0E8ArgumentO [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfc40 (     0x6) symbolic _____ 10Foundation4DataV [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfc46 (     0x4) symbolic Sd [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfc4a (     0x6) symbolic _____ s5Int64V [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfc50 (     0x4) symbolic SS [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfc54 (     0x6) symbolic _____ s6UInt64V [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfc5a (    0x10) symbolic So10OSLogStoreC [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfc6a (     0x6) symbolic _____ So10OSLogStoreC0A0E15PrivateIterator33_A983D55EFF15D70AF9FA0E38A33507C0LLV [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfc70 (    0x10) symbolic So10OSLogEntryC [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfc80 (     0x6) symbolic $sSt [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfc86 (     0x5) symbolic ypSg [PEXT, NameNList, MangledNameNList, NList] 
+            0x00000001bd6bfc8c (    0x10) __TEXT __swift5_capture
+            0x00000001bd6bfc9c (    0x6e) __TEXT __const
+                0x00000001bd6bfc9c (    0x14) property descriptor for OSLogMessageComponent.argument [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfcb0 (     0x4) enum case for OSLogMessageComponent.Argument.data(_:) [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfcb4 (     0x4) enum case for OSLogMessageComponent.Argument.double(_:) [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfcb8 (     0x4) enum case for OSLogMessageComponent.Argument.signed(_:) [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfcbc (     0x4) enum case for OSLogMessageComponent.Argument.string(_:) [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfcc0 (     0x4) enum case for OSLogMessageComponent.Argument.unsigned(_:) [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfcc4 (    0x14) enum case for OSLogMessageComponent.Argument.undefined(_:) [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfcd8 (    0x30) protocol conformance descriptor for OSLogStore.PrivateIterator [NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfd08 (     0x2) __swift_reflection_version [PEXT, NameNList, MangledNameNList, NList] 
+            0x00000001bd6bfd0c (    0x64) __TEXT __constg_swiftt
+                0x00000001bd6bfd0c (     0xc) module descriptor  [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfd18 (     0xc) extension descriptor OSLogMessageComponent [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfd24 (    0x1c) nominal type descriptor for OSLogMessageComponent.Argument [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfd40 (     0xc) extension descriptor OSLogStore [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfd4c (     0x8) anonymous descriptor OSLogStore.PrivateIterator [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfd54 (    0x1c) nominal type descriptor for OSLogStore.PrivateIterator [NameNList, MangledNameNList, NList] 
+            0x00000001bd6bfd70 (    0x14) __TEXT __swift5_builtin
+                0x00000001bd6bfd70 (    0x14) reflection metadata builtin descriptor OSLogMessageComponent.Argument [NameNList, MangledNameNList, NList] 
+            0x00000001bd6bfd84 (     0x8) __TEXT __swift5_mpenum
+            0x00000001bd6bfd8c (    0x40) __TEXT __swift5_reflstr
+            0x00000001bd6bfdcc (    0x74) __TEXT __swift5_fieldmd
+                0x00000001bd6bfdcc (    0x58) reflection metadata field descriptor OSLogMessageComponent.Argument [NameNList, MangledNameNList, NList] 
+                0x00000001bd6bfe24 (    0x1c) reflection metadata field descriptor OSLogStore.PrivateIterator [NameNList, MangledNameNList, NList] 
+            0x00000001bd6bfe40 (    0x18) __TEXT __swift5_assocty
+                0x00000001bd6bfe40 (    0x18) reflection metadata associated type descriptor OSLogStore.PrivateIterator [NameNList, MangledNameNList, NList] 
+            0x00000001bd6bfe58 (     0x4) __TEXT __swift5_proto
+            0x00000001bd6bfe5c (     0x8) __TEXT __swift5_types
+            0x00000001bd6bfe64 (    0xa4) __TEXT __unwind_info
+            0x00000001bd6bff08 (    0x40) __TEXT __eh_frame
+            0x00000001bd6bff48 (    0xb4) __TEXT __objc_methname
+        0x00000001d3b71ab8 (    0x98) __DATA_CONST SEGMENT
+            0x00000001d3b71ab8 (    0x10) __DATA_CONST __got
+            0x00000001d3b71ac8 (    0x40) __DATA_CONST __const
+                0x00000001d3b71ac8 (     0x8) _swift_FORCE_LOAD_$_swiftos_$_OSLog [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b71ad0 (     0x8) _swift_FORCE_LOAD_$_swiftObjectiveC_$_OSLog [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b71ad8 (     0x8) _swift_FORCE_LOAD_$_swiftDarwin_$_OSLog [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b71ae0 (     0x8) _swift_FORCE_LOAD_$_swiftXPC_$_OSLog [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b71ae8 (     0x8) _swift_FORCE_LOAD_$_swiftDispatch_$_OSLog [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b71af0 (     0x8) _swift_FORCE_LOAD_$_swiftFoundation_$_OSLog [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b71af8 (     0x8) _swift_FORCE_LOAD_$_swiftCoreFoundation_$_OSLog [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001d3b71b00 (     0x8) _swift_FORCE_LOAD_$_swiftIOKit_$_OSLog [PEXT, NameNList, MangledNameNList, NList] 
+            0x00000001d3b71b08 (     0x8) __DATA_CONST __objc_imageinfo
+            0x00000001d3b71b10 (    0x40) __DATA_CONST __objc_selrefs
+        0x00000001df15bd58 (   0x1c8) __AUTH_CONST SEGMENT
+            0x00000001df15bd58 (   0x120) __AUTH_CONST __const
+                0x00000001df15bd90 (    0x70) value witness table for OSLogMessageComponent.Argument [NameNList, MangledNameNList, NList] 
+                0x00000001df15be00 (    0x10) full type metadata for OSLogMessageComponent.Argument [NameNList, MangledNameNList, NList] 
+                0x00000001df15be10 (    0x28) type metadata for OSLogMessageComponent.Argument [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001df15be38 (    0x40) full type metadata for OSLogStore.PrivateIterator [NameNList, MangledNameNList, NList] 
+            0x00000001df15be78 (    0xa8) __AUTH_CONST __auth_got
+        0x00000001d67cdb20 (    0xa1) __DATA SEGMENT
+            0x00000001d67cdb20 (     0x8) __DATA __objc_classrefs
+            0x00000001d67cdb28 (    0x18) __DATA __data
+                0x00000001d67cdb28 (     0x8) demangling cache variable for type metadata for _SequenceBox<_ClosureBasedSequence<OSLogStore.PrivateIterator>> [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001d67cdb30 (     0x8) demangling cache variable for type metadata for Any? [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001d67cdb38 (     0x8) lazy cache variable for type metadata for OSLogEntry [PEXT, NameNList, MangledNameNList, NList] 
+            0x00000001d67cdb40 (    0x80) __DATA __bss
+                0x00000001d67cdb40 (    0x80) metadata instantiation cache for protocol conformance descriptor for OSLogStore.PrivateIterator [NameNList, MangledNameNList, NList] 
+            0x00000001d67cdbc0 (     0x1) __DATA __common
+                0x00000001d67cdbc0 (     0x1) _swift_FORCE_LOAD_$_swiftOSLog [EXT, NameNList, MangledNameNList, NList] 
+        0x000000023a910000 (0x37bf0000) __LINKEDIT SEGMENT
