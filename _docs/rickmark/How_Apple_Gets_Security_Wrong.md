@@ -1,0 +1,37 @@
+# How Apple Gets Security Wrong
+
+- Undocumented protocols (USB-PD, lightning, UTDM, usbmux, IPSW, etc)
+    - Use of MFi to prevent research and disclosure
+- Lack of Physical Attestation for privileged operations
+    - Hold a key to enable auto-DFU
+    - DFU on modern iPad / iPhone cumbersome and unreliable
+- No audit of SecureBoot source code
+    - This should be open source
+- Lack of critical security indicators (SecureBoot off, upgrade vs erase)
+    - ChromeBook in insecure mode graphic
+    - No indicator of a restore vs a upgrade / revive
+        - Can cary forward malware on the mutable data partition
+- Lack of adequate settings (disable BootCamp, Microsoft keys)
+    - By allowing BootCamp in full all Microsoft bugs are also Apple bugs
+    - Disable magic-pairing
+- Debug protocols in production products
+    - Bonobo cable
+    - T2 SWD + Intel DCI
+- No system in place to detect modifications (Configurator Verify mode)
+    - Assume that security will not be circumvented
+    - No indicator of pairing records in macOS / iOS
+    - Extracting non-user data isn’t a privacy concern
+    - Extracting user data with permission (PIN etc) is not a concern
+        - Forensic boot image
+- No audit trail for online accounts
+    - Device removed / added to FindMy
+    - Logins
+    - Active sessions
+    - Device restored
+    - 2Fa requests and approvals
+    - iMessage activations
+    - SIM card swaps / eSIM operations
+    - ApplePay enroll / disenrollment
+    - Pairing records
+    - iCloud restores
+
