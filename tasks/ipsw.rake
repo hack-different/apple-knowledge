@@ -2,6 +2,8 @@
 
 require_relative '../lib/shasum'
 require_relative '../lib/merkle'
+require_relative '../lib/cid'
+
 
 namespace :data do
   namespace :ipsw do
@@ -216,6 +218,31 @@ namespace :data do
       end
 
       puts result.to_json
+    end
+
+    desc 'Calculate the IPFS addresses for known hashes'
+    task :ipfs do
+      data_file = AppleData::DataFile.new 'ipsw'
+      collection = data_file.collection :ipsw_files
+
+      collection.each do |ipsw, value|
+        puts "IPSW: #{ipsw}"
+        value["urls"] ||= []
+        next if value["urls"].any? { |url| url["ipfs"] }
+
+        hashes = value["hashes"] ||= {}
+        hash = hashes["sha2-256"]
+        puts "#{ipsw}: #{hash}"
+        next unless hash
+
+        hash = [hash].pack('H*')
+
+        ipfs_cid = CID.from_hex(hash)
+
+        value["urls"] << { "ipfs" => ipfs_cid }
+      end
+
+      data_file.save
     end
 
     desc 'invalid IPSWs from local store'
