@@ -1,4 +1,28 @@
 GIT
+  remote: https://github.com/rickmark/eth.rb.git
+  revision: b2575ee2d4c8c4e30fb9020ac386499732b65c12
+  branch: ruby4
+  specs:
+    eth (0.5.17)
+      base64 (~> 0.1)
+      bigdecimal (~> 3.1)
+      bls12-381 (~> 0.3)
+      forwardable (~> 1.3)
+      httpx (~> 1.6)
+      keccak (~> 1.3)
+      konstructor (~> 1.0)
+      openssl (~> 3.3)
+      rbsecp256k1 (~> 6.0)
+      scrypt (~> 3.0)
+
+GIT
+  remote: https://github.com/rickmark/keccak.rb.git
+  revision: 4bfc6dc8f0512aea1c94ecbbf256d13d746af3ba
+  branch: ruby4
+  specs:
+    keccak (1.3.4)
+
+GIT
   remote: https://github.com/rickmark/mediawiki-ruby-api.git
   revision: 749a513b91827cfbe8ce9213bb9ae3a2811df11d
   branch: faraday_2
@@ -29,13 +53,29 @@ GEM
       base64
       nkf
       rexml
-    activemodel (8.1.1)
-      activesupport (= 8.1.1)
-    activerecord (8.1.1)
-      activemodel (= 8.1.1)
-      activesupport (= 8.1.1)
+    actionpack (8.1.2)
+      actionview (= 8.1.2)
+      activesupport (= 8.1.2)
+      nokogiri (>= 1.8.5)
+      rack (>= 2.2.4)
+      rack-session (>= 1.0.1)
+      rack-test (>= 0.6.3)
+      rails-dom-testing (~> 2.2)
+      rails-html-sanitizer (~> 1.6)
+      useragent (~> 0.16)
+    actionview (8.1.2)
+      activesupport (= 8.1.2)
+      builder (~> 3.1)
+      erubi (~> 1.11)
+      rails-dom-testing (~> 2.2)
+      rails-html-sanitizer (~> 1.6)
+    activemodel (8.1.2)
+      activesupport (= 8.1.2)
+    activerecord (8.1.2)
+      activemodel (= 8.1.2)
+      activesupport (= 8.1.2)
       timeout (>= 0.4.0)
-    activesupport (8.1.1)
+    activesupport (8.1.2)
       base64
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.3.1)
@@ -55,7 +95,9 @@ GEM
     base64 (0.3.0)
     base_x (0.8.1)
     benchmark (0.5.0)
-    bigdecimal (4.0.1)
+    bigdecimal (3.3.1)
+    bls12-381 (0.3.0)
+      h2c (~> 0.2.0)
     builder (3.3.0)
     bundle-audit (0.2.0)
       bundler-audit
@@ -81,6 +123,7 @@ GEM
       ruby-enum (~> 0.5)
     concurrent-ruby (1.3.6)
     connection_pool (3.0.2)
+    crass (1.0.6)
     csv (3.3.5)
     csvlint (0.3.2)
       activesupport
@@ -92,12 +135,19 @@ GEM
       thor
       typhoeus
       uri_template
+    date (3.5.1)
     diff-lcs (1.6.2)
     domain_name (0.6.20240107)
+    dotenv (3.2.0)
+    dotenv-rails (3.2.0)
+      dotenv (= 3.2.0)
+      railties (>= 6.1)
     drb (2.2.3)
+    ecdsa (1.2.0)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
+    erb (6.0.1)
     erubi (1.13.1)
     escape_utils (1.3.0)
     ethon (0.18.0)
@@ -123,24 +173,38 @@ GEM
       faraday (~> 2.0)
     ffi (1.17.3-arm64-darwin)
     ffi (1.17.3-x86_64-linux-gnu)
+    ffi-compiler (1.3.2)
+      ffi (>= 1.15.5)
+      rake
+    fileutils (1.8.0)
+    forwardable (1.4.0)
     forwardable-extended (2.6.0)
-    google-protobuf (4.33.2)
+    google-protobuf (4.33.3)
       bigdecimal
       rake (>= 13)
+    h2c (0.2.1)
+      ecdsa (~> 1.2.0)
     hashie (5.1.0)
       logger
     html-pipeline (2.14.3)
       activesupport (>= 2)
       nokogiri (>= 1.4)
     htmlentities (4.4.2)
+    http-2 (1.1.1)
     http-cookie (1.1.0)
       domain_name (~> 0.5)
     http_parser.rb (0.8.1)
+    httpx (1.7.0)
+      http-2 (>= 1.0.0)
     i18n (1.14.8)
       concurrent-ruby (~> 1.0)
     idn-ruby (0.1.5)
     iniparse (1.5.0)
     io-console (0.8.2)
+    irb (1.16.0)
+      pp (>= 0.6.0)
+      rdoc (>= 4.0.0)
+      reline (>= 0.4.2)
     jekyll (4.4.1)
       addressable (~> 2.4)
       base64 (~> 0.2)
@@ -197,6 +261,7 @@ GEM
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     json (2.18.0)
+    konstructor (1.0.2)
     kramdown (2.5.1)
       rexml (>= 3.3.9)
     kramdown-parser-gfm (1.1.0)
@@ -208,6 +273,9 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
+    loofah (2.25.0)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.12.0)
     lzfse (0.0.2)
     lzss (0.1)
     manpages (0.6.1)
@@ -223,6 +291,7 @@ GEM
       logger
       mime-types-data (~> 3.2025, >= 3.2025.0507)
     mime-types-data (3.2025.0924)
+    mini_portile2 (2.8.9)
     minitest (6.0.1)
       prism (~> 1.5)
     mixlib-cli (2.1.8)
@@ -242,6 +311,7 @@ GEM
     multicodecs (1.0.0)
     multihashes (0.1.3)
     multipart-post (2.4.1)
+    mutex_m (0.3.0)
     net-http (0.9.1)
       uri (>= 0.11.1)
     netrc (0.11.0)
@@ -254,6 +324,7 @@ GEM
       faraday (>= 1, < 3)
       sawyer (~> 0.9)
     open_uri_redirections (0.2.1)
+    openssl (3.3.2)
     overcommit (0.68.0)
       childprocess (>= 0.6.3, < 6)
       iniparse (~> 1.4)
@@ -265,24 +336,64 @@ GEM
     parslet (2.0.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+    pkg-config (1.6.5)
     plist (3.7.2)
+    pp (0.6.3)
+      prettyprint
+    prettyprint (0.2.0)
     prism (1.7.0)
     pry (0.16.0)
       coderay (~> 1.1)
       method_source (~> 1.0)
       reline (>= 0.6.0)
+    psych (5.3.1)
+      date
+      stringio
     public_suffix (7.0.2)
     racc (1.8.1)
+    rack (3.2.4)
+    rack-session (2.1.1)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0)
+    rack-test (2.2.0)
+      rack (>= 1.3)
+    rackup (2.3.1)
+      rack (>= 3)
+    rails-dom-testing (2.3.0)
+      activesupport (>= 5.0.0)
+      minitest
+      nokogiri (>= 1.6)
+    rails-html-sanitizer (1.6.2)
+      loofah (~> 2.21)
+      nokogiri (>= 1.15.7, != 1.16.7, != 1.16.6, != 1.16.5, != 1.16.4, != 1.16.3, != 1.16.2, != 1.16.1, != 1.16.0.rc1, != 1.16.0)
+    railties (8.1.2)
+      actionpack (= 8.1.2)
+      activesupport (= 8.1.2)
+      irb (~> 1.13)
+      rackup (>= 1.0.0)
+      rake (>= 12.2)
+      thor (~> 1.0, >= 1.2.2)
+      tsort (>= 0.2)
+      zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.3.1)
+    rate_throttle_client (0.1.2)
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
     rbi (0.3.9)
       prism (~> 1.0)
       rbs (>= 3.4.4)
-    rbs (3.10.0)
+    rbs (3.10.2)
       logger
+    rbsecp256k1 (6.0.0)
+      mini_portile2 (~> 2.8)
+      pkg-config (~> 1.5)
+      rubyzip (~> 2.3)
+    rdoc (7.0.3)
+      erb
+      psych (>= 4.0.0)
+      tsort
     regexp_parser (2.11.3)
     reline (0.6.3)
       io-console (~> 0.5)
@@ -332,15 +443,18 @@ GEM
     sawyer (0.9.3)
       addressable (>= 2.3.5)
       faraday (>= 0.17.3, < 3)
+    scrypt (3.1.0)
+      ffi-compiler (>= 1.0, < 2.0)
+      rake (~> 13)
     securerandom (0.4.1)
-    sorbet (0.6.12874)
-      sorbet-static (= 0.6.12874)
-    sorbet-runtime (0.6.12874)
-    sorbet-static (0.6.12874-universal-darwin)
-    sorbet-static (0.6.12874-x86_64-linux)
-    sorbet-static-and-runtime (0.6.12874)
-      sorbet (= 0.6.12874)
-      sorbet-runtime (= 0.6.12874)
+    sorbet (0.6.12883)
+      sorbet-static (= 0.6.12883)
+    sorbet-runtime (0.6.12883)
+    sorbet-static (0.6.12883-universal-darwin)
+    sorbet-static (0.6.12883-x86_64-linux)
+    sorbet-static-and-runtime (0.6.12883)
+      sorbet (= 0.6.12883)
+      sorbet-runtime (= 0.6.12883)
     spoom (1.6.3)
       erubi (>= 1.10.0)
       prism (>= 0.28.0)
@@ -350,6 +464,25 @@ GEM
       thor (>= 0.19.2)
     sqlite3 (2.9.0-arm64-darwin)
     sqlite3 (2.9.0-x86_64-linux-gnu)
+    steep (1.10.0)
+      activesupport (>= 5.1)
+      concurrent-ruby (>= 1.1.10)
+      csv (>= 3.0.9)
+      fileutils (>= 1.1.0)
+      json (>= 2.1.0)
+      language_server-protocol (>= 3.17.0.4, < 4.0)
+      listen (~> 3.0)
+      logger (>= 1.3.0)
+      mutex_m (>= 0.3.0)
+      parser (>= 3.1)
+      rainbow (>= 2.2.2, < 4.0)
+      rbs (~> 3.9)
+      securerandom (>= 0.1)
+      strscan (>= 1.0.0)
+      terminal-table (>= 2, < 5)
+      uri (>= 0.12.0)
+    stringio (3.2.0)
+    strscan (3.1.7)
     tapioca (0.16.11)
       benchmark
       bundler (>= 2.2.25)
@@ -365,6 +498,7 @@ GEM
     thor (1.5.0)
     timeout (0.6.0)
     tomlrb (2.0.4)
+    tsort (0.2.0)
     twitter-text (3.1.0)
       idn-ruby
       unf (~> 0.1.0)
@@ -378,6 +512,7 @@ GEM
     unicode-display_width (2.6.0)
     uri (1.1.1)
     uri_template (0.7.0)
+    useragent (0.16.11)
     webrick (1.9.2)
     wikicloth (0.8.3)
       builder
@@ -389,6 +524,7 @@ GEM
     yard-sorbet (0.9.0)
       sorbet-runtime
       yard
+    zeitwerk (2.7.4)
 
 PLATFORMS
   arm64-darwin-23
@@ -405,6 +541,8 @@ DEPENDENCIES
   bundle-audit
   byebug
   cid
+  dotenv-rails
+  eth!
   faraday (~> 2.5)
   faraday-retry
   google-protobuf
@@ -423,6 +561,7 @@ DEPENDENCIES
   jekyll-remote-theme
   jekyll-seo-tag
   jekyll-titles-from-headings
+  keccak!
   kramdown
   manpages
   mdl
@@ -438,13 +577,15 @@ DEPENDENCIES
   plist
   pry
   rake
+  rate_throttle_client
+  rbs
   rspec
   rspec-rake
   rubocop
   ruby-macho
-  sorbet
   sorbet-runtime
   sqlite3
+  steep
   tapioca
   toml (~> 0.3.0)!
   typhoeus

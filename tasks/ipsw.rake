@@ -226,13 +226,11 @@ namespace :data do
       collection = data_file.collection :ipsw_files
 
       collection.each do |ipsw, value|
-        puts "IPSW: #{ipsw}"
         value["urls"] ||= []
         next if value["urls"].any? { |url| url["ipfs"] }
 
         hashes = value["hashes"] ||= {}
         hash = hashes["sha2-256"]
-        puts "#{ipsw}: #{hash}"
         next unless hash
 
         hash = [hash].pack('H*')
