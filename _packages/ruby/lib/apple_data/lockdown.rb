@@ -3,10 +3,11 @@
 
 module AppleData
   # Schema file for the `lockdownd.yaml` file
-  class LockdownData < AppleData::DataFile
+  class Lockdown < AppleData::DataFile
     def initialize
       super('lockdownd.yaml')
-      @data ||= {}
+      @data ||= {} #: data
+
       @data['clients'] ||= []
       @data['domains'] ||= []
     end
@@ -15,24 +16,23 @@ module AppleData
       @data['clients'] << client unless @data['clients'].include? client
     end
 
+    def get_domain(domain)
+      result = @data['domains'].find { |d| d['name'] == domain }
+      unless result
+        result = { 'name' => domain } # : domain
+        @data['domains'] << result
+      end
+      result['description'] ||= nil
+      result['properties'] ||= []
+      result
+    end
+
     def ensure_domain_has_property(domain, property, _type = nil)
       domain_instance = get_domain domain
 
       return unless property
 
       domain_instance['properties'] << property unless domain_instance['properties'].include? property
-    end
-
-    def get_domain(domain)
-      result = @data['domains'].find { |d| d['name'] == domain }
-      unless result
-        result = {}
-        result['name'] = domain
-        @data['domains'] << result
-      end
-      result['description'] ||= nil
-      result['properties'] ||= []
-      result
     end
 
     def data

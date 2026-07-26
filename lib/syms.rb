@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-SYM_FILES = [
-  '/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.map',
-  '/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.map',
-  '/Users/rickmark/bins.txt'
+SYM_FILES = %w[
+  /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.map
+  /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.map
+  /Users/rickmark/bins.txt
 ].freeze
 
 FRAMEWORK_FILES = [
@@ -60,7 +60,7 @@ def path_ignored?(path)
 end
 
 ARCHES.each do |arch| # rubocop:disable Metrics/BlockLength
-  output_path = File.join(OUT, ENV.fetch('USER', 'unknown'), (arch || 'host'))
+  output_path = File.join(OUT, ENV.fetch('USER', 'unknown'), arch || 'host')
   FileUtils.mkdir_p(output_path)
 
   FRAMEWORK_FILES.each do |framework_file|

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/BlockLength
+
 source 'https://rubygems.org'
 
 # Hello! This is where you manage which Jekyll version is used to run.
@@ -15,11 +17,13 @@ source 'https://rubygems.org'
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 
-gem 'jekyll', '~> 4.2'
+gem 'jekyll'
 gem 'plist'
-gem 'toml', '~> 0.3.0', github: 'rickmark/toml'
+gem 'toml'
 
-gem 'mootool', '~> 0.2.2'
+gem 'rbs'
+
+gem 'mootool'
 
 gem 'sorbet-runtime'
 
@@ -63,6 +67,7 @@ group :development, :test do
   gem 'manpages'
   gem 'mdl'
   gem 'mediawiki_api', github: 'rickmark/mediawiki-ruby-api', branch: 'faraday_2'
+  gem 'merkle_tree'
   gem 'multibases'
   gem 'multicodecs'
   gem 'multihashes'
@@ -72,7 +77,7 @@ group :development, :test do
   gem 'pathutil'
   gem 'pry'
   gem 'rake'
-  gem 'rbs'
+  gem 'rate_throttle_client'
   gem 'rspec'
   gem 'rspec-rake'
   gem 'rubocop'
@@ -82,5 +87,7 @@ group :development, :test do
   gem 'tapioca', require: false
   gem 'typhoeus'
   gem 'wikicloth'
-  gem 'rate_throttle_client'
+  gem 'typeprof'
 end
+
+# rubocop:enable Metrics/BlockLength

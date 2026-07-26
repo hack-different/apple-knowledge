@@ -3,11 +3,12 @@
 
 module AppleData
   # Data file for the IOReg data
-  class IORegData < AppleData::DataFile
+  class IOReg < AppleData::DataFile
     def initialize
       super('ioreg.yaml')
 
-      @classes = []
+      @classes = [] # : [IORegClass]
+      @instances ||= {} # : {string => IORegClass}
 
       @data['classes'].each do |single_class|
         @classes << IORegClass.load_one(single_class)
@@ -18,7 +19,7 @@ module AppleData
       @data = {}
       @data['classes'] = @classes.map(&:to_h)
     end
-  end
+
 
   # A single IOKit class
   class IORegClass
@@ -26,12 +27,10 @@ module AppleData
 
     def initialize(klass_name)
       @name = klass_name
-      @parents = []
+      @parents = [] #: [string]
     end
 
     def self.for_name(name)
-      @instances ||= {}
-
       @instances[name] = IORegClass.new name unless @instances.key? name
 
       @instances[name]
@@ -42,10 +41,12 @@ module AppleData
     end
 
     def self.load_one(hash)
-      instance = for_name hash['name']
+      instance = IORegClass.for_name hash['name']
       instance.description = hash['description']
-      instance.parents = hash['parents']
-      instance.known_names = (hash['known_names'] || []).sort
+      instance.parents = hash['parents'] || []
+      instance.known_names = hash['known_names'] || []
+      instance.known_names.sort!
+      instance
     end
 
     def to_h
@@ -57,3 +58,4 @@ module AppleData
     end
   end
 end
+  end

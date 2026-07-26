@@ -1,0 +1,163 @@
+
+module AppleData
+  type metadata = {
+      'metadata' => {
+          'description' => string,
+          'auto_sort' => bool?,
+          'credits' => [string]
+        }
+    }
+
+  type data = metadata | FactoryDataReset::data |
+    Lockdown::data | IOReg::data
+
+  def get_data: (string) -> DataFile
+  attr_accessor self.data_location: string
+
+  attr_reader data: data
+
+  DEFAULT_APPLE_DATA_SHARE: string
+  VERSION: String
+
+  self.@apple_data: string
+
+  class DataFile
+    @collections: hash[string, DataFileCollection]
+    @data: data
+    @filename: string
+
+    @parts: untyped
+
+    def initialize: (*string) -> void
+    def self.from_path: (string) -> untyped
+    def load_file: (*string) -> Hash[String, Array[untyped] | Hash[untyped, untyped] | []]
+    def save!: -> void
+    def save: -> void
+    def collection: (string | Symbol) -> hash[string, top]
+    def sort!: -> void
+    def auto_sort?: -> (Hash[String, []?] | false)
+    def save_data: (Array[untyped] | Hash[String, Array[untyped] | Hash[untyped, untyped] | []]) -> Integer
+    def ensure_metadata: -> (Array[untyped] | Hash[String, []?])
+    def data: -> data
+
+    class DataFileCollection
+
+      @collection_name: string
+      @data_file: DataFile
+    end
+  end
+
+  class FactoryDataReset < DataFile
+    type property =           {
+        'name' => string,
+        'description' => string?
+      }
+    type data =  metadata | {
+        'fdr_modes' => hash[
+            string, {
+              'descripton' => string?
+            }
+          ],
+        'fdr_objects' => [
+          ],
+        'properties' => [ property ],
+      }
+
+    attr_reader data: data
+
+    def initialize: () -> void
+    def ensure_property: (string) -> property
+  end
+
+  class IOReg < DataFile
+    type data = {
+        'classes' => [IORegClass::data]
+      }
+
+    def initialize: -> void
+
+    @classes: [IORegClass]
+
+    attr_reader data: data
+
+    class IORegClass
+      type data = {
+          'name' => string,
+          'description' => string?,
+          'parents' => [string]?,
+          'known_names' => [string]?
+        }
+
+      @name: string
+      @parents: [string]
+      self.@instances: hash[string, instance]
+
+      attr_accessor name: string
+      attr_accessor parents: [string]
+      attr_accessor known_names: [string]
+      attr_accessor description: string?
+      attr_accessor type: string
+
+      def initialize: (string) -> void
+      def self.for_name: (string) -> IORegClass
+      def self.values: -> Array[IORegClass]
+      def self.load_one: (data) -> instance
+      def to_h: -> data
+      def user_client?: -> bool
+    end
+  end
+
+  class IPSW
+    def initialize: (untyped) -> void
+  end
+
+  class GIDKeyBag < DataFile
+    def self.save_all: -> Hash[untyped, untyped]
+    def self.[]: (untyped) -> untyped
+    def initialize: (untyped) -> void
+
+    def get_board: (string | Symbol | int) -> BoardKeyBag
+
+    class BoardKeyBag
+      type build = {
+          'components' => {
+              'keybags' => hash[string, {}]
+            }
+        }
+      def initialize: (GIDKeyBag, untyped, untyped) -> void
+      def merge_keydb_build: (untyped, untyped) -> nil
+    end
+  end
+
+
+  class Lockdown < DataFile
+    type property = {}
+    type domain = {
+        'name' => string,
+        'description' => string?,
+        'properties' => [
+          property
+          ]
+      }
+    type klass = {
+        'name' => string
+      }
+    type data = metadata | {
+        'domains' => [domain],
+        'classes' => [klass]
+      }
+
+    def get_domain: (string) -> domain
+    def initialize: () -> void
+  end
+
+  class IPSW
+    def baseband_files: -> []
+    def img4_files: -> nil
+
+    @path: string
+    @zip: untyped
+    @manifest: hash[string, top]
+  end
+
+end

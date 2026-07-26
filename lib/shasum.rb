@@ -4,6 +4,8 @@
 class SHASum
   SHASUM_LINE = /^([0-9a-fA-F]*)\s+(\S+)$/m
 
+  # @param [String] input hash to check
+  # @return [String] type of hash
   def self.shasum_type?(input)
     case input.length
     when 32
@@ -11,7 +13,7 @@ class SHASum
     when 40
       'sha1'
     when 56
-      'sha2-224'
+      'sha2-224' # Technically, this could be sha3 or keccak, but apple uses sha2 (same for all below)
     when 64
       'sha2-256'
     when 96

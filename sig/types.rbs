@@ -1,0 +1,168 @@
+# TypeProf 0.31.1
+
+# failed to analyze: lib/merkledag.proto
+# lib/ApplePackageIntegrity.json
+
+
+# lib/baseband.rb
+class Object
+  def print_files_in_patch: (untyped) -> Array[untyped]
+end
+
+
+
+
+class Object
+  def find_chip_board: (untyped, ?chip_type: :ap) -> [String, String]?
+  CORES_DATA: untyped
+end
+
+class DtNode
+  def name: -> untyped
+  def compatible: -> untyped
+  def handle: -> untyped
+  def functions: -> untyped
+  def props: -> untyped
+  def children: -> untyped
+end
+
+# lib/img4.rb
+class Img4File
+  Img4File::VALID_EXTENSIONS: Array[String]
+  Img4File::VALID_TYPES: Array[String]
+  def manifest: -> nil
+  def payload: -> nil
+  def initialize: (untyped) -> void
+  def basename: -> String
+  def extract_payload: -> Integer
+  def manifest?: -> false
+  def payload?: -> false
+end
+
+# lib/kext.rb
+class KextStatDumpState
+  class KextStatDumpState::KextBundle
+    KextStatDumpState::KextBundle::LINE_REGEX: Regexp
+    def id: -> String?
+    def id=: (untyped) -> String?
+    def version: -> String?
+    def version=: (untyped) -> String?
+    def hash: -> String?
+    def hash=: (untyped) -> String?
+    def uuid: -> String?
+    def uuid=: (untyped) -> String?
+    def codeless: -> bool
+    def codeless=: (untyped) -> bool
+    def type: -> String?
+    def type=: (untyped) -> String?
+    def path: -> String?
+    def path=: (untyped) -> String?
+    def bundle: -> String?
+    def bundle=: (untyped) -> String?
+    def flags: -> Array[String]
+    def flags=: (untyped) -> Array[String]
+    def signer: -> String?
+    def signer=: (untyped) -> String?
+    def entitlements: -> String?
+    def entitlements=: (untyped) -> String?
+    def initialize: (MatchData?) -> void
+  end
+  class KextStatDumpState::KextEntry
+    KextStatDumpState::KextEntry::LINE_REGEX: Regexp
+    def id: -> String?
+    def id=: (untyped) -> String?
+    def version: -> String?
+    def version=: (untyped) -> String?
+    def uuid: -> String?
+    def uuid=: (untyped) -> String?
+    def codeless: -> bool
+    def codeless=: (untyped) -> bool
+    def collection_type: -> String?
+    def collection_type=: (untyped) -> String?
+    def signer: -> String?
+    def signer=: (untyped) -> String?
+    def flags: -> Array[String]
+    def flags=: (untyped) -> Array[String]
+    def collection: -> String?
+    def collection=: (untyped) -> String?
+    def initialize: (MatchData?) -> void
+  end
+  def entries: -> []
+  def entries=: (untyped) -> []
+  def initialize: (untyped) -> void
+end
+
+# lib/launchd.rb
+module LaunchD
+  LaunchD::OS_VERSION_PATHS: Array[String]
+  LaunchD::XNU_RELATIVE_PATHS: Array[String]
+  LaunchD::OS_NAME: Array[String]
+  def self.compose_os_info: (untyped) -> untyped
+  def self.map_service_to_hash: (untyped) -> Hash[:enable_pressured_exit | :enable_transactions | :keep_alive | :label | :launch_events | :mach_services | :posix_spawn_type | :program_arguments | :publishes_events | :remote_services, untyped]
+  def self.map_services_to_hash: (untyped, Array[untyped]) -> untyped
+  def self.create_output: (untyped) -> untyped
+end
+
+# lib/merkle.rb
+class MerkleTree
+  def initialize: (untyped) -> void
+  def scan: -> untyped
+  def to_h: -> Hash[String, Hash[String, untyped] | String | []]
+  def file_entry: (untyped, untyped) -> Hash[String, Hash[String, untyped]]
+  def file_hashes: (untyped) -> Hash[String, untyped]
+  def update_time: (Hash[String, Hash[String, untyped]], untyped) -> nil
+  def update_permissions: (Hash[String, Hash[String, untyped]], untyped) -> nil
+  def update_metadata: (Hash[String, Hash[String, untyped]], untyped) -> nil
+end
+
+# lib/shasum.rb
+class SHASum
+  SHASum::SHASUM_LINE: Regexp
+  def self.shasum_type?: (String?) -> String
+  def sums: -> Hash[String?, String?]
+  def sums=: (untyped) -> Hash[String?, String?]
+  def initialize: (String) -> void
+  def self.from_file: (untyped) -> SHASum
+  def update_collection: (untyped) -> Hash[String?, String?]
+end
+
+# lib/syms.rb
+
+class Object
+  def do_read_symbols: (String?, String, String, ?String?) -> Integer?
+  def path_ignored?: (untyped) -> bool
+end
+
+# lib/tipw.rb
+module TIPW
+  TIPW::SYNC_DATAFILE: untyped
+  TIPW::CLIENT: untyped
+  TIPW::KEY_VALUE_PAIR: Regexp
+  def self.get_pages_in_category: (untyped) -> []
+  def self.get_page_content: (untyped) -> nil
+  class TIPW::TIPWKeyPage
+    TIPW::TIPWKeyPage::KEY_TEMPLATE_REGEX: Regexp
+    TIPW::TIPWKeyPage::DESCRIPTORS: Array[String]
+    TIPW::TIPWKeyPage::IGNORE_VALUES: Array[String]
+    def initialize: (?nil) -> void
+    def to_h: -> Hash[String, Hash[String?, Hash[String, Hash[String, Hash[String, String?]]]]]
+    TIPW::TIPWKeyPage::TYPE_MAPPING: Hash[Integer, String]
+    def append_key: (String?, String?, untyped) -> nil
+    def append_keybag: (String?, untyped) -> Hash[String, Hash[String, String?]]?
+    def keypair_to_iv_key: (untyped) -> ([String?, String?, String] | [untyped, untyped, String])?
+    def process_pairs: (untyped) -> untyped
+    def cleanup_useless!: -> Hash[String?, Hash[String, Hash[String, Hash[String, String?]]]]?
+  end
+  class TIPW::TIPWCodenames
+    def initialize: -> void
+  end
+end
+
+# lib/xnu_source.rb
+class XNUSource
+  XNUSource::PARSE_ARGN: Regexp
+  XNUSource::TUNABLE: Regexp
+  XNUSource::SUPPORTED_FILE_EXTENSIONS: Array[String]
+  def initialize: (untyped) -> void
+  def each_source_file: { (String, String) -> untyped } -> Array[String]
+end
