@@ -1,0 +1,47 @@
+module TIPW
+  CLIENT: MediawikiApi::Client
+  KEY_VALUE_PAIR: Regexp
+  SYNC_DATAFILE: AppleData::DataFile
+
+  type keybag = {
+    'encrypted_iv' => string,
+    'encrypted_key' => string
+  }
+
+  type keybags = {
+      'keybags' => hash[string, keybag]
+  }
+
+  def self.get_page_content: (string) -> string?
+
+  def self.get_pages_in_category: (string) -> array[string]
+
+  class TIPWKeyPage
+
+    DESCRIPTORS: array[string]
+    IGNORE_VALUES: array[string]
+
+    KEY_TEMPLATE_REGEX: Regexp
+
+    TYPE_MAPPING: hash[int, string]
+
+    @descriptors: untyped
+    @keybags: hash[string, keybags]
+
+    def to_h: -> { 'keybags' => hash[string, keybags] }
+
+    private
+
+    def append_key: (string, string, string) -> untyped
+
+    def append_keybag: (string, string) -> untyped
+
+    def cleanup_useless!: -> void
+
+    def process_pairs: -> untyped
+  end
+
+  class TIPWCodenames
+
+  end
+end

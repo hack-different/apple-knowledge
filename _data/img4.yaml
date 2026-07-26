@@ -12,6 +12,14 @@ metadata:
   - core
   - types
   - cryptex_properties
+property_collections:
+  - lpol_properties
+  - cryptex_objects
+  - cryptex_properties
+  - manifest_properties
+  - img4_tags
+  - objects
+  - der
 unmapped:
 - ApRelaxedImageVerification
 - "@BCert"
@@ -81,6 +89,7 @@ core:
   MANB:
     description: Manifest Body
   MANP:
+    title: Manifest Proeprties
     description: Manifest Properties
   OBJP:
     description: Object Properties - Values that may be assigned per "object" (firmwares)
@@ -135,8 +144,6 @@ types:
           and validate on read.
       firmware:
         object_properties:
-          oppd:
-            description: Unknown, used by `stg1`/`sepi` - sha384 hash sized
           tbms:
             description: Trusted Boot Measurement (Signature?)
             notes: Likely encrypted by the SEP and opaque to the AP
@@ -153,6 +160,7 @@ types:
       rvok:
         description: Trust object revocation list
       inst:
+        title: Key Instance
         description: The key or file to install
       secb:
         description: Sets a security value such as `trst` or the FDR signing trust
@@ -234,6 +242,7 @@ lpol_properties:
   CPRO:
   CSEC:
   DGST:
+    title: Hash Digest
   diag:
   DPRO:
   DSEC:
@@ -246,7 +255,7 @@ lpol_properties:
   glyc:
   glyp:
   hrlp:
-    title: Has Secure Enclave Signed recoveryOS Local Policy (hrlp)
+    title: Has recoveryOS Local Policy
     description: The `hrlp` indicates whether or not the `prot` value is the measurement
       of a Secure Enclave–signed recoveryOS LocalPolicy. If not, then the recoveryOS
       LocalPolicy is signed by the Apple online signing server, which signs things
@@ -261,7 +270,7 @@ lpol_properties:
   illb:
   krnl:
   kuid:
-    title: Key encryption key (KEK) Group UUID (kuid)
+    title: Key Encryption Key
     description: The kuid indicates the volume that was booted. The key encryption
       key has typically been used for Data Protection. For each LocalPolicy, it’s
       used to protect the LocalPolicy signing key. The kuid is set by the user implicitly
@@ -276,6 +285,7 @@ lpol_properties:
   LCST:
   LNCH:
   lobo:
+    title: Local Boot Object
     description: Local Boot Object.  Indicates that the object is to be used as the
       target of a local boot only and not provided by the server for remote / DFU
       boots.
@@ -420,13 +430,15 @@ lpol_properties:
     description: Unknown - but known to exist in Factory signing
   snon:
   snuf:
-    description: Software Nonce For Update Freshness
+    description: Staged Nonce For Update Firmware
   spih:
-    description: Cryptex1 Image4 Hash
+    title: Supplimental Image Hash
+    description: Cryptex1 Image4 Hash (supplimental image hash)
   tbmr:
   tbms:
+    title: Trusted Boot Measurement
   vuid:
-    title: APFS volume group UUID (vuid)
+    title: Volume Group ID
     description: The vuid indicates the volume group the kernel should use as root.
       This field is primarily informational and isn’t used for security constraints.
       This vuid is set by the user implicitly when creating a new operating system
@@ -439,6 +451,7 @@ lpol_properties:
     - macOS
 cryptex_properties:
   augs:
+    title: Augment System
     description: Auxiliary System Image Included in APTicket CA extensions, as well
       as factory manifests.  All cryptex manifests, and APTickets other then the root
       APTicket (the one that is used directly from NOR) have this set to 1, indicating
@@ -451,15 +464,17 @@ cryptex_properties:
     description: User Authorized Kext List Hash
     context:
   clas:
+    title: SEP Extension Command ID
     description: Class for Key / Object - Found in FDR objects
     examples:
     roots:
     - ExtraContent
   cnch:
+    title: Cryptex Nonce Hash
     roots:
     - ExtraContent
   fchp:
-    description: Family of the CHIP - Cryptex1,ChipID - Mask
+    description: Chip Family Mask
     roots:
     - ExtraContent
   ndom:
@@ -468,14 +483,17 @@ cryptex_properties:
     - ExtraContent
     - ExtraContent
   pave:
+    title: Pre-Authorized Version Extension
     description: Pre-authorization Version (XNU) The version of a pre-authorized Cryptex.
     type: string
     name: Cryptex1,PreauthorizationVersion
     roots:
     - ExtraContent
   snuf:
+    title: Software Nonce for Update Firmware
     description: SoftwareNonceForUpdateFreshness
   styp:
+    title: Cryptex Subtype
     description: Crytpex Subtype
     name: Cryptex1,SubType
     type: u32
@@ -490,15 +508,18 @@ cryptex_properties:
     roots:
     - ExtraContent
   UDID:
+    title: Universal Device Identifier
     name: Cryptex1,UDID
     description: universal device identifier
   vnum:
+    title: Version Number
     description: Version Number - Update Maximum
     type: string
     roots:
     - ExtraContent
 cryptex_objects:
   caos:
+    title: Cryptex Application Signature
     description:
     type: digest-object
     root:
@@ -510,6 +531,7 @@ cryptex_objects:
     roots:
     - ExtraContents
   csos:
+    title: Cryptex System Signature
     description:
     type: digest-object
     roots:
@@ -521,11 +543,13 @@ cryptex_objects:
     roots:
     - ExtraContent
   trcs:
+    title: Trust Cache System
     description:
     type: digest-object
     roots:
     - ExtraContent
   trca:
+    title: Trust Cache Application
     description:
     type: digest-object
     roots:
@@ -579,7 +603,10 @@ manifest_properties:
           description: Asset Cryptex (App Usually)
     type: nonce
     subtype:
+  oppd:
+    title: Owner Password Permission Delegation
   BORD:
+    title: Board Identifier
     description: |-
       The board the chip is attached to.  With iPhones/iPads this is the variation between
       device sizes (occasionally also used for low cost devices like the SE/XR).  This is
@@ -591,6 +618,7 @@ manifest_properties:
     alias:
     - board-id
   CEPO:
+    title: Chip Epoch
     description: |-
       Chip Epoch.  This is a unit of roll-forward time (monotonic) that
       allows for any security issues in the prior epoch to be fixed by a anti-rollback scheme.
@@ -599,6 +627,7 @@ manifest_properties:
     alias:
     - chip-epoch
   CHIP:
+    title: Chip Identifier
     description: Unique identifier for a single Apple designed application processor
       sharing the same GID key
     type: integer
@@ -620,17 +649,19 @@ manifest_properties:
     alias:
     - certificate-security-mode
   ECID:
+    title: Exclusive Chip Identifier
     description: Exclusive chip identifier.  This is burned into an eFuse at time
       of manufacture and unique across all devices sharing the same CHIP
     width: 8
   esdm:
-    description: Extended Security Domain fuses
+    description: Extended Security Domain Mode
     type: integer
     alias:
     - esdm-fuses
   euou:
     description: engineering use-only unit
   faic:
+    title: Factory Authentication Identity Certificate
     description:
     type: integer
     default: 0
@@ -645,7 +676,7 @@ manifest_properties:
     description: Local Policy Next Cryptographic Hash
     name: ApLocalNonceHash
   love:
-    title: Long Operating System Version (love)
+    title: Operating System Version
     description: The love indicates the OS version that the LocalPolicy is created
       for. The version is obtained from the next state manifest during LocalPolicy
       creation and is used to enforce recoveryOS pairing restrictions.
@@ -713,6 +744,7 @@ manifest_properties:
     - iphoneos
     - macos
   SDOM:
+    title: Security Domain
     description: |-
       Security domain, or which set of certificates govern device security.
 
@@ -733,7 +765,7 @@ manifest_properties:
   SNON:
     description: SEP Nonce
   snon:
-    description: SEP Nonce (Yes it differs by case)
+    description: SEP Nonce
   SrNm:
     description: Unit Serial Number
     manifest: true
@@ -745,7 +777,7 @@ manifest_properties:
   svrn:
     description: Server nonce
   tatp:
-    description: Target Type (board name)
+    description: Target Board Name
     name: Ap,TargetType
     roots:
     - ManifestKey-DataCenter
@@ -781,7 +813,7 @@ objects:
     roots:
     - ManifestKey-DataCenter
   ansf:
-    description: Apple NAND Storage Firmware
+    description: NAND Storage Firmware
   aopf:
     description: Always on processor firmware
     type: digest-object
@@ -829,23 +861,30 @@ objects:
   ciof:
     description: TypeC IO Firmware
   csys:
-    description: Install / Restore SSV Root Hash
+    description: Cannonical SSV System
     type: digest-object
     subtype: ssv-root-hash
   dcp2:
+    title: DisplayPort Controller Firmware 2
   dcpf:
+    title: DisplayPort Controller Firmware
   dtre:
+    title: Device Tree
     description: device tree
     type: digest-object
     subtype: device-tree
     firmware_name: DeviceTree
   dtrs:
-    description: device tree for recovery
+    description: Device Tree for Recovery
     type: digest-object
     subtype: device-tree
     recovery: true
   dven:
     description: Display Vendor Data
+  MANB:
+    title: Manifest Body
+  MANP:
+    title: Manifest Proeprties
   esca:
     description: Effective Software CA
   fsca:
@@ -859,16 +898,17 @@ objects:
       files are fully ready to run blobs often including RTKit OS based memory images.
     ghost_object: true
   ftap:
-    description: Factory Trust/FIPS Test? - Application Processor
+    description: Factory Trust APNonce
     type: hash
     ghost_object: true
   ftsp:
-    description: Factory Trust/FIPS Test? - SEP
+    description: Factory Trust SEPNonce
     type: hash
     ghost_object: true
   gfxf:
     description: Graphics Firmware
   glyP:
+    title: Glyphs
   ibd1:
     description: iBoot Data Stage 1
   ibdt:
@@ -889,11 +929,12 @@ objects:
     firmware_name: LLB
     symbol:
   ipdf:
+    title: Input Device
     description:
   ispf:
     description: Image Signal Processor Firmware
   isys:
-    description: Install System SSV Root Hash
+    description: SSV System Root Hash
   krnl:
     description: Kernel
     firmware_name: KernelCache
@@ -910,6 +951,7 @@ objects:
   mefi:
     description: MacEFI (T2 firmware for Intel chip)
   msys:
+    title: System Volume Canonical Metadata
     description: System Volume Canonical Metadata Contains a Merkle Tree of the System
       Volume.  The Merkle-Tree is used to verify Signed System Volume, in a similar
       way to a Git repository, where every file is included in the tree of the folder
@@ -920,19 +962,24 @@ objects:
   mtfw:
     description: MultiTouch Firmware
   mtpf:
+    title: MultiTouch Peripheral Firmware
   nefw:
   pdmg:
     description: Personalized Disk Image
+  pmcf:
+    title: Power Management Controller Firmware
   pmpf:
     description: Power Management Processor Firmware
     type: digest-object
     subtype:
   rans:
-    description: Restore Apple NAND Storage Firmware
+    description: Restore NAND Storage Firmware
     type: digest-object
     subtype: firmware
     firmware: apple-nand-storage
     restore: true
+  rdc2:
+    title: Recovery DisplayPort Controller
   rcio:
     description: Restore TypeC IO
     restore: true
@@ -940,31 +987,38 @@ objects:
     description: Recovery DCP Firmware
     restore: true
   rdsk:
-    description: Restore Disk Image / ramdisk
+    description: Restore Ramdisk
     firmware_name: RestoreRamDisk
   rdtr:
+    title: Restore Device Tree
     description:
       firmware_name: RestoreDeviceTree
+  trxm:
+    title: Trusted Execution Monitor
   recm:
-    description: Recovery/Refurbish Mode
+    description: Recovery Mode
     firmware_name: RecoveryMode
   rfta:
-    description: Recovery/Refurbish Factory Trust AP
+    description: Recovery Factory Trust APNonce
   rfts:
-    description: Recovery/Refurbish Factory Trust SEP
+    description: Recovery Factory Trust SEPNonce
   rkrn:
     description: Restore Kernel
     restore: true
     firmware_name: RestoreKernelCache
   rlg1:
+    title: Restore Logo 1
   rlg2:
+    title: Restore Logo 2
   rlgo:
     description: Restore Logo
     restore: true
     firmware_name: RestoreLogo
   rosi:
+    title: recoveryOS Image
     description:
   rsep:
+    title: Restore SEP Image
     description: Restore SEP Image, paired with oppd/tbms
     type: string
     firmware_name: RestoreSEP
@@ -975,19 +1029,21 @@ objects:
     firmware: true
     recovery: true
   rtsc:
-    description: Recovery
+    description: Recovery Trust Cache
   scef:
     description: SEP Firmware (Boot Firmware without RAM Image)
   sepi:
+    title: SEP Image
     description: SEP Image (Booted RAM Image / Hibernation Data)
     type: string
     encoding: sha2-384
     firmware_name: SEP
     metadata:
-      oppd: Original Processed Parameter Data
       tbms: Trusted Boot Measurement Strings
   siof:
     description: Smart IO Firmware
+  srvn:
+    title: Server Nonce
   tmuf:
     description: Trusted MultiUpdater Firmware
   trbb:
@@ -1014,6 +1070,8 @@ objects:
   xsys:
     description: x86 System Root Hash
 img4_tags:
+  tagt:
+    title: Target Board Name (Processor)
   ache:
     description:
   acib:
@@ -1033,6 +1091,7 @@ img4_tags:
   aofi:
     description: Always on Firmware Image
   apmv:
+    title: OS Version
     description:
   ater:
     description:
@@ -1063,6 +1122,8 @@ img4_tags:
     description:
   dali:
     description:
+  cphy:
+    title: USB-C Physical Controller
   data:
     description:
   diag:
@@ -1105,10 +1166,14 @@ img4_tags:
   fpgt:
     description:
   ftot:
-    description: Factory Trust/FIPS Test? - Other / Original Trust
+    description: Factory Trust Operations Test
   fuos:
   gdmg:
+  lcrt:
+    title: Local Certificate
   ginf:
+  rspt:
+    title: Restore Secure Page Table Monitor
   ging:
     description:
   glyc:
@@ -1134,6 +1199,8 @@ img4_tags:
     description: Install Environment?
   isor:
     description:
+  tstp:
+    title: Testing Product
   itst:
     description: Installer Test?
   kdlv:
@@ -1154,6 +1221,12 @@ img4_tags:
   mmer:
     description: Memory Map Entitlements for Recovery
     recovery: true
+  EKEY:
+    title: Effective Key Type
+  EPRO:
+    title: Effective Promotion Value
+  ESEC:
+    title: Effective Security
   mmsv:
     description: Memory Map System
   mpro:
@@ -1183,6 +1256,8 @@ img4_tags:
     description:
   PAYP:
     description:
+  inst:
+    title: Key Instance
   pcrp:
     description: Production certificate root
   pert:
@@ -1198,6 +1273,7 @@ img4_tags:
   pndp:
     description:
   prid:
+    title: Public Key Signature
     description: Encrypted Private Key / Private Key Info / Private Recovery Identity?
   prot:
   ptrp:
@@ -1212,6 +1288,8 @@ img4_tags:
   slvn:
     description:
   snid:
+  sptm:
+    title: Secure Page Table Monitor
   SPTM:
     description: Secure Page Table Monitor
   srvn:
@@ -1229,6 +1307,8 @@ img4_tags:
     description:
   test:
     description:
+  rtrx:
+    title: Restore TrustCache Extensions
   tics:
     description:
   ucer:

@@ -34,13 +34,6 @@ GIT
       faraday-multipart
       sorbet-runtime
 
-GIT
-  remote: https://github.com/rickmark/toml.git
-  revision: 0ddf9527ddd1aa5293e08d21cae3de8bd11a6643
-  specs:
-    toml (0.3.0)
-      parslet (>= 1.8.0, < 3.0.0)
-
 PATH
   remote: _packages/ruby
   specs:
@@ -286,6 +279,7 @@ GEM
       mixlib-config
       mixlib-shellout
     mercenary (0.4.0)
+    merkle_tree (0.2.0)
     method_source (1.1.0)
     mime-types (3.7.0)
       logger
@@ -497,11 +491,16 @@ GEM
       unicode-display_width (>= 1.1.1, < 3)
     thor (1.5.0)
     timeout (0.6.0)
+    toml (0.3.0)
+      parslet (>= 1.8.0, < 3.0.0)
     tomlrb (2.0.4)
     tsort (0.2.0)
     twitter-text (3.1.0)
       idn-ruby
       unf (~> 0.1.0)
+    typeprof (0.31.1)
+      prism (>= 1.4.0)
+      rbs (>= 3.6.0)
     typhoeus (1.4.1)
       ethon (>= 0.9.0)
     tzinfo (2.0.6)
@@ -547,7 +546,7 @@ DEPENDENCIES
   faraday-retry
   google-protobuf
   hashie
-  jekyll (~> 4.2)
+  jekyll
   jekyll-coffeescript
   jekyll-commonmark
   jekyll-default-layout
@@ -566,7 +565,8 @@ DEPENDENCIES
   manpages
   mdl
   mediawiki_api!
-  mootool (~> 0.2.2)
+  merkle_tree
+  mootool
   multibases
   multicodecs
   multihashes
@@ -587,7 +587,8 @@ DEPENDENCIES
   sqlite3
   steep
   tapioca
-  toml (~> 0.3.0)!
+  toml
+  typeprof
   typhoeus
   wikicloth
 

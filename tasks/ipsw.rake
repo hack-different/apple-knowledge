@@ -4,7 +4,6 @@ require_relative '../lib/shasum'
 require_relative '../lib/merkle'
 require_relative '../lib/cid'
 
-
 namespace :data do
   namespace :ipsw do
     desc 'process ipsw manifests'
@@ -225,19 +224,19 @@ namespace :data do
       data_file = AppleData::DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
 
-      collection.each do |ipsw, value|
-        value["urls"] ||= []
-        next if value["urls"].any? { |url| url["ipfs"] }
+      collection.each_value do |value|
+        value['urls'] ||= []
+        next if value['urls'].any? { |url| url['ipfs'] }
 
-        hashes = value["hashes"] ||= {}
-        hash = hashes["sha2-256"]
+        hashes = value['hashes'] ||= {}
+        hash = hashes['sha2-256']
         next unless hash
 
         hash = [hash].pack('H*')
 
         ipfs_cid = CID.from_hex(hash)
 
-        value["urls"] << { "ipfs" => ipfs_cid }
+        value['urls'] << { 'ipfs' => ipfs_cid }
       end
 
       data_file.save

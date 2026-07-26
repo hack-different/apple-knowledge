@@ -3,18 +3,15 @@
 module AppleData
   # Base class for all data files
   class DataFile
-    extend T::Sig
     attr_reader :data
 
-    sig { params(parts: String).void }
     def initialize(*parts)
       @parts = parts
       @collections = {}
-      T.unsafe(self).load_file(*parts)
+      load_file(*parts)
       ensure_metadata
     end
 
-    sig { params(path: String).returns(DataFile) }
     def self.from_path(path)
       instance = DataFile.allocate
       instance.instance_eval do
@@ -26,7 +23,6 @@ module AppleData
       instance
     end
 
-    sig { params(parts: String).returns(T::Hash[T.untyped, T.untyped]) }
     def load_file(*parts)
       parts[-1] = "#{parts[-1]}.yaml" unless T.must(parts[-1]).end_with? '.yaml'
       @filename = File.join(AppleData.data_location, T.unsafe(File).join(*parts))
@@ -39,10 +35,6 @@ module AppleData
       save_data data
     end
 
-    def save
-      save!
-    end
-
     def collection(name)
       @collections[name.to_s] ||= DataFileCollection.new(self, name)
     end
@@ -52,11 +44,7 @@ module AppleData
     end
 
     def auto_sort?
-      if @data['metadata']['auto_sort'].nil?
-        true
-      else
-        @data['metadata']['auto_sort']
-      end
+      @data['metadata']['auto_sort']
     end
 
     private
@@ -68,8 +56,17 @@ module AppleData
     def ensure_metadata
       @data['metadata'] ||= {}
       @data['metadata'].reverse_merge!({ 'description' => nil, 'credits' => [] })
-      (@data['metadata']['collections'] || []).each do |name|
-        collection(name)
+      collections = @data['metadata']['collections'] ||= []
+      collections.each do |name|
+        self.collection name
+      end
+    end
+
+    class DataFileCollection
+      def initialize(data_file, collection_name)
+        @data_file = data_file
+        @collection_name = collection_name
+        @collection_data = @data_file.@collections[@collection_name]
       end
     end
   end

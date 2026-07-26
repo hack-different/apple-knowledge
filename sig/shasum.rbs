@@ -1,0 +1,9 @@
+class SHASum
+  SHASUM_LINE: Regexp
+
+  @sums: hash[string, string]
+
+  def self.from_file: (string) -> instance
+
+  def self.shasum_type?: (string) -> string
+end

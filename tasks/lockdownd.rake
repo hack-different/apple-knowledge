@@ -9,7 +9,7 @@ namespace :data do
   namespace :lockdownd do
     desc 'scan lockdownd log for data update'
     task :example do |example_file|
-      data_file = LockdownData.new
+      data_file = Lockdown.new
 
       File.open(example_file, 'r') do |file|
         file.each_line do |line|

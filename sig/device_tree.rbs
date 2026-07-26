@@ -1,0 +1,10 @@
+DT_KEY_LEN: int
+
+class DtNode
+  attr_reader name: string
+  attr_reader compatible: string
+  attr_reader handle: int
+  attr_reader functions: hash[string, string]
+  attr_reader  props: hash[string, (int | string)]
+  attr_reader children: Array[instance]
+end

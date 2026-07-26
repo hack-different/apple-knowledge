@@ -6,7 +6,7 @@ require_relative '../lib/common'
 
 namespace :data do
   task :fdr, [:example_file] do |_task, args|
-    data = FDRData.new
+    data = FDR.new
 
     input = Plist.parse_xml args[:example_file]
 
