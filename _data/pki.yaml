@@ -13,6 +13,7 @@ certificate_names:
   pcrt: product/production certificate?
   rcrt: remote/recovery certificate?
   scrt: SEP Certificate
+  sdcrt: SEP Device Certificate
   tcrt: test certificate?
   ucrt:
     name: User Identity Certificate
@@ -32,9 +33,38 @@ keys:
 constants:
   private_oid_root: 1.2.840.113635
 oids:
+  1.2.840.113635.100.1:
+    title: Apple Trust Policy
+
+  
+  1.2.840.113635.100.6.2:
+    title: Apple Security Algorithm
+  1.2.840.113635.100.6.3:
+    title: Apple Dot Mac Certificate
+  1.2.840.113635.100.6.4:
+    title: Apple Extended Key Usage
+  1.2.840.113635.100.6.5:
+    title: Apple Certificate Policies
+  1.2.840.113635.100.6.44:
+    title: Apple Pinning Allow Test Certs UCRT
+    name: applePinningAllowTestCertsUCRT
+    symbol: applePinningAllowTestCertsUCRT
+
+  1.2.840.113635.100.8.9.1:
+  1.2.840.113635.100.8.9.2:
+  1.2.840.113635.100.8.11.1:
+  1.2.840.113635.100.8.12:
+    name: appleFactoryTrustModeSigning
+  1.2.840.113635.100.8.13.1:
+  1.2.840.113635.100.8.13.2:
+  1.2.840.113635.100.8.13.3:
+
   1.2.840.113635.100.10:
     description: "`ucrt` extension root"
   1.2.840.113635.100.10.1:
+    name: appleUniqueDeviceCertificateHardwareProperties
+
+    type: sequence
     description: Hardware device identifiers of the machine the certificate is issued
       to contains BORD, CHIP, ECID, srnm, udid, seid
     found_in:
@@ -44,6 +74,8 @@ oids:
     ous:
     - ucrt Leaf Certificate
   1.2.840.113635.100.10.2:
+    name: appleUniqueDeviceCertificate
+    type: :scalar
     found_in:
     - ucrt
     issuers:
@@ -75,7 +107,9 @@ oids:
   1.2.840.113635.100.6.1.11:
     symbol: oidAppleSecureBootTicketCertSpec
   1.2.840.113635.100.6.1.15:
-    name: IMG4 Manifest Certificate Specification
+    title: IMG4 Manifest Certificate Specification
+    name: appleImg4Manifest
+    type: sequence
     description: "Constriction on values that can be specified or signed by this certificate.
       \ Conatins two sub-sequesnces, \nthe MANP (Manifest Properties) and the OBJP
       (Object Properties).  Manifest properties are at the issued \nIM4M, and object
@@ -235,7 +269,14 @@ oids:
     description: Apple Local Device Attestation (BAA)
   1.2.840.113635.100.8.2:
     symbol: CTOidItemAppleDeviceAttestationNonce
+    name: appleDeviceAttestationNonce
+  1.2.840.113635.100.8.10.2:
+
+
   1.2.840.113635.100.8.4:
+    symbol: CTOidItemAppleDeviceAttestationHardwareProperties
+    name: appleDeviceAttestationHardwareProperties
+    type: sequence
     description: Contains a sequence of integer values.  Some are 0, some are 1, others
       appear to be int32 bitmasks.
     is_asn_body: true
@@ -247,11 +288,11 @@ oids:
     - Basic Attestation User Sub CA2
     ous:
     - BAA Certification
-    symbol: CTOidItemAppleDeviceAttestationHardwareProperties
   1.2.840.113635.100.8.5:
     description: Similar in nature to `1.2.840.113635.100.8.4`. Non-integer values
       observed of `ssca`.
     symbol: CTOidItemAppleDeviceAttestationKeyUsageProperties
+    name: appleDeviceAttestationKeyUsageProperties
     is_asn_body: true
     is_extension: true
     found_in:
@@ -264,6 +305,8 @@ oids:
   1.2.840.113635.100.8.7:
     description: Information about the OS environment that performed that local attestation
     symbol: CTOidItemAppleDeviceAttestationDeviceOSInformation
+    name: appleDeviceAttestationDeviceOSInformation
+    type: sequence
     is_asn_body: true
     is_extension: true
     found_in:
