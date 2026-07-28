@@ -569,7 +569,7 @@ manifest_properties:
     description: Bluetooth MAC Address
     manifest: true
   BNCH:
-    title: Boot Nonce Cryptographic Hash
+    title: Board Nonce Cryptographic Hash
     description: Based on the values of com.apple.System.boot-nonces, this is either
       the true APNonce (in the case of SFR or the root APTicket where no scope or
       tweak is applied) or a shadowed BNCH in the case of macOS. If it is a root boot
@@ -964,12 +964,22 @@ objects:
   mtpf:
     title: MultiTouch Peripheral Firmware
   nefw:
+  trpk:
+    title: Trusted Public Keys
+  rvok:
+    title: Revocation List
+  rssl:
+    title: Recovery SSL
+  IM4M:
+    title: IMG4 Manifest
+  secb:
+    title: Security Body
   pdmg:
     description: Personalized Disk Image
   pmcf:
-    title: Power Management Controller Firmware
+    title: Power Management (PMC)
   pmpf:
-    description: Power Management Processor Firmware
+    description: Power Management (PMP)
     type: digest-object
     subtype:
   rans:
@@ -1106,6 +1116,7 @@ img4_tags:
   bles:
     description:
   BNCN:
+    title: Board Nonce
   cfel:
     description:
     firmware_name: CFELoader
