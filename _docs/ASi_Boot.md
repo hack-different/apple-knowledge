@@ -6,13 +6,13 @@ After Silicon macOS first boots up like the traditional SecureROM, reading from 
 
 ### Manifest Properties
 
-* `BNCH`
+* `BNCH` - Boot Nonce Cryptographic Hash
 * `BORD` - Board ID
 * `CEPO` - Chip Epoch
 * `CHIP` - AP Chip ID
 * `CPRO` - Chip Promotion State
-* `CSEC`
-* `ECID`
+* `CSEC` - Chip Security
+* `ECID` - Exclusive Chip ID
 * `SDOM` - Security Domain
 * `esdm`
 * `love`
