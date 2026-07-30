@@ -561,6 +561,7 @@ manifest_properties:
     description: Apple Connect ID (AppleInternal)
     type: integer
   AMNM:
+    title: Allow Mix-and-Match
     description: allow mix-n-match When set to true, img4s can be any valid signed
       version, allowing for unusual AP tickets where some components may be from a
       prior version
@@ -825,7 +826,12 @@ objects:
     description: Audio Power Attach Chime
   auxk:
     description: Auxiliary Kernel Cache
+  fdrd:
+    title: Factory Diagnostic Ramdisk
+  sePk:
+    title: Secure Element Public Key
   avef:
+    title: AV Encryption (DRM) Firmware
     description: AV Encryption (DRM) Firmware
     type: digest-object
     roots:
@@ -934,7 +940,7 @@ objects:
   ispf:
     description: Image Signal Processor Firmware
   isys:
-    description: SSV System Root Hash
+    description: Integrity of System Volume
   krnl:
     description: Kernel
     firmware_name: KernelCache
@@ -945,9 +951,15 @@ objects:
     firmware_name: AppleLogo
     firmware: true
   lpol:
-    description: Local Policy Payload
+    description: Local Policy
   magg:
     description: Maggie Firmware
+  ane1:
+    title: Apple Neural Engine (Gen1)
+  ane2:
+    title: Apple Neural Engine (Gen2)
+  aop2:
+    title: Always-On Processor (Gen2)
   mefi:
     description: MacEFI (T2 firmware for Intel chip)
   msys:
@@ -962,7 +974,7 @@ objects:
   mtfw:
     description: MultiTouch Firmware
   mtpf:
-    title: MultiTouch Peripheral Firmware
+    title: Multi-Thread Power Firmware
   nefw:
   trpk:
     title: Trusted Public Keys
@@ -1024,9 +1036,17 @@ objects:
     description: Restore Logo
     restore: true
     firmware_name: RestoreLogo
+  FSC2:
+    title: Factory SysConfig
   rosi:
     title: recoveryOS Image
     description:
+  xhcf:
+    title: USB xHCI Firmware
+  ane3:
+    title: Apple Neural Engine (Gen3)
+  excl:
+    title: exclaveOS
   rsep:
     title: Restore SEP Image
     description: Restore SEP Image, paired with oppd/tbms
@@ -1043,7 +1063,7 @@ objects:
   scef:
     description: SEP Firmware (Boot Firmware without RAM Image)
   sepi:
-    title: SEP Image
+    title: Secure Enclave Processor Image
     description: SEP Image (Booted RAM Image / Hibernation Data)
     type: string
     encoding: sha2-384
@@ -1080,6 +1100,8 @@ objects:
   xsys:
     description: x86 System Root Hash
 img4_tags:
+  scrt:
+    title: Silicon Certificate (SIK)
   tagt:
     title: Target Board Name (Processor)
   ache:
@@ -1089,6 +1111,8 @@ img4_tags:
   aciw:
     description:
   adba:
+  gf1f:
+    title: Apple Graphics Stage1 Firmware
   ADCL:
     description: Apple Display Calibration
   ader:
@@ -1129,6 +1153,10 @@ img4_tags:
     description: Chained LocalPolicy Hash String
   clid:
     description: Class Identifier
+  tz0s:
+    title: TrustZone EL0 Size
+  arms:
+    title: ARM Size
   cmsv:
     description:
   dali:
@@ -1140,12 +1168,20 @@ img4_tags:
   diag:
     description: Diagnostic (AHT) Image
     firmware_name: Diags
+  ucrt:
+    title: User Certificate
+  dCfg:
+    title: Device Configuration
+  iCCl:
+    title: iCloud Activation Lock Clear
   disk:
     description:
   DPRO:
+    title: Demote Production
     description: Demote from Production Request Value is used by TSS sever to issue
       EPRO values, or effective AP production state.
   DSEC:
+    title: Demote Security
     description: Demote from Secure Request Value is used by TSS server to issue ESEC
       values, or effective AP Security Mode should the requester be authorized.  These
       requests are not available to consumers, only to Apple Internal.
@@ -1208,6 +1244,8 @@ img4_tags:
     description: Hypervisor Related
   ienv:
     description: Install Environment?
+  sm3f:
+    title: Secure M3 Firmware
   isor:
     description:
   tstp:
@@ -1284,7 +1322,7 @@ img4_tags:
   pndp:
     description:
   prid:
-    title: Public Key Signature
+    title: Private Data
     description: Encrypted Private Key / Private Key Info / Private Recovery Identity?
   prot:
   ptrp:
@@ -1299,6 +1337,10 @@ img4_tags:
   slvn:
     description:
   snid:
+  msrf:
+    title: Machine Specific Register Filter
+  strc:
+    title: Apple Firmware Kit??
   sptm:
     title: Secure Page Table Monitor
   SPTM:
