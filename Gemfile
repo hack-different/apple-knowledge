@@ -20,10 +20,7 @@ source 'https://rubygems.org'
 gem 'jekyll'
 gem 'plist'
 gem 'toml'
-
 gem 'rbs'
-
-gem 'mootool'
 gem 'activesupport'
 gem 'jsonpath'
 gem 'sorbet-runtime'

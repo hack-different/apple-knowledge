@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'mootool'
 
 namespace :data do
   desc 'update device files from device trees'
