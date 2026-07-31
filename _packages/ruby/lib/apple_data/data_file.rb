@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'active_support/all'
+require 'jsonpath'
+
 module AppleData
   # Base class for all data files
   class DataFile
@@ -28,7 +31,7 @@ module AppleData
       @filename = File.join(AppleData.data_location, T.unsafe(File).join(*parts))
       @data = {}
       @data = YAML.load_file @filename if File.exist? @filename
-      @data
+      @data.with_indifferent_access
     end
 
     def save!
@@ -39,17 +42,51 @@ module AppleData
       @collections[name.to_s] ||= DataFileCollection.new(self, name)
     end
 
+    def collections
+      collection_list = @data['metadata']['collections'] ||= []
+      collection_list.map { |name| collection(name) }
+    end
+
     def sort!
-      @collections.each_value(&:sort)
+      collections.each(&:sort!)
+      if sort_paths
+        sort_paths.each do |path|
+          JsonPath.for(@data).gsub!(path) do |item| 
+            case item
+            when Array
+              item.sort
+            when Hash 
+              item.sort_by { |key, _value| key } .to_h
+            else
+              item
+            end
+          end
+        end
+      end
     end
 
     def auto_sort?
-      @data['metadata']['auto_sort']
+      value = metadata['auto_sort']
+      value = true if value.nil?
+      value
     end
+
+    def metadata
+      @data['metadata'] ||= {}
+    end
+
+    def sort_paths
+      metadata['sort_paths'] 
+    end
+    
 
     private
 
     def save_data(data)
+      @collections.each do |name, collection|
+        @data[name] = collection.data
+      end
+
       File.write(@filename, data.to_yaml)
     end
 
@@ -58,7 +95,7 @@ module AppleData
       @data['metadata'].reverse_merge!({ 'description' => nil, 'credits' => [] })
       collections = @data['metadata']['collections'] ||= []
       collections.each do |name|
-        self.collection name
+        collection name
       end
     end
 
@@ -66,7 +103,20 @@ module AppleData
       def initialize(data_file, collection_name)
         @data_file = data_file
         @collection_name = collection_name
-        @collection_data = @data_file.@collections[@collection_name]
+        @collection_data = @data_file.data[@collection_name]
+      end
+
+      def data
+        @collection_data
+      end
+
+      def sort!
+        case @collection_data
+        when Array
+          @collection_data.sort
+        when Hash
+          @collection_data = @collection_data.sort_by { |key, _value| key }.to_h
+        end
       end
     end
   end

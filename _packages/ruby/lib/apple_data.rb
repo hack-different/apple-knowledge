@@ -18,9 +18,7 @@ module AppleData
 end
 
 require 'apple_data/data_file'
-require 'apple_data/boot_args'
 require 'apple_data/factory_data_reset'
 require 'apple_data/io_reg'
-require 'apple_data/macho'
 require 'apple_data/lockdown'
 require 'apple_data/keybag'

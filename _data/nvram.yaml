@@ -12,13 +12,92 @@ nvram_scopes:
     description: For Apple Silicon Macs - The Per OS or Non-SFR / System NVRAM
     uuid:
 nvram_variables:
-  _csegbufsz_experiment:
-  _libmalloc_experiment:
   AAPL,ignore:
     platforms:
     - macOS
     - Intel
     - bridgeOS
+  ApChipID:
+    scopes:
+    - 94b73556-2197-4702-82a8-3e1337dafbfb
+  AppleSecureBootWindowsPolicy:
+    description: Controls trust in Microsoft's PCA 2011 cert for Apple Secure Boot
+    type: boolean
+    platforms:
+    - macOS
+    - Intel
+    - bridgeOS
+    scopes:
+    - 94b73556-2197-4702-82a8-3e1337dafbfb
+  BOSCatalogURL:
+  BaseSystemAccessabiliityFeatures:
+  BluetoothInfo:
+  BluetoothUHEDevices:
+  DClr_override:
+  DebugBluetoothHIDShim:
+  DefaultBackgroundColor:
+    description: boot.efi background color. Stored as BGRA.
+    platforms:
+    - macOS
+    - Intel
+    scopes:
+    - 4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14
+  GPUROM:
+  HW_BOOT_DATA:
+  HardwareModel:
+  IASCurrentInstallPhase:
+  IASInstallPhaseList:
+  IASUCatalogURL:
+    description: This is the update url used for install / update.  Security issues
+      can occur when set to HTTP.  Typically managed through `seedutil`
+    type: string
+    platforms:
+    - macOS
+    - Intel
+  IDInstallerDataV2:
+  IOBusyInterest:
+  IODeviceMemory:
+  IONVRAM-FORCESYNCNOW-PROPERTY:
+    description: 'Embedded still throttles NVRAM commits via kIONVRAMSyncNowPropertyKey,
+      but some clients still need a stricter NVRAM commit contract. Please use this
+      with care.
+
+      '
+  IOPlatformActiveAction:
+  IOPlatformHaltRestartAction:
+  IOPlatformPanicAction:
+  IOPlatformQuiensceAction:
+  IOPlatformSleepAction:
+  IOPlatformWakeAction:
+  IORematchPersonality:
+  LocationServicesEnabled:
+  OTA-fsck-metrics:
+  OTA-post-conversion:
+  OTA-pre-conversion:
+  OTA-sealvolume-metrics:
+  PSFU_STATUS:
+  SleepWakeFailurePanic:
+  SleepWakeFailureString:
+  StartupManagerPolicy:
+    scopes:
+    - 5eeb160f-45fb-4ce9-b4e3-610359abf6f8
+  StartupMute:
+    description: Mute startup chime
+    type: integer
+    scopes:
+    - default
+  SystemAudioVolume:
+  SystemAudioVolumeExtension:
+  SystemAudioVolumeSaved:
+  UIScale:
+    description: boot.efi interface scaling
+    platforms:
+    - macOS
+    - Intel
+    scopes:
+    - 4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14
+  _csegbufsz_experiment:
+  _libmalloc_experiment:
   aapl,panic-info:
   aapl,pci:
   acc-cm-override-charger-count:
@@ -36,18 +115,6 @@ nvram_variables:
     - Intel
   allow-root-hash-mismatch:
   ane-type:
-  ApChipID:
-    scopes:
-    - 94b73556-2197-4702-82a8-3e1337dafbfb
-  AppleSecureBootWindowsPolicy:
-    description: Controls trust in Microsoft's PCA 2011 cert for Apple Secure Boot
-    type: boolean
-    platforms:
-    - macOS
-    - Intel
-    - bridgeOS
-    scopes:
-    - 94b73556-2197-4702-82a8-3e1337dafbfb
   aud-early-boot-critical:
   auto-boot:
     description: If the device should `fsboot` upon power on
@@ -62,13 +129,10 @@ nvram_variables:
     - common
   backlight-nits:
   base-system-path:
-  BaseSystemAccessabiliityFeatures:
   battery-health:
   bluetoothActiveControllerInfo:
   bluetoothHostControllerSwitchBehaviour:
-  BluetoothInfo:
   bluetoothInternalControllerInfo:
-  BluetoothUHEDevices:
   board-id:
   boop-storage-nonces:
     scopes:
@@ -112,7 +176,6 @@ nvram_variables:
     description: Seconds to pause before `auto-boot`
     type: number
     persistent: true
-  BOSCatalogURL:
   bt1addr:
   btaddr:
   build-style:
@@ -149,14 +212,12 @@ nvram_variables:
     scopes:
     - 36C28AB5-6566-4C50-9EBD-CBB920F83843
   darkboot:
-  DClr_override:
   debug-gg:
   debug-soc:
   debug-uarts:
     description: Bitfield of which UARTs to enable
     type: integer
     persistent: true
-  DebugBluetoothHIDShim:
   default-client-ip:
   default-gateway-ip:
   default-mac-address?:
@@ -164,13 +225,6 @@ nvram_variables:
   default-router-ip:
   default-server-ip:
   default-subnet-mask:
-  DefaultBackgroundColor:
-    description: boot.efi background color. Stored as BGRA.
-    platforms:
-    - macOS
-    - Intel
-    scopes:
-    - 4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14
   device-material:
   diag-device:
   diag-file:
@@ -241,19 +295,6 @@ nvram_variables:
     - Intel
     scopes:
     - FA4CE28D-B62F-4C99-9CC3-6815686E30F9
-  GPUROM:
-  HardwareModel:
-  HW_BOOT_DATA:
-  IASCurrentInstallPhase:
-  IASInstallPhaseList:
-  IASUCatalogURL:
-    description: This is the update url used for install / update.  Security issues
-      can occur when set to HTTP.  Typically managed through `seedutil`
-    type: string
-    platforms:
-    - macOS
-    - Intel
-  IDInstallerDataV2:
   idle-off:
   input-device:
     platforms:
@@ -263,21 +304,6 @@ nvram_variables:
     platforms:
     - macOS
     - PPC
-  IOBusyInterest:
-  IODeviceMemory:
-  IONVRAM-FORCESYNCNOW-PROPERTY:
-    description: 'Embedded still throttles NVRAM commits via kIONVRAMSyncNowPropertyKey,
-      but some clients still need a stricter NVRAM commit contract. Please use this
-      with care.
-
-      '
-  IOPlatformActiveAction:
-  IOPlatformHaltRestartAction:
-  IOPlatformPanicAction:
-  IOPlatformQuiensceAction:
-  IOPlatformSleepAction:
-  IOPlatformWakeAction:
-  IORematchPersonality:
   ipaddr:
   is-tethered:
   kaslr-off:
@@ -290,7 +316,6 @@ nvram_variables:
     - PPC
   load-base:
   loadaddr:
-  LocationServicesEnabled:
   lts-persistance:
     type: string
   mca-info0:
@@ -319,7 +344,6 @@ nvram_variables:
   ota-conv-panic-indicator:
   ota-failure-reason:
   ota-forced-reset-uptime:
-  OTA-fsck-metrics:
   ota-initial-breadcrumbs:
   ota-initial-result:
   ota-install-tonight:
@@ -330,8 +354,6 @@ nvram_variables:
   ota-os-version:
   ota-outcome:
   ota-perform-shutdown:
-  OTA-post-conversion:
-  OTA-pre-conversion:
   ota-reboot-retry-enabled:
   ota-reboot-retry-zone:
   ota-result:
@@ -351,7 +373,6 @@ nvram_variables:
   ota-retry-uptime:
   ota-retry-user-progress:
   ota-retry-warnings:
-  OTA-sealvolume-metrics:
   ota-snapshot-update:
   ota-step-battery-level:
   ota-step-codes:
@@ -395,7 +416,6 @@ nvram_variables:
     - common
   prevent-restores:
   previous-system-uuid:
-  PSFU_STATUS:
   pwr-path:
   radio-error:
   ramdisk-size:
@@ -450,32 +470,12 @@ nvram_variables:
     type: number
   sep-debug-args:
   serverip:
-  SleepWakeFailurePanic:
-  SleepWakeFailureString:
   soc-bin-offset:
-  StartupManagerPolicy:
-    scopes:
-    - 5eeb160f-45fb-4ce9-b4e3-610359abf6f8
-  StartupMute:
-    description: Mute startup chime
-    type: integer
-    scopes:
-    - default
   stress-rack:
   summit-panel-id:
   system-passcode-lock-blob:
-  SystemAudioVolume:
-  SystemAudioVolumeExtension:
-  SystemAudioVolumeSaved:
   target-uuid:
   tbt-options:
-  UIScale:
-    description: boot.efi interface scaling
-    platforms:
-    - macOS
-    - Intel
-    scopes:
-    - 4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14
   update-volume:
   upgrade-boot-volume:
   upgrade-fallback-boot-command:

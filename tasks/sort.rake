@@ -22,7 +22,7 @@ task :sort do
     next unless data_file.auto_sort?
 
     data_file.sort!
-    data_file.save
+    data_file.save!
   end
 end
 
@@ -31,6 +31,6 @@ task :sort_collection, [:data_file, :collection] do |_task, args|
   args[:collection] ||= args[:data_file]
   data_file = AppleData::DataFile.new args[:data_file]
   collection = data_file.collection args[:collection]
-  collection.sort
-  data_file.save
+  collection.sort!
+  data_file.save!
 end

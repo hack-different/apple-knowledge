@@ -2,9 +2,12 @@
 metadata:
   description:
   credits:
+  collections:
+  - ota_nvram
+  - ota_stages
 ota_nvram:
-  boot-breadcrumbs:
   OTA-pre-conversion:
+  boot-breadcrumbs:
 ota_stages:
 - fdr_verify_sealed_manifest
 - update_appletcon

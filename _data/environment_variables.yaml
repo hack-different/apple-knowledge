@@ -5,17 +5,6 @@ metadata:
   collections:
   - environment_variables
 environment_variables:
-  __CF_USER_TEXT_ENCODING:
-    examples:
-    - 0x0:0:0
-    - 0x1F5:0x0:0x0
-  __CFBundleIdentifier:
-    type: string
-  __CFPREFERENCES_AVOID_DAEMON:
-    type: boolean
-    values:
-    - '0'
-    - '1'
   ASL_DISABLE:
     type: boolean
     values:
@@ -46,16 +35,6 @@ environment_variables:
     - '1'
   CLEAN_FILES_OLDER_THAN_DAYS:
     type: integer
-  com.apple.CoreData.CloudKitDebug:
-    type: boolean
-    values:
-    - '0'
-    - '1'
-  com.apple.CoreData.XPCDebug:
-    type: boolean
-    values:
-    - '0'
-    - '1'
   COMMAND_MODE:
     type: string
     examples:
@@ -247,9 +226,6 @@ environment_variables:
     type: string
     format: path
   LAUNCHD_SOCKET:
-  LaunchInstanceID:
-    type: string
-    format: UUID
   LIBDISPATCH_STRICT:
     type: boolean
     values:
@@ -258,6 +234,9 @@ environment_variables:
   LOGNAME:
     type: string
     format: username
+  LaunchInstanceID:
+    type: string
+    format: UUID
   MallocCorruptionAbort:
     type: boolean
     values:
@@ -349,3 +328,24 @@ environment_variables:
     - '1'
   XPC_SERVICE_NAME:
     type: string
+  __CFBundleIdentifier:
+    type: string
+  __CFPREFERENCES_AVOID_DAEMON:
+    type: boolean
+    values:
+    - '0'
+    - '1'
+  __CF_USER_TEXT_ENCODING:
+    examples:
+    - 0x0:0:0
+    - 0x1F5:0x0:0x0
+  com.apple.CoreData.CloudKitDebug:
+    type: boolean
+    values:
+    - '0'
+    - '1'
+  com.apple.CoreData.XPCDebug:
+    type: boolean
+    values:
+    - '0'
+    - '1'

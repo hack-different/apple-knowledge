@@ -2,6 +2,10 @@
 metadata:
   description:
   credits:
+  collections:
+  - apns_commands
+  - topics
+  - apns_environments
 apns_commands:
   7:
     name: connect
@@ -360,16 +364,18 @@ topics:
   com.apple.ess:
   com.apple.findmy:
   com.apple.gamed:
+  com.apple.iWork.Numbers:
+  com.apple.icloud-container.clouddocs.F3LWYJ7GM7.com.apple.garageband10:
+  com.apple.icloud-container.clouddocs.F3LWYJ7GM7.com.apple.mobilegarageband:
+  com.apple.icloud-container.clouddocs.F3LWYJ7GM7.com.apple.musicmemos.ideas:
+  com.apple.icloud-container.clouddocs.F6266T9T75.com.apple.iMovie:
   com.apple.icloud-container.clouddocs.com.apple.Automator:
   com.apple.icloud-container.clouddocs.com.apple.CloudDocs:
   com.apple.icloud-container.clouddocs.com.apple.CloudDocs.container-metadata:
   com.apple.icloud-container.clouddocs.com.apple.CloudDocs.health:
   com.apple.icloud-container.clouddocs.com.apple.CloudDocs.pp-metadata:
-  com.apple.icloud-container.clouddocs.com.apple.finder:
   com.apple.icloud-container.clouddocs.com.apple.Grab:
-  com.apple.icloud-container.clouddocs.com.apple.iBooks.cloudData:
   com.apple.icloud-container.clouddocs.com.apple.Keynote:
-  com.apple.icloud-container.clouddocs.com.apple.mail:
   com.apple.icloud-container.clouddocs.com.apple.Mica:
   com.apple.icloud-container.clouddocs.com.apple.Notes:
   com.apple.icloud-container.clouddocs.com.apple.Numbers:
@@ -377,20 +383,25 @@ topics:
   com.apple.icloud-container.clouddocs.com.apple.Preview:
   com.apple.icloud-container.clouddocs.com.apple.QuickTimePlayerX:
   com.apple.icloud-container.clouddocs.com.apple.ScriptEditor2:
-  com.apple.icloud-container.clouddocs.com.apple.shoebox:
   com.apple.icloud-container.clouddocs.com.apple.TextEdit:
   com.apple.icloud-container.clouddocs.com.apple.TextInput:
-  com.apple.icloud-container.clouddocs.F3LWYJ7GM7.com.apple.garageband10:
-  com.apple.icloud-container.clouddocs.F3LWYJ7GM7.com.apple.mobilegarageband:
-  com.apple.icloud-container.clouddocs.F3LWYJ7GM7.com.apple.musicmemos.ideas:
-  com.apple.icloud-container.clouddocs.F6266T9T75.com.apple.iMovie:
+  com.apple.icloud-container.clouddocs.com.apple.finder:
+  com.apple.icloud-container.clouddocs.com.apple.iBooks.cloudData:
+  com.apple.icloud-container.clouddocs.com.apple.mail:
+  com.apple.icloud-container.clouddocs.com.apple.shoebox:
+  com.apple.icloud-container.clouddocs.iCloud.com.apple.MobileSMS:
+  com.apple.icloud-container.clouddocs.iCloud.com.apple.Playgrounds:
   com.apple.icloud-container.clouddocs.iCloud.com.apple.configurator.ui:
   com.apple.icloud-container.clouddocs.iCloud.com.apple.iBooks:
   com.apple.icloud-container.clouddocs.iCloud.com.apple.iBooks.iTunesU:
-  com.apple.icloud-container.clouddocs.iCloud.com.apple.MobileSMS:
-  com.apple.icloud-container.clouddocs.iCloud.com.apple.Playgrounds:
   com.apple.icloud-container.clouddocs.iCloud.com.polishedplay.coreanimator:
   com.apple.icloud-container.clouddocs.iCloud.is.workflow.my.workflows:
+  com.apple.icloud-container.com.apple.Safari:
+  com.apple.icloud-container.com.apple.SafariShared.CloudTabs:
+  com.apple.icloud-container.com.apple.SafariShared.Settings:
+  com.apple.icloud-container.com.apple.SafariShared.WBSCloudBookmarksStore:
+  com.apple.icloud-container.com.apple.TrustedPeersHelper:
+  com.apple.icloud-container.com.apple.UsageTrackingAgent:
   com.apple.icloud-container.com.apple.amsengagementd:
   com.apple.icloud-container.com.apple.appleaccount.beneficiary:
   com.apple.icloud-container.com.apple.appleaccount.beneficiary.private:
@@ -405,20 +416,16 @@ topics:
   com.apple.icloud-container.com.apple.cloudpaird:
   com.apple.icloud-container.com.apple.findmy.findmylocateagent:
   com.apple.icloud-container.com.apple.gamed:
+  com.apple.icloud-container.com.apple.iWork.Numbers:
   com.apple.icloud-container.com.apple.icloud.fmfd:
   com.apple.icloud-container.com.apple.icloud.searchpartyuseragent:
   com.apple.icloud-container.com.apple.imagent:
-  com.apple.icloud-container.com.apple.iWork.Numbers:
   com.apple.icloud-container.com.apple.keyboardservicesd:
   com.apple.icloud-container.com.apple.knowledge-agent:
   com.apple.icloud-container.com.apple.passd:
   com.apple.icloud-container.com.apple.photos.cloud:
   com.apple.icloud-container.com.apple.protectedcloudstorage.protectedcloudkeysyncing:
   com.apple.icloud-container.com.apple.reminders:
-  com.apple.icloud-container.com.apple.Safari:
-  com.apple.icloud-container.com.apple.SafariShared.CloudTabs:
-  com.apple.icloud-container.com.apple.SafariShared.Settings:
-  com.apple.icloud-container.com.apple.SafariShared.WBSCloudBookmarksStore:
   com.apple.icloud-container.com.apple.security.cuttlefish:
   com.apple.icloud-container.com.apple.security.kcsharing:
   com.apple.icloud-container.com.apple.securityd:
@@ -427,9 +434,7 @@ topics:
   com.apple.icloud-container.com.apple.suggestd:
   com.apple.icloud-container.com.apple.syncdefaultsd:
   com.apple.icloud-container.com.apple.transparencyd:
-  com.apple.icloud-container.com.apple.TrustedPeersHelper:
   com.apple.icloud-container.com.apple.upload-request-proxy.com.apple.photos.cloud:
-  com.apple.icloud-container.com.apple.UsageTrackingAgent:
   com.apple.icloud-container.com.apple.willowd:
   com.apple.icloud.fmip.voiceassistantsync:
   com.apple.icloud.presence.mode.status:
@@ -437,7 +442,6 @@ topics:
   com.apple.idmsauth:
   com.apple.idmsauthagent:
   com.apple.itunesstored:
-  com.apple.iWork.Numbers:
   com.apple.jalisco:
   com.apple.madrid:
   com.apple.mobileassetd:
@@ -494,11 +498,11 @@ topics:
   com.apple.private.alloy.fmf:
   com.apple.private.alloy.gamecenter.imessage:
   com.apple.private.alloy.gelato:
-  com.apple.private.alloy.groupkit:
-  com.apple.private.alloy.groupkit.invite:
   com.apple.private.alloy.groupRemoteControl.cloud:
   com.apple.private.alloy.groupRemoteControl.messaging:
   com.apple.private.alloy.groupRemoteControl.session:
+  com.apple.private.alloy.groupkit:
+  com.apple.private.alloy.groupkit.invite:
   com.apple.private.alloy.hearing:
   com.apple.private.alloy.home:
   com.apple.private.alloy.home.invite:

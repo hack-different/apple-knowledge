@@ -2,6 +2,10 @@
 metadata:
   description:
   credits:
+  collections:
+  - kext_eliminate_display
+  - kext_eliminate_display_no_symbols
+  - kexts
 kext_eliminate_display:
 - com.apple.driver.AirPort.Brcm4360-MFG
 - com.apple.driver.AirPort.BrcmNIC-MFG
@@ -28,6 +32,12 @@ kext_eliminate_display_no_symbols:
 - com.apple.driver.kis.AppleKIS
 - com.apple.driver.AppleBSDKextStarterVPN
 kexts:
+  com.Areca.ArcMSR:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 01FC5EBD-0A34-3E77-9216-53B89DDD8CE4
   com.apple.AGDCPluginDisplayMetrics:
     description:
     collections:
@@ -97,12 +107,6 @@ kexts:
       com.apple.developer.driverkit.family.hid.eventservice: true
     uuids:
     - 61C57C9C-7609-3B7C-BB74-EF61A455462E
-  com.apple.audio.TSNCaptureInterface:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 63A6227F-5A1E-33F8-98A0-45326604E877
   com.apple.BootCache:
     description:
     collections:
@@ -116,1709 +120,6 @@ kexts:
     - kernel
     uuids:
     - 4B2B0E9B-8C48-37DC-98B7-9A850963E37F
-  com.apple.driver.ACPI_SMC_PlatformPlugin:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 5C1EF724-DB18-3BC5-B48C-27B4171BA5BC
-  com.apple.driver.AFKACIPC:
-    description:
-    collections:
-    - kext
-  com.apple.driver.AGDCBacklightControl:
-    description:
-    collections:
-    - kext
-    uuids:
-    - FF73BB1C-30DE-3E8F-BEC2-60A16E326CC3
-  com.apple.driver.AGPM:
-    description:
-    collections:
-    - kext
-    uuids:
-    - EEA61636-3162-315D-B3ED-43E2BFF1C126
-  com.apple.driver.AirPort.Brcm4360-MFG:
-    description:
-    internal: probably
-  com.apple.driver.AirPort.BrcmNIC:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 472C435B-6435-3F79-B70F-5D37D9FCA900
-  com.apple.driver.AirPort.BrcmNIC-MFG:
-    description:
-    internal: probably
-  com.apple.driver.Apple16X50ACPI:
-    description:
-    collections:
-    - kext
-    uuids:
-    - BCD5CF20-F216-3DB5-B6E7-05845BEC995C
-  com.apple.driver.Apple16X50Serial:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 9EC5116D-A603-339E-B4F7-07EAEA7842CA
-  com.apple.driver.Apple_iSight:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 2B2235FB-3623-3E0A-B5F4-C913B640FB8F
-  com.apple.driver.AppleACPIButtons:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 5C3D7C55-F30D-3E2C-AA21-FADB843D214C
-  com.apple.driver.AppleACPIEC:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 717B6EB6-404C-33DA-870D-406DBBC11CAF
-  com.apple.driver.AppleACPIPlatform:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 7120E3C3-BEE5-35E9-AED5-FEFDA044D57F
-  com.apple.driver.AppleActuatorDriver:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - BA9DF9F1-99F0-3AE5-A7D7-B9D838FA4BC2
-  com.apple.driver.AppleAfterburner:
-    description:
-    collections:
-    - kext
-    uuids:
-    - F6425597-75F5-3ACA-AE0D-63609235A523
-  com.apple.driver.AppleAHCIPort:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 716EF9FB-36F6-3B1C-8867-973903C10CAF
-  com.apple.driver.AppleAPIC:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - BC90C6C0-E54F-3F2F-9B71-4606940491BF
-  com.apple.driver.AppleAstrisGpioProbe:
-    description: Something about debug lines on iDevices
-    internal: true
-  com.apple.driver.AppleATAPIStorage:
-    description:
-    collections:
-    - kernel
-    uuids:
-    -
-  com.apple.driver.AppleAudioClockLibs:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 7AC40BCC-C2F8-3CA9-BA8E-09A396459D95
-  com.apple.driver.AppleAVEBridge:
-    description:
-    collections:
-    - kext
-    uuids:
-    - AE0103E6-3AA8-3667-9BE1-5BA680C6417F
-  com.apple.driver.AppleBacklight:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 0A87F946-F757-3134-9BF5-138F13478318
-  com.apple.driver.AppleBacklightExpert:
-    description:
-    collections:
-    - kext
-    uuids:
-    - C37DAA62-A0C5-343A-AD2F-334D853A07E9
-  com.apple.driver.AppleBCMWLANBusInterfacePCIeMac:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 7F4ADFFB-7316-35D3-8BF9-F49B15D73351
-  com.apple.driver.AppleBCMWLANCoreMac:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 0066E02B-5A70-365D-959C-E28E7915F793
-  com.apple.driver.AppleBluetoothDebug:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - DFB8A1C7-44D5-3919-B3B1-8869C2D9FB61
-  com.apple.driver.AppleBluetoothDebugService:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 1DB664D1-294B-3C5F-9680-4AE693DF3D68
-  com.apple.driver.AppleBluetoothHIDKeyboard:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 9B23A18D-5EA4-38ED-91F0-1749FB508573
-  com.apple.driver.AppleBluetoothHIDMouse:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 42078AED-A23E-3748-A2EF-FFFB80345C0E
-  com.apple.driver.AppleBluetoothModule:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - CEF64489-3F00-316D-984A-484A64D30ED8
-  com.apple.driver.AppleBluetoothMultitouch:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - E21B75AB-9AD3-3F47-BCBC-A48608DE15AC
-  com.apple.driver.AppleBluetoothRemote:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 98080A9F-5FAC-35C3-B4EE-50064C1A1FF9
-  com.apple.driver.AppleBridgeAudioController:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 8D597B8E-B922-362D-AF8D-5D22100EC234
-  com.apple.driver.AppleBSDKextStarter:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 746ABB03-15D4-3DCF-85FF-E1D9EE261D32
-  com.apple.driver.AppleBSDKextStarterTMPFS:
-    description:
-    collections:
-    - kernel
-  com.apple.driver.AppleBSDKextStarterVPN:
-    description: Why would you want a VPN here?
-    internal: probably
-  com.apple.driver.AppleBusPowerController:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 44C4714C-4F12-3E4F-B29B-C04CF76A5C63
-  com.apple.driver.AppleCameraInterface:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 77FA1576-8F96-3C97-AC3F-BD2CED598F17
-  com.apple.driver.AppleConvergedIPCOLYBTControl:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - BCC99C62-FCE6-3C45-8823-1FE0C4A6ABA5
-  com.apple.driver.AppleConvergedPCI:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 011E0D9B-13A8-3438-887A-7FF41C43EDAC
-  com.apple.driver.AppleCredentialManager:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 1230A359-A922-339A-B45E-50419715EA2B
-  com.apple.driver.AppleDiskImages2:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 0B8C1E1C-07C0-3F36-9EAB-D5FBEDEF47D5
-  com.apple.driver.AppleEffaceableBlockDevice:
-    description:
-    collections:
-    - kext
-    uuids:
-    - FF92A74C-6705-36E7-A309-6A22BE52E8E6
-  com.apple.driver.AppleEffaceableNOR:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 7D23A757-1065-3780-AE12-E76EBA13CC61
-  com.apple.driver.AppleEffaceableStorage:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 4ED769C2-F7DD-325A-9ABD-8C153AD64D08
-  com.apple.driver.AppleEffaceableTDM:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - C1AB30AE-6BF7-3194-B70A-539C162293B6
-  com.apple.driver.AppleEFINVRAM:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 4B5FE248-78C8-3030-81FB-53CC4040F619
-  com.apple.driver.AppleEFIRuntime:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 505B7B38-3581-32C7-96F3-0788E74D8F51
-  com.apple.driver.AppleEmbeddedOSSupportHost:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 88A896BE-1198-302B-B818-3A3740A9BAFD
-  com.apple.driver.AppleEthernetAquantiaAqtion:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 17B48DB5-01C7-3A23-A830-6774635AF33C
-  com.apple.driver.AppleEthernetMLX5:
-    description:
-    collections:
-    - kext
-    uuids:
-    - A3264327-CCAA-3467-9ADE-34772D534BF7
-  com.apple.driver.AppleFDEKeyStore:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - CD6C473F-D55D-3233-BFDC-094C45E08A49
-  com.apple.driver.AppleFileSystemDriver:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 53DDDDC5-8E95-305B-A582-6790C675E4AE
-  com.apple.driver.AppleFireWireStorage:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 37647A02-49DB-36B9-B1A6-057450963DEC
-  com.apple.driver.AppleFirmwareUpdateKext:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 03F5418B-E285-3777-894B-0633B6C9B875
-  com.apple.driver.AppleFIVRDriver:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 793FC7FE-F2E7-3248-A3E8-63C6F1FA09A1
-  com.apple.driver.AppleFWAudio:
-    description:
-    collections:
-    - kext
-    uuids:
-    - A9CB0690-016E-3B8C-B8DC-1475034AF08B
-  com.apple.driver.AppleFWOHCI:
-    description:
-    collections:
-    - kext
-    uuids:
-    - C9985EFC-E96E-315F-BB12-80A82B11A3B2
-  com.apple.driver.AppleGameControllerPersonality:
-    description:
-    collections:
-    - kernel
-  com.apple.driver.AppleGFXHDA:
-    description:
-    collections:
-    - kext
-    uuids:
-    - AF3AA15F-721D-3A10-BF04-9C3C8E5CB45C
-  com.apple.driver.AppleGraphicsControl:
-    description:
-    collections:
-    - kext
-    uuids:
-    - C5CC23CD-0236-38DD-901D-C385762B81CF
-  com.apple.driver.AppleGraphicsDevicePolicy:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 1D3387DE-43BD-3881-A3AC-BFBD5A500BA4
-  com.apple.driver.AppleHDA:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 9386A7F1-1075-3A6E-A732-BFD3345AF1FF
-  com.apple.driver.AppleHDAController:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 54E94336-F859-3F2C-87F8-35860CD981A6
-  com.apple.driver.AppleHDAHardwareConfigDriver:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 0FCD298D-ADE6-3217-909A-FC2AD3B47124
-  com.apple.driver.AppleHIDALSService:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 1355DB07-9F3F-31A4-B507-CDE9D46DB6E0
-  com.apple.driver.AppleHIDKeyboard:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 70A28719-3D9C-3A57-A131-426A748787C5
-  com.apple.driver.AppleHIDKeyboardEmbedded:
-    description:
-    collections:
-    - kernel
-    uuids:
-    -
-  com.apple.driver.AppleHIDMouse:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 7086A45A-C590-3E2C-859A-4E1B0F5AF700
-  com.apple.driver.AppleHollywood:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - CD2F6133-DCD4-3FB8-9D26-23C5C88AA037
-  com.apple.driver.AppleHPET:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - A5A9F694-D10A-3E91-B40E-EB03B6583D5F
-  com.apple.driver.AppleHPM:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 1A15EC45-9F76-3FBC-AC98-16B6C2B3A1A5
-  com.apple.driver.AppleHSBluetoothDriver:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 6C6B4A1F-5C23-3A71-BAA4-6450904D1991
-  com.apple.driver.AppleHSSPIHIDDriver:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 9E581BF0-C812-34DD-96B1-DDAD99DDFBB4
-  com.apple.driver.AppleHSSPISupport:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 06A72A2A-5F1A-3C7E-B13B-5C89EF0323CB
-  com.apple.driver.AppleHV:
-    description:
-    collections:
-    - kext
-    uuids:
-    - E4C77B92-4FA2-30E9-A643-D6F2BA4A001B
-  com.apple.driver.AppleHWAccess:
-    description:
-    internal: probably
-  com.apple.driver.AppleInputDeviceSupport:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - BBE5F27B-4054-34C5-81F2-629BB75B2097
-  com.apple.driver.AppleIntel8254XEthernet:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - E505A011-B8C9-355B-842E-06BBF568824C
-  com.apple.driver.AppleIntelBDWGraphics:
-    description:
-    collections:
-    - kext
-    uuids:
-    - EE2AE4DD-0BC1-3D37-8899-A02C61CB53F5
-  com.apple.driver.AppleIntelBDWGraphicsFramebuffer:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 06C3C546-12DF-3DD5-BC59-C10660112958
-  com.apple.driver.AppleIntelCFLGraphicsFramebuffer:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 38A70AB6-B847-3705-85E6-EDB40C53D4F9
-  com.apple.driver.AppleIntelCPUPowerManagement:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - B0602EF2-0206-39F3-AE16-DD7C4B6331B0
-  com.apple.driver.AppleIntelCPUPowerManagementClient:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - B2505791-72DB-303E-91EC-7BBBA9927F89
-  com.apple.driver.AppleIntelCPUPowerManagementDriver:
-    description: "... SMBus/ACPI/AML bytecode? (see darkwake exploits)"
-    internal: probably
-  com.apple.driver.AppleIntelFramebufferAzul:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 4BA97AB4-E22E-31A1-9813-3126277EEDCF
-  com.apple.driver.AppleIntelHD5000Graphics:
-    description:
-    collections:
-    - kext
-    uuids:
-    - B9A25DA3-52FE-3BFE-BD18-124741337CE6
-  com.apple.driver.AppleIntelI210Ethernet:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - FFC59B16-5C1C-37D7-97D6-3976E4DF5BFE
-  com.apple.driver.AppleIntelICLGraphics:
-    description:
-    collections:
-    - kext
-    uuids:
-    - F9405634-F0CA-36AA-B740-61A8858DDCD6
-  com.apple.driver.AppleIntelICLLPGraphicsFramebuffer:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 8F03B96C-0A1B-3F01-98FC-017BCC0D114A
-  com.apple.driver.AppleIntelKBLGraphics:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 607CA1F5-22D1-36F4-8A73-6C6E739C1245
-  com.apple.driver.AppleIntelKBLGraphicsFramebuffer:
-    description:
-    collections:
-    - kext
-    uuids:
-    - F6C3DA99-7436-34D6-8ABF-E310F1802DD9
-  com.apple.driver.AppleIntelLpssDmac:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 8ACB3942-D579-34A9-9642-A3DA6F2EB426
-  com.apple.driver.AppleIntelLpssGspi:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - C049BEA9-1F1E-3B2D-9A2B-AD66FDE1639A
-  com.apple.driver.AppleIntelLpssI2C:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - C2DA4F56-2BA4-341D-94D1-FEFC356DBAF8
-  com.apple.driver.AppleIntelLpssI2CController:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 274E34F6-E608-3385-80C4-B0D2EFB92618
-  com.apple.driver.AppleIntelLpssSpiController:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - AAED1A13-D059-3450-9258-D1D90099DE28
-  com.apple.driver.AppleIntelLpssUARTCommon:
-    description:
-    collections:
-    - kext
-    uuids:
-    - BD75444E-D339-308C-8E1E-8AD12542E9B7
-  com.apple.driver.AppleIntelLpssUARTv0:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 914814D0-BE5C-3258-BB77-FEBAE74DD448
-  com.apple.driver.AppleIntelLpssUARTv1:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 8A1D2C33-DE34-3DC1-8211-DE74B9E7B9B4
-  com.apple.driver.AppleIntelMCEReporter:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 360714D4-8FEB-3C8E-A6BC-4D2AED12BFC0
-  com.apple.driver.AppleIntelPCHPMC:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 2CE26CE9-E702-35BD-BEEC-5CA8E3B405F1
-  com.apple.driver.AppleIntelSKLGraphics:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 394808C1-C4A2-3CED-B088-F388DA6439D1
-  com.apple.driver.AppleIntelSKLGraphicsFramebuffer:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 786B582B-AF4F-3BA3-8600-A97C36910F52
-  com.apple.driver.AppleIntelSlowAdaptiveClocking:
-    description:
-    collections:
-    - kext
-    uuids:
-    - EC5F7799-A846-3582-B87B-0797ED7EB24E
-  com.apple.driver.AppleIPAppender:
-    description:
-    collections:
-    - kext
-    uuids:
-    - B6E72957-8308-30F5-B61D-02E3850EA0CB
-  com.apple.driver.AppleIRController:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - D2F546F0-A20E-3435-B52F-1558C71A2F2F
-  com.apple.driver.AppleKeyStore:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - ECE174FB-E3C7-3ED2-93DD-62CAA199FEA6
-  com.apple.driver.AppleLPC:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 3C62AF78-7FB2-3FBB-9487-254CF52B1FEC
-  com.apple.driver.AppleLSIFusionMPT:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - CD5F104D-F41C-30F4-AEAC-881A6275154C
-  com.apple.driver.AppleMCCSControl:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 707B5AF6-0351-30AF-B73C-184B5600EF95
-  com.apple.driver.AppleMCP89RootPortPM:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - F36BC4D7-2E7A-3C9D-B16E-8A39D9DD4EB2
-  com.apple.driver.AppleMemorexCDROMDriver:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 0162353D-DE41-3AFA-9FCF-7F42DF7DDA53
-  com.apple.driver.AppleMGPUPowerControl:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 0C4697F4-B0AA-3669-8186-17D75CA391CD
-  com.apple.driver.AppleMikeyDriver:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 110D8534-05F6-3268-90FD-4A6EBEAB0E4D
-  com.apple.driver.AppleMikeyHIDDriver:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 5DDFD503-3E3A-3CAE-80B2-C89D1C9CF837
-  com.apple.driver.AppleMobileDevice:
-    description:
-    path: "/Library/Apple/System/Library/Extensions/AppleMobileDevice.kext"
-    signer: "@apple"
-    type: kext
-    codeless: true
-    uuids:
-    - no uuid
-  com.apple.driver.AppleMobileFileIntegrity:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 2C07C501-6849-3156-ABBF-BBA8477F46E5
-  com.apple.driver.AppleMultiFunctionManagerMac:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - AB31F98E-9752-3889-94A3-7246E4EAD190
-  com.apple.driver.AppleMultitouchDriver:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 64127004-DE4F-3452-8B52-7D185D532CC5
-  com.apple.driver.AppleMuxControl:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 2CB46E71-64FB-3146-924D-5AC4FDAB6C9A
-  com.apple.driver.AppleMuxControl2:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 2220DFFA-CF8E-316C-90B9-701A207183F4
-  com.apple.driver.AppleNMI:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - B6F8637B-0844-355F-8C82-60FA06149384
-  com.apple.driver.AppleNVMePassThrough:
-    description: Pass through NVMe commands - to where?
-    internal: probably
-  com.apple.driver.AppleOLYHALMac:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 7F4E8FB4-8C12-3182-B99C-36605C7CD588
-  com.apple.driver.AppleOnboardSerial:
-    description:
-    collections:
-    - kext
-    uuids:
-    - C2ED1FAC-3B30-3586-9F78-EDA6E3AF0C4E
-  com.apple.driver.AppleParavirtGPU:
-    description:
-    collections:
-    - kext
-    uuids:
-    - ED381E4A-4D84-3753-B125-00E04C393E52
-  com.apple.driver.ApplePIODMA:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 8FD4AAAB-4371-3E2C-B0B8-830E32E98248
-  com.apple.driver.ApplePlatformEnabler:
-    description:
-    collections:
-    - kext
-    uuids:
-    - F19B5084-15B2-3F0C-875C-1FE316CB9DA0
-  com.apple.driver.ApplePolicyControl:
-    description:
-    collections:
-    - kext
-    uuids:
-    - A631324C-C40B-3EB6-B243-0D18643FD55E
-  com.apple.driver.ApplePVPanic:
-    description:
-    collections:
-    - kext
-    uuids:
-    - CD3F1B8D-07A8-370D-BEBD-52DFEC3D7C75
-  com.apple.driver.AppleRAID:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - E01208F3-2F6D-3ED2-8B27-B5DB1E1CB934
-  com.apple.driver.AppleRTC:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - FFD42DA9-8995-3444-B477-6A4626837799
-  com.apple.driver.AppleSDXC:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 01CA2114-CBB9-3C99-87AA-DB9B588AA611
-  com.apple.driver.AppleSEPManager:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 4C0D04E1-60E9-3AFB-B9F2-4D97A207B3CD
-  com.apple.driver.AppleSmartBatteryManager:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 9F5F695A-D6FD-330B-A39F-4F9A7D256CE4
-  com.apple.driver.AppleSMBIOS:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 402D0B5E-05D5-3494-9A84-0D21274F19A9
-  com.apple.driver.AppleSMBusController:
-    description:
-    collections:
-    - kext
-    uuids:
-    - DC1326E1-2580-3EDB-8238-B840F4A36353
-  com.apple.driver.AppleSMBusPCI:
-    description:
-    collections:
-    - kext
-    uuids:
-    - B08EBF0B-4431-302F-B5DD-CA87D940148A
-  com.apple.driver.AppleSMC:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - EC43C1DD-09AB-36C4-877A-E53C8C34E6AE
-  com.apple.driver.AppleSMCLMU:
-    description:
-    collections:
-    - kext
-    uuids:
-    - B53D2A62-DDE3-3735-9B63-94C5BEBB4E5F
-  com.apple.driver.AppleSMCPDRC:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 13492385-0E12-33F6-B1FA-F931C86C45D7
-  com.apple.driver.AppleSMCRTC:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 9567FA23-BF6E-3D9F-8197-4E152B9542F9
-  com.apple.driver.AppleSSE:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 4FF3229E-0381-3D51-9DFB-30702E82A775
-  com.apple.driver.AppleStorageDrivers:
-    description:
-    collections:
-    - kext
-  com.apple.driver.AppleThunderboltDPAdapterFamily:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 5EA98565-B1A0-3E41-B110-5EECCEC8E67A
-  com.apple.driver.AppleThunderboltDPAdapters:
-    description:
-    collections:
-    - kext
-  com.apple.driver.AppleThunderboltDPInAdapter:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 29A712AC-DA6D-3EAF-B356-1222C125F9A2
-  com.apple.driver.AppleThunderboltDPOutAdapter:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - DA4C5F46-88AE-3E0A-B419-4FE71DEB376A
-  com.apple.driver.AppleThunderboltEDMService:
-    description:
-    collections:
-    - kext
-  com.apple.driver.AppleThunderboltEDMSink:
-    description:
-    collections:
-    - kext
-    uuids:
-    - D518920C-3465-3972-BB76-7C4E6FA7A3DD
-  com.apple.driver.AppleThunderboltEDMSource:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 174C8B35-583D-3498-8245-31B7B5F783FE
-  com.apple.driver.AppleThunderboltIP:
-    description:
-    collections:
-    - kext
-    uuids:
-    - AD6E9B03-C8E8-3F5A-A4BC-8123A0781499
-  com.apple.driver.AppleThunderboltNHI:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 2FFF6007-3B76-3D5B-A178-C6E51EE9EB23
-  com.apple.driver.AppleThunderboltPCIAdapters:
-    description:
-    collections:
-    - kernel
-  com.apple.driver.AppleThunderboltPCIDownAdapter:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 5EB2C061-27C8-3C6F-B48C-E2724A5AD7F6
-  com.apple.driver.AppleThunderboltPCIUpAdapter:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - D655AA61-38D9-3BBF-B8A1-A3BE9F5CA54D
-  com.apple.driver.AppleThunderboltUSBAdapters:
-    description:
-    collections:
-    - kernel
-  com.apple.driver.AppleThunderboltUTDM:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 2719CAFB-92A0-36A4-8253-B8C0962C227C
-  com.apple.driver.AppleTopCase:
-    description:
-    collections:
-    - kernel
-  com.apple.driver.AppleTopCaseActuatorHIDDriver:
-    description:
-    collections:
-    - kernel
-  com.apple.driver.AppleTopCaseDriverV2:
-    description:
-    collections:
-    - kernel
-  com.apple.driver.AppleTopCaseHIDEventDriver:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 4C275E4C-7B1B-3C41-9BFC-02165A4B4841
-  com.apple.driver.AppleUpstreamUserClient:
-    description:
-    collections:
-    - kext
-    uuids:
-    - C9C34DCB-28DE-3464-AEE0-91AB5D0724C2
-  com.apple.driver.AppleUSBAudio:
-    description:
-    collections:
-    - kext
-    uuids:
-    - C51776C4-18BD-307F-9926-8A015C88A691
-  com.apple.driver.AppleUSBCardReader:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 25DE27ED-211B-3DD7-A195-65BF285BF962
-  com.apple.driver.AppleUSBComposite:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 5DDB4B67-4F08-3BB4-B662-883E00BFCC39
-  com.apple.driver.AppleUSBDisplays:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - CA7752AC-B40A-3D2C-B8F4-62D39433096E
-  com.apple.driver.AppleUSBHIDMouse:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 7BAD4C33-A8A4-34D6-A791-C3D6A469A9E7
-  com.apple.driver.AppleUSBHostMergeProperties:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 102F2622-AEA8-3324-80A7-DDD4B7C60B12
-  com.apple.driver.AppleUSBLegacyHub:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 2B239569-D715-3F3C-B70B-D82343315B8B
-  com.apple.driver.AppleUSBMassStorageInterfaceNub:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - A711DEB8-5405-3981-882F-CD069CC49F57
-  com.apple.driver.AppleUSBMergeNub:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 5B989FBB-4B34-358B-8320-D0B8D837AF1A
-  com.apple.driver.AppleUSBMultitouch:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 64629198-3A3C-338F-8E73-4C0E30F1E809
-  com.apple.driver.AppleUSBODD:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 4D5A2606-7E4A-32F2-9A0C-BA9D2F1A28A8
-  com.apple.driver.AppleUSBTCButtons:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - CEAF3AEC-6C0D-3669-8E72-45A0BB1EBA98
-  com.apple.driver.AppleUSBTCKeyboard:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 8E83A7FE-4AF3-31BE-90CB-1D99FEB468BD
-  com.apple.driver.AppleUSBTCKeyEventDriver:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 3A4C3B87-AA4A-3497-899F-EAC02A5473E5
-  com.apple.driver.AppleUSBTDM:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 108BF171-D292-3185-8FE8-4B3B243739D0
-  com.apple.driver.AppleUSBTopCase:
-    description:
-    collections:
-    - kernel
-  com.apple.driver.AppleUSBTopCaseDriver:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - F9117895-DEF9-376E-A349-BFA8A9DEE952
-  com.apple.driver.AppleVirtIO:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 9587880C-B520-38A7-8DA5-78CA3C754445
-  com.apple.driver.AppleVirtualGraphics:
-    description:
-    collections:
-    - kext
-    uuids:
-    - D41F91D0-7771-3F9F-BE67-0D4D4DAAC6E1
-  com.apple.driver.AppleVmxnet3Ethernet:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 3D88FB09-35BB-3EFC-92E7-A63CC691F8C4
-  com.apple.driver.AppleWWANSupport:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 6A2B20BA-9749-30CF-8B6B-C5728AB26EAA
-  com.apple.driver.AppleWWANSupport1:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 8572D629-4A98-3522-9DCD-A5B5AD0C8E40
-  com.apple.driver.AppleWWANSupport2:
-    description:
-    collections:
-    - kext
-    uuids:
-    - CD8F4582-EB9D-33E2-A63B-33173AC346A6
-  com.apple.driver.AppleXsanScheme:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 91F4E307-8671-3686-84D1-EF4D2F43C249
-  com.apple.driver.AppleXserveRAID:
-    description:
-    collections:
-    - kernel
-  com.apple.driver.AudioAUUC:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 204DB37E-DF48-326C-B764-877E85823DBF
-  com.apple.driver.BCMWLANFirmware4355.Hashstore:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 85466D80-7373-33A2-9A16-0B56E1653DE0
-  com.apple.driver.BCMWLANFirmware4364.Hashstore:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 74697D0F-158C-3BCF-A370-2EE77C34DAD3
-  com.apple.driver.BCMWLANFirmware4377.Hashstore:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 36F2C93B-5666-3C63-A4CD-4470A404A643
-  com.apple.driver.BCMWLANFirmware4378.Hashstore:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 14AFDB8B-1333-3F63-A27A-2817ECDF6110
-  com.apple.driver.BCMWLANFirmware4387.Hashstore:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 5ECBEF63-55A6-368B-A753-0A2FFCDD78C6
-  com.apple.driver.BridgeAudioCommunication:
-    description:
-    collections:
-    - kext
-    uuids:
-    - A2F9F76B-BCA6-3E93-91BC-BED9999494B9
-  com.apple.driver.CanonEOS1D:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 4B999708-258D-3F55-A750-3CBFD8965F79
-  com.apple.driver.CellPhoneHelper:
-    description:
-    collections:
-    - kernel
-  com.apple.driver.corecapture:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - DBEB1C47-C51E-36D8-911F-B1C50A3A5A88
-  com.apple.driver.CoreStorage:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 63BD95F5-A30F-3228-A3A0-A324AE97A94E
-  com.apple.driver.CoreStorageFsck:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 4995B74F-C5B2-3110-9950-5C55E03F3851
-  com.apple.driver.DiskImages:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 942F394E-0E2D-3DC1-9002-FE5FA3E98A5A
-  com.apple.driver.DiskImages.CryptoEncoding:
-    description:
-    collections:
-    - kext
-    uuids:
-    - FD8DE70F-8A23-33E5-AF4C-F8573346D2F9
-  com.apple.driver.DiskImages.FileBackingStore:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 054A3FC8-CE8B-313D-A867-509153A06B3F
-  com.apple.driver.DiskImages.HTTPBackingStore:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 8C00DF28-8FF3-3658-87E6-14013FC7CA81
-  com.apple.driver.DiskImages.KernelBacked:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - DD655509-AE44-3DD1-9241-6F3964ADFE5F
-  com.apple.driver.DiskImages.RAMBackingStore:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 448FA4C6-316E-35B8-952A-889DAD965152
-  com.apple.driver.DiskImages.ReadWriteDiskImage:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 6ED6BE3D-0249-34C2-A663-7E3AAC6FCBEB
-  com.apple.driver.DiskImages.SparseDiskImage:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 0B320F40-BA27-3960-AC1F-B181DD20407E
-  com.apple.driver.DiskImages.UDIFDiskImage:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 2E88030A-4930-3522-BAC3-3F2AC1AA49A7
-  com.apple.driver.driverkit.serial:
-    description:
-    collections:
-    - kext
-    uuids:
-    - D2A7F81F-03B1-3759-AF48-4FCC1AD573E1
-  com.apple.driver.DrizzlePlatformSupport:
-    description:
-    internal: maybe
-  com.apple.driver.DrizzleSMC:
-    description:
-    internal: maybe
-  com.apple.driver.DspFuncLib:
-    description:
-    collections:
-    - kext
-    uuids:
-    - E82A009F-AF42-3B29-BC1E-2F5866F29549
-  com.apple.driver.eficheck:
-    description: Kernel mode driver supporting `eficheck` binary to scan T1 and prior
-      system's EFI for malware
-    collections:
-    - kext
-    uuids:
-    - A0A8BCC8-FF60-32F9-A3E0-F8E6F68417A9
-  com.apple.driver.FireWireStorageDeviceSpecifics:
-    description:
-    collections:
-    - kext
-  com.apple.driver.FWPreferredProtocolSpeed:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 8FA22BD9-F73A-3CF1-BB9E-F7063FA66F12
-  com.apple.driver.initioFWBridge:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 58B80E0F-2E3D-3C75-B794-084FDEB314E4
-  com.apple.driver.Intel82574LEthernet:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - B4522834-4EA6-3018-B65B-DD49D80D9BFC
-  com.apple.driver.IO80211NetBooter:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - B704D083-4CBD-3063-9A1C-F5F66B53E717
-  com.apple.driver.IOBluetoothHIDDriver:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - CCE57CA0-4853-3317-BF8F-C3625A32D763
-  com.apple.driver.IOBluetoothHostControllerPCIeTransport:
-    description:
-    collections:
-    - kext
-    uuids:
-    - C68D2C2B-49CA-38FC-BA31-98C5118C4431
-  com.apple.driver.IOFireWireSerialBusProtocolSansPhysicalUnit:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 4875D45F-440B-36B0-BDBA-6A0F44F45880
-  com.apple.driver.IOImageLoader:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 5905D513-93A4-3DC9-8135-1E6D9D205BED
-  com.apple.driver.IOPlatformPluginFamily:
-    description:
-    collections:
-    - kext
-    uuids:
-    - FEBBF9BA-CF77-3F9F-BBC2-285EBC141A2F
-  com.apple.driver.IOPlatformPluginLegacy:
-    description:
-    collections:
-    - kext
-    uuids:
-    - BD461B28-76F8-3D25-8703-196661D05DB2
-  com.apple.driver.IOSlaveProcessor:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 3FDD48C0-A37B-3B1E-854F-643F7F69EA00
-  com.apple.driver.IOUSBHIDDriver:
-    description:
-    collections:
-    - kext
-  com.apple.driver.iPodDriver:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 54D452FD-52FD-379E-843E-1C6ACE1D7664
-  com.apple.driver.iPodSBCDriver:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - E87F66DA-D949-3CAA-844F-86B10280FF97
-  com.apple.driver.KernelRelayHost:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 0D1D7470-59FD-3235-81B2-A8273BB17A0F
-  com.apple.driver.KernelRelayTesterHost:
-    description:
-    internal: probably
-  com.apple.driver.KextExcludeList:
-    description:
-    collections:
-    - kernel
-    path: "/Library/Apple/System/Library/Extensions/AppleKextExcludeList.kext"
-    signer: "@apple"
-    type: kext
-    codeless: true
-  com.apple.driver.LSI_FW_500:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 4765E983-A527-34EA-AB2C-59C6B9FA42AF
-  com.apple.driver.LuaHardwareAccess:
-    description: Who doesn't want a scripting language in kernel mode?
-    internal: probably
-  com.apple.driver.mDNSOffloadUserClient:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 4FBA2427-9C02-3A92-B50D-9477FED500C7
-  com.apple.driver.MEDetect:
-    description: Related to Intel Management Engine
-    internal: probably
-  com.apple.driver.MKE_LF_D211A:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 79088B6E-9D48-3A1F-9D22-8F1C6689E508
-  com.apple.driver.MKE_SR_8171:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 95415920-9035-37CF-890B-49250188A37C
-  com.apple.driver.NVSMU:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 5E3BC78A-C9EB-3678-BF2F-703296C192B8
-  com.apple.driver.Oxford_Semi:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 5C250C83-88CF-30E8-9E32-C52E77266B63
-  com.apple.driver.PioneerSuperDrive:
-    description: Apple's USB SuperDrive driver (mostly to configure required power
-      draw)
-    collections:
-    - kernel
-    uuids:
-    - DD91A055-6AF2-384A-A78B-E0EC0A29BFAE
-  com.apple.driver.PlasmonUDO:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 6D8356DD-34C9-36EA-9BF2-8D7EBF502F36
-  com.apple.driver.pmtelemetry:
-    description:
-    collections:
-    - kext
-    uuids:
-    - E543BC5C-AEF7-37BD-ACEC-1F6DE7ADE511
-  com.apple.driver.QPSQueFire:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 7DA23D7D-7910-317D-B385-7A9834EC8C66
-  com.apple.driver.SanyoIDShot:
-    description:
-    collections:
-    - kext
-    uuids:
-    - AB83A702-57F7-328E-94AA-C0E17F88D5FF
-  com.apple.driver.SCSIDeviceSpecifics:
-    description:
-    collections:
-    - kernel
-  com.apple.driver.SMCMotionSensor:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 5E9F431E-5CEC-39A1-B6B4-62D65C826437
-  com.apple.driver.Sony_XDCAM:
-    description:
-    collections:
-    - kext
-  com.apple.driver.StorageLynx:
-    description: Apple SEP persistent storage / public key component
-    collections:
-    - kext
-    uuids:
-    - 2F9A61F3-7502-3B0C-A911-DFB2EF263837
-  com.apple.driver.usb.AppleUSBCommon:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 814626B7-13C3-36EB-A33A-563C1E7BBEAD
-  com.apple.driver.usb.AppleUSBEHCI:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - C14CC3BB-4B66-3F6E-883F-330C40D425D4
-  com.apple.driver.usb.AppleUSBEHCIPCI:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 3266195E-7008-3486-91E7-921E10DBDBFF
-  com.apple.driver.usb.AppleUSBHostBillboardDevice:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - CED3AEA9-BD5B-36EE-B5FE-78AE00F26644
-  com.apple.driver.usb.AppleUSBHostBLLBoardDevice:
-    description:
-    collections:
-    - BootKernelExtensions.kc
-  com.apple.driver.usb.AppleUSBHostCompositeDevice:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 2624783B-92A8-3370-A8A8-D51E8E2BDA61
-  com.apple.driver.usb.AppleUSBHostPacketFilter:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 17B22146-5CFC-30AD-A943-B1981CC84890
-  com.apple.driver.usb.AppleUSBHostPlatformProperties:
-    description:
-    collections:
-    - kernel
-  com.apple.driver.usb.AppleUSBHub:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 48E937DE-11F2-3FE8-BA9A-B5EA91FE3963
-  com.apple.driver.usb.AppleUSBiBridge:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 519554E7-CE52-3FBB-8B46-562D49BEB490
-  com.apple.driver.usb.AppleUSBKDP:
-    description: USB based kernel debug port
-    internal: probably
-  com.apple.driver.usb.AppleUSBOHCI:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 78F781C1-CB1A-3D40-B3DB-A5937DC2A864
-  com.apple.driver.usb.AppleUSBOHCIPCI:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - D5AEFB79-5AC4-32BE-A9C7-7086B4098A37
-  com.apple.driver.usb.AppleUSBOpticalMouse:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 13A0F273-C86C-3B40-9323-22DE34EC267D
-  com.apple.driver.usb.AppleUSBRecoveryHost:
-    description: Seems to be from a point where Apple was considering allowing Intel/T2
-      to be restored in the same style as M1s via UniversalMac (this is why IPSWs
-      contain x64 bits)
-    internal: probably
-    path: "/System/Library/Extensions/IOUSBHostFamily.kext/Contents/PlugIns/AppleUSBRecoveryHost.kext"
-    signer: "@apple"
-    type: kext
-    uuids:
-    - 40F9DE1F-A25C-335E-AB53-112633304B2E
-  com.apple.driver.usb.AppleUSBUHCI:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 1FB07BCF-0FC1-364C-AC74-A5F9F836DF24
-  com.apple.driver.usb.AppleUSBUHCIPCI:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 2E126F48-C1CC-334B-A1EE-7620EC2CBD84
-  com.apple.driver.usb.AppleUSBUserHCI:
-    description:
-    collections:
-    - kext
-    uuids:
-    - DFCB2B24-FF30-30A9-B4CD-DA3E435E210F
-  com.apple.driver.usb.AppleUSBVHCI:
-    description: Apple Virtual Host Controller Interface (used to communicate to the
-      T2 via USB over PCIe)
-    collections:
-    - kernel
-    uuids:
-    - 9F9C20EC-2E20-36DD-AAD2-27EB00838E68
-  com.apple.driver.usb.AppleUSBVHCIBCE:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 2B1E4A9E-A563-301D-82C9-5C51537648DB
-  com.apple.driver.usb.AppleUSBVHCICommon:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 24D143E9-FF73-3FB4-8928-96AB3CDEA013
-  com.apple.driver.usb.AppleUSBVHCICommonBCE:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - B4AB5BFE-B1C3-3391-A158-9834EC1A2F10
-  com.apple.driver.usb.AppleUSBVHCICommonRSM:
-    description:
-    path: "/System/Library/Extensions/AppleUSBCommon.kext/Contents/PlugIns/AppleUSBVHCICommonRSM.kext"
-    signer: "@apple"
-    type: kext
-    uuids:
-    - 2337F6AA-FE3F-372E-91CB-434F4B47486F
-  com.apple.driver.usb.AppleUSBVHCIRSM:
-    description:
-    path: "/System/Library/Extensions/IOUSBHostFamily.kext/Contents/PlugIns/AppleUSBVHCIRSM.kext"
-    signer: "@apple"
-    type: kext
-    uuids:
-    - 6958FD83-E83D-333E-81AC-4323F3160DF1
-  com.apple.driver.usb.AppleUSBXHCI:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 514193F1-382A-38C3-BCE0-A34FDF2AEBAC
-  com.apple.driver.usb.AppleUSBXHCIPCI:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - E1BDCF6C-11C8-3EB5-82A6-BA0FD99A7090
-  com.apple.driver.usb.cdc:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 79F6FFE0-98EE-3BF2-A7A9-7B5CB1995C48
-  com.apple.driver.usb.cdc.acm:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 01754BDC-3C17-3893-8A44-8A854463AF97
-  com.apple.driver.usb.cdc.dmm:
-    description:
-    collections:
-    - kext
-    uuids:
-    - F8A53CE1-3CF0-3324-A52C-4B88BA69C327
-  com.apple.driver.usb.cdc.ecm:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 5D1D684E-3A9A-343A-B5EF-EC56E874A527
-  com.apple.driver.usb.cdc.eem:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 1BC861D7-08DE-3700-BF29-B054244F4F64
-  com.apple.driver.usb.cdc.ncm:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 9BE1AA5E-AD6D-383E-A758-9C08CE97A52B
-  com.apple.driver.usb.cdc.wcm:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 58832DEB-59D7-3910-9097-FD6C0B8979BF
-  com.apple.driver.usb.ethernet.asix:
-    description: ASIX based USB ethernet driver (Apple USB Ethernet dongle)
-    collections:
-    - kernel
-    uuids:
-    - 5BF98DB9-8ED8-350F-8DC1-7884F2A4D52F
-  com.apple.driver.usb.IOUSBHostHIDDevice:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 980BCDCB-3A41-3C60-ADE4-A07EC0064342
-  com.apple.driver.usb.IOUSBHostHIDDeviceSafeBoot:
-    description:
-    collections:
-    - kext
-  com.apple.driver.usb.networking:
-    description: USB CDC (communications class) driver
-    collections:
-    - kernel
-    uuids:
-    - 860F1F08-CF3B-3DC6-9445-738299EDD57C
-  com.apple.driver.usb.realtek8153patcher:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 1FD9A899-3D0C-359A-90DF-1E2D9188EC83
-  com.apple.driver.usb.serial:
-    description: Generic USB FTDI kernel mode driver (supplanted by DriverKit version)
-    collections:
-    - kext
-    uuids:
-    - 01BADA65-0B9E-3425-928C-F967FB76E8D0
-  com.apple.driver.USBStorageDeviceSpecifics:
-    description:
-    collections:
-    - kernel
-  com.apple.driver.VMPlatformPlugin:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 8261FBC2-9086-33BC-90F7-823C97ED9C7D
-  com.apple.driver.watchdog:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 01A90A91-CE41-37C4-A5C0-BBD735087472
-  com.apple.driver.WriteProtectedMediaDriver:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - CF826007-CB61-3CB4-95ED-AB7FAFD3D3F8
-  com.apple.driver.X86PlatformPlugin:
-    description:
-    collections:
-    - kext
-    path: "/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext"
-    signer: "@apple"
-    type: kext
-    uuids:
-    - 725DA4C4-E74D-3C39-A015-1DF738D29475
-  com.apple.driver.X86PlatformShim:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 5C6EF1EC-2310-336B-9A4B-7F507A9DBC78
   com.apple.DriverKit-Apple16X50PCI:
     description:
     path: "/System/Library/DriverExtensions/com.apple.DriverKit-Apple16X50PCI.dext"
@@ -2289,21 +590,6 @@ kexts:
       com.apple.developer.driverkit: true
     uuids:
     - A32CC71A-3413-3E37-831B-3CB4EDD5E890
-  com.apple.DriverKit-AppleUSBSerial:
-    description:
-    path: "/System/Library/DriverExtensions/com.apple.DriverKit-AppleUSBSerial.dext"
-    signer: "@apple"
-    type: dext
-    entitlements:
-      com.apple.developer.driverkit.family.serial: true
-      com.apple.developer.driverkit: true
-      com.apple.developer.driverkit.transport.usb:
-      - idVendor: 6353
-        idProduct: 20539
-        bInterfaceNumber: false
-        bConfigurationValue: true
-    uuids:
-    - C1AEEB25-30CB-3ED2-93B6-D76EE0FCDA57
   com.apple.DriverKit-AppleUSBSLCOM:
     description:
     path: "/System/Library/DriverExtensions/com.apple.DriverKit-AppleUSBSLCOM.dext"
@@ -2319,6 +605,21 @@ kexts:
       com.apple.developer.driverkit: true
     uuids:
     - F8549634-6967-3A2C-BE8B-02F7D9057B7E
+  com.apple.DriverKit-AppleUSBSerial:
+    description:
+    path: "/System/Library/DriverExtensions/com.apple.DriverKit-AppleUSBSerial.dext"
+    signer: "@apple"
+    type: dext
+    entitlements:
+      com.apple.developer.driverkit.family.serial: true
+      com.apple.developer.driverkit: true
+      com.apple.developer.driverkit.transport.usb:
+      - idVendor: 6353
+        idProduct: 20539
+        bInterfaceNumber: false
+        bConfigurationValue: true
+    uuids:
+    - C1AEEB25-30CB-3ED2-93B6-D76EE0FCDA57
   com.apple.DriverKit-UVCUserService:
     description:
     path: "/System/Library/DriverExtensions/com.apple.DriverKit-UVCUserService.dext"
@@ -2348,6 +649,1731 @@ kexts:
       com.apple.developer.driverkit: true
     uuids:
     - '07291C90-F238-38D7-9611-6D92525C550F'
+  com.apple.IOUserBluetoothSerialDriver:
+    description:
+    path: "/System/Library/DriverExtensions/IOUserBluetoothSerialDriver.dext"
+    signer: "@apple"
+    type: dext
+    entitlements:
+      com.apple.developer.driverkit.family.serial: true
+      com.apple.developer.driverkit: true
+    uuids:
+    - D3B7CAD0-4D2E-3F2C-9F23-8B186EF9D236
+  com.apple.UVCService:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 94539C03-F272-36CF-B67D-3828E6C47117
+  com.apple.audio.TSNCaptureInterface:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 63A6227F-5A1E-33F8-98A0-45326604E877
+  com.apple.driver.ACPI_SMC_PlatformPlugin:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 5C1EF724-DB18-3BC5-B48C-27B4171BA5BC
+  com.apple.driver.AFKACIPC:
+    description:
+    collections:
+    - kext
+  com.apple.driver.AGDCBacklightControl:
+    description:
+    collections:
+    - kext
+    uuids:
+    - FF73BB1C-30DE-3E8F-BEC2-60A16E326CC3
+  com.apple.driver.AGPM:
+    description:
+    collections:
+    - kext
+    uuids:
+    - EEA61636-3162-315D-B3ED-43E2BFF1C126
+  com.apple.driver.AirPort.Brcm4360-MFG:
+    description:
+    internal: probably
+  com.apple.driver.AirPort.BrcmNIC:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 472C435B-6435-3F79-B70F-5D37D9FCA900
+  com.apple.driver.AirPort.BrcmNIC-MFG:
+    description:
+    internal: probably
+  com.apple.driver.Apple16X50ACPI:
+    description:
+    collections:
+    - kext
+    uuids:
+    - BCD5CF20-F216-3DB5-B6E7-05845BEC995C
+  com.apple.driver.Apple16X50Serial:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 9EC5116D-A603-339E-B4F7-07EAEA7842CA
+  com.apple.driver.AppleACPIButtons:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 5C3D7C55-F30D-3E2C-AA21-FADB843D214C
+  com.apple.driver.AppleACPIEC:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 717B6EB6-404C-33DA-870D-406DBBC11CAF
+  com.apple.driver.AppleACPIPlatform:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 7120E3C3-BEE5-35E9-AED5-FEFDA044D57F
+  com.apple.driver.AppleAHCIPort:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 716EF9FB-36F6-3B1C-8867-973903C10CAF
+  com.apple.driver.AppleAPIC:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - BC90C6C0-E54F-3F2F-9B71-4606940491BF
+  com.apple.driver.AppleATAPIStorage:
+    description:
+    collections:
+    - kernel
+    uuids:
+    -
+  com.apple.driver.AppleAVEBridge:
+    description:
+    collections:
+    - kext
+    uuids:
+    - AE0103E6-3AA8-3667-9BE1-5BA680C6417F
+  com.apple.driver.AppleActuatorDriver:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - BA9DF9F1-99F0-3AE5-A7D7-B9D838FA4BC2
+  com.apple.driver.AppleAfterburner:
+    description:
+    collections:
+    - kext
+    uuids:
+    - F6425597-75F5-3ACA-AE0D-63609235A523
+  com.apple.driver.AppleAstrisGpioProbe:
+    description: Something about debug lines on iDevices
+    internal: true
+  com.apple.driver.AppleAudioClockLibs:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 7AC40BCC-C2F8-3CA9-BA8E-09A396459D95
+  com.apple.driver.AppleBCMWLANBusInterfacePCIeMac:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 7F4ADFFB-7316-35D3-8BF9-F49B15D73351
+  com.apple.driver.AppleBCMWLANCoreMac:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 0066E02B-5A70-365D-959C-E28E7915F793
+  com.apple.driver.AppleBSDKextStarter:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 746ABB03-15D4-3DCF-85FF-E1D9EE261D32
+  com.apple.driver.AppleBSDKextStarterTMPFS:
+    description:
+    collections:
+    - kernel
+  com.apple.driver.AppleBSDKextStarterVPN:
+    description: Why would you want a VPN here?
+    internal: probably
+  com.apple.driver.AppleBacklight:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 0A87F946-F757-3134-9BF5-138F13478318
+  com.apple.driver.AppleBacklightExpert:
+    description:
+    collections:
+    - kext
+    uuids:
+    - C37DAA62-A0C5-343A-AD2F-334D853A07E9
+  com.apple.driver.AppleBluetoothDebug:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - DFB8A1C7-44D5-3919-B3B1-8869C2D9FB61
+  com.apple.driver.AppleBluetoothDebugService:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 1DB664D1-294B-3C5F-9680-4AE693DF3D68
+  com.apple.driver.AppleBluetoothHIDKeyboard:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 9B23A18D-5EA4-38ED-91F0-1749FB508573
+  com.apple.driver.AppleBluetoothHIDMouse:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 42078AED-A23E-3748-A2EF-FFFB80345C0E
+  com.apple.driver.AppleBluetoothModule:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - CEF64489-3F00-316D-984A-484A64D30ED8
+  com.apple.driver.AppleBluetoothMultitouch:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - E21B75AB-9AD3-3F47-BCBC-A48608DE15AC
+  com.apple.driver.AppleBluetoothRemote:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 98080A9F-5FAC-35C3-B4EE-50064C1A1FF9
+  com.apple.driver.AppleBridgeAudioController:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 8D597B8E-B922-362D-AF8D-5D22100EC234
+  com.apple.driver.AppleBusPowerController:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 44C4714C-4F12-3E4F-B29B-C04CF76A5C63
+  com.apple.driver.AppleCameraInterface:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 77FA1576-8F96-3C97-AC3F-BD2CED598F17
+  com.apple.driver.AppleConvergedIPCOLYBTControl:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - BCC99C62-FCE6-3C45-8823-1FE0C4A6ABA5
+  com.apple.driver.AppleConvergedPCI:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 011E0D9B-13A8-3438-887A-7FF41C43EDAC
+  com.apple.driver.AppleCredentialManager:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 1230A359-A922-339A-B45E-50419715EA2B
+  com.apple.driver.AppleDiskImages2:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 0B8C1E1C-07C0-3F36-9EAB-D5FBEDEF47D5
+  com.apple.driver.AppleEFINVRAM:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 4B5FE248-78C8-3030-81FB-53CC4040F619
+  com.apple.driver.AppleEFIRuntime:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 505B7B38-3581-32C7-96F3-0788E74D8F51
+  com.apple.driver.AppleEffaceableBlockDevice:
+    description:
+    collections:
+    - kext
+    uuids:
+    - FF92A74C-6705-36E7-A309-6A22BE52E8E6
+  com.apple.driver.AppleEffaceableNOR:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 7D23A757-1065-3780-AE12-E76EBA13CC61
+  com.apple.driver.AppleEffaceableStorage:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 4ED769C2-F7DD-325A-9ABD-8C153AD64D08
+  com.apple.driver.AppleEffaceableTDM:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - C1AB30AE-6BF7-3194-B70A-539C162293B6
+  com.apple.driver.AppleEmbeddedOSSupportHost:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 88A896BE-1198-302B-B818-3A3740A9BAFD
+  com.apple.driver.AppleEthernetAquantiaAqtion:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 17B48DB5-01C7-3A23-A830-6774635AF33C
+  com.apple.driver.AppleEthernetMLX5:
+    description:
+    collections:
+    - kext
+    uuids:
+    - A3264327-CCAA-3467-9ADE-34772D534BF7
+  com.apple.driver.AppleFDEKeyStore:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - CD6C473F-D55D-3233-BFDC-094C45E08A49
+  com.apple.driver.AppleFIVRDriver:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 793FC7FE-F2E7-3248-A3E8-63C6F1FA09A1
+  com.apple.driver.AppleFWAudio:
+    description:
+    collections:
+    - kext
+    uuids:
+    - A9CB0690-016E-3B8C-B8DC-1475034AF08B
+  com.apple.driver.AppleFWOHCI:
+    description:
+    collections:
+    - kext
+    uuids:
+    - C9985EFC-E96E-315F-BB12-80A82B11A3B2
+  com.apple.driver.AppleFileSystemDriver:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 53DDDDC5-8E95-305B-A582-6790C675E4AE
+  com.apple.driver.AppleFireWireStorage:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 37647A02-49DB-36B9-B1A6-057450963DEC
+  com.apple.driver.AppleFirmwareUpdateKext:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 03F5418B-E285-3777-894B-0633B6C9B875
+  com.apple.driver.AppleGFXHDA:
+    description:
+    collections:
+    - kext
+    uuids:
+    - AF3AA15F-721D-3A10-BF04-9C3C8E5CB45C
+  com.apple.driver.AppleGameControllerPersonality:
+    description:
+    collections:
+    - kernel
+  com.apple.driver.AppleGraphicsControl:
+    description:
+    collections:
+    - kext
+    uuids:
+    - C5CC23CD-0236-38DD-901D-C385762B81CF
+  com.apple.driver.AppleGraphicsDevicePolicy:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 1D3387DE-43BD-3881-A3AC-BFBD5A500BA4
+  com.apple.driver.AppleHDA:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 9386A7F1-1075-3A6E-A732-BFD3345AF1FF
+  com.apple.driver.AppleHDAController:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 54E94336-F859-3F2C-87F8-35860CD981A6
+  com.apple.driver.AppleHDAHardwareConfigDriver:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 0FCD298D-ADE6-3217-909A-FC2AD3B47124
+  com.apple.driver.AppleHIDALSService:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 1355DB07-9F3F-31A4-B507-CDE9D46DB6E0
+  com.apple.driver.AppleHIDKeyboard:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 70A28719-3D9C-3A57-A131-426A748787C5
+  com.apple.driver.AppleHIDKeyboardEmbedded:
+    description:
+    collections:
+    - kernel
+    uuids:
+    -
+  com.apple.driver.AppleHIDMouse:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 7086A45A-C590-3E2C-859A-4E1B0F5AF700
+  com.apple.driver.AppleHPET:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - A5A9F694-D10A-3E91-B40E-EB03B6583D5F
+  com.apple.driver.AppleHPM:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 1A15EC45-9F76-3FBC-AC98-16B6C2B3A1A5
+  com.apple.driver.AppleHSBluetoothDriver:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 6C6B4A1F-5C23-3A71-BAA4-6450904D1991
+  com.apple.driver.AppleHSSPIHIDDriver:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 9E581BF0-C812-34DD-96B1-DDAD99DDFBB4
+  com.apple.driver.AppleHSSPISupport:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 06A72A2A-5F1A-3C7E-B13B-5C89EF0323CB
+  com.apple.driver.AppleHV:
+    description:
+    collections:
+    - kext
+    uuids:
+    - E4C77B92-4FA2-30E9-A643-D6F2BA4A001B
+  com.apple.driver.AppleHWAccess:
+    description:
+    internal: probably
+  com.apple.driver.AppleHollywood:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - CD2F6133-DCD4-3FB8-9D26-23C5C88AA037
+  com.apple.driver.AppleIPAppender:
+    description:
+    collections:
+    - kext
+    uuids:
+    - B6E72957-8308-30F5-B61D-02E3850EA0CB
+  com.apple.driver.AppleIRController:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - D2F546F0-A20E-3435-B52F-1558C71A2F2F
+  com.apple.driver.AppleInputDeviceSupport:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - BBE5F27B-4054-34C5-81F2-629BB75B2097
+  com.apple.driver.AppleIntel8254XEthernet:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - E505A011-B8C9-355B-842E-06BBF568824C
+  com.apple.driver.AppleIntelBDWGraphics:
+    description:
+    collections:
+    - kext
+    uuids:
+    - EE2AE4DD-0BC1-3D37-8899-A02C61CB53F5
+  com.apple.driver.AppleIntelBDWGraphicsFramebuffer:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 06C3C546-12DF-3DD5-BC59-C10660112958
+  com.apple.driver.AppleIntelCFLGraphicsFramebuffer:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 38A70AB6-B847-3705-85E6-EDB40C53D4F9
+  com.apple.driver.AppleIntelCPUPowerManagement:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - B0602EF2-0206-39F3-AE16-DD7C4B6331B0
+  com.apple.driver.AppleIntelCPUPowerManagementClient:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - B2505791-72DB-303E-91EC-7BBBA9927F89
+  com.apple.driver.AppleIntelCPUPowerManagementDriver:
+    description: "... SMBus/ACPI/AML bytecode? (see darkwake exploits)"
+    internal: probably
+  com.apple.driver.AppleIntelFramebufferAzul:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 4BA97AB4-E22E-31A1-9813-3126277EEDCF
+  com.apple.driver.AppleIntelHD5000Graphics:
+    description:
+    collections:
+    - kext
+    uuids:
+    - B9A25DA3-52FE-3BFE-BD18-124741337CE6
+  com.apple.driver.AppleIntelI210Ethernet:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - FFC59B16-5C1C-37D7-97D6-3976E4DF5BFE
+  com.apple.driver.AppleIntelICLGraphics:
+    description:
+    collections:
+    - kext
+    uuids:
+    - F9405634-F0CA-36AA-B740-61A8858DDCD6
+  com.apple.driver.AppleIntelICLLPGraphicsFramebuffer:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 8F03B96C-0A1B-3F01-98FC-017BCC0D114A
+  com.apple.driver.AppleIntelKBLGraphics:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 607CA1F5-22D1-36F4-8A73-6C6E739C1245
+  com.apple.driver.AppleIntelKBLGraphicsFramebuffer:
+    description:
+    collections:
+    - kext
+    uuids:
+    - F6C3DA99-7436-34D6-8ABF-E310F1802DD9
+  com.apple.driver.AppleIntelLpssDmac:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 8ACB3942-D579-34A9-9642-A3DA6F2EB426
+  com.apple.driver.AppleIntelLpssGspi:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - C049BEA9-1F1E-3B2D-9A2B-AD66FDE1639A
+  com.apple.driver.AppleIntelLpssI2C:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - C2DA4F56-2BA4-341D-94D1-FEFC356DBAF8
+  com.apple.driver.AppleIntelLpssI2CController:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 274E34F6-E608-3385-80C4-B0D2EFB92618
+  com.apple.driver.AppleIntelLpssSpiController:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - AAED1A13-D059-3450-9258-D1D90099DE28
+  com.apple.driver.AppleIntelLpssUARTCommon:
+    description:
+    collections:
+    - kext
+    uuids:
+    - BD75444E-D339-308C-8E1E-8AD12542E9B7
+  com.apple.driver.AppleIntelLpssUARTv0:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 914814D0-BE5C-3258-BB77-FEBAE74DD448
+  com.apple.driver.AppleIntelLpssUARTv1:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 8A1D2C33-DE34-3DC1-8211-DE74B9E7B9B4
+  com.apple.driver.AppleIntelMCEReporter:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 360714D4-8FEB-3C8E-A6BC-4D2AED12BFC0
+  com.apple.driver.AppleIntelPCHPMC:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 2CE26CE9-E702-35BD-BEEC-5CA8E3B405F1
+  com.apple.driver.AppleIntelSKLGraphics:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 394808C1-C4A2-3CED-B088-F388DA6439D1
+  com.apple.driver.AppleIntelSKLGraphicsFramebuffer:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 786B582B-AF4F-3BA3-8600-A97C36910F52
+  com.apple.driver.AppleIntelSlowAdaptiveClocking:
+    description:
+    collections:
+    - kext
+    uuids:
+    - EC5F7799-A846-3582-B87B-0797ED7EB24E
+  com.apple.driver.AppleKeyStore:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - ECE174FB-E3C7-3ED2-93DD-62CAA199FEA6
+  com.apple.driver.AppleLPC:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 3C62AF78-7FB2-3FBB-9487-254CF52B1FEC
+  com.apple.driver.AppleLSIFusionMPT:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - CD5F104D-F41C-30F4-AEAC-881A6275154C
+  com.apple.driver.AppleMCCSControl:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 707B5AF6-0351-30AF-B73C-184B5600EF95
+  com.apple.driver.AppleMCP89RootPortPM:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - F36BC4D7-2E7A-3C9D-B16E-8A39D9DD4EB2
+  com.apple.driver.AppleMGPUPowerControl:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 0C4697F4-B0AA-3669-8186-17D75CA391CD
+  com.apple.driver.AppleMemorexCDROMDriver:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 0162353D-DE41-3AFA-9FCF-7F42DF7DDA53
+  com.apple.driver.AppleMikeyDriver:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 110D8534-05F6-3268-90FD-4A6EBEAB0E4D
+  com.apple.driver.AppleMikeyHIDDriver:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 5DDFD503-3E3A-3CAE-80B2-C89D1C9CF837
+  com.apple.driver.AppleMobileDevice:
+    description:
+    path: "/Library/Apple/System/Library/Extensions/AppleMobileDevice.kext"
+    signer: "@apple"
+    type: kext
+    codeless: true
+    uuids:
+    - no uuid
+  com.apple.driver.AppleMobileFileIntegrity:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 2C07C501-6849-3156-ABBF-BBA8477F46E5
+  com.apple.driver.AppleMultiFunctionManagerMac:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - AB31F98E-9752-3889-94A3-7246E4EAD190
+  com.apple.driver.AppleMultitouchDriver:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 64127004-DE4F-3452-8B52-7D185D532CC5
+  com.apple.driver.AppleMuxControl:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 2CB46E71-64FB-3146-924D-5AC4FDAB6C9A
+  com.apple.driver.AppleMuxControl2:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 2220DFFA-CF8E-316C-90B9-701A207183F4
+  com.apple.driver.AppleNMI:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - B6F8637B-0844-355F-8C82-60FA06149384
+  com.apple.driver.AppleNVMePassThrough:
+    description: Pass through NVMe commands - to where?
+    internal: probably
+  com.apple.driver.AppleOLYHALMac:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 7F4E8FB4-8C12-3182-B99C-36605C7CD588
+  com.apple.driver.AppleOnboardSerial:
+    description:
+    collections:
+    - kext
+    uuids:
+    - C2ED1FAC-3B30-3586-9F78-EDA6E3AF0C4E
+  com.apple.driver.ApplePIODMA:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 8FD4AAAB-4371-3E2C-B0B8-830E32E98248
+  com.apple.driver.ApplePVPanic:
+    description:
+    collections:
+    - kext
+    uuids:
+    - CD3F1B8D-07A8-370D-BEBD-52DFEC3D7C75
+  com.apple.driver.AppleParavirtGPU:
+    description:
+    collections:
+    - kext
+    uuids:
+    - ED381E4A-4D84-3753-B125-00E04C393E52
+  com.apple.driver.ApplePlatformEnabler:
+    description:
+    collections:
+    - kext
+    uuids:
+    - F19B5084-15B2-3F0C-875C-1FE316CB9DA0
+  com.apple.driver.ApplePolicyControl:
+    description:
+    collections:
+    - kext
+    uuids:
+    - A631324C-C40B-3EB6-B243-0D18643FD55E
+  com.apple.driver.AppleRAID:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - E01208F3-2F6D-3ED2-8B27-B5DB1E1CB934
+  com.apple.driver.AppleRTC:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - FFD42DA9-8995-3444-B477-6A4626837799
+  com.apple.driver.AppleSDXC:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 01CA2114-CBB9-3C99-87AA-DB9B588AA611
+  com.apple.driver.AppleSEPManager:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 4C0D04E1-60E9-3AFB-B9F2-4D97A207B3CD
+  com.apple.driver.AppleSMBIOS:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 402D0B5E-05D5-3494-9A84-0D21274F19A9
+  com.apple.driver.AppleSMBusController:
+    description:
+    collections:
+    - kext
+    uuids:
+    - DC1326E1-2580-3EDB-8238-B840F4A36353
+  com.apple.driver.AppleSMBusPCI:
+    description:
+    collections:
+    - kext
+    uuids:
+    - B08EBF0B-4431-302F-B5DD-CA87D940148A
+  com.apple.driver.AppleSMC:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - EC43C1DD-09AB-36C4-877A-E53C8C34E6AE
+  com.apple.driver.AppleSMCLMU:
+    description:
+    collections:
+    - kext
+    uuids:
+    - B53D2A62-DDE3-3735-9B63-94C5BEBB4E5F
+  com.apple.driver.AppleSMCPDRC:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 13492385-0E12-33F6-B1FA-F931C86C45D7
+  com.apple.driver.AppleSMCRTC:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 9567FA23-BF6E-3D9F-8197-4E152B9542F9
+  com.apple.driver.AppleSSE:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 4FF3229E-0381-3D51-9DFB-30702E82A775
+  com.apple.driver.AppleSmartBatteryManager:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 9F5F695A-D6FD-330B-A39F-4F9A7D256CE4
+  com.apple.driver.AppleStorageDrivers:
+    description:
+    collections:
+    - kext
+  com.apple.driver.AppleThunderboltDPAdapterFamily:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 5EA98565-B1A0-3E41-B110-5EECCEC8E67A
+  com.apple.driver.AppleThunderboltDPAdapters:
+    description:
+    collections:
+    - kext
+  com.apple.driver.AppleThunderboltDPInAdapter:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 29A712AC-DA6D-3EAF-B356-1222C125F9A2
+  com.apple.driver.AppleThunderboltDPOutAdapter:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - DA4C5F46-88AE-3E0A-B419-4FE71DEB376A
+  com.apple.driver.AppleThunderboltEDMService:
+    description:
+    collections:
+    - kext
+  com.apple.driver.AppleThunderboltEDMSink:
+    description:
+    collections:
+    - kext
+    uuids:
+    - D518920C-3465-3972-BB76-7C4E6FA7A3DD
+  com.apple.driver.AppleThunderboltEDMSource:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 174C8B35-583D-3498-8245-31B7B5F783FE
+  com.apple.driver.AppleThunderboltIP:
+    description:
+    collections:
+    - kext
+    uuids:
+    - AD6E9B03-C8E8-3F5A-A4BC-8123A0781499
+  com.apple.driver.AppleThunderboltNHI:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 2FFF6007-3B76-3D5B-A178-C6E51EE9EB23
+  com.apple.driver.AppleThunderboltPCIAdapters:
+    description:
+    collections:
+    - kernel
+  com.apple.driver.AppleThunderboltPCIDownAdapter:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 5EB2C061-27C8-3C6F-B48C-E2724A5AD7F6
+  com.apple.driver.AppleThunderboltPCIUpAdapter:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - D655AA61-38D9-3BBF-B8A1-A3BE9F5CA54D
+  com.apple.driver.AppleThunderboltUSBAdapters:
+    description:
+    collections:
+    - kernel
+  com.apple.driver.AppleThunderboltUTDM:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 2719CAFB-92A0-36A4-8253-B8C0962C227C
+  com.apple.driver.AppleTopCase:
+    description:
+    collections:
+    - kernel
+  com.apple.driver.AppleTopCaseActuatorHIDDriver:
+    description:
+    collections:
+    - kernel
+  com.apple.driver.AppleTopCaseDriverV2:
+    description:
+    collections:
+    - kernel
+  com.apple.driver.AppleTopCaseHIDEventDriver:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 4C275E4C-7B1B-3C41-9BFC-02165A4B4841
+  com.apple.driver.AppleUSBAudio:
+    description:
+    collections:
+    - kext
+    uuids:
+    - C51776C4-18BD-307F-9926-8A015C88A691
+  com.apple.driver.AppleUSBCardReader:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 25DE27ED-211B-3DD7-A195-65BF285BF962
+  com.apple.driver.AppleUSBComposite:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 5DDB4B67-4F08-3BB4-B662-883E00BFCC39
+  com.apple.driver.AppleUSBDisplays:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - CA7752AC-B40A-3D2C-B8F4-62D39433096E
+  com.apple.driver.AppleUSBHIDMouse:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 7BAD4C33-A8A4-34D6-A791-C3D6A469A9E7
+  com.apple.driver.AppleUSBHostMergeProperties:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 102F2622-AEA8-3324-80A7-DDD4B7C60B12
+  com.apple.driver.AppleUSBLegacyHub:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 2B239569-D715-3F3C-B70B-D82343315B8B
+  com.apple.driver.AppleUSBMassStorageInterfaceNub:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - A711DEB8-5405-3981-882F-CD069CC49F57
+  com.apple.driver.AppleUSBMergeNub:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 5B989FBB-4B34-358B-8320-D0B8D837AF1A
+  com.apple.driver.AppleUSBMultitouch:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 64629198-3A3C-338F-8E73-4C0E30F1E809
+  com.apple.driver.AppleUSBODD:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 4D5A2606-7E4A-32F2-9A0C-BA9D2F1A28A8
+  com.apple.driver.AppleUSBTCButtons:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - CEAF3AEC-6C0D-3669-8E72-45A0BB1EBA98
+  com.apple.driver.AppleUSBTCKeyEventDriver:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 3A4C3B87-AA4A-3497-899F-EAC02A5473E5
+  com.apple.driver.AppleUSBTCKeyboard:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 8E83A7FE-4AF3-31BE-90CB-1D99FEB468BD
+  com.apple.driver.AppleUSBTDM:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 108BF171-D292-3185-8FE8-4B3B243739D0
+  com.apple.driver.AppleUSBTopCase:
+    description:
+    collections:
+    - kernel
+  com.apple.driver.AppleUSBTopCaseDriver:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - F9117895-DEF9-376E-A349-BFA8A9DEE952
+  com.apple.driver.AppleUpstreamUserClient:
+    description:
+    collections:
+    - kext
+    uuids:
+    - C9C34DCB-28DE-3464-AEE0-91AB5D0724C2
+  com.apple.driver.AppleVirtIO:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 9587880C-B520-38A7-8DA5-78CA3C754445
+  com.apple.driver.AppleVirtualGraphics:
+    description:
+    collections:
+    - kext
+    uuids:
+    - D41F91D0-7771-3F9F-BE67-0D4D4DAAC6E1
+  com.apple.driver.AppleVmxnet3Ethernet:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 3D88FB09-35BB-3EFC-92E7-A63CC691F8C4
+  com.apple.driver.AppleWWANSupport:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 6A2B20BA-9749-30CF-8B6B-C5728AB26EAA
+  com.apple.driver.AppleWWANSupport1:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 8572D629-4A98-3522-9DCD-A5B5AD0C8E40
+  com.apple.driver.AppleWWANSupport2:
+    description:
+    collections:
+    - kext
+    uuids:
+    - CD8F4582-EB9D-33E2-A63B-33173AC346A6
+  com.apple.driver.AppleXsanScheme:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 91F4E307-8671-3686-84D1-EF4D2F43C249
+  com.apple.driver.AppleXserveRAID:
+    description:
+    collections:
+    - kernel
+  com.apple.driver.Apple_iSight:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 2B2235FB-3623-3E0A-B5F4-C913B640FB8F
+  com.apple.driver.AudioAUUC:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 204DB37E-DF48-326C-B764-877E85823DBF
+  com.apple.driver.BCMWLANFirmware4355.Hashstore:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 85466D80-7373-33A2-9A16-0B56E1653DE0
+  com.apple.driver.BCMWLANFirmware4364.Hashstore:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 74697D0F-158C-3BCF-A370-2EE77C34DAD3
+  com.apple.driver.BCMWLANFirmware4377.Hashstore:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 36F2C93B-5666-3C63-A4CD-4470A404A643
+  com.apple.driver.BCMWLANFirmware4378.Hashstore:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 14AFDB8B-1333-3F63-A27A-2817ECDF6110
+  com.apple.driver.BCMWLANFirmware4387.Hashstore:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 5ECBEF63-55A6-368B-A753-0A2FFCDD78C6
+  com.apple.driver.BridgeAudioCommunication:
+    description:
+    collections:
+    - kext
+    uuids:
+    - A2F9F76B-BCA6-3E93-91BC-BED9999494B9
+  com.apple.driver.CanonEOS1D:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 4B999708-258D-3F55-A750-3CBFD8965F79
+  com.apple.driver.CellPhoneHelper:
+    description:
+    collections:
+    - kernel
+  com.apple.driver.CoreStorage:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 63BD95F5-A30F-3228-A3A0-A324AE97A94E
+  com.apple.driver.CoreStorageFsck:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 4995B74F-C5B2-3110-9950-5C55E03F3851
+  com.apple.driver.DiskImages:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 942F394E-0E2D-3DC1-9002-FE5FA3E98A5A
+  com.apple.driver.DiskImages.CryptoEncoding:
+    description:
+    collections:
+    - kext
+    uuids:
+    - FD8DE70F-8A23-33E5-AF4C-F8573346D2F9
+  com.apple.driver.DiskImages.FileBackingStore:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 054A3FC8-CE8B-313D-A867-509153A06B3F
+  com.apple.driver.DiskImages.HTTPBackingStore:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 8C00DF28-8FF3-3658-87E6-14013FC7CA81
+  com.apple.driver.DiskImages.KernelBacked:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - DD655509-AE44-3DD1-9241-6F3964ADFE5F
+  com.apple.driver.DiskImages.RAMBackingStore:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 448FA4C6-316E-35B8-952A-889DAD965152
+  com.apple.driver.DiskImages.ReadWriteDiskImage:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 6ED6BE3D-0249-34C2-A663-7E3AAC6FCBEB
+  com.apple.driver.DiskImages.SparseDiskImage:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 0B320F40-BA27-3960-AC1F-B181DD20407E
+  com.apple.driver.DiskImages.UDIFDiskImage:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 2E88030A-4930-3522-BAC3-3F2AC1AA49A7
+  com.apple.driver.DrizzlePlatformSupport:
+    description:
+    internal: maybe
+  com.apple.driver.DrizzleSMC:
+    description:
+    internal: maybe
+  com.apple.driver.DspFuncLib:
+    description:
+    collections:
+    - kext
+    uuids:
+    - E82A009F-AF42-3B29-BC1E-2F5866F29549
+  com.apple.driver.FWPreferredProtocolSpeed:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 8FA22BD9-F73A-3CF1-BB9E-F7063FA66F12
+  com.apple.driver.FireWireStorageDeviceSpecifics:
+    description:
+    collections:
+    - kext
+  com.apple.driver.IO80211NetBooter:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - B704D083-4CBD-3063-9A1C-F5F66B53E717
+  com.apple.driver.IOBluetoothHIDDriver:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - CCE57CA0-4853-3317-BF8F-C3625A32D763
+  com.apple.driver.IOBluetoothHostControllerPCIeTransport:
+    description:
+    collections:
+    - kext
+    uuids:
+    - C68D2C2B-49CA-38FC-BA31-98C5118C4431
+  com.apple.driver.IOFireWireSerialBusProtocolSansPhysicalUnit:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 4875D45F-440B-36B0-BDBA-6A0F44F45880
+  com.apple.driver.IOImageLoader:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 5905D513-93A4-3DC9-8135-1E6D9D205BED
+  com.apple.driver.IOPlatformPluginFamily:
+    description:
+    collections:
+    - kext
+    uuids:
+    - FEBBF9BA-CF77-3F9F-BBC2-285EBC141A2F
+  com.apple.driver.IOPlatformPluginLegacy:
+    description:
+    collections:
+    - kext
+    uuids:
+    - BD461B28-76F8-3D25-8703-196661D05DB2
+  com.apple.driver.IOSlaveProcessor:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 3FDD48C0-A37B-3B1E-854F-643F7F69EA00
+  com.apple.driver.IOUSBHIDDriver:
+    description:
+    collections:
+    - kext
+  com.apple.driver.Intel82574LEthernet:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - B4522834-4EA6-3018-B65B-DD49D80D9BFC
+  com.apple.driver.KernelRelayHost:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 0D1D7470-59FD-3235-81B2-A8273BB17A0F
+  com.apple.driver.KernelRelayTesterHost:
+    description:
+    internal: probably
+  com.apple.driver.KextExcludeList:
+    description:
+    collections:
+    - kernel
+    path: "/Library/Apple/System/Library/Extensions/AppleKextExcludeList.kext"
+    signer: "@apple"
+    type: kext
+    codeless: true
+  com.apple.driver.LSI_FW_500:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 4765E983-A527-34EA-AB2C-59C6B9FA42AF
+  com.apple.driver.LuaHardwareAccess:
+    description: Who doesn't want a scripting language in kernel mode?
+    internal: probably
+  com.apple.driver.MEDetect:
+    description: Related to Intel Management Engine
+    internal: probably
+  com.apple.driver.MKE_LF_D211A:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 79088B6E-9D48-3A1F-9D22-8F1C6689E508
+  com.apple.driver.MKE_SR_8171:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 95415920-9035-37CF-890B-49250188A37C
+  com.apple.driver.NVSMU:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 5E3BC78A-C9EB-3678-BF2F-703296C192B8
+  com.apple.driver.Oxford_Semi:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 5C250C83-88CF-30E8-9E32-C52E77266B63
+  com.apple.driver.PioneerSuperDrive:
+    description: Apple's USB SuperDrive driver (mostly to configure required power
+      draw)
+    collections:
+    - kernel
+    uuids:
+    - DD91A055-6AF2-384A-A78B-E0EC0A29BFAE
+  com.apple.driver.PlasmonUDO:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 6D8356DD-34C9-36EA-9BF2-8D7EBF502F36
+  com.apple.driver.QPSQueFire:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 7DA23D7D-7910-317D-B385-7A9834EC8C66
+  com.apple.driver.SCSIDeviceSpecifics:
+    description:
+    collections:
+    - kernel
+  com.apple.driver.SMCMotionSensor:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 5E9F431E-5CEC-39A1-B6B4-62D65C826437
+  com.apple.driver.SanyoIDShot:
+    description:
+    collections:
+    - kext
+    uuids:
+    - AB83A702-57F7-328E-94AA-C0E17F88D5FF
+  com.apple.driver.Sony_XDCAM:
+    description:
+    collections:
+    - kext
+  com.apple.driver.StorageLynx:
+    description: Apple SEP persistent storage / public key component
+    collections:
+    - kext
+    uuids:
+    - 2F9A61F3-7502-3B0C-A911-DFB2EF263837
+  com.apple.driver.USBStorageDeviceSpecifics:
+    description:
+    collections:
+    - kernel
+  com.apple.driver.VMPlatformPlugin:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 8261FBC2-9086-33BC-90F7-823C97ED9C7D
+  com.apple.driver.WriteProtectedMediaDriver:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - CF826007-CB61-3CB4-95ED-AB7FAFD3D3F8
+  com.apple.driver.X86PlatformPlugin:
+    description:
+    collections:
+    - kext
+    path: "/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext"
+    signer: "@apple"
+    type: kext
+    uuids:
+    - 725DA4C4-E74D-3C39-A015-1DF738D29475
+  com.apple.driver.X86PlatformShim:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 5C6EF1EC-2310-336B-9A4B-7F507A9DBC78
+  com.apple.driver.corecapture:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - DBEB1C47-C51E-36D8-911F-B1C50A3A5A88
+  com.apple.driver.driverkit.serial:
+    description:
+    collections:
+    - kext
+    uuids:
+    - D2A7F81F-03B1-3759-AF48-4FCC1AD573E1
+  com.apple.driver.eficheck:
+    description: Kernel mode driver supporting `eficheck` binary to scan T1 and prior
+      system's EFI for malware
+    collections:
+    - kext
+    uuids:
+    - A0A8BCC8-FF60-32F9-A3E0-F8E6F68417A9
+  com.apple.driver.iPodDriver:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 54D452FD-52FD-379E-843E-1C6ACE1D7664
+  com.apple.driver.iPodSBCDriver:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - E87F66DA-D949-3CAA-844F-86B10280FF97
+  com.apple.driver.initioFWBridge:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 58B80E0F-2E3D-3C75-B794-084FDEB314E4
+  com.apple.driver.mDNSOffloadUserClient:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 4FBA2427-9C02-3A92-B50D-9477FED500C7
+  com.apple.driver.pmtelemetry:
+    description:
+    collections:
+    - kext
+    uuids:
+    - E543BC5C-AEF7-37BD-ACEC-1F6DE7ADE511
+  com.apple.driver.usb.AppleUSBCommon:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 814626B7-13C3-36EB-A33A-563C1E7BBEAD
+  com.apple.driver.usb.AppleUSBEHCI:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - C14CC3BB-4B66-3F6E-883F-330C40D425D4
+  com.apple.driver.usb.AppleUSBEHCIPCI:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 3266195E-7008-3486-91E7-921E10DBDBFF
+  com.apple.driver.usb.AppleUSBHostBLLBoardDevice:
+    description:
+    collections:
+    - BootKernelExtensions.kc
+  com.apple.driver.usb.AppleUSBHostBillboardDevice:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - CED3AEA9-BD5B-36EE-B5FE-78AE00F26644
+  com.apple.driver.usb.AppleUSBHostCompositeDevice:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 2624783B-92A8-3370-A8A8-D51E8E2BDA61
+  com.apple.driver.usb.AppleUSBHostPacketFilter:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 17B22146-5CFC-30AD-A943-B1981CC84890
+  com.apple.driver.usb.AppleUSBHostPlatformProperties:
+    description:
+    collections:
+    - kernel
+  com.apple.driver.usb.AppleUSBHub:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 48E937DE-11F2-3FE8-BA9A-B5EA91FE3963
+  com.apple.driver.usb.AppleUSBKDP:
+    description: USB based kernel debug port
+    internal: probably
+  com.apple.driver.usb.AppleUSBOHCI:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 78F781C1-CB1A-3D40-B3DB-A5937DC2A864
+  com.apple.driver.usb.AppleUSBOHCIPCI:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - D5AEFB79-5AC4-32BE-A9C7-7086B4098A37
+  com.apple.driver.usb.AppleUSBOpticalMouse:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 13A0F273-C86C-3B40-9323-22DE34EC267D
+  com.apple.driver.usb.AppleUSBRecoveryHost:
+    description: Seems to be from a point where Apple was considering allowing Intel/T2
+      to be restored in the same style as M1s via UniversalMac (this is why IPSWs
+      contain x64 bits)
+    internal: probably
+    path: "/System/Library/Extensions/IOUSBHostFamily.kext/Contents/PlugIns/AppleUSBRecoveryHost.kext"
+    signer: "@apple"
+    type: kext
+    uuids:
+    - 40F9DE1F-A25C-335E-AB53-112633304B2E
+  com.apple.driver.usb.AppleUSBUHCI:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 1FB07BCF-0FC1-364C-AC74-A5F9F836DF24
+  com.apple.driver.usb.AppleUSBUHCIPCI:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 2E126F48-C1CC-334B-A1EE-7620EC2CBD84
+  com.apple.driver.usb.AppleUSBUserHCI:
+    description:
+    collections:
+    - kext
+    uuids:
+    - DFCB2B24-FF30-30A9-B4CD-DA3E435E210F
+  com.apple.driver.usb.AppleUSBVHCI:
+    description: Apple Virtual Host Controller Interface (used to communicate to the
+      T2 via USB over PCIe)
+    collections:
+    - kernel
+    uuids:
+    - 9F9C20EC-2E20-36DD-AAD2-27EB00838E68
+  com.apple.driver.usb.AppleUSBVHCIBCE:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 2B1E4A9E-A563-301D-82C9-5C51537648DB
+  com.apple.driver.usb.AppleUSBVHCICommon:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 24D143E9-FF73-3FB4-8928-96AB3CDEA013
+  com.apple.driver.usb.AppleUSBVHCICommonBCE:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - B4AB5BFE-B1C3-3391-A158-9834EC1A2F10
+  com.apple.driver.usb.AppleUSBVHCICommonRSM:
+    description:
+    path: "/System/Library/Extensions/AppleUSBCommon.kext/Contents/PlugIns/AppleUSBVHCICommonRSM.kext"
+    signer: "@apple"
+    type: kext
+    uuids:
+    - 2337F6AA-FE3F-372E-91CB-434F4B47486F
+  com.apple.driver.usb.AppleUSBVHCIRSM:
+    description:
+    path: "/System/Library/Extensions/IOUSBHostFamily.kext/Contents/PlugIns/AppleUSBVHCIRSM.kext"
+    signer: "@apple"
+    type: kext
+    uuids:
+    - 6958FD83-E83D-333E-81AC-4323F3160DF1
+  com.apple.driver.usb.AppleUSBXHCI:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 514193F1-382A-38C3-BCE0-A34FDF2AEBAC
+  com.apple.driver.usb.AppleUSBXHCIPCI:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - E1BDCF6C-11C8-3EB5-82A6-BA0FD99A7090
+  com.apple.driver.usb.AppleUSBiBridge:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 519554E7-CE52-3FBB-8B46-562D49BEB490
+  com.apple.driver.usb.IOUSBHostHIDDevice:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 980BCDCB-3A41-3C60-ADE4-A07EC0064342
+  com.apple.driver.usb.IOUSBHostHIDDeviceSafeBoot:
+    description:
+    collections:
+    - kext
+  com.apple.driver.usb.cdc:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 79F6FFE0-98EE-3BF2-A7A9-7B5CB1995C48
+  com.apple.driver.usb.cdc.acm:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 01754BDC-3C17-3893-8A44-8A854463AF97
+  com.apple.driver.usb.cdc.dmm:
+    description:
+    collections:
+    - kext
+    uuids:
+    - F8A53CE1-3CF0-3324-A52C-4B88BA69C327
+  com.apple.driver.usb.cdc.ecm:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 5D1D684E-3A9A-343A-B5EF-EC56E874A527
+  com.apple.driver.usb.cdc.eem:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 1BC861D7-08DE-3700-BF29-B054244F4F64
+  com.apple.driver.usb.cdc.ncm:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 9BE1AA5E-AD6D-383E-A758-9C08CE97A52B
+  com.apple.driver.usb.cdc.wcm:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 58832DEB-59D7-3910-9097-FD6C0B8979BF
+  com.apple.driver.usb.ethernet.asix:
+    description: ASIX based USB ethernet driver (Apple USB Ethernet dongle)
+    collections:
+    - kernel
+    uuids:
+    - 5BF98DB9-8ED8-350F-8DC1-7884F2A4D52F
+  com.apple.driver.usb.networking:
+    description: USB CDC (communications class) driver
+    collections:
+    - kernel
+    uuids:
+    - 860F1F08-CF3B-3DC6-9445-738299EDD57C
+  com.apple.driver.usb.realtek8153patcher:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 1FD9A899-3D0C-359A-90DF-1E2D9188EC83
+  com.apple.driver.usb.serial:
+    description: Generic USB FTDI kernel mode driver (supplanted by DriverKit version)
+    collections:
+    - kext
+    uuids:
+    - 01BADA65-0B9E-3425-928C-F967FB76E8D0
+  com.apple.driver.watchdog:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 01A90A91-CE41-37C4-A5C0-BBD735087472
   com.apple.filesystems.acfs:
     description: https://en.wikipedia.org/wiki/Oracle_Cloud_File_System?
     collections:
@@ -2482,27 +2508,24 @@ kexts:
     - kext
     uuids:
     - 3BCDB7AB-45E7-386B-B427-ABC3B5F038F5
-  com.apple.iokit.CoreAnalyticsFamily:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 0F3BD94F-E03A-3FB6-9EFF-154227A6DCC0
   com.apple.iokit.CSRBluetoothHostControllerUSBTransport:
     description:
     collections:
     - kext
     uuids:
     - 967E3FC4-C374-3921-8FAA-24BB816F532F
+  com.apple.iokit.CoreAnalyticsFamily:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 0F3BD94F-E03A-3FB6-9EFF-154227A6DCC0
   com.apple.iokit.EndpointSecurity:
     description:
     collections:
     - kernel
     uuids:
     - 1542C0D0-576C-3F09-ACE0-432C4C4EC752
-  com.apple.iokit.fipscavs-kext-tool:
-    description: FIPS test mode (breaks most encryption by using fixed values)
-    internal: probably
   com.apple.iokit.IO80211Family:
     description:
     collections:
@@ -2515,12 +2538,6 @@ kexts:
     - kernel
     uuids:
     - 3D7E24FF-CEF0-3208-91F9-7FF6B620FCB5
-  com.apple.iokit.IOAcceleratorFamily2:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 2ED59269-2A13-3F67-AB1A-212DB14FC5F2
   com.apple.iokit.IOACPIFamily:
     description:
     collections:
@@ -2563,18 +2580,24 @@ kexts:
     - kernel
     uuids:
     - 5CF82907-2E61-3588-A46B-CA55804CB9DD
-  com.apple.iokit.IOAudioFamily:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 5ED7B9E5-DCBE-3530-8642-75853C3BAF2A
   com.apple.iokit.IOAVBFamily:
     description:
     collections:
     - kext
     uuids:
     - F349CF00-3539-3AAD-A6A4-AF2F43A6EB9E
+  com.apple.iokit.IOAcceleratorFamily2:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 2ED59269-2A13-3F67-AB1A-212DB14FC5F2
+  com.apple.iokit.IOAudioFamily:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 5ED7B9E5-DCBE-3530-8642-75853C3BAF2A
   com.apple.iokit.IOBDStorageFamily:
     description:
     collections:
@@ -2723,12 +2746,6 @@ kexts:
     - kext
     uuids:
     - E4DC2187-4E8D-3C3A-9C22-B43557C4C468
-  com.apple.iokit.IONetworkingFamily:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 62888EF4-277C-35B5-B9FA-DF8008BC5D28
   com.apple.iokit.IONVMeFamily:
     description:
     collections:
@@ -2741,6 +2758,12 @@ kexts:
     - kernel
     uuids:
     - B6F8637B-0844-355F-8C82-60FA06149384
+  com.apple.iokit.IONetworkingFamily:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 62888EF4-277C-35B5-B9FA-DF8008BC5D28
   com.apple.iokit.IOPCIFamily:
     description:
     collections:
@@ -2783,6 +2806,12 @@ kexts:
     - kernel
     uuids:
     - AC108475-B836-38C8-A23C-5AF7D9F0C233
+  com.apple.iokit.IOSMBusFamily:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - 2D0607F4-96F1-3D3F-BF7B-E00984DFBA9E
   com.apple.iokit.IOSerialFamily:
     description:
     collections:
@@ -2801,12 +2830,6 @@ kexts:
     - kernel
     uuids:
     - 3024C95F-6910-3601-8B42-9605A26AD490
-  com.apple.iokit.IOSMBusFamily:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 2D0607F4-96F1-3D3F-BF7B-E00984DFBA9E
   com.apple.iokit.IOStorageFamily:
     description:
     collections:
@@ -2908,34 +2931,27 @@ kexts:
     - kernel
     uuids:
     - 8462A036-2EE9-3959-B339-8CD9BBB4D71A
-  com.apple.IOUserBluetoothSerialDriver:
-    description:
-    path: "/System/Library/DriverExtensions/IOUserBluetoothSerialDriver.dext"
-    signer: "@apple"
-    type: dext
-    entitlements:
-      com.apple.developer.driverkit.family.serial: true
-      com.apple.developer.driverkit: true
-    uuids:
-    - D3B7CAD0-4D2E-3F2C-9F23-8B186EF9D236
+  com.apple.iokit.fipscavs-kext-tool:
+    description: FIPS test mode (breaks most encryption by using fixed values)
+    internal: probably
   com.apple.kec.AppleEncryptedArchive:
     description:
     collections:
     - kernel
     uuids:
     - 44648E57-9947-3430-A458-67792853C9F1
-  com.apple.kec.corecrypto:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - FEE26327-9979-30B0-ABEC-614507B4FEA8
   com.apple.kec.Libm:
     description: Math library for kernel mode
     collections:
     - kernel
     uuids:
     - 299CC07F-CEA1-3C2D-B554-FC15DE227E09
+  com.apple.kec.corecrypto:
+    description:
+    collections:
+    - kernel
+    uuids:
+    - FEE26327-9979-30B0-ABEC-614507B4FEA8
   com.apple.kec.pthread:
     description:
     collections:
@@ -3204,12 +3220,6 @@ kexts:
     - kext
     uuids:
     - 534FB91C-FA2C-3B55-9823-EC8D307C2A0B
-  com.apple.kext.mcx.alr:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 5167CA80-A693-31AD-83D8-344F9215C04D
   com.apple.kext.MojoKDP:
     description:
     internal: probably
@@ -3219,6 +3229,12 @@ kexts:
     - kext
     uuids:
     - 7AF237A4-4EF4-3BEA-BFD6-EC9E0365FA6F
+  com.apple.kext.mcx.alr:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 5167CA80-A693-31AD-83D8-344F9215C04D
   com.apple.kext.triggers:
     description:
     collections:
@@ -3351,18 +3367,18 @@ kexts:
     - kext
     uuids:
     - FF18D55C-C824-3154-8F71-06ECD86A6F71
-  com.apple.plugin.IOgPTPPlugin:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 8EA654DA-FD67-3F8B-8E7B-6A0B3A34FE63
   com.apple.plugin.IOMRPPlugin:
     description:
     collections:
     - kext
     uuids:
     - 0A5E00E5-FAAC-3350-A24B-60F001F77079
+  com.apple.plugin.IOgPTPPlugin:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 8EA654DA-FD67-3F8B-8E7B-6A0B3A34FE63
   com.apple.private.KextAudit:
     description:
     collections:
@@ -3375,6 +3391,12 @@ kexts:
     - kernel
     uuids:
     - 881EDE63-606C-3E21-AC8A-05251E05C02C
+  com.apple.security.SecureRemotePassword:
+    description:
+    collections:
+    - kext
+    uuids:
+    - 9B21A4A1-1D2E-3C72-B588-1024DF3E6FFF
   com.apple.security.quarantine:
     description:
     collections:
@@ -3387,30 +3409,12 @@ kexts:
     - kernel
     uuids:
     - 1E252FC5-64AC-396C-8422-27E597A3F3B2
-  com.apple.security.SecureRemotePassword:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 9B21A4A1-1D2E-3C72-B588-1024DF3E6FFF
-  com.apple.UVCService:
-    description:
-    collections:
-    - kext
-    uuids:
-    - 94539C03-F272-36CF-B67D-3828E6C47117
   com.apple.vecLib.kext:
     description:
     collections:
     - kext
     uuids:
     - 2F8047D4-D4E3-3A68-B93B-0202272EF9D2
-  com.Areca.ArcMSR:
-    description:
-    collections:
-    - kernel
-    uuids:
-    - 01FC5EBD-0A34-3E77-9216-53B89DDD8CE4
   com.disc-soft.DAEMONTools.VirtualSCSIBus:
     description:
     path: "/Library/Extensions/DAEMONToolsVirtualSCSIBus.kext"

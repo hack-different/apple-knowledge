@@ -41,7 +41,7 @@ module AppleData
       def merge_keydb_build(build_id, build)
         return unless build['keybags']
 
-        @board[build_id] ||= {} #: build
+        @board[build_id] ||= {} # : build
         @board[build_id]['components'] ||= {}
         @board[build_id]['components'].reverse_merge! build['keybags']
       end

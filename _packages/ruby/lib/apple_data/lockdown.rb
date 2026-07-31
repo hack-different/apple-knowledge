@@ -6,7 +6,7 @@ module AppleData
   class Lockdown < AppleData::DataFile
     def initialize
       super('lockdownd.yaml')
-      @data ||= {} #: data
+      @data ||= {} # : data
 
       @data['clients'] ||= []
       @data['domains'] ||= []
