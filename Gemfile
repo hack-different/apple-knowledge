@@ -24,7 +24,8 @@ gem 'toml'
 gem 'rbs'
 
 gem 'mootool'
-
+gem 'activesupport'
+gem 'jsonpath'
 gem 'sorbet-runtime'
 
 gem 'apple-data', path: File.join(File.dirname(__FILE__), '_packages/ruby')
@@ -62,7 +63,6 @@ group :development, :test do
   gem 'faraday-retry'
   gem 'google-protobuf'
   gem 'hashie'
-  gem 'keccak', github: 'rickmark/keccak.rb', branch: 'ruby4'
   gem 'kramdown'
   gem 'manpages'
   gem 'mdl'
