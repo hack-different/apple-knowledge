@@ -24,20 +24,20 @@ stores:
   trst:
     name: Trust Object
 entitlements:
+  SrvP:
+  SrvT:
   esca:
   faic:
   faus:
   fsca:
-  SrvP:
-  SrvT:
 values:
   AICl:
   ARNC:
   AROC:
-  ARot:
   ARSC:
   ARXC:
   ARXN:
+  ARot:
   ASCl:
   BCAL:
   BCAR:
@@ -58,14 +58,14 @@ values:
   CLCL:
   CLHS:
   CMOC:
-  Coor:
-    description: Country of Origin
-    values:
-    - C
   CPAS:
   CRot:
   CSCM:
   CVCC:
+  Coor:
+    description: Country of Origin
+    values:
+    - C
   DBCl:
   DClr:
   DPCl:
@@ -75,56 +75,56 @@ values:
   EnMt:
   GICl:
   GRNC:
-  GRot:
   GRSC:
   GRXC:
   GRXN:
+  GRot:
   GSCl:
   GYTT:
   JRot:
-  ksku:
   LTAO:
   MBac:
   MDCC:
+  MLB#:
+    description: Main Logic Board Serial Number
   MdlC:
     description: Model Configuration (key value seperated by ";" and "key=value")
   MiGB:
   MiGH:
   MkBH:
   MkBS:
-  MLB#:
-    description: Main Logic Board Serial Number
   Mod#:
     description: Model Number
-  PrCL:
   PRTT: "(Pressure Sensor / Barometer) temp-compensation-table"
   PSCl:
+  PrCL:
   PxCl: "(Proximity Sensor) prox-calibration"
   RACa:
   RACm:
-  Regn:
-    description: Region Info
   RFEM:
   RMd#:
     description: Regulatory Model Number
-  rpcp:
   RSKU:
     description: Region SKU (in US "/LLA")
+  Regn:
+    description: Region Info
   RxCL:
   SBVr:
+  SPPO: "(Pressure Sensor / Barometer) pressure-offset-calibration"
+  STRB:
   SpGH:
   SpPH:
-  SPPO: "(Pressure Sensor / Barometer) pressure-offset-calibration"
   SrNm:
     description: Serial Number
-  STRB:
   SwBh:
     description: Software Behavior
-  TCal:
   TCID:
+  TCal:
   TMac:
   WCAL:
     description: WiFi Calibration Data
   WMac:
   WSKU:
     description: WiFi Chip / Product SKU
+  ksku:
+  rpcp:

@@ -5,6 +5,9 @@ metadata:
   collections:
   - dnssd_services
 dnssd_services:
+  KeynoteControl:
+    transport: tcp
+    name: Keynote Remote
   adisk:
     transport: tcp
     name: Time Capsule Backups / Auto Disk Discovery
@@ -187,9 +190,6 @@ dnssd_services:
     subresource:
       print: AirPrint
       cups: Common Unix Printing System
-  KeynoteControl:
-    transport: tcp
-    name: Keynote Remote
   keynotepair:
     transport: tcp
     name: Keynote Remote Pairing

@@ -38,6 +38,49 @@ fdr_properties:
     description: Raw Panel / Coverglass
   AlsH:
     description:
+  BMac:
+    description: Bluetooth MAC Address
+  BORD:
+    description: Board ID
+  CmCl:
+    description:
+  FSCl:
+    description:
+    contexts:
+    - mandev
+    - mansta
+    data:
+      comb:
+        fdrd:
+        secb:
+  GpC2:
+    description:
+  HmCA:
+    description: Ambient Light Sensor
+    contexts:
+    - base
+    - mansta
+  HmCl:
+    description:
+  IM4C:
+    description: Img4 Certificate
+  IfCl:
+    description:
+  NvMR:
+    description:
+    contexts:
+    - mandev
+    - mansta
+  SDOM:
+    description: Security Domain
+  ShMC:
+    description:
+  ShSC:
+    description:
+  SrNm:
+    description: Serial Number
+  WMac:
+    description: Wireless MAC Address
   appv:
     description:
     contexts:
@@ -51,12 +94,6 @@ fdr_properties:
     description: Baseband
   bbpv:
     description: Baseband
-  BMac:
-    description: Bluetooth MAC Address
-  BORD:
-    description: Board ID
-  CmCl:
-    description:
   comb:
     description: Combined FDR object
   dCfg:
@@ -83,34 +120,12 @@ fdr_properties:
   fdr2:
   fdrd:
     description: FDR2 Data
-  FSCl:
-    description:
-    contexts:
-    - mandev
-    - mansta
-    data:
-      comb:
-        fdrd:
-        secb:
-  GpC2:
-    description:
-  HmCA:
-    description: Ambient Light Sensor
-    contexts:
-    - base
-    - mansta
-  HmCl:
-    description:
   hop0:
     description:
     contexts:
     - base
     - mandev
     - mansta
-  IfCl:
-    description:
-  IM4C:
-    description: Img4 Certificate
   ime2:
     description: International Mobile Equipment Identifier 2
   imei:
@@ -145,11 +160,6 @@ fdr_properties:
     description: The memory map passed from the iBoot loader to the Kernel
   nuid:
     description:
-  NvMR:
-    description:
-    contexts:
-    - mandev
-    - mansta
   pbas:
     description:
   pcic:
@@ -184,11 +194,11 @@ fdr_properties:
     description:
   pwcl:
     description:
-  rcrt:
-    description:
   rMCl:
     description:
   rSCl:
+    description:
+  rcrt:
     description:
   rssl:
     title: Recovery SSL
@@ -199,8 +209,9 @@ fdr_properties:
     description: SEP Certificate
     contexts:
     - base
-  SDOM:
-    description: Security Domain
+  sePK:
+    description: Point Compressed Elliptic Curve point sering as the master Public
+      Key for the SE
   seal:
     description:
     contexts:
@@ -208,17 +219,8 @@ fdr_properties:
   secb:
   seid:
     description: Secure Element ID (for NFC / Payments)
-  sePK:
-    description: Point Compressed Elliptic Curve point sering as the master Public
-      Key for the SE
-  ShMC:
-    description:
-  ShSC:
-    description:
   sreq:
     description: Sealing request
-  SrNm:
-    description: Serial Number
   tCfg:
     description:
     contexts:
@@ -234,8 +236,6 @@ fdr_properties:
     description:
   vcrt:
     description:
-  WMac:
-    description: Wireless MAC Address
 to_be_signed_keys:
   DGST:
   clid:

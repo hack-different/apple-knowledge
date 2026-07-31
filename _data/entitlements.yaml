@@ -6,6 +6,60 @@ metadata:
   collections:
   - entitlements
 entitlements:
+  AMSDeviceOfferRegistrationTask:
+    description:
+    types:
+    - boolean
+  CARAppHidden:
+    description:
+    types:
+    - boolean
+  CARCapableApp:
+    description:
+    types:
+    - boolean
+  CFBundleIdentifier:
+    description:
+  CFBundleName:
+    description:
+  CKContainer.sourceApplicationBundleIdentifier:
+    description:
+  CanInheritApplicationStateFromOtherProcesses:
+    description:
+    types:
+    - boolean
+  DataProtectionClass:
+    description:
+  HKReadAuthorizationOverrideEntitlement:
+    description:
+    types:
+    - array
+  LSCounterpartIdentifiers:
+    description:
+    types:
+    - array
+  MachServices:
+    description:
+  NSCameraUsageDescription:
+    description:
+  SBAppUsesLocalNotifications:
+    description:
+    types:
+    - boolean
+  SBStarkCapable:
+    description:
+    types:
+    - boolean
+  Siri:
+    description:
+    types:
+    - boolean
+  UIApplicationShowsViewsWhileLocked:
+    description:
+    types:
+    - boolean
+  UNUserNotificationCenter:
+    description:
   abs-client:
     description:
   absinthe-client:
@@ -19,10 +73,6 @@ entitlements:
     types:
     - boolean
   allow-softwareupdated:
-    description:
-    types:
-    - boolean
-  AMSDeviceOfferRegistrationTask:
     description:
     types:
     - boolean
@@ -40,28 +90,660 @@ entitlements:
     description:
     types:
     - boolean
-  CanInheritApplicationStateFromOtherProcesses:
-    description:
-    types:
-    - boolean
-  CARAppHidden:
-    description:
-    types:
-    - boolean
-  CARCapableApp:
-    description:
-    types:
-    - boolean
-  CFBundleIdentifier:
-    description:
-  CFBundleName:
-    description:
   checklessPersistentURLTranslation:
     description:
     types:
     - boolean
-  CKContainer.sourceApplicationBundleIdentifier:
+  com.CarPlayApp.service:
     description:
+    types:
+    - boolean
+  com.apple.ANECompilerService.allow:
+    description:
+    types:
+    - boolean
+  com.apple.AXMediaUtilitiesService-access:
+    description:
+    types:
+    - boolean
+  com.apple.AXUIViewService:
+    description:
+    types:
+    - boolean
+  com.apple.AddressBook.ContactsAccountsService:
+    description:
+    types:
+    - boolean
+  com.apple.AppleNVMeEAN.allow:
+    description:
+    types:
+    - boolean
+  com.apple.AppleNVMeNamespaceDevice.allow:
+    description:
+    types:
+    - boolean
+  com.apple.AppleServiceToolkit.host:
+    description:
+    types:
+    - boolean
+  com.apple.AutoWake-write-access:
+    description:
+    types:
+    - boolean
+  com.apple.BTServer.allowQuickRSSIRead:
+    description:
+    types:
+    - boolean
+  com.apple.BTServer.allowRestrictedServices:
+    description:
+    types:
+    - boolean
+  com.apple.BTServer.appleMfgDataAdvertising:
+    description:
+    types:
+    - boolean
+  com.apple.BTServer.appleMfgDataScanner:
+    description:
+    types:
+    - boolean
+  com.apple.BTServer.avrcp:
+    description:
+    types:
+    - boolean
+  com.apple.BTServer.le:
+    description:
+    types:
+    - boolean
+  com.apple.BTServer.le.agent:
+    description:
+    types:
+    - boolean
+  com.apple.BTServer.le.att:
+    description:
+    types:
+    - boolean
+  com.apple.BTServer.le.pipe:
+    description:
+    types:
+    - boolean
+  com.apple.BTServer.map:
+    description:
+    types:
+    - boolean
+  com.apple.BTServer.pbap:
+    description:
+    types:
+    - boolean
+  com.apple.BTServer.programmaticPairing:
+    description:
+    types:
+    - boolean
+  com.apple.BTServer.rawBytesAdvertise:
+    description:
+    types:
+    - boolean
+  com.apple.BTServer.supportsPairing:
+    description:
+    types:
+    - boolean
+  com.apple.BluetoothServices:
+    description:
+    types:
+    - boolean
+  com.apple.BluetoothUIService:
+    description:
+    types:
+    - boolean
+  com.apple.Bridge.ppNotifierService-notify:
+    description:
+    types:
+    - boolean
+  com.apple.CallHistory.sync.allow:
+    description:
+    types:
+    - boolean
+  com.apple.CallKit.call-directory:
+    description:
+    types:
+    - array
+  com.apple.CallKit.call-directory.extension-host:
+    description:
+    types:
+    - boolean
+  com.apple.Carousel.eligibilityservice:
+    description:
+    types:
+    - boolean
+  com.apple.Carousel.statusOverlay:
+    description:
+    types:
+    - boolean
+  com.apple.CheckerBoard.services:
+    description:
+    types:
+    - boolean
+  com.apple.CheckerBoard.services.reboot:
+    description:
+    types:
+    - boolean
+  com.apple.CloudKeychainProxy.client:
+    description:
+    types:
+    - boolean
+  com.apple.CommCenter.DeviceManagement-access:
+    description:
+    types:
+    - boolean
+  com.apple.CommCenter.Messages-send:
+    description:
+    types:
+    - boolean
+  com.apple.CommCenter.Preferences-delete:
+    description:
+    types:
+    - boolean
+  com.apple.CommCenter.fine-grained:
+    description:
+    types:
+    - array
+    - boolean
+  com.apple.CommCenter.fine-grained - 2:
+    description:
+    types:
+    - array
+  com.apple.CompanionLink:
+    description:
+    types:
+    - boolean
+  com.apple.Contacts.database-allow:
+    description:
+    types:
+    - boolean
+  com.apple.CoreLocation.PrivateMode:
+    description:
+    types:
+    - boolean
+  com.apple.CoreML.adopter:
+    description:
+  com.apple.CoreRoutine.Action:
+    description:
+    types:
+    - boolean
+  com.apple.CoreRoutine.Application:
+    description:
+    types:
+    - boolean
+  com.apple.CoreRoutine.CloudSync:
+    description:
+    types:
+    - boolean
+  com.apple.CoreRoutine.LocationOfInterest:
+    description:
+    types:
+    - boolean
+  com.apple.CoreRoutine.LocationOfInterest.Delete:
+    description:
+    types:
+    - boolean
+  com.apple.CoreRoutine.LocationOfInterest.ExtendLifetime:
+    description:
+    types:
+    - boolean
+  com.apple.CoreRoutine.MapHint:
+    description:
+    types:
+    - boolean
+  com.apple.CoreRoutine.MapItemService:
+    description:
+    types:
+    - boolean
+  com.apple.CoreRoutine.Prediction:
+    description:
+    types:
+    - boolean
+  com.apple.CoreRoutine.ScenarioTrigger:
+    description:
+    types:
+    - boolean
+  com.apple.CoreRoutine.StoredLocation:
+    description:
+    types:
+    - boolean
+  com.apple.CoreRoutine.VehicleLocation:
+    description:
+    types:
+    - boolean
+  com.apple.CoreRoutine.Visit:
+    description:
+    types:
+    - boolean
+  com.apple.CoreRoutine.preferences:
+    description:
+    types:
+    - boolean
+  com.apple.CoreTelephony.CommCenterHelper.allow:
+    description:
+    types:
+    - boolean
+  com.apple.CoreTelephony.DataUsageInfo.allow:
+    description:
+    types:
+    - boolean
+  com.apple.DPSubmissionService.allow:
+    description:
+    types:
+    - boolean
+  com.apple.DiagnosticExtensions.extension:
+    description:
+    types:
+    - boolean
+  com.apple.DiagnosticExtensions.extensionHost:
+    description:
+    types:
+    - boolean
+  com.apple.Diagnostics.host-view-service:
+    description:
+    types:
+    - boolean
+  com.apple.DiagnosticsKit.diagnosticmanager:
+    description:
+    types:
+    - boolean
+  com.apple.DiagnosticsKit.extension:
+    description:
+    types:
+    - boolean
+  com.apple.DiagnosticsKit.reportmanager:
+    description:
+    types:
+    - boolean
+  com.apple.DiagnosticsSessionAvailability.client:
+    description:
+    types:
+    - boolean
+  com.apple.DiagnosticsSupport.CallStatsAccess:
+    description:
+    types:
+    - boolean
+  com.apple.DiagnosticsSupport.HardwareButtonAccess:
+    description:
+    types:
+    - boolean
+  com.apple.DragUI.accessibility:
+    description:
+    types:
+    - boolean
+  com.apple.DragUI.alwaysAttemptCancelInApp:
+    description:
+    types:
+    - boolean
+  com.apple.DragUI.druid.announce-paste:
+    description:
+    types:
+    - boolean
+  com.apple.EnhancedLoggingState.client:
+    description:
+    types:
+    - boolean
+  com.apple.FTLivePhotoService:
+    description:
+    types:
+    - array
+  com.apple.FaceTime.CallLaunch:
+    description:
+    types:
+    - boolean
+  com.apple.FaceTime.FTConversationService:
+    description:
+    types:
+    - array
+  com.apple.FaceTime.NoPrompt:
+    description:
+    types:
+    - boolean
+  com.apple.GAX.SPI:
+    description:
+    types:
+    - boolean
+  com.apple.IPConfigurationService:
+    description:
+    types:
+    - boolean
+  com.apple.IdentityLookup.MessageFilter:
+    description:
+  com.apple.IdentityLookup.message-filter:
+    description:
+    types:
+    - array
+  com.apple.MFAAuthentication:
+    description:
+    types:
+    - array
+  com.apple.Maps.mapspushd.geod:
+    description:
+    types:
+    - boolean
+  com.apple.Maps.tripsharing.receiving:
+    description:
+    types:
+    - boolean
+  com.apple.Maps.tripsharing.sharing:
+    description:
+    types:
+    - boolean
+  com.apple.MapsSupport.MapsAnnouncementsShownToUser:
+    description:
+    types:
+    - boolean
+  com.apple.MapsSupport.MapsAppRemovalService:
+    description:
+    types:
+    - boolean
+  com.apple.MapsSupport.MapsSuggestionsBulletin:
+    description:
+    types:
+    - boolean
+  com.apple.MapsSupport.ParkedCarBulletin:
+    description:
+    types:
+    - boolean
+  com.apple.MapsSupport.TrafficConditionsBulletin:
+    description:
+    types:
+    - boolean
+  com.apple.MapsSupport.UserRoutingPreferences:
+    description:
+    types:
+    - boolean
+  com.apple.MobileAsset.CoreTextAssets:
+    description:
+    types:
+    - boolean
+  com.apple.MobileAsset.EmbeddedSpeech:
+    description:
+    types:
+    - boolean
+  com.apple.MobileAsset.LinguisticData:
+    description:
+    types:
+    - boolean
+  com.apple.MobileAsset.SearchAds.AppVector:
+    description:
+    types:
+    - boolean
+  com.apple.MobileAsset.SharingDeviceAssets:
+    description:
+    types:
+    - boolean
+  com.apple.MobileAsset.SoftwareUpdate:
+    description:
+    types:
+    - boolean
+  com.apple.MobileAsset.TextInput.SpellChecker:
+    description:
+    types:
+    - boolean
+  com.apple.MobileAsset.VoiceTriggerAssetsWatch:
+    description:
+    types:
+    - boolean
+  com.apple.MobileDataTransit.allow:
+    description:
+    types:
+    - boolean
+  com.apple.MobileInternetSharing.allow:
+    description:
+    types:
+    - boolean
+  com.apple.ModeEntityScorer:
+    description:
+    types:
+    - boolean
+  com.apple.NPKCompanionAgent.client:
+    description:
+    types:
+    - boolean
+  com.apple.NanoPassbook.IDVRemoteDeviceService.credentialprovisioning:
+    description:
+    types:
+    - boolean
+  com.apple.NanoPassbook.IDVRemoteDeviceService.session.client:
+    description:
+    types:
+    - boolean
+  com.apple.NanoPassbook.NPKCompanionViewService.client:
+    description:
+    types:
+    - boolean
+  com.apple.NanoTimeKit.userphotofaceclient:
+    description:
+    types:
+    - boolean
+  com.apple.PairingManager.DeleteIdentity:
+    description:
+    types:
+    - boolean
+  com.apple.PairingManager.HomeKit:
+    description:
+    types:
+    - boolean
+  com.apple.PairingManager.Read:
+    description:
+    types:
+    - boolean
+  com.apple.PairingManager.RemovePeer:
+    description:
+    types:
+    - boolean
+  com.apple.PairingManager.Write:
+    description:
+    types:
+    - boolean
+  com.apple.PassKit.issuer-provisioning.consumer:
+    description:
+    types:
+    - boolean
+  com.apple.Pasteboard.background-access:
+    description:
+    types:
+    - boolean
+  com.apple.Pasteboard.originating-bundle-id-query:
+    description:
+    types:
+    - boolean
+  com.apple.Pasteboard.paste-unchecked:
+    description:
+    types:
+    - boolean
+  com.apple.Pasteboard.trusted-bundle-layout:
+    description:
+    types:
+    - boolean
+  com.apple.PerfPowerTelemetry.data-donation:
+    description:
+    types:
+    - boolean
+  com.apple.PerfPowerTelemetry.data-read:
+    description:
+    types:
+    - boolean
+  com.apple.PerformanceTrace.OverrideTimeout:
+    description:
+    types:
+    - boolean
+  com.apple.PerformanceTrace.SkipNotification:
+    description:
+    types:
+    - boolean
+  com.apple.PerformanceTrace.Tracing:
+    description:
+    types:
+    - boolean
+  com.apple.PowerManagement.control:
+    description:
+    types:
+    - boolean
+  com.apple.QuartzCore.cache-asynchronous:
+    description:
+    types:
+    - boolean
+  com.apple.QuartzCore.debug:
+    description:
+    types:
+    - boolean
+  com.apple.QuartzCore.displayable-context:
+    description:
+    types:
+    - boolean
+  com.apple.QuartzCore.get-client-port:
+    description:
+    types:
+    - boolean
+  com.apple.QuartzCore.get-info:
+    description:
+    types:
+    - boolean
+  com.apple.QuartzCore.global-capture:
+    description:
+    types:
+    - boolean
+  com.apple.QuartzCore.occlusion-override:
+    description:
+    types:
+    - boolean
+  com.apple.QuartzCore.secure-capture:
+    description:
+    types:
+    - boolean
+  com.apple.QuartzCore.secure-mode:
+    description:
+    types:
+    - boolean
+  com.apple.QuartzCore.system-layers:
+    description:
+    types:
+    - boolean
+  com.apple.QuartzCore.webkit-end-points:
+    description:
+    types:
+    - boolean
+  com.apple.QuartzCore.webkit-limited-types:
+    description:
+    types:
+    - boolean
+  com.apple.RemoteDisplay:
+    description:
+    types:
+    - boolean
+  com.apple.RootedSimulatorPath:
+    description:
+    types:
+    - boolean
+  com.apple.Safari.PasswordBreachHelper:
+    description:
+    types:
+    - boolean
+  com.apple.SensorKit.effective-bundle:
+    description:
+    types:
+    - boolean
+  com.apple.SharingServices:
+    description:
+    types:
+    - boolean
+  com.apple.SiriVOXService.client:
+    description:
+    types:
+    - boolean
+  com.apple.SoundAnalysis.CanHostDaemon:
+    description:
+    types:
+    - boolean
+  com.apple.StatusKit.publish.types:
+    description:
+    types:
+    - array
+  com.apple.StatusKit.subscribe.types:
+    description:
+    types:
+    - array
+  com.apple.SubmitDiagInfo.tower-access:
+    description:
+    types:
+    - boolean
+  com.apple.SystemConfiguration.SCDynamicStore-write-access:
+    description:
+    types:
+    - boolean
+  com.apple.SystemConfiguration.SCNetworkInterfaceSetAdvisory:
+    description:
+    types:
+    - boolean
+  com.apple.SystemConfiguration.SCPreferences-read-access:
+    description:
+    types:
+    - array
+  com.apple.SystemConfiguration.SCPreferences-write-access:
+    description:
+    types:
+    - array
+    - boolean
+  com.apple.SystemConfiguration.trailing-edge-agent:
+    description:
+    types:
+    - boolean
+  com.apple.TapToRadarKit.service-access:
+    description:
+    types:
+    - boolean
+  com.apple.TextInput.autofill-action:
+    description:
+    types:
+    - boolean
+  com.apple.TextInput.lexicon-source:
+    description:
+    types:
+    - boolean
+  com.apple.TextInput.rdt.me:
+    description:
+    types:
+    - boolean
+  com.apple.TimeAppServices.stopwatchclient:
+    description:
+    types:
+    - boolean
+  com.apple.TimeAppServices.timerclient:
+    description:
+    types:
+    - boolean
+  com.apple.UIKit.status-bar-override-allow:
+    description:
+    types:
+    - boolean
+  com.apple.UIKit.vends-view-services:
+    description:
+    types:
+    - boolean
+  com.apple.USBCEntitlement:
+    description:
+    types:
+    - boolean
+  com.apple.VideoSubscriberAccount.DeveloperService:
+    description:
+    types:
+    - boolean
+  com.apple.VideoSubscriberAccount.PrivacyService:
+    description:
+    types:
+    - boolean
+  com.apple.VoiceOverTouch:
+    description:
+    types:
+    - boolean
+  com.apple.ZhuGe.private-connection:
+    description:
+    types:
+    - boolean
   com.apple.abm.helper.mobile.allow:
     description:
     types:
@@ -71,14 +753,6 @@ entitlements:
     types:
     - boolean
   com.apple.abm.helper.wireless.allow:
-    description:
-    types:
-    - boolean
-  com.apple.accessibility.api:
-    description:
-    types:
-    - boolean
-  com.apple.accessibility.automation.client:
     description:
     types:
     - boolean
@@ -95,6 +769,14 @@ entitlements:
     types:
     - boolean
   com.apple.accessibility.MagnifierViewService:
+    description:
+    types:
+    - boolean
+  com.apple.accessibility.api:
+    description:
+    types:
+    - boolean
+  com.apple.accessibility.automation.client:
     description:
     types:
     - boolean
@@ -162,10 +844,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.AddressBook.ContactsAccountsService:
-    description:
-    types:
-    - boolean
   com.apple.adjtime:
     description:
     types:
@@ -211,10 +889,6 @@ entitlements:
     types:
     - boolean
   com.apple.ane.iokit-user-access:
-    description:
-    types:
-    - boolean
-  com.apple.ANECompilerService.allow:
     description:
     types:
     - boolean
@@ -269,18 +943,6 @@ entitlements:
     types:
     - boolean
   com.apple.appleneuralengine.private.allow:
-    description:
-    types:
-    - boolean
-  com.apple.AppleNVMeEAN.allow:
-    description:
-    types:
-    - boolean
-  com.apple.AppleNVMeNamespaceDevice.allow:
-    description:
-    types:
-    - boolean
-  com.apple.AppleServiceToolkit.host:
     description:
     types:
     - boolean
@@ -570,10 +1232,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.AutoWake-write-access:
-    description:
-    types:
-    - boolean
   com.apple.avcapture:
     description:
     types:
@@ -622,14 +1280,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.AXMediaUtilitiesService-access:
-    description:
-    types:
-    - boolean
-  com.apple.AXUIViewService:
-    description:
-    types:
-    - boolean
   com.apple.backboard.client:
     description:
     types:
@@ -646,11 +1296,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.backboardd.cancelsTouchesInHostedContent:
+  com.apple.backboardd.cancelTouches:
     description:
     types:
     - boolean
-  com.apple.backboardd.cancelTouches:
+  com.apple.backboardd.cancelsTouchesInHostedContent:
     description:
     types:
     - boolean
@@ -802,74 +1452,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.BluetoothServices:
-    description:
-    types:
-    - boolean
-  com.apple.BluetoothUIService:
-    description:
-    types:
-    - boolean
-  com.apple.Bridge.ppNotifierService-notify:
-    description:
-    types:
-    - boolean
-  com.apple.BTServer.allowQuickRSSIRead:
-    description:
-    types:
-    - boolean
-  com.apple.BTServer.allowRestrictedServices:
-    description:
-    types:
-    - boolean
-  com.apple.BTServer.appleMfgDataAdvertising:
-    description:
-    types:
-    - boolean
-  com.apple.BTServer.appleMfgDataScanner:
-    description:
-    types:
-    - boolean
-  com.apple.BTServer.avrcp:
-    description:
-    types:
-    - boolean
-  com.apple.BTServer.le:
-    description:
-    types:
-    - boolean
-  com.apple.BTServer.le.agent:
-    description:
-    types:
-    - boolean
-  com.apple.BTServer.le.att:
-    description:
-    types:
-    - boolean
-  com.apple.BTServer.le.pipe:
-    description:
-    types:
-    - boolean
-  com.apple.BTServer.map:
-    description:
-    types:
-    - boolean
-  com.apple.BTServer.pbap:
-    description:
-    types:
-    - boolean
-  com.apple.BTServer.programmaticPairing:
-    description:
-    types:
-    - boolean
-  com.apple.BTServer.rawBytesAdvertise:
-    description:
-    types:
-    - boolean
-  com.apple.BTServer.supportsPairing:
-    description:
-    types:
-    - boolean
   com.apple.bulletinboard:
     description:
     types:
@@ -918,22 +1500,10 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.CallHistory.sync.allow:
-    description:
-    types:
-    - boolean
   com.apple.callkit:
     description:
     types:
     - array
-  com.apple.CallKit.call-directory:
-    description:
-    types:
-    - array
-  com.apple.CallKit.call-directory.extension-host:
-    description:
-    types:
-    - boolean
   com.apple.callkit.callcontrollerhost:
     description:
     types:
@@ -982,10 +1552,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.Carousel.eligibilityservice:
-    description:
-    types:
-    - boolean
   com.apple.carousel.modalappservice:
     description:
     types:
@@ -1004,10 +1570,6 @@ entitlements:
     - array
     - boolean
   com.apple.carousel.session.backgroundLaunch:
-    description:
-    types:
-    - boolean
-  com.apple.Carousel.statusOverlay:
     description:
     types:
     - boolean
@@ -1051,14 +1613,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.CheckerBoard.services:
-    description:
-    types:
-    - boolean
-  com.apple.CheckerBoard.services.reboot:
-    description:
-    types:
-    - boolean
   com.apple.checkerboardd:
     description:
     types:
@@ -1091,32 +1645,7 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.CloudKeychainProxy.client:
-    description:
-    types:
-    - boolean
   com.apple.commandandcontrol:
-    description:
-    types:
-    - boolean
-  com.apple.CommCenter.DeviceManagement-access:
-    description:
-    types:
-    - boolean
-  com.apple.CommCenter.fine-grained:
-    description:
-    types:
-    - array
-    - boolean
-  com.apple.CommCenter.fine-grained - 2:
-    description:
-    types:
-    - array
-  com.apple.CommCenter.Messages-send:
-    description:
-    types:
-    - boolean
-  com.apple.CommCenter.Preferences-delete:
     description:
     types:
     - boolean
@@ -1128,15 +1657,7 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.CompanionLink:
-    description:
-    types:
-    - boolean
   com.apple.contacts.database-allow:
-    description:
-    types:
-    - boolean
-  com.apple.Contacts.database-allow:
     description:
     types:
     - boolean
@@ -1157,6 +1678,14 @@ entitlements:
     types:
     - boolean
   com.apple.coreaccessories.entitlement.MFi4.client.FindMy:
+    description:
+    types:
+    - boolean
+  com.apple.coreaudio.CanRecordPastData:
+    description:
+    types:
+    - boolean
+  com.apple.coreaudio.CanRecordWithoutSessionActivation:
     description:
     types:
     - boolean
@@ -1181,14 +1710,6 @@ entitlements:
     types:
     - boolean
   com.apple.coreaudio.app-tap:
-    description:
-    types:
-    - boolean
-  com.apple.coreaudio.CanRecordPastData:
-    description:
-    types:
-    - boolean
-  com.apple.coreaudio.CanRecordWithoutSessionActivation:
     description:
     types:
     - boolean
@@ -1260,10 +1781,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.CoreLocation.PrivateMode:
-    description:
-    types:
-    - boolean
   com.apple.coremedia.allow-mpeg4streaming:
     description:
     types:
@@ -1292,65 +1809,7 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.CoreML.adopter:
-    description:
   com.apple.corerecents.recentsd:
-    description:
-    types:
-    - boolean
-  com.apple.CoreRoutine.Action:
-    description:
-    types:
-    - boolean
-  com.apple.CoreRoutine.Application:
-    description:
-    types:
-    - boolean
-  com.apple.CoreRoutine.CloudSync:
-    description:
-    types:
-    - boolean
-  com.apple.CoreRoutine.LocationOfInterest:
-    description:
-    types:
-    - boolean
-  com.apple.CoreRoutine.LocationOfInterest.Delete:
-    description:
-    types:
-    - boolean
-  com.apple.CoreRoutine.LocationOfInterest.ExtendLifetime:
-    description:
-    types:
-    - boolean
-  com.apple.CoreRoutine.MapHint:
-    description:
-    types:
-    - boolean
-  com.apple.CoreRoutine.MapItemService:
-    description:
-    types:
-    - boolean
-  com.apple.CoreRoutine.Prediction:
-    description:
-    types:
-    - boolean
-  com.apple.CoreRoutine.preferences:
-    description:
-    types:
-    - boolean
-  com.apple.CoreRoutine.ScenarioTrigger:
-    description:
-    types:
-    - boolean
-  com.apple.CoreRoutine.StoredLocation:
-    description:
-    types:
-    - boolean
-  com.apple.CoreRoutine.VehicleLocation:
-    description:
-    types:
-    - boolean
-  com.apple.CoreRoutine.Visit:
     description:
     types:
     - boolean
@@ -1392,14 +1851,6 @@ entitlements:
     description:
     types:
     - array
-  com.apple.coretelephony.Calls.allow:
-    description:
-    types:
-    - boolean
-  com.apple.CoreTelephony.CommCenterHelper.allow:
-    description:
-    types:
-    - boolean
   com.apple.coretelephony.CTCarrierSettings.allow:
     description:
     types:
@@ -1408,7 +1859,7 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.CoreTelephony.DataUsageInfo.allow:
+  com.apple.coretelephony.Calls.allow:
     description:
     types:
     - boolean
@@ -1462,6 +1913,12 @@ entitlements:
     description:
     types:
     - boolean
+  com.apple.developer.ClassKit-environment:
+    description:
+  com.apple.developer.WebKit.ServiceWorkers:
+    description:
+    types:
+    - boolean
   com.apple.developer.apple-cash-disbursements:
     description:
     types:
@@ -1492,8 +1949,6 @@ entitlements:
     description:
     types:
     - array
-  com.apple.developer.ClassKit-environment:
-    description:
   com.apple.developer.contactless-payment-pass-provisioning:
     description:
     types:
@@ -1641,11 +2096,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.developer.networking.get-preferred-thread-network-credentials:
+  com.apple.developer.networking.HotspotConfiguration:
     description:
     types:
     - boolean
-  com.apple.developer.networking.HotspotConfiguration:
+  com.apple.developer.networking.get-preferred-thread-network-credentials:
     description:
     types:
     - boolean
@@ -1726,18 +2181,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.developer.WebKit.ServiceWorkers:
-    description:
-    types:
-    - boolean
-  com.apple.DiagnosticExtensions.extension:
-    description:
-    types:
-    - boolean
-  com.apple.DiagnosticExtensions.extensionHost:
-    description:
-    types:
-    - boolean
   com.apple.diagnosticextensionsd.xpcclient:
     description:
     types:
@@ -1751,34 +2194,6 @@ entitlements:
     types:
     - boolean
   com.apple.diagnosticpipeline.tasking.perfpowerservices.config.bdc:
-    description:
-    types:
-    - boolean
-  com.apple.Diagnostics.host-view-service:
-    description:
-    types:
-    - boolean
-  com.apple.DiagnosticsKit.diagnosticmanager:
-    description:
-    types:
-    - boolean
-  com.apple.DiagnosticsKit.extension:
-    description:
-    types:
-    - boolean
-  com.apple.DiagnosticsKit.reportmanager:
-    description:
-    types:
-    - boolean
-  com.apple.DiagnosticsSessionAvailability.client:
-    description:
-    types:
-    - boolean
-  com.apple.DiagnosticsSupport.CallStatsAccess:
-    description:
-    types:
-    - boolean
-  com.apple.DiagnosticsSupport.HardwareButtonAccess:
     description:
     types:
     - boolean
@@ -2118,22 +2533,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.DPSubmissionService.allow:
-    description:
-    types:
-    - boolean
-  com.apple.DragUI.accessibility:
-    description:
-    types:
-    - boolean
-  com.apple.DragUI.alwaysAttemptCancelInApp:
-    description:
-    types:
-    - boolean
-  com.apple.DragUI.druid.announce-paste:
-    description:
-    types:
-    - boolean
   com.apple.driver.AppleAuthCP.user-access:
     description:
     types:
@@ -2206,27 +2605,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.EnhancedLoggingState.client:
-    description:
-    types:
-    - boolean
   com.apple.escrowservice.access:
     description:
     types:
     - boolean
   com.apple.excludes-extensions:
-    description:
-    types:
-    - boolean
-  com.apple.FaceTime.CallLaunch:
-    description:
-    types:
-    - boolean
-  com.apple.FaceTime.FTConversationService:
-    description:
-    types:
-    - array
-  com.apple.FaceTime.NoPrompt:
     description:
     types:
     - boolean
@@ -2332,19 +2715,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.FTLivePhotoService:
-    description:
-    types:
-    - array
   com.apple.fullkeyboardaccess:
     description:
     types:
     - boolean
   com.apple.gasgauge.user-access-device:
-    description:
-    types:
-    - boolean
-  com.apple.GAX.SPI:
     description:
     types:
     - boolean
@@ -2388,15 +2763,15 @@ entitlements:
     description:
     types:
     - boolean
+  com.apple.geoservices.mapLayerDataSizes:
+    description:
+    types:
+    - boolean
   com.apple.geoservices.mapdata.load:
     description:
     types:
     - boolean
   com.apple.geoservices.mapdata.manage-subscriptions:
-    description:
-    types:
-    - boolean
-  com.apple.geoservices.mapLayerDataSizes:
     description:
     types:
     - boolean
@@ -2542,6 +2917,10 @@ entitlements:
     description:
     types:
     - boolean
+  com.apple.iBooks.BDSService.private:
+    description:
+    types:
+    - boolean
   com.apple.iamcompanionproxy:
     description:
     types:
@@ -2551,10 +2930,6 @@ entitlements:
     types:
     - boolean
   com.apple.iaptransportd.clientport:
-    description:
-    types:
-    - boolean
-  com.apple.iBooks.BDSService.private:
     description:
     types:
     - boolean
@@ -2708,16 +3083,10 @@ entitlements:
     - array
   com.apple.identitylookup.classification-ui.extension-host:
     description:
-  com.apple.IdentityLookup.message-filter:
-    description:
-    types:
-    - array
   com.apple.identitylookup.message-filter.extension-host:
     description:
     types:
     - boolean
-  com.apple.IdentityLookup.MessageFilter:
-    description:
   com.apple.idle-timer-services:
     description:
     types:
@@ -2831,10 +3200,6 @@ entitlements:
     types:
     - boolean
   com.apple.ios.StoreKit.store-page:
-    description:
-    types:
-    - boolean
-  com.apple.IPConfigurationService:
     description:
     types:
     - boolean
@@ -2990,11 +3355,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.launchservices.clearadvertisingid:
+  com.apple.launchservices.MoveDocumentOnOpen:
     description:
     types:
     - boolean
-  com.apple.launchservices.MoveDocumentOnOpen:
+  com.apple.launchservices.clearadvertisingid:
     description:
     types:
     - boolean
@@ -3019,6 +3384,10 @@ entitlements:
     types:
     - boolean
   com.apple.location.region_polygonal:
+    description:
+    types:
+    - boolean
+  com.apple.locationd.Proximity.TagManagement:
     description:
     types:
     - boolean
@@ -3126,10 +3495,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.locationd.Proximity.TagManagement:
-    description:
-    types:
-    - boolean
   com.apple.locationd.ranging:
     description:
     types:
@@ -3226,6 +3591,14 @@ entitlements:
     description:
     types:
     - boolean
+  com.apple.mDNSResponder.dnsproxy:
+    description:
+    types:
+    - boolean
+  com.apple.mDNSResponder_Helper:
+    description:
+    types:
+    - boolean
   com.apple.maccheckerboardd.remoteservice:
     description:
     types:
@@ -3314,19 +3687,7 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.Maps.mapspushd.geod:
-    description:
-    types:
-    - boolean
   com.apple.maps.model-access:
-    description:
-    types:
-    - boolean
-  com.apple.Maps.tripsharing.receiving:
-    description:
-    types:
-    - boolean
-  com.apple.Maps.tripsharing.sharing:
     description:
     types:
     - boolean
@@ -3334,39 +3695,7 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.MapsSupport.MapsAnnouncementsShownToUser:
-    description:
-    types:
-    - boolean
-  com.apple.MapsSupport.MapsAppRemovalService:
-    description:
-    types:
-    - boolean
-  com.apple.MapsSupport.MapsSuggestionsBulletin:
-    description:
-    types:
-    - boolean
-  com.apple.MapsSupport.ParkedCarBulletin:
-    description:
-    types:
-    - boolean
-  com.apple.MapsSupport.TrafficConditionsBulletin:
-    description:
-    types:
-    - boolean
-  com.apple.MapsSupport.UserRoutingPreferences:
-    description:
-    types:
-    - boolean
   com.apple.matd.client:
-    description:
-    types:
-    - boolean
-  com.apple.mDNSResponder.dnsproxy:
-    description:
-    types:
-    - boolean
-  com.apple.mDNSResponder_Helper:
     description:
     types:
     - boolean
@@ -3452,10 +3781,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.MFAAuthentication:
-    description:
-    types:
-    - array
   com.apple.mkb.usersession.delete:
     description:
     types:
@@ -3528,47 +3853,7 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.MobileAsset.CoreTextAssets:
-    description:
-    types:
-    - boolean
-  com.apple.MobileAsset.EmbeddedSpeech:
-    description:
-    types:
-    - boolean
-  com.apple.MobileAsset.LinguisticData:
-    description:
-    types:
-    - boolean
-  com.apple.MobileAsset.SearchAds.AppVector:
-    description:
-    types:
-    - boolean
-  com.apple.MobileAsset.SharingDeviceAssets:
-    description:
-    types:
-    - boolean
-  com.apple.MobileAsset.SoftwareUpdate:
-    description:
-    types:
-    - boolean
-  com.apple.MobileAsset.TextInput.SpellChecker:
-    description:
-    types:
-    - boolean
-  com.apple.MobileAsset.VoiceTriggerAssetsWatch:
-    description:
-    types:
-    - boolean
   com.apple.mobileassetd.v2:
-    description:
-    types:
-    - boolean
-  com.apple.MobileDataTransit.allow:
-    description:
-    types:
-    - boolean
-  com.apple.MobileInternetSharing.allow:
     description:
     types:
     - boolean
@@ -3581,10 +3866,6 @@ entitlements:
     types:
     - boolean
   com.apple.mobilemail.mailservices:
-    description:
-    types:
-    - boolean
-  com.apple.ModeEntityScorer:
     description:
     types:
     - boolean
@@ -3644,18 +3925,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.NanoPassbook.IDVRemoteDeviceService.credentialprovisioning:
-    description:
-    types:
-    - boolean
-  com.apple.NanoPassbook.IDVRemoteDeviceService.session.client:
-    description:
-    types:
-    - boolean
-  com.apple.NanoPassbook.NPKCompanionViewService.client:
-    description:
-    types:
-    - boolean
   com.apple.nanopassd.connect:
     description:
     types:
@@ -3680,10 +3949,6 @@ entitlements:
     description:
     types:
     - array
-  com.apple.NanoTimeKit.userphotofaceclient:
-    description:
-    types:
-    - boolean
   com.apple.navd.timeball:
     description:
     types:
@@ -3908,10 +4173,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.NPKCompanionAgent.client:
-    description:
-    types:
-    - boolean
   com.apple.nsurlstorage.extension-cache:
     description:
     types:
@@ -3950,26 +4211,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.PairingManager.DeleteIdentity:
-    description:
-    types:
-    - boolean
-  com.apple.PairingManager.HomeKit:
-    description:
-    types:
-    - boolean
-  com.apple.PairingManager.Read:
-    description:
-    types:
-    - boolean
-  com.apple.PairingManager.RemovePeer:
-    description:
-    types:
-    - boolean
-  com.apple.PairingManager.Write:
-    description:
-    types:
-    - boolean
   com.apple.passd.peer-payment:
     description:
     types:
@@ -3982,27 +4223,7 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.PassKit.issuer-provisioning.consumer:
-    description:
-    types:
-    - boolean
   com.apple.passkit.search.all-access:
-    description:
-    types:
-    - boolean
-  com.apple.Pasteboard.background-access:
-    description:
-    types:
-    - boolean
-  com.apple.Pasteboard.originating-bundle-id-query:
-    description:
-    types:
-    - boolean
-  com.apple.Pasteboard.paste-unchecked:
-    description:
-    types:
-    - boolean
-  com.apple.Pasteboard.trusted-bundle-layout:
     description:
     types:
     - boolean
@@ -4070,26 +4291,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.PerformanceTrace.OverrideTimeout:
-    description:
-    types:
-    - boolean
-  com.apple.PerformanceTrace.SkipNotification:
-    description:
-    types:
-    - boolean
-  com.apple.PerformanceTrace.Tracing:
-    description:
-    types:
-    - boolean
-  com.apple.PerfPowerTelemetry.data-donation:
-    description:
-    types:
-    - boolean
-  com.apple.PerfPowerTelemetry.data-read:
-    description:
-    types:
-    - boolean
   com.apple.pf.allow:
     description:
     types:
@@ -4126,10 +4327,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.PowerManagement.control:
-    description:
-    types:
-    - boolean
   com.apple.powerui.smartcharging:
     description:
     types:
@@ -4139,6 +4336,389 @@ entitlements:
     types:
     - boolean
   com.apple.printing.getjoblist:
+    description:
+    types:
+    - boolean
+  com.apple.private.ANEStorageMaintainer.allow:
+    description:
+    types:
+    - boolean
+  com.apple.private.AppSSO.FetchNetworkCredentials:
+    description:
+    types:
+    - boolean
+  com.apple.private.AssetCache.import:
+    description:
+    types:
+    - boolean
+  com.apple.private.AuthorizationServices:
+    description:
+    types:
+    - boolean
+  com.apple.private.BarcodeSupport.can-suppress-app-clip-code-url-authorization:
+    description:
+    types:
+    - boolean
+  com.apple.private.CacheDelete:
+    description:
+    types:
+    - array
+  com.apple.private.CallHistory.read:
+    description:
+    types:
+    - boolean
+  com.apple.private.CallHistory.read-write:
+    description:
+    types:
+    - boolean
+  com.apple.private.CarPlayServices.app-history:
+    description:
+    types:
+    - boolean
+  com.apple.private.CarPlayServices.icon-layout:
+    description:
+    types:
+    - boolean
+  com.apple.private.CarPlaySupport.banner-source:
+    description:
+    types:
+    - boolean
+  com.apple.private.CarPlayUIServices.status-bar-style:
+    description:
+    types:
+    - boolean
+  com.apple.private.ClassKit.dashboard:
+    description:
+    types:
+    - boolean
+  com.apple.private.ClassKit.internal:
+    description:
+    types:
+    - boolean
+  com.apple.private.ClipServices:
+    description:
+    types:
+    - boolean
+  com.apple.private.ClipServices.request-install-clips:
+    description:
+    types:
+    - boolean
+  com.apple.private.CoreAnalytics.ManagementCommands.allow:
+    description:
+    types:
+    - boolean
+  com.apple.private.CoreAnalytics.RolloverEvents.allow:
+    description:
+    types:
+    - boolean
+  com.apple.private.CoreAuthentication.BackgroundUI:
+    description:
+    types:
+    - boolean
+  com.apple.private.CoreAuthentication.CallerPID:
+    description:
+    types:
+    - boolean
+  com.apple.private.CoreAuthentication.SPI:
+    description:
+    types:
+    - boolean
+  com.apple.private.DictationIM.feedback:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.AppleMediaDiscovery.ASLAppEmbedding:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.AppleMediaDiscovery.ASLArcadeRanking:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.AutocorrectionTesterDESPlugin:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.CoreSuggestions.SemlPlugin:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.HomeAIDESPlugin:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.NewsDES:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.PeopleSuggester.PSDESPlugin:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.QuickTypeDESPlugin:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.TextInput.TypingDESPlugin:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.acg.autoloops:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.acg.powerspectrum:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.ap.APODMLDESPlugin:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.fides.asr:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.fides.borealis:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.fides.phs:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.proactive.PMLDESPlugin:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.reminders.des:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.siri.SiriAudioDESPlugin:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.siri.SiriVideoDESPlugin:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.siri.SiriVideoSignalsDESPlugin:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.siri.speech-dictation-personalization:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.siriinference-dodml-plugin:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.stocks.des:
+    description:
+    types:
+    - boolean
+  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.tips.TipsPFLPlugin:
+    description:
+    types:
+    - boolean
+  com.apple.private.FairPlayIOKitUserClient.access:
+    description:
+    types:
+    - boolean
+  com.apple.private.FontServices.can-load-any-fontprovider:
+    description:
+    types:
+    - boolean
+  com.apple.private.IOAESAccelerator.fdr-key-handle:
+    description:
+    types:
+    - boolean
+  com.apple.private.IOSurface.protected-access:
+    description:
+    types:
+    - boolean
+  com.apple.private.IOSurface.wiredSendRights:
+    description:
+    types:
+    - boolean
+  com.apple.private.InstallCoordination.allowed:
+    description:
+    types:
+    - boolean
+  com.apple.private.LTSStats-read:
+    description:
+    types:
+    - boolean
+  com.apple.private.LiveFS.connection:
+    description:
+    types:
+    - boolean
+  com.apple.private.LiveFS.setmachport:
+    description:
+    types:
+    - boolean
+  com.apple.private.LocalAuthentication.CallerName:
+    description:
+    types:
+    - boolean
+  com.apple.private.LocalAuthentication.RGBCapture:
+    description:
+    types:
+    - boolean
+  com.apple.private.LocalAuthentication.SoftwareUpdate:
+    description:
+    types:
+    - boolean
+  com.apple.private.LocalAuthentication.Storage:
+    description:
+    types:
+    - boolean
+  com.apple.private.MobileActivation:
+    description:
+    types:
+    - array
+  com.apple.private.MobileContainerManager.allowed:
+    description:
+    types:
+    - boolean
+  com.apple.private.MobileContainerManager.deleteContainerContent:
+    description:
+    types:
+    - boolean
+  com.apple.private.MobileContainerManager.lookup:
+    description:
+  com.apple.private.MobileContainerManager.otherIdLookup:
+    description:
+    types:
+    - boolean
+  com.apple.private.MobileContainerManager.otherIdentifierLookup:
+    description:
+    types:
+    - boolean
+  com.apple.private.MobileContainerManager.proxy:
+    description:
+    types:
+    - boolean
+  com.apple.private.MobileContainerManager.repair:
+    description:
+    types:
+    - boolean
+  com.apple.private.MobileContainerManager.stageSharedContent:
+    description:
+    types:
+    - boolean
+  com.apple.private.MobileContainerManager.unrestrictedPersona:
+    description:
+    types:
+    - boolean
+  com.apple.private.MobileContainerManager.userManagedAssets:
+    description:
+    types:
+    - boolean
+  com.apple.private.MobileContainerManager.wipeContainer:
+    description:
+    types:
+    - array
+  com.apple.private.MobileGestalt.AllowedProtectedKeys:
+    description:
+    types:
+    - array
+    - boolean
+  com.apple.private.MobileInstallationHelperService.InstallCoordinationDaemonOpsEnabled:
+    description:
+    types:
+    - boolean
+  com.apple.private.MobileInstallationHelperService.InstallDaemonOpsEnabled:
+    description:
+    types:
+    - boolean
+  com.apple.private.MobileInstallationHelperService.allowed:
+    description:
+    types:
+    - boolean
+  com.apple.private.Photos.CPLDiagnose:
+    description:
+    types:
+    - boolean
+  com.apple.private.ProvInfoIOKitUserClient.access:
+    description:
+    types:
+    - boolean
+  com.apple.private.PurpleReverseProxy.allowed:
+    description:
+    types:
+    - boolean
+  com.apple.private.RTCLocalBackend.client:
+    description:
+    types:
+    - boolean
+  com.apple.private.RemoteServiceDiscovery.device-admin:
+    description:
+    types:
+    - boolean
+  com.apple.private.SCNetworkConnection-proxy-user:
+    description:
+    types:
+    - boolean
+  com.apple.private.Safari.History:
+    description:
+    types:
+    - boolean
+  com.apple.private.Safari.PasswordBreachHelper:
+    description:
+    types:
+    - boolean
+  com.apple.private.Safari.can-pass-extension-parameters:
+    description:
+    types:
+    - boolean
+  com.apple.private.SafariServices.PasswordPicker.directlyReceiveCredentials:
+    description:
+    types:
+    - boolean
+  com.apple.private.SafariServices.PasswordPicker.setRemoteAppProperties:
+    description:
+    types:
+    - boolean
+  com.apple.private.SecureNetworking.ipsec_db:
+    description:
+    types:
+    - boolean
+  com.apple.private.SecureNetworking.ipsec_ike:
+    description:
+    types:
+    - boolean
+  com.apple.private.SensorKit.prerequisite.readonly:
+    description:
+    types:
+    - boolean
+  com.apple.private.SensorKit.prerequisite.readwrite:
+    description:
+    types:
+    - boolean
+  com.apple.private.ShazamKit:
+    description:
+    types:
+    - boolean
+  com.apple.private.SkyLight.displaycontrol:
+    description:
+    types:
+    - boolean
+  com.apple.private.WebClips.read-write:
+    description:
+    types:
+    - boolean
+  com.apple.private.WebKit.UnrestrictedApplePay:
+    description:
+    types:
+    - boolean
+  com.apple.private.ZhuGeInternalSupport.CopyValue:
+    description:
+    types:
+    - boolean
+  com.apple.private.ZhuGeSupport.CopyValue:
     description:
     types:
     - boolean
@@ -4247,10 +4827,6 @@ entitlements:
     types:
     - boolean
   com.apple.private.amfi.set-csp:
-    description:
-    types:
-    - boolean
-  com.apple.private.ANEStorageMaintainer.allow:
     description:
     types:
     - boolean
@@ -4364,10 +4940,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.AppSSO.FetchNetworkCredentials:
-    description:
-    types:
-    - boolean
   com.apple.private.appstorecomponents:
     description:
     types:
@@ -4392,10 +4964,6 @@ entitlements:
   com.apple.private.aps-environment:
     description:
   com.apple.private.asiokit.allow:
-    description:
-    types:
-    - boolean
-  com.apple.private.AssetCache.import:
     description:
     types:
     - boolean
@@ -4470,10 +5038,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.AuthorizationServices:
-    description:
-    types:
-    - boolean
   com.apple.private.avatar.store:
     description:
     types:
@@ -4489,10 +5053,6 @@ entitlements:
   com.apple.private.avfoundation.capture.nonstandard-client.allowed-media-types:
     description:
   com.apple.private.barcodesupport.allowNotifications:
-    description:
-    types:
-    - boolean
-  com.apple.private.BarcodeSupport.can-suppress-app-clip-code-url-authorization:
     description:
     types:
     - boolean
@@ -4520,10 +5080,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.CacheDelete:
-    description:
-    types:
-    - array
   com.apple.private.calaccessd.spotlight:
     description:
     types:
@@ -4576,14 +5132,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.CallHistory.read:
-    description:
-    types:
-    - boolean
-  com.apple.private.CallHistory.read-write:
-    description:
-    types:
-    - boolean
   com.apple.private.can-load-any-content-blocker:
     description:
     types:
@@ -4600,11 +5148,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.canmodifyanyuseractivity:
+  com.apple.private.canModifyAppLinkPermissions:
     description:
     types:
     - boolean
-  com.apple.private.canModifyAppLinkPermissions:
+  com.apple.private.canmodifyanyuseractivity:
     description:
     types:
     - boolean
@@ -4621,22 +5169,6 @@ entitlements:
     types:
     - boolean
   com.apple.private.carkit.sessionRequest:
-    description:
-    types:
-    - boolean
-  com.apple.private.CarPlayServices.app-history:
-    description:
-    types:
-    - boolean
-  com.apple.private.CarPlayServices.icon-layout:
-    description:
-    types:
-    - boolean
-  com.apple.private.CarPlaySupport.banner-source:
-    description:
-    types:
-    - boolean
-  com.apple.private.CarPlayUIServices.status-bar-style:
     description:
     types:
     - boolean
@@ -4669,22 +5201,6 @@ entitlements:
     types:
     - boolean
   com.apple.private.ckks.plaintextfields:
-    description:
-    types:
-    - boolean
-  com.apple.private.ClassKit.dashboard:
-    description:
-    types:
-    - boolean
-  com.apple.private.ClassKit.internal:
-    description:
-    types:
-    - boolean
-  com.apple.private.ClipServices:
-    description:
-    types:
-    - boolean
-  com.apple.private.ClipServices.request-install-clips:
     description:
     types:
     - boolean
@@ -4891,14 +5407,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.CoreAnalytics.ManagementCommands.allow:
-    description:
-    types:
-    - boolean
-  com.apple.private.CoreAnalytics.RolloverEvents.allow:
-    description:
-    types:
-    - boolean
   com.apple.private.coreaudio.borrowaudiosession.allow:
     description:
     types:
@@ -4908,18 +5416,6 @@ entitlements:
     types:
     - boolean
   com.apple.private.coreaudio.viewInterruptorName.allow:
-    description:
-    types:
-    - boolean
-  com.apple.private.CoreAuthentication.BackgroundUI:
-    description:
-    types:
-    - boolean
-  com.apple.private.CoreAuthentication.CallerPID:
-    description:
-    types:
-    - boolean
-  com.apple.private.CoreAuthentication.SPI:
     description:
     types:
     - boolean
@@ -4975,6 +5471,10 @@ entitlements:
     description:
     types:
     - boolean
+  com.apple.private.coreservices.canUseDeviceEncryptionService:
+    description:
+    types:
+    - boolean
   com.apple.private.coreservices.canalwaysadvertise:
     description:
     types:
@@ -5003,19 +5503,15 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.coreservices.canUseDeviceEncryptionService:
-    description:
-    types:
-    - boolean
   com.apple.private.coreservices.lsd:
     description:
     types:
     - boolean
-  com.apple.private.coreservices.lsuseractivityd.bestappsuggestion:
+  com.apple.private.coreservices.lsuseractivityd.LSAlwaysPick:
     description:
     types:
     - boolean
-  com.apple.private.coreservices.lsuseractivityd.LSAlwaysPick:
+  com.apple.private.coreservices.lsuseractivityd.bestappsuggestion:
     description:
     types:
     - boolean
@@ -5129,107 +5625,7 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.DictationIM.feedback:
-    description:
-    types:
-    - boolean
   com.apple.private.diskimages.kext.user-client-access:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.acg.autoloops:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.acg.powerspectrum:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.ap.APODMLDESPlugin:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.AppleMediaDiscovery.ASLAppEmbedding:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.AppleMediaDiscovery.ASLArcadeRanking:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.AutocorrectionTesterDESPlugin:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.CoreSuggestions.SemlPlugin:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.fides.asr:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.fides.borealis:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.fides.phs:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.HomeAIDESPlugin:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.NewsDES:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.PeopleSuggester.PSDESPlugin:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.proactive.PMLDESPlugin:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.QuickTypeDESPlugin:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.reminders.des:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.siri.SiriAudioDESPlugin:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.siri.SiriVideoDESPlugin:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.siri.SiriVideoSignalsDESPlugin:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.siri.speech-dictation-personalization:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.siriinference-dodml-plugin:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.stocks.des:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.TextInput.TypingDESPlugin:
-    description:
-    types:
-    - boolean
-  com.apple.private.DistributedEvaluation.RecordAccess-com.apple.tips.TipsPFLPlugin:
     description:
     types:
     - boolean
@@ -5383,10 +5779,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.FairPlayIOKitUserClient.access:
-    description:
-    types:
-    - boolean
   com.apple.private.familycircle:
     description:
     types:
@@ -5408,10 +5800,6 @@ entitlements:
     types:
     - boolean
   com.apple.private.followup:
-    description:
-    types:
-    - boolean
-  com.apple.private.FontServices.can-load-any-fontprovider:
     description:
     types:
     - boolean
@@ -5926,10 +6314,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.InstallCoordination.allowed:
-    description:
-    types:
-    - boolean
   com.apple.private.installcoordinationd.daemon:
     description:
     types:
@@ -5948,11 +6332,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.IOAESAccelerator.fdr-key-handle:
+  com.apple.private.ioavfamily.user-access-displaymemory:
     description:
     types:
     - boolean
-  com.apple.private.ioavfamily.user-access-displaymemory:
+  com.apple.private.iokit.BDCDataCopy:
     description:
     types:
     - boolean
@@ -5965,10 +6349,6 @@ entitlements:
     types:
     - boolean
   com.apple.private.iokit.batterydata:
-    description:
-    types:
-    - boolean
-  com.apple.private.iokit.BDCDataCopy:
     description:
     types:
     - boolean
@@ -6026,14 +6406,6 @@ entitlements:
     types:
     - boolean
   com.apple.private.iosmac.unscaled:
-    description:
-    types:
-    - boolean
-  com.apple.private.IOSurface.protected-access:
-    description:
-    types:
-    - boolean
-  com.apple.private.IOSurface.wiredSendRights:
     description:
     types:
     - boolean
@@ -6187,30 +6559,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.LiveFS.connection:
-    description:
-    types:
-    - boolean
-  com.apple.private.LiveFS.setmachport:
-    description:
-    types:
-    - boolean
-  com.apple.private.LocalAuthentication.CallerName:
-    description:
-    types:
-    - boolean
-  com.apple.private.LocalAuthentication.RGBCapture:
-    description:
-    types:
-    - boolean
-  com.apple.private.LocalAuthentication.SoftwareUpdate:
-    description:
-    types:
-    - boolean
-  com.apple.private.LocalAuthentication.Storage:
-    description:
-    types:
-    - boolean
   com.apple.private.locationpushd.pushtokenregistration:
     description:
     types:
@@ -6260,10 +6608,6 @@ entitlements:
     types:
     - boolean
   com.apple.private.logging.stream:
-    description:
-    types:
-    - boolean
-  com.apple.private.LTSStats-read:
     description:
     types:
     - boolean
@@ -6363,57 +6707,6 @@ entitlements:
     description:
     types:
     - array
-  com.apple.private.MobileActivation:
-    description:
-    types:
-    - array
-  com.apple.private.MobileContainerManager.allowed:
-    description:
-    types:
-    - boolean
-  com.apple.private.MobileContainerManager.deleteContainerContent:
-    description:
-    types:
-    - boolean
-  com.apple.private.MobileContainerManager.lookup:
-    description:
-  com.apple.private.MobileContainerManager.otherIdentifierLookup:
-    description:
-    types:
-    - boolean
-  com.apple.private.MobileContainerManager.otherIdLookup:
-    description:
-    types:
-    - boolean
-  com.apple.private.MobileContainerManager.proxy:
-    description:
-    types:
-    - boolean
-  com.apple.private.MobileContainerManager.repair:
-    description:
-    types:
-    - boolean
-  com.apple.private.MobileContainerManager.stageSharedContent:
-    description:
-    types:
-    - boolean
-  com.apple.private.MobileContainerManager.unrestrictedPersona:
-    description:
-    types:
-    - boolean
-  com.apple.private.MobileContainerManager.userManagedAssets:
-    description:
-    types:
-    - boolean
-  com.apple.private.MobileContainerManager.wipeContainer:
-    description:
-    types:
-    - array
-  com.apple.private.MobileGestalt.AllowedProtectedKeys:
-    description:
-    types:
-    - array
-    - boolean
   com.apple.private.mobileinstall.allowed-linked-parents:
     description:
     types:
@@ -6427,18 +6720,6 @@ entitlements:
     types:
     - boolean
   com.apple.private.mobileinstall.xpc-services-enabled:
-    description:
-    types:
-    - boolean
-  com.apple.private.MobileInstallationHelperService.allowed:
-    description:
-    types:
-    - boolean
-  com.apple.private.MobileInstallationHelperService.InstallCoordinationDaemonOpsEnabled:
-    description:
-    types:
-    - boolean
-  com.apple.private.MobileInstallationHelperService.InstallDaemonOpsEnabled:
     description:
     types:
     - boolean
@@ -6718,10 +6999,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.Photos.CPLDiagnose:
-    description:
-    types:
-    - boolean
   com.apple.private.photos.internaldirectory.data.read-write:
     description:
     types:
@@ -6832,19 +7109,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.ProvInfoIOKitUserClient.access:
-    description:
-    types:
-    - boolean
   com.apple.private.psg.internal:
     description:
     types:
     - boolean
   com.apple.private.psid.allow:
-    description:
-    types:
-    - boolean
-  com.apple.private.PurpleReverseProxy.allowed:
     description:
     types:
     - boolean
@@ -6877,19 +7146,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.RemoteServiceDiscovery.device-admin:
-    description:
-    types:
-    - boolean
   com.apple.private.replay-kit:
     description:
     types:
     - boolean
   com.apple.private.replay-kit.can-setup-broadcast:
-    description:
-    types:
-    - boolean
-  com.apple.private.RTCLocalBackend.client:
     description:
     types:
     - boolean
@@ -6913,10 +7174,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.Safari.can-pass-extension-parameters:
-    description:
-    types:
-    - boolean
   com.apple.private.safari.can-use-bookmarks-sync-agent:
     description:
     types:
@@ -6933,15 +7190,7 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.Safari.History:
-    description:
-    types:
-    - boolean
   com.apple.private.safari.offlinereadinglist:
-    description:
-    types:
-    - boolean
-  com.apple.private.Safari.PasswordBreachHelper:
     description:
     types:
     - boolean
@@ -6949,20 +7198,8 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.SafariServices.PasswordPicker.directlyReceiveCredentials:
-    description:
-    types:
-    - boolean
-  com.apple.private.SafariServices.PasswordPicker.setRemoteAppProperties:
-    description:
-    types:
-    - boolean
   com.apple.private.sandbox.profile:embedded:
     description:
-  com.apple.private.SCNetworkConnection-proxy-user:
-    description:
-    types:
-    - boolean
   com.apple.private.screen-time:
     description:
     types:
@@ -6988,14 +7225,6 @@ entitlements:
     types:
     - boolean
   com.apple.private.secure-apsclientv2:
-    description:
-    types:
-    - boolean
-  com.apple.private.SecureNetworking.ipsec_db:
-    description:
-    types:
-    - boolean
-  com.apple.private.SecureNetworking.ipsec_ike:
     description:
     types:
     - boolean
@@ -7069,23 +7298,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.security.storage.adprivacyd:
-    description:
-    types:
-    - boolean
-  com.apple.private.security.storage.amfid:
-    description:
-    types:
-    - boolean
   com.apple.private.security.storage.AppBundles:
     description:
     types:
     - boolean
   com.apple.private.security.storage.AppDataContainers:
-    description:
-    types:
-    - boolean
-  com.apple.private.security.storage.automation-mode:
     description:
     types:
     - boolean
@@ -7105,19 +7322,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.security.storage.chronod:
-    description:
-    types:
-    - boolean
   com.apple.private.security.storage.CloudDocsDB:
     description:
     types:
     - boolean
   com.apple.private.security.storage.CloudKit:
-    description:
-    types:
-    - boolean
-  com.apple.private.security.storage.containers:
     description:
     types:
     - boolean
@@ -7130,10 +7339,6 @@ entitlements:
     types:
     - boolean
   com.apple.private.security.storage.Cryptex:
-    description:
-    types:
-    - boolean
-  com.apple.private.security.storage.demo_backup:
     description:
     types:
     - boolean
@@ -7153,15 +7358,7 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.security.storage.familycircled:
-    description:
-    types:
-    - boolean
   com.apple.private.security.storage.FindMy:
-    description:
-    types:
-    - boolean
-  com.apple.private.security.storage.fpsd:
     description:
     types:
     - boolean
@@ -7178,14 +7375,6 @@ entitlements:
     types:
     - boolean
   com.apple.private.security.storage.HomeKit:
-    description:
-    types:
-    - boolean
-  com.apple.private.security.storage.iCloudDrive:
-    description:
-    types:
-    - boolean
-  com.apple.private.security.storage.idcredd:
     description:
     types:
     - boolean
@@ -7225,14 +7414,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.security.storage.mobilesync:
-    description:
-    types:
-    - boolean
-  com.apple.private.security.storage.multimodalsearchd:
-    description:
-    types:
-    - boolean
   com.apple.private.security.storage.NanoTimeKit.FaceSupport:
     description:
     types:
@@ -7253,15 +7434,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.security.storage.pipelined:
-    description:
-    types:
-    - boolean
-  com.apple.private.security.storage.preferences:
-    description:
-    types:
-    - boolean
   com.apple.private.security.storage.PrivacyAccounting:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.SFAnalytics:
     description:
     types:
     - boolean
@@ -7278,10 +7455,6 @@ entitlements:
     types:
     - boolean
   com.apple.private.security.storage.SensorKit:
-    description:
-    types:
-    - boolean
-  com.apple.private.security.storage.SFAnalytics:
     description:
     types:
     - boolean
@@ -7325,15 +7498,79 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.security.storage.sysdiagnose.ScreenshotServicesService:
-    description:
-    types:
-    - boolean
   com.apple.private.security.storage.TCC:
     description:
     types:
     - boolean
   com.apple.private.security.storage.TimeMachine:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.Voicemail:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.Wireless:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.adprivacyd:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.amfid:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.automation-mode:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.chronod:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.containers:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.demo_backup:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.familycircled:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.fpsd:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.iCloudDrive:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.idcredd:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.mobilesync:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.multimodalsearchd:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.pipelined:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.preferences:
+    description:
+    types:
+    - boolean
+  com.apple.private.security.storage.sysdiagnose.ScreenshotServicesService:
     description:
     types:
     - boolean
@@ -7350,14 +7587,6 @@ entitlements:
     types:
     - boolean
   com.apple.private.security.storage.universalaccess:
-    description:
-    types:
-    - boolean
-  com.apple.private.security.storage.Voicemail:
-    description:
-    types:
-    - boolean
-  com.apple.private.security.storage.Wireless:
     description:
     types:
     - boolean
@@ -7392,14 +7621,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.SensorKit.prerequisite.readonly:
-    description:
-    types:
-    - boolean
-  com.apple.private.SensorKit.prerequisite.readwrite:
-    description:
-    types:
-    - boolean
   com.apple.private.sensorkit.pruner.power:
     description:
     types:
@@ -7420,15 +7641,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.sharing.unlock-manager:
-    description:
-    types:
-    - boolean
   com.apple.private.sharing.XPCHelperAccess:
     description:
     types:
     - boolean
-  com.apple.private.ShazamKit:
+  com.apple.private.sharing.unlock-manager:
     description:
     types:
     - boolean
@@ -7465,10 +7682,6 @@ entitlements:
     types:
     - boolean
   com.apple.private.siri.invoke:
-    description:
-    types:
-    - boolean
-  com.apple.private.SkyLight.displaycontrol:
     description:
     types:
     - boolean
@@ -7892,10 +8105,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.WebClips.read-write:
-    description:
-    types:
-    - boolean
   com.apple.private.webinspector.allow-carrier-remote-inspection:
     description:
     types:
@@ -7909,10 +8118,6 @@ entitlements:
     types:
     - boolean
   com.apple.private.webinspector.webinspectord:
-    description:
-    types:
-    - boolean
-  com.apple.private.WebKit.UnrestrictedApplePay:
     description:
     types:
     - boolean
@@ -8006,23 +8211,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.private.ZhuGeInternalSupport.CopyValue:
-    description:
-    types:
-    - boolean
-  com.apple.private.ZhuGeSupport.CopyValue:
-    description:
-    types:
-    - boolean
   com.apple.privatefederatedlearning.allowed:
     description:
     types:
     - boolean
   com.apple.proactive.ActionPrediction.predictions:
-    description:
-    types:
-    - boolean
-  com.apple.proactive.appDirectory:
     description:
     types:
     - boolean
@@ -8034,27 +8227,7 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.proactive.eventtracker:
-    description:
-    types:
-    - boolean
-  com.apple.proactive.experiments.responses:
-    description:
-    types:
-    - boolean
-  com.apple.proactive.hero.AppPrediction.predictions:
-    description:
-    types:
-    - boolean
   com.apple.proactive.HomeScreenSuggestion.xpc:
-    description:
-    types:
-    - boolean
-  com.apple.proactive.infoSuggestion.xpc:
-    description:
-    types:
-    - boolean
-  com.apple.proactive.input.suggester:
     description:
     types:
     - boolean
@@ -8118,6 +8291,30 @@ entitlements:
     description:
     types:
     - boolean
+  com.apple.proactive.appDirectory:
+    description:
+    types:
+    - boolean
+  com.apple.proactive.eventtracker:
+    description:
+    types:
+    - boolean
+  com.apple.proactive.experiments.responses:
+    description:
+    types:
+    - boolean
+  com.apple.proactive.hero.AppPrediction.predictions:
+    description:
+    types:
+    - boolean
+  com.apple.proactive.infoSuggestion.xpc:
+    description:
+    types:
+    - boolean
+  com.apple.proactive.input.suggester:
+    description:
+    types:
+    - boolean
   com.apple.proximitycontrol:
     description:
     types:
@@ -8131,54 +8328,6 @@ entitlements:
     types:
     - boolean
   com.apple.purplebuddy.budd.access:
-    description:
-    types:
-    - boolean
-  com.apple.QuartzCore.cache-asynchronous:
-    description:
-    types:
-    - boolean
-  com.apple.QuartzCore.debug:
-    description:
-    types:
-    - boolean
-  com.apple.QuartzCore.displayable-context:
-    description:
-    types:
-    - boolean
-  com.apple.QuartzCore.get-client-port:
-    description:
-    types:
-    - boolean
-  com.apple.QuartzCore.get-info:
-    description:
-    types:
-    - boolean
-  com.apple.QuartzCore.global-capture:
-    description:
-    types:
-    - boolean
-  com.apple.QuartzCore.occlusion-override:
-    description:
-    types:
-    - boolean
-  com.apple.QuartzCore.secure-capture:
-    description:
-    types:
-    - boolean
-  com.apple.QuartzCore.secure-mode:
-    description:
-    types:
-    - boolean
-  com.apple.QuartzCore.system-layers:
-    description:
-    types:
-    - boolean
-  com.apple.QuartzCore.webkit-end-points:
-    description:
-    types:
-    - boolean
-  com.apple.QuartzCore.webkit-limited-types:
     description:
     types:
     - boolean
@@ -8206,10 +8355,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.RemoteDisplay:
-    description:
-    types:
-    - boolean
   com.apple.remotemanagementd.ask-for-time:
     description:
     types:
@@ -8223,10 +8368,6 @@ entitlements:
     types:
     - boolean
   com.apple.remotenotification.preferences:
-    description:
-    types:
-    - boolean
-  com.apple.RootedSimulatorPath:
     description:
     types:
     - boolean
@@ -8246,15 +8387,43 @@ entitlements:
     description:
     types:
     - boolean
+  com.apple.rootless.storage.CoreAnalytics:
+    description:
+    types:
+    - boolean
+  com.apple.rootless.storage.CoreRoutine:
+    description:
+    types:
+    - boolean
+  com.apple.rootless.storage.CoreSpeech:
+    description:
+    types:
+    - boolean
+  com.apple.rootless.storage.ExtensibleSSO:
+    description:
+    types:
+    - boolean
+  com.apple.rootless.storage.MobileStorageMounter:
+    description:
+    types:
+    - boolean
+  com.apple.rootless.storage.MusicApp:
+    description:
+    types:
+    - boolean
+  com.apple.rootless.storage.QLThumbnailCache:
+    description:
+    types:
+    - boolean
+  com.apple.rootless.storage.RoleAccountStaging:
+    description:
+    types:
+    - boolean
   com.apple.rootless.storage.ane_model_cache:
     description:
     types:
     - boolean
   com.apple.rootless.storage.apfs_boot_mount:
-    description:
-    types:
-    - boolean
-  com.apple.rootless.storage.com.apple.mediaanalysisd:
     description:
     types:
     - boolean
@@ -8294,19 +8463,15 @@ entitlements:
     description:
     types:
     - boolean
+  com.apple.rootless.storage.com.apple.MobileAsset.MXLongFormVideoApps:
+    description:
+    types:
+    - boolean
   com.apple.rootless.storage.com.apple.MobileAsset.MacinTalkVoiceAssets:
     description:
     types:
     - boolean
   com.apple.rootless.storage.com.apple.MobileAsset.MailDynamicData:
-    description:
-    types:
-    - boolean
-  com.apple.rootless.storage.com.apple.MobileAsset.MXLongFormVideoApps:
-    description:
-    types:
-    - boolean
-  com.apple.rootless.storage.com.apple.MobileAsset.network.networknomicon:
     description:
     types:
     - boolean
@@ -8350,7 +8515,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.rootless.storage.CoreAnalytics:
+  com.apple.rootless.storage.com.apple.MobileAsset.network.networknomicon:
+    description:
+    types:
+    - boolean
+  com.apple.rootless.storage.com.apple.mediaanalysisd:
     description:
     types:
     - boolean
@@ -8366,14 +8535,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.rootless.storage.CoreRoutine:
-    description:
-    types:
-    - boolean
-  com.apple.rootless.storage.CoreSpeech:
-    description:
-    types:
-    - boolean
   com.apple.rootless.storage.dmd:
     description:
     types:
@@ -8382,23 +8543,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.rootless.storage.ExtensibleSSO:
-    description:
-    types:
-    - boolean
   com.apple.rootless.storage.facekit:
     description:
     types:
     - boolean
   com.apple.rootless.storage.fpsd:
-    description:
-    types:
-    - boolean
-  com.apple.rootless.storage.MobileStorageMounter:
-    description:
-    types:
-    - boolean
-  com.apple.rootless.storage.MusicApp:
     description:
     types:
     - boolean
@@ -8414,15 +8563,7 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.rootless.storage.QLThumbnailCache:
-    description:
-    types:
-    - boolean
   com.apple.rootless.storage.remotemanagementd:
-    description:
-    types:
-    - boolean
-  com.apple.rootless.storage.RoleAccountStaging:
     description:
     types:
     - boolean
@@ -8450,10 +8591,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.rootless.volume.iSCPreboot:
-    description:
-    types:
-    - boolean
   com.apple.rootless.volume.ISCRecovery:
     description:
     types:
@@ -8474,7 +8611,15 @@ entitlements:
     description:
     types:
     - boolean
+  com.apple.rootless.volume.iSCPreboot:
+    description:
+    types:
+    - boolean
   com.apple.routined.registration:
+    description:
+    types:
+    - boolean
+  com.apple.runningboard.NLPLearner:
     description:
     types:
     - boolean
@@ -8487,6 +8632,10 @@ entitlements:
     types:
     - boolean
   com.apple.runningboard.assertions.AppStoreComponents:
+    description:
+    types:
+    - boolean
+  com.apple.runningboard.assertions.PassbookUIService:
     description:
     types:
     - boolean
@@ -8523,10 +8672,6 @@ entitlements:
     types:
     - boolean
   com.apple.runningboard.assertions.music:
-    description:
-    types:
-    - boolean
-  com.apple.runningboard.assertions.PassbookUIService:
     description:
     types:
     - boolean
@@ -8582,10 +8727,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.runningboard.NLPLearner:
-    description:
-    types:
-    - boolean
   com.apple.runningboard.primitiveattribute:
     description:
     types:
@@ -8619,10 +8760,6 @@ entitlements:
     types:
     - boolean
   com.apple.runningboard.underlyingassertion:
-    description:
-    types:
-    - boolean
-  com.apple.Safari.PasswordBreachHelper:
     description:
     types:
     - boolean
@@ -8916,6 +9053,10 @@ entitlements:
     description:
     types:
     - array
+  com.apple.security.ts.NWSystemPathMonitor:
+    description:
+    types:
+    - boolean
   com.apple.security.ts.addressbook:
     description:
     types:
@@ -8990,10 +9131,6 @@ entitlements:
     description:
     types:
     - array
-  com.apple.security.ts.NWSystemPathMonitor:
-    description:
-    types:
-    - boolean
   com.apple.security.ts.opengl-or-metal:
     description:
     types:
@@ -9051,10 +9188,6 @@ entitlements:
     types:
     - boolean
   com.apple.selectivesharing.session_system:
-    description:
-    types:
-    - boolean
-  com.apple.SensorKit.effective-bundle:
     description:
     types:
     - boolean
@@ -9167,10 +9300,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.SharingServices:
-    description:
-    types:
-    - boolean
   com.apple.shortcuts.ActionKit:
     description:
     types:
@@ -9214,6 +9343,10 @@ entitlements:
     types:
     - boolean
   com.apple.signpostsupport.notification.listen:
+    description:
+    types:
+    - boolean
+  com.apple.siri.VoiceShortcuts.xpc:
     description:
     types:
     - boolean
@@ -9297,19 +9430,11 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.siri.VoiceShortcuts.xpc:
-    description:
-    types:
-    - boolean
   com.apple.siriinferenced:
     description:
     types:
     - boolean
   com.apple.siriknowledged:
-    description:
-    types:
-    - boolean
-  com.apple.SiriVOXService.client:
     description:
     types:
     - boolean
@@ -9326,10 +9451,6 @@ entitlements:
     types:
     - boolean
   com.apple.sos.trigger:
-    description:
-    types:
-    - boolean
-  com.apple.SoundAnalysis.CanHostDaemon:
     description:
     types:
     - boolean
@@ -9353,7 +9474,15 @@ entitlements:
     description:
     types:
     - boolean
+  com.apple.springboard.CFUserNotification:
+    description:
+    types:
+    - boolean
   com.apple.springboard.accessibility-window-hosting:
+    description:
+    types:
+    - boolean
+  com.apple.springboard.activateRemoteAlert:
     description:
     types:
     - boolean
@@ -9365,19 +9494,15 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.springboard.activateRemoteAlert:
-    description:
-    types:
-    - boolean
-  com.apple.springboard.addsNewIconsToHomeScreen:
-    description:
-    types:
-    - boolean
   com.apple.springboard.addWebClipToHomeScreen:
     description:
     types:
     - boolean
   com.apple.springboard.addWidgetToTodayView:
+    description:
+    types:
+    - boolean
+  com.apple.springboard.addsNewIconsToHomeScreen:
     description:
     types:
     - boolean
@@ -9389,15 +9514,19 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.springboard.allowallcallurls:
-    description:
-    types:
-    - boolean
   com.apple.springboard.allowIconVisibilityChanges:
     description:
     types:
     - boolean
+  com.apple.springboard.allowallcallurls:
+    description:
+    types:
+    - boolean
   com.apple.springboard.app-drag:
+    description:
+    types:
+    - boolean
+  com.apple.springboard.appLibraryRefresh:
     description:
     types:
     - boolean
@@ -9406,10 +9535,6 @@ entitlements:
     types:
     - boolean
   com.apple.springboard.applibrary.openpod:
-    description:
-    types:
-    - boolean
-  com.apple.springboard.appLibraryRefresh:
     description:
     types:
     - boolean
@@ -9426,10 +9551,6 @@ entitlements:
     types:
     - boolean
   com.apple.springboard.car.remote-alert:
-    description:
-    types:
-    - boolean
-  com.apple.springboard.CFUserNotification:
     description:
     types:
     - boolean
@@ -9590,10 +9711,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.springboard.setbadgestring:
-    description:
-    types:
-    - boolean
   com.apple.springboard.setCarPlayIconOrder:
     description:
     types:
@@ -9611,6 +9728,10 @@ entitlements:
     types:
     - boolean
   com.apple.springboard.setWantsLockButtonEvents:
+    description:
+    types:
+    - boolean
+  com.apple.springboard.setbadgestring:
     description:
     types:
     - boolean
@@ -9690,14 +9811,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.StatusKit.publish.types:
-    description:
-    types:
-    - array
-  com.apple.StatusKit.subscribe.types:
-    description:
-    types:
-    - array
   com.apple.stereoleader.soundboard:
     description:
     types:
@@ -9723,10 +9836,6 @@ entitlements:
     types:
     - boolean
   com.apple.studentd.configuration:
-    description:
-    types:
-    - boolean
-  com.apple.SubmitDiagInfo.tower-access:
     description:
     types:
     - boolean
@@ -9850,27 +9959,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.SystemConfiguration.SCDynamicStore-write-access:
-    description:
-    types:
-    - boolean
-  com.apple.SystemConfiguration.SCNetworkInterfaceSetAdvisory:
-    description:
-    types:
-    - boolean
-  com.apple.SystemConfiguration.SCPreferences-read-access:
-    description:
-    types:
-    - array
-  com.apple.SystemConfiguration.SCPreferences-write-access:
-    description:
-    types:
-    - array
-    - boolean
-  com.apple.SystemConfiguration.trailing-edge-agent:
-    description:
-    types:
-    - boolean
   com.apple.systemstatus.activityattribution:
     description:
     types:
@@ -9888,10 +9976,6 @@ entitlements:
     types:
     - boolean
   com.apple.tailspin.dump-output:
-    description:
-    types:
-    - boolean
-  com.apple.TapToRadarKit.service-access:
     description:
     types:
     - boolean
@@ -9916,26 +10000,6 @@ entitlements:
     types:
     - boolean
   com.apple.terminusd.deviceMonitor:
-    description:
-    types:
-    - boolean
-  com.apple.TextInput.autofill-action:
-    description:
-    types:
-    - boolean
-  com.apple.TextInput.lexicon-source:
-    description:
-    types:
-    - boolean
-  com.apple.TextInput.rdt.me:
-    description:
-    types:
-    - boolean
-  com.apple.TimeAppServices.stopwatchclient:
-    description:
-    types:
-    - boolean
-  com.apple.TimeAppServices.timerclient:
     description:
     types:
     - boolean
@@ -10008,15 +10072,7 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.UIKit.status-bar-override-allow:
-    description:
-    types:
-    - boolean
   com.apple.uikit.UISApplicationInitializationContextAlwaysVend:
-    description:
-    types:
-    - boolean
-  com.apple.UIKit.vends-view-services:
     description:
     types:
     - boolean
@@ -10029,10 +10085,6 @@ entitlements:
     types:
     - boolean
   com.apple.usb.authentication:
-    description:
-    types:
-    - boolean
-  com.apple.USBCEntitlement:
     description:
     types:
     - boolean
@@ -10080,14 +10132,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.VideoSubscriberAccount.DeveloperService:
-    description:
-    types:
-    - boolean
-  com.apple.VideoSubscriberAccount.PrivacyService:
-    description:
-    types:
-    - boolean
   com.apple.videotoolbox.hardwarevideodecoder:
     description:
     types:
@@ -10105,10 +10149,6 @@ entitlements:
     types:
     - boolean
   com.apple.voiced.can-dump-audio:
-    description:
-    types:
-    - boolean
-  com.apple.VoiceOverTouch:
     description:
     types:
     - boolean
@@ -10244,16 +10284,6 @@ entitlements:
     description:
     types:
     - boolean
-  com.apple.ZhuGe.private-connection:
-    description:
-    types:
-    - boolean
-  com.CarPlayApp.service:
-    description:
-    types:
-    - boolean
-  DataProtectionClass:
-    description:
   dynamic-codesigning:
     description:
     types:
@@ -10270,10 +10300,6 @@ entitlements:
     description:
     types:
     - boolean
-  HKReadAuthorizationOverrideEntitlement:
-    description:
-    types:
-    - array
   iCloudServices:
     description:
     types:
@@ -10290,22 +10316,14 @@ entitlements:
     description:
     types:
     - boolean
-  LSCounterpartIdentifiers:
-    description:
-    types:
-    - array
   lskd-client:
     description:
   lskdd-client:
-    description:
-  MachServices:
     description:
   modify-anchor-certificates:
     description:
     types:
     - boolean
-  NSCameraUsageDescription:
-    description:
   platform-application:
     description:
     types:
@@ -10318,34 +10336,16 @@ entitlements:
     description:
     types:
     - boolean
-  SBAppUsesLocalNotifications:
-    description:
-    types:
-    - boolean
-  SBStarkCapable:
-    description:
-    types:
-    - boolean
   seatbelt-profiles:
     description:
     types:
     - array
   secure-key-vault-client:
     description:
-  Siri:
-    description:
-    types:
-    - boolean
   sysctl-read:
     description:
     types:
     - array
-  UIApplicationShowsViewsWhileLocked:
-    description:
-    types:
-    - boolean
-  UNUserNotificationCenter:
-    description:
   user-preference-read:
     description:
     types:

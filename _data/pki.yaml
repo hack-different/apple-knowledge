@@ -35,35 +35,10 @@ constants:
 oids:
   1.2.840.113635.100.1:
     title: Apple Trust Policy
-
-  
-  1.2.840.113635.100.6.2:
-    title: Apple Security Algorithm
-  1.2.840.113635.100.6.3:
-    title: Apple Dot Mac Certificate
-  1.2.840.113635.100.6.4:
-    title: Apple Extended Key Usage
-  1.2.840.113635.100.6.5:
-    title: Apple Certificate Policies
-  1.2.840.113635.100.6.44:
-    title: Apple Pinning Allow Test Certs UCRT
-    name: applePinningAllowTestCertsUCRT
-    symbol: applePinningAllowTestCertsUCRT
-
-  1.2.840.113635.100.8.9.1:
-  1.2.840.113635.100.8.9.2:
-  1.2.840.113635.100.8.11.1:
-  1.2.840.113635.100.8.12:
-    name: appleFactoryTrustModeSigning
-  1.2.840.113635.100.8.13.1:
-  1.2.840.113635.100.8.13.2:
-  1.2.840.113635.100.8.13.3:
-
   1.2.840.113635.100.10:
     description: "`ucrt` extension root"
   1.2.840.113635.100.10.1:
     name: appleUniqueDeviceCertificateHardwareProperties
-
     type: sequence
     description: Hardware device identifiers of the machine the certificate is issued
       to contains BORD, CHIP, ECID, srnm, udid, seid
@@ -166,6 +141,8 @@ oids:
     example: PUT/FSCl:sik-FXFYFXFFYFFEX-QQRRRDEETFEFYCEIESLIREILCILESCLSELRESERSER
   1.2.840.113635.100.6.17:
     description: Contains the name of the key
+  1.2.840.113635.100.6.2:
+    title: Apple Security Algorithm
   1.2.840.113635.100.6.2.1:
     apple_description: Marker for the WWDR Intermediate Certificate
     symbol: oidAppleProvisioningProfile
@@ -227,6 +204,8 @@ oids:
     symbol: oidAppleCertExtAST2DiagnosticsServerAuthProd
   1.2.840.113635.100.6.27.9:
     symbol: oidAppleCertExtHomeKitServerAuth
+  1.2.840.113635.100.6.3:
+    title: Apple Dot Mac Certificate
   1.2.840.113635.100.6.3.1:
     apple_description: Apple World Wide Developer Relations Client SSL Certificates
       for Accessing the Development Apple Push Service
@@ -243,6 +222,8 @@ oids:
     symbol: oidAppleCertExtApplePPQSigningProd
   1.2.840.113635.100.6.39:
     symbol: oidAppleCertExtCryptoServicesExtEncryption
+  1.2.840.113635.100.6.4:
+    title: Apple Extended Key Usage
   1.2.840.113635.100.6.4.1:
     apple_description: Extension Markers for device version string, expects UTF8 to
       follow in SubjectAltName
@@ -251,6 +232,12 @@ oids:
       in SubjectAltName
   1.2.840.113635.100.6.43:
     symbol: oidAppleCertExtATVVPNProfileSigning
+  1.2.840.113635.100.6.44:
+    title: Apple Pinning Allow Test Certs UCRT
+    name: applePinningAllowTestCertsUCRT
+    symbol: applePinningAllowTestCertsUCRT
+  1.2.840.113635.100.6.5:
+    title: Apple Certificate Policies
   1.2.840.113635.100.6.5.1:
     apple_description: Apple iTunes Store Certificates for Signing Receipts of Purchases
       from the iTS
@@ -267,12 +254,16 @@ oids:
       & Authorization: Policy'
   1.2.840.113635.100.8:
     description: Apple Local Device Attestation (BAA)
+  1.2.840.113635.100.8.10.2:
+  1.2.840.113635.100.8.11.1:
+  1.2.840.113635.100.8.12:
+    name: appleFactoryTrustModeSigning
+  1.2.840.113635.100.8.13.1:
+  1.2.840.113635.100.8.13.2:
+  1.2.840.113635.100.8.13.3:
   1.2.840.113635.100.8.2:
     symbol: CTOidItemAppleDeviceAttestationNonce
     name: appleDeviceAttestationNonce
-  1.2.840.113635.100.8.10.2:
-
-
   1.2.840.113635.100.8.4:
     symbol: CTOidItemAppleDeviceAttestationHardwareProperties
     name: appleDeviceAttestationHardwareProperties
@@ -316,6 +307,8 @@ oids:
     - Basic Attestation User Sub CA2
     ous:
     - BAA Certification
+  1.2.840.113635.100.8.9.1:
+  1.2.840.113635.100.8.9.2:
   1.3.6.1.4.1.311.2.1.12:
     symbol: oidMicrosoftSpcSpOpusInfo
   1.3.6.1.4.1.311.2.1.15:

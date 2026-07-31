@@ -13,13 +13,13 @@ metadata:
   - types
   - cryptex_properties
 property_collections:
-  - lpol_properties
-  - cryptex_objects
-  - cryptex_properties
-  - manifest_properties
-  - img4_tags
-  - objects
-  - der
+- lpol_properties
+- cryptex_objects
+- cryptex_properties
+- manifest_properties
+- img4_tags
+- objects
+- der
 unmapped:
 - ApRelaxedImageVerification
 - "@BCert"
@@ -169,6 +169,23 @@ types:
           `rvok` (Revocation list) and `trpk` (trusted public keys?)
 lpol_properties:
   AMNM:
+  BNCH:
+  BORD:
+  CEPO:
+  CHIP:
+  CPRO:
+  CSEC:
+  DGST:
+    title: Hash Digest
+  DPRO:
+  DSEC:
+  ECID:
+  EPRO:
+  ESEC:
+  LCST:
+  LNCH:
+  RNCH:
+  SDOM:
   auxi:
     title: Auxiliary Image4 Manifest Hash (`auxi`)
     description: After the system verifies that the UAKL hash matches what’s found
@@ -222,12 +239,8 @@ lpol_properties:
   bat0:
   bat1:
   batf:
-  BNCH:
-  BORD:
-  CEPO:
   chg0:
   chg1:
-  CHIP:
   coih:
     title: CustomOS Image4 Manifest Hash (coih)
     description: The `coih` is an SHA384 hash of CustomOS Image4 manifest. The payload
@@ -239,17 +252,8 @@ lpol_properties:
     access:
       write:
       - 1TR
-  CPRO:
-  CSEC:
-  DGST:
-    title: Hash Digest
   diag:
-  DPRO:
-  DSEC:
   dtre:
-  ECID:
-  EPRO:
-  ESEC:
   gaid:
     description: Gaia Authentication ID (Apple Internal)
   glyc:
@@ -282,8 +286,6 @@ lpol_properties:
       - 1TR
       - recoveryOS
       - macOS
-  LCST:
-  LNCH:
   lobo:
     title: Local Boot Object
     description: Local Boot Object.  Indicates that the object is to be used as the
@@ -351,7 +353,6 @@ lpol_properties:
       - recoveryOS
       - macOS
   recm:
-  RNCH:
   rolp:
     description: recoveryOS local policy
     type: boolean
@@ -387,7 +388,6 @@ lpol_properties:
       - recoveryOS
       - macOS
   rsep:
-  SDOM:
   sepi:
   sip0:
     title: System Integrity Protection (SIP) 0 Status - Overall
@@ -450,6 +450,10 @@ lpol_properties:
     - recoveryOS
     - macOS
 cryptex_properties:
+  UDID:
+    title: Universal Device Identifier
+    name: Cryptex1,UDID
+    description: universal device identifier
   augs:
     title: Augment System
     description: Auxiliary System Image Included in APTicket CA extensions, as well
@@ -507,10 +511,6 @@ cryptex_properties:
     type: integer
     roots:
     - ExtraContent
-  UDID:
-    title: Universal Device Identifier
-    name: Cryptex1,UDID
-    description: universal device identifier
   vnum:
     title: Version Number
     description: Version Number - Update Maximum
@@ -555,11 +555,6 @@ cryptex_objects:
     roots:
     - ExtraContent
 manifest_properties:
-  acdc:
-    description: Apple Connect Developer Certificate
-  acid:
-    description: Apple Connect ID (AppleInternal)
-    type: integer
   AMNM:
     title: Allow Mix-and-Match
     description: allow mix-n-match When set to true, img4s can be any valid signed
@@ -604,8 +599,6 @@ manifest_properties:
           description: Asset Cryptex (App Usually)
     type: nonce
     subtype:
-  oppd:
-    title: Owner Password Permission Delegation
   BORD:
     title: Board Identifier
     description: |-
@@ -654,6 +647,57 @@ manifest_properties:
     description: Exclusive chip identifier.  This is burned into an eFuse at time
       of manufacture and unique across all devices sharing the same CHIP
     width: 8
+  LNCH:
+    description: Local Policy Next Cryptographic Hash
+    name: ApLocalNonceHash
+  Mod#:
+  RNCH:
+    description: Remote Nonce Cryptographic Hash
+  RSCH:
+    description: Research mode
+  Regn:
+    description: Region Code
+    example: LL/A
+    type: string
+    manifest: true
+  SDOM:
+    title: Security Domain
+    description: |-
+      Security domain, or which set of certificates govern device security.
+
+      Known values:
+        0x01 - Main Production certificates
+    width: 2
+    alias:
+    - security-domain
+  SECM:
+    description: Security Mode
+  SNON:
+    description: SEP Nonce
+  SrNm:
+    description: Unit Serial Number
+    manifest: true
+  TMac:
+    description: Thunderbolt MAC Address
+    manifest: true
+  UID_MODE:
+    title: UID as GID Key Mode
+    type: boolean
+    request: true
+    description: Used to create keybags for the UID instead of the GID key, such as
+      the use of `sepi` or booted SEP image firmware (as SEP hibernation data is crypted
+      with the devices UID rather then the GID).
+    see:
+    - uidm
+  WMac:
+    description: Wireless MAC Address
+  WSKU:
+    description: Wireless SKU
+  acdc:
+    description: Apple Connect Developer Certificate
+  acid:
+    description: Apple Connect ID (AppleInternal)
+    type: integer
   esdm:
     description: Extended Security Domain Mode
     type: integer
@@ -673,9 +717,6 @@ manifest_properties:
   iuou:
     description: Internal Use Only Unit
     name: Ap,InternalUseOnlyUnit
-  LNCH:
-    description: Local Policy Next Cryptographic Hash
-    name: ApLocalNonceHash
   love:
     title: Operating System Version
     description: The love indicates the OS version that the LocalPolicy is created
@@ -696,11 +737,12 @@ manifest_properties:
   manx:
   mmap:
     description: Memory Map
-  Mod#:
   nsih:
     description: Next Stage Image4 Hash
   nsph:
     description: Next Stage pre-boot splat manifest hash
+  oppd:
+    title: Owner Password Permission Delegation
   prtp:
     description: Product Type String
     type: string
@@ -714,17 +756,8 @@ manifest_properties:
     description: Appears in certificates issues by factory such as `T6031-SDOM1-TssLive-ManifestKey-RevA-Factory`.
       Potentially indicates that the policy is for a recovery boot only.
     type: boolean
-  Regn:
-    description: Region Code
-    example: LL/A
-    type: string
-    manifest: true
   rfcg:
     type: boolean
-  RNCH:
-    description: Remote Nonce Cryptographic Hash
-  RSCH:
-    description: Research mode
   rsch:
     description: research mode
   rso0:
@@ -744,18 +777,6 @@ manifest_properties:
     values:
     - iphoneos
     - macos
-  SDOM:
-    title: Security Domain
-    description: |-
-      Security domain, or which set of certificates govern device security.
-
-      Known values:
-        0x01 - Main Production certificates
-    width: 2
-    alias:
-    - security-domain
-  SECM:
-    description: Security Mode
   sei3:
     description: Secure Enclave ID for EL3 Appears to have a value identical to `seid`.
   seid:
@@ -763,13 +784,8 @@ manifest_properties:
   sika:
     description: System Identity Key Access/Attestation?
     name: Ap,SikaFuse
-  SNON:
-    description: SEP Nonce
   snon:
     description: SEP Nonce
-  SrNm:
-    description: Unit Serial Number
-    manifest: true
   sski:
     description: SHA2 os some kind - sep/system subject key identifier?
     type: binary
@@ -782,32 +798,32 @@ manifest_properties:
     name: Ap,TargetType
     roots:
     - ManifestKey-DataCenter
-  TMac:
-    description: Thunderbolt MAC Address
-    manifest: true
-  UID_MODE:
-    title: UID as GID Key Mode
-    type: boolean
-    request: true
-    description: Used to create keybags for the UID instead of the GID key, such as
-      the use of `sepi` or booted SEP image firmware (as SEP hibernation data is crypted
-      with the devices UID rather then the GID).
-    see:
-    - uidm
   uidm:
     description: UID Mode (Enabled)
     type: boolean
     roots:
     - ManifestKey-DataCenter
-  WMac:
-    description: Wireless MAC Address
-  WSKU:
-    description: Wireless SKU
 objects:
+  FSC2:
+    title: Factory SysConfig
+  IM4M:
+    title: IMG4 Manifest
+  MANB:
+    title: Manifest Body
+  MANP:
+    title: Manifest Proeprties
+  WCHF:
+    description: Wireless Charging Firmware
   acfw:
     description:
   almo:
     description: Some internal iBootable image.  Unknown purpose
+  ane1:
+    title: Apple Neural Engine (Gen1)
+  ane2:
+    title: Apple Neural Engine (Gen2)
+  ane3:
+    title: Apple Neural Engine (Gen3)
   anef:
     description: Apple Neural Engine Firmware
     type: digest-object
@@ -815,6 +831,8 @@ objects:
     - ManifestKey-DataCenter
   ansf:
     description: NAND Storage Firmware
+  aop2:
+    title: Always-On Processor (Gen2)
   aopf:
     description: Always on processor firmware
     type: digest-object
@@ -826,10 +844,6 @@ objects:
     description: Audio Power Attach Chime
   auxk:
     description: Auxiliary Kernel Cache
-  fdrd:
-    title: Factory Diagnostic Ramdisk
-  sePk:
-    title: Secure Element Public Key
   avef:
     title: AV Encryption (DRM) Firmware
     description: AV Encryption (DRM) Firmware
@@ -887,12 +901,12 @@ objects:
     recovery: true
   dven:
     description: Display Vendor Data
-  MANB:
-    title: Manifest Body
-  MANP:
-    title: Manifest Proeprties
   esca:
     description: Effective Software CA
+  excl:
+    title: exclaveOS
+  fdrd:
+    title: Factory Diagnostic Ramdisk
   fsca:
     description: Factory Software CA
   ftab:
@@ -954,12 +968,6 @@ objects:
     description: Local Policy
   magg:
     description: Maggie Firmware
-  ane1:
-    title: Apple Neural Engine (Gen1)
-  ane2:
-    title: Apple Neural Engine (Gen2)
-  aop2:
-    title: Always-On Processor (Gen2)
   mefi:
     description: MacEFI (T2 firmware for Intel chip)
   msys:
@@ -976,16 +984,6 @@ objects:
   mtpf:
     title: Multi-Thread Power Firmware
   nefw:
-  trpk:
-    title: Trusted Public Keys
-  rvok:
-    title: Revocation List
-  rssl:
-    title: Recovery SSL
-  IM4M:
-    title: IMG4 Manifest
-  secb:
-    title: Security Body
   pdmg:
     description: Personalized Disk Image
   pmcf:
@@ -1000,11 +998,11 @@ objects:
     subtype: firmware
     firmware: apple-nand-storage
     restore: true
-  rdc2:
-    title: Recovery DisplayPort Controller
   rcio:
     description: Restore TypeC IO
     restore: true
+  rdc2:
+    title: Recovery DisplayPort Controller
   rdcp:
     description: Recovery DCP Firmware
     restore: true
@@ -1015,8 +1013,6 @@ objects:
     title: Restore Device Tree
     description:
       firmware_name: RestoreDeviceTree
-  trxm:
-    title: Trusted Execution Monitor
   recm:
     description: Recovery Mode
     firmware_name: RecoveryMode
@@ -1036,23 +1032,17 @@ objects:
     description: Restore Logo
     restore: true
     firmware_name: RestoreLogo
-  FSC2:
-    title: Factory SysConfig
   rosi:
     title: recoveryOS Image
     description:
-  xhcf:
-    title: USB xHCI Firmware
-  ane3:
-    title: Apple Neural Engine (Gen3)
-  excl:
-    title: exclaveOS
   rsep:
     title: Restore SEP Image
     description: Restore SEP Image, paired with oppd/tbms
     type: string
     firmware_name: RestoreSEP
     encoding: sha2-384
+  rssl:
+    title: Recovery SSL
   rtmu:
     description: Restore TMU for AP
     type: digest-object
@@ -1060,8 +1050,14 @@ objects:
     recovery: true
   rtsc:
     description: Recovery Trust Cache
+  rvok:
+    title: Revocation List
   scef:
     description: SEP Firmware (Boot Firmware without RAM Image)
+  sePk:
+    title: Secure Element Public Key
+  secb:
+    title: Security Body
   sepi:
     title: Secure Enclave Processor Image
     description: SEP Image (Booted RAM Image / Hibernation Data)
@@ -1085,25 +1081,52 @@ objects:
         chip: 65286
         board: 240
         security_domain: 1
+  trpk:
+    title: Trusted Public Keys
   trst:
     description: Trust Object
     type: digest-object
     subtype: trust-object
+  trxm:
+    title: Trusted Execution Monitor
   tsys:
     description: Test System Volume
-  WCHF:
-    description: Wireless Charging Firmware
   wchf:
     description: Wireless Charging Framework
   xbtc:
     description: x86 Boot Trust Cache
+  xhcf:
+    title: USB xHCI Firmware
   xsys:
     description: x86 System Root Hash
 img4_tags:
-  scrt:
-    title: Silicon Certificate (SIK)
-  tagt:
-    title: Target Board Name (Processor)
+  ADCL:
+    description: Apple Display Calibration
+  BLDS:
+    description: Boot LocalPolicy Digest String?
+  BNCN:
+    title: Board Nonce
+  CLHS:
+    description: Chained LocalPolicy Hash String
+  DPRO:
+    title: Demote Production
+    description: Demote from Production Request Value is used by TSS sever to issue
+      EPRO values, or effective AP production state.
+  DSEC:
+    title: Demote Security
+    description: Demote from Secure Request Value is used by TSS server to issue ESEC
+      values, or effective AP Security Mode should the requester be authorized.  These
+      requests are not available to consumers, only to Apple Internal.
+  EKEY:
+    title: Effective Key Type
+  EPRO:
+    title: Effective Promotion Value
+  ESEC:
+    title: Effective Security
+  PAYP:
+    description:
+  SPTM:
+    description: Secure Page Table Monitor
   ache:
     description:
   acib:
@@ -1111,10 +1134,6 @@ img4_tags:
   aciw:
     description:
   adba:
-  gf1f:
-    title: Apple Graphics Stage1 Firmware
-  ADCL:
-    description: Apple Display Calibration
   ader:
     description:
   agfi:
@@ -1127,6 +1146,8 @@ img4_tags:
   apmv:
     title: OS Version
     description:
+  arms:
+    title: ARM Size
   ater:
     description:
   atkh:
@@ -1135,12 +1156,8 @@ img4_tags:
     description:
   batf:
   berb:
-  BLDS:
-    description: Boot LocalPolicy Digest String?
   bles:
     description:
-  BNCN:
-    title: Board Nonce
   cfel:
     description:
     firmware_name: CFELoader
@@ -1149,42 +1166,23 @@ img4_tags:
     recovery: true
   ckih:
     description: Chained Kernel Image4 Hash
-  CLHS:
-    description: Chained LocalPolicy Hash String
   clid:
     description: Class Identifier
-  tz0s:
-    title: TrustZone EL0 Size
-  arms:
-    title: ARM Size
   cmsv:
-    description:
-  dali:
     description:
   cphy:
     title: USB-C Physical Controller
+  dCfg:
+    title: Device Configuration
+  dali:
+    description:
   data:
     description:
   diag:
     description: Diagnostic (AHT) Image
     firmware_name: Diags
-  ucrt:
-    title: User Certificate
-  dCfg:
-    title: Device Configuration
-  iCCl:
-    title: iCloud Activation Lock Clear
   disk:
     description:
-  DPRO:
-    title: Demote Production
-    description: Demote from Production Request Value is used by TSS sever to issue
-      EPRO values, or effective AP production state.
-  DSEC:
-    title: Demote Security
-    description: Demote from Secure Request Value is used by TSS server to issue ESEC
-      values, or effective AP Security Mode should the requester be authorized.  These
-      requests are not available to consumers, only to Apple Internal.
   efib:
     description: EFI Bootloader
   eg0n:
@@ -1216,11 +1214,9 @@ img4_tags:
     description: Factory Trust Operations Test
   fuos:
   gdmg:
-  lcrt:
-    title: Local Certificate
+  gf1f:
+    title: Apple Graphics Stage1 Firmware
   ginf:
-  rspt:
-    title: Restore Secure Page Table Monitor
   ging:
     description:
   glyc:
@@ -1242,14 +1238,14 @@ img4_tags:
     description: Hypervisor OS Partition 0 (`dom0`)
   hypr:
     description: Hypervisor Related
+  iCCl:
+    title: iCloud Activation Lock Clear
   ienv:
     description: Install Environment?
-  sm3f:
-    title: Secure M3 Firmware
+  inst:
+    title: Key Instance
   isor:
     description:
-  tstp:
-    title: Testing Product
   itst:
     description: Installer Test?
   kdlv:
@@ -1258,6 +1254,8 @@ img4_tags:
     description:
   lckr:
     description: Locker - Used for Effaceable Storage end Obliteration
+  lcrt:
+    title: Local Certificate
   lphp:
     description: Local Policy Hash Protection?
   lpol:
@@ -1270,12 +1268,6 @@ img4_tags:
   mmer:
     description: Memory Map Entitlements for Recovery
     recovery: true
-  EKEY:
-    title: Effective Key Type
-  EPRO:
-    title: Effective Promotion Value
-  ESEC:
-    title: Effective Security
   mmsv:
     description: Memory Map System
   mpro:
@@ -1283,6 +1275,8 @@ img4_tags:
   msec:
     description: Memory/Modem? Security
   mspr:
+  msrf:
+    title: Machine Specific Register Filter
   name:
     description:
   nrde:
@@ -1303,10 +1297,6 @@ img4_tags:
     description:
   owns:
     description:
-  PAYP:
-    description:
-  inst:
-    title: Key Instance
   pcrp:
     description: Production certificate root
   pert:
@@ -1332,19 +1322,21 @@ img4_tags:
   rddg:
     description: Ramdisk for Debugging
   refk:
+  rspt:
+    title: Restore Secure Page Table Monitor
   rtpf:
     description:
+  rtrx:
+    title: Restore TrustCache Extensions
+  scrt:
+    title: Silicon Certificate (SIK)
   slvn:
     description:
+  sm3f:
+    title: Secure M3 Firmware
   snid:
-  msrf:
-    title: Machine Specific Register Filter
-  strc:
-    title: Apple Firmware Kit??
   sptm:
     title: Secure Page Table Monitor
-  SPTM:
-    description: Secure Page Table Monitor
   srvn:
   ssca:
     description: SEP Subject Certificate Authority?
@@ -1354,20 +1346,28 @@ img4_tags:
     description: Stage 1 Bootloader
     type: string
     encoding: sha2-384
+  strc:
+    title: Apple Firmware Kit??
+  tagt:
+    title: Target Board Name (Processor)
   tbmr:
     description: Trusted Boot Measurement (Recovery/Root?)
   tery:
     description:
   test:
     description:
-  rtrx:
-    title: Restore TrustCache Extensions
   tics:
     description:
+  tstp:
+    title: Testing Product
+  tz0s:
+    title: TrustZone EL0 Size
   ucer:
     description: User Cert
   ucon:
     description: User Console Connection
+  ucrt:
+    title: User Certificate
   vice:
     description:
   vkdl:
