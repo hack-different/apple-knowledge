@@ -53,7 +53,7 @@ module TIPW
     def initialize(content = nil)
       key_match = KEY_TEMPLATE_REGEX.match(content)[1]
       @descriptors = {}
-      @keybags = {} #: hash[string, keybags]
+      @keybags = {} # : hash[string, keybags]
       process_pairs(key_match.scan(KEY_VALUE_PAIR).to_h { |match| [match[0], match[1]] })
       cleanup_useless!
     end
@@ -73,7 +73,7 @@ module TIPW
     def append_key(name, type, value)
       return if IGNORE_VALUES.include?(value.downcase)
 
-      @keybags[name] ||= {} #: keybags
+      @keybags[name] ||= {} # : keybags
       @keybags[name][type.downcase] = value.downcase unless IGNORE_VALUES.include?(value)
     end
 

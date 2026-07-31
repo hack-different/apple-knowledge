@@ -20,42 +20,41 @@ module AppleData
       @data['classes'] = @classes.map(&:to_h)
     end
 
+    # A single IOKit class
+    class IORegClass
+      attr_accessor :description, :name, :parents, :known_names
 
-  # A single IOKit class
-  class IORegClass
-    attr_accessor :description, :name, :parents, :known_names
+      def initialize(klass_name)
+        @name = klass_name
+        @parents = [] # : [string]
+      end
 
-    def initialize(klass_name)
-      @name = klass_name
-      @parents = [] #: [string]
-    end
+      def self.for_name(name)
+        @instances[name] = IORegClass.new name unless @instances.key? name
 
-    def self.for_name(name)
-      @instances[name] = IORegClass.new name unless @instances.key? name
+        @instances[name]
+      end
 
-      @instances[name]
-    end
+      def self.values
+        @instances.values.sort_by(&:name)
+      end
 
-    def self.values
-      @instances.values.sort_by(&:name)
-    end
+      def self.load_one(hash)
+        instance = IORegClass.for_name hash['name']
+        instance.description = hash['description']
+        instance.parents = hash['parents'] || []
+        instance.known_names = hash['known_names'] || []
+        instance.known_names.sort!
+        instance
+      end
 
-    def self.load_one(hash)
-      instance = IORegClass.for_name hash['name']
-      instance.description = hash['description']
-      instance.parents = hash['parents'] || []
-      instance.known_names = hash['known_names'] || []
-      instance.known_names.sort!
-      instance
-    end
+      def to_h
+        { 'name' => @name, 'description' => @description, 'parents' => @parents, 'known_names' => @known_names }
+      end
 
-    def to_h
-      { 'name' => @name, 'description' => @description, 'parents' => @parents, 'known_names' => @known_names }
-    end
-
-    def user_client?
-      @parents.include? 'IOUserClient'
+      def user_client?
+        @parents.include? 'IOUserClient'
+      end
     end
   end
 end
-  end

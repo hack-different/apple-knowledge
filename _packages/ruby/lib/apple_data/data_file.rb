@@ -58,7 +58,7 @@ module AppleData
       @data['metadata'].reverse_merge!({ 'description' => nil, 'credits' => [] })
       collections = @data['metadata']['collections'] ||= []
       collections.each do |name|
-        self.collection name
+        collection name
       end
     end
 
@@ -66,7 +66,7 @@ module AppleData
       def initialize(data_file, collection_name)
         @data_file = data_file
         @collection_name = collection_name
-        @collection_data = @data_file.@collections[@collection_name]
+        @collection_data = @data_file.data[@collection_name]
       end
     end
   end

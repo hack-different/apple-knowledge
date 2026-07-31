@@ -85,9 +85,9 @@ group :development, :test do
   gem 'sqlite3'
   gem 'steep'
   gem 'tapioca', require: false
+  gem 'typeprof'
   gem 'typhoeus'
   gem 'wikicloth'
-  gem 'typeprof'
 end
 
 # rubocop:enable Metrics/BlockLength
