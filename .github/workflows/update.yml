@@ -40,7 +40,7 @@ jobs:
 
       - name: Cache Ruby Gems and Bundle
         id: cache-gems
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-build-ruby-${{ hashFiles('Gemfile.lock') }}
@@ -55,7 +55,7 @@ jobs:
 
       - name: Cache Temporary Data
         id: cache-tmp
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: tmp
           key: data-update-cache

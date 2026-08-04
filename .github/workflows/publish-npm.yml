@@ -24,7 +24,7 @@ jobs:
 
       - name: Cache Node Packages
         id: cache-node
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path:  _packages/node/node_modules
           key: ${{ runner.os }}-publish-npm-${{ hashFiles('_packages/node/yarn.lock') }}
