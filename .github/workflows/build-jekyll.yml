@@ -38,7 +38,7 @@ jobs:
         run: bundle exec jekyll build
 
       - name: Archive Site Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: data-ci-site
           path: _site

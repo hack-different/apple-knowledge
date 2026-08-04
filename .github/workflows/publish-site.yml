@@ -29,7 +29,7 @@ jobs:
           target_path: /
 
       - name: Archive Data Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: data-site
           path: _site

@@ -52,7 +52,7 @@ jobs:
         run: gem build *.gemspec
 
       - name: Archive Gem Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: package-gem-${{ matrix.ruby-version }}
           path: _packages/ruby/*.gem
