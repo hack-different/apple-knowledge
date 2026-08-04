@@ -50,7 +50,7 @@ jobs:
         run: poetry install --no-interaction --no-root
 
       - name: Download Python Package Artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: package-python
           path: ./_packages/python/dist/

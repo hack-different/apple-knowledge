@@ -6,6 +6,7 @@ on:
 
 jobs:
   greeting:
+    name: Greet Contributors
     runs-on: ubuntu-latest
     permissions:
       issues: write
