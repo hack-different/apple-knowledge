@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     environment: gh-pages
     steps:
+      - name: Install Dependencies
+        run: sudo apt install libidn-dev
+
       - uses: actions/checkout@v3
 
       - id: gem-cache
