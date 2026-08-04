@@ -18,10 +18,10 @@ jobs:
       packages: write
 
     steps:
-      - name: Setup Ruby 3.2
+      - name: Setup Ruby 4.0.5
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2.2
+          ruby-version: 4.0.5
 
       - uses: actions/download-artifact@v3
         name: Download Ruby Package Artifacts
