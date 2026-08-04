@@ -25,7 +25,7 @@ jobs:
 
       - name: Cache Ruby Gems and Bundle
         id: cache-gems
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-build-ci-ruby-${{ hashFiles('Gemfile.lock') }}
