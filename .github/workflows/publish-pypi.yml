@@ -55,10 +55,8 @@ jobs:
           name: package-python
           path: ./_packages/python/dist/
 
-      - name: Publish package
-        uses: pypa/gh-action-pypi-publish@v1.5.0
+      - name: Publish to PyPI
+        # Note: No "password" or "api-token" secret is referenced here
+        uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          packages_dir: ./_packages/python/dist/
-          print_hash: true
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
+          packages-dir: ./_packages/python/dist/
