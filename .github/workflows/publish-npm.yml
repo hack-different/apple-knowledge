@@ -31,9 +31,8 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 20
-          cache: yarn
-          cache-dependency-path: _packages/node/bun.lock
+          node-version: 24
+          cache: bun
           registry-url: https://registry.npmjs.org/
 
       - name: Download Node Package Artifacts
