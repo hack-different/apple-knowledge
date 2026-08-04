@@ -6,7 +6,7 @@ class SHASum
 
   # @param [String] input hash to check
   # @return [String] type of hash
-  def self.shasum_type?(input)
+  def self.shasum_type(input)
     case input.length
     when 32
       'md5'
@@ -42,7 +42,7 @@ class SHASum
     @sums.each do |filename, hash|
       entry = collection.ensure_key filename, description: false
       entry['hashes'] ||= {}
-      entry['hashes'][SHASum.shasum_type?(hash)] = hash
+      entry['hashes'][SHASum.shasum_type(hash)] = hash
     end
   end
 end

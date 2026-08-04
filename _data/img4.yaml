@@ -20,6 +20,7 @@ property_collections:
 - img4_tags
 - objects
 - der
+- core
 unmapped:
 - ApRelaxedImageVerification
 - "@BCert"
@@ -78,15 +79,19 @@ unmapped:
 - BbBehavior
 core:
   IM4M:
+    title: IMG4 Manifest
     description: Image4 Manifest Object (No payload, only manifest).  IM4M, verion,
   IM4P:
+    title: IMG4 Payload
     description: Image4 Payload (No Manifest, Only Data).  Contains IM4P, type, description,
       data and optional keybags
   IM4R:
     description: Image4 Recovery
   IMG4:
+    title: IMG4 File
     description: Wrapper for all Image4 Objects (Payload, Manifest, Recovery)
   MANB:
+    title: Manifest Body
     description: Manifest Body
   MANP:
     title: Manifest Proeprties
@@ -293,7 +298,7 @@ lpol_properties:
       boots.
   logo:
   lpnh:
-    title: LocalPolicy Nonce Hash (lpnh)
+    title: LocalPolicy Nonce Hash
     description: The lpnh is used for anti-replay of the LocalPolicy. This is an SHA384
       hash of the LocalPolicy Nonce (LPN), which is stored in the Secure Storage Component
       and accessible using the Secure Enclave Boot ROM or Secure Enclave. The raw
@@ -316,7 +321,7 @@ lpol_properties:
       - recoveryOS
       - macOS
   nish:
-    title: Next Stage Image4 Manifest Hash (nsih)
+    title: Next Stage Image4 Manifest Hash
     description: The nsih field represents an SHA384 hash of the Image4 manifest data
       structure that describes the booted macOS. The macOS Image4 manifest contains
       measurements for all the boot objects—such as iBoot, the static trust cache,
@@ -338,7 +343,7 @@ lpol_properties:
       - macOS
   nsrv:
   prot:
-    title: Paired recoveryOS Trusted Boot Policy Measurement (prot)
+    title: Paired recoveryOS Trusted Boot Policy Measurement
     description: A paired recoveryOS Trusted Boot Policy Measurement (TBPM) is a special
       iterative SHA384 hash calculation over the Image4 manifest of a LocalPolicy,
       excluding nonces, in order to give a consistent measurement over time (because
@@ -718,7 +723,7 @@ manifest_properties:
     description: Internal Use Only Unit
     name: Ap,InternalUseOnlyUnit
   love:
-    title: Operating System Version
+    title: Long Operating System Version
     description: The love indicates the OS version that the LocalPolicy is created
       for. The version is obtained from the next state manifest during LocalPolicy
       creation and is used to enforce recoveryOS pairing restrictions.
@@ -812,6 +817,8 @@ objects:
     title: Manifest Body
   MANP:
     title: Manifest Proeprties
+  SPAY:
+    title: SysCfg Payload
   WCHF:
     description: Wireless Charging Firmware
   acfw:
@@ -1102,12 +1109,22 @@ objects:
 img4_tags:
   ADCL:
     description: Apple Display Calibration
+  BCAL:
+    title: Bluetooth Calibration
   BLDS:
     description: Boot LocalPolicy Digest String?
   BNCN:
     title: Board Nonce
+  BTBF:
+    title: Bluetooth Taurus Calibration Data
+  CBAT:
+    title: Charger Input Limit Calibration
   CLHS:
     description: Chained LocalPolicy Hash String
+  Coor:
+    title: Country of Origin
+  DPCl:
+    title: Primary Calibration Matrix
   DPRO:
     title: Demote Production
     description: Demote from Production Request Value is used by TSS sever to issue
@@ -1117,16 +1134,38 @@ img4_tags:
     description: Demote from Secure Request Value is used by TSS server to issue ESEC
       values, or effective AP Security Mode should the requester be authorized.  These
       requests are not available to consumers, only to Apple Internal.
+  DTCl:
+    title: Display Temperature Calibration
   EKEY:
     title: Effective Key Type
   EPRO:
     title: Effective Promotion Value
   ESEC:
     title: Effective Security
+  GLCl:
+    title: Gamma Tables Calibration
+  GYTT:
+    title: Gyroscope Temperature Calibration
+  MLB#:
+    title: Main Logic Board Serial Number
+  MdlC:
+    title: Model Configuration
   PAYP:
     description:
+  PRTT:
+    title: Pressure Temperature Compensation Table
+  PxCL:
+    title: Proximity Calibration Data
+  RMd#:
+    title: Regional Model Number
   SPTM:
     description: Secure Page Table Monitor
+  SpTS:
+    title: Speaker Thiele-Small Parameters
+  SwBh:
+    title: Software Behaviour (GreenTea)
+  WCAL:
+    title: Wireless Calibration
   ache:
     description:
   acib:
@@ -1255,7 +1294,7 @@ img4_tags:
   lckr:
     description: Locker - Used for Effaceable Storage end Obliteration
   lcrt:
-    title: Local Certificate
+    title: Lynx Certificate
   lphp:
     description: Local Policy Hash Protection?
   lpol:

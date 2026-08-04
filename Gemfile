@@ -17,13 +17,13 @@ source 'https://rubygems.org'
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 
-gem 'jekyll'
-gem 'plist'
-gem 'toml'
-gem 'rbs'
 gem 'activesupport'
+gem 'jekyll'
 gem 'jsonpath'
+gem 'plist'
+gem 'rbs'
 gem 'sorbet-runtime'
+gem 'toml'
 
 gem 'apple-data', path: File.join(File.dirname(__FILE__), '_packages/ruby')
 
@@ -46,8 +46,6 @@ group :jekyll_plugins do
 end
 
 group :development, :test do
-  gem 'activerecord'
-  gem 'activesupport', require: false
   gem 'awesome_print'
   gem 'base_x'
   gem 'bundle-audit'
@@ -55,7 +53,7 @@ group :development, :test do
   gem 'CFPropertyList'
   gem 'cid'
   gem 'dotenv-rails'
-  gem 'eth', github: 'rickmark/eth.rb', branch: 'ruby4'
+  gem 'eth'
   gem 'faraday', '~> 2.5'
   gem 'faraday-retry'
   gem 'google-protobuf'
@@ -63,7 +61,7 @@ group :development, :test do
   gem 'kramdown'
   gem 'manpages'
   gem 'mdl'
-  gem 'mediawiki_api', github: 'rickmark/mediawiki-ruby-api', branch: 'faraday_2'
+  gem 'mediawiki_api'
   gem 'merkle_tree'
   gem 'multibases'
   gem 'multicodecs'
@@ -78,10 +76,11 @@ group :development, :test do
   gem 'rspec'
   gem 'rspec-rake'
   gem 'rubocop'
+  gem 'rubocop-rake'
+  gem 'rubocop-rspec'
   gem 'ruby-macho'
   gem 'sqlite3'
   gem 'steep'
-  gem 'tapioca', require: false
   gem 'typeprof'
   gem 'typhoeus'
   gem 'wikicloth'
