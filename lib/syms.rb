@@ -64,59 +64,65 @@ ARCHES.each do |arch| # rubocop:disable Metrics/BlockLength
   FileUtils.mkdir_p(output_path)
 
   FRAMEWORK_FILES.each do |framework_file|
-    File.open(framework_file).readlines.map(&:chomp).each do |framework|
-      next if path_ignored? framework
+    File.open(framework_file) do |file|
+      file.readlines.map(&:chomp).each do |framework|
+        next if path_ignored? framework
 
-      framework_basename = File.basename(framework, '.framework')
+        framework_basename = File.basename(framework, '.framework')
 
-      binary_path = File.join(framework, 'Versions/Current', framework_basename)
+        binary_path = File.join(framework, 'Versions/Current', framework_basename)
 
-      if File.exist? binary_path
-        do_read_symbols arch, binary_path, output_path, 'framework'
-      else
-        tbd_path = File.join(framework, "#{framework_basename}.tbd")
-        if File.exist? tbd_path
-          tbd_data = YAML.load_file(tbd_path)
-          install_name = tbd_data['install-name']
-          puts "Using Framework Install Name: #{install_name}"
+        if File.exist? binary_path
+          do_read_symbols arch, binary_path, output_path, 'framework'
+        else
+          tbd_path = File.join(framework, "#{framework_basename}.tbd")
+          if File.exist? tbd_path
+            tbd_data = YAML.load_file(tbd_path)
+            install_name = tbd_data['install-name']
+            puts "Using Framework Install Name: #{install_name}"
 
-          do_read_symbols arch, install_name, output_path, 'framework' if install_name
+            do_read_symbols arch, install_name, output_path, 'framework' if install_name
+          end
         end
       end
     end
   end
 
   XPC_FILES.each do |xpc_file|
-    File.open(xpc_file).readlines.map(&:chomp).each do |xpc|
-      next if path_ignored? xpc
+    File.open(xpc_file) do |file|
+      file.readlines.map(&:chomp).each do |xpc|
+        next if path_ignored? xpc
 
-      base_name = File.basename(xpc, '.xpc')
+        base_name = File.basename(xpc, '.xpc')
 
-      begin
-        plist_path = File.join(xpc, 'Contents/Info.plist')
-        puts "Reading XPC Plsit from: #{plist_path}"
-        plist = CFPropertyList::List.new(file: plist_path)
-        data = CFPropertyList.native_types(plist.value)
+        begin
+          plist_path = File.join(xpc, 'Contents/Info.plist')
+          puts "Reading XPC Plsit from: #{plist_path}"
+          plist = CFPropertyList::List.new(file: plist_path)
+          data = CFPropertyList.native_types(plist.value)
 
-        name = data['CFBundleName']
-      rescue StandardError
-        name = base_name
+          name = data['CFBundleName']
+        rescue StandardError
+          name = base_name
+        end
+
+        name ||= base_name
+
+        binary_path = File.join(xpc, 'Contents/MacOS', name)
+
+        do_read_symbols arch, binary_path, output_path, 'xpc'
       end
-
-      name ||= base_name
-
-      binary_path = File.join(xpc, 'Contents/MacOS', name)
-
-      do_read_symbols arch, binary_path, output_path, 'xpc'
     end
   end
 
   SYM_FILES.each do |sym_file|
-    File.open(sym_file).readlines.map(&:chomp).each do |line|
-      next unless PATH_MATCH.match(line)
-      next if path_ignored? line
+    File.open(sym_file) do |file|
+      file.readlines.map(&:chomp).each do |line|
+        next unless PATH_MATCH.match(line)
+        next if path_ignored? line
 
-      do_read_symbols arch, line, output_path
+        do_read_symbols arch, line, output_path
+      end
     end
   end
 end

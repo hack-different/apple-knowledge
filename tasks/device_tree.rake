@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-
 namespace :data do
   desc 'update device files from device trees'
   task :device_tree do
