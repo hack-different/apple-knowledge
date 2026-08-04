@@ -8,5 +8,6 @@ group :development, :test do
   gem 'rake'
   gem 'rbs'
   gem 'rspec'
+  gem 'rubocop', require: false
   gem 'steep'
 end

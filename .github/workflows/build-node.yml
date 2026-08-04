@@ -17,12 +17,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: ["20", "18"]
+        node-version: ["22", "24"]
 
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: ${{ inputs.fetch-depth }}
+
+      - uses: oven-sh/setup-bun@v2
 
       - name: Cache Node Packages
         id: cache-node
@@ -34,25 +36,24 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: yarn
           cache-dependency-path: _packages/node/yarn.lock
           registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
         working-directory: ./_packages/node
-        run: yarn install
+        run: bun install
 
       - name: Perform a Build
         working-directory: ./_packages/node
-        run: yarn build
+        run: bun run build
 
       - name: Run Package Tests
         working-directory: ./_packages/node
-        run: yarn test
+        run: bun run test
 
       - name: Package Node Artifact
         working-directory: ./_packages/node
-        run: yarn pack
+        run: bun pm pack
 
       - name: Archive Node Package Artifacts
         uses: actions/upload-artifact@v4

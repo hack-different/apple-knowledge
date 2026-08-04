@@ -12,11 +12,13 @@ GEM
     forwardable-extended (2.6.0)
     json (2.21.2)
     language_server-protocol (3.17.0.6)
+    lint_roller (1.1.0)
     listen (3.10.0)
       logger
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
+    parallel (2.1.0)
     parser (3.3.12.0)
       ast (~> 2.4.1)
       racc
@@ -33,6 +35,7 @@ GEM
       logger
       prism (>= 1.6.0)
       tsort
+    regexp_parser (2.12.0)
     rspec (3.13.2)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
@@ -46,6 +49,21 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-support (3.13.7)
+    rubocop (1.88.2)
+      json (~> 2.3)
+      language_server-protocol (~> 3.17.0.2)
+      lint_roller (~> 1.1.0)
+      parallel (>= 1.10)
+      parser (>= 3.3.0.2)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 2.9.3, < 3.0)
+      rubocop-ast (>= 1.49.0, < 2.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 2.4.0, < 4.0)
+    rubocop-ast (1.50.0)
+      parser (>= 3.3.7.2)
+      prism (~> 1.7)
+    ruby-progressbar (1.13.0)
     securerandom (0.4.1)
     steep (2.0.0)
       concurrent-ruby (>= 1.1.10)
@@ -85,6 +103,7 @@ DEPENDENCIES
   rake
   rbs
   rspec
+  rubocop
   steep
 
 BUNDLED WITH
