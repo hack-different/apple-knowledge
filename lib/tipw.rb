@@ -9,7 +9,7 @@ require 'sorbet-runtime'
 # Module for interacting with theiphonewiki.com
 module TIPW
   SYNC_DATAFILE = AppleData::DataFile.new 'tipw_sync'
-  CLIENT = MediawikiApi::Client.new 'https://www.theapplewiki.com/api.php', log: false, index_url: 'https://theapplewiki.com/index.php'
+  CLIENT = MediawikiApi::Client.new 'https://www.theapplewiki.com/api.php', log: false
 
   KEY_VALUE_PAIR = /^\s\|\s(\w+)\s+=\s(.*)$/
 

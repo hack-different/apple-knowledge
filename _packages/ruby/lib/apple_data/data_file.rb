@@ -49,17 +49,17 @@ module AppleData
 
     def sort!
       collections.each(&:sort!)
-      if sort_paths
-        sort_paths.each do |path|
-          JsonPath.for(@data).gsub!(path) do |item| 
-            case item
-            when Array
-              item.sort
-            when Hash 
-              item.sort_by { |key, _value| key } .to_h
-            else
-              item
-            end
+      return unless sort_paths
+
+      sort_paths.each do |path|
+        JsonPath.for(@data).gsub!(path) do |item|
+          case item
+          when Array
+            item.sort
+          when Hash
+            item.sort_by { |key, _value| key }.to_h
+          else
+            item
           end
         end
       end
@@ -76,9 +76,8 @@ module AppleData
     end
 
     def sort_paths
-      metadata['sort_paths'] 
+      metadata['sort_paths']
     end
-    
 
     private
 
@@ -99,6 +98,8 @@ module AppleData
       end
     end
 
+    # A specific "collection" inside a data file.  Collections are enumerable groups of one type of item.
+    # The schema of each item is the same within a collection.
     class DataFileCollection
       def initialize(data_file, collection_name)
         @data_file = data_file

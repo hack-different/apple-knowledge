@@ -183,7 +183,7 @@ namespace :data do
       collection.each_value do |entry|
         entry.delete 'description'
 
-        if entry['urls']&.any? { |url| url.is_a?(String) }
+        if entry['urls']&.any?(String)
           entry['urls'] = entry['urls'].map do |url|
             { 'url' => url }
           end
