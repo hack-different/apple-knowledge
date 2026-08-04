@@ -55,7 +55,7 @@ jobs:
         run: yarn pack
 
       - name: Archive Node Package Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: package-node-${{ matrix.node-version }}
           path: _packages/node/*.tgz
