@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: 20
           cache: yarn
-          cache-dependency-path: _packages/node/yarn.lock
+          cache-dependency-path: _packages/node/bun.lock
           registry-url: https://registry.npmjs.org/
 
       - name: Download Node Package Artifacts
