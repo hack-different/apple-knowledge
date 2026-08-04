@@ -39,7 +39,7 @@ jobs:
       - name: Download Node Package Artifacts
         uses: actions/download-artifact@v4
         with:
-          name: package-node-20
+          name: package-node-24
           path:  _packages/node/dist/
 
       - name: Publish to NPM Registry
