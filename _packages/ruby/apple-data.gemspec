@@ -23,8 +23,7 @@ Gem::Specification.new do |s|
   s.files       = Dir['share/**/*.yaml'] + Dir['lib/**/*']
   s.homepage    = 'https://docs.hackdiffe.rent'
   s.required_ruby_version = '>= 3.3'
-  s.metadata = { 'source_code_uri' => 'https://github.com/hack-different/apple-knowledge',
-                 'rubygems_mfa_required' => 'true' }
+  s.metadata = { 'source_code_uri' => 'https://github.com/hack-different/apple-knowledge' }
 
   s.add_dependency 'activesupport'
   s.add_dependency 'jsonpath'

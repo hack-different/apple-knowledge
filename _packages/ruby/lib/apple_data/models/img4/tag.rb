@@ -13,6 +13,14 @@ module AppleData
         attribute :alias, :string, collection: true
         attribute :example, :string
         attribute :type, :string
+
+        def to_s
+          name || title || description || key
+        end
+
+        def to_sym
+          to_s.to_sym
+        end
       end
     end
   end
