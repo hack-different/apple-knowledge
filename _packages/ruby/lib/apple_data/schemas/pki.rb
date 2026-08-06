@@ -15,6 +15,9 @@ AppleData::Schemas::PKI = AppleData::DataFile.define do
   end
 
   collection :oids do
+    attr_accessor :key
+
+    attribute :name, :string
     attribute :title, :string
     attribute :type, :string
     attribute :description, :string
@@ -22,5 +25,9 @@ AppleData::Schemas::PKI = AppleData::DataFile.define do
     attribute :found_in, :string, collection: true
     attribute :issuers, :string, collection: true
     attribute :ous, :string, collection: true
+
+    define_method :to_s do
+      [name, title, description, key].reject(&:blank?).first
+    end
   end
 end

@@ -159,7 +159,7 @@ module AppleData
         [key, instance]
       end
 
-      result.to_h
+      result.to_h.with_indifferent_access
     end
   end
 end
