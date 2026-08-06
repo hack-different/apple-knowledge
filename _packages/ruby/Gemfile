@@ -1,0 +1,18 @@
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+
+gem 'pathutil'
+gem 'activesupport'
+gem 'jsonpath'
+gem 'pathutil'
+gem 'shale'
+gem 'zeitwerk'
+
+group :development, :test do
+  gem 'rake'
+  gem 'rbs'
+  gem 'rspec'
+  gem 'rubocop', require: false
+  gem 'steep'
+end
