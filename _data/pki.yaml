@@ -7,18 +7,27 @@ metadata:
   - keys
   - oids
 certificate_names:
-  dcrt: Device Identity Certificate
-  dcrt-oid: Device Owner Identity Certificate
-  lcrt: Lynx / Secure Storage for SEP Certificate
-  pcrt: product/production certificate?
-  rcrt: remote/recovery certificate?
-  scrt: SEP Certificate
-  sdcrt: SEP Device Certificate
-  tcrt: test certificate?
+  dcrt:
+    name: Device Identity Certificate
+  dcrt-oid:
+    name: Device Owner Identity Certificate
+  lcrt:
+    name: Lynx / Secure Storage for SEP Certificate
+  pcrt:
+    name: Protected Certificate
+  rcrt:
+    name: remote/recovery certificate?
+  scrt:
+    name: SEP Certificate
+  sdcrt:
+    name: SEP Device Certificate
+  tcrt:
+    name: test certificate?
   ucrt:
     name: User Identity Certificate
     issuer: Basic Attestation User Root CA
-  vcrt: virtual certificate?
+  vcrt:
+    name: virtual certificate?
 keys:
   oik:
     title: Owner Identity Key

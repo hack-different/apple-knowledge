@@ -1,17 +1,35 @@
 # frozen_string_literal: true
 
-require 'active_support/all'
-require 'jsonpath'
+
 
 module AppleData
   # Base class for all data files
   class DataFile
+    def self.define(&)
+      dsl = AppleData::DSL::DataFileDefinition.new
+      dsl.instance_eval(&)
+      dsl.build!
+    end
+
+    def self.inherited(klass)
+      super
+      @data_files ||= []
+      @data_files << klass
+    end
+
+    def self.all
+      @data_files
+    end
+
     attr_reader :data
 
     def initialize(*parts)
       @parts = parts
+      if @parts.empty?
+        @parts = [self.class.const_get(:DEFAULT_FILENAME)]
+      end
       @collections = {}
-      load_file(*parts)
+      load_file(*@parts)
       ensure_metadata
     end
 
@@ -27,11 +45,12 @@ module AppleData
     end
 
     def load_file(*parts)
-      parts[-1] = "#{parts[-1]}.yaml" unless T.must(parts[-1]).end_with? '.yaml'
-      @filename = File.join(AppleData.data_location, T.unsafe(File).join(*parts))
+      parts[-1] = "#{parts[-1]}.yaml" unless parts[-1].end_with? '.yaml'
+      @filename = File.join(AppleData.data_location, File.join(*parts))
       @data = {}
       @data = YAML.load_file @filename if File.exist? @filename
-      @data.with_indifferent_access
+      @data.deep_symbolize_keys!
+      @data = @data.with_indifferent_access
     end
 
     def save!

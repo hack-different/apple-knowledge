@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
 module AppleData
-  VERSION = '1.0.648'
+  class SchemaBase < Shale::Mapper
+  end
 end
