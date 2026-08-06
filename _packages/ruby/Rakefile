@@ -27,6 +27,11 @@ end
   File.write(File.join(RUBY_PACKAGE_ROOT, 'lib/apple_data/version.rb'), version_file)
 end
 
+desc 'prepare the enviornment'
+task :environment do
+  require_relative 'lib/apple_data'
+end
+
 desc 'copy data files'
 task files: :environment do
   Dir[DATA_FILES_GLOB].each do |path|
@@ -40,7 +45,7 @@ task files: :environment do
 end
 
 desc 'build the package'
-task default: %i[files version]
+task default: %i[files version spec]
 
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec)

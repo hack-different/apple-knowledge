@@ -9,11 +9,13 @@
 #
 # See https://docs.rubocop.org/rubocop/configuration
 
+plugins:
+  - rubocop-rspec
 
 AllCops:
   NewCops: enable
   SuggestExtensions: false
-  TargetRubyVersion: 3.1
+  TargetRubyVersion: 3.2
   Exclude:
     - 'vendor/**/*'
     - '_packages/ruby/vendor/**/*'

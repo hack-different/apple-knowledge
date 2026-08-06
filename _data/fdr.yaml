@@ -216,8 +216,8 @@ fdr_properties:
       Key for the SE
   seal:
     title: FDR Sealing Object
-    description: Used to provide a cryptographic seal of the data that is restored to the device via FDR to prevent
-      tampering with said data.
+    description: Used to provide a cryptographic seal of the data that is restored
+      to the device via FDR to prevent tampering with said data.
     contexts:
     - base
   secb:
@@ -236,8 +236,8 @@ fdr_properties:
     description: Trusted Public Key
   trst:
     title: Trust Object
-    description: The various data required to connect to FDR, includes the remote SSL root, revocation list,
-      and trusted public keys
+    description: The various data required to connect to FDR, includes the remote
+      SSL root, revocation list, and trusted public keys
   tsid:
     description:
   vcrt:

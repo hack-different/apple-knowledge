@@ -7,7 +7,7 @@ RSpec.describe AppleData::DataFile do
     expect(described_class.all).not_to be_empty
   end
 
-  described_class.find_each do |klass|
+  described_class.all.each do |klass|
     context klass.name do
       let(:instance) { klass.new }
 
