@@ -13,7 +13,7 @@ DATA_PATH = Pathutil.new DATA_ROOT
 OUTPUT_PATH = Pathutil.new OUTPUT_ROOT
 
 desc 'set the version patch to the git main height'
-task version: :environment do
+task :version do
   repo_height = `git rev-list --count HEAD`
   repo_height = '0' if repo_height.empty?
 
@@ -28,7 +28,7 @@ end
 end
 
 desc 'copy data files'
-task files: :environment do
+task :files do
   Dir[DATA_FILES_GLOB].each do |path|
     file_path = Pathutil.new path
 
