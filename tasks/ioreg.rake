@@ -10,6 +10,7 @@ PROPERTY_LINE_REGEX = /"([A-Za-z0-9 ]+)" = ([^\n]+)$/
 END_PROPERTIES_REGEX = /\}$/
 
 namespace :data do
+  desc 'parses in an ioreg output file and generates a data file'
   task :ioreg do |example_dir|
     data_file = AppleData::DataFile.new 'ioreg'
     data_file.data['classes'] ||= []
@@ -31,7 +32,6 @@ namespace :data do
         instance.parents = tree[1..]
         instance.known_names ||= []
         instance.known_names << name unless instance.known_names.include? name
-      rescue StandardError
       end
     end
 

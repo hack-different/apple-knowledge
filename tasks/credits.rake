@@ -37,7 +37,6 @@ task :credits do
   links.each do |repo|
     collabs = github.contributors(repo).map { |c| c.to_h.stringify_keys }.select { |c| c['type'] == 'User' }
     credits[repo] = { 'contributors' => collabs }
-  rescue Octokit::Forbidden, Octokit::NotFound
   end
 
   File.write(File.join(BASE_PATH, '_data', 'credits.yaml'), { 'repositories' => credits }.to_yaml)

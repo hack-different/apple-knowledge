@@ -5,6 +5,7 @@
 require_relative '../lib/common'
 
 namespace :data do
+  desc 'Generate Factory Data Restore data from an example file'
   task :fdr, [:example_file] do |_task, args|
     data = FDR.new
 

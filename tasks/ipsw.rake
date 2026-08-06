@@ -111,7 +111,6 @@ namespace :data do
         Zip::File.foreach(full_path) do |entry|
           entry.extract(File.join(ipsw_root, File.basename(entry.name))) if entry.name.include? 'DeviceTree'
         end
-      rescue StandardError
       end
     end
 
@@ -153,7 +152,7 @@ namespace :data do
           end
         end
       else
-        urls.compact.each { |url| }
+        urls.compact
       end
     end
 

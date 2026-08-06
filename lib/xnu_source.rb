@@ -18,7 +18,6 @@ class XNUSource
       next unless SUPPORTED_FILE_EXTENSIONS.include? File.extname(entry).delete_prefix('.')
 
       yield entry.delete_prefix(@path), File.read(entry)
-    rescue StandardError
     end
   end
 end
