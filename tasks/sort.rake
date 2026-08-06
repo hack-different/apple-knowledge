@@ -17,7 +17,6 @@ desc 'sort everything'
 task :sort do
   path = File.join(DATA_DIR, '**', '*.yaml')
   Dir.glob(path) do |file|
-    puts "Sorting #{file}..."
     data_file = AppleData::DataFile.from_path file
     next unless data_file.auto_sort?
 

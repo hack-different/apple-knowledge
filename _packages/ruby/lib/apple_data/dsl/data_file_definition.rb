@@ -2,6 +2,7 @@
 
 module AppleData
   module DSL
+    # The DSL that is used when defining a data file
     class DataFileDefinition
       def initialize
         @collections = {}

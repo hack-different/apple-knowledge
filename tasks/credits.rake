@@ -35,14 +35,10 @@ task :credits do
   credits = {}
 
   links.each do |repo|
-    puts "Fetching credits for #{repo}"
     collabs = github.contributors(repo).map { |c| c.to_h.stringify_keys }.select { |c| c['type'] == 'User' }
     credits[repo] = { 'contributors' => collabs }
-  rescue Octokit::Forbidden, Octokit::NotFound => e
-    puts "Failed to update credits for #{repo}\n\n#{e}"
+  rescue Octokit::Forbidden, Octokit::NotFound
   end
-
-  puts credits.inspect
 
   File.write(File.join(BASE_PATH, '_data', 'credits.yaml'), { 'repositories' => credits }.to_yaml)
 end

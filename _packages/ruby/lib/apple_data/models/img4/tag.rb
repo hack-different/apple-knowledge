@@ -3,6 +3,7 @@
 module AppleData
   module Models
     module IMG4
+      # Generic IMG4 DER "tag"
       class Tag < Shale::Mapper
         attr_accessor :key
 

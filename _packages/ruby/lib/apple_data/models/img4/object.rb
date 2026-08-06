@@ -3,6 +3,7 @@
 module AppleData
   module Models
     module IMG4
+      # IMG4 "objects" are either a reference to a file, or some other structured set of properties
       class Object < AppleData::Models::IMG4::Tag
         attribute :encoding, :string
         attribute :firmware_name, :string

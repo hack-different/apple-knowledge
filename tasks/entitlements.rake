@@ -9,7 +9,6 @@ namespace :data do
       data = AppleData::DataFile.new :entitlements
       def_elist = data.collection :entitlements
       Dir[File.join(args[:directory], '**/*.plist')].each do |plist|
-        print("Reading Data File: #{plist}\n")
         elist = CFPropertyList::List.new file: plist
 
         elist.value.value.each do |key, value|

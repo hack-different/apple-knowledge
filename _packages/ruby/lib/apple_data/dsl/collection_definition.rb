@@ -2,6 +2,7 @@
 
 module AppleData
   module DSL
+    # A definition of a collection of objects, with a particular schema
     class CollectionDefinition
       attr_reader :name
       attr_accessor :mapper
@@ -11,6 +12,7 @@ module AppleData
         @mapper = mapper
       end
 
+      # Builds the collection into the given data file class
       def build!(klass)
         name = @name
         klass.instance_eval do
@@ -22,27 +24,9 @@ module AppleData
               value = collection(name.to_s)
               result = case value.data
                        when Hash
-                         result = value.data.map do |key, item|
-                           instance = if item
-                                        if collection_definition.mapper
-                                          collection_definition.mapper.from_hash(item)
-                                        else
-                                          item
-                                        end
-                                      end
-                           instance.key = key if instance.respond_to? :key=
-                           [key, instance]
-                         end
-
-                         result.to_h
+                         construct_hash(collection_definition, value)
                        when Array
-                         value.data.map do |item|
-                           if collection_definition.mapper
-                             collection_definition.mapper.from_hash(item)
-                           else
-                             item
-                           end
-                         end
+                         construct_array(collection_definition, value)
                        else
                          value.data
                        end

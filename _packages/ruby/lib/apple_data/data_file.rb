@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-
-
 module AppleData
   # Base class for all data files
   class DataFile
@@ -25,9 +23,7 @@ module AppleData
 
     def initialize(*parts)
       @parts = parts
-      if @parts.empty?
-        @parts = [self.class.const_get(:DEFAULT_FILENAME)]
-      end
+      @parts = [self.class.const_get(:DEFAULT_FILENAME)] if @parts.empty?
       @collections = {}
       load_file(*@parts)
       ensure_metadata
@@ -138,6 +134,32 @@ module AppleData
           @collection_data = @collection_data.sort_by { |key, _value| key }.to_h
         end
       end
+    end
+
+    def construct_array(collection_definition, value)
+      value.data.map do |item|
+        if collection_definition.mapper
+          collection_definition.mapper.from_hash(item)
+        else
+          item
+        end
+      end
+    end
+
+    def construct_hash(collection_definition, value)
+      result = value.data.map do |key, item|
+        instance = if item
+                     if collection_definition.mapper
+                       collection_definition.mapper.from_hash(item)
+                     else
+                       item
+                     end
+                   end
+        instance.key = key if instance.respond_to? :key=
+        [key, instance]
+      end
+
+      result.to_h
     end
   end
 end

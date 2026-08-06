@@ -1,19 +1,20 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 RSpec.describe AppleData::DataFile do
-  it 'should have data files' do
-    expect(AppleData::DataFile.all).to_not be_empty
+  it 'has data files' do
+    expect(described_class.all).not_to be_empty
   end
 
-  AppleData::DataFile.all.each do |klass|
-    puts klass
+  described_class.find_each do |klass|
     context klass.name do
       let(:instance) { klass.new }
 
       klass.const_get(:COLLECTIONS).each do |name, collection|
         context collection.name do
-          it "should be consistent" do
-            expect(instance.send(name)).to_not be_nil
+          it 'is consistent' do
+            expect(instance.send(name)).not_to be_nil
           end
         end
       end

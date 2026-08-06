@@ -8,7 +8,7 @@ RSpec.describe AppleData::Schemas::IMG4 do
   it 'has unmapped' do
     aggregate_failures do
       expect(instance.unmapped).to be_a(Array)
-      expect(instance.unmapped).to_not be_empty
+      expect(instance.unmapped).not_to be_empty
       expect(instance.unmapped).to all(be_a(String))
     end
   end
@@ -16,7 +16,7 @@ RSpec.describe AppleData::Schemas::IMG4 do
   it 'has core' do
     aggregate_failures do
       expect(instance.core).to be_a(Hash)
-      expect(instance.core).to_not be_empty
+      expect(instance.core).not_to be_empty
       expect(instance.core.values.compact).to all(be_a(AppleData::Models::IMG4::Tag))
     end
   end
@@ -24,7 +24,7 @@ RSpec.describe AppleData::Schemas::IMG4 do
   it 'has objects' do
     aggregate_failures do
       expect(instance.objects).to be_a(Hash)
-      expect(instance.objects).to_not be_empty
+      expect(instance.objects).not_to be_empty
       expect(instance.objects.values.compact).to all(be_a(AppleData::Models::IMG4::Object))
     end
   end
@@ -32,7 +32,7 @@ RSpec.describe AppleData::Schemas::IMG4 do
   it 'has cryptex_objects' do
     aggregate_failures do
       expect(instance.cryptex_objects).to be_a(Hash)
-      expect(instance.cryptex_objects).to_not be_empty
+      expect(instance.cryptex_objects).not_to be_empty
       expect(instance.cryptex_objects.values.compact).to all(be_a(AppleData::Models::IMG4::Object))
     end
   end
@@ -40,7 +40,7 @@ RSpec.describe AppleData::Schemas::IMG4 do
   it 'has lpol_properties' do
     aggregate_failures do
       expect(instance.lpol_properties).to be_a(Hash)
-      expect(instance.lpol_properties).to_not be_empty
+      expect(instance.lpol_properties).not_to be_empty
       expect(instance.lpol_properties.values.compact).to all(be_a(AppleData::Models::IMG4::Property))
     end
   end

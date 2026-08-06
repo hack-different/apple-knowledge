@@ -27,7 +27,7 @@ module TIPW
       pages = CLIENT.query args
 
       results.append(*pages.data['categorymembers'])
-      puts "Added #{pages.data['categorymembers'].length} items"
+
       should_continue = pages['continue'] ? pages['continue']['cmcontinue'] : false
     end
 
@@ -36,10 +36,7 @@ module TIPW
 
   def self.get_page_content(title)
     response = CLIENT.get_wikitext(title)
-    unless response.status == 200
-      puts "Got non-200 response (#{response.status}) when getting content for '#{title}'"
-      return nil
-    end
+    return nil unless response.status == 200
 
     response.body
   end

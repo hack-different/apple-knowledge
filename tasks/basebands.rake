@@ -6,10 +6,7 @@ namespace :data do
   namespace :baseband do
     desc 'extract all baseband firmwares to tmp'
     task :extract, [:directory] do |_task, args|
-      unless File.directory?(args[:directory])
-        print "#{args[:directory]} is not a regular directory"
-        exit(-1)
-      end
+      exit(-1) unless File.directory?(args[:directory])
 
       Dir[File.join(args[:directory], '*.ipsw')].each do |ipsw|
         IPSW.new ipsw

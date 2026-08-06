@@ -12,10 +12,9 @@ namespace :data do
 
       source_tree = XNUSource.new args[:xnu_directory]
 
-      source_tree.each_source_file do |file_name, source|
+      source_tree.each_source_file do |_file_name, source|
         discovered_args = source.scan(XNUSource::TUNABLE) + source.scan(XNUSource::PARSE_ARGN)
         discovered_args.each do |call_site|
-          puts "#{file_name} => #{call_site[0]}"
           boot_args_collection.ensure_key call_site[0]
         end
       end

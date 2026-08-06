@@ -5,6 +5,7 @@
 require_relative '../lib/common'
 
 namespace :data do
+  desc 'Process new keys for mobile_gestalt'
   task :mobile_gestalt do
     def obfuscate(input_key)
       hashed = Digest::MD5.digest "MGCopyAnswer#{input_key}"

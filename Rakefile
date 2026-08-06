@@ -26,7 +26,6 @@ task default: ['rubocop:auto_correct', :precommit]
 desc 'Perform all automated updates'
 task :update do
   UPDATE_TASKS.each do |task|
-    puts "Executing update task: #{task}"
     Rake::Task[task].invoke
   end
 end

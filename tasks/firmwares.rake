@@ -10,7 +10,6 @@ namespace :data do
     firmware_types = data_file.collection :firmware_types
 
     Dir.glob(File.join(TMP_DIR, 'build_manifests', '*.plist')) do |file_path|
-      puts "Reading build manifest file #{file_path}"
       build_manifest = Plist.parse_xml file_path
 
       build_manifest['BuildIdentities'].each do |identity|

@@ -22,8 +22,9 @@ Gem::Specification.new do |s|
   s.email       = 'rickmark@outlook.com'
   s.files       = Dir['share/**/*.yaml'] + Dir['lib/**/*']
   s.homepage    = 'https://docs.hackdiffe.rent'
-  s.required_ruby_version = '>= 3.1'
-  s.metadata = { 'source_code_uri' => 'https://github.com/hack-different/apple-knowledge' }
+  s.required_ruby_version = '>= 3.2'
+  s.metadata = { 'source_code_uri' => 'https://github.com/hack-different/apple-knowledge',
+                 'rubygems_mfa_required' => 'true' }
 
   s.add_dependency 'activesupport'
   s.add_dependency 'jsonpath'

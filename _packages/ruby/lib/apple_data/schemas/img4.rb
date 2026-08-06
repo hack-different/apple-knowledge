@@ -15,6 +15,5 @@ AppleData::Schemas::IMG4 = AppleData::DataFile.define do
 
   collection :types do
     attribute :description, :string
-
   end
 end
