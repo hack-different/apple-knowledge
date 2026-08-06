@@ -6,6 +6,7 @@ module AppleData
     class DataFileDefinition
       def initialize
         @collections = {}
+        @methods = {}
       end
 
       def collection(name, mapper = nil, &)
@@ -15,6 +16,10 @@ module AppleData
           @collections[name].mapper.class_eval(&)
         end
         @collections[name]
+      end
+
+      def define_method(name, &proc)
+        @methods[name] = proc
       end
 
       attr_writer :default_filename
@@ -27,6 +32,10 @@ module AppleData
 
         @collections.each_value do |collection_definition|
           collection_definition.build!(klass)
+        end
+
+        @methods.each do |name, proc|
+          klass.define_method(name, &proc)
         end
 
         klass

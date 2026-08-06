@@ -44,4 +44,11 @@ RSpec.describe AppleData::Schemas::IMG4 do
       expect(instance.lpol_properties.values.compact).to all(be_a(AppleData::Models::IMG4::Property))
     end
   end
+
+  it 'has #all' do
+    aggregate_failures do
+      expect(instance.all).to be_a(Hash)
+      expect(instance.all).not_to be_empty
+    end
+  end
 end
