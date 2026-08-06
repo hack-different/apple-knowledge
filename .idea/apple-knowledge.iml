@@ -34,6 +34,7 @@
         <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
         <envs>
           <env name="JRUBY_OPTS" value="-X+O" />
+          <env name="APPLE_KNOWLEDGE" value="$MODULE_DIR$/_data" />
         </envs>
         <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
         <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">

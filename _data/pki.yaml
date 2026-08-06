@@ -92,7 +92,7 @@ oids:
     symbol: oidAppleSecureBootTicketCertSpec
   1.2.840.113635.100.6.1.15:
     title: IMG4 Manifest Certificate Specification
-    name: appleImg4Manifest
+    name: appleImg4ManifestSpecification
     type: sequence
     description: "Constriction on values that can be specified or signed by this certificate.
       \ Conatins two sub-sequesnces, \nthe MANP (Manifest Properties) and the OBJP
@@ -143,12 +143,16 @@ oids:
   1.2.840.113635.100.6.1.4:
     apple_description: Apple World Wide Developer Relations Certificates for Code
       Signing GM from developer to Apple
+  1.2.840.113635.100.6.8:
+    name: appleImg4Manifest
   1.2.840.113635.100.6.16:
+    name: appleSecureEnclaveFDRCommands
     description: A sequence of FDR programming commands, seperated by ";".  Each command
       is "PUT" or "GET" prior to a 4CC value, followed by a ":" then the value of
       the key.
     example: PUT/FSCl:sik-FXFYFXFFYFFEX-QQRRRDEETFEFYCEIESLIREILCILESCLSELRESERSER
   1.2.840.113635.100.6.17:
+    name: appleKeyInstanceName
     description: Contains the name of the key
   1.2.840.113635.100.6.2:
     title: Apple Security Algorithm
@@ -158,6 +162,7 @@ oids:
   1.2.840.113635.100.6.2.10:
     symbol: oidAppleIntmMarkerAppleSystemIntg2
   1.2.840.113635.100.6.2.12:
+    name: appleIntmMarkerAppleServerAuthentication
     symbol: oidAppleIntmMarkerAppleServerAuthentication
   1.2.840.113635.100.6.2.13:
     symbol: oidAppleIntmMarkerAppleSystemIntgG3
@@ -258,6 +263,8 @@ oids:
   1.2.840.113635.100.6.71.1:
     description: Made for iDevice (MFi) - Authentication v4 - Apple Accessory Properties
       Extension
+  1.2.840.113635.100.6.9:
+    title: appleSomeSHA256Hash
   1.2.840.113635.100.7.1.1:
     apple_description: 'Apple FairPlay certificate extended Application Authentication
       & Authorization: Policy'

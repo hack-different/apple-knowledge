@@ -13,7 +13,7 @@ RSpec.describe AppleData::Schemas::PKI do
   it 'has entries that respond to #to_s' do
     aggregate_failures do
       expect(instance.oids[:'1.2.840.113635.100.6.1.15'].to_s).to be_a(String)
-      expect(instance.oids[:'1.2.840.113635.100.6.1.15'].to_s).to eq 'appleImg4Manifest'
+      expect(instance.oids[:'1.2.840.113635.100.6.1.15'].to_s).to eq 'appleImg4ManifestSpecification'
     end
   end
 end
