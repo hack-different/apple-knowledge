@@ -16,4 +16,9 @@ AppleData::Schemas::IMG4 = AppleData::DataFile.define do
   collection :types do
     attribute :description, :string
   end
+
+  define_method :all do
+    [img4_tags, manifest_properties, objects, lpol_properties, core, types,
+     cryptex_properties].reduce(&:merge).with_indifferent_access
+  end
 end
