@@ -1,7 +1,12 @@
 PATH
   remote: _packages/ruby
   specs:
-    apple-data (1.0.375)
+    apple-data (1.0.665)
+      activesupport
+      jsonpath
+      pathutil
+      shale
+      zeitwerk
 
 GEM
   remote: https://rubygems.org/
@@ -98,7 +103,7 @@ GEM
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
-    erb (6.0.6)
+    erb (6.0.7)
     erubi (1.13.1)
     escape_utils (1.3.0)
     eth (0.5.17)
@@ -265,12 +270,13 @@ GEM
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
     manpages (0.7.0)
-    mdl (0.17.0)
+    mdl (0.18.0)
       kramdown (~> 2.5)
       kramdown-parser-gfm (~> 1.1)
       mixlib-cli
       mixlib-config
       mixlib-shellout
+      uri
     mediawiki_api (0.9.0)
       faraday (>= 2.7.0)
       faraday-cookie_jar
@@ -376,6 +382,9 @@ GEM
       logger
       prism (>= 1.6.0)
       tsort
+    rbs-inline (0.14.0)
+      prism (>= 0.29)
+      rbs (~> 4.0)
     rbsecp256k1 (6.0.0)
       mini_portile2 (~> 2.8)
       pkg-config (~> 1.5)
@@ -406,7 +415,7 @@ GEM
       rake
       rspec-core
     rspec-support (3.13.7)
-    rubocop (1.88.2)
+    rubocop (1.89.0)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -452,7 +461,9 @@ GEM
       ffi-compiler (>= 1.0, < 2.0)
       rake (~> 13)
     securerandom (0.4.1)
-    sorbet-runtime (0.6.13403)
+    shale (1.2.2)
+      bigdecimal
+    sorbet-runtime (0.6.13405)
     sqlite3 (2.9.5-aarch64-linux-gnu)
     sqlite3 (2.9.5-aarch64-linux-musl)
     sqlite3 (2.9.5-arm64-darwin)
@@ -567,6 +578,7 @@ DEPENDENCIES
   rake
   rate_throttle_client
   rbs
+  rbs-inline
   rspec
   rspec-rake
   rubocop
@@ -587,7 +599,7 @@ CHECKSUMS
   actionview (8.1.3.1) sha256=2da68b8414c47b43bfbed1ce69c5afe1c04f78c267aacb5660a4cab5ca12cfb6
   activesupport (8.1.3.1) sha256=85458765f25ea48b9019c46b6bb3fa5683197bf4280d9f06710a6e8d7a831376
   addressable (2.9.0) sha256=7fdf6ac3660f7f4e867a0838be3f6cf722ace541dd97767fa42bc6cfa980c7af
-  apple-data (1.0.375)
+  apple-data (1.0.665)
   ast (2.4.3) sha256=954615157c1d6a382bc27d690d973195e79db7f55e9765ac7c481c60bdb4d383
   awesome_print (1.9.2) sha256=e99b32b704acff16d768b3468680793ced40bfdc4537eb07e06a4be11133786e
   base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
@@ -620,7 +632,7 @@ CHECKSUMS
   drb (2.2.3) sha256=0b00d6fdb50995fe4a45dea13663493c841112e4068656854646f418fda13373
   ecdsa (1.2.0) sha256=b8f7c9541b6c587cbe37e705a1b76be6dc1e85336aa23ac3cf2f07b038bcec55
   em-websocket (0.5.3) sha256=f56a92bde4e6cb879256d58ee31f124181f68f8887bd14d53d5d9a292758c6a8
-  erb (6.0.6) sha256=a9b24986700f5bf127c4f297c5403c3ca41b83b0a316c0cd09a096b56e644ae5
+  erb (6.0.7) sha256=c5ca6dc25b0ef974a44dc8f59fe847577122483b1968a38dec305c60bf91ee92
   erubi (1.13.1) sha256=a082103b0885dbc5ecf1172fede897f9ebdb745a4b97a5e8dc63953db1ee4ad9
   escape_utils (1.3.0) sha256=dffb7010922880ace6ceed642156c64e2a64620f27e0849f43bc4f68fd3c2c09
   eth (0.5.17) sha256=5be9caa85b0643613010ae33c92e746a02ce376a35245e6eb5f491e80531f137
@@ -692,7 +704,7 @@ CHECKSUMS
   logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
   loofah (2.25.2) sha256=2007f746959ac65552456e04b433e83deb22759ab38c838b4445c70e43425918
   manpages (0.7.0) sha256=03da5fb59d5c3a847b86594b2f9a9ebec3b42d46caeb60b73ed0486beee7b309
-  mdl (0.17.0) sha256=bb0a0813db04d3a41c991bdae8acc70912f153fc4fb88a3e0f126711da12c335
+  mdl (0.18.0) sha256=7d87163f7ea4d878209d65ab878fc17faeec3438faed688724ed13b24eaceba0
   mediawiki_api (0.9.0) sha256=a4d77e35f8f608b923657da5f284a2b7beb130f443db910a0c10f3ca1641d1d3
   mercenary (0.4.0) sha256=b25a1e4a59adca88665e08e24acf0af30da5b5d859f7d8f38fba52c28f405138
   merkle_tree (0.2.0) sha256=12c8d37085edf856022434a49e397877a7772316c13d801ecb750f5c498416f1
@@ -746,6 +758,7 @@ CHECKSUMS
   rb-fsevent (0.11.2) sha256=43900b972e7301d6570f64b850a5aa67833ee7d87b458ee92805d56b7318aefe
   rb-inotify (0.11.1) sha256=a0a700441239b0ff18eb65e3866236cd78613d6b9f78fea1f9ac47a85e47be6e
   rbs (4.1.2) sha256=050eb1d8b508f1233bed929c0f2c7052302f7adf295230d9cb314e9024078f48
+  rbs-inline (0.14.0) sha256=eaf47b46690d63acddab1f6804c9cc205a4bc78e637cfc421a0b1239874ef51c
   rbsecp256k1 (6.0.0) sha256=d38f563bfc6bcf3ce20c336a4798cc6990427f291e74c6817360363a72f11669
   rdoc (8.0.0) sha256=03bf8c08a9639658855a0cfd77c0abca8325c227693f7f33f82957811348c469
   regexp_parser (2.12.0) sha256=35a916a1d63190ab5c9009457136ae5f3c0c7512d60291d0d1378ba18ce08ebb
@@ -758,7 +771,7 @@ CHECKSUMS
   rspec-mocks (3.13.8) sha256=086ad3d3d17533f4237643de0b5c42f04b66348c28bf6b9c2d3f4a3b01af1d47
   rspec-rake (0.0.4) sha256=0a3f7e7685cd2f98f9c65c1c69c67b8ba3d737c6cb8cc3968670731aae86ab2f
   rspec-support (3.13.7) sha256=0640e5570872aafefd79867901deeeeb40b0c9875a36b983d85f54fb7381c47c
-  rubocop (1.88.2) sha256=8def251c90cd955feb4daa3edc0ab56893250c4ce90ef81e6c80c03f9a939bbf
+  rubocop (1.89.0) sha256=4dee8e3ee9c45e474834efd9e8d6fd031e8331c8dacdff0de4ad65ae0a6faae7
   rubocop-ast (1.50.0) sha256=b9ca88300da0803ee222ad20cdb30494c0a784eed06fdc35d254b06d662788db
   rubocop-rake (0.7.1) sha256=3797f2b6810c3e9df7376c26d5f44f3475eda59eb1adc38e6f62ecf027cbae4d
   rubocop-rspec (3.10.2) sha256=0b3e2ecc592cd10ecbf0095bb58d1e357905276e069643523cc19eb7495f65e2
@@ -776,7 +789,8 @@ CHECKSUMS
   sawyer (0.9.3) sha256=0d0f19298408047037638639fe62f4794483fb04320269169bd41af2bdcf5e41
   scrypt (3.1.0) sha256=67fde35bc7e3b7fe906c5be9c242acf95fe4a886c89572f405f6b11df30aa6af
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
-  sorbet-runtime (0.6.13403) sha256=8545fc4cd55fbf820f2000f6d13c0ea1c2e5f7b67369e76ebf39fea81fc490b3
+  shale (1.2.2) sha256=e298bd0658e2651c76a1a4ffc7db8d43592288181d28d78ce5748c8525094cca
+  sorbet-runtime (0.6.13405) sha256=b1e38aea9200cdfcdd2f7758836f8150f22462eecb4ee0cef86a8f58df4e9e31
   sqlite3 (2.9.5-aarch64-linux-gnu) sha256=78075b6337d3d182c6d2b4691049ed45cd220826160c9ea18946bf6a1de200dc
   sqlite3 (2.9.5-aarch64-linux-musl) sha256=18c801185deb4adc01ddb281e8f672a39e3d1729979ca91e39439cd3eac0402d
   sqlite3 (2.9.5-arm64-darwin) sha256=d0cf444a70fc9395d513cfbcc1e6719e224aa645314e3824cb0474c721425aa2

@@ -73,6 +73,7 @@ group :development, :test do
   gem 'pry'
   gem 'rake'
   gem 'rate_throttle_client'
+  gem 'rbs-inline'
   gem 'rspec'
   gem 'rspec-rake'
   gem 'rubocop'

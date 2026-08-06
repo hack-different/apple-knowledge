@@ -2,7 +2,11 @@
 
 source 'https://rubygems.org'
 
+gem 'activesupport'
+gem 'jsonpath'
 gem 'pathutil'
+gem 'shale'
+gem 'zeitwerk'
 
 group :development, :test do
   gem 'rake'

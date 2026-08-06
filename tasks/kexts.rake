@@ -8,6 +8,7 @@ require_relative '../lib/kext'
 KERNEL_COLLECTION_DIR = '/System/Library/KernelCollections'
 
 namespace :data do
+  desc 'process kernel extensions'
   task :kexts do
     data_file = AppleData::DataFile.new 'kext'
     data_file.data['kexts'] ||= []

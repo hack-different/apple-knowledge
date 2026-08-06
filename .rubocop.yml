@@ -9,11 +9,13 @@
 #
 # See https://docs.rubocop.org/rubocop/configuration
 
+plugins:
+  - rubocop-rspec
 
 AllCops:
   NewCops: enable
   SuggestExtensions: false
-  TargetRubyVersion: 3.1
+  TargetRubyVersion: 3.3
   Exclude:
     - 'vendor/**/*'
     - '_packages/ruby/vendor/**/*'
@@ -40,3 +42,9 @@ Naming/FileName:
 Metrics/AbcSize:
   CountRepeatedAttributes: false
   Max: 25
+
+Metrics/ClassLength:
+  Max: 150
+
+RSpec/ExampleLength:
+  Max: 15

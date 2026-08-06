@@ -34,7 +34,6 @@ COMMON_OPTS = '-printDemangling -lazy -deepSignature -privateData -fullSourcePat
 
 def do_read_symbols(arch, path, output_path, type = nil)
   hash = Digest::MD5.hexdigest(path)
-  puts "Reading Symbols for #{path} using #{arch}"
 
   if type
     type = ".#{type}" unless type.start_with? '.'
@@ -79,7 +78,6 @@ ARCHES.each do |arch| # rubocop:disable Metrics/BlockLength
           if File.exist? tbd_path
             tbd_data = YAML.load_file(tbd_path)
             install_name = tbd_data['install-name']
-            puts "Using Framework Install Name: #{install_name}"
 
             do_read_symbols arch, install_name, output_path, 'framework' if install_name
           end
@@ -97,7 +95,7 @@ ARCHES.each do |arch| # rubocop:disable Metrics/BlockLength
 
         begin
           plist_path = File.join(xpc, 'Contents/Info.plist')
-          puts "Reading XPC Plsit from: #{plist_path}"
+
           plist = CFPropertyList::List.new(file: plist_path)
           data = CFPropertyList.native_types(plist.value)
 

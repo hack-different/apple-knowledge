@@ -76,14 +76,12 @@ task :integrity do
   collection = data_file.collection :ipsw_files
   throttle = RateThrottleClient::ExponentialIncreaseProportionalRemainingDecrease.new
 
-  puts "Connection to Ethereum node: #{NODE_URL}"
   eth = Eth::Client.create(NODE_URL)
   abi_json = File.read(File.join(File.dirname(__FILE__), '../lib/ApplePackageIntegrity.json'))
   contract_abi = JSON.parse(abi_json)
   contract = Eth::Contract.from_abi(name: 'ApplePackageIntegrity', address: Integrity::CONTRACT_ADDRESS,
                                     abi: contract_abi['abi'])
 
-  puts "Private key is of #{Integrity::PRIVATE_KEY.length} bytes"
   key = Eth::Key.new(priv: Integrity::PRIVATE_KEY)
 
   collection.each do |name, value|

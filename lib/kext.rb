@@ -67,8 +67,6 @@ class KextStatDumpState
         @entries << KextBundle.new(Regexp.last_match)
       when KextEntry::LINE_REGEX
         @entries << KextEntry.new(Regexp.last_match)
-      else
-        print("Unparsed line: #{line}")
       end
     end
   end

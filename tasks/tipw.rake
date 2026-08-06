@@ -44,20 +44,17 @@ namespace :tipw do
       THREAD_COUNT.times do
         threads << Thread.new do
           until work_queue.empty?
-            begin
-              page_id, entry, result_file_name = work_queue.pop(true)
-              next unless page_id
 
-              puts "Getting page #{page_id} (#{entry['title']})"
-              page = TIPW.get_page_content entry['title']
-              next unless page
+            page_id, entry, result_file_name = work_queue.pop(true)
+            next unless page_id
 
-              finished_queue.push(entry)
+            page = TIPW.get_page_content entry['title']
+            next unless page
 
-              File.write result_file_name, page
-            rescue StandardError
-              puts "Error getting page #{page_id} (#{entry['title']})"
-            end
+            finished_queue.push(entry)
+
+            File.write result_file_name, page
+
           end
         end
       end
@@ -81,9 +78,6 @@ namespace :tipw do
     keys = Dir.glob(input_key_files).map do |keyfile|
       content = File.read(keyfile)
       TIPW::TIPWKeyPage.new(content)
-    rescue StandardError => e
-      puts "Error parsing #{keyfile}\n\n#{e}"
-      raise
     end
 
     keys = keys.compact.map(&:to_h).group_by { |key| key['device'] }.reject { |key, _builds| key.nil? }

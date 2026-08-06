@@ -5,7 +5,7 @@ metadata:
   collections:
   - fdr_properties
 fdr_modes:
-  '':
+  base:
     description: Objects for the device directly, indicates no factory process or
       mode in use.
   mansta:
@@ -97,7 +97,7 @@ fdr_properties:
   comb:
     description: Combined FDR object
   dCfg:
-    description: Display LCD
+    description:
     contexts:
     - base
     - mansta
@@ -152,11 +152,12 @@ fdr_properties:
     - base
     - mansta
   meid:
-    description: Mobile Equipment Identifier (CMDA)
+    title: Mobile Equipment Identifier (CMDA)
   mft2:
   mlb#:
-    description: Main Logic Board Serial Number
+    title: Main Logic Board Serial Number
   mmap:
+    title: Memory Map
     description: The memory map passed from the iBoot loader to the Kernel
   nuid:
     description:
@@ -204,7 +205,8 @@ fdr_properties:
     title: Recovery SSL
     description: Root SSL / TLS certificate
   rvok:
-    description: Trust Object Revocation
+    title: Revocation List
+    description: FDR trust object list of revoked certificates / public keys
   scrt:
     description: SEP Certificate
     contexts:
@@ -213,7 +215,9 @@ fdr_properties:
     description: Point Compressed Elliptic Curve point sering as the master Public
       Key for the SE
   seal:
-    description:
+    title: FDR Sealing Object
+    description: Used to provide a cryptographic seal of the data that is restored
+      to the device via FDR to prevent tampering with said data.
     contexts:
     - base
   secb:
@@ -231,7 +235,9 @@ fdr_properties:
     title: Trusted Public Keys
     description: Trusted Public Key
   trst:
-    description: Trust Object
+    title: Trust Object
+    description: The various data required to connect to FDR, includes the remote
+      SSL root, revocation list, and trusted public keys
   tsid:
     description:
   vcrt:

@@ -7,7 +7,6 @@ namespace :data do
 
     FileUtils.mkdir_p(device_dir)
     Dir.glob(File.join(TMP_DIR, 'ipsw', '**', 'DeviceTree.*.im4p')).each do |file|
-      puts "Processing #{file}"
       img = MooTool::Img4::File.new file
       next unless img.payload?
 
@@ -18,9 +17,7 @@ namespace :data do
 
       output_path = File.join(device_dir, "#{identity}.yaml")
       File.write(output_path, { 'model' => identity, 'device_tree' => tree_hash }.to_yaml)
-      puts "Wrote output data to #{output_path}"
-    rescue StandardError => e
-      puts "Error processing #{file}: #{e}"
+    rescue StandardError
       next
     end
   end

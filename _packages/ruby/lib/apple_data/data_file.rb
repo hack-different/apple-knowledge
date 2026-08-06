@@ -1,17 +1,31 @@
 # frozen_string_literal: true
 
-require 'active_support/all'
-require 'jsonpath'
-
 module AppleData
   # Base class for all data files
   class DataFile
+    def self.define(&)
+      dsl = AppleData::DSL::DataFileDefinition.new
+      dsl.instance_eval(&)
+      dsl.build!
+    end
+
+    def self.inherited(klass)
+      super
+      @data_files ||= []
+      @data_files << klass
+    end
+
+    def self.all
+      @data_files
+    end
+
     attr_reader :data
 
     def initialize(*parts)
       @parts = parts
+      @parts = [self.class.const_get(:DEFAULT_FILENAME)] if @parts.empty?
       @collections = {}
-      load_file(*parts)
+      load_file(*@parts)
       ensure_metadata
     end
 
@@ -27,11 +41,12 @@ module AppleData
     end
 
     def load_file(*parts)
-      parts[-1] = "#{parts[-1]}.yaml" unless T.must(parts[-1]).end_with? '.yaml'
-      @filename = File.join(AppleData.data_location, T.unsafe(File).join(*parts))
+      parts[-1] = "#{parts[-1]}.yaml" unless parts[-1].end_with? '.yaml'
+      @filename = File.join(AppleData.data_location, File.join(*parts))
       @data = {}
       @data = YAML.load_file @filename if File.exist? @filename
-      @data.with_indifferent_access
+      @data.deep_symbolize_keys!
+      @data = @data.with_indifferent_access
     end
 
     def save!
@@ -119,6 +134,32 @@ module AppleData
           @collection_data = @collection_data.sort_by { |key, _value| key }.to_h
         end
       end
+    end
+
+    def construct_array(collection_definition, value)
+      value.data.map do |item|
+        if collection_definition.mapper
+          collection_definition.mapper.from_hash(item)
+        else
+          item
+        end
+      end
+    end
+
+    def construct_hash(collection_definition, value)
+      result = value.data.map do |key, item|
+        instance = if item
+                     if collection_definition.mapper
+                       collection_definition.mapper.from_hash(item)
+                     else
+                       item
+                     end
+                   end
+        instance.key = key if instance.respond_to? :key=
+        [key, instance]
+      end
+
+      result.to_h
     end
   end
 end

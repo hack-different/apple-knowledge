@@ -12,22 +12,32 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../spec" isTestSource="true" />
     </content>
     <orderEntry type="jdk" jdkName="rbenv: 4.0.5" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="activesupport (v8.1.3.1, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ast (v2.4.3, rbenv: 4.0.5) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v2.3.7, rbenv: 4.0.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="base64 (v0.3.0, rbenv: 4.0.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bigdecimal (v4.1.2, rbenv: 4.0.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v4.0.16, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.3.8, rbenv: 4.0.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="connection_pool (v3.0.2, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="csv (v3.3.6, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.6.2, rbenv: 4.0.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="drb (v2.2.3, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.17.4, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="fileutils (v1.8.0, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="forwardable-extended (v2.6.0, rbenv: 4.0.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="i18n (v1.15.2, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v2.21.2, rbenv: 4.0.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jsonpath (v1.1.5, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="language_server-protocol (v3.17.0.6, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="lint_roller (v1.1.0, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="listen (v3.10.0, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="logger (v1.7.0, rbenv: 4.0.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest (v6.0.6, rbenv: 4.0.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.21.1, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="parallel (v2.1.0, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="parser (v3.3.12.0, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pathutil (v0.16.2, rbenv: 4.0.5) [gem]" level="application" />
@@ -44,17 +54,20 @@
     <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v3.13.5, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v3.13.8, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-support (v3.13.7, rbenv: 4.0.5) [gem]" level="application" />
-    <orderEntry type="library" scope="TEST" name="rubocop (v1.88.2, rbenv: 4.0.5) [gem]" level="application" />
+    <orderEntry type="library" scope="TEST" name="rubocop (v1.89.0, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubocop-ast (v1.50.0, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby-progressbar (v1.13.0, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="securerandom (v0.4.1, rbenv: 4.0.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="shale (v1.2.2, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="TEST" name="steep (v2.0.0, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="strscan (v3.1.8, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="terminal-table (v4.0.0, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tsort (v0.2.0, rbenv: 4.0.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tzinfo (v2.0.6, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unicode-display_width (v3.2.0, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unicode-emoji (v4.2.0, rbenv: 4.0.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uri (v1.1.1, rbenv: 4.0.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="zeitwerk (v2.8.3, rbenv: 4.0.5) [gem]" level="application" />
   </component>
   <component name="RakeTasksCache">
     <option name="myRootTask">

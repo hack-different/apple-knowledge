@@ -61,8 +61,6 @@ namespace :data do
           rescue StandardError
             next
           end
-
-          puts "Unable to get manifest for #{key}"
         end
       end
 
@@ -81,18 +79,11 @@ namespace :data do
           next if File.exist? output_file
 
           full_path = File.join(args[:dir], key)
-          unless File.exist? full_path
-            puts "Unable to get IPSW for #{key}"
-            next
-          end
+          next unless File.exist? full_path
 
           Zip::File.open(full_path) do |zip_file|
             entry = zip_file.find_entry('BuildManifest.plist')
-            if entry
-              File.write output_file, entry.get_input_stream.read
-            else
-              puts "Unable to get manifest in IPSW at #{full_path}"
-            end
+            File.write output_file, entry.get_input_stream.read if entry
           end
         rescue StandardError
           next
@@ -120,8 +111,6 @@ namespace :data do
         Zip::File.foreach(full_path) do |entry|
           entry.extract(File.join(ipsw_root, File.basename(entry.name))) if entry.name.include? 'DeviceTree'
         end
-      rescue StandardError => e
-        puts e
       end
     end
 
@@ -152,10 +141,10 @@ namespace :data do
       if args[:batch_size]
         FileUtils.mkdir_p File.join(TMP_DIR, 'ipsw', 'urls')
         batch_size = args[:batch_size].to_i
-        puts "Writing to download files with batch size of #{batch_size}"
+
         urls.flatten.compact.each_slice(batch_size).with_index do |url_list, index|
           file_path = File.join(TMP_DIR, 'ipsw', 'urls', "batch_#{index}.txt")
-          puts "Writing group #{index} to #{file_path}"
+
           File.open(file_path, 'w') do |file|
             url_list.each do |url|
               file.puts url
@@ -163,7 +152,7 @@ namespace :data do
           end
         end
       else
-        urls.compact.each { |url| puts url }
+        urls.compact
       end
     end
 
@@ -171,8 +160,6 @@ namespace :data do
     task :merkle, [:file] do |_task, args|
       tree = MerkleTree.new File.open(args[:file])
       tree.scan
-
-      ap tree.to_h
     end
 
     desc 'total order each IPSW'
@@ -215,8 +202,6 @@ namespace :data do
       rescue StandardError
         next
       end
-
-      puts result.to_json
     end
 
     desc 'Calculate the IPFS addresses for known hashes'
@@ -251,18 +236,11 @@ namespace :data do
 
       collection.each_key do |key|
         full_path = File.join(args[:dir], key)
-        unless File.exist? full_path
-          puts "Missing IPSW: #{key}"
-          next
-        end
+        next unless File.exist? full_path
 
         Zip::File.open(full_path) do |zip_file|
           entry = zip_file.find_entry('BuildManifest.plist')
-          if entry
-            File.write output_file, entry.get_input_stream.read
-          else
-            puts "Unable to get manifest in IPSW at #{full_path}"
-          end
+          File.write output_file, entry.get_input_stream.read if entry
         end
       rescue StandardError
         next
