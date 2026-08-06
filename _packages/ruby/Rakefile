@@ -14,7 +14,7 @@ OUTPUT_PATH = Pathutil.new OUTPUT_ROOT
 
 desc 'set the version patch to the git main height'
 task version: :environment do
-  repo_height = `git rev-list --count main`
+  repo_height = `git rev-list --count HEAD`
   repo_height = '0' if repo_height.empty?
 
   version_file = %(# frozen_string_literal: true

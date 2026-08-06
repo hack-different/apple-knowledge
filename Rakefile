@@ -21,7 +21,7 @@ desc 'do all precommit tasks'
 task precommit: %i[sort]
 
 desc 'default build task'
-task default: ['rubocop:auto_correct', :precommit]
+task default: ['rubocop:autocorrect', :precommit]
 
 desc 'Perform all automated updates'
 task :update do
