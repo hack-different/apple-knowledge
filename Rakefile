@@ -3,6 +3,7 @@
 
 require 'bundler/setup'
 require 'rubocop/rake_task'
+require 'rspec/core/rake_task'
 
 BASE_PATH = File.dirname(__FILE__)
 
@@ -20,8 +21,10 @@ RuboCop::RakeTask.new
 desc 'do all precommit tasks'
 task precommit: %i[sort]
 
+RSpec::Core::RakeTask.new(:spec)
+
 desc 'default build task'
-task default: ['rubocop:autocorrect', :precommit]
+task default: ['rubocop:autocorrect', :spec, :precommit]
 
 desc 'Perform all automated updates'
 task :update do

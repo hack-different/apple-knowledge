@@ -27,11 +27,6 @@ end
   File.write(File.join(RUBY_PACKAGE_ROOT, 'lib/apple_data/version.rb'), version_file)
 end
 
-desc 'prepare the enviornment'
-task :environment do
-  require_relative 'lib/apple_data'
-end
-
 desc 'copy data files'
 task files: :environment do
   Dir[DATA_FILES_GLOB].each do |path|
