@@ -173,24 +173,6 @@ types:
           with a `secb` object with a `trst` object), `rssl` (Factory SSL root CA),
           `rvok` (Revocation list) and `trpk` (trusted public keys?)
 lpol_properties:
-  AMNM:
-  BNCH:
-  BORD:
-  CEPO:
-  CHIP:
-  CPRO:
-  CSEC:
-  DGST:
-    title: Hash Digest
-  DPRO:
-  DSEC:
-  ECID:
-  EPRO:
-  ESEC:
-  LCST:
-  LNCH:
-  RNCH:
-  SDOM:
   auxi:
     title: Auxiliary Image4 Manifest Hash (`auxi`)
     description: After the system verifies that the UAKL hash matches what’s found
@@ -241,11 +223,6 @@ lpol_properties:
     access:
       write:
       - macOS
-  bat0:
-  bat1:
-  batf:
-  chg0:
-  chg1:
   coih:
     title: CustomOS Image4 Manifest Hash (coih)
     description: The `coih` is an SHA384 hash of CustomOS Image4 manifest. The payload
@@ -257,12 +234,8 @@ lpol_properties:
     access:
       write:
       - 1TR
-  diag:
-  dtre:
   gaid:
     description: Gaia Authentication ID (Apple Internal)
-  glyc:
-  glyp:
   hrlp:
     title: Has recoveryOS Local Policy
     description: The `hrlp` indicates whether or not the `prot` value is the measurement
@@ -275,9 +248,6 @@ lpol_properties:
       - 1TR
       - recoveryOS
       - macOS
-  ibot:
-  illb:
-  krnl:
   kuid:
     title: Key Encryption Key
     description: The kuid indicates the volume that was booted. The key encryption
@@ -296,7 +266,6 @@ lpol_properties:
     description: Local Boot Object.  Indicates that the object is to be used as the
       target of a local boot only and not provided by the server for remote / DFU
       boots.
-  logo:
   lpnh:
     title: LocalPolicy Nonce Hash
     description: The lpnh is used for anti-replay of the LocalPolicy. This is an SHA384
@@ -357,7 +326,6 @@ lpol_properties:
       - 1TR
       - recoveryOS
       - macOS
-  recm:
   rolp:
     description: recoveryOS local policy
     type: boolean
@@ -392,8 +360,6 @@ lpol_properties:
       - 1TR
       - recoveryOS
       - macOS
-  rsep:
-  sepi:
   sip0:
     title: System Integrity Protection (SIP) 0 Status - Overall
     description: The sip0 holds the existing System Integrity Protection (SIP) policy
@@ -433,7 +399,6 @@ lpol_properties:
     description: Secure Multi-Boot 3 - DEP-allowed MDM Control
   smb5:
     description: Unknown - but known to exist in Factory signing
-  snon:
   snuf:
     description: Staged Nonce For Update Firmware
   spih:
@@ -656,6 +621,9 @@ manifest_properties:
     description: Local Policy Next Cryptographic Hash
     name: ApLocalNonceHash
   Mod#:
+    title: Model ID
+  mlb#:
+    title: Main Logic Board Serial
   RNCH:
     description: Remote Nonce Cryptographic Hash
   RSCH:
@@ -762,6 +730,7 @@ manifest_properties:
       Potentially indicates that the policy is for a recovery boot only.
     type: boolean
   rfcg:
+    title: Reconfigure Mode
     type: boolean
   rsch:
     description: research mode
@@ -803,8 +772,12 @@ manifest_properties:
     name: Ap,TargetType
     roots:
     - ManifestKey-DataCenter
+  META:
+    title: Metadata
+  SPAY:
+    title: SysCfg Payload
   uidm:
-    description: UID Mode (Enabled)
+    description: UID Mixing (Entanglement)
     type: boolean
     roots:
     - ManifestKey-DataCenter
@@ -1121,6 +1094,8 @@ img4_tags:
     title: Charger Input Limit Calibration
   CLHS:
     description: Chained LocalPolicy Hash String
+  SDOM:
+    title: Security Domain
   Coor:
     title: Country of Origin
   DPCl:
@@ -1158,6 +1133,8 @@ img4_tags:
     title: Proximity Calibration Data
   RMd#:
     title: Regional Model Number
+  DGST:
+    title: Object Digest
   SPTM:
     description: Secure Page Table Monitor
   SpTS:
@@ -1194,10 +1171,14 @@ img4_tags:
   auac:
     description:
   batf:
+    title: Battery Firmware
   berb:
+  time:
+    title: Timestamp
   bles:
     description:
   cfel:
+    title: CFELoader
     description:
     firmware_name: CFELoader
   cker:
