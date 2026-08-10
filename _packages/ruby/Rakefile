@@ -8,7 +8,8 @@ RUBY_PACKAGE_ROOT = File.dirname(__FILE__)
 OUTPUT_ROOT = File.join(RUBY_PACKAGE_ROOT, 'share')
 REPO_ROOT = File.expand_path(File.join(RUBY_PACKAGE_ROOT, '../..'))
 DATA_ROOT = File.join(REPO_ROOT, '_data')
-DATA_FILES_GLOB = File.join(DATA_ROOT, '**', '*.{yaml,crt,cer,der,pem}')
+ASN1_ROOT = File.join(REPO_ROOT, '_data', 'asn1')
+DATA_FILES_GLOB = File.join(DATA_ROOT, '**', '*.{yaml,crt,cer,der,pem,asn1,asn}')
 DATA_PATH = Pathutil.new DATA_ROOT
 OUTPUT_PATH = Pathutil.new OUTPUT_ROOT
 
