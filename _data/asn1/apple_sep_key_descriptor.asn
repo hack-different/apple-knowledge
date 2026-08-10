@@ -1,0 +1,10 @@
+AppleSEPKeyDescriptor ::= SEQUENCE {
+    version     INTEGER,
+    algorithm   OBJECT IDENTIFIER, -- Maps to Apple-specific EC curves
+    keyUsage    BIT STRING,
+    publicKey   BIT STRING,
+    protection  SEQUENCE {
+        class     INTEGER,         -- Keychain data protection class
+        flags     BIT STRING       -- Hardware enforcement rules
+    }
+}

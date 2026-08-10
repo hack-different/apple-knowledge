@@ -1,0 +1,7 @@
+AppleReceiptContents ::= SET OF ReceiptAttribute
+
+ReceiptAttribute ::= SEQUENCE {
+    type    INTEGER,       -- Unique identifier for the data field
+    version INTEGER,       -- Attribute layout version
+    value   OCTET STRING   -- The payload (containing nested Ints, Strings, or Dates)
+}

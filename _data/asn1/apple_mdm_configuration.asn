@@ -1,0 +1,12 @@
+Img4Container DEFINITIONS EXPLICIT TAGS ::= BEGIN
+
+AppleMDMConfiguration ::= SEQUENCE {
+    version     INTEGER,
+    identity    CHOICE {
+        udid      IA5String,
+        serial    IA5String
+    },
+    capabilities SET OF OBJECT IDENTIFIER -- e.g., 1.2.840.113635.100.6.x properties
+}
+
+END

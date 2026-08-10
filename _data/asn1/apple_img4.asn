@@ -1,0 +1,56 @@
+Img4Container DEFINITIONS EXPLICIT TAGS ::= BEGIN
+
+IMPORTS Certificate FROM CommonTypes;
+
+-- The root structure of any .img4 file
+Img4File ::= SEQUENCE {
+    magic           IA5String,     -- Always exactly "IMG4"
+    manifest        Img4Manifest,  -- Contains the properties, hashes, and signature
+    payload         [0] EXPLICIT Img4Payload OPTIONAL
+}
+
+Img4Manifest ::= SEQUENCE {
+    magic           IA5String,     -- Always exactly "IM4M"
+    version         INTEGER,       -- Manifest format version (typically 0)
+    body            Img4ManifestBody,
+    signature       OCTET STRING,  -- RSA/ECDSA cryptographic signature over the body
+    certificates    SEQUENCE OF Certificate -- X.509 chain used to verify the signature
+}
+
+Img4ManifestBody ::= SEQUENCE {
+    manifestInfo    SET OF Property, -- Global manifest settings (e.g., Board ID, ECID)
+    images          SET OF ImageProperties -- Specific properties/hashes for each firmware image
+}
+
+Img4Payload ::= SEQUENCE {
+    magic           IA5String,     -- Always exactly "IM4P"
+    type            IA5String,     -- 4-character identifier (e.g., "ibot", "logo", "krnl")
+    description     IA5String,     -- Text description of the component
+    data            OCTET STRING,  -- The raw binary firmware payload (often compressed)
+    keybags         [0] EXPLICIT Keybags OPTIONAL -- Included if the payload is encrypted
+}
+
+-- Generic building block for manifest rules and tags
+Property ::= SEQUENCE {
+    tag             IA5String,     -- 4-character identifier (e.g., "CHIP", "BORD")
+    type            INTEGER,       -- Data type identifier
+    value           ANY DEFINED BY type
+}
+
+ImageProperties ::= SEQUENCE {
+    tag             IA5String,     -- 4-character image identifier (e.g., "ibot")
+    properties      SET OF Property -- Hashes, execution permissions, and roll-back values
+}
+
+Keybags ::= SEQUENCE {
+    magic           IA5String,     -- Always exactly "KBAG"
+    body            SEQUENCE OF Keybag
+}
+
+Keybag ::= SEQUENCE {
+    type            INTEGER,       -- Keybag type (e.g., Development or Production)
+    iv              OCTET STRING,  -- Initialization Vector
+    key             OCTET STRING   -- Encrypted AES Key
+}
+
+END

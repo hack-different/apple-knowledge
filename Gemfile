@@ -46,6 +46,7 @@ group :jekyll_plugins do
 end
 
 group :development, :test do
+  gem 'asn_parser', require: 'asn1_parser'
   gem 'awesome_print'
   gem 'base_x'
   gem 'bundle-audit'
@@ -72,6 +73,7 @@ group :development, :test do
   gem 'pathutil'
   gem 'pry'
   gem 'rake'
+  gem 'rasn2'
   gem 'rate_throttle_client'
   gem 'rbs-inline'
   gem 'rspec'
