@@ -620,10 +620,10 @@ manifest_properties:
   LNCH:
     description: Local Policy Next Cryptographic Hash
     name: ApLocalNonceHash
+  META:
+    title: Metadata
   Mod#:
     title: Model ID
-  mlb#:
-    title: Main Logic Board Serial
   RNCH:
     description: Remote Nonce Cryptographic Hash
   RSCH:
@@ -647,6 +647,8 @@ manifest_properties:
     description: Security Mode
   SNON:
     description: SEP Nonce
+  SPAY:
+    title: SysCfg Payload
   SrNm:
     description: Unit Serial Number
     manifest: true
@@ -708,6 +710,8 @@ manifest_properties:
   lpol:
     description: Local Policy
   manx:
+  mlb#:
+    title: Main Logic Board Serial
   mmap:
     description: Memory Map
   nsih:
@@ -772,10 +776,6 @@ manifest_properties:
     name: Ap,TargetType
     roots:
     - ManifestKey-DataCenter
-  META:
-    title: Metadata
-  SPAY:
-    title: SysCfg Payload
   uidm:
     description: UID Mixing (Entanglement)
     type: boolean
@@ -1094,10 +1094,10 @@ img4_tags:
     title: Charger Input Limit Calibration
   CLHS:
     description: Chained LocalPolicy Hash String
-  SDOM:
-    title: Security Domain
   Coor:
     title: Country of Origin
+  DGST:
+    title: Object Digest
   DPCl:
     title: Primary Calibration Matrix
   DPRO:
@@ -1133,8 +1133,8 @@ img4_tags:
     title: Proximity Calibration Data
   RMd#:
     title: Regional Model Number
-  DGST:
-    title: Object Digest
+  SDOM:
+    title: Security Domain
   SPTM:
     description: Secure Page Table Monitor
   SpTS:
@@ -1173,8 +1173,6 @@ img4_tags:
   batf:
     title: Battery Firmware
   berb:
-  time:
-    title: Timestamp
   bles:
     description:
   cfel:
@@ -1268,6 +1266,18 @@ img4_tags:
     description:
   itst:
     description: Installer Test?
+  kcrf:
+    name: Kernel Cache Read-Only File Offset
+  kcrz:
+    name: Kernel Cache Read-Only File Size
+  kcwf:
+    name: Kernel Cache Write File Offset
+  kcwz:
+    name: Kernel Cache Write File Size
+  kcxf:
+    name: Kernel Cache Execute File Offset
+  kcxz:
+    name: Kernel Cache Execute File Size
   kdlv:
     description: Kernel Linker Version
   lamo:
@@ -1378,6 +1388,8 @@ img4_tags:
     description:
   tics:
     description:
+  time:
+    title: Timestamp
   tstp:
     title: Testing Product
   tz0s:

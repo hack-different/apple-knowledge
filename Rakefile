@@ -23,8 +23,17 @@ task precommit: %i[sort]
 
 RSpec::Core::RakeTask.new(:spec)
 
+task :asn1 do
+  require 'rasn2'
+  require 'asn1_parser'
+  Dir['_data/asn1/**/*.asn'].each do |f|
+    puts "Parsing #{f}"
+    ASN1Parser::Parser.parse_file(f)
+  end
+end
+
 desc 'default build task'
-task default: ['rubocop:autocorrect', :spec, :precommit]
+task default: [:asn1, 'rubocop:autocorrect', :spec, :precommit]
 
 desc 'Perform all automated updates'
 task :update do

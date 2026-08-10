@@ -1,0 +1,7 @@
+
+
+AppleProvisioningExtensions ::= SEQUENCE {
+    developmentCertificates SEQUENCE OF Certificate,
+    entitlements            OCTET STRING, -- Embedded XML Plist binary mapping
+    expirationDate          GeneralizedTime
+}

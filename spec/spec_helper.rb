@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-
+require 'asn1_parser'
 require_relative '../_packages/ruby/lib/apple_data'
 
 AppleData.data_location = File.join(File.dirname(__FILE__), '..', '_data')
