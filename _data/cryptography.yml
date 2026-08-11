@@ -1,0 +1,776 @@
+---
+auto_sort: false
+credits:
+  - rickmark
+  - gemini
+  - https://safecurves.cr.yp.to
+---
+types:
+  field:
+    description: A field is a set of numbers that can be added, subtracted, multiplied, and divided according
+      to certain rules.  Typically defined as an Alban group.
+    parameters:
+      n:
+        aliases:
+          - size
+        type: positive_integer
+        description: The size of the field, which it the range for `X` where `X is a value between 0 and n-1
+    variants:
+      prime:
+        description: !markdown >
+          A prime Galois field, denoted as $\mathbb{F}_p$ or GF(p), is a finite field with a prime number
+          p of elements, where arithmetic operations like addition and multiplication are performed modulo p. In the
+          PARI-GP computer algebra system, prime fields and elements within them are handled natively using integers
+          modulo p via  or through finite field functions like . [1, 2, 3, 4, 5]
+          
+          # Core Properties of GF(p)
+
+          • Elements: The field consists of integers $\{0, 1, 2, \dots, p-1\}$.
+          • Addition & Subtraction: Computed modulo p.
+          • Multiplication: Computed modulo p.
+          • Inverses: Every non-zero element has a unique multiplicative inverse because p is prime. [1, 5, 6]
+  
+          # Working with Prime Fields in GP/PARI
+
+          • Integers modulo p: Use  to perform basic arithmetic rings/fields. For instance,  returns .
+          • Defining via : You can initialize a prime field element or generator using  where p is prime.
+          • Polynomial roots (): Find roots of polynomials over a prime field by passing the prime p as a domain
+              argument, such as . [7, 8, 9]
+
+      citations:
+        1: ;ttps://www.youtube.com/watch?v=-WGc4VapKj0
+        2: https://www.johndcook.com/blog/finite-fields/
+        3: https://kconrad.math.uconn.edu/math5230f08/parirefcard.pdf
+        4: https://pari.math.u-bordeaux.fr/dochtml/html/Arithmetic_functions.html
+        5: https://www.youtube.com/watch?v=Sw8FH87J1XA
+        6: https://medium.com/@dillihangrae/exploring-number-theory-galois-fields-d837a80f4fd1
+        7: https://pari.math.u-bordeaux.fr/Events/PARI2017c/talks/ecc_en.pdf
+        8: https://pari.math.u-bordeaux.fr/dochtml/html-stable/Polynomials_and_power_series.html
+        9: https://en.wikipedia.org/wiki/Finite_field_arithmetic
+    binary:
+
+  point:
+    description: A point on a cartisian plane.  This can be expressed typically as an ordered pair of integers, almost
+      always always `X` and `Y`.  When used over a field, the values for `X` and `Y` are between 0 and n-1 and are
+      always positive.  With elliptic curves, the values for `X` and `Y` are related, and therefore an alternate form
+      exists where the `X` is encoded and only if the `Y` is positive or negative is encoded.  This is called
+      "point compression" but the value represened is still an X and a Y value.  If the X and Y do not fall on the
+      curve, the compressed point is invalid.
+    parameters:
+      encoding:
+        type: enum
+        values:
+          uncompressed:
+          compressed_positive:
+          compressed_negative:
+      x:
+        type: positive_integer
+      y:
+        type: positive_integer
+
+  prime:
+    description: A prime number.
+  positive_prime:
+    derived_from: positive_integer
+  positive_integer:
+
+algorithms:
+  rsa:
+    uses:
+      - signature
+      - encryption
+    parameters: []
+    private_key:
+      p:
+        type: positive_prime
+      q:
+        type: positive_prime
+    public_key:
+      n:
+        type: positive_integer
+        derived:
+          description: The product of the two prime numbers p and q.
+    description: !markdown >
+      The RSA algorithm is a widely used method for secure data transmission. It is an asymmetric cryptographic
+      system, meaning it uses two different keys: a public key to lock or encrypt the data, and a matching private
+      key to unlock or decrypt it. [1, 2, 3]  
+      
+      # How It Works 
+      
+      The name RSA comes from its inventors: Ron Rivest, Adi Shamir, and Leonard Adleman. Its security relies 
+      on a simple math rule: multiplying two large prime numbers is easy, but finding those original prime numbers
+      back from the final product is very hard. 
+
+      * Key Generation: The system picks two large prime numbers, multiplies them together, and uses the result to create a public key and a private key. 
+      * Encryption: Anyone can use the receiver’s public key to turn a normal message into scrambled code (ciphertext). 
+      * Decryption: Only the person with the secret private key can reverse the code and read the original message. [1, 5, 6]  
+
+      # Common Uses 
+
+      * Secure Web Traffic: Protecting data sent across HTTPS and SSL/TLS certificates. 
+      * Digital Signatures: Proving that a message or software update really came from a trusted sender. 
+      * Secure Logins: Used in protocols like SSH for remote computer access. [2, 3, 4, 7, 8]
+    citations:
+      1: https://www.geeksforgeeks.org/computer-networks/rsa-algorithm-cryptography/
+      2: https://securew2.com/blog/what-is-rsa-asymmetric-encryption
+      3: https://www.splunk.com/en_us/blog/learn/rsa-algorithm-cryptography.html
+      4: https://www.encryptionconsulting.com/education-center/what-is-rsa/
+      5: https://www.youtube.com/watch?v=vf1z7GlG6Qo
+      6: https://entro.security/glossary/rsa-encryption/
+      7: https://www.youtube.com/watch?v=Pq8gNbvfaoM
+      8: https://www.cohesity.com/glossary/rsa-encryption/
+  ecc:
+    uses:
+      - signature
+      - encryption
+      - key_derivation
+    parameters:
+      g:
+        type: point
+        description: The generator point `G` on the elliptic curve.  This point is used to generate the private key.
+    private_key:
+      n:
+        type: positive_integer
+        description: A number whereby the parameter point `G` or the generator is multiplied by `n`.  Point
+          multiplication is a process whereby a point on an elliptic curve is added to itself `n` times.  The result
+          of `n` point additions is in and of itself a new point on the curve.
+        constraint:
+          - positive
+          - field
+          - curve
+    public_key:
+      p:
+        type: point
+        description: A point on the elliptic curve that is `G` times `n`.  This point is in the field, on the curve,
+          and not the point at infinity.
+    description: !markdown >
+      Elliptic Curve Cryptography (ECC) is a public-key encryption approach based on the algebra of elliptic curves
+      over finite fields. It provides the same security as older methods like RSA but uses much smaller keys. This
+      makes it fast and efficient for phones, web pages, and crypto coins. [1, 2, 3, 4, 5]  
+      
+      # How ECC Works 
+
+      * The Curve: Uses a math equation plotted on a grid that makes a symmetric loop shape. 
+      * Generator Point: A specific starting point (G) on the curve agreed upon by both users. 
+      * Private Key: A random number picked in secret by the user. 
+      * Public Key: Found by adding the generator point to itself over and over using the private key number. 
+      * One-Way Math: It is easy to multiply the points forward, but nearly impossible to guess the private key backwards (known as the Elliptic Curve Discrete Logarithm Problem). [4, 6, 7, 8, 9]  
+
+      # Key Benefits 
+
+      * Smaller Size: A 256-bit ECC key offers about the same security as a massive 3072-bit RSA key. 
+      * Less Power: Uses less battery, memory, and CPU power on small hardware. 
+      * Faster Speed: Sets up secure connections quicker than older systems. [5, 6, 10, 11]  
+
+      [1] https://www.ibm.com/docs/en/linux-on-systems?topic=apis-elliptic-curve-ecc-functions
+      [2] https://www.vmware.com/topics/elliptic-curve-cryptography
+      [3] https://www.hexnode.com/blogs/explained/what-is-elliptic-curve-cryptography-ecc/
+      [4] https://cybertalents.com/blog/elliptic-curve-cryptography-ecc
+      [5] https://www.digicert.com/faq/cryptography/what-is-elliptic-curve-cryptography
+      [6] https://www.sectigo.com/blog/what-is-elliptic-curve-cryptography
+      [7] https://www.ssl.com/article/what-is-elliptic-curve-cryptography-ecc/
+      [8] https://www.ssldragon.com/blog/what-is-ecc-certificate/
+      [9] https://www.expressvpn.com/glossary/elliptic-curve-cryptography/
+      [10] https://www.keyfactor.com/blog/elliptic-curve-cryptography-what-is-it-how-does-it-work/
+      [11] https://www.ssl.com/article/what-is-elliptic-curve-cryptography-ecc/
+      [12] https://nordvpn.com/blog/elliptic-curve-cryptography/
+      [13] https://www.1kosmos.com/resources/security-glossary/elliptic-curve-cryptography
+      [14] https://www.twingate.com/blog/glossary/elliptic-curve-algorithm
+
+
+key_derivation:
+  pkbdf2:
+    description: PKBDF2 (Password-Based Key Derivation Function 2) is a key derivation function that is designed to
+      be computationally intensive, making it suitable for deriving cryptographic keys from passwords. It is widely
+      used in various security protocols and applications to ensure that passwords are securely transformed into
+      keys, enhancing overall security. [1]
+encryption:
+  des:
+    description: Data Encryption Standard
+  3des:
+    description: Triple-DES
+  aes:
+    description: Advanced Encryption Standard
+  ecies:
+    description: Elliptic Curve Integrated Encryption Scheme
+  ecmqv:
+    description: Elliptic Curve MQV
+  rsa:
+    description: !markdown >
+      The RSA Cryptosystem is a public-key encryption method named after Ron Rivest, Adi Shamir, and Leonard Adleman.
+      It uses two mathematically linked keys: a public key to lock (encrypt) messages and a private key to unlock
+      (decrypt) them. Its security relies on the fact that multiplying large prime numbers is easy, but factoring
+      their product back is very hard. [1, 2, 3]  
+      
+      # Key Generation 
+
+      * Pick two distinct, large prime numbers, p and q. 
+      * Multiply them to find the modulus n = p × q. 
+      * Compute Euler's totient function: φ(n) = (p - 1)(q - 1). 
+      * Choose an integer e (the public exponent) such that 1 &lt; e &lt; φ(n) and e is coprime to φ(n). 
+      * Calculate d (the private exponent) as the modular multiplicative inverse of e modulo φ(n), meaning $(d \times e) \pmod{\phi(n)} = 1$. 
+      * Public Key: (n, e) (shared with everyone). 
+      * Private Key: (n, d) (kept secret). [1, 4, 5]  
+
+      # Encryption 
+
+      * Turn your message into a number m, where 0 ≤ m &lt; n. 
+      * Compute the ciphertext c using the formula: $c = m^e \pmod{n}$. 
+      * Send c to the receiver. [2, 5, 6, 7]  
+
+      # Decryption 
+
+      * Take the encrypted number c. 
+      * Recover the original message m using the private key d: $m = c^d \pmod{n}$. [2, 5]  
+
+    citations:
+      1: https://www.geeksforgeeks.org/computer-networks/rsa-algorithm-cryptography/
+      2: https://www.encryptionconsulting.com/education-center/what-is-rsa/
+      3: https://www.techtarget.com/cybersecurity/definition/What-is-the-RSA-algorithm
+      4: https://www.youtube.com/watch?v=Pq8gNbvfaoM
+      5: https://entro.security/glossary/rsa-encryption/
+      6: https://www.britannica.com/topic/RSA-encryption
+      7: https://www.youtube.com/watch?v=qph77bTKJTM
+
+
+signature:
+  dsa:
+    description: !markdown >
+      Digital Signature Algorithm (DSA) is a digital signature scheme that provides secure authentication and integrity
+      for digital messages and documents. It is based on the mathematical difficulty of the discrete logarithm problem.
+      DSA is widely used in various security protocols and applications, including secure communication, digital
+      signatures, and key exchange. [3]
+  ecdsa:
+    description: !markdown >
+      Elliptic Curve Digital Signature Algorithm (ECDSA) is a digital signature scheme that uses elliptic curve
+      cryptography. It provides secure authentication and integrity for digital messages and documents. ECDSA is
+      widely used in various security protocols and applications, including secure communication, digital signatures,
+      and key exchange. [6]
+  rsa:
+    description: !markdown >
+      The RSA signature algorithm is an asymmetric cryptographic scheme used to authenticate the origin of digital messages or documents. It works by using a private key to mathematically "sign" a message hash, which anyone with the corresponding public key can verify to prove authenticity and detect tampering. [1, 2, 3, 4]  
+      Key Pair Components 
+
+      • Public Key: Consists of the modulus n and the public exponent e, used to verify signatures. 
+      • Private Key: Consists of the modulus n and the private exponent d, kept secret and used to generate signatures. [2, 5]  
+
+      Signature Generation (Signing) 
+
+      • Compute the hash value of the message: h = hash(msg). 
+      • Raise the hash to the power of the private exponent d modulo n to create the signature: $s = h^d \pmod n$. 
+      • Send the signature along with the original message. [2, 4, 6]  
+
+      Signature Verification 
+
+      • Compute the hash value of the received message: h = hash(msg). 
+      • Raise the signature to the power of the public exponent e modulo n to recover the hash: $h' = s^e \pmod n$. 
+      • Compare the calculated hash h with the recovered hash h'. If they match, the signature is valid. [2, 4, 7, 8]  
+
+      Would you like to explore how RSA key generation works mathematically or compare it with ECDSA? 
+      AI responses may include mistakes.
+
+      [1] https://www.geeksforgeeks.org/computer-networks/rsa-and-digital-signatures/
+      [2] https://cryptobook.nakov.com/digital-signatures/rsa-signatures
+      [3] https://www.encryptionconsulting.com/education-center/what-is-rsa/
+      [4] https://www.youtube.com/watch?v=TeuKV5kHLyQ
+      [5] https://en.wikipedia.org/wiki/RSA_cryptosystem
+      [6] https://securew2.com/blog/what-is-rsa-asymmetric-encryption
+      [7] https://cryptobook.nakov.com/digital-signatures/rsa-signatures
+      [8] https://students.cs.byu.edu/~cs465ta/lectures/rsa_notes.pdf
+
+
+agreement:
+  dh:
+    description: !markdown >
+      Diffie-Hellman (DH) is a key exchange protocol that allows two parties to securely establish a shared secret
+      over an insecure communication channel. It relies on the mathematical difficulty of the discrete logarithm
+      problem. DH is widely used in various security protocols and applications, including secure communication,
+      key exchange, and digital signatures. [3]
+  ecdh:
+    description: !markdown >
+      Elliptic Curve Diffie-Hellman (ECDH) is a key exchange protocol that allows two parties to securely establish
+      a shared secret over an insecure communication channel. It is based on the mathematical difficulty of the
+      elliptic curve discrete logarithm problem. ECDH is widely used in various security protocols and applications,
+      including secure communication, key exchange, and digital signatures. [4]
+  ecdhe:
+    description: !markdown >
+      Elliptic Curve Diffie-Hellman Ephemeral (ECDHE) is a key exchange protocol that allows two parties to securely
+      establish a shared secret over an insecure communication channel. It is based on the mathematical difficulty
+      of the elliptic curve discrete logarithm problem. ECDHE is widely used in various security protocols and
+      applications, including secure communication, key exchange, and digital signatures. [5]
+hash_algorithms:
+  md5:
+    description: MD5 is a widely used cryptographic hash function that produces a 128-bit (16-byte) hash value.
+    lengths:
+    - 128
+    insecure: true
+  sha0:
+    description: SHA-0 is the original 160-bit cryptographic hash function published in 1993 by NIST as "SHA". It
+      was withdrawn and replaced by SHA-1 shortly after publication in 1995 due to an undisclosed flaw, making it
+      obsolete and insecure for modern use.
+    lengths:
+    - 160
+    insecure: true
+  sha1:
+    vulnerabilities:
+      - Cryptographic Collisions
+      - Length Extension Attacks
+    construction: merkle–damgard
+    recommended: false
+    efficacy: Exceptionally efficient on standard CPUs, which commonly feature optimized implementations
+    description: !markdown >
+      SHA-1 hash is a 160-bit cryptographic checksum rendered as a 40-character hexadecimal string.
+      Designed by the NSA, it converts any input data into a unique digital fingerprint. It is now considered
+      cryptographically broken and insecure against collision attacks, meaning modern systems use SHA-256
+      instead. [1, 2, 3, 4]
+    
+      ## Key Characteristics
+  
+      * Fixed Output: Always produces 160 bits (40 hex characters) regardless of input size.
+      * One-Way Function: Cannot be reversed to reveal the original input data.
+      * Avalanche Effect: Changing even a single character drastically changes the final hash output. [2, 3, 5, 6]
+
+      ## Security Status and Deprecation
+
+      * Cryptographic Collisions: Researchers successfully demonstrated practical collision attacks (finding two
+          different inputs with the same hash). [4, 7]
+      * Current Usage: Phased out of digital signatures, SSL certificates, and secure software repositories. [1, 4, 7]
+      * Legacy Compatibility: Retained mostly for older version control systems (like checking file identifiers in
+          Git) and non-adversarial checksum verifications. [5, 7]
+    citations:
+      1: [https://securew2.com](https://securew2.com/blog/what-is-sha-encryption-sha-256-vs-sha-1)
+      2: [https://en.wikipedia.org](https://en.wikipedia.org/wiki/SHA-1)
+      3: [https://md5decrypt.net](https://md5decrypt.net/en/Sha1/)
+      4: [https://www.geeksforgeeks.org](https://www.geeksforgeeks.org/java/sha-1-hash-in-java/)
+      5: [https://www.youtube.com](https://www.youtube.com/watch?v=kmHojGMUn0Q&t=1)
+      6: [https://www.youtube.com](https://www.youtube.com/watch?v=DMtFhACPnTY)
+      7: [https://emn178.github.io](https://emn178.github.io/online-tools/sha1.html)
+    lengths:
+        - 160
+  sha2:
+    status: common-usage
+    construction: merkle–damgard
+    recommended: true
+    vulnerabilities:
+      - Length Extension Attacks
+    efficacy: Exceptionally efficient on standard CPUs, which commonly feature optimized implementations
+    description: !markdown >
+      SHA-2 (Secure Hash Algorithm 2) is a set of cryptographic hash functions designed by the NSA. It turns data of
+      any size into a fixed-length text or number string (a "hash"). Common types include SHA-256 and SHA-512, which
+      are used to keep data safe and check file integrity. [1, 2, 3, 4]
+      
+      ## Key Features
+
+      * One-Way: You cannot turn a hash back into the original data.
+      * Unique: Even a tiny change in the input changes the whole hash.
+      * Secure: It replaced older, broken hashes like SHA-1 and MD5. [1, 4, 5]
+
+      ## Main Types
+
+      * SHA-256: Uses 256 bits; the most common choice for web security and digital signatures.
+      * SHA-512: Uses 512 bits; faster on 64-bit systems and offers higher security levels.
+      * SHA-224 & SHA-384: Truncated or modified versions for specific size needs. [1, 4, 5, 6, 7]
+    citations:
+      1: [https://emn178.github.io](https://emn178.github.io/online-tools/sha256.html)
+      2: [https://en.wikipedia.org](https://en.wikipedia.org/wiki/SHA-2)
+      3: [https://docs.aws.amazon.com](https://docs.aws.amazon.com/clean-rooms/latest/sql-reference/s_SHA2.html)
+      4: [https://shop.trustico.com](https://shop.trustico.com/blogs/stories/sha-1-vs-sha-2-and-other-hashing-algorithms)
+      5: [https://www.youtube.com](https://www.youtube.com/watch?v=QZY3IjFBtFY)
+      6: [https://www.sectigo.com](https://www.sectigo.com/blog/what-is-sha-encryption)
+      7: [https://xilinx.github.io](https://xilinx.github.io/Vitis_Libraries/security/2019.2/guide_L1/internals/sha2.html)
+
+sha3:
+    status: future-proofing
+    construction: sponge
+    recommended: true
+    efficacy: Exceptionally efficient on customized ASICs/FPGAs, currently lacks broad support on standard CPUs
+    description: !markdown > 
+      SHA-3 (Secure Hash Algorithm 3) is the latest cryptographic hash standard released by the National Institute of
+      Standards and Technology (NIST). It converts any input data into a unique, fixed-length digital fingerprint
+      called a hash. [1, 2, 3]
+      
+      Unlike earlier algorithms like SHA-1 and SHA-2, which rely on the Merkle–Damgård structure, SHA-3 is built on a
+      completely different design called Keccak and utilizes a unique sponge construction. This fundamental structural
+      difference ensures that if a theoretical vulnerability is ever discovered in SHA-2, SHA-3 will remain entirely 
+      unaffected as a secure backup. [2, 3, 4]
+      
+      ## Standard SHA-3 Variants
+      
+      According to the [NIST FIPS 202 Publication](https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.202.pdf), the
+      SHA-3 family is officially split into four fixed-length hash functions and two flexible Extendable-Output
+      Functions (XOFs): [5, 6, 7]
+
+      ### SHAKE128 & SHAKE256
+      
+      XOF variants that can squeeze out a hash of any requested bit length. [8, 9, 10]
+
+      ## How the "Sponge" Works
+      
+      The algorithm processes data in two distinct phases: [2, 11, 12]
+
+      1. Absorbing Phase: The input data is split into blocks, XORed into the internal state matrix, and thoroughly
+          mixed using a 1600-bit permutation function called Keccak-p. [2, 13]
+      2. Squeezing Phase: The internal data state continues to permute while the desired number of output bits are
+          read out to form the final secure hash. [2, 10]
+
+      If you are writing software, you can test hashing functions locally using free browser environments
+      like the [Codeshack SHA-3 Generator](https://codeshack.io/sha3-hash-generator/) or the Emn178 GitHub
+      Page. [4, 14, 15, 16, 17]
+    citations:
+      1: [https://en.wikipedia.org](https://en.wikipedia.org/wiki/SHA-3)
+      2: [https://www.youtube.com](https://www.youtube.com/watch?v=fzlflyw7X2I&t=91)
+      3: [https://rublon.com](https://rublon.com/blog/sha-3-vs-sha-2-vs-sha-1-vs-md5/)
+      4: [https://codeshack.io](https://codeshack.io/sha3-hash-generator/)
+      5: [https://nvlpubs.nist.gov](https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.202.pdf)
+      6: [https://nvlpubs.nist.gov](https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-185.pdf)
+      7: [https://shattered.io](https://shattered.io/sha-256-vs-sha3-256/)
+      8: [https://xilinx.github.io](https://xilinx.github.io/Vitis_Libraries/security/2019.2/guide_L1/internals/sha3.html)
+      9: [https://www.analog.com](https://www.analog.com/en/resources/technical-articles/back-to-basics-secure-hash-algorithms.html)
+      10: [https://www.youtube.com](https://www.youtube.com/watch?v=bTOJ9An9wpE&t=214)
+      11: [https://ieeexplore.ieee.org](https://ieeexplore.ieee.org/iel7/8334884/8350884/08351649.pdf)
+      12: [https://www.intel.cn](https://www.intel.cn/content/www/cn/zh/developer/articles/technical/intel-sha-extensions.html)
+      13: [https://www.nist.gov](https://www.nist.gov/publications/sha-3-standard-permutation-based-hash-and-extendable-output-functions)
+      14: [https://emn178.github.io](https://emn178.github.io/online-tools/sha3_256.html)
+      15: [https://www.devity.in](https://www.devity.in/tools/hash-generator/)
+      16: [https://domainscan.in](https://domainscan.in/dev/generate-hash)
+      17: [https://security.stackexchange.com](https://security.stackexchange.com/questions/16332/are-online-hash-calculators-dangerous)
+block_cypher_modes:
+  ecb:
+    description: !markdown >
+      Electronic Codebook (ECB) mode is the simplest and most basic block cipher mode of operation. It splits a message into fixed-size blocks and encrypts each block independently using the same secret key. Identical plaintext blocks always yield identical ciphertext blocks, making it insecure for most uses. [1, 2, 3, 4]  
+      How ECB Works 
+
+      • Splitting: Data is cut into equal chunks matching the block size (such as 16 bytes for AES). 
+      • Independent Encryption: Each block is processed through the cipher separately without interaction from other blocks. 
+      • Independent Decryption: Cipher blocks are decrypted individually back to text using the same key. [3, 4, 5]  
+
+      Advantages 
+
+      • Simplicity: Very easy to program and use. 
+      • Parallel Processing: Blocks encrypt or decrypt simultaneously [0.12], saving time on multi-core systems. [4]  
+
+      Security Weaknesses 
+
+      • Pattern Leakage: Identical inputs create identical outputs, meaning visual shapes or data trends remain visible (famous for the "Tux the Penguin" encrypted image demonstration). 
+      • No Hiding of Data: An attacker can swap, delete, or replay blocks [0.13] without detection. Most experts advise against using ECB for private or sensitive data. [2, 4]  
+
+      If you want, I can explain:Cipher Block Chaining (CBC) as a secure alternativePadding methods used when data does not fit the block size evenly 
+      AI responses may include mistakes.
+
+      [1] https://www.geeksforgeeks.org/computer-networks/electronic-code-book-ecb-in-cryptography/
+      [2] https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
+      [3] https://destcert.com/resources/types-of-ciphers/
+      [4] https://medium.com/@brsdncr/cryptography-lesson-notebook-1-aes-ecb-electronic-codebook-5baabcedfa59
+      [5] https://www.youtube.com/watch?v=jDnenb9EHQk
+  cbc:
+    description: !markdown >
+      Cipher Block Chaining (CBC) is a mode of operation for block ciphers where each plaintext block is combined with the previous ciphertext block using an exclusive-OR (XOR) operation before being encrypted. This chaining process ensures that identical plaintext blocks yield entirely different ciphertext outputs. [1, 2, 3]  
+      How CBC Encryption Works 
+
+      • Initialization Vector (IV): Because there is no previous ciphertext for the first plaintext block, a unique or random value called an IV is XORed with the first block. 
+      • Chaining: For every subsequent block, the current plaintext block is XORed with the ciphertext output of the immediately preceding block. 
+      • Encryption: The combined result of the XOR operation is then passed through the block cipher algorithm using the secret key. 
+      • Sequential processing: Encryption must be performed strictly in sequence (serially) because block N cannot be encrypted until block N-1 finishes. [3, 4, 5]  
+
+      How CBC Decryption Works 
+
+      • Reverse process: The cipher takes a ciphertext block, runs it through the block cipher decryption function, and then XORs the result with the previous ciphertext block (or the IV for the first block) to recover the original plaintext. 
+      • Parallel decryption: Unlike encryption, decryption can be done in parallel because all ciphertext blocks are already available. [3, 6]  
+
+      Key Pros and Cons 
+
+      • Pros: Hides patterns and prevents repetitive plaintext leaks (unlike basic ECB mode); highly secure when paired with a proper, unpredictable IV. 
+      • Cons: Slower due to its sequential nature during encryption; prone to error propagation (a corrupted ciphertext block corrupts its own block decryption and distorts the next plaintext block). [5, 8, 9]  
+
+      If you'd like, I can explain:How the Initialization Vector (IV) must be managed securelyHow CBC compares to Counter (CTR) or Galois/Counter Mode (GCM)How padding is handled via PKCS#7Let me know what you want to explore next! 
+      AI responses may include mistakes.
+
+      [1] https://www.geeksforgeeks.org/ethical-hacking/block-cipher-modes-of-operation/
+      [2] https://www.portnox.com/cybersecurity-101/general-security/what-is-cipher-block-chaining/
+      [3] https://www.sciencedirect.com/topics/computer-science/cipher-block-chaining
+      [4] https://datatracker.ietf.org/doc/html/rfc2451
+      [5] https://www.youtube.com/watch?v=SV2qsNfI1Cs
+      [6] https://www.sciencedirect.com/topics/mathematics/block-cipher
+      [7] https://www.youtube.com/watch?v=NnLLkmgBhCY
+      [8] https://www.sciencedirect.com/topics/mathematics/cipher-block-chaining
+      [9] https://destcert.com/resources/types-of-ciphers/
+  cfb:
+
+
+  ofb:
+    description: !markdown >
+      Output Feedback (OFB) mode turns a block cipher into a synchronous stream cipher. It encrypts an Initialization Vector (IV) and feeds that cipher output back into the next encryption round. This produces a keystream that is XORed with the plaintext to create the ciphertext. [1, 2, 3, 4]  
+      How OFB Mode Works 
+
+      • Keystream Generation: The cipher encrypts an IV to create the first output block. It feeds that output back into the cipher again to create the next block, repeating this process to form a continuous keystream. 
+      • Encryption: The system XORs the generated keystream blocks with the plaintext blocks to produce the final ciphertext. 
+      • Decryption: Decryption uses the exact same steps. It generates the identical keystream by encrypting the IV and XORs it with the ciphertext to recover the original plaintext. [4]  
+
+      Key Features and Properties 
+
+      • No Error Propagation: A bit error in the ciphertext only affects the single corresponding bit in the decrypted plaintext, rather than corrupting later blocks. 
+      • Preprocessing: The system can generate the entire keystream before the plaintext is even available, speeding up real-time processing. 
+      • No Parallel Encryption: Because each keystream block depends strictly on the output of the previous block, you cannot encrypt multiple blocks at the same time. 
+      • IV Uniqueness: Reusing the same IV and secret key combination completely destroys security by repeating the exact same keystream. [7]  
+
+      If you would like, I can compare OFB mode with CFB (Cipher Feedback) or CTR (Counter) mode to show how their feedback and performance differ. 
+      AI responses may include mistakes.
+
+      [1] https://www.youtube.com/watch?v=gIzFAFo5a6M
+      [2] https://www.youtube.com/watch?v=Q_hi2jWg6dc
+      [3] https://destcert.com/resources/types-of-ciphers/
+      [4] https://www.youtube.com/watch?v=OGdBTfouuao
+      [5] https://www.tutorialspoint.com/cryptography/output_feedback_mode.htm
+      [6] https://crypto.stackexchange.com/questions/25961/operation-modes-of-block-ciphers-how-are-used
+      [7] https://www.geeksforgeeks.org/ethical-hacking/block-cipher-modes-of-operation/
+
+
+  ifb:
+    description: !markdown >
+      It appears IFB is not a standard or widely recognized block cipher mode of operation (such as CBC, CFB, OFB, or CTR). You might have meant CFB (Cipher Feedback), OFB (Output Feedback), or perhaps a typo for an internal feedback mechanism in a specific custom stream/block design. [1, 2, 3]  
+      Standard feedback-based modes include: 
+      Cipher Feedback (CFB) Mode 
+
+      • Function: Turns a block cipher into a self-synchronizing stream cipher. 
+      • Mechanism: Encrypts the previous ciphertext block, then XORs the output with the current plaintext block to produce the new ciphertext. 
+      • Use Case: Good for streaming data where synchronization or byte-by-byte processing is needed. [1, 4]  
+
+      Output Feedback (OFB) Mode 
+
+      • Function: Turns a block cipher into a synchronous stream cipher. 
+      • Mechanism: Repeatedly encrypts the initialization vector (IV) or previous cipher output rather than the ciphertext, generating a independent keystream to XOR with the plaintext. 
+      • Use Case: Helpful when transmission errors are common, because errors do not propagate to future blocks. [1, 2, 5, 6]  
+
+      Did you mean CFB or OFB, or are you referring to a specific protocol or paper that defines IFB? Let me know so I can give you the exact details you need. 
+      AI responses may include mistakes.
+
+      [1] https://www.geeksforgeeks.org/ethical-hacking/block-cipher-modes-of-operation/
+      [2] https://www.youtube.com/watch?v=gIzFAFo5a6M
+      [3] https://groups.google.com/g/sci.crypt.research/c/ZD82NIacVmU/m/WDYm8_xmzTQJ
+      [4] https://thorteaches.com/glossary/cipher-feedback-cfb-mode/
+      [5] https://crypto.stackexchange.com/questions/98347/is-ofb-mode-a-stream-cipher
+      [6] https://www.researchgate.net/figure/CFB-Cipher-Feedback-mode-Output-Feedback-OFB-mode-Like-CFB-mode-output-feedback_fig3_273260684
+  ctr:
+    description: !markdown >
+      Counter (CTR) mode is a block cipher mode of operation that turns a standard block cipher (like AES) into a stream cipher. It works by encrypting a sequential counter value combined with a unique nonce, then XORing the resulting keystream block with the plaintext to generate the ciphertext. [1, 2, 3]  
+      How CTR Mode Works 
+
+      • Nonce and Counter: Each block uses a unique counter block made by joining a fixed nonce and an incrementing number. 
+      • Keystream Generation: The block cipher encrypts each counter block using the secret key to create a unique keystream segment. 
+      • XOR Operation: The plaintext is XORed with this encrypted keystream to produce the ciphertext. 
+      • Decryption Simplicity: Decryption uses the exact same process; the counter blocks are encrypted again and XORed with the ciphertext to recover the original plaintext. [1, 2, 3, 4]  
+
+      Key Characteristics 
+
+      • Parallel Processing: Both encryption and decryption can be run in parallel across multiple blocks because the counter values are known in advance. 
+      • No Padding Needed: Because it acts like a stream cipher, the final block does not need to be padded to a full block size. 
+      • Random Access: You can jump directly to decrypt any specific block without processing the blocks that come before it. 
+      • Nonce Reuse Risk: Reusing the same nonce and key combination completely destroys the security of the cipher, allowing attackers to recover the keystream. [2, 4, 7]  
+
+      If you'd like, I can:Compare CTR mode vs. CBC modeExplain Galois/Counter Mode (GCM) for authenticationShow how the nonce and counter blocks are structured internallyLet me know how you want to proceed. 
+      AI responses may include mistakes.
+
+      [1] https://www.hexnode.com/blogs/explained/what-is-counter-mode-ctr/
+      [2] https://www.youtube.com/watch?v=zX0PZtqerCI
+      [3] https://pycryptodome.readthedocs.io/en/v3.20.0/src/cipher/classic.html
+      [4] https://ctf101.org/cryptography/what-are-block-ciphers/
+      [5] https://www.tutorialspoint.com/cryptography/counter_mode.htm
+      [6] https://www.youtube.com/watch?v=gUNyXs6mEKM
+      [7] https://medium.com/@malkhoori/aes-gcm-nonce-reuse-writeup-7d5a92b599cb
+  gcm:
+    description: !markdown >
+      Galois/Counter Mode (GCM) is an authenticated encryption mode for block ciphers. It provides both data confidentiality (secrecy) and authenticity (integrity). GCM combines Counter (CTR) mode for encryption with a special GHASH function based on Galois field multiplication for integrity verification. [1, 2, 3, 4]  
+      Key Components and Operation 
+
+      • Counter Mode (Encryption): Turns a block cipher into a stream cipher by encrypting sequential counter values and XORing the output with plaintext blocks. 
+      • GHASH (Authentication): Processes the ciphertext, optional additional authenticated data (AAD), and length fields using universal hashing over a binary Galois field (GF(2¹²⁸)) to output a unique authentication tag. 
+      • Nonce / IV: Requires a unique initialization vector (typically 96 bits) for every execution under the same key. Never reuse a nonce. [1, 3, 6]  
+
+      Advantages of GCM 
+
+      • High Speed: Supports parallel processing for both encryption and authentication, making it optimal for high-bandwidth networks. 
+      • Single-Pass Efficiency: Computes privacy and integrity checks simultaneously rather than sequentially. 
+      • Standard Adoption: Widely used in modern protocols like TLS 1.2+, IPsec, and SSH due to its security and performance. [4, 8, 9, 10, 11]  
+
+      If you'd like, I can:Detail how to prevent nonce reuse vulnerabilitiesCompare GCM with CCM or ChaCha20-Poly1305 modesShow a basic code implementation overviewLet me know how you would like to proceed. 
+      AI responses may include mistakes.
+
+      [1] https://www.ibm.com/docs/en/linux-on-systems?topic=mo-electronic-code-book-ecb-mode
+      [2] https://www.intel.com/content/www/us/en/content-details/783641/advanced-encryption-standard-galois-counter-mode-optimized-ghash-function-technology-guide.html
+      [3] https://www.youtube.com/watch?v=-fpVv_T4xwA
+      [4] https://www.cincopa.com/learn/introduction-to-aes-gcm-mode-and-its-advantages
+      [5] https://medium.com/@pravallikayakkala123/understanding-aes-encryption-and-aes-gcm-mode-an-in-depth-exploration-using-java-e03be85a3faa
+      [6] https://www.youtube.com/watch?v=C_cQIYPWTXs
+      [7] https://xilinx.github.io/Vitis_Libraries/security/2019.2/guide_L1/internals/gcm.html
+      [8] https://csrc.nist.rip/groups/ST/toolkit/BCM/documents/proposedmodes/gcm/gcm-revised-spec.pdf
+      [9] https://www.youtube.com/watch?v=gUNyXs6mEKM
+      [10] https://datatracker.ietf.org/doc/html/rfc5647
+      [11] https://crypto.stackexchange.com/questions/2310/what-is-the-difference-between-cbc-and-gcm-mode
+  lrw:
+  xcb:
+  hctr:
+  hctr2:
+  hsbh:
+  essiv:
+  kw:
+  kwp:
+
+  ccm:
+    description: !markdown >
+      CCM (Counter with CBC-MAC) is an authenticated encryption mode for 128-bit block ciphers like AES. It provides both data confidentiality (encryption) and authenticity (integrity tag) in one operation. It combines Counter (CTR) mode for encryption and Cipher Block Chaining Message Authentication Code (CBC-MAC) for integrity. [1, 2, 3, 4, 5]  
+      How CCM Works 
+
+      • Two Core Parts: Uses CTR mode to encrypt the data and CBC-MAC to generate a security tag. 
+      • Associated Data (AD): Can authenticate extra unencrypted data (like packet headers or IP addresses). 
+      • Nonce Requirement: Requires a unique nonce (number used once) for every message under the same key to remain secure. Reusing a nonce breaks confidentiality entirely. [1, 2, 6]  
+
+      Key Properties 
+
+      • Block Size: Strictly defined for 128-bit block ciphers (such as AES-128). 
+      • Order of Operation: Standard implementations compute the MAC over the associated data and plaintext first, then encrypt both the message and the tag using CTR mode. 
+      • Common Uses: Widely used in constrained wireless networks, including IEEE 802.11i (Wi-Fi security), Bluetooth Low Energy, and ZigBee. [1, 2, 3, 6, 7]  
+
+      If you'd like, I can:Compare CCM with GCM (Galois/Counter Mode)Detail the exact step-by-step mathematical blocksExplain how to pick nonce and tag sizesLet me know what you want to explore next! 
+      AI responses may include mistakes.
+
+      [1] https://en.wikipedia.org/wiki/CCM_mode
+      [2] https://xilinx.github.io/Vitis_Libraries/security/2019.2/guide_L1/internals/ccm.html
+      [3] https://docs.nordicsemi.com/r/bundle/ps_nrf5340/page/ccm.html
+      [4] https://datatracker.ietf.org/doc/html/rfc3610
+      [5] https://csrc.nist.gov/pubs/sp/800/38/c/upd1/final
+      [6] https://www.cryptopp.com/wiki/CCM_Mode
+      [7] https://www.latticesemi.com/en/Products/DesignSoftwareAndIP/IntellectualProperty/IPCore/HelionTechCores/AESCCMCore
+
+
+  xts:
+    description: !markdown >
+      XTS (XEX-based tweaked-codebook mode with ciphertext stealing) is a block cipher mode designed specifically for full-disk and storage encryption. It secures data at rest by using two keys and a "tweak" value (like a sector number) so identical data blocks yield different ciphertexts, without expanding file sizes. [1, 2, 3]  
+      Key Features of XTS 
+
+      • Two Keys: It uses two independent cipher keys—one for the core block encryption and one to encrypt the tweak value. 
+      • The Tweak: It uses a tweak value (position/sector ID) modified via Galois field math. This stops attackers from spotting patterns in identical blocks across different disk sectors. 
+      • No Size Expansion: It uses ciphertext stealing to handle final partial blocks. This avoids padding, meaning the encrypted data matches the exact size of the original data. 
+      • Confidentiality Only: It provides strong data privacy, but it does not offer built-in authentication or tamper detection. [3, 4]  
+
+      Common Uses 
+
+      • Full-Disk Encryption: Used by software like  VeraCrypt  and BitLocker. 
+      • Hardware Drives: Used inside secure external SSDs and USB flash drives like the Kingston IronKey. [2, 4, 5, 8, 9]  
+
+      If you'd like, I can explain:How ciphertext stealing works mathematicallyA comparison between XTS and CBC or GCM modesPotential security limitations of XTSLet me know what you want to explore next. 
+      AI responses may include mistakes.
+
+      [1] https://xilinx.github.io/Vitis_Libraries/security/2019.2/guide_L1/internals/xts.html
+      [2] https://www.securview.com/ai-security-essentials/xts-mode
+      [3] https://www.cryptopp.com/wiki/XTS_Mode
+      [4] https://veracrypt.io/en/Modes%20of%20Operation.html
+      [5] https://www.kingston.com/unitedkingdom/en/blog/data-security/xts-encryption
+      [6] https://www.computer.org/csdl/magazine/sp/2010/03/msp2010030068/13rRUxNW1XJ
+      [7] https://xilinx.github.io/Vitis_Libraries/security/2021.2/guide_L1/internals/xts.html
+      [8] https://www.kingston.com/en/blog/data-security/xts-encryption
+      [9] https://terrazone.io/aes-256-encryption-types/
+  eme:
+  eax:
+
+  xex:
+    description: !markdown >
+      XEX (XOR-Encrypt-XOR) is a tweakable block cipher mode designed by Phillip Rogaway. It masks a plaintext block with a tweak value before and after block cipher encryption. XEX serves as the foundational core for XTS-AES, the standard mode used for secure storage and full-disk encryption. [1, 2, 3, 4, 5, 6]  
+      How XEX Works 
+
+      • Pre-whitening: The plaintext block is XORed with a masked tweak value (derived from a secondary key and a sector/block index). 
+      • Encryption: The resulting value passes through the standard block cipher function (like AES) using the primary key. 
+      • Post-whitening: The cipher output is XORed again with the same masked tweak value to produce the final ciphertext. 
+      • Tweak evolution: Tweak values across adjacent blocks are modified by multiplying the previous tweak by a primitive element in a finite Galois Field (GF(2¹²⁸)). [3, 6, 7, 8, 9]  
+
+      Key Characteristics 
+
+      • Tweakable security: Ensures that identical plaintext blocks encrypt to different ciphertexts when located at different storage addresses or sector numbers. 
+      • Parallelizable: Individual blocks can be encrypted or decrypted independently, allowing high performance on modern hardware. 
+      • No authentication: Provides confidentiality for data at rest but does not protect against data tampering or active manipulation. [9, 10, 11, 12, 13]  
+
+      If you are planning an implementation, would you like to explore how XEX transitions into XTS mode with ciphertext stealing, or do you need help with performance considerations for disk encryption? 
+      AI responses may include mistakes.
+
+      [1] https://csrc.nist.gov/projects/block-cipher-techniques/BCM
+      [2] https://web.cs.ucdavis.edu/~rogaway/papers/modes.pdf
+      [3] https://www.truecrypt.org/docs/modes-of-operation
+      [4] https://eprint.iacr.org/2015/1049.pdf
+      [5] https://en.wikipedia.org/wiki/Xor%E2%80%93encrypt%E2%80%93xor
+      [6] https://onlinedocs.microchip.com/oxy/GUID-4D282FC5-82FC-4934-8BAD-D4A5D8422E6C-en-US-7/GUID-3B9716A2-235B-4606-9FA3-559A7958BC36.html
+      [7] https://fiveable.me/lists/block-cipher-modes-of-operation
+      [8] https://www.sciencedirect.com/topics/computer-science/block-cipher-mode
+      [9] https://www.securview.com/ai-security-essentials/xts-aes
+      [10] https://www.youtube.com/watch?v=gUNyXs6mEKM
+      [11] https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
+      [12] https://dl.acm.org/doi/10.1145/937527.937529
+      [13] https://www.ibm.com/docs/en/linux-on-systems?topic=planning-cipher-mode-considerations
+
+
+elliptic_curve:
+  anomalous:
+    safe: false
+  m-221:
+    safe: true
+  e-222:
+    safe: true
+  nist-secp224r1:
+    safe: false
+  curve25519:
+    safe: true
+  curve1174:
+    safe: true
+    field: prime
+    description: !markdown >
+      Curve1174 is a specific twisted Edwards elliptic curve used in elliptic-curve cryptography. It is defined over a
+      prime field and engineered to allow fast, secure, and unified point addition without exceptional cases, helping
+      developers build simple and side-channel-resistant cryptographic operations. [1, 2, 3, 4, 5]  
+      Key Properties of Curve1174 
+
+      • Form: Twisted Edwards curve equation x² + y² = 1 + d x² y² 
+      • Parameter: Uses a specific non-square parameter d linked to the value 1174 modulo its prime. 
+      • Purpose: Designed alongside curves like Curve25519 to provide high-security general-purpose cryptographic
+          protocols and efficient scalar multiplication. [3, 4, 6, 7]
+    citations:
+      1: https://datatracker.ietf.org/doc/html/draft-josefsson-tls-additional-curves-01
+      2: https://www.johndcook.com/blog/2019/02/19/addition-on-curve1174/
+      3: https://www.johndcook.com/blog/2019/02/15/elliptic-curve-names/
+      4: https://eprint.iacr.org/2013/647.pdf
+      5: https://en.wikipedia.org/wiki/Elliptic-curve_cryptography
+      6: https://safecurves.cr.yp.to/ind.html
+      7: https://eprint.iacr.org/2013/647.pdf
+  bn254:
+    aliases:
+      - bn256
+      - bn128
+      - alt-bn128
+    field: prime
+    libraries:
+      - ark_bn254
+    uses:
+      - ethereum
+      - zk-snark
+    description: !markdown >
+      The BN(2,254) curve—widely known as BN254, BN256, or bn128—is a pairing-friendly elliptic curve in the
+      Barreto-Naehrig family defined over a 254-bit prime field. It is heavily used in zero-knowledge proofs and
+      blockchain protocols (such as Ethereum and Zcash) due to its efficient pairing operations. [1, 2, 3, 4]  
+      
+      # Core Properties 
+
+      • Family: Barreto-Naehrig (BN) with an embedding degree of 12 
+      • Field size: Defined over a 254-bit prime scalar/base field 
+      • Alternative names: , ,  
+      • Security level: Originally thought to offer roughly 128-bit security, but adjusted down to roughly 100-bit
+      security following advanced discrete logarithm attacks (Kim-Barbulescu algorithm). [1, 2, 3]
+    citations:
+      1: https://github.com/nthparty/mclbn256
+      2: https://docs.rs/ark-bn254/latest/ark_bn254/
+      3: https://github.com/sedaprotocol/bn254
+      4: https://hackmd.io/@jpw/bn254
+      5: https://docs.rs/bn254/
+      6: https://billatnapier.medium.com/baby-jubjub-and-zero-knowledge-proofs-5d73cf250de3
+  brainpoolP256t1:
+  nist-prime256v1:
+  scep256k1:
+  e-382:
+  m-383:
+
