@@ -30,16 +30,16 @@ types:
           
           # Core Properties of GF(p)
 
-          • Elements: The field consists of integers $\{0, 1, 2, \dots, p-1\}$.
-          • Addition & Subtraction: Computed modulo p.
-          • Multiplication: Computed modulo p.
-          • Inverses: Every non-zero element has a unique multiplicative inverse because p is prime. [1, 5, 6]
+          * Elements: The field consists of integers $\{0, 1, 2, \dots, p-1\}$.
+          * Addition & Subtraction: Computed modulo p.
+          * Multiplication: Computed modulo p.
+          * Inverses: Every non-zero element has a unique multiplicative inverse because p is prime. [1, 5, 6]
   
           # Working with Prime Fields in GP/PARI
 
-          • Integers modulo p: Use  to perform basic arithmetic rings/fields. For instance,  returns .
-          • Defining via : You can initialize a prime field element or generator using  where p is prime.
-          • Polynomial roots (): Find roots of polynomials over a prime field by passing the prime p as a domain
+          * Integers modulo p: Use  to perform basic arithmetic rings/fields. For instance,  returns .
+          * Defining via : You can initialize a prime field element or generator using  where p is prime.
+          * Polynomial roots (): Find roots of polynomials over a prime field by passing the prime p as a domain
               argument, such as . [7, 8, 9]
 
       citations: !citations
@@ -135,146 +135,162 @@ rng:
       * Origin: Defined in ANSI X9.62-1998 Annex A.4 (). 
       * Purpose: Designed to supply cryptographically secure random values specifically for ECDSA operations. 
       * Current Status: Retired and deprecated by NIST under SP 800-131A guidelines. 
-      * Reason for Retirement: Advances in cryptanalysis and modern security requirements rendered legacy 1998-era designs like X9.62 and X9.31 vulnerable or insufficient compared to modern Deterministic Random Bit Generators (DRBGs) like CTR_DRBG or Hash_DRBG. [1, 2, 4, 5]  
+      * Reason for Retirement: Advances in cryptanalysis and modern security requirements rendered legacy 1998-era
+        designs like X9.62 and X9.31 vulnerable or insufficient compared to modern Deterministic Random Bit Generators
+        (DRBGs) like CTR_DRBG or Hash_DRBG. [1, 2, 4, 5]  
 
       # Technical Context 
 
-      * Function: Relied on internal state updates combined with secret/seed values (requiring roughly 20 to 64 bytes of seed material depending on implementation details). 
-      * Replacements: Modern standards transitioned toward NIST SP 800-90A DRBGs (such as HMAC-DRBG, Hash-DRBG, and CTR-DRBG) for all cryptographic randomness. [4, 8, 9]
+      * Function: Relied on internal state updates combined with secret/seed values (requiring roughly 20 to 64 bytes
+        of seed material depending on implementation details). 
+      * Replacements: Modern standards transitioned toward NIST SP 800-90A DRBGs (such as HMAC-DRBG, Hash-DRBG, and
+        CTR-DRBG) for all cryptographic randomness. [4, 8, 9]
     citations:
-      [1] https://cseweb.ucsd.edu/classes/fa21/cse107-a/slides/18-rngs.pdf
-      [2] https://csrc.nist.rip/projects/Cryptographic-Algorithm-Validation-Program/Validation-Notes
-      [3] https://csrc.nist.rip/projects/cryptographic-algorithm-validation-program/validation-notes
-      [4] https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program/retired-testing
-      [5] https://csrc.nist.rip/library/NIST%20FIPS%20140-2%20Security%20Requirements%20for%20Cryptographic%20Modules,%20Annex%20C;%20Approved%20Random%20Number%20Generators,%202001-03%20(2009%20Minor%20Edits).pdf
-      [6] https://icmconference.org/wp-content/uploads/C14WangZ-and-TungW.pdf
-      [7] https://security.stackexchange.com/questions/185520/what-is-the-format-of-an-x9-62-key
-      [8] https://opentitan.org/book/hw/ip/csrng/
-      [9] https://pmc.ncbi.nlm.nih.gov/articles/PMC9689501/
+      1: https://cseweb.ucsd.edu/classes/fa21/cse107-a/slides/18-rngs.pdf
+      2: https://csrc.nist.rip/projects/Cryptographic-Algorithm-Validation-Program/Validation-Notes
+      3: https://csrc.nist.rip/projects/cryptographic-algorithm-validation-program/validation-notes
+      4: https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program/retired-testing
+      5: https://csrc.nist.rip/library/NIST%20FIPS%20140-2%20Security%20Requirements%20for%20Cryptographic%20Modules,%20Annex%20C;%20Approved%20Random%20Number%20Generators,%202001-03%20(2009%20Minor%20Edits).pdf
+      6: https://icmconference.org/wp-content/uploads/C14WangZ-and-TungW.pdf
+      7: https://security.stackexchange.com/questions/185520/what-is-the-format-of-an-x9-62-key
+      8: https://opentitan.org/book/hw/ip/csrng/
+      9: https://pmc.ncbi.nlm.nih.gov/articles/PMC9689501/
   secg:
     description: !markdown >
-      The SECG generation and validation methods for verifiably random elliptic curve domain parameters align with ANSI X9.62 and are detailed in the Standards for Efficient Cryptography Group specifications. These parameters define standard curves used across cryptography. [1, 2, 3]  
-      Overview of SECG Parameter Generation 
+      The SECG generation and validation methods for verifiably random elliptic curve domain parameters align with
+      ANSI X9.62 and are detailed in the Standards for Efficient Cryptography Group specifications. These parameters
+      define standard curves used across cryptography. [1, 2, 3]  
+      
+      # Overview of SECG Parameter Generation 
 
-      • Verifiably Random Basis: Curves are created using a fixed seed so anyone can re-verify the derivation process. 
-      • Compatibility: The procedures match historical ANSI X9.62 and IEEE 1363 standards. 
-      • Naming Conventions: Resulting curves in  SEC 2  use prefixes like  for prime fields and  for binary fields. [1, 4, 5, 6, 7]  
+      * Verifiably Random Basis: Curves are created using a fixed seed so anyone can re-verify the derivation process. 
+      * Compatibility: The procedures match historical ANSI X9.62 and IEEE 1363 standards. 
+      * Naming Conventions: Resulting curves in  SEC 2  use prefixes like  for prime fields and  for binary
+        fields. [1, 4, 5, 6, 7]  
 
       Validation and Use 
 
-      • Domain Verification: Implementers validate unknown parameters using specified checks to ensure safety before active deployment. 
-      • Standard Recommendations: Using pre-generated named parameters avoids slow, error-prone custom curve creation. [3]
+      * Domain Verification: Implementers validate unknown parameters using specified checks to ensure safety
+        before active deployment. 
+      * Standard Recommendations: Using pre-generated named parameters avoids slow, error-prone custom curve
+        creation. [3]
     citations:
-
-      [1] https://dissect.crocs.fi.muni.cz/standards/secg
-      [2] https://www.secg.org/
-      [3] https://en.wikipedia.org/wiki/Elliptic-curve_cryptography
-      [4] https://is.muni.cz/th/maq0p/sbapr_final_digital.pdf
-      [5] https://dissect.crocs.fi.muni.cz/standards/x962
-      [6] https://std.neuromancer.sk/methods/secg/
-      [7] https://www.johndcook.com/blog/2018/08/21/a-tale-of-two-elliptic-curves/
+      1: https://dissect.crocs.fi.muni.cz/standards/secg
+      2: https://www.secg.org/
+      3: https://en.wikipedia.org/wiki/Elliptic-curve_cryptography
+      4: https://is.muni.cz/th/maq0p/sbapr_final_digital.pdf
+      5: https://dissect.crocs.fi.muni.cz/standards/x962
+      6: https://std.neuromancer.sk/methods/secg/
+      7: https://www.johndcook.com/blog/2018/08/21/a-tale-of-two-elliptic-curves/
 
 
   nist:
     description: !markdown >
-      The term NIST DRNG usually refers to NIST DRBG (Deterministic Random Bit Generator), which is the official technical term used by the National Institute of Standards and Technology (NIST) for a cryptographically secure pseudorandom number generator (PRNG). [1, 2] 
-      It can also refer to a physical Digital Random Number Generator (such as Intel's hardware-based DRNG architecture) designed to comply with NIST's rigid cryptographic standards. [3, 4, 5] 
-      ------------------------------
+      The term NIST DRNG usually refers to NIST DRBG (Deterministic Random Bit Generator), which is the official
+      technical term used by the National Institute of Standards and Technology (NIST) for a cryptographically secure
+      pseudorandom number generator (PRNG). [1, 2] 
+      
+      It can also refer to a physical Digital Random Number Generator (such as Intel's hardware-based DRNG
+      architecture) designed to comply with NIST's rigid cryptographic standards. [3, 4, 5] 
+      
       ## The NIST SP 800-90 Core Standards
-      NIST regulates random number generation through the SP 800-90 series, which dictates how secure random numbers must be processed, seeded, and tested: [2, 6, 7, 8] 
+      NIST regulates random number generation through the SP 800-90 series, which dictates how secure random
+      numbers must be processed, seeded, and tested: [2, 6, 7, 8] 
 
-      * 
-      * [SP 800-90A](https://csrc.nist.gov/projects/random-bit-generation): Specifies the approved deterministic algorithms (DRBGs) used to expand a highly random mathematical "seed" into a stream of secure cryptographic bits.
-      * SP 800-90B: Outlines the rules for the underlying physical entropy sources (the raw noise source providing true randomness).
-      * [SP 800-90C](https://csrc.nist.gov/News/2025/nist-publishes-sp-800-90c): Establishes construction standards for combining the entropy source and the DRBG mechanism together seamlessly. [1, 2, 6, 9, 10] 
-      * 
+      * [SP 800-90A](https://csrc.nist.gov/projects/random-bit-generation): Specifies the approved deterministic
+        algorithms (DRBGs) used to expand a highly random mathematical "seed" into a stream of secure
+        cryptographic bits.
+      * SP 800-90B: Outlines the rules for the underlying physical entropy sources (the raw noise source providing
+        true randomness).
+      * [SP 800-90C](https://csrc.nist.gov/News/2025/nist-publishes-sp-800-90c): Establishes construction standards
+        for combining the entropy source and the DRBG mechanism together seamlessly. [1, 2, 6, 9, 10] 
 
       ## Approved NIST DRBG Mechanisms
-      When designing a software or hardware system to meet NIST compliance, developers must choose from three currently approved cryptographic mechanisms defined in SP 800-90A: [11, 12] 
+      When designing a software or hardware system to meet NIST compliance, developers must choose from three
+      currently approved cryptographic mechanisms defined in SP 800-90A: [11, 12] 
 
-      * 
       * CTR_DRBG: Built on symmetric block ciphers like AES in counter mode.
       * Hash_DRBG: Built on secure cryptographic hash functions like SHA-256.
       * HMAC_DRBG: Built on Hash-based Message Authentication Codes. [11, 13] 
-      * 
-
-      (Note: An older standard, Dual_EC_DRBG, was formally withdrawn and banned by NIST after it was discovered to contain a potential backdoor). [11, 14] 
+      
+      (Note: An older standard, Dual_EC_DRBG, was formally withdrawn and banned by NIST after it was discovered
+      to contain a potential backdoor). [11, 14] 
+      
       ## Hardware Implementations (Intel & AMD DRNG)
-      In hardware architectures, a "DRNG" framework typically bundles an on-chip True Random Number Generator (TRNG) with a deterministic circuit. For example, Intel's onboard architecture uses a physical thermal noise source to consistently feed a NIST-compliant CTR_DRBG. Software applications then access these random pools using assembly commands: [3, 15, 16, 17] 
-
-      * 
+      In hardware architectures, a "DRNG" framework typically bundles an on-chip True Random Number Generator (TRNG)
+      with a deterministic circuit. For example, Intel's onboard architecture uses a physical thermal noise source to
+      consistently feed a NIST-compliant CTR_DRBG. Software applications then access these random pools using assembly
+      commands: [3, 15, 16, 17] 
+      
       * RDRAND: Pulls pseudorandom data directly out of the internal DRBG engine.
-      * RDSEED: Pulls raw, high-entropy bits straight from the conditioning hardware to seed other software-based PRNGs. [3, 15, 18, 19, 20] 
-      * 
-
+      * RDSEED: Pulls raw, high-entropy bits straight from the conditioning hardware to seed other
+        software-based PRNGs. [3, 15, 18, 19, 20] 
+      
       ## Testing for Compliance
-      To verify that a DRNG functions correctly without predictability or bias, developers evaluate its outputs using the [NIST Statistical Test Suite (SP 800-22)](https://csrc.nist.gov/projects/random-bit-generation/documentation-and-software). This suite subjects output bitstreams to 15 distinct frequency, pattern, and matrix mathematical tests to spot hidden statistical anomalies. [21, 22, 23, 24, 25] 
-      ------------------------------
-      If you are implementing or auditing a random number generator, let me know:
-
-      * 
-      * Are you working on a software application or a hardware/firmware implementation?
-      * Do you need help choosing a specific cryptographic algorithm (like AES-CTR vs. SHA-256)?
-      * Are you prepping a module for FIPS 140-3 validation?
-      * 
-
+      To verify that a DRNG functions correctly without predictability or bias, developers evaluate its outputs
+      using the [NIST Statistical Test Suite (SP 800-22)](https://csrc.nist.gov/projects/random-bit-generation/documentation-and-software).
+      This suite subjects output bitstreams to 15 distinct frequency, pattern, and matrix mathematical tests to spot
+      hidden statistical anomalies. [21, 22, 23, 24, 25] 
+  
     citations:
-      [1] [https://csrc.nist.gov](https://csrc.nist.gov/glossary/term/deterministic_random_bit_generator)
-      [2] [https://csrc.nist.gov](https://csrc.nist.gov/projects/random-bit-generation)
-      [3] [https://csrc.nist.gov](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/entropy/E306_PublicUse.pdf)
-      [4] [https://csrc.nist.gov](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/entropy/E72_PublicUse.pdf)
-      [5] [https://csrc.nist.gov](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/entropy/E232_PublicUse.pdf)
-      [6] [https://csrc.nist.gov](https://csrc.nist.gov/projects/random-bit-generation)
-      [7] [https://lightshipsec.com](https://lightshipsec.com/nist-800-90b-concepts/)
-      [8] [https://en-support.renesas.com](https://en-support.renesas.com/knowledgeBase/22372154)
-      [9] [https://csrc.nist.gov](https://csrc.nist.gov/News/2025/nist-publishes-sp-800-90c)
-      [10] [https://www.nist.gov](https://www.nist.gov/publications/recommendation-random-bit-generator-rbg-constructions)
-      [11] [https://en.wikipedia.org](https://en.wikipedia.org/wiki/NIST_SP_800-90A)
-      [12] [https://postquantum.com](https://postquantum.com/post-quantum/qrng-buyers-guide/)
-      [13] [https://csrc.nist.gov](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp3401.pdf)
-      [14] [https://csrc.nist.rip](https://csrc.nist.rip/publications/nistpubs/800-90A/SP800-90A.pdf)
-      [15] [https://csrc.nist.gov](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/entropy/E233_PublicUse.pdf)
-      [16] [https://www.ingeniars.com](https://www.ingeniars.com/in_product/rng-ip-core/)
-      [17] [https://pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC11675632/)
-      [18] [https://security.stackexchange.com](https://security.stackexchange.com/questions/195515/is-rdrand-used-in-a-safe-way-by-windows-10)
-      [19] [https://www.linuxjournal.com](https://www.linuxjournal.com/content/amd-confirms-zen-5-rng-flaw-when-random-isnt-random-enough)
-      [20] [https://forums.raspberrypi.com](https://forums.raspberrypi.com/viewtopic.php?t=330037)
-      [21] [https://csrc.nist.gov](https://csrc.nist.gov/presentations/2024/nist-standards-on-random-numbers)
-      [22] [https://csrc.nist.gov](https://csrc.nist.gov/projects/random-bit-generation/documentation-and-software)
-      [23] [https://www.aegissemi.com](https://www.aegissemi.com/post/understanding-trng-nist-standards-a-complete-guide-to-the-15-statistical-tests-for-true-random-numb)
-      [24] [https://search.proquest.com](https://search.proquest.com/openview/25e83cfec72c9869d21706ea0057d390/1?pq-origsite=gscholar&cbl=2043739)
-      [25] [https://pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC13166014/)
+      1: [https://csrc.nist.gov](https://csrc.nist.gov/glossary/term/deterministic_random_bit_generator)
+      2: [https://csrc.nist.gov](https://csrc.nist.gov/projects/random-bit-generation)
+      3: [https://csrc.nist.gov](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/entropy/E306_PublicUse.pdf)
+      4: [https://csrc.nist.gov](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/entropy/E72_PublicUse.pdf)
+      5: [https://csrc.nist.gov](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/entropy/E232_PublicUse.pdf)
+      6: [https://csrc.nist.gov](https://csrc.nist.gov/projects/random-bit-generation)
+      7: [https://lightshipsec.com](https://lightshipsec.com/nist-800-90b-concepts/)
+      8: [https://en-support.renesas.com](https://en-support.renesas.com/knowledgeBase/22372154)
+      9: [https://csrc.nist.gov](https://csrc.nist.gov/News/2025/nist-publishes-sp-800-90c)
+      10: [https://www.nist.gov](https://www.nist.gov/publications/recommendation-random-bit-generator-rbg-constructions)
+      11: [https://en.wikipedia.org](https://en.wikipedia.org/wiki/NIST_SP_800-90A)
+      12: [https://postquantum.com](https://postquantum.com/post-quantum/qrng-buyers-guide/)
+      13: [https://csrc.nist.gov](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp3401.pdf)
+      14: [https://csrc.nist.rip](https://csrc.nist.rip/publications/nistpubs/800-90A/SP800-90A.pdf)
+      15: [https://csrc.nist.gov](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/entropy/E233_PublicUse.pdf)
+      16: [https://www.ingeniars.com](https://www.ingeniars.com/in_product/rng-ip-core/)
+      17: [https://pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC11675632/)
+      18: [https://security.stackexchange.com](https://security.stackexchange.com/questions/195515/is-rdrand-used-in-a-safe-way-by-windows-10)
+      19: [https://www.linuxjournal.com](https://www.linuxjournal.com/content/amd-confirms-zen-5-rng-flaw-when-random-isnt-random-enough)
+      20: [https://forums.raspberrypi.com](https://forums.raspberrypi.com/viewtopic.php?t=330037)
+      21: [https://csrc.nist.gov](https://csrc.nist.gov/presentations/2024/nist-standards-on-random-numbers)
+      22: [https://csrc.nist.gov](https://csrc.nist.gov/projects/random-bit-generation/documentation-and-software)
+      23: [https://www.aegissemi.com](https://www.aegissemi.com/post/understanding-trng-nist-standards-a-complete-guide-to-the-15-statistical-tests-for-true-random-numb)
+      24: [https://search.proquest.com](https://search.proquest.com/openview/25e83cfec72c9869d21706ea0057d390/1?pq-origsite=gscholar&cbl=2043739)
+      25: [https://pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC13166014/)
 
   brainpool:
 algorithms:
   dh:
     description: !markdown >
-      The Diffie-Hellman (DH) Key Exchange is a method that lets two people create a shared secret key over an open, public network. They do this without ever sending the secret key to each other, making it safe from people who might be listening. [1, 2]  
-      How It Works 
+      The Diffie-Hellman (DH) Key Exchange is a method that lets two people create a shared secret key over an open,
+      public network. They do this without ever sending the secret key to each other, making it safe from people who
+      might be listening. [1, 2]  
+      
+      # How It Works 
 
-      • Public Setup: Both users agree on two public numbers: a large prime number (p) and a base generator (g). 
-      • Private Numbers: Each user picks a secret random number just for themselves (let's call them a and b). 
-      • Public Key Math: They use math to turn their secret number and the public numbers into a new public key ($g^a \bmod p$ and $g^b \bmod p$). 
-      • Key Exchange: They send these public results to each other over the network. 
-      • Shared Secret: Each user takes the other person's public key, raises it to their own secret number, and arrives at the exact same final secret number. [3, 4, 5]  
+      * Public Setup: Both users agree on two public numbers: a large prime number (p) and a base generator (g). 
+      * Private Numbers: Each user picks a secret random number just for themselves (let's call them a and b). 
+      * Public Key Math: They use math to turn their secret number and the public numbers into a new public key
+        ($g^a \bmod p$ and $g^b \bmod p$). 
+      * Key Exchange: They send these public results to each other over the network. 
+      * Shared Secret: Each user takes the other person's public key, raises it to their own secret number, and arrives
+        at the exact same final secret number. [3, 4, 5]  
 
-      Why It Matters 
+      # Why It Matters 
 
-      • No Secret Sent: An eavesdropper can see the public numbers and public keys, but cannot figure out the private numbers or the final shared secret. 
-      • Symmetric Prep: The final shared secret is then used as a key for fast, secure regular encryption (like AES) to chat or share data safely. [4, 6, 7]  
-
-      If you'd like, I can explain the math step-by-step with simple numbers, or talk about modern versions like Elliptic Curve Diffie-Hellman (ECDH). Let me know what you prefer! 
-      AI responses may include mistakes.
-
-      [1] https://www.hypr.com/security-encyclopedia/diffie-hellman-algorithim
-      [2] https://www.youtube.com/watch?v=KXq065YrpiU
-      [3] https://doubleoctopus.com/security-wiki/encryption-and-cryptography/diffie-hellman-algorithm/
-      [4] https://www.geeksforgeeks.org/computer-networks/implementation-diffie-hellman-algorithm/
-      [5] https://www.sciencedirect.com/topics/computer-science/diffie-hellman-key-exchange
-      [6] https://www.hexnode.com/blogs/explained/what-is-diffie-hellman-dh-key-exchange/
-      [7] https://dev.to/techlabma/diffie-hellman-key-exchange-dhke-algorithm-505b
-
-
+      * No Secret Sent: An eavesdropper can see the public numbers and public keys, but cannot figure out the private
+        numbers or the final shared secret. 
+      * Symmetric Prep: The final shared secret is then used as a key for fast, secure regular encryption (like AES)
+        to chat or share data safely. [4, 6, 7]
+    citations:
+      1: https://www.hypr.com/security-encyclopedia/diffie-hellman-algorithim
+      2: https://www.youtube.com/watch?v=KXq065YrpiU
+      3: https://doubleoctopus.com/security-wiki/encryption-and-cryptography/diffie-hellman-algorithm/
+      4: https://www.geeksforgeeks.org/computer-networks/implementation-diffie-hellman-algorithm/
+      5: https://www.sciencedirect.com/topics/computer-science/diffie-hellman-key-exchange
+      6: https://www.hexnode.com/blogs/explained/what-is-diffie-hellman-dh-key-exchange/
+      7: https://dev.to/techlabma/diffie-hellman-key-exchange-dhke-algorithm-505b
 
   rsa:
     uses:
@@ -308,7 +324,6 @@ algorithms:
       * Decryption: Only the person with the secret private key can reverse the code and read the original
         message. [1, 5, 6]  
 
-      # Common Uses
     citations: !citations
       1: https://www.geeksforgeeks.org/computer-networks/rsa-algorithm-cryptography/
       2: https://securew2.com/blog/what-is-rsa-asymmetric-encryption
@@ -378,7 +393,8 @@ algorithms:
       * Generator Point: A specific starting point (G) on the curve agreed upon by both users. 
       * Private Key: A random number picked in secret by the user. 
       * Public Key: Found by adding the generator point to itself over and over using the private key number. 
-      * One-Way Math: It is easy to multiply the points forward, but nearly impossible to guess the private key backwards (known as the Elliptic Curve Discrete Logarithm Problem). [4, 6, 7, 8, 9]  
+      * One-Way Math: It is easy to multiply the points forward, but nearly impossible to guess the private key
+        backwards (known as the Elliptic Curve Discrete Logarithm Problem). [4, 6, 7, 8, 9]  
 
       # Key Benefits 
 
@@ -432,7 +448,8 @@ encryption:
       * Multiply them to find the modulus n = p × q. 
       * Compute Euler's totient function: φ(n) = (p - 1)(q - 1). 
       * Choose an integer e (the public exponent) such that 1 &lt; e &lt; φ(n) and e is coprime to φ(n). 
-      * Calculate d (the private exponent) as the modular multiplicative inverse of e modulo φ(n), meaning $(d \times e) \pmod{\phi(n)} = 1$. 
+      * Calculate d (the private exponent) as the modular multiplicative inverse of e modulo φ(n), meaning
+        $(d \times e) \pmod{\phi(n)} = 1$. 
       * Public Key: (n, e) (shared with everyone). 
       * Private Key: (n, d) (kept secret). [1, 4, 5]  
 
@@ -460,29 +477,30 @@ encryption:
 signature:
   dsa:
     description: !markdown >
-      The Digital Signature Algorithm (DSA) is a federal standard for digital signatures based on modular exponentiation and the discrete logarithm problem. It lets a sender sign a message with a private key, and anyone with the matching public key can check that the message is real and unchanged. [1, 2]
-      Key Generation
+      The Digital Signature Algorithm (DSA) is a federal standard for digital signatures based on modular
+      exponentiation and the discrete logarithm problem. It lets a sender sign a message with a private key,
+      and anyone with the matching public key can check that the message is real and unchanged. [1, 2]
       
-      • Choose prime numbers p and q, and a multiplier g.
-      • Pick a secret private key x.
-      • Compute public key $y = g^x \pmod p$. [3, 4]
+      # Key Generation
       
-      Signature Creation
+      * Choose prime numbers p and q, and a multiplier g.
+      * Pick a secret private key x.
+      * Compute public key $y = g^x \pmod p$. [3, 4]
       
-      • Hash the message to get a number m.
-      • Pick a secret random number k.
-        • Calculate first signature part: $r = (g^k \pmod p) \pmod q$.
-        • Calculate second part: $s = k^{-1}(m + xr) \pmod q$.
-      • Output the signature pair (r, s). [5, 6]
+      # Signature Creation
       
-      Signature Verification
+      * Hash the message to get a number m.
+      * Pick a secret random number k.
+        * Calculate first signature part: $r = (g^k \pmod p) \pmod q$.
+        * Calculate second part: $s = k^{-1}(m + xr) \pmod q$.
+      * Output the signature pair (r, s). [5, 6]
       
-      • Check that r and s are within correct number bounds.
-      • Re-hash the message and compute values using the public key y.
-      • Confirm the math checks out to prove the signature is valid. [4, 7, 8, 9]
+      # Signature Verification
       
-      If you'd like, I can explain:How it compares to RSA or ECDSAWhy reusing a random number (k) breaks securityLet me know what you want to explore next.
-      AI responses may include mistakes.
+      * Check that r and s are within correct number bounds.
+      * Re-hash the message and compute values using the public key y.
+      * Confirm the math checks out to prove the signature is valid. [4, 7, 8, 9]
+
     citations:
       1: https://csrc.nist.rip/glossary/term/digital_signature_algorithm
       2: https://www.simplilearn.com/tutorials/cryptography-tutorial/digital-signature-algorithm
@@ -497,147 +515,175 @@ signature:
 
 ecdsa:
     description: !markdown >
-      The Digital Signature Algorithm (DSA) is a federal standard for digital signatures based on modular exponentiation and the discrete logarithm problem. It lets a sender sign a message with a private key, and anyone with the matching public key can check that the message is real and unchanged. [1, 2]  
-      Key Generation 
+      The Digital Signature Algorithm (DSA) is a federal standard for digital signatures based on modular
+      exponentiation and the discrete logarithm problem. It lets a sender sign a message with a private key,
+      and anyone with the matching public key can check that the message is real and unchanged. [1, 2]  
+      
+      # Key Generation 
 
-      • Choose prime numbers p and q, and a multiplier g. 
-      • Pick a secret private key x. 
-      • Compute public key $y = g^x \pmod p$. [3, 4]  
+      * Choose prime numbers p and q, and a multiplier g. 
+      * Pick a secret private key x. 
+      * Compute public key $y = g^x \pmod p$. [3, 4]  
 
       Signature Creation 
 
-      • Hash the message to get a number m. 
-      • Pick a secret random number k. 
-      • Calculate first signature part: $r = (g^k \pmod p) \pmod q$. 
-      • Calculate second part: $s = k^{-1}(m + xr) \pmod q$. 
-      • Output the signature pair (r, s). [5, 6]  
+      * Hash the message to get a number m. 
+      * Pick a secret random number k. 
+      * Calculate first signature part: $r = (g^k \pmod p) \pmod q$. 
+      * Calculate second part: $s = k^{-1}(m + xr) \pmod q$. 
+      * Output the signature pair (r, s). [5, 6]  
 
       Signature Verification 
 
-      • Check that r and s are within correct number bounds. 
-      • Re-hash the message and compute values using the public key y. 
-      • Confirm the math checks out to prove the signature is valid. [4, 7, 8, 9]  
+      * Check that r and s are within correct number bounds. 
+      * Re-hash the message and compute values using the public key y. 
+      * Confirm the math checks out to prove the signature is valid. [4, 7, 8, 9]  
 
     citations:
-      [1] https://csrc.nist.rip/glossary/term/digital_signature_algorithm
-      [2] https://www.simplilearn.com/tutorials/cryptography-tutorial/digital-signature-algorithm
-      [3] http://shainer.github.io/crypto/python/matasano/2016/10/07/dsa.html
-      [4] https://www.scribd.com/document/878063091/DSA-Steps-Explanation
-      [5] https://di-mgt.com.au/public-key-crypto-discrete-logs-4-dsa.html
-      [6] https://dev.to/me_jessicahowe/what-is-a-digital-signature-algorithm-dsa-4kpi
-      [7] https://en.wikipedia.org/wiki/Digital_Signature_Algorithm
-      [8] https://www.youtube.com/watch?v=ANsg4wIQFn4
-      [9] https://github.com/demining/Deserialize-Signature-Vulnerability-in-Bitcoin-Network
+      1: https://csrc.nist.rip/glossary/term/digital_signature_algorithm
+      2: https://www.simplilearn.com/tutorials/cryptography-tutorial/digital-signature-algorithm
+      3: http://shainer.github.io/crypto/python/matasano/2016/10/07/dsa.html
+      4: https://www.scribd.com/document/878063091/DSA-Steps-Explanation
+      5: https://di-mgt.com.au/public-key-crypto-discrete-logs-4-dsa.html
+      6: https://dev.to/me_jessicahowe/what-is-a-digital-signature-algorithm-dsa-4kpi
+      7: https://en.wikipedia.org/wiki/Digital_Signature_Algorithm
+      8: https://www.youtube.com/watch?v=ANsg4wIQFn4
+      9: https://github.com/demining/Deserialize-Signature-Vulnerability-in-Bitcoin-Network
 
 
     rsa:
       description: !markdown >
-        The RSA signature algorithm is an asymmetric cryptographic scheme used to authenticate the origin of digital messages or documents. It works by using a private key to mathematically "sign" a message hash, which anyone with the corresponding public key can verify to prove authenticity and detect tampering. [1, 2, 3, 4]  
-        Key Pair Components 
+        The RSA signature algorithm is an asymmetric cryptographic scheme used to authenticate the origin of digital
+        messages or documents. It works by using a private key to mathematically "sign" a message hash, which anyone
+        with the corresponding public key can verify to prove authenticity and detect tampering. [1, 2, 3, 4]  
+        
+        # Key Pair Components 
   
-        • Public Key: Consists of the modulus n and the public exponent e, used to verify signatures. 
-        • Private Key: Consists of the modulus n and the private exponent d, kept secret and used to generate signatures. [2, 5]  
+        * Public Key: Consists of the modulus n and the public exponent e, used to verify signatures. 
+        * Private Key: Consists of the modulus n and the private exponent d, kept secret and used to generate
+          signatures. [2, 5]  
   
         Signature Generation (Signing) 
   
-        • Compute the hash value of the message: h = hash(msg). 
-        • Raise the hash to the power of the private exponent d modulo n to create the signature: $s = h^d \pmod n$. 
-        • Send the signature along with the original message. [2, 4, 6]  
+        * Compute the hash value of the message: h = hash(msg). 
+        * Raise the hash to the power of the private exponent d modulo n to create the signature: $s = h^d \pmod n$. 
+        * Send the signature along with the original message. [2, 4, 6]  
   
         Signature Verification 
   
-        • Compute the hash value of the received message: h = hash(msg). 
-        • Raise the signature to the power of the public exponent e modulo n to recover the hash: $h' = s^e \pmod n$. 
-        • Compare the calculated hash h with the recovered hash h'. If they match, the signature is valid. [2, 4, 7, 8]  
+        * Compute the hash value of the received message: h = hash(msg). 
+        * Raise the signature to the power of the public exponent e modulo n to recover the hash: $h' = s^e \pmod n$. 
+        * Compare the calculated hash h with the recovered hash h'. If they match, the signature is valid. [2, 4, 7, 8]  
 
       citations:
-
-        [1] https://www.geeksforgeeks.org/computer-networks/rsa-and-digital-signatures/
-        [2] https://cryptobook.nakov.com/digital-signatures/rsa-signatures
-        [3] https://www.encryptionconsulting.com/education-center/what-is-rsa/
-        [4] https://www.youtube.com/watch?v=TeuKV5kHLyQ
-        [5] https://en.wikipedia.org/wiki/RSA_cryptosystem
-        [6] https://securew2.com/blog/what-is-rsa-asymmetric-encryption
-        [7] https://cryptobook.nakov.com/digital-signatures/rsa-signatures
-        [8] https://students.cs.byu.edu/~cs465ta/lectures/rsa_notes.pdf
+        1: https://www.geeksforgeeks.org/computer-networks/rsa-and-digital-signatures/
+        2: https://cryptobook.nakov.com/digital-signatures/rsa-signatures
+        3: https://www.encryptionconsulting.com/education-center/what-is-rsa/
+        4: https://www.youtube.com/watch?v=TeuKV5kHLyQ
+        5: https://en.wikipedia.org/wiki/RSA_cryptosystem
+        6: https://securew2.com/blog/what-is-rsa-asymmetric-encryption
+        7: https://cryptobook.nakov.com/digital-signatures/rsa-signatures
+        8: https://students.cs.byu.edu/~cs465ta/lectures/rsa_notes.pdf
 
 
 agreement:
   dh:
     description: !markdown >
-      The Diffie-Hellman (DH) key agreement algorithm is a foundational cryptographic protocol that allows two parties to establish a shared secret key over an insecure communication channel without explicitly transmitting the key itself. Published by Whitfield Diffie and Martin Hellman in 1976, it was the first practical implementation of public-key cryptography. Once the shared secret is calculated, it is typically passed to a key derivation function to generate symmetric keys for high-speed encryption algorithms like AES. [1, 2, 3, 4]  
-      The Mathematical Framework 
-      The security of the DH algorithm relies entirely on the mathematical complexity of the Discrete Logarithm Problem. While it is computationally easy to raise a number to a power modulo a prime, it is extremely difficult to reverse that operation and find the exponent if the numbers are sufficiently large. [5, 6]  
+      The Diffie-Hellman (DH) key agreement algorithm is a foundational cryptographic protocol that allows two parties
+      to establish a shared secret key over an insecure communication channel without explicitly transmitting the key
+      itself. Published by Whitfield Diffie and Martin Hellman in 1976, it was the first practical implementation of
+      public-key cryptography. Once the shared secret is calculated, it is typically passed to a key derivation
+      function to generate symmetric keys for high-speed encryption algorithms like AES. [1, 2, 3, 4]  
+      
+      # The Mathematical Framework 
+      
+      The security of the DH algorithm relies entirely on the mathematical complexity of the Discrete Logarithm
+      Problem. While it is computationally easy to raise a number to a power modulo a prime, it is extremely
+      difficult to reverse that operation and find the exponent if the numbers are sufficiently large. [5, 6]  
+      
       The protocol relies on two public parameters: 
 
-      • p (Modulus): A very large, random prime number. 
-      • g (Generator): A primitive root modulo p. [2, 7]  
+      * p (Modulus): A very large, random prime number. 
+      * g (Generator): A primitive root modulo p. [2, 7]  
 
-      Step-by-Step Process 
+      # Step-by-Step Process 
 
-      1. Parameter Agreement: Alice and Bob publicly agree on a modulus p and a generator g. Eavesdroppers can see these values. 
-      2. Private Key Selection: Alice chooses a secret integer a, and Bob chooses a secret integer b. Neither party ever shares their private integer. 
+      1. Parameter Agreement: Alice and Bob publicly agree on a modulus p and a generator g. Eavesdroppers
+        can see these values. 
+      2. Private Key Selection: Alice chooses a secret integer a, and Bob chooses a secret integer b. Neither
+        party ever shares their private integer. 
       3. Public Key Computation: 
 
-      	• Alice computes her public key: $A = g^a \pmod p$. 
-      	• Bob computes his public key: $B = g^b \pmod p$. [10]  
+      	* Alice computes her public key: $A = g^a \pmod p$. 
+      	* Bob computes his public key: $B = g^b \pmod p$. 10:  
 
       4. Public Key Exchange: Alice sends A to Bob, and Bob sends B to Alice across the insecure channel. 
       5. Shared Secret Calculation: 
 
-      	• Alice calculates the secret using Bob's public key: $S = B^a \pmod p$. 
-      	• Bob calculates the secret using Alice's public key: $S = A^b \pmod p$. [8, 10, 11, 12, 13]  
+      	* Alice calculates the secret using Bob's public key: $S = B^a \pmod p$. 
+      	* Bob calculates the secret using Alice's public key: $S = A^b \pmod p$. [8, 10, 11, 12, 13]  
 
-      Both mathematical formulas yield the exact same value because modular exponentiation is commutative: $S = (g^b)^a \pmod p = (g^a)^b \pmod p = g^{ab} \pmod p$ 
-      Strengths and Variants 
+      Both mathematical formulas yield the exact same value because modular exponentiation is
+      commutative: $S = (g^b)^a \pmod p = (g^a)^b \pmod p = g^{ab} \pmod p$ 
+      
+      # Strengths and Variants 
 
-      • Forward Secrecy: When implemented as Ephemeral Diffie-Hellman (DHE), new random keys are chosen for every single session. If a long-term master key is compromised in the future, attackers still cannot decrypt past recorded sessions. 
-      • Elliptic Curve Diffie-Hellman (ECDH): A modern variant that uses the algebraic structure of elliptic curves instead of traditional modular arithmetic. It achieves the same level of security as standard DH but with significantly smaller key sizes, making it much faster and more efficient. [4, 14, 15, 16, 17]  
+      * Forward Secrecy: When implemented as Ephemeral Diffie-Hellman (DHE), new random keys are chosen for every
+        single session. If a long-term master key is compromised in the future, attackers still cannot decrypt
+        past recorded sessions. 
+      * Elliptic Curve Diffie-Hellman (ECDH): A modern variant that uses the algebraic structure of elliptic curves
+        instead of traditional modular arithmetic. It achieves the same level of security as standard DH but with
+        significantly smaller key sizes, making it much faster and more efficient. [4, 14, 15, 16, 17]  
 
-      Core Limitation: No Authentication 
-      The raw Diffie-Hellman protocol does not authenticate the identities of the communicating parties. Because of this flaw, it is fully vulnerable to a Man-in-the-Middle (MITM) attack. An attacker sitting between Alice and Bob can silently intercept the public keys, substitute their own, and establish separate shared secrets with both sides. To remain secure in real-world protocols like TLS/HTTPS and IPsec VPNs, DH must always be combined with an authentication mechanism, such as digital certificates or digital signatures. [1, 6, 9]  
-      Would you like to explore how Elliptic Curve Diffie-Hellman (ECDH) reduces key sizes, or should we look at a code implementation of standard DH? 
+      # Core Limitation: No Authentication
+      
+      The raw Diffie-Hellman protocol does not authenticate the identities of the communicating parties. Because
+      of this flaw, it is fully vulnerable to a Man-in-the-Middle (MITM) attack. An attacker sitting between Alice and
+      Bob can silently intercept the public keys, substitute their own, and establish separate shared secrets with
+      both sides. To remain secure in real-world protocols like TLS/HTTPS and IPsec VPNs, DH must always be combined
+      with an authentication mechanism, such as digital certificates or digital signatures. [1, 6, 9]  
 
     citations:
-      [1] https://networklessons.com/miscellaneous/introduction-to-diffie-hellman-key-exchange
-      [2] https://dev.to/techlabma/diffie-hellman-key-exchange-dhke-algorithm-505b
-      [3] https://www.hypr.com/security-encyclopedia/diffie-hellman-algorithim
-      [4] https://cryptography.io/en/latest/hazmat/primitives/asymmetric/dh/
-      [5] https://www.youtube.com/watch?v=85oMrKd8afY
-      [6] https://polymesh.network/blog/the-diffie-hellman-key-exchange
-      [7] https://4js.com/online_documentation/fjs-fgl-manual-html/fgl-topics/c_gws_dh_algorithm.html
-      [8] https://doubleoctopus.com/security-wiki/encryption-and-cryptography/diffie-hellman-algorithm/
-      [9] https://www.hexnode.com/blogs/explained/what-is-diffie-hellman-dh-key-exchange/
-      [10] https://security.stackexchange.com/questions/45963/diffie-hellman-key-exchange-in-plain-english
-      [11] https://eureka.patsnap.com/article/understanding-diffie-hellman-key-exchange-explained-simply
-      [12] https://labex.io/tutorials/linux-basic-key-exchange-with-diffie-hellman-in-cryptography-632720
-      [13] https://eureka.patsnap.com/article/the-mathematics-behind-diffie-hellman-key-exchange
-      [14] https://www.ibm.com/docs/en/i/7.4.0?topic=q-calculate-diffie-hellman-secret-key-qc3calds-qc3calculatedhsecretkey
-      [15] https://wiki.openssl.org/index.php/Elliptic_Curve_Diffie_Hellman
-      [16] https://medium.com/@dipakkrdas/few-fundamental-cryptography-concepts-17aa1f6fe3ae
-      [17] https://medium.com/@sylvain.tiset/locks-and-fingerprints-part-1-how-encryption-keep-data-safe-d9911215c0a4
+      1: https://networklessons.com/miscellaneous/introduction-to-diffie-hellman-key-exchange
+      2: https://dev.to/techlabma/diffie-hellman-key-exchange-dhke-algorithm-505b
+      3: https://www.hypr.com/security-encyclopedia/diffie-hellman-algorithim
+      4: https://cryptography.io/en/latest/hazmat/primitives/asymmetric/dh/
+      5: https://www.youtube.com/watch?v=85oMrKd8afY
+      6: https://polymesh.network/blog/the-diffie-hellman-key-exchange
+      7: https://4js.com/online_documentation/fjs-fgl-manual-html/fgl-topics/c_gws_dh_algorithm.html
+      8: https://doubleoctopus.com/security-wiki/encryption-and-cryptography/diffie-hellman-algorithm/
+      9: https://www.hexnode.com/blogs/explained/what-is-diffie-hellman-dh-key-exchange/
+      10: https://security.stackexchange.com/questions/45963/diffie-hellman-key-exchange-in-plain-english
+      11: https://eureka.patsnap.com/article/understanding-diffie-hellman-key-exchange-explained-simply
+      12: https://labex.io/tutorials/linux-basic-key-exchange-with-diffie-hellman-in-cryptography-632720
+      13: https://eureka.patsnap.com/article/the-mathematics-behind-diffie-hellman-key-exchange
+      14: https://www.ibm.com/docs/en/i/7.4.0?topic=q-calculate-diffie-hellman-secret-key-qc3calds-qc3calculatedhsecretkey
+      15: https://wiki.openssl.org/index.php/Elliptic_Curve_Diffie_Hellman
+      16: https://medium.com/@dipakkrdas/few-fundamental-cryptography-concepts-17aa1f6fe3ae
+      17: https://medium.com/@sylvain.tiset/locks-and-fingerprints-part-1-how-encryption-keep-data-safe-d9911215c0a4
   
 
   ecdh:
     description: !markdown >
-      The Elliptic Curve Diffie-Hellman (ECDH) algorithm is a modern security protocol. It lets two people create a shared secret key over an open, unsafe network. They use this secret key to lock and unlock private messages. It relies on the math of elliptic curves instead of large numbers. [1, 2]  
-      How the Steps Work 
+      The Elliptic Curve Diffie-Hellman (ECDH) algorithm is a modern security protocol. It lets two people create a
+      shared secret key over an open, unsafe network. They use this secret key to lock and unlock private messages. It
+      relies on the math of elliptic curves instead of large numbers. [1, 2]  
+      
+      # How the Steps Work 
 
-      • Choose a public curve and a starting point (G) together. 
-      • Pick a random secret number to act as your private key. 
-      • Multiply your private key by the starting point to make your public key. 
-      • Send your public key to the other person. 
-      • Take the public key sent to you and multiply it by your own private key. 
-      • Both people now share the exact same secret value. [1, 3, 4, 5, 6]  
+      * Choose a public curve and a starting point (G) together. 
+      * Pick a random secret number to act as your private key. 
+      * Multiply your private key by the starting point to make your public key. 
+      * Send your public key to the other person. 
+      * Take the public key sent to you and multiply it by your own private key. 
+      * Both people now share the exact same secret value. [1, 3, 4, 5, 6]  
 
-      Why People Use It 
+      # Why People Use It 
 
-      • Small keys: It gives high security using tiny key sizes. 
-      • Fast speed: It uses less computer power and memory. 
-      • Safe data: Hackers cannot figure out the secret key just by watching the network. [1, 7, 8]  
+      * Small keys: It gives high security using tiny key sizes. 
+      * Fast speed: It uses less computer power and memory. 
+      * Safe data: Hackers cannot figure out the secret key just by watching the network. [1, 7, 8]  
 
-      If you'd like, I can explain:The math difference between normal Diffie-Hellman and ECDHWhat ECDHE (Ephemeral) means for forward safetyHow it is used in TLS or messaging apps 
-      AI responses may include mistakes.
     citations: !citations
       1: https://www.hexnode.com/blogs/explained/what-is-elliptic-curve-diffie-hellman-ecdh/
       2: https://www.cardlogix.com/glossary/elliptic-curve-diffie-hellman-ecdh/
@@ -651,22 +697,31 @@ agreement:
 
   ecdhe:
     description: !markdown >
-      ECDHE stands for Elliptic Curve Diffie-Hellman Ephemeral. It is a secure key exchange protocol that allows two parties to create a shared secret key over an open network without sending the secret itself. It combines elliptic curve math with temporary keys to give high speed and forward privacy. [1, 2]  
-      How ECDHE Works 
+      ECDHE stands for Elliptic Curve Diffie-Hellman Ephemeral. It is a secure key exchange protocol that allows two
+      parties to create a shared secret key over an open network without sending the secret itself. It combines
+      elliptic curve math with temporary keys to give high speed and forward privacy. [1, 2]  
+      
+      # How ECDHE Works 
 
-      • Pick a Curve: Both sides agree on a specific elliptic curve and a base point on that curve. 
-      • Make Key Pairs: Each side creates a random private number and multiplies it by the base point to get a public key. 
-      • Trade Public Keys: The two sides swap their public keys over the network. 
-      • Compute Secret: Each side combines the other side's public key with its own private number to arrive at the exact same shared secret number. [3, 4]  
+      * Pick a Curve: Both sides agree on a specific elliptic curve and a base point on that curve. 
+      * Make Key Pairs: Each side creates a random private number and multiplies it by the base point to get a
+        public key. 
+      * Trade Public Keys: The two sides swap their public keys over the network. 
+      * Compute Secret: Each side combines the other side's public key with its own private number to arrive at the
+        exact same shared secret number. [3, 4]  
 
       Core Benefits 
 
-      • Ephemeral (Forward Secrecy): New temporary keys are made for every single session and then thrown away. If a server's main key is stolen later, old recorded sessions stay safe. 
-      • Small Key Size: It offers the same security as older methods while using much smaller keys, which saves CPU power and network data. 
-      • Widespread Use: It is a core security standard used inside modern web protocols like  Transport Layer Security (TLS)  to protect web traffic. [1, 9]  
+      * Ephemeral (Forward Secrecy): New temporary keys are made for every single session and then thrown away. If a
+        server's main key is stolen later, old recorded sessions stay safe. 
+      * Small Key Size: It offers the same security as older methods while using much smaller keys, which saves CPU
+        power and network data. 
+      * Widespread Use: It is a core security standard used inside modern web protocols like  Transport Layer
+        Security (TLS)  to protect web traffic. [1, 9]  
 
-      If you'd like, I can explain:The math difference between standard Diffie-Hellman and elliptic curvesWhy X25519 is the preferred curve todayHow it handles quantum computer risksLet me know what you want to explore next. 
-      AI responses may include mistakes.
+      If you'd like, I can explain:The math difference between standard Diffie-Hellman and elliptic curvesWhy
+      X25519 is the preferred curve todayHow it handles quantum computer risksLet me know what you want to 
+      explore next.
     citations:
       1: https://www.emergentmind.com/topics/elliptic-curve-diffie-hellman-ephemeral-ecdhe
       2: https://micsolutions.co.uk/2024/12/19/ecdhe/
@@ -817,175 +872,182 @@ sha3:
 block_cypher_modes:
   ecb:
     description: !markdown >
-      Electronic Codebook (ECB) mode is the simplest and most basic block cipher mode of operation. It splits a message into fixed-size blocks and encrypts each block independently using the same secret key. Identical plaintext blocks always yield identical ciphertext blocks, making it insecure for most uses. [1, 2, 3, 4]  
-      How ECB Works 
+      Electronic Codebook (ECB) mode is the simplest and most basic block cipher mode of operation. It splits a message
+      into fixed-size blocks and encrypts each block independently using the same secret key. Identical plaintext
+      blocks always yield identical ciphertext blocks, making it insecure for most uses. [1, 2, 3, 4]  
+      
+      #How ECB Works 
 
-      • Splitting: Data is cut into equal chunks matching the block size (such as 16 bytes for AES). 
-      • Independent Encryption: Each block is processed through the cipher separately without interaction from other blocks. 
-      • Independent Decryption: Cipher blocks are decrypted individually back to text using the same key. [3, 4, 5]  
+      * Splitting: Data is cut into equal chunks matching the block size (such as 16 bytes for AES). 
+      * Independent Encryption: Each block is processed through the cipher separately without interaction from other blocks. 
+      * Independent Decryption: Cipher blocks are decrypted individually back to text using the same key. [3, 4, 5]  
 
-      Advantages 
+      # Advantages 
 
-      • Simplicity: Very easy to program and use. 
-      • Parallel Processing: Blocks encrypt or decrypt simultaneously [0.12], saving time on multi-core systems. [4]  
+      * Simplicity: Very easy to program and use. 
+      * Parallel Processing: Blocks encrypt or decrypt simultaneously [0.12], saving time on multi-core systems. 4:  
 
-      Security Weaknesses 
+      # Security Weaknesses 
 
-      • Pattern Leakage: Identical inputs create identical outputs, meaning visual shapes or data trends remain visible (famous for the "Tux the Penguin" encrypted image demonstration). 
-      • No Hiding of Data: An attacker can swap, delete, or replay blocks [0.13] without detection. Most experts advise against using ECB for private or sensitive data. [2, 4]  
-
-      If you want, I can explain:Cipher Block Chaining (CBC) as a secure alternativePadding methods used when data does not fit the block size evenly 
-      AI responses may include mistakes.
-
-      [1] https://www.geeksforgeeks.org/computer-networks/electronic-code-book-ecb-in-cryptography/
-      [2] https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
-      [3] https://destcert.com/resources/types-of-ciphers/
-      [4] https://medium.com/@brsdncr/cryptography-lesson-notebook-1-aes-ecb-electronic-codebook-5baabcedfa59
-      [5] https://www.youtube.com/watch?v=jDnenb9EHQk
+      * Pattern Leakage: Identical inputs create identical outputs, meaning visual shapes or data trends remain 
+          visible (famous for the "Tux the Penguin" encrypted image demonstration). 
+      * No Hiding of Data: An attacker can swap, delete, or replay blocks [0.13] without detection. Most experts
+          advise against using ECB for private or sensitive data. [2, 4]
+    citations:
+      1: https://www.geeksforgeeks.org/computer-networks/electronic-code-book-ecb-in-cryptography/
+      2: https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
+      3: https://destcert.com/resources/types-of-ciphers/
+      4: https://medium.com/@brsdncr/cryptography-lesson-notebook-1-aes-ecb-electronic-codebook-5baabcedfa59
+      5: https://www.youtube.com/watch?v=jDnenb9EHQk
   cbc:
     description: !markdown >
-      Cipher Block Chaining (CBC) is a mode of operation for block ciphers where each plaintext block is combined with the previous ciphertext block using an exclusive-OR (XOR) operation before being encrypted. This chaining process ensures that identical plaintext blocks yield entirely different ciphertext outputs. [1, 2, 3]  
-      How CBC Encryption Works 
+      Cipher Block Chaining (CBC) is a mode of operation for block ciphers where each plaintext block is combined with
+      the previous ciphertext block using an exclusive-OR (XOR) operation before being encrypted. This chaining process
+      ensures that identical plaintext blocks yield entirely different ciphertext outputs. [1, 2, 3]  
+      
+      # How CBC Encryption Works 
 
-      • Initialization Vector (IV): Because there is no previous ciphertext for the first plaintext block, a unique or random value called an IV is XORed with the first block. 
-      • Chaining: For every subsequent block, the current plaintext block is XORed with the ciphertext output of the immediately preceding block. 
-      • Encryption: The combined result of the XOR operation is then passed through the block cipher algorithm using the secret key. 
-      • Sequential processing: Encryption must be performed strictly in sequence (serially) because block N cannot be encrypted until block N-1 finishes. [3, 4, 5]  
+      * Initialization Vector (IV): Because there is no previous ciphertext for the first plaintext block, a unique
+          or random value called an IV is XORed with the first block. 
+      * Chaining: For every subsequent block, the current plaintext block is XORed with the ciphertext output of the
+          immediately preceding block. 
+      * Encryption: The combined result of the XOR operation is then passed through the block cipher algorithm using
+          the secret key. 
+      * Sequential processing: Encryption must be performed strictly in sequence (serially) because block N cannot be
+        encrypted until block N-1 finishes. [3, 4, 5]  
 
       How CBC Decryption Works 
 
-      • Reverse process: The cipher takes a ciphertext block, runs it through the block cipher decryption function, and then XORs the result with the previous ciphertext block (or the IV for the first block) to recover the original plaintext. 
-      • Parallel decryption: Unlike encryption, decryption can be done in parallel because all ciphertext blocks are already available. [3, 6]  
+      * Reverse process: The cipher takes a ciphertext block, runs it through the block cipher decryption function,
+        and then XORs the result with the previous ciphertext block (or the IV for the first block) to recover the
+        original plaintext. 
+      * Parallel decryption: Unlike encryption, decryption can be done in parallel because all ciphertext blocks
+        are already available. [3, 6]  
 
       Key Pros and Cons 
 
-      • Pros: Hides patterns and prevents repetitive plaintext leaks (unlike basic ECB mode); highly secure when paired with a proper, unpredictable IV. 
-      • Cons: Slower due to its sequential nature during encryption; prone to error propagation (a corrupted ciphertext block corrupts its own block decryption and distorts the next plaintext block). [5, 8, 9]  
-
-      If you'd like, I can explain:How the Initialization Vector (IV) must be managed securelyHow CBC compares to Counter (CTR) or Galois/Counter Mode (GCM)How padding is handled via PKCS#7Let me know what you want to explore next! 
-      AI responses may include mistakes.
-
-      [1] https://www.geeksforgeeks.org/ethical-hacking/block-cipher-modes-of-operation/
-      [2] https://www.portnox.com/cybersecurity-101/general-security/what-is-cipher-block-chaining/
-      [3] https://www.sciencedirect.com/topics/computer-science/cipher-block-chaining
-      [4] https://datatracker.ietf.org/doc/html/rfc2451
-      [5] https://www.youtube.com/watch?v=SV2qsNfI1Cs
-      [6] https://www.sciencedirect.com/topics/mathematics/block-cipher
-      [7] https://www.youtube.com/watch?v=NnLLkmgBhCY
-      [8] https://www.sciencedirect.com/topics/mathematics/cipher-block-chaining
-      [9] https://destcert.com/resources/types-of-ciphers/
+      * Pros: Hides patterns and prevents repetitive plaintext leaks (unlike basic ECB mode); highly secure when
+        paired with a proper, unpredictable IV. 
+      * Cons: Slower due to its sequential nature during encryption; prone to error propagation (a corrupted
+        ciphertext block corrupts its own block decryption and distorts the next plaintext block). [5, 8, 9]
+    citations:
+      1: https://www.geeksforgeeks.org/ethical-hacking/block-cipher-modes-of-operation/
+      2: https://www.portnox.com/cybersecurity-101/general-security/what-is-cipher-block-chaining/
+      3: https://www.sciencedirect.com/topics/computer-science/cipher-block-chaining
+      4: https://datatracker.ietf.org/doc/html/rfc2451
+      5: https://www.youtube.com/watch?v=SV2qsNfI1Cs
+      6: https://www.sciencedirect.com/topics/mathematics/block-cipher
+      7: https://www.youtube.com/watch?v=NnLLkmgBhCY
+      8: https://www.sciencedirect.com/topics/mathematics/cipher-block-chaining
+      9: https://destcert.com/resources/types-of-ciphers/
   cfb:
 
 
   ofb:
     description: !markdown >
-      Output Feedback (OFB) mode turns a block cipher into a synchronous stream cipher. It encrypts an Initialization Vector (IV) and feeds that cipher output back into the next encryption round. This produces a keystream that is XORed with the plaintext to create the ciphertext. [1, 2, 3, 4]  
-      How OFB Mode Works 
+      Output Feedback (OFB) mode turns a block cipher into a synchronous stream cipher. It encrypts an Initialization
+      Vector (IV) and feeds that cipher output back into the next encryption round. This produces a keystream that is
+      XORed with the plaintext to create the ciphertext. [1, 2, 3, 4]  
+      
+      # How OFB Mode Works 
 
-      • Keystream Generation: The cipher encrypts an IV to create the first output block. It feeds that output back into the cipher again to create the next block, repeating this process to form a continuous keystream. 
-      • Encryption: The system XORs the generated keystream blocks with the plaintext blocks to produce the final ciphertext. 
-      • Decryption: Decryption uses the exact same steps. It generates the identical keystream by encrypting the IV and XORs it with the ciphertext to recover the original plaintext. [4]  
+      * Keystream Generation: The cipher encrypts an IV to create the first output block. It feeds that output back
+        into the cipher again to create the next block, repeating this process to form a continuous keystream. 
+      * Encryption: The system XORs the generated keystream blocks with the plaintext blocks to produce the
+        final ciphertext. 
+      * Decryption: Decryption uses the exact same steps. It generates the identical keystream by encrypting the
+        IV and XORs it with the ciphertext to recover the original plaintext. 4:  
 
-      Key Features and Properties 
+      # Key Features and Properties 
 
-      • No Error Propagation: A bit error in the ciphertext only affects the single corresponding bit in the decrypted plaintext, rather than corrupting later blocks. 
-      • Preprocessing: The system can generate the entire keystream before the plaintext is even available, speeding up real-time processing. 
-      • No Parallel Encryption: Because each keystream block depends strictly on the output of the previous block, you cannot encrypt multiple blocks at the same time. 
-      • IV Uniqueness: Reusing the same IV and secret key combination completely destroys security by repeating the exact same keystream. [7]  
+      * No Error Propagation: A bit error in the ciphertext only affects the single corresponding bit in the
+        decrypted plaintext, rather than corrupting later blocks. 
+      * Preprocessing: The system can generate the entire keystream before the plaintext is even available,
+        speeding up real-time processing. 
+      * No Parallel Encryption: Because each keystream block depends strictly on the output of the previous block,
+        you cannot encrypt multiple blocks at the same time. 
+      * IV Uniqueness: Reusing the same IV and secret key combination completely destroys security by repeating
+        the exact same keystream. 7:  
 
-      If you would like, I can compare OFB mode with CFB (Cipher Feedback) or CTR (Counter) mode to show how their feedback and performance differ. 
-      AI responses may include mistakes.
-
-      [1] https://www.youtube.com/watch?v=gIzFAFo5a6M
-      [2] https://www.youtube.com/watch?v=Q_hi2jWg6dc
-      [3] https://destcert.com/resources/types-of-ciphers/
-      [4] https://www.youtube.com/watch?v=OGdBTfouuao
-      [5] https://www.tutorialspoint.com/cryptography/output_feedback_mode.htm
-      [6] https://crypto.stackexchange.com/questions/25961/operation-modes-of-block-ciphers-how-are-used
-      [7] https://www.geeksforgeeks.org/ethical-hacking/block-cipher-modes-of-operation/
-
-
-  ifb:
-    description: !markdown >
-      It appears IFB is not a standard or widely recognized block cipher mode of operation (such as CBC, CFB, OFB, or CTR). You might have meant CFB (Cipher Feedback), OFB (Output Feedback), or perhaps a typo for an internal feedback mechanism in a specific custom stream/block design. [1, 2, 3]  
-      Standard feedback-based modes include: 
-      Cipher Feedback (CFB) Mode 
-
-      • Function: Turns a block cipher into a self-synchronizing stream cipher. 
-      • Mechanism: Encrypts the previous ciphertext block, then XORs the output with the current plaintext block to produce the new ciphertext. 
-      • Use Case: Good for streaming data where synchronization or byte-by-byte processing is needed. [1, 4]  
-
-      Output Feedback (OFB) Mode 
-
-      • Function: Turns a block cipher into a synchronous stream cipher. 
-      • Mechanism: Repeatedly encrypts the initialization vector (IV) or previous cipher output rather than the ciphertext, generating a independent keystream to XOR with the plaintext. 
-      • Use Case: Helpful when transmission errors are common, because errors do not propagate to future blocks. [1, 2, 5, 6]  
-
-      Did you mean CFB or OFB, or are you referring to a specific protocol or paper that defines IFB? Let me know so I can give you the exact details you need. 
-      AI responses may include mistakes.
-
-      [1] https://www.geeksforgeeks.org/ethical-hacking/block-cipher-modes-of-operation/
-      [2] https://www.youtube.com/watch?v=gIzFAFo5a6M
-      [3] https://groups.google.com/g/sci.crypt.research/c/ZD82NIacVmU/m/WDYm8_xmzTQJ
-      [4] https://thorteaches.com/glossary/cipher-feedback-cfb-mode/
-      [5] https://crypto.stackexchange.com/questions/98347/is-ofb-mode-a-stream-cipher
-      [6] https://www.researchgate.net/figure/CFB-Cipher-Feedback-mode-Output-Feedback-OFB-mode-Like-CFB-mode-output-feedback_fig3_273260684
+      If you would like, I can compare OFB mode with CFB (Cipher Feedback) or CTR (Counter) mode to show how their
+        feedback and performance differ.
+    citations:
+      1: https://www.youtube.com/watch?v=gIzFAFo5a6M
+      2: https://www.youtube.com/watch?v=Q_hi2jWg6dc
+      3: https://destcert.com/resources/types-of-ciphers/
+      4: https://www.youtube.com/watch?v=OGdBTfouuao
+      5: https://www.tutorialspoint.com/cryptography/output_feedback_mode.htm
+      6: https://crypto.stackexchange.com/questions/25961/operation-modes-of-block-ciphers-how-are-used
+      7: https://www.geeksforgeeks.org/ethical-hacking/block-cipher-modes-of-operation/
   ctr:
     description: !markdown >
-      Counter (CTR) mode is a block cipher mode of operation that turns a standard block cipher (like AES) into a stream cipher. It works by encrypting a sequential counter value combined with a unique nonce, then XORing the resulting keystream block with the plaintext to generate the ciphertext. [1, 2, 3]  
-      How CTR Mode Works 
+      Counter (CTR) mode is a block cipher mode of operation that turns a standard block cipher (like AES) into a
+      stream cipher. It works by encrypting a sequential counter value combined with a unique nonce, then XORing the
+      resulting keystream block with the plaintext to generate the ciphertext. [1, 2, 3]  
+      
+      # How CTR Mode Works 
 
-      • Nonce and Counter: Each block uses a unique counter block made by joining a fixed nonce and an incrementing number. 
-      • Keystream Generation: The block cipher encrypts each counter block using the secret key to create a unique keystream segment. 
-      • XOR Operation: The plaintext is XORed with this encrypted keystream to produce the ciphertext. 
-      • Decryption Simplicity: Decryption uses the exact same process; the counter blocks are encrypted again and XORed with the ciphertext to recover the original plaintext. [1, 2, 3, 4]  
+      * Nonce and Counter: Each block uses a unique counter block made by joining a fixed nonce and an
+        incrementing number. 
+      * Keystream Generation: The block cipher encrypts each counter block using the secret key to create a unique
+        keystream segment. 
+      * XOR Operation: The plaintext is XORed with this encrypted keystream to produce the ciphertext. 
+      * Decryption Simplicity: Decryption uses the exact same process; the counter blocks are encrypted again and
+        XORed with the ciphertext to recover the original plaintext. [1, 2, 3, 4]  
 
-      Key Characteristics 
+      # Key Characteristics 
 
-      • Parallel Processing: Both encryption and decryption can be run in parallel across multiple blocks because the counter values are known in advance. 
-      • No Padding Needed: Because it acts like a stream cipher, the final block does not need to be padded to a full block size. 
-      • Random Access: You can jump directly to decrypt any specific block without processing the blocks that come before it. 
-      • Nonce Reuse Risk: Reusing the same nonce and key combination completely destroys the security of the cipher, allowing attackers to recover the keystream. [2, 4, 7]  
+      * Parallel Processing: Both encryption and decryption can be run in parallel across multiple blocks because the
+        counter values are known in advance. 
+      * No Padding Needed: Because it acts like a stream cipher, the final block does not need to be padded to a
+        full block size. 
+      * Random Access: You can jump directly to decrypt any specific block without processing the blocks that
+        come before it. 
+      * Nonce Reuse Risk: Reusing the same nonce and key combination completely destroys the security of the
+        cipher, allowing attackers to recover the keystream. [2, 4, 7]  
 
-      If you'd like, I can:Compare CTR mode vs. CBC modeExplain Galois/Counter Mode (GCM) for authenticationShow how the nonce and counter blocks are structured internallyLet me know how you want to proceed. 
-      AI responses may include mistakes.
-
-      [1] https://www.hexnode.com/blogs/explained/what-is-counter-mode-ctr/
-      [2] https://www.youtube.com/watch?v=zX0PZtqerCI
-      [3] https://pycryptodome.readthedocs.io/en/v3.20.0/src/cipher/classic.html
-      [4] https://ctf101.org/cryptography/what-are-block-ciphers/
-      [5] https://www.tutorialspoint.com/cryptography/counter_mode.htm
-      [6] https://www.youtube.com/watch?v=gUNyXs6mEKM
-      [7] https://medium.com/@malkhoori/aes-gcm-nonce-reuse-writeup-7d5a92b599cb
+    citations:
+      1: https://www.hexnode.com/blogs/explained/what-is-counter-mode-ctr/
+      2: https://www.youtube.com/watch?v=zX0PZtqerCI
+      3: https://pycryptodome.readthedocs.io/en/v3.20.0/src/cipher/classic.html
+      4: https://ctf101.org/cryptography/what-are-block-ciphers/
+      5: https://www.tutorialspoint.com/cryptography/counter_mode.htm
+      6: https://www.youtube.com/watch?v=gUNyXs6mEKM
+      7: https://medium.com/@malkhoori/aes-gcm-nonce-reuse-writeup-7d5a92b599cb
   gcm:
     description: !markdown >
-      Galois/Counter Mode (GCM) is an authenticated encryption mode for block ciphers. It provides both data confidentiality (secrecy) and authenticity (integrity). GCM combines Counter (CTR) mode for encryption with a special GHASH function based on Galois field multiplication for integrity verification. [1, 2, 3, 4]  
-      Key Components and Operation 
+      Galois/Counter Mode (GCM) is an authenticated encryption mode for block ciphers. It provides both data
+      confidentiality (secrecy) and authenticity (integrity). GCM combines Counter (CTR) mode for encryption with a
+      special GHASH function based on Galois field multiplication for integrity verification. [1, 2, 3, 4]  
+      
+      # Key Components and Operation 
 
-      • Counter Mode (Encryption): Turns a block cipher into a stream cipher by encrypting sequential counter values and XORing the output with plaintext blocks. 
-      • GHASH (Authentication): Processes the ciphertext, optional additional authenticated data (AAD), and length fields using universal hashing over a binary Galois field (GF(2¹²⁸)) to output a unique authentication tag. 
-      • Nonce / IV: Requires a unique initialization vector (typically 96 bits) for every execution under the same key. Never reuse a nonce. [1, 3, 6]  
+      * Counter Mode (Encryption): Turns a block cipher into a stream cipher by encrypting sequential counter values
+        and XORing the output with plaintext blocks. 
+      * GHASH (Authentication): Processes the ciphertext, optional additional authenticated data (AAD), and length
+        fields using universal hashing over a binary Galois field (GF(2¹²⁸)) to output a unique authentication tag. 
+      * Nonce / IV: Requires a unique initialization vector (typically 96 bits) for every execution under the same
+        key. Never reuse a nonce. [1, 3, 6]  
 
-      Advantages of GCM 
+      # Advantages of GCM 
 
-      • High Speed: Supports parallel processing for both encryption and authentication, making it optimal for high-bandwidth networks. 
-      • Single-Pass Efficiency: Computes privacy and integrity checks simultaneously rather than sequentially. 
-      • Standard Adoption: Widely used in modern protocols like TLS 1.2+, IPsec, and SSH due to its security and performance. [4, 8, 9, 10, 11]  
-
-      If you'd like, I can:Detail how to prevent nonce reuse vulnerabilitiesCompare GCM with CCM or ChaCha20-Poly1305 modesShow a basic code implementation overviewLet me know how you would like to proceed. 
-      AI responses may include mistakes.
-
-      [1] https://www.ibm.com/docs/en/linux-on-systems?topic=mo-electronic-code-book-ecb-mode
-      [2] https://www.intel.com/content/www/us/en/content-details/783641/advanced-encryption-standard-galois-counter-mode-optimized-ghash-function-technology-guide.html
-      [3] https://www.youtube.com/watch?v=-fpVv_T4xwA
-      [4] https://www.cincopa.com/learn/introduction-to-aes-gcm-mode-and-its-advantages
-      [5] https://medium.com/@pravallikayakkala123/understanding-aes-encryption-and-aes-gcm-mode-an-in-depth-exploration-using-java-e03be85a3faa
-      [6] https://www.youtube.com/watch?v=C_cQIYPWTXs
-      [7] https://xilinx.github.io/Vitis_Libraries/security/2019.2/guide_L1/internals/gcm.html
-      [8] https://csrc.nist.rip/groups/ST/toolkit/BCM/documents/proposedmodes/gcm/gcm-revised-spec.pdf
-      [9] https://www.youtube.com/watch?v=gUNyXs6mEKM
-      [10] https://datatracker.ietf.org/doc/html/rfc5647
-      [11] https://crypto.stackexchange.com/questions/2310/what-is-the-difference-between-cbc-and-gcm-mode
+      * High Speed: Supports parallel processing for both encryption and authentication, making it optimal for
+        high-bandwidth networks. 
+      * Single-Pass Efficiency: Computes privacy and integrity checks simultaneously rather than sequentially. 
+      * Standard Adoption: Widely used in modern protocols like TLS 1.2+, IPsec, and SSH due to its security
+        and performance. [4, 8, 9, 10, 11]
+    citations:
+      1: https://www.ibm.com/docs/en/linux-on-systems?topic=mo-electronic-code-book-ecb-mode
+      2: https://www.intel.com/content/www/us/en/content-details/783641/advanced-encryption-standard-galois-counter-mode-optimized-ghash-function-technology-guide.html
+      3: https://www.youtube.com/watch?v=-fpVv_T4xwA
+      4: https://www.cincopa.com/learn/introduction-to-aes-gcm-mode-and-its-advantages
+      5: https://medium.com/@pravallikayakkala123/understanding-aes-encryption-and-aes-gcm-mode-an-in-depth-exploration-using-java-e03be85a3faa
+      6: https://www.youtube.com/watch?v=C_cQIYPWTXs
+      7: https://xilinx.github.io/Vitis_Libraries/security/2019.2/guide_L1/internals/gcm.html
+      8: https://csrc.nist.rip/groups/ST/toolkit/BCM/documents/proposedmodes/gcm/gcm-revised-spec.pdf
+      9: https://www.youtube.com/watch?v=gUNyXs6mEKM
+      10: https://datatracker.ietf.org/doc/html/rfc5647
+      11: https://crypto.stackexchange.com/questions/2310/what-is-the-difference-between-cbc-and-gcm-mode
   lrw:
   xcb:
   hctr:
@@ -997,90 +1059,111 @@ block_cypher_modes:
 
   ccm:
     description: !markdown >
-      CCM (Counter with CBC-MAC) is an authenticated encryption mode for 128-bit block ciphers like AES. It provides both data confidentiality (encryption) and authenticity (integrity tag) in one operation. It combines Counter (CTR) mode for encryption and Cipher Block Chaining Message Authentication Code (CBC-MAC) for integrity. [1, 2, 3, 4, 5]  
-      How CCM Works 
+      CCM (Counter with CBC-MAC) is an authenticated encryption mode for 128-bit block ciphers like AES. It provides
+      both data confidentiality (encryption) and authenticity (integrity tag) in one operation. It combines Counter
+      (CTR) mode for encryption and Cipher Block Chaining Message Authentication Code (CBC-MAC) for
+      integrity. [1, 2, 3, 4, 5]  
+      
+      # How CCM Works 
 
-      • Two Core Parts: Uses CTR mode to encrypt the data and CBC-MAC to generate a security tag. 
-      • Associated Data (AD): Can authenticate extra unencrypted data (like packet headers or IP addresses). 
-      • Nonce Requirement: Requires a unique nonce (number used once) for every message under the same key to remain secure. Reusing a nonce breaks confidentiality entirely. [1, 2, 6]  
+      * Two Core Parts: Uses CTR mode to encrypt the data and CBC-MAC to generate a security tag. 
+      * Associated Data (AD): Can authenticate extra unencrypted data (like packet headers or IP addresses). 
+      * Nonce Requirement: Requires a unique nonce (number used once) for every message under the same key to
+          remain secure. Reusing a nonce breaks confidentiality entirely. [1, 2, 6]  
 
-      Key Properties 
+      # Key Properties 
 
-      • Block Size: Strictly defined for 128-bit block ciphers (such as AES-128). 
-      • Order of Operation: Standard implementations compute the MAC over the associated data and plaintext first, then encrypt both the message and the tag using CTR mode. 
-      • Common Uses: Widely used in constrained wireless networks, including IEEE 802.11i (Wi-Fi security), Bluetooth Low Energy, and ZigBee. [1, 2, 3, 6, 7]  
+      * Block Size: Strictly defined for 128-bit block ciphers (such as AES-128). 
+      * Order of Operation: Standard implementations compute the MAC over the associated data and plaintext first,
+        then encrypt both the message and the tag using CTR mode. 
+      * Common Uses: Widely used in constrained wireless networks, including IEEE 802.11i (Wi-Fi security), Bluetooth
+        Low Energy, and ZigBee. [1, 2, 3, 6, 7]  
 
-      If you'd like, I can:Compare CCM with GCM (Galois/Counter Mode)Detail the exact step-by-step mathematical blocksExplain how to pick nonce and tag sizesLet me know what you want to explore next! 
-      AI responses may include mistakes.
-
-      [1] https://en.wikipedia.org/wiki/CCM_mode
-      [2] https://xilinx.github.io/Vitis_Libraries/security/2019.2/guide_L1/internals/ccm.html
-      [3] https://docs.nordicsemi.com/r/bundle/ps_nrf5340/page/ccm.html
-      [4] https://datatracker.ietf.org/doc/html/rfc3610
-      [5] https://csrc.nist.gov/pubs/sp/800/38/c/upd1/final
-      [6] https://www.cryptopp.com/wiki/CCM_Mode
-      [7] https://www.latticesemi.com/en/Products/DesignSoftwareAndIP/IntellectualProperty/IPCore/HelionTechCores/AESCCMCore
+    citations:
+      1: https://en.wikipedia.org/wiki/CCM_mode
+      2: https://xilinx.github.io/Vitis_Libraries/security/2019.2/guide_L1/internals/ccm.html
+      3: https://docs.nordicsemi.com/r/bundle/ps_nrf5340/page/ccm.html
+      4: https://datatracker.ietf.org/doc/html/rfc3610
+      5: https://csrc.nist.gov/pubs/sp/800/38/c/upd1/final
+      6: https://www.cryptopp.com/wiki/CCM_Mode
+      7: https://www.latticesemi.com/en/Products/DesignSoftwareAndIP/IntellectualProperty/IPCore/HelionTechCores/AESCCMCore
 
 
   xts:
     description: !markdown >
-      XTS (XEX-based tweaked-codebook mode with ciphertext stealing) is a block cipher mode designed specifically for full-disk and storage encryption. It secures data at rest by using two keys and a "tweak" value (like a sector number) so identical data blocks yield different ciphertexts, without expanding file sizes. [1, 2, 3]  
-      Key Features of XTS 
+      XTS (XEX-based tweaked-codebook mode with ciphertext stealing) is a block cipher mode designed specifically 
+      for full-disk and storage encryption. It secures data at rest by using two keys and a "tweak" value (like a
+      sector number) so identical data blocks yield different ciphertexts, without expanding file sizes. [1, 2, 3]  
+      
+      # Key Features of XTS 
 
-      • Two Keys: It uses two independent cipher keys—one for the core block encryption and one to encrypt the tweak value. 
-      • The Tweak: It uses a tweak value (position/sector ID) modified via Galois field math. This stops attackers from spotting patterns in identical blocks across different disk sectors. 
-      • No Size Expansion: It uses ciphertext stealing to handle final partial blocks. This avoids padding, meaning the encrypted data matches the exact size of the original data. 
-      • Confidentiality Only: It provides strong data privacy, but it does not offer built-in authentication or tamper detection. [3, 4]  
+      * Two Keys: It uses two independent cipher keys—one for the core block encryption and one to encrypt the
+        tweak value. 
+      * The Tweak: It uses a tweak value (position/sector ID) modified via Galois field math. This stops attackers
+        from spotting patterns in identical blocks across different disk sectors. 
+      * No Size Expansion: It uses ciphertext stealing to handle final partial blocks. This avoids padding, meaning
+        the encrypted data matches the exact size of the original data. 
+      * Confidentiality Only: It provides strong data privacy, but it does not offer built-in authentication or
+        tamper detection. [3, 4]  
 
-      Common Uses 
+      # Common Uses 
 
-      • Full-Disk Encryption: Used by software like  VeraCrypt  and BitLocker. 
-      • Hardware Drives: Used inside secure external SSDs and USB flash drives like the Kingston IronKey. [2, 4, 5, 8, 9]  
-
-      If you'd like, I can explain:How ciphertext stealing works mathematicallyA comparison between XTS and CBC or GCM modesPotential security limitations of XTSLet me know what you want to explore next. 
-      AI responses may include mistakes.
-
-      [1] https://xilinx.github.io/Vitis_Libraries/security/2019.2/guide_L1/internals/xts.html
-      [2] https://www.securview.com/ai-security-essentials/xts-mode
-      [3] https://www.cryptopp.com/wiki/XTS_Mode
-      [4] https://veracrypt.io/en/Modes%20of%20Operation.html
-      [5] https://www.kingston.com/unitedkingdom/en/blog/data-security/xts-encryption
-      [6] https://www.computer.org/csdl/magazine/sp/2010/03/msp2010030068/13rRUxNW1XJ
-      [7] https://xilinx.github.io/Vitis_Libraries/security/2021.2/guide_L1/internals/xts.html
-      [8] https://www.kingston.com/en/blog/data-security/xts-encryption
-      [9] https://terrazone.io/aes-256-encryption-types/
+      * Full-Disk Encryption: Used by software like  VeraCrypt  and BitLocker. 
+      * Hardware Drives: Used inside secure external SSDs and USB flash drives like the Kingston
+        IronKey. [2, 4, 5, 8, 9]
+    citations:
+      1: https://xilinx.github.io/Vitis_Libraries/security/2019.2/guide_L1/internals/xts.html
+      2: https://www.securview.com/ai-security-essentials/xts-mode
+      3: https://www.cryptopp.com/wiki/XTS_Mode
+      4: https://veracrypt.io/en/Modes%20of%20Operation.html
+      5: https://www.kingston.com/unitedkingdom/en/blog/data-security/xts-encryption
+      6: https://www.computer.org/csdl/magazine/sp/2010/03/msp2010030068/13rRUxNW1XJ
+      7: https://xilinx.github.io/Vitis_Libraries/security/2021.2/guide_L1/internals/xts.html
+      8: https://www.kingston.com/en/blog/data-security/xts-encryption
+      9: https://terrazone.io/aes-256-encryption-types/
   eme:
   eax:
 
   xex:
     description: !markdown >
-      XEX (XOR-Encrypt-XOR) is a tweakable block cipher mode designed by Phillip Rogaway. It masks a plaintext block with a tweak value before and after block cipher encryption. XEX serves as the foundational core for XTS-AES, the standard mode used for secure storage and full-disk encryption. [1, 2, 3, 4, 5, 6]  
-      How XEX Works 
+      XEX (XOR-Encrypt-XOR) is a tweakable block cipher mode designed by Phillip Rogaway. It masks a plaintext
+      block with a tweak value before and after block cipher encryption. XEX serves as the foundational core
+      for XTS-AES, the standard mode used for secure storage and full-disk encryption. [1, 2, 3, 4, 5, 6]  
+      
+      # How XEX Works 
 
-      • Pre-whitening: The plaintext block is XORed with a masked tweak value (derived from a secondary key and a sector/block index). 
-      • Encryption: The resulting value passes through the standard block cipher function (like AES) using the primary key. 
-      • Post-whitening: The cipher output is XORed again with the same masked tweak value to produce the final ciphertext. 
-      • Tweak evolution: Tweak values across adjacent blocks are modified by multiplying the previous tweak by a primitive element in a finite Galois Field (GF(2¹²⁸)). [3, 6, 7, 8, 9]  
+      * Pre-whitening: The plaintext block is XORed with a masked tweak value (derived from a secondary key
+          and a sector/block index). 
+      * Encryption: The resulting value passes through the standard block cipher function (like AES) using
+          the primary key. 
+      * Post-whitening: The cipher output is XORed again with the same masked tweak value to produce the
+          final ciphertext. 
+      * Tweak evolution: Tweak values across adjacent blocks are modified by multiplying the previous tweak by a
+          primitive element in a finite Galois Field (GF(2¹²⁸)). [3, 6, 7, 8, 9]  
 
       Key Characteristics 
 
-      • Tweakable security: Ensures that identical plaintext blocks encrypt to different ciphertexts when located at different storage addresses or sector numbers. 
-      • Parallelizable: Individual blocks can be encrypted or decrypted independently, allowing high performance on modern hardware. 
-      • No authentication: Provides confidentiality for data at rest but does not protect against data tampering or active manipulation. [9, 10, 11, 12, 13]  
+      * Tweakable security: Ensures that identical plaintext blocks encrypt to different ciphertexts when
+          located at different storage addresses or sector numbers. 
+      * Parallelizable: Individual blocks can be encrypted or decrypted independently, allowing high
+          performance on modern hardware. 
+      * No authentication: Provides confidentiality for data at rest but does not protect against data tampering or
+          active manipulation. [9, 10, 11, 12, 13]  
 
-      If you are planning an implementation, would you like to explore how XEX transitions into XTS mode with ciphertext stealing, or do you need help with performance considerations for disk encryption? 
+      If you are planning an implementation, would you like to explore how XEX transitions into XTS mode with
+          ciphertext stealing, or do you need help with performance considerations for disk encryption? 
       AI responses may include mistakes.
-
-      [1] https://csrc.nist.gov/projects/block-cipher-techniques/BCM
-      [2] https://web.cs.ucdavis.edu/~rogaway/papers/modes.pdf
-      [3] https://www.truecrypt.org/docs/modes-of-operation
-      [4] https://eprint.iacr.org/2015/1049.pdf
-      [5] https://en.wikipedia.org/wiki/Xor%E2%80%93encrypt%E2%80%93xor
-      [6] https://onlinedocs.microchip.com/oxy/GUID-4D282FC5-82FC-4934-8BAD-D4A5D8422E6C-en-US-7/GUID-3B9716A2-235B-4606-9FA3-559A7958BC36.html
-      [7] https://fiveable.me/lists/block-cipher-modes-of-operation
-      [8] https://www.sciencedirect.com/topics/computer-science/block-cipher-mode
-      [9] https://www.securview.com/ai-security-essentials/xts-aes
-      [10] https://www.youtube.com/watch?v=gUNyXs6mEKM
-      [11] https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
-      [12] https://dl.acm.org/doi/10.1145/937527.937529
-      [13] https://www.ibm.com/docs/en/linux-on-systems?topic=planning-cipher-mode-considerations
+    citations:
+      1: https://csrc.nist.gov/projects/block-cipher-techniques/BCM
+      2: https://web.cs.ucdavis.edu/~rogaway/papers/modes.pdf
+      3: https://www.truecrypt.org/docs/modes-of-operation
+      4: https://eprint.iacr.org/2015/1049.pdf
+      5: https://en.wikipedia.org/wiki/Xor%E2%80%93encrypt%E2%80%93xor
+      6: https://onlinedocs.microchip.com/oxy/GUID-4D282FC5-82FC-4934-8BAD-D4A5D8422E6C-en-US-7/GUID-3B9716A2-235B-4606-9FA3-559A7958BC36.html
+      7: https://fiveable.me/lists/block-cipher-modes-of-operation
+      8: https://www.sciencedirect.com/topics/computer-science/block-cipher-mode
+      9: https://www.securview.com/ai-security-essentials/xts-aes
+      10: https://www.youtube.com/watch?v=gUNyXs6mEKM
+      11: https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
+      12: https://dl.acm.org/doi/10.1145/937527.937529
+      13: https://www.ibm.com/docs/en/linux-on-systems?topic=planning-cipher-mode-considerations
