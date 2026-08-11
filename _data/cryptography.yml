@@ -471,15 +471,15 @@ signature:
       If you'd like, I can explain:How it compares to RSA or ECDSAWhy reusing a random number (k) breaks securityLet me know what you want to explore next.
       AI responses may include mistakes.
     citations:
-      [1] https://csrc.nist.rip/glossary/term/digital_signature_algorithm
-      [2] https://www.simplilearn.com/tutorials/cryptography-tutorial/digital-signature-algorithm
-      [3] http://shainer.github.io/crypto/python/matasano/2016/10/07/dsa.html
-      [4] https://www.scribd.com/document/878063091/DSA-Steps-Explanation
-      [5] https://di-mgt.com.au/public-key-crypto-discrete-logs-4-dsa.html
-      [6] https://dev.to/me_jessicahowe/what-is-a-digital-signature-algorithm-dsa-4kpi
-      [7] https://en.wikipedia.org/wiki/Digital_Signature_Algorithm
-      [8] https://www.youtube.com/watch?v=ANsg4wIQFn4
-      [9] https://github.com/demining/Deserialize-Signature-Vulnerability-in-Bitcoin-Network
+      1: https://csrc.nist.rip/glossary/term/digital_signature_algorithm
+      2: https://www.simplilearn.com/tutorials/cryptography-tutorial/digital-signature-algorithm
+      3: http://shainer.github.io/crypto/python/matasano/2016/10/07/dsa.html
+      4: https://www.scribd.com/document/878063091/DSA-Steps-Explanation
+      5: https://di-mgt.com.au/public-key-crypto-discrete-logs-4-dsa.html
+      6: https://dev.to/me_jessicahowe/what-is-a-digital-signature-algorithm-dsa-4kpi
+      7: https://en.wikipedia.org/wiki/Digital_Signature_Algorithm
+      8: https://www.youtube.com/watch?v=ANsg4wIQFn4
+      9: https://github.com/demining/Deserialize-Signature-Vulnerability-in-Bitcoin-Network
 
 
 ecdsa:
@@ -518,35 +518,35 @@ ecdsa:
 
 
     rsa:
-    description: !markdown >
-      The RSA signature algorithm is an asymmetric cryptographic scheme used to authenticate the origin of digital messages or documents. It works by using a private key to mathematically "sign" a message hash, which anyone with the corresponding public key can verify to prove authenticity and detect tampering. [1, 2, 3, 4]  
-      Key Pair Components 
+      description: !markdown >
+        The RSA signature algorithm is an asymmetric cryptographic scheme used to authenticate the origin of digital messages or documents. It works by using a private key to mathematically "sign" a message hash, which anyone with the corresponding public key can verify to prove authenticity and detect tampering. [1, 2, 3, 4]  
+        Key Pair Components 
+  
+        • Public Key: Consists of the modulus n and the public exponent e, used to verify signatures. 
+        • Private Key: Consists of the modulus n and the private exponent d, kept secret and used to generate signatures. [2, 5]  
+  
+        Signature Generation (Signing) 
+  
+        • Compute the hash value of the message: h = hash(msg). 
+        • Raise the hash to the power of the private exponent d modulo n to create the signature: $s = h^d \pmod n$. 
+        • Send the signature along with the original message. [2, 4, 6]  
+  
+        Signature Verification 
+  
+        • Compute the hash value of the received message: h = hash(msg). 
+        • Raise the signature to the power of the public exponent e modulo n to recover the hash: $h' = s^e \pmod n$. 
+        • Compare the calculated hash h with the recovered hash h'. If they match, the signature is valid. [2, 4, 7, 8]  
 
-      • Public Key: Consists of the modulus n and the public exponent e, used to verify signatures. 
-      • Private Key: Consists of the modulus n and the private exponent d, kept secret and used to generate signatures. [2, 5]  
+      citations:
 
-      Signature Generation (Signing) 
-
-      • Compute the hash value of the message: h = hash(msg). 
-      • Raise the hash to the power of the private exponent d modulo n to create the signature: $s = h^d \pmod n$. 
-      • Send the signature along with the original message. [2, 4, 6]  
-
-      Signature Verification 
-
-      • Compute the hash value of the received message: h = hash(msg). 
-      • Raise the signature to the power of the public exponent e modulo n to recover the hash: $h' = s^e \pmod n$. 
-      • Compare the calculated hash h with the recovered hash h'. If they match, the signature is valid. [2, 4, 7, 8]  
-
-    citations:
-
-      [1] https://www.geeksforgeeks.org/computer-networks/rsa-and-digital-signatures/
-      [2] https://cryptobook.nakov.com/digital-signatures/rsa-signatures
-      [3] https://www.encryptionconsulting.com/education-center/what-is-rsa/
-      [4] https://www.youtube.com/watch?v=TeuKV5kHLyQ
-      [5] https://en.wikipedia.org/wiki/RSA_cryptosystem
-      [6] https://securew2.com/blog/what-is-rsa-asymmetric-encryption
-      [7] https://cryptobook.nakov.com/digital-signatures/rsa-signatures
-      [8] https://students.cs.byu.edu/~cs465ta/lectures/rsa_notes.pdf
+        [1] https://www.geeksforgeeks.org/computer-networks/rsa-and-digital-signatures/
+        [2] https://cryptobook.nakov.com/digital-signatures/rsa-signatures
+        [3] https://www.encryptionconsulting.com/education-center/what-is-rsa/
+        [4] https://www.youtube.com/watch?v=TeuKV5kHLyQ
+        [5] https://en.wikipedia.org/wiki/RSA_cryptosystem
+        [6] https://securew2.com/blog/what-is-rsa-asymmetric-encryption
+        [7] https://cryptobook.nakov.com/digital-signatures/rsa-signatures
+        [8] https://students.cs.byu.edu/~cs465ta/lectures/rsa_notes.pdf
 
 
 agreement:
