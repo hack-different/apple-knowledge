@@ -4,11 +4,16 @@ credits:
   - rickmark
   - gemini
   - https://safecurves.cr.yp.to
+  - https://wikipedia.org
+see_also:
+  - curves
+  - keys
+  - pki
 ---
 types:
   field:
     description: A field is a set of numbers that can be added, subtracted, multiplied, and divided according
-      to certain rules.  Typically defined as an Alban group.
+      to certain rules.  Typically defined as an Alban group.  `n` is assumed to be `x=0..n` and `y=0..n`.
     parameters:
       n:
         aliases:
@@ -37,8 +42,8 @@ types:
           • Polynomial roots (): Find roots of polynomials over a prime field by passing the prime p as a domain
               argument, such as . [7, 8, 9]
 
-      citations:
-        1: ;ttps://www.youtube.com/watch?v=-WGc4VapKj0
+      citations: !citations
+        1: https://www.youtube.com/watch?v=-WGc4VapKj0
         2: https://www.johndcook.com/blog/finite-fields/
         3: https://kconrad.math.uconn.edu/math5230f08/parirefcard.pdf
         4: https://pari.math.u-bordeaux.fr/dochtml/html/Arithmetic_functions.html
@@ -48,6 +53,38 @@ types:
         8: https://pari.math.u-bordeaux.fr/dochtml/html-stable/Polynomials_and_power_series.html
         9: https://en.wikipedia.org/wiki/Finite_field_arithmetic
     binary:
+      description: !markdown >
+        Binary fields, or  Galois Fields  denoted as $GF(2^m)$ where m ≥ 1, are finite fields containing $2^m$
+        elements. The simplest binary field is GF(2) with elements $\{0, 1\}$, where arithmetic operations follow
+        modulo 2 rules (addition is XOR, multiplication is AND). Larger fields $GF(2^m)$ represent elements as
+        binary polynomials reduced modulo an irreducible primitive polynomial. [1, 2, 3, 4, 5]
+        
+        # Core Properties of Binary Fields
+        
+        * Order: Exactly $2^m$ elements, usually representing m-bit words or bytes (e.g., GF(2⁸) in AES encryption).
+        * Characteristic: Every binary field has characteristic 2, meaning x + x = 0 for any element.
+        * Addition and Subtraction: Implemented as a bitwise  XOR operation , meaning addition is identical
+            to subtraction.
+        * Multiplication: Carried out via polynomial multiplication followed by reduction using a fixed
+            irreducible reduction polynomial without carry propagation (carry-less
+            multiplication). [1, 2, 3, 5, 6, 7, 8]
+        
+        # Applications
+        
+        * Cryptography: Used in block ciphers like  AES  (GF(2⁸)) and elliptic curve cryptography.
+        * Error Correction: Utilized in Reed-Solomon codes and cyclic redundancy checks (CRCs) for
+            reliable data transmission. [5, 6, 7, 9]
+      citations:
+        1: https://joyofcryptography.com/fields/
+        2: https://en.wikipedia.org/wiki/GF(2)
+        3: https://www.mathworks.com/help/comm/ref/gf.html
+        4: https://www.geeksforgeeks.org/engineering-mathematics/galois-fields-and-its-properties/
+        5: https://www.salimwireless.com/2026/01/galois-fields-gf2-and-gf2m.html
+        6: https://sefiks.com/2025/01/16/a-gentle-introduction-to-elliptic-curves-over-binary-fields/
+        7: https://www.youtube.com/watch?v=-WGc4VapKj0
+        8: https://www.felixcloutier.com/x86/gf2p8mulb
+        9: https://en.wikipedia.org/wiki/Finite_field_arithmetic
+
 
   point:
     description: A point on a cartisian plane.  This can be expressed typically as an ordered pair of integers, almost
@@ -67,14 +104,165 @@ types:
         type: positive_integer
       y:
         type: positive_integer
-
   prime:
     description: A prime number.
   positive_prime:
     derived_from: positive_integer
   positive_integer:
+rng:
+  ansi-x9.62:
+    description: !markdown >
+      The ANSI X9.62 RNG is a legacy pseudorandom number generator specified in Annex A.4 of the 1998 ANSI X9.62
+      standard for the Elliptic Curve Digital Signature Algorithm (ECDSA). It was widely used in financial
+      cryptography to generate secret keys and nonces, but it has been deprecated and disallowed since
+      January 1, 2016. [1, 2, 3, 4, 5]  
+      
+      # Overview and Status 
 
+      * Origin: Defined in ANSI X9.62-1998 Annex A.4 (). 
+      * Purpose: Designed to supply cryptographically secure random values specifically for ECDSA operations. 
+      * Current Status: Retired and deprecated by NIST under SP 800-131A guidelines. 
+      * Reason for Retirement: Advances in cryptanalysis and modern security requirements rendered legacy 1998-era designs like X9.62 and X9.31 vulnerable or insufficient compared to modern Deterministic Random Bit Generators (DRBGs) like CTR_DRBG or Hash_DRBG. [1, 2, 4, 5]  
+
+      # Technical Context 
+
+      * Function: Relied on internal state updates combined with secret/seed values (requiring roughly 20 to 64 bytes of seed material depending on implementation details). 
+      * Replacements: Modern standards transitioned toward NIST SP 800-90A DRBGs (such as HMAC-DRBG, Hash-DRBG, and CTR-DRBG) for all cryptographic randomness. [4, 8, 9]
+    citations:
+      [1] https://cseweb.ucsd.edu/classes/fa21/cse107-a/slides/18-rngs.pdf
+      [2] https://csrc.nist.rip/projects/Cryptographic-Algorithm-Validation-Program/Validation-Notes
+      [3] https://csrc.nist.rip/projects/cryptographic-algorithm-validation-program/validation-notes
+      [4] https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program/retired-testing
+      [5] https://csrc.nist.rip/library/NIST%20FIPS%20140-2%20Security%20Requirements%20for%20Cryptographic%20Modules,%20Annex%20C;%20Approved%20Random%20Number%20Generators,%202001-03%20(2009%20Minor%20Edits).pdf
+      [6] https://icmconference.org/wp-content/uploads/C14WangZ-and-TungW.pdf
+      [7] https://security.stackexchange.com/questions/185520/what-is-the-format-of-an-x9-62-key
+      [8] https://opentitan.org/book/hw/ip/csrng/
+      [9] https://pmc.ncbi.nlm.nih.gov/articles/PMC9689501/
+  secg:
+    description: !markdown >
+      The SECG generation and validation methods for verifiably random elliptic curve domain parameters align with ANSI X9.62 and are detailed in the Standards for Efficient Cryptography Group specifications. These parameters define standard curves used across cryptography. [1, 2, 3]  
+      Overview of SECG Parameter Generation 
+
+      • Verifiably Random Basis: Curves are created using a fixed seed so anyone can re-verify the derivation process. 
+      • Compatibility: The procedures match historical ANSI X9.62 and IEEE 1363 standards. 
+      • Naming Conventions: Resulting curves in  SEC 2  use prefixes like  for prime fields and  for binary fields. [1, 4, 5, 6, 7]  
+
+      Validation and Use 
+
+      • Domain Verification: Implementers validate unknown parameters using specified checks to ensure safety before active deployment. 
+      • Standard Recommendations: Using pre-generated named parameters avoids slow, error-prone custom curve creation. [3]
+    citations:
+
+      [1] https://dissect.crocs.fi.muni.cz/standards/secg
+      [2] https://www.secg.org/
+      [3] https://en.wikipedia.org/wiki/Elliptic-curve_cryptography
+      [4] https://is.muni.cz/th/maq0p/sbapr_final_digital.pdf
+      [5] https://dissect.crocs.fi.muni.cz/standards/x962
+      [6] https://std.neuromancer.sk/methods/secg/
+      [7] https://www.johndcook.com/blog/2018/08/21/a-tale-of-two-elliptic-curves/
+
+
+  nist:
+    description: !markdown >
+      The term NIST DRNG usually refers to NIST DRBG (Deterministic Random Bit Generator), which is the official technical term used by the National Institute of Standards and Technology (NIST) for a cryptographically secure pseudorandom number generator (PRNG). [1, 2] 
+      It can also refer to a physical Digital Random Number Generator (such as Intel's hardware-based DRNG architecture) designed to comply with NIST's rigid cryptographic standards. [3, 4, 5] 
+      ------------------------------
+      ## The NIST SP 800-90 Core Standards
+      NIST regulates random number generation through the SP 800-90 series, which dictates how secure random numbers must be processed, seeded, and tested: [2, 6, 7, 8] 
+
+      * 
+      * [SP 800-90A](https://csrc.nist.gov/projects/random-bit-generation): Specifies the approved deterministic algorithms (DRBGs) used to expand a highly random mathematical "seed" into a stream of secure cryptographic bits.
+      * SP 800-90B: Outlines the rules for the underlying physical entropy sources (the raw noise source providing true randomness).
+      * [SP 800-90C](https://csrc.nist.gov/News/2025/nist-publishes-sp-800-90c): Establishes construction standards for combining the entropy source and the DRBG mechanism together seamlessly. [1, 2, 6, 9, 10] 
+      * 
+
+      ## Approved NIST DRBG Mechanisms
+      When designing a software or hardware system to meet NIST compliance, developers must choose from three currently approved cryptographic mechanisms defined in SP 800-90A: [11, 12] 
+
+      * 
+      * CTR_DRBG: Built on symmetric block ciphers like AES in counter mode.
+      * Hash_DRBG: Built on secure cryptographic hash functions like SHA-256.
+      * HMAC_DRBG: Built on Hash-based Message Authentication Codes. [11, 13] 
+      * 
+
+      (Note: An older standard, Dual_EC_DRBG, was formally withdrawn and banned by NIST after it was discovered to contain a potential backdoor). [11, 14] 
+      ## Hardware Implementations (Intel & AMD DRNG)
+      In hardware architectures, a "DRNG" framework typically bundles an on-chip True Random Number Generator (TRNG) with a deterministic circuit. For example, Intel's onboard architecture uses a physical thermal noise source to consistently feed a NIST-compliant CTR_DRBG. Software applications then access these random pools using assembly commands: [3, 15, 16, 17] 
+
+      * 
+      * RDRAND: Pulls pseudorandom data directly out of the internal DRBG engine.
+      * RDSEED: Pulls raw, high-entropy bits straight from the conditioning hardware to seed other software-based PRNGs. [3, 15, 18, 19, 20] 
+      * 
+
+      ## Testing for Compliance
+      To verify that a DRNG functions correctly without predictability or bias, developers evaluate its outputs using the [NIST Statistical Test Suite (SP 800-22)](https://csrc.nist.gov/projects/random-bit-generation/documentation-and-software). This suite subjects output bitstreams to 15 distinct frequency, pattern, and matrix mathematical tests to spot hidden statistical anomalies. [21, 22, 23, 24, 25] 
+      ------------------------------
+      If you are implementing or auditing a random number generator, let me know:
+
+      * 
+      * Are you working on a software application or a hardware/firmware implementation?
+      * Do you need help choosing a specific cryptographic algorithm (like AES-CTR vs. SHA-256)?
+      * Are you prepping a module for FIPS 140-3 validation?
+      * 
+
+    citations:
+      [1] [https://csrc.nist.gov](https://csrc.nist.gov/glossary/term/deterministic_random_bit_generator)
+      [2] [https://csrc.nist.gov](https://csrc.nist.gov/projects/random-bit-generation)
+      [3] [https://csrc.nist.gov](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/entropy/E306_PublicUse.pdf)
+      [4] [https://csrc.nist.gov](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/entropy/E72_PublicUse.pdf)
+      [5] [https://csrc.nist.gov](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/entropy/E232_PublicUse.pdf)
+      [6] [https://csrc.nist.gov](https://csrc.nist.gov/projects/random-bit-generation)
+      [7] [https://lightshipsec.com](https://lightshipsec.com/nist-800-90b-concepts/)
+      [8] [https://en-support.renesas.com](https://en-support.renesas.com/knowledgeBase/22372154)
+      [9] [https://csrc.nist.gov](https://csrc.nist.gov/News/2025/nist-publishes-sp-800-90c)
+      [10] [https://www.nist.gov](https://www.nist.gov/publications/recommendation-random-bit-generator-rbg-constructions)
+      [11] [https://en.wikipedia.org](https://en.wikipedia.org/wiki/NIST_SP_800-90A)
+      [12] [https://postquantum.com](https://postquantum.com/post-quantum/qrng-buyers-guide/)
+      [13] [https://csrc.nist.gov](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp3401.pdf)
+      [14] [https://csrc.nist.rip](https://csrc.nist.rip/publications/nistpubs/800-90A/SP800-90A.pdf)
+      [15] [https://csrc.nist.gov](https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/entropy/E233_PublicUse.pdf)
+      [16] [https://www.ingeniars.com](https://www.ingeniars.com/in_product/rng-ip-core/)
+      [17] [https://pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC11675632/)
+      [18] [https://security.stackexchange.com](https://security.stackexchange.com/questions/195515/is-rdrand-used-in-a-safe-way-by-windows-10)
+      [19] [https://www.linuxjournal.com](https://www.linuxjournal.com/content/amd-confirms-zen-5-rng-flaw-when-random-isnt-random-enough)
+      [20] [https://forums.raspberrypi.com](https://forums.raspberrypi.com/viewtopic.php?t=330037)
+      [21] [https://csrc.nist.gov](https://csrc.nist.gov/presentations/2024/nist-standards-on-random-numbers)
+      [22] [https://csrc.nist.gov](https://csrc.nist.gov/projects/random-bit-generation/documentation-and-software)
+      [23] [https://www.aegissemi.com](https://www.aegissemi.com/post/understanding-trng-nist-standards-a-complete-guide-to-the-15-statistical-tests-for-true-random-numb)
+      [24] [https://search.proquest.com](https://search.proquest.com/openview/25e83cfec72c9869d21706ea0057d390/1?pq-origsite=gscholar&cbl=2043739)
+      [25] [https://pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC13166014/)
+
+  brainpool:
 algorithms:
+  dh:
+    description: !markdown >
+      The Diffie-Hellman (DH) Key Exchange is a method that lets two people create a shared secret key over an open, public network. They do this without ever sending the secret key to each other, making it safe from people who might be listening. [1, 2]  
+      How It Works 
+
+      • Public Setup: Both users agree on two public numbers: a large prime number (p) and a base generator (g). 
+      • Private Numbers: Each user picks a secret random number just for themselves (let's call them a and b). 
+      • Public Key Math: They use math to turn their secret number and the public numbers into a new public key ($g^a \bmod p$ and $g^b \bmod p$). 
+      • Key Exchange: They send these public results to each other over the network. 
+      • Shared Secret: Each user takes the other person's public key, raises it to their own secret number, and arrives at the exact same final secret number. [3, 4, 5]  
+
+      Why It Matters 
+
+      • No Secret Sent: An eavesdropper can see the public numbers and public keys, but cannot figure out the private numbers or the final shared secret. 
+      • Symmetric Prep: The final shared secret is then used as a key for fast, secure regular encryption (like AES) to chat or share data safely. [4, 6, 7]  
+
+      If you'd like, I can explain the math step-by-step with simple numbers, or talk about modern versions like Elliptic Curve Diffie-Hellman (ECDH). Let me know what you prefer! 
+      AI responses may include mistakes.
+
+      [1] https://www.hypr.com/security-encyclopedia/diffie-hellman-algorithim
+      [2] https://www.youtube.com/watch?v=KXq065YrpiU
+      [3] https://doubleoctopus.com/security-wiki/encryption-and-cryptography/diffie-hellman-algorithm/
+      [4] https://www.geeksforgeeks.org/computer-networks/implementation-diffie-hellman-algorithm/
+      [5] https://www.sciencedirect.com/topics/computer-science/diffie-hellman-key-exchange
+      [6] https://www.hexnode.com/blogs/explained/what-is-diffie-hellman-dh-key-exchange/
+      [7] https://dev.to/techlabma/diffie-hellman-key-exchange-dhke-algorithm-505b
+
+
+
   rsa:
     uses:
       - signature
@@ -101,16 +289,14 @@ algorithms:
       on a simple math rule: multiplying two large prime numbers is easy, but finding those original prime numbers
       back from the final product is very hard. 
 
-      * Key Generation: The system picks two large prime numbers, multiplies them together, and uses the result to create a public key and a private key. 
+      * Key Generation: The system picks two large prime numbers, multiplies them together, and uses the result to
+          create a public key and a private key. 
       * Encryption: Anyone can use the receiver’s public key to turn a normal message into scrambled code (ciphertext). 
-      * Decryption: Only the person with the secret private key can reverse the code and read the original message. [1, 5, 6]  
+      * Decryption: Only the person with the secret private key can reverse the code and read the original
+        message. [1, 5, 6]  
 
-      # Common Uses 
-
-      * Secure Web Traffic: Protecting data sent across HTTPS and SSL/TLS certificates. 
-      * Digital Signatures: Proving that a message or software update really came from a trusted sender. 
-      * Secure Logins: Used in protocols like SSH for remote computer access. [2, 3, 4, 7, 8]
-    citations:
+      # Common Uses
+    citations: !citations
       1: https://www.geeksforgeeks.org/computer-networks/rsa-algorithm-cryptography/
       2: https://securew2.com/blog/what-is-rsa-asymmetric-encryption
       3: https://www.splunk.com/en_us/blog/learn/rsa-algorithm-cryptography.html
@@ -127,7 +313,32 @@ algorithms:
     parameters:
       g:
         type: point
+        name: Generator Point
         description: The generator point `G` on the elliptic curve.  This point is used to generate the private key.
+      f:
+        type: field
+        name: Field
+        description: The field `F` of the elliptic curve.  This is the set of numbers that the curve is defined over.
+          A field is either a prime or binary field.  The field is the range of `0..x`
+      a:
+        type: integer
+        description: The `a` co-factor of the elliptic curve equation.  The `a` is multiplied by the `x` value to
+          perform the linear portion of the curve.
+      b:
+        type: integer
+        description: The `b` co-factor of the elliptic curve equation.  The `b` is multiplied by `x^2` to perform the
+          quadratic portion of the curve.
+      h:
+        name: Cofactor
+        type: float
+        description: The ratio of the total number of points on the curve to the order n, usually set to 1 for
+          optimal security.  Anything less then 1 means that the number of bits expressed in the X value is less then
+          a 1:1 relationship to the number of private keys in the field.
+      n:
+        name: Order
+        type: positive_integer
+        description: The order of the elliptic curve.  This is the number of points on the curve,
+          including the point at infinity.
     private_key:
       n:
         type: positive_integer
@@ -161,21 +372,21 @@ algorithms:
       * Smaller Size: A 256-bit ECC key offers about the same security as a massive 3072-bit RSA key. 
       * Less Power: Uses less battery, memory, and CPU power on small hardware. 
       * Faster Speed: Sets up secure connections quicker than older systems. [5, 6, 10, 11]  
-
-      [1] https://www.ibm.com/docs/en/linux-on-systems?topic=apis-elliptic-curve-ecc-functions
-      [2] https://www.vmware.com/topics/elliptic-curve-cryptography
-      [3] https://www.hexnode.com/blogs/explained/what-is-elliptic-curve-cryptography-ecc/
-      [4] https://cybertalents.com/blog/elliptic-curve-cryptography-ecc
-      [5] https://www.digicert.com/faq/cryptography/what-is-elliptic-curve-cryptography
-      [6] https://www.sectigo.com/blog/what-is-elliptic-curve-cryptography
-      [7] https://www.ssl.com/article/what-is-elliptic-curve-cryptography-ecc/
-      [8] https://www.ssldragon.com/blog/what-is-ecc-certificate/
-      [9] https://www.expressvpn.com/glossary/elliptic-curve-cryptography/
-      [10] https://www.keyfactor.com/blog/elliptic-curve-cryptography-what-is-it-how-does-it-work/
-      [11] https://www.ssl.com/article/what-is-elliptic-curve-cryptography-ecc/
-      [12] https://nordvpn.com/blog/elliptic-curve-cryptography/
-      [13] https://www.1kosmos.com/resources/security-glossary/elliptic-curve-cryptography
-      [14] https://www.twingate.com/blog/glossary/elliptic-curve-algorithm
+    citations:
+      1: https://www.ibm.com/docs/en/linux-on-systems?topic=apis-elliptic-curve-ecc-functions
+      2: https://www.vmware.com/topics/elliptic-curve-cryptography
+      3: https://www.hexnode.com/blogs/explained/what-is-elliptic-curve-cryptography-ecc/
+      4: https://cybertalents.com/blog/elliptic-curve-cryptography-ecc
+      5: https://www.digicert.com/faq/cryptography/what-is-elliptic-curve-cryptography
+      6: https://www.sectigo.com/blog/what-is-elliptic-curve-cryptography
+      7: https://www.ssl.com/article/what-is-elliptic-curve-cryptography-ecc/
+      8: https://www.ssldragon.com/blog/what-is-ecc-certificate/
+      9: https://www.expressvpn.com/glossary/elliptic-curve-cryptography/
+      10: https://www.keyfactor.com/blog/elliptic-curve-cryptography-what-is-it-how-does-it-work/
+      11: https://www.ssl.com/article/what-is-elliptic-curve-cryptography-ecc/
+      12: https://nordvpn.com/blog/elliptic-curve-cryptography/
+      13: https://www.1kosmos.com/resources/security-glossary/elliptic-curve-cryptography
+      14: https://www.twingate.com/blog/glossary/elliptic-curve-algorithm
 
 
 key_derivation:
@@ -236,17 +447,77 @@ encryption:
 signature:
   dsa:
     description: !markdown >
-      Digital Signature Algorithm (DSA) is a digital signature scheme that provides secure authentication and integrity
-      for digital messages and documents. It is based on the mathematical difficulty of the discrete logarithm problem.
-      DSA is widely used in various security protocols and applications, including secure communication, digital
-      signatures, and key exchange. [3]
-  ecdsa:
+      The Digital Signature Algorithm (DSA) is a federal standard for digital signatures based on modular exponentiation and the discrete logarithm problem. It lets a sender sign a message with a private key, and anyone with the matching public key can check that the message is real and unchanged. [1, 2]
+      Key Generation
+      
+      • Choose prime numbers p and q, and a multiplier g.
+      • Pick a secret private key x.
+      • Compute public key $y = g^x \pmod p$. [3, 4]
+      
+      Signature Creation
+      
+      • Hash the message to get a number m.
+      • Pick a secret random number k.
+        • Calculate first signature part: $r = (g^k \pmod p) \pmod q$.
+        • Calculate second part: $s = k^{-1}(m + xr) \pmod q$.
+      • Output the signature pair (r, s). [5, 6]
+      
+      Signature Verification
+      
+      • Check that r and s are within correct number bounds.
+      • Re-hash the message and compute values using the public key y.
+      • Confirm the math checks out to prove the signature is valid. [4, 7, 8, 9]
+      
+      If you'd like, I can explain:How it compares to RSA or ECDSAWhy reusing a random number (k) breaks securityLet me know what you want to explore next.
+      AI responses may include mistakes.
+    citations:
+      [1] https://csrc.nist.rip/glossary/term/digital_signature_algorithm
+      [2] https://www.simplilearn.com/tutorials/cryptography-tutorial/digital-signature-algorithm
+      [3] http://shainer.github.io/crypto/python/matasano/2016/10/07/dsa.html
+      [4] https://www.scribd.com/document/878063091/DSA-Steps-Explanation
+      [5] https://di-mgt.com.au/public-key-crypto-discrete-logs-4-dsa.html
+      [6] https://dev.to/me_jessicahowe/what-is-a-digital-signature-algorithm-dsa-4kpi
+      [7] https://en.wikipedia.org/wiki/Digital_Signature_Algorithm
+      [8] https://www.youtube.com/watch?v=ANsg4wIQFn4
+      [9] https://github.com/demining/Deserialize-Signature-Vulnerability-in-Bitcoin-Network
+
+
+ecdsa:
     description: !markdown >
-      Elliptic Curve Digital Signature Algorithm (ECDSA) is a digital signature scheme that uses elliptic curve
-      cryptography. It provides secure authentication and integrity for digital messages and documents. ECDSA is
-      widely used in various security protocols and applications, including secure communication, digital signatures,
-      and key exchange. [6]
-  rsa:
+      The Digital Signature Algorithm (DSA) is a federal standard for digital signatures based on modular exponentiation and the discrete logarithm problem. It lets a sender sign a message with a private key, and anyone with the matching public key can check that the message is real and unchanged. [1, 2]  
+      Key Generation 
+
+      • Choose prime numbers p and q, and a multiplier g. 
+      • Pick a secret private key x. 
+      • Compute public key $y = g^x \pmod p$. [3, 4]  
+
+      Signature Creation 
+
+      • Hash the message to get a number m. 
+      • Pick a secret random number k. 
+      • Calculate first signature part: $r = (g^k \pmod p) \pmod q$. 
+      • Calculate second part: $s = k^{-1}(m + xr) \pmod q$. 
+      • Output the signature pair (r, s). [5, 6]  
+
+      Signature Verification 
+
+      • Check that r and s are within correct number bounds. 
+      • Re-hash the message and compute values using the public key y. 
+      • Confirm the math checks out to prove the signature is valid. [4, 7, 8, 9]  
+
+    citations:
+      [1] https://csrc.nist.rip/glossary/term/digital_signature_algorithm
+      [2] https://www.simplilearn.com/tutorials/cryptography-tutorial/digital-signature-algorithm
+      [3] http://shainer.github.io/crypto/python/matasano/2016/10/07/dsa.html
+      [4] https://www.scribd.com/document/878063091/DSA-Steps-Explanation
+      [5] https://di-mgt.com.au/public-key-crypto-discrete-logs-4-dsa.html
+      [6] https://dev.to/me_jessicahowe/what-is-a-digital-signature-algorithm-dsa-4kpi
+      [7] https://en.wikipedia.org/wiki/Digital_Signature_Algorithm
+      [8] https://www.youtube.com/watch?v=ANsg4wIQFn4
+      [9] https://github.com/demining/Deserialize-Signature-Vulnerability-in-Bitcoin-Network
+
+
+    rsa:
     description: !markdown >
       The RSA signature algorithm is an asymmetric cryptographic scheme used to authenticate the origin of digital messages or documents. It works by using a private key to mathematically "sign" a message hash, which anyone with the corresponding public key can verify to prove authenticity and detect tampering. [1, 2, 3, 4]  
       Key Pair Components 
@@ -266,8 +537,7 @@ signature:
       • Raise the signature to the power of the public exponent e modulo n to recover the hash: $h' = s^e \pmod n$. 
       • Compare the calculated hash h with the recovered hash h'. If they match, the signature is valid. [2, 4, 7, 8]  
 
-      Would you like to explore how RSA key generation works mathematically or compare it with ECDSA? 
-      AI responses may include mistakes.
+    citations:
 
       [1] https://www.geeksforgeeks.org/computer-networks/rsa-and-digital-signatures/
       [2] https://cryptobook.nakov.com/digital-signatures/rsa-signatures
@@ -282,23 +552,120 @@ signature:
 agreement:
   dh:
     description: !markdown >
-      Diffie-Hellman (DH) is a key exchange protocol that allows two parties to securely establish a shared secret
-      over an insecure communication channel. It relies on the mathematical difficulty of the discrete logarithm
-      problem. DH is widely used in various security protocols and applications, including secure communication,
-      key exchange, and digital signatures. [3]
+      The Diffie-Hellman (DH) key agreement algorithm is a foundational cryptographic protocol that allows two parties to establish a shared secret key over an insecure communication channel without explicitly transmitting the key itself. Published by Whitfield Diffie and Martin Hellman in 1976, it was the first practical implementation of public-key cryptography. Once the shared secret is calculated, it is typically passed to a key derivation function to generate symmetric keys for high-speed encryption algorithms like AES. [1, 2, 3, 4]  
+      The Mathematical Framework 
+      The security of the DH algorithm relies entirely on the mathematical complexity of the Discrete Logarithm Problem. While it is computationally easy to raise a number to a power modulo a prime, it is extremely difficult to reverse that operation and find the exponent if the numbers are sufficiently large. [5, 6]  
+      The protocol relies on two public parameters: 
+
+      • p (Modulus): A very large, random prime number. 
+      • g (Generator): A primitive root modulo p. [2, 7]  
+
+      Step-by-Step Process 
+
+      1. Parameter Agreement: Alice and Bob publicly agree on a modulus p and a generator g. Eavesdroppers can see these values. 
+      2. Private Key Selection: Alice chooses a secret integer a, and Bob chooses a secret integer b. Neither party ever shares their private integer. 
+      3. Public Key Computation: 
+
+      	• Alice computes her public key: $A = g^a \pmod p$. 
+      	• Bob computes his public key: $B = g^b \pmod p$. [10]  
+
+      4. Public Key Exchange: Alice sends A to Bob, and Bob sends B to Alice across the insecure channel. 
+      5. Shared Secret Calculation: 
+
+      	• Alice calculates the secret using Bob's public key: $S = B^a \pmod p$. 
+      	• Bob calculates the secret using Alice's public key: $S = A^b \pmod p$. [8, 10, 11, 12, 13]  
+
+      Both mathematical formulas yield the exact same value because modular exponentiation is commutative: $S = (g^b)^a \pmod p = (g^a)^b \pmod p = g^{ab} \pmod p$ 
+      Strengths and Variants 
+
+      • Forward Secrecy: When implemented as Ephemeral Diffie-Hellman (DHE), new random keys are chosen for every single session. If a long-term master key is compromised in the future, attackers still cannot decrypt past recorded sessions. 
+      • Elliptic Curve Diffie-Hellman (ECDH): A modern variant that uses the algebraic structure of elliptic curves instead of traditional modular arithmetic. It achieves the same level of security as standard DH but with significantly smaller key sizes, making it much faster and more efficient. [4, 14, 15, 16, 17]  
+
+      Core Limitation: No Authentication 
+      The raw Diffie-Hellman protocol does not authenticate the identities of the communicating parties. Because of this flaw, it is fully vulnerable to a Man-in-the-Middle (MITM) attack. An attacker sitting between Alice and Bob can silently intercept the public keys, substitute their own, and establish separate shared secrets with both sides. To remain secure in real-world protocols like TLS/HTTPS and IPsec VPNs, DH must always be combined with an authentication mechanism, such as digital certificates or digital signatures. [1, 6, 9]  
+      Would you like to explore how Elliptic Curve Diffie-Hellman (ECDH) reduces key sizes, or should we look at a code implementation of standard DH? 
+
+    citations:
+      [1] https://networklessons.com/miscellaneous/introduction-to-diffie-hellman-key-exchange
+      [2] https://dev.to/techlabma/diffie-hellman-key-exchange-dhke-algorithm-505b
+      [3] https://www.hypr.com/security-encyclopedia/diffie-hellman-algorithim
+      [4] https://cryptography.io/en/latest/hazmat/primitives/asymmetric/dh/
+      [5] https://www.youtube.com/watch?v=85oMrKd8afY
+      [6] https://polymesh.network/blog/the-diffie-hellman-key-exchange
+      [7] https://4js.com/online_documentation/fjs-fgl-manual-html/fgl-topics/c_gws_dh_algorithm.html
+      [8] https://doubleoctopus.com/security-wiki/encryption-and-cryptography/diffie-hellman-algorithm/
+      [9] https://www.hexnode.com/blogs/explained/what-is-diffie-hellman-dh-key-exchange/
+      [10] https://security.stackexchange.com/questions/45963/diffie-hellman-key-exchange-in-plain-english
+      [11] https://eureka.patsnap.com/article/understanding-diffie-hellman-key-exchange-explained-simply
+      [12] https://labex.io/tutorials/linux-basic-key-exchange-with-diffie-hellman-in-cryptography-632720
+      [13] https://eureka.patsnap.com/article/the-mathematics-behind-diffie-hellman-key-exchange
+      [14] https://www.ibm.com/docs/en/i/7.4.0?topic=q-calculate-diffie-hellman-secret-key-qc3calds-qc3calculatedhsecretkey
+      [15] https://wiki.openssl.org/index.php/Elliptic_Curve_Diffie_Hellman
+      [16] https://medium.com/@dipakkrdas/few-fundamental-cryptography-concepts-17aa1f6fe3ae
+      [17] https://medium.com/@sylvain.tiset/locks-and-fingerprints-part-1-how-encryption-keep-data-safe-d9911215c0a4
+  
+
   ecdh:
     description: !markdown >
-      Elliptic Curve Diffie-Hellman (ECDH) is a key exchange protocol that allows two parties to securely establish
-      a shared secret over an insecure communication channel. It is based on the mathematical difficulty of the
-      elliptic curve discrete logarithm problem. ECDH is widely used in various security protocols and applications,
-      including secure communication, key exchange, and digital signatures. [4]
+      The Elliptic Curve Diffie-Hellman (ECDH) algorithm is a modern security protocol. It lets two people create a shared secret key over an open, unsafe network. They use this secret key to lock and unlock private messages. It relies on the math of elliptic curves instead of large numbers. [1, 2]  
+      How the Steps Work 
+
+      • Choose a public curve and a starting point (G) together. 
+      • Pick a random secret number to act as your private key. 
+      • Multiply your private key by the starting point to make your public key. 
+      • Send your public key to the other person. 
+      • Take the public key sent to you and multiply it by your own private key. 
+      • Both people now share the exact same secret value. [1, 3, 4, 5, 6]  
+
+      Why People Use It 
+
+      • Small keys: It gives high security using tiny key sizes. 
+      • Fast speed: It uses less computer power and memory. 
+      • Safe data: Hackers cannot figure out the secret key just by watching the network. [1, 7, 8]  
+
+      If you'd like, I can explain:The math difference between normal Diffie-Hellman and ECDHWhat ECDHE (Ephemeral) means for forward safetyHow it is used in TLS or messaging apps 
+      AI responses may include mistakes.
+    citations: !citations
+      1: https://www.hexnode.com/blogs/explained/what-is-elliptic-curve-diffie-hellman-ecdh/
+      2: https://www.cardlogix.com/glossary/elliptic-curve-diffie-hellman-ecdh/
+      3: https://medium.com/swlh/understanding-ec-diffie-hellman-9c07be338d4a
+      4: https://cryptobook.nakov.com/asymmetric-key-ciphers/ecdh-key-exchange
+      5: https://thibautprobst.fr/en/posts/elliptic-curves/
+      6: https://ieeexplore.ieee.org/iel8/11414213/11414231/11414259.pdf
+      7: https://www.youtube.com/watch?v=o9AdiGjOb_I
+      8: https://medium.com/@mishraneeraj4/securing-data-with-ecdh-elliptic-curve-diffie-hellman-376afb7872ab
+
+
   ecdhe:
     description: !markdown >
-      Elliptic Curve Diffie-Hellman Ephemeral (ECDHE) is a key exchange protocol that allows two parties to securely
-      establish a shared secret over an insecure communication channel. It is based on the mathematical difficulty
-      of the elliptic curve discrete logarithm problem. ECDHE is widely used in various security protocols and
-      applications, including secure communication, key exchange, and digital signatures. [5]
-hash_algorithms:
+      ECDHE stands for Elliptic Curve Diffie-Hellman Ephemeral. It is a secure key exchange protocol that allows two parties to create a shared secret key over an open network without sending the secret itself. It combines elliptic curve math with temporary keys to give high speed and forward privacy. [1, 2]  
+      How ECDHE Works 
+
+      • Pick a Curve: Both sides agree on a specific elliptic curve and a base point on that curve. 
+      • Make Key Pairs: Each side creates a random private number and multiplies it by the base point to get a public key. 
+      • Trade Public Keys: The two sides swap their public keys over the network. 
+      • Compute Secret: Each side combines the other side's public key with its own private number to arrive at the exact same shared secret number. [3, 4]  
+
+      Core Benefits 
+
+      • Ephemeral (Forward Secrecy): New temporary keys are made for every single session and then thrown away. If a server's main key is stolen later, old recorded sessions stay safe. 
+      • Small Key Size: It offers the same security as older methods while using much smaller keys, which saves CPU power and network data. 
+      • Widespread Use: It is a core security standard used inside modern web protocols like  Transport Layer Security (TLS)  to protect web traffic. [1, 9]  
+
+      If you'd like, I can explain:The math difference between standard Diffie-Hellman and elliptic curvesWhy X25519 is the preferred curve todayHow it handles quantum computer risksLet me know what you want to explore next. 
+      AI responses may include mistakes.
+    citations:
+      1: https://www.emergentmind.com/topics/elliptic-curve-diffie-hellman-ephemeral-ecdhe
+      2: https://micsolutions.co.uk/2024/12/19/ecdhe/
+      3: https://medium.com/swlh/understanding-ec-diffie-hellman-9c07be338d4a
+      4: https://www.cardlogix.com/glossary/elliptic-curve-diffie-hellman-ecdh/
+      5: https://www.qcecuring.com/education/cryptography-fundamentals/key-exchange-diffie-hellman-ecdhe
+      6: https://www.cardlogix.com/glossary/elliptic-curve-diffie-hellman-ephemeral-ecdhe/
+      7: https://security.stackexchange.com/questions/14731/what-is-ecdhe-rsa
+      8: https://www.youtube.com/watch?v=GOTIcxvYE94
+      9: https://www.linkedin.com/pulse/mathematics-behind-elliptic-curve-cryptography-secure-femerstrand-z3srf
+  
+
   md5:
     description: MD5 is a widely used cryptographic hash function that produces a 128-bit (16-byte) hash value.
     lengths:
@@ -704,73 +1071,3 @@ block_cypher_modes:
       [11] https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
       [12] https://dl.acm.org/doi/10.1145/937527.937529
       [13] https://www.ibm.com/docs/en/linux-on-systems?topic=planning-cipher-mode-considerations
-
-
-elliptic_curve:
-  anomalous:
-    safe: false
-  m-221:
-    safe: true
-  e-222:
-    safe: true
-  nist-secp224r1:
-    safe: false
-  curve25519:
-    safe: true
-  curve1174:
-    safe: true
-    field: prime
-    description: !markdown >
-      Curve1174 is a specific twisted Edwards elliptic curve used in elliptic-curve cryptography. It is defined over a
-      prime field and engineered to allow fast, secure, and unified point addition without exceptional cases, helping
-      developers build simple and side-channel-resistant cryptographic operations. [1, 2, 3, 4, 5]  
-      Key Properties of Curve1174 
-
-      • Form: Twisted Edwards curve equation x² + y² = 1 + d x² y² 
-      • Parameter: Uses a specific non-square parameter d linked to the value 1174 modulo its prime. 
-      • Purpose: Designed alongside curves like Curve25519 to provide high-security general-purpose cryptographic
-          protocols and efficient scalar multiplication. [3, 4, 6, 7]
-    citations:
-      1: https://datatracker.ietf.org/doc/html/draft-josefsson-tls-additional-curves-01
-      2: https://www.johndcook.com/blog/2019/02/19/addition-on-curve1174/
-      3: https://www.johndcook.com/blog/2019/02/15/elliptic-curve-names/
-      4: https://eprint.iacr.org/2013/647.pdf
-      5: https://en.wikipedia.org/wiki/Elliptic-curve_cryptography
-      6: https://safecurves.cr.yp.to/ind.html
-      7: https://eprint.iacr.org/2013/647.pdf
-  bn254:
-    aliases:
-      - bn256
-      - bn128
-      - alt-bn128
-    field: prime
-    libraries:
-      - ark_bn254
-    uses:
-      - ethereum
-      - zk-snark
-    description: !markdown >
-      The BN(2,254) curve—widely known as BN254, BN256, or bn128—is a pairing-friendly elliptic curve in the
-      Barreto-Naehrig family defined over a 254-bit prime field. It is heavily used in zero-knowledge proofs and
-      blockchain protocols (such as Ethereum and Zcash) due to its efficient pairing operations. [1, 2, 3, 4]  
-      
-      # Core Properties 
-
-      • Family: Barreto-Naehrig (BN) with an embedding degree of 12 
-      • Field size: Defined over a 254-bit prime scalar/base field 
-      • Alternative names: , ,  
-      • Security level: Originally thought to offer roughly 128-bit security, but adjusted down to roughly 100-bit
-      security following advanced discrete logarithm attacks (Kim-Barbulescu algorithm). [1, 2, 3]
-    citations:
-      1: https://github.com/nthparty/mclbn256
-      2: https://docs.rs/ark-bn254/latest/ark_bn254/
-      3: https://github.com/sedaprotocol/bn254
-      4: https://hackmd.io/@jpw/bn254
-      5: https://docs.rs/bn254/
-      6: https://billatnapier.medium.com/baby-jubjub-and-zero-knowledge-proofs-5d73cf250de3
-  brainpoolP256t1:
-  nist-prime256v1:
-  scep256k1:
-  e-382:
-  m-383:
-

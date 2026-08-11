@@ -1,0 +1,72 @@
+---
+credits:
+  - rickmark
+  - https://std.neuromancer.sk
+---
+anomalous:
+  safe: false
+m-221:
+  safe: true
+e-222:
+  safe: true
+nist-secp224r1:
+  safe: false
+curve25519:
+  safe: true
+curve1174:
+  safe: true
+  field: prime
+  description: !markdown >
+    Curve1174 is a specific twisted Edwards elliptic curve used in elliptic-curve cryptography. It is defined over a
+    prime field and engineered to allow fast, secure, and unified point addition without exceptional cases, helping
+    developers build simple and side-channel-resistant cryptographic operations. [1, 2, 3, 4, 5]  
+    Key Properties of Curve1174 
+    
+    • Form: Twisted Edwards curve equation x² + y² = 1 + d x² y² 
+    • Parameter: Uses a specific non-square parameter d linked to the value 1174 modulo its prime. 
+    • Purpose: Designed alongside curves like Curve25519 to provide high-security general-purpose cryptographic
+        protocols and efficient scalar multiplication. [3, 4, 6, 7]
+  citations:
+    1: https://datatracker.ietf.org/doc/html/draft-josefsson-tls-additional-curves-01
+    2: https://www.johndcook.com/blog/2019/02/19/addition-on-curve1174/
+    3: https://www.johndcook.com/blog/2019/02/15/elliptic-curve-names/
+    4: https://eprint.iacr.org/2013/647.pdf
+    5: https://en.wikipedia.org/wiki/Elliptic-curve_cryptography
+    6: https://safecurves.cr.yp.to/ind.html
+    7: https://eprint.iacr.org/2013/647.pdf
+bn254:
+  aliases:
+    - bn256
+    - bn128
+    - alt-bn128
+  field: prime
+  libraries:
+    - ark_bn254
+  uses:
+    - ethereum
+    - zk-snark
+  description: !markdown >
+    The BN(2,254) curve—widely known as BN254, BN256, or bn128—is a pairing-friendly elliptic curve in the
+    Barreto-Naehrig family defined over a 254-bit prime field. It is heavily used in zero-knowledge proofs and
+    blockchain protocols (such as Ethereum and Zcash) due to its efficient pairing operations. [1, 2, 3, 4]  
+    
+    # Core Properties 
+    
+    • Family: Barreto-Naehrig (BN) with an embedding degree of 12 
+    • Field size: Defined over a 254-bit prime scalar/base field 
+    • Alternative names: , ,  
+    • Security level: Originally thought to offer roughly 128-bit security, but adjusted down to roughly 100-bit
+    security following advanced discrete logarithm attacks (Kim-Barbulescu algorithm). [1, 2, 3]
+  citations:
+    1: https://github.com/nthparty/mclbn256
+    2: https://docs.rs/ark-bn254/latest/ark_bn254/
+    3: https://github.com/sedaprotocol/bn254
+    4: https://hackmd.io/@jpw/bn254
+    5: https://docs.rs/bn254/
+    6: https://billatnapier.medium.com/baby-jubjub-and-zero-knowledge-proofs-5d73cf250de3
+brainpoolP256t1:
+nist-prime256v1:
+scep256k1:
+e-382:
+m-383:
+
