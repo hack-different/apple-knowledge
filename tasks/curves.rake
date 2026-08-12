@@ -39,17 +39,36 @@ task :curves do
           Integer(value)
         end
       end
+      [:params, :generator].map do |collection|
+        next unless result_hash[collection]
+        result_hash[collection] = result_hash[collection].transform_values do |value|
+          next value unless value.is_a? Hash
+          value[:raw] || value
+        end
+      end
 
       output_thing = deep_to_a(result_hash.deep_sort)
 
       mht = MerkleHashTree.new(output_thing, Digest::SHA256)
 
       curve_hash = mht.head.unpack1('H*')
-      output_data[curve_hash] ||= {}
-      output_data[curve_hash]['names'] ||= []
-      output_data[curve_hash]['names'] << curve_name
+      output_data[curve_hash] ||= {
+        polyname: nil,
+        names: [],
+        groups: [],
+        hash: nil,
+        **result_hash.dup
+      }
+      output_data[curve_hash][:names] << curve_name
+      output_data[curve_hash][:groups] << curve_file['name']
     end
   end
 
-  File.write(OUTPUT_FILE, output_data.to_yaml)
+  output_data = output_data.deep_stringify_keys.map do |k, v|
+    v['hash'] = k
+    v['polyname'] = v['names'].sort.join('_')
+    v
+  end
+
+  File.write(OUTPUT_FILE, output_data.sort_by{|v| v['polyname']}.to_yaml)
 end
