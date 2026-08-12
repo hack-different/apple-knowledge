@@ -87,6 +87,8 @@ group :development, :test do
   gem 'typeprof'
   gem 'typhoeus'
   gem 'wikicloth'
+  gem 'merkle-hash-tree'
+  gem 'deepsort'
 end
 
 # rubocop:enable Metrics/BlockLength
