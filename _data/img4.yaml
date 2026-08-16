@@ -224,6 +224,8 @@ lpol_properties:
     access:
       write:
       - macOS
+  c1md:
+    title: chip cryptex1 mobile asset dfu ap
   coih:
     title: CustomOS Image4 Manifest Hash (coih)
     description: The `coih` is an SHA384 hash of CustomOS Image4 manifest. The payload
@@ -400,8 +402,6 @@ lpol_properties:
     description: Secure Multi-Boot 3 - DEP-allowed MDM Control
   smb5:
     description: Unknown - but known to exist in Factory signing
-  c1md:
-    title: chip cryptex1 mobile asset dfu ap
   spih:
     title: Cryptex1 manifest Hash
     description: Cryptex1 Image4 Hash (supplimental image hash)
@@ -1081,22 +1081,32 @@ objects:
   xsys:
     description: x86 System Root Hash
 img4_tags:
+  0Cfg:
   ADCL:
     description: Apple Display Calibration
+  ADDA:
+  AMNM:
+    title: Allow Mix-n-Match
   BCAL:
     title: Bluetooth Calibration
+  BICS:
   BLDS:
     description: Boot LocalPolicy Digest String?
+  BNCH:
+    title: Boot Nonce
   BNCN:
     title: Board Nonce
   BTBF:
     title: Bluetooth Taurus Calibration Data
   CBAT:
     title: Charger Input Limit Calibration
+  CEPO:
+    title: Certificate Epoch
   CLHS:
     description: Chained LocalPolicy Hash String
   Coor:
     title: Country of Origin
+  Csta:
   DGST:
     title: Object Digest
   DPCl:
@@ -1114,16 +1124,6 @@ img4_tags:
     title: Display Temperature Calibration
   EKEY:
     title: Effective Key Type
-  c1fs:
-    title: Chip Cryptex1 Safari Downlevel
-  add2:
-    title: Chip AP DDI SHA2 384
-  apkc:
-    title: Chip AP KCInstall
-  SPAY:
-  Rcvr:
-  idia:
-  Csta:
   EPRO:
     title: Effective Production Status
   ESEC:
@@ -1132,26 +1132,37 @@ img4_tags:
     title: Gamma Tables Calibration
   GYTT:
     title: Gyroscope Temperature Calibration
+  HMHC:
+    title: Chained Manifest Hash
+  HmCA:
+  HmCl:
+  LCfg:
+  LPEM:
   MLB#:
     title: Main Logic Board Serial Number
   MdlC:
     title: Model Configuration
   PAYP:
     description:
+  PRST:
   PRTT:
     title: Pressure Temperature Compensation Table
   PxCL:
     title: Proximity Calibration Data
   RMd#:
     title: Regional Model Number
+  Rcvr:
   SDOM:
     title: Security Domain
+  SPAY:
   SPTM:
     description: Secure Page Table Monitor
   SpTS:
     title: Speaker Thiele-Small Parameters
   SwBh:
     title: Software Behaviour (GreenTea)
+  TBIC:
+  UCAL:
   WCAL:
     title: Wireless Calibration
   ache:
@@ -1161,46 +1172,47 @@ img4_tags:
   aciw:
     description:
   adba:
+  add2:
+    title: Chip AP DDI SHA2 384
   ader:
     description:
   agfi:
     description:
-  anid:
-  zine:
-    title: Magazine psudo-descriptor
-  c1am:
-    title: Chip Cryptex1 Mobile Asset
-  gmdp:
-    title: Personalized Disk Image
-  cptx:
-    title: srdp cryptex
-  apsr:
-    title: AP Security Research Cryptex Nonce
-  dvdi:
-    title: Developer Disk Image
-  c1sm:
-    title: Cryptex1 simulator
-  trxm:
-    title: Trusted Execution Monitor
-  i4ct:
-    title: Image4 Certificate Type
-  AMNM:
-    title: Allow Mix-n-Match
   am1d:
     title: cryptex1 mobile asset dfu
-  BNCH:
-    title: Boot Nonce
-  CEPO:
-    title: Certificate Epoch
-
-
+  anid:
   anrd:
     description: Apple Notarized Ram Disk
   aofi:
     description: Always on Firmware Image
+  ap00:
+    title: Chip AP Software FF00
+  ap01:
+    title: Chip AP Software FF01
+  ap06:
+    title: Chip AP Software FF06
+  apc0:
+    title: Chip AP Cryptex0
+  apd2:
+    title: Chip AP PDI SHA2 384
+  apdc:
+    title: Chip AP ACDC
+  apin:
+  apkc:
+    title: Chip AP KCInstall
+  apln:
+    title: Chip AP Local Prospective
   apmv:
     title: OS Version
     description:
+  aprd:
+    title: Chip AP Reduced
+  aps2:
+    title: Chip AP SHA2 384
+  apsr:
+    title: AP Security Research Cryptex Nonce
+  aptk:
+    title: AP Ticket
   arms:
     title: ARM Size
   ater:
@@ -1209,37 +1221,94 @@ img4_tags:
     description:
   auac:
     description:
+  bCfg:
   batf:
     title: Battery Firmware
   berb:
   bles:
     description:
+  bmfh:
+    title: Boot Manifest Hash
+  boid:
+    title: Boot UUID
+  c1ab:
+    title: Chip Cryptex1 Asset Brain
+  c1ai:
+    title: Chip Cryptex1 Mobile Asset Code Installer AP
+  c1am:
+    title: Chip Cryptex1 Mobile Asset
+  c1br:
+    title: Chip Cryptex1 Boot Reduced
+  c1bt:
+    title: Chip Cryptex1 Boot AP
+  c1bv:
+    title: Chip Cryptex1 Boot Verification
+  c1fs:
+    title: Chip Cryptex1 Safari Downlevel
+  c1g0:
+    title: Chip Cryptex1 Generic Cryptex0
+  c1gn:
+    title: Chip Cryptex1 Generic AP
+  c1nb:
+    title: CHIP_CRYPTEX1_BOOT_AP_PROSPECTIVE
+  c1rp:
+    title: Chip Cryptex1 Reduced Prospective
+  c1sm:
+    title: Cryptex1 simulator
+  c1v2:
+    title: Chip Cryptex1 Boot VMA2
+  c1vn:
+    title: Chip Cryptex1 Boot VMA2 Clone
+  c1vr:
+    title: Chip Cryptex1 Boot Boot AV Reduced Verification
+  c1vv:
+    title: Chip Cryptex1 Boot VMA2 Verification
+  cCfg:
+  cLTH:
   cfel:
     title: CFELoader
     description:
     firmware_name: CFELoader
+  ciof:
   cker:
     description: Chained Kernel for Recovery
     recovery: true
   ckih:
     description: Chained Kernel Image4 Hash
+  clas:
+    title: Cryptex1 product class
   clid:
     description: Class Identifier
   cmsv:
     description:
+  cnch:
+    title: cryptex1 boot nonce hash
+  cncn:
+    title: Cryptex1 boot nonce
   cphy:
     title: USB-C Physical Controller
+  cptx:
+    title: srdp cryptex
+  dBIC:
   dCfg:
     title: Device Configuration
+  dLTH:
+  dPSF:
+  dSrc:
   dali:
     description:
   data:
     description:
+  dcpf:
   diag:
     description: Diagnostic (AHT) Image
     firmware_name: Diags
   disk:
     description:
+  dvdi:
+    title: Developer Disk Image
+  eCfg:
+  edcp:
   efib:
     description: EFI Bootloader
   eg0n:
@@ -1257,6 +1326,9 @@ img4_tags:
   eply:
   esca:
     description: Emulated System Certificate Authority
+  faus:
+  fdr1:
+  fdr2:
   fdrs:
     description: Factory Debug Recovery System
   fdrt:
@@ -1267,115 +1339,10 @@ img4_tags:
     description:
   fpgt:
     description: Factory Pre-Release Global Trust
-  ndom:
-    description: Nonce Domain
-  rsch:
-    title: Research Mode
+  fsca:
   ftot:
     description: Factory Trust Operations Test
   fuos:
-  ros0:
-  ros1:
-  ros2:
-  ros3:
-  fsca:
-  faus:
-  0Cfg:
-  apc0:
-    title: Chip AP Cryptex0
-  apln:
-    title: Chip AP Local Prospective
-  apin:
-  apd2:
-    title: Chip AP PDI SHA2 384
-  lnch:
-    title: Cryptex1 live nonce hash
-  vpdc:
-    title: Chip VMA2 ACDC
-  c1ai:
-    title: Chip Cryptex1 Mobile Asset Code Installer AP
-  HMHC:
-    title: Chained Manifest Hash
-  aprd:
-    title: Chip AP Reduced
-  aps2:
-    title: Chip AP SHA2 384
-  ap00:
-    title: Chip AP Software FF00
-  c1bv:
-    title: Chip Cryptex1 Boot Verification
-  ap01:
-    title: Chip AP Software FF01
-  ap06:
-    title: Chip AP Software FF06
-  c1gn:
-    title: Chip Cryptex1 Generic AP
-  vma2:
-    title: Chip VMA2
-  c1vv:
-    title: Chip Cryptex1 Boot VMA2 Verification
-  vman:
-    title: Chip VMA2 Clone
-  c1ab:
-    title: Chip Cryptex1 Asset Brain
-  c1bt:
-    title: Chip Cryptex1 Boot AP
-  c1br:
-    title: Chip Cryptex1 Boot Reduced
-  c1nb:
-    title: CHIP_CRYPTEX1_BOOT_AP_PROSPECTIVE
-  c1rp:
-    title: Chip Cryptex1 Reduced Prospective
-  ADDA:
-  c1v2:
-    title: Chip Cryptex1 Boot VMA2
-  c1vn:
-    title: Chip Cryptex1 Boot VMA2 Clone
-  c1vr:
-    title: Chip Cryptex1 Boot Boot AV Reduced Verification
-  cncn:
-    title: Cryptex1 boot nonce
-  eCfg:
-  edcp:
-  ciof:
-  tmuf:
-  LPEM:
-  dLTH:
-  dBIC:
-  ifw1:
-  ifw2:
-  nefw:
-  lpbt:
-  dPSF:
-  rLAS:
-  iLAC:
-  PRST:
-  fdr1:
-  fdr2:
-  bCfg:
-  UCAL:
-  BICS:
-  xDCl:
-  cLTH:
-  HmCA:
-  dSrc:
-  LCfg:
-  TBIC:
-  HmCl:
-  jCfg:
-  cCfg:
-  mCfg:
-  aptk:
-    title: AP Ticket
-  dcpf:
-  c1g0:
-    title: Chip Cryptex1 Generic Cryptex0
-  clas:
-    title: Cryptex1 product class
-  cnch:
-    title: cryptex1 boot nonce hash
-  apdc:
-    title: Chip AP ACDC
   gdmg:
   gf1f:
     title: Apple Graphics Stage1 Firmware
@@ -1384,6 +1351,8 @@ img4_tags:
     description:
   glyc:
     description: Gyroscope Calibration
+  gmdp:
+    title: Personalized Disk Image
   gtcd:
   gtgv:
   hash:
@@ -1401,16 +1370,23 @@ img4_tags:
     description: Hypervisor OS Partition 0 (`dom0`)
   hypr:
     description: Hypervisor Related
+  i4ct:
+    title: Image4 Certificate Type
   iCCl:
     title: iCloud Activation Lock Clear
+  iLAC:
+  idia:
   ienv:
     description: Install Environment?
+  ifw1:
+  ifw2:
   inst:
     title: Key Instance
   isor:
     description:
   itst:
     description: Installer Test?
+  jCfg:
   kcrf:
     name: Kernel Cache Read-Only File Offset
   kcrz:
@@ -1431,19 +1407,21 @@ img4_tags:
     description: Locker - Used for Effaceable Storage end Obliteration
   lcrt:
     title: Lynx Certificate
+  lnch:
+    title: Cryptex1 live nonce hash
+  lndm:
+    title: Nonce Domain
+  lpbt:
   lphp:
     description: Local Policy Hash Protection?
   lpol:
   ltrs:
     description: Local TrustStore Recovery System?
+  mCfg:
   manx:
     description:
   ment:
     description: Memory Map Entitlements
-  type:
-    title: Cryptex1 Chip Type
-  vnum:
-    title: Long OS Version
   mmer:
     description: Memory Map Entitlements for Recovery
     recovery: true
@@ -1458,6 +1436,9 @@ img4_tags:
     title: Machine Specific Register Filter
   name:
     description:
+  ndom:
+    description: Nonce Domain
+  nefw:
   nrde:
     description: Native Ramdisk Environment
   nsrv:
@@ -1465,12 +1446,6 @@ img4_tags:
     firmware_name: NeedService
   omer:
     description: O M E Receipt?
-  boid:
-    title: Boot UUID
-  bmfh:
-    title: Boot Manifest Hash
-  lndm:
-    title: Nonce Domain
   ooth:
     description: Other OS Translator (Rosetta) Hash?
   osev:
@@ -1501,12 +1476,19 @@ img4_tags:
     description: Encrypted Private Key / Private Key Info / Private Recovery Identity?
   prot:
   ptrp:
+  rLAS:
   rbmt:
     description: Restore Boot Monitor?
     firmware_name: RBM
   rddg:
     description: Ramdisk for Debugging
   refk:
+  ros0:
+  ros1:
+  ros2:
+  ros3:
+  rsch:
+    title: Research Mode
   rspt:
     title: Restore Secure Page Table Monitor
   rtpf:
@@ -1545,8 +1527,13 @@ img4_tags:
     description:
   time:
     title: Timestamp
+  tmuf:
+  trxm:
+    title: Trusted Execution Monitor
   tstp:
     title: Testing Product
+  type:
+    title: Cryptex1 Chip Type
   tz0s:
     title: TrustZone EL0 Size
   ucer:
@@ -1559,10 +1546,21 @@ img4_tags:
     description:
   vkdl:
     description: Virtual Kernel Linker
+  vma2:
+    title: Chip VMA2
+  vman:
+    title: Chip VMA2 Clone
+  vnum:
+    title: Long OS Version
+  vpdc:
+    title: Chip VMA2 ACDC
   ware:
     description: VMWare?
+  xDCl:
   xugs:
     description: x64 User System Disk
+  zine:
+    title: Magazine psudo-descriptor
 der:
   uikp:
     description: UIK Public

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'openssl'
 require 'fileutils'
 
@@ -28,7 +30,7 @@ namespace :certificates do
           pem = "-----BEGIN CERTIFICATE-----\n#{[raw].pack('m')}\n-----END CERTIFICATE-----\n"
           OpenSSL::X509::Certificate.new(pem)
         rescue OpenSSL::X509::CertificateError
-          $stderr.puts "SKIP (not a certificate): #{file}"
+          warn "SKIP (not a certificate): #{file}"
           next
         end
       end
@@ -38,7 +40,7 @@ namespace :certificates do
       cn_entry ||= cert.subject.to_a.find { |name, _, _| name == 'OU' }
 
       unless cn_entry
-        $stderr.puts "SKIP (no CN or OU): #{file}"
+        warn "SKIP (no CN or OU): #{file}"
         next
       end
 
@@ -65,8 +67,8 @@ namespace :certificates do
     end
 
     # Apply renames safely: use temp files for sources that are also targets
-    sources = renames.map(&:first).to_set
-    targets = renames.map(&:last).to_set
+    sources = renames.to_set(&:first)
+    targets = renames.to_set(&:last)
     conflicting = sources & targets
 
     # First pass: move conflicting sources to temp names
@@ -82,10 +84,6 @@ namespace :certificates do
     # Update renames to use temp paths for conflicting sources
     renames.each do |pair|
       pair[0] = temp_map[pair[0]] if temp_map.key?(pair[0])
-    end
-
-    # Apply all renames
-    renames.each do |from, to|
       puts "#{from} -> #{to}"
       FileUtils.mv(from, to)
     end

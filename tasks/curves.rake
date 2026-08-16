@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'openssl'
 require 'merkle-hash-tree'
 require 'deepsort'
@@ -16,32 +18,33 @@ task :curves do
     end
   end
 
-  OUTPUT_FILE = File.join(__dir__, '../_data/curves/hashes.yml')
+  curves_output = File.join(__dir__, '../_data/curves/hashes.yml')
   output_data = {}
 
   Dir.glob(File.join(__dir__, '../ext/std-curves/**/*.json')).each do |file|
     next if File.basename(file) == 'schema.json'
+
     puts file
     curve_file = JSON.load_file file
 
-    curve_group_name = curve_file['name'].gsub(/\//, '_')
+    curve_file['name'].gsub('/', '_')
 
     curve_file['curves'].each do |curve|
       curve = curve.deep_symbolize_keys
-      curve_name = curve[:name].gsub(/\//, '_')
+      curve_name = curve[:name].gsub('/', '_')
       puts "Exporting #{file}:#{curve_name}"
 
       result_hash = curve.slice(:field, :params, :generator, :form, :order, :cofactor)
       result_hash.deep_transform_values! do |value|
-        if value.is_a?(String) and value.start_with? '0x'
-          Integer(value)
-        end
+        Integer(value) if value.is_a?(String) && value.start_with?('0x')
       end
       result_hash[:form] ||= 'Weierstrass'
-      [:params, :generator].map do |collection|
+      %i[params generator].map do |collection|
         next unless result_hash[collection]
+
         result_hash[collection] = result_hash[collection].transform_values do |value|
           next value unless value.is_a? Hash
+
           value[:raw] || value
         end
       end
@@ -69,5 +72,5 @@ task :curves do
     v
   end
 
-  File.write(OUTPUT_FILE, output_data.sort_by{|v| v['polyname']}.to_yaml)
+  File.write(curves_output, output_data.sort_by { |v| v['polyname'] }.to_yaml)
 end
