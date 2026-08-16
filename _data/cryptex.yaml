@@ -1,0 +1,99 @@
+unknown:
+  srtl:
+    title: Security Research Trust List
+  vdrt:
+    title: Virtual Device Runtime Trust
+team-ids:
+  59GAB85EFG: Xcode
+  9B9BMM756K:
+  ZL6BUSYGB3: Apple News
+  C294W6Q7VB:
+  WWDCDEMO14: WorldWide Developer Confrence 2014
+  XPSUQMMH5W:
+  4GDX6FKXZ3:
+  9JA89QQLNQ: Apple App Site Association (AASA
+  243LU875E5: Podcasts
+  5L582GG73E:
+  J465JVPK26:
+  J7YC8MX52C:
+  5YE77W7KK6:
+  64UH4UY526:
+  CTL9M94Q8X:
+  DK9N2M2GK6: PassKit
+  B32K2C2Y92:
+  8HPC9RB4KE:
+  BDFWW8L6QE:
+  859WDYTPW2:
+  HW8W63F6SA:
+  DUMMYTEAM:
+cryptexes:
+
+  cryptex1:
+    generic:
+      types:
+        dctg:
+      supplemental:
+        types:
+          dctg:
+    preboot:
+      app:
+        types:
+          acrt:
+      os:
+        types:
+          scrt:
+    safari-downlevel:
+      types:
+        acrt:
+    boot:
+      os:
+        types:
+          scrt: System Cryptex Runtime Trust
+      app:
+        types:
+          acrt: Application Cryptex Runtime Trust
+  global:
+    pdi:
+      types:
+        srtl:
+    bootability-brain:
+      types:
+        bbrt: Bootability Brain Runtime Trust
+    install-assistant:
+      types:
+        srtl:
+    ota-update-brain:
+      types:
+        srtl:
+  personalized:
+    supplemental-ephemeral:
+      types:
+        srtl:
+    supplemental-persistent:
+      types:
+        srtl:
+    ephemeral-cryptex:
+      types:
+        srtl:
+    cryptex-research:
+      types:
+        srtl:
+    mobile-asset-code:
+      types:
+        dctg:
+    mobile-asset-brain:
+      types:
+        bart:
+    engineering-root:
+      types:
+        srtd:
+    trust-cache:
+      type:
+        srtl:
+    pdi:
+      type:
+        srtl:
+    ddi:
+      types:
+        vdrt:
+        srtl:

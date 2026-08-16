@@ -25,8 +25,6 @@ task :curves do
     curve_file = JSON.load_file file
 
     curve_group_name = curve_file['name'].gsub(/\//, '_')
-    curve_dir = File.join(__dir__, '../_data/curves/', curve_group_name, 'asn')
-    mkdir_p curve_dir
 
     curve_file['curves'].each do |curve|
       curve = curve.deep_symbolize_keys
@@ -39,6 +37,7 @@ task :curves do
           Integer(value)
         end
       end
+      result_hash[:form] ||= 'Weierstrass'
       [:params, :generator].map do |collection|
         next unless result_hash[collection]
         result_hash[collection] = result_hash[collection].transform_values do |value|
