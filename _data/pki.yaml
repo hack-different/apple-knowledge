@@ -108,7 +108,8 @@ oids:
     found_in:
     - ucrt
     - dcrt-oid
-    symbol: oidAppleImg4ManifestCertSpec
+    symbols:
+    - CTOidItemAppleImg4Manifest
     issuers:
     - Basic Attestation User Sub CA2
     - FDRDC-UCRT-SUBCA

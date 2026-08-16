@@ -1,0 +1,385 @@
+-- ASN module extracted from ITU-T X.894 (10/2018)
+-- 22 Module ANSI-X9-62
+ANSI-X9-62 {iso (1) member-body (2) us (840) 10045 module (0) 2}
+DEFINITIONS EXPLICIT TAGS ::= BEGIN
+
+-- EXPORTS All;
+-- IMPORTS None;
+-- ============================================
+-- Notes
+-- ============================================
+-- 1. Definitions in this module are arranged to minimize forward references,
+-- Reading backwards gives a top-down approach more like X9.62-1998.
+-- 2. Most comments briefly explain subsequent definition.
+-- ============================================
+-- Common Object Identifier (see  E.2)
+-- ============================================
+-- The root OID for this module.
+ansi-X9-62     OBJECT IDENTIFIER ::= {iso (1) member-body (2) us (840) 10045}
+
+-- ============================================
+-- Definition for Algorithm Identifiers (see  E.3)
+-- ============================================
+-- Information object class used to for algorithm identifiers.
+-- Note: Original X9.62-1998 was TYPE-IDENTIFIER
+-- New version here agrees with X9.63-2001
+ALGORITHM ::= CLASS {
+    &id            OBJECT IDENTIFIER UNIQUE,
+    &Type             OPTIONAL
+}
+WITH SYNTAX {
+    OID &id [PARMS &Type]
+}
+
+-- X9.62 profile of a common ASN.1 type AlgorithmIdentifier,
+-- The X9.62 version is a parameterized type, to allow restrictions.
+AlgorithmIdentifier {ALGORITHM: IOSet} ::= SEQUENCE {
+    algorithm      ALGORITHM.&id ({IOSet}),
+    parameters     ALGORITHM.&Type ({IOSet} {@algorithm}) OPTIONAL
+}
+
+-- ============================================
+-- Hash Functions (see  E.4)
+-- ============================================
+-- Inherited OID for SHA1
+sha-1          OBJECT IDENTIFIER ::= {iso (1) identified-organization (3) oiw (14) secsig (3) algorithm (2) 26}
+
+-- New OID for SHA224
+id-SHA224      OBJECT IDENTIFIER ::= {joint-iso-itu-t (2) country (16) us (840) organization (1) gov (101) csor (3) nistalgorithm (4) hashalgs (2) 4}
+
+-- Inherited OID for SHA256
+id-SHA256      OBJECT IDENTIFIER ::= {joint-iso-itu-t (2) country (16) us (840) organization (1) gov (101) csor (3) nistalgorithm (4) hashalgs (2) 1}
+
+-- Inherited OID for SHA384
+id-SHA384      OBJECT IDENTIFIER ::= {joint-iso-itu-t (2) country (16) us (840) organization (1) gov (101) csor (3) nistalgorithm (4) hashalgs (2) 2}
+
+-- Inherited OID for SHA512
+id-SHA512      OBJECT IDENTIFIER ::= {joint-iso-itu-t (2) country (16) us (840) organization (1) gov (101) csor (3) nistalgorithm (4) hashalgs (2) 3}
+
+-- Information object set of Approved hash functions
+ANSIX9HashFunctions ALGORITHM ::= {
+    {OID sha-1} |
+    {OID sha-1 PARMS NULL} |
+    {OID id-SHA224} |
+    {OID id-SHA224 PARMS NULL} |
+    {OID id-SHA256} |
+    {OID id-SHA256 PARMS NULL} |
+    {OID id-SHA384} |
+    {OID id-SHA384 PARMS NULL} |
+    {OID id-SHA512} |
+    {OID id-SHA512 PARMS NULL},
+    ... -- Additional hash functions may be added
+}
+
+-- Type (parameterized) to indicate the hash function with
+-- the OID ecdsa-with-Specified
+HashAlgorithm ::= AlgorithmIdentifier {{ANSIX9HashFunctions}}
+
+-- ============================================
+-- Finite Field Identification (see  E.5)
+-- ============================================
+-- Finite field element
+FieldElement ::= OCTET STRING
+
+-- Root OID for identifying field types
+id-fieldType   OBJECT IDENTIFIER ::= {ansi-X9-62 fieldType (1)}
+
+-- OID identifying prime field types
+prime-field    OBJECT IDENTIFIER ::= {id-fieldType prime (1)}
+
+-- Parameters for prime field
+Prime-p ::= INTEGER -- Finite field F(p), where p is an odd prime
+
+-- OID for identifying binary field
+characteristic-two-field OBJECT IDENTIFIER ::= {id-fieldType characteristic-two (2)}
+
+-- Root OID for identifying binary field basis types
+id-characteristic-two-basis OBJECT IDENTIFIER ::= {characteristic-two-field basisType (3)}
+
+-- OID to identify a Gaussian normal basis.
+gnBasis        OBJECT IDENTIFIER ::= {id-characteristic-two-basis gaussian (1)}
+
+-- OID to identify a trinomial basis.
+tpBasis        OBJECT IDENTIFIER ::= {id-characteristic-two-basis trinomial (2)}
+
+-- Trinomial basis representation of F2^m
+-- Integer k for reduction polynomial x^m + x^k + 1
+Trinomial ::= INTEGER
+
+-- OID to identify a pentanomial basis.
+ppBasis        OBJECT IDENTIFIER ::= {id-characteristic-two-basis pentanomial (3)}
+
+-- Pentanomial basis representation of F2^m
+-- reduction polynomial integers k1, k2, k3
+-- f(x) = x^m + x^k3 + x^k2 + x^k1 + 1
+Pentanomial ::= SEQUENCE {
+    k1             INTEGER,
+    k2             INTEGER,
+    k3             INTEGER
+}
+
+-- The object class for binary field basis types
+CHARACTERISTIC-TWO ::= TYPE-IDENTIFIER
+
+-- Allowable basis types are given the following info object set
+BasisTypes     CHARACTERISTIC-TWO ::= {
+    {NULL IDENTIFIED BY gnBasis} |
+    {Trinomial IDENTIFIED BY tpBasis} |
+    {Pentanomial IDENTIFIED BY ppBasis},
+    ... -- Additional basis types may be added
+}
+
+-- Parameters for a binary field
+Characteristic-two ::= SEQUENCE {
+    m              INTEGER, -- Field size is 2^m
+    basis          CHARACTERISTIC-TWO.&id ({BasisTypes}),
+    parameters     CHARACTERISTIC-TWO.&Type ({BasisTypes} {@basis})
+}
+
+-- Information object class used to constrain fields
+FIELD-ID ::= TYPE-IDENTIFIER -- ISO/IEC 8824-2:1995(E), Annex A
+
+-- Field types are constrained with this information object set
+FieldTypes     FIELD-ID ::= {
+    {Prime-p IDENTIFIED BY prime-field} |
+    {Characteristic-two IDENTIFIED BY characteristic-two-field},
+    ... -- Additional field types may be added
+}
+
+-- Finite fields have a type (prime or binary) and parameters (size and basis)
+FieldID {FIELD-ID: IOSet} ::= SEQUENCE { -- Finite field
+    fieldType      FIELD-ID.&id ({IOSet}),
+    parameters     FIELD-ID.&Type ({IOSet} {@fieldType})
+}
+
+-- ============================================
+-- Elliptic Curve Points (see  E.6)
+-- ============================================
+ECPoint ::= OCTET STRING
+
+-- ============================================
+-- Elliptic Curve Domain Parameters (see  E.7)
+-- ============================================
+-- Identifying an elliptic curve by its coefficients (and optional seed)
+Curve ::= SEQUENCE {
+    a              FieldElement, -- Elliptic curve coefficient a
+    b              FieldElement, -- Elliptic curve coefficient b
+    seed           BIT STRING OPTIONAL
+-- Shall be present if used in SpecifiedECDomain with version of
+-- ecdpVer2 or ecdpVer3
+}
+
+-- Type used to control version of EC domain parameters
+SpecifiedECDomainVersion ::= INTEGER {
+                   ecdpVer1 (1),
+                   ecdpVer2 (2),
+                   ecdpVer3 (3)
+               }
+
+-- Identifying elliptic curve domain parameters explicitly with this type
+SpecifiedECDomain ::= SEQUENCE {
+    version        SpecifiedECDomainVersion (ecdpVer1 | ecdpVer2 | ecdpVer3),
+    fieldID        FieldID {{FieldTypes}},
+    curve          Curve,
+    base           ECPoint, -- Base point G
+    order          INTEGER, -- Order n of the base point
+    cofactor       INTEGER OPTIONAL, -- The integer h = #E(Fq)/n
+    hash           HashAlgorithm OPTIONAL,
+    ... -- Additional parameters may be added
+}
+
+-- Arc in X9.62 for naming EC domain parameters that are not named elsewhere
+ellipticCurve  OBJECT IDENTIFIER ::= {ansi-X9-62 curves (3)}
+
+-- Arc in X9.62 for identifying prime order elliptic curve domain parameters
+primeCurve     OBJECT IDENTIFIER ::= {ellipticCurve prime (1)}
+
+-- Arc from SEC2 that names EC domain parameters and is used again in X9.62
+secgCurve      OBJECT IDENTIFIER ::= {iso (1) identified-organization (3) certicom (132) curve (0)}
+
+-- Named EC domain parameters in X9.62
+ansix9t163k1   OBJECT IDENTIFIER ::= {secgCurve 1}
+
+ansix9t163r1   OBJECT IDENTIFIER ::= {secgCurve 2}
+
+ansix9t163r2   OBJECT IDENTIFIER ::= {secgCurve 15}
+
+ansix9t193r1   OBJECT IDENTIFIER ::= {secgCurve 24}
+
+ansix9t193r2   OBJECT IDENTIFIER ::= {secgCurve 25}
+
+ansix9t233k1   OBJECT IDENTIFIER ::= {secgCurve 26}
+
+ansix9t233r1   OBJECT IDENTIFIER ::= {secgCurve 27}
+
+ansix9t239k1   OBJECT IDENTIFIER ::= {secgCurve 3}
+
+ansix9t283k1   OBJECT IDENTIFIER ::= {secgCurve 16}
+
+ansix9t283r1   OBJECT IDENTIFIER ::= {secgCurve 17}
+
+ansix9t409k1   OBJECT IDENTIFIER ::= {secgCurve 36}
+
+ansix9t409r1   OBJECT IDENTIFIER ::= {secgCurve 37}
+
+ansix9t571k1   OBJECT IDENTIFIER ::= {secgCurve 38}
+
+ansix9t571r1   OBJECT IDENTIFIER ::= {secgCurve 39}
+
+ansix9p160k1   OBJECT IDENTIFIER ::= {secgCurve 9}
+
+ansix9p160r1   OBJECT IDENTIFIER ::= {secgCurve 8}
+
+ansix9p160r2   OBJECT IDENTIFIER ::= {secgCurve 30}
+
+ansix9p192k1   OBJECT IDENTIFIER ::= {secgCurve 31}
+
+ansix9p192r1   OBJECT IDENTIFIER ::= {primeCurve 1}
+
+ansix9p224k1   OBJECT IDENTIFIER ::= {secgCurve 32}
+
+ansix9p224r1   OBJECT IDENTIFIER ::= {secgCurve 33}
+
+ansix9p256k1   OBJECT IDENTIFIER ::= {secgCurve 10}
+
+ansix9p256r1   OBJECT IDENTIFIER ::= {primeCurve 7}
+
+ansix9p384r1   OBJECT IDENTIFIER ::= {secgCurve 34}
+
+ansix9p521r1   OBJECT IDENTIFIER ::= {secgCurve 35}
+
+-- The object class and syntax for naming elliptic curve domain parameters.
+ECDOMAIN ::= CLASS {
+    &id            OBJECT IDENTIFIER UNIQUE
+}
+WITH SYNTAX {
+    ID &id
+}
+
+-- Information object set for named elliptic curve domain parameter
+ANSIX9NamedDomains ECDOMAIN ::= {
+    {ID ansix9t163k1} | --  L.5.2.2
+    {ID ansix9t163r2} | --  L.5.2.3
+    {ID ansix9t233k1} | --  L.5.3.2
+    {ID ansix9t233r1} | --  L.5.3.3
+    {ID ansix9t283k1} | --  L.5.4.2
+    {ID ansix9t283r1} | --  L.5.4.3
+    {ID ansix9t409k1} | --  L.5.5.2
+    {ID ansix9t409r1} | --  L.5.5.3
+    {ID ansix9t571k1} | --  L.5.6.2
+    {ID ansix9t571r1} | --  L.5.6.3
+    {ID ansix9p192k1} | --  L.6.2.2
+    {ID ansix9p192r1} | --  L.6.2.3
+    {ID ansix9p224k1} | --  L.6.3.2
+    {ID ansix9p224r1} | --  L.6.3.3
+    {ID ansix9p256k1} | --  L.6.4.2
+    {ID ansix9p256r1} | --  L.6.4.3
+    {ID ansix9p384r1} | --  L.6.5.2
+    {ID ansix9p521r1}, --  L.6.6.2
+    ... -- Additional named EC domain parameters may be added.
+}
+
+-- Type for identifying elliptic curve domain parameters
+ECDomainParameters ::= CHOICE {
+    specified      SpecifiedECDomain, -- Full specification
+    named          ECDOMAIN.&id ({ANSIX9NamedDomains}), -- Named
+    implicitCA     NULL -- Parameters same as issuer CA
+}
+
+-- ============================================
+-- Elliptic Curve Digital Signatures (see  E.8)
+-- ============================================
+-- Format for an actual signature
+ECDSA-Sig-Value ::= SEQUENCE {
+    r              INTEGER,
+    s              INTEGER
+}
+
+-- Root OID to identify types of signatures
+id-ecSigType   OBJECT IDENTIFIER ::= {ansi-X9-62 signatures (4)}
+
+-- Original X9.62-1998 OID for ECDSA
+ecdsa-with-Sha1 OBJECT IDENTIFIER ::= {id-ecSigType sha1 (1)}
+
+-- New OID indicating the message digest to be the natural size hash
+-- Note: the natural size hash is strongly recommended
+ecdsa-with-Recommended OBJECT IDENTIFIER ::= {id-ecSigType recommended (2)}
+
+-- New OID that indicates the message digest to be specified by the parameters
+ecdsa-with-Specified OBJECT IDENTIFIER ::= {id-ecSigType specified (3)}
+
+-- New OIDs that indicates the message digest directly
+ecdsa-with-Sha224 OBJECT IDENTIFIER ::= {ecdsa-with-Specified 1}
+
+ecdsa-with-Sha256 OBJECT IDENTIFIER ::= {ecdsa-with-Specified 2}
+
+ecdsa-with-Sha384 OBJECT IDENTIFIER ::= {ecdsa-with-Specified 3}
+
+ecdsa-with-Sha512 OBJECT IDENTIFIER ::= {ecdsa-with-Specified 4}
+
+-- An information object set used to constrain ECC algorithms
+ECCAlgorithmSet ALGORITHM ::= {
+    {OID ecdsa-with-Sha1} |
+    {OID ecdsa-with-Sha1 PARMS NULL} |
+    {OID ecdsa-with-Recommended} |
+    {OID ecdsa-with-Recommended PARMS NULL} |
+    {OID ecdsa-with-Specified PARMS HashAlgorithm} |
+    {OID ecdsa-with-Sha224} |
+    {OID ecdsa-with-Sha256} |
+    {OID ecdsa-with-Sha384} |
+    {OID ecdsa-with-Sha512},
+    ... -- More ECC algorithms might be added, including key agreement.
+}
+
+-- A type identifying an ECC algorithm
+ECCAlgorithm ::= AlgorithmIdentifier {{ECCAlgorithmSet}}
+
+-- A type identifying one or more ECC algorithms with possible preference
+ECCAlgorithms ::= SEQUENCE OF ECCAlgorithm
+
+-- ============================================
+-- Elliptic Curve Public Keys (see  E.9)
+-- ============================================
+-- Root OID for identifying types of public keys for X9.62
+id-publicKeyType OBJECT IDENTIFIER ::= {ansi-X9-62 keyType (2)}
+
+-- Original X9.62-1998 OID for identifying unrestricted EC public key
+id-ecPublicKey OBJECT IDENTIFIER ::= {id-publicKeyType unrestricted (1)}
+
+-- Algorithm identifier (original X9.62-1998) for
+-- EC public key without restrictions
+ecPublicKeyType ALGORITHM ::= {OID id-ecPublicKey PARMS DomainParameters}
+
+-- New OID for identifying EC public key with algorithm restrictions
+id-ecPublicKeyRestricted OBJECT IDENTIFIER ::= {id-publicKeyType restricted (2)}
+
+-- Type identified by id-ecPublicKeyRestricted
+ECPKRestrictions ::= SEQUENCE {
+    ecDomain       ECDomainParameters,
+    -- Identifies the EC domain parameters
+    eccAlgorithms  ECCAlgorithms -- Lists the algorithms supported
+-- for this public key
+}
+
+-- Algorithm identifier (new) with feature to restrict algorithm usage.
+ecPublicKeyTypeRestricted ALGORITHM ::= {OID id-ecPublicKeyRestricted PARMS ECPKRestrictions}
+
+-- Information object set of allowable algorithm identifiers
+-- in a SubjectPublicKeyInfo of a certificate
+ECPKAlgorithms ALGORITHM ::= {
+    ecPublicKeyType |
+    ecPublicKeyTypeRestricted,
+    ... -- Additional algorithm identifiers may be added
+}
+
+-- An instantiation of Alg. Id.
+ECPKAlgorithm ::= AlgorithmIdentifier {{ECPKAlgorithms}}
+
+-- X9.62 profile of an X.509 (ASN.1) field contained
+-- in X.509 and PKIX certificates
+SubjectPublicKeyInfo ::= SEQUENCE {
+    algorithm      ECPKAlgorithm,
+    subjectPublicKey BIT STRING
+}
+
+END -- ANSI X9.62
