@@ -1,18 +1,18 @@
 <table>
     <thead>
     <tr>
-        <th>Variable</th>
+        <th>Tag</th>
+        <th>Name</th>
         <th>Type</th>
-        <th>Platforms</th>
         <th>Description</th>
     </tr>
     </thead>
     <tbody>
-    {% for entry in site.data.nvram.nvram_variables %}
+    {% for entry in site.data.img4.img4_tags %}
     <tr>
         <td><code>{{ entry[0] }}</code></td>
-        <td>{{ entry[1].type }}</td>
-        <td>{{ entry[1].platforms | join: ", " }}</td>
+        <td>{{ entry[1].name }}</td>
+        <td><code>{{ entry[1].type }}</code></td>
         <td>{{ entry[1].description }}</td>
     </tr>
     {% endfor %}

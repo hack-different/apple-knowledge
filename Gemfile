@@ -30,6 +30,7 @@ gem 'apple-data', path: File.join(File.dirname(__FILE__), '_packages/ruby')
 # If you have any plugins, put them here!
 # RESOURCE: https://github.com/planetjekyll/awesome-jekyll-plugins
 group :jekyll_plugins do
+  gem 'jekyll-awesome-nav'
   gem 'jekyll-coffeescript'
   gem 'jekyll-commonmark'
   gem 'jekyll-default-layout'
@@ -42,7 +43,10 @@ group :jekyll_plugins do
   gem 'jekyll-relative-links'
   gem 'jekyll-remote-theme'
   gem 'jekyll-seo-tag'
+  gem 'jekyll-sitemap'
+  gem 'jekyll-theme-chirpy'
   gem 'jekyll-titles-from-headings'
+  gem 'jekyll-theme-primerpages'
 end
 
 group :development, :test do

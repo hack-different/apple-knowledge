@@ -1,3 +1,8 @@
+---
+layout: page
+permalink: /
+---
+
 # Apple Data Formats and Knowledge
 
 A collection of reverse engineered Apple formats, protocols, or other interesting bits.

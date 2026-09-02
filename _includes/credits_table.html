@@ -1,0 +1,20 @@
+<table>
+    <thead>
+    <tr>
+        <th>Contributor</th>
+        <th>GitHub</th>
+        <th>Contributions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for repo in site.data.credits.repositories %}
+    {% for contributor in repo[1].contributors %}
+    <tr>
+        <td>{{ contributor.login }}</td>
+        <td><a href="{{ contributor.html_url }}">{{ contributor.login }}</a></td>
+        <td>{{ contributor.contributions }}</td>
+    </tr>
+    {% endfor %}
+    {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,20 @@
+<table>
+    <thead>
+    <tr>
+        <th>Service</th>
+        <th>Fixed Endpoint</th>
+        <th>XNU Driver</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for entry in site.data.sep.sep_services %}
+    <tr>
+        <td><code>{{ entry[0] }}</code></td>
+        <td><code>{{ entry[1].fixed_endpoint }}</code></td>
+        <td><code>{{ entry[1].xnu_name }}</code></td>
+        <td>{{ entry[1].description }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>

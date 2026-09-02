@@ -1,18 +1,18 @@
 <table>
     <thead>
     <tr>
-        <th>Variable</th>
+        <th>Bundle Identifier</th>
+        <th>Path</th>
         <th>Type</th>
-        <th>Platforms</th>
         <th>Description</th>
     </tr>
     </thead>
     <tbody>
-    {% for entry in site.data.nvram.nvram_variables %}
+    {% for entry in site.data.kext.kexts limit:200 %}
     <tr>
         <td><code>{{ entry[0] }}</code></td>
+        <td><code>{{ entry[1].path }}</code></td>
         <td>{{ entry[1].type }}</td>
-        <td>{{ entry[1].platforms | join: ", " }}</td>
         <td>{{ entry[1].description }}</td>
     </tr>
     {% endfor %}

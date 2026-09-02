@@ -1,13 +1,21 @@
 <table>
     <thead>
-    <th>URL</th>
-    <th>Description</th>
+    <tr>
+        <th>Asset Type</th>
+        <th>URL</th>
+        <th>Description</th>
+        <th>Tags</th>
+        <th>Devices</th>
+    </tr>
     </thead>
     <tbody>
-    {% for entry in site.data.mobile_assets %}
+    {% for entry in site.data.mobile_assets.mobile_assets %}
     <tr>
-        <td>{{ entry.url }}</td>
+        <td><code>{{ entry.asset_type }}</code></td>
+        <td><a href="{{ entry.url }}">{{ entry.url }}</a></td>
         <td>{{ entry.description }}</td>
+        <td>{{ entry.tags | join: ", " }}</td>
+        <td>{{ entry.devices | join: ", " }}</td>
     </tr>
     {% endfor %}
     </tbody>

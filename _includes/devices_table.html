@@ -1,20 +1,28 @@
 <table>
     <thead>
-    <th>ID</th>
-    <th>Name</th>
-    <th>CHIP</th>
-    <th>BOARD</th>
-    <th>Board Name</th>
+    <tr>
+        <th>Chip ID</th>
+        <th>Chip Name</th>
+        <th>Architecture</th>
+        <th>Product Name</th>
+        <th>Product ID</th>
+        <th>Board ID</th>
+        <th>Board Name</th>
+    </tr>
     </thead>
     <tbody>
-    {% for entry in site.data.devices %}
+    {% for chip in site.data.cores.chip_ids %}
+    {% for board in chip[1].boards %}
     <tr>
-        <td>{{ entry.id }}</td>
-        <td>{{ entry.name }}</td>
-        <td>{{ entry.chip_id }}</td>
-        <td>{{ entry.board_id }}</td>
-        <td>{{ entry.board_name }}</td>
+        <td><code>{{ chip[0] }}</code></td>
+        <td>{{ chip[1].name }}{% if chip[1].description %} ({{ chip[1].description }}){% endif %}</td>
+        <td>{{ chip[1].architecture }}</td>
+        <td>{{ board[1].product_name }}</td>
+        <td><code>{{ board[1].product_id }}</code></td>
+        <td><code>{{ board[0] }}</code></td>
+        <td><code>{{ board[1].board_name }}</code></td>
     </tr>
+    {% endfor %}
     {% endfor %}
     </tbody>
 </table>

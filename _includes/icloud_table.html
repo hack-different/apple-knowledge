@@ -1,0 +1,22 @@
+<table>
+    <thead>
+    <tr>
+        <th>Topic / Service</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for entry in site.data.icloud.icloud_topics %}
+    <tr>
+        <td><code>{{ entry[0] }}</code></td>
+        <td>{{ entry[1].description }}</td>
+    </tr>
+    {% endfor %}
+    {% for entry in site.data.icloud.icloud_servies %}
+    <tr>
+        <td><code>{{ entry[0] }}</code></td>
+        <td>{{ entry[1].description }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>

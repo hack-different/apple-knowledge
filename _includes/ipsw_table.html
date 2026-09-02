@@ -1,0 +1,20 @@
+<table>
+    <thead>
+    <tr>
+        <th>IPSW File</th>
+        <th>Version</th>
+        <th>Build</th>
+        <th>Products</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for entry in site.data.ipsw.ipsw_files limit:100 %}
+    <tr>
+        <td><code>{{ entry[0] }}</code></td>
+        <td>{{ entry[1].metadata.version }}</td>
+        <td><code>{{ entry[1].metadata.build_number }}</code></td>
+        <td>{{ entry[1].metadata.products | join: ", " }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>

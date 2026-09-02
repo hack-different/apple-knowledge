@@ -1,18 +1,16 @@
 <table>
     <thead>
     <tr>
-        <th>Variable</th>
         <th>Type</th>
-        <th>Platforms</th>
+        <th>Value</th>
         <th>Description</th>
     </tr>
     </thead>
     <tbody>
-    {% for entry in site.data.nvram.nvram_variables %}
+    {% for entry in site.data.mach_o.file_types %}
     <tr>
         <td><code>{{ entry[0] }}</code></td>
-        <td>{{ entry[1].type }}</td>
-        <td>{{ entry[1].platforms | join: ", " }}</td>
+        <td><code>{{ entry[1].value }}</code></td>
         <td>{{ entry[1].description }}</td>
     </tr>
     {% endfor %}

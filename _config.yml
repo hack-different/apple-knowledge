@@ -18,26 +18,61 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-remote_theme: pages-themes/hacker@v0.2.0
+theme: jekyll-theme-primerpages
 plugins:
-  - jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-sitemap
   - jekyll-gist
   - jekyll-mentions
+  - jekyll-awesome-nav
+  - jekyll-readme-index
 
 title: Hack Different - Apple Knowledge
 description: >-
   Hack Different is a community of research around the Apple platform.
 url: "https://docs.hackdiffe.rent" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: ""
-github_username:  hack-different
+github_username: hack-different
 repository: hack-different/apple-knowledge
 
+awesome_nav:
+  enabled: true
+  root: .
+  nav_filename: .nav.yml
+  include:
+    - "**/*.md"
+    - "**/*.html"
+    - "**/*.htm"
+  ignore:
+    - "assets/**"
+    - "site/**"
+
+nav:
+  - name: Overview
+    url: /
+  - name: Documents
+    url: /docs/
+  - name: Formats
+    url: /formats/
+  - name: Credits
+    url: /credits
+  - name: Contributing
+    url: /contributing
+
+defaults:
+  - scope:
+      path: "docs"
+    values:
+      layout: awesome_nav_demo
 
 collections:
-  - _docs
-  - formats
-  - data
-  - schema
+  docs:
+    output: true
+    permalink: /docs/:path
+  formats:
+    output: true
+    permalink: /formats/:path
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -49,6 +84,8 @@ collections:
 #
 exclude:
 - '_code/**'
+- '.idea'
+- '_packages'
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
