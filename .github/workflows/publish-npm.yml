@@ -32,6 +32,6 @@ jobs:
 
       - name: Publish to NPM Registry
         # Uses npm trusted publishing (OIDC) when configured on npmjs.com, otherwise falls back to NPM_TOKEN
-        run: npm publish dist/*.tgz --access public --provenance
+        run: npm publish ./dist/*.tgz --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
