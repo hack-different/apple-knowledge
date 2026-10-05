@@ -1,15 +1,20 @@
 data-update:
-- '_data/**'
+- changed-files:
+  - any-glob-to-any-file: '_data/**'
 
 text-update:
-- '**/*.md'
+- changed-files:
+  - any-glob-to-any-file: '**/*.md'
 
 tool-update:
-- '_tools/**'
+- changed-files:
+  - any-glob-to-any-file: '_tools/**'
 
 code-update:
-- '**/*.rb'
-- 'Gemfile'
-- 'Rakefile'
-- '_config.yml'
-- '.*'
+- changed-files:
+  - any-glob-to-any-file:
+    - '**/*.rb'
+    - 'Gemfile'
+    - 'Rakefile'
+    - '_config.yml'
+    - '.*'

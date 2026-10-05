@@ -1,11 +1,3 @@
-# This workflow will upload a Python Package using Twine when a release is created
-# For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
-
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
 name: Publish Package - Python / PyPI
 
 on:
@@ -14,49 +6,27 @@ on:
 
 jobs:
   ci-build-python:
-    uses: hack-different/apple-knowledge/.github/workflows/build-python.yml@main
+    uses: ./.github/workflows/build-python.yml
 
   publish-pypi:
     name: Publish to PyPI
     runs-on: ubuntu-latest
+    needs: ci-build-python
     environment: pypi-push
+    permissions:
+      contents: read
+      # Required for PyPI trusted publishing (OIDC)
+      id-token: write
 
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - uses: actions/setup-python@v5
-        id: setup-python
-        with:
-          python-version: '3.12'
-
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
-        with:
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-          installer-parallel: true
-
-      - name: Load cached venv
-        id: cached-poetry-dependencies
-        uses: actions/cache@v4
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
-
-      - name: Install dependencies
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-        run: poetry install --no-interaction --no-root
-
       - name: Download Python Package Artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
-          name: package-python
-          path: ./_packages/python/dist/
+          name: package-python-3.12
+          path: dist
 
       - name: Publish to PyPI
-        # Note: No "password" or "api-token" secret is referenced here
+        # Note: No "password" or "api-token" secret is referenced here, this uses trusted publishing
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          packages-dir: ./_packages/python/dist/
+          packages-dir: dist/

@@ -2,7 +2,7 @@ name: Periodic Updates
 
 on:
   schedule:
-    - cron: '* 8 * * *'
+    - cron: '17 8 * * *'
 
   workflow_dispatch:
     inputs:
@@ -11,41 +11,43 @@ on:
         required: false
         type: string
 
+concurrency:
+  group: periodic-update
+  cancel-in-progress: false
+
+env:
+  UPDATE_BRANCH: ${{ inputs.ref || 'auto-update-bot' }}
+
 jobs:
   periodic-update:
     runs-on: ubuntu-latest
     timeout-minutes: 120
+    permissions:
+      contents: write
+      pull-requests: write
 
     steps:
+      - name: Install OS Packages
+        run: sudo apt-get update && sudo apt-get install -y libidn-dev cmake
+
       # This allows us to continue to update an existing auto-update branch if it has yet to be merged, but if one
       # does not exist we will create a new one from the main branch.
       - id: repo
         shell: bash
         run: |
-          if git ls-remote --heads --quiet --exit-code https://github.com/${{ github.repository }}.git ${{ inputs.ref }}
+          if git ls-remote --heads --quiet --exit-code "https://github.com/${{ github.repository }}.git" "${UPDATE_BRANCH}"
           then
-            echo "::notice::Checkout: ${{ github.repository }} using ${{ inputs.ref }}"
-            echo "name=ref-exists::true" >> $GITHUB_OUTPUT
+            echo "::notice::Checkout: ${{ github.repository }} using ${UPDATE_BRANCH}"
+            echo "checkout-ref=${UPDATE_BRANCH}" >> "$GITHUB_OUTPUT"
           else
-            USING="main"
-            echo "::notice::Checkout: ${{ github.repository }} does not have ref ${{ inputs.ref }} (fallback to ${USING})"
-            echo "name=ref-exists::false" >> $GITHUB_OUTPUT
-            echo "name=default-branch::${USING}" >> $GITHUB_OUTPUT
+            echo "::notice::Checkout: ${{ github.repository }} does not have ref ${UPDATE_BRANCH} (fallback to main)"
+            echo "checkout-ref=main" >> "$GITHUB_OUTPUT"
           fi
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-          ref: ${{ inputs.ref }}
-
-      - name: Cache Ruby Gems and Bundle
-        id: cache-gems
-        uses: actions/cache@v4
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-build-ruby-${{ hashFiles('Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-build-ruby-
+          ref: ${{ steps.repo.outputs.checkout-ref }}
 
       - name: Set up Ruby 4.0.5
         uses: ruby/setup-ruby@v1
@@ -54,54 +56,32 @@ jobs:
           bundler-cache: true
 
       - name: Cache Temporary Data
-        id: cache-tmp
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: tmp
-          key: data-update-cache
+          key: data-update-cache-${{ github.run_id }}
+          restore-keys: |
+            data-update-cache-
 
-      - name: Perform Default Rake Task
+      - name: Perform Update Rake Task
         run: bundle exec rake update
 
       - name: Archive Data Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: data-update-artifacts
           path: _data
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Create or Update Pull Request
+        uses: peter-evans/create-pull-request@v7
         with:
-          commit_message: Apply data updates
-          create_branch: true
-          branch: ${{ inputs.ref }}
-          commit_user_name: The Hack Different fully sentient AI
-          file_pattern: _data/**
-          push_options: '--force'
-
-      - name: pull-request
-        uses: repo-sync/pull-request@v2
-        with:
-          destination_branch: main
-          source_branch: ${{ inputs.ref }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          pr_title: "Automated Data Update: ${{ github.run_number }}"
-
-  ci-test:
-    needs: periodic-update
-    uses: hack-different/apple-knowledge/.github/workflows/build-test.yml@main
-
-  ci-build-jekyll:
-    needs: ci-test
-    uses: hack-different/apple-knowledge/.github/workflows/build-jekyll.yml@main
-
-  ci-build-python:
-    needs: ci-test
-    uses: hack-different/apple-knowledge/.github/workflows/build-python.yml@main
-
-  ci-build-ruby:
-    needs: ci-test
-    uses: hack-different/apple-knowledge/.github/workflows/build-ruby.yml@main
-
-  ci-build-node:
-    needs: ci-test
-    uses: hack-different/apple-knowledge/.github/workflows/build-node.yml@main
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ env.UPDATE_BRANCH }}
+          base: main
+          add-paths: _data/**
+          commit-message: Apply data updates
+          committer: The Hack Different fully sentient AI <41898282+github-actions[bot]@users.noreply.github.com>
+          author: The Hack Different fully sentient AI <41898282+github-actions[bot]@users.noreply.github.com>
+          title: "Automated Data Update"
+          body: "Automated data update from run ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          labels: data-update

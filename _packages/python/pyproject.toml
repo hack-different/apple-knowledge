@@ -9,8 +9,7 @@ description = "Static data from https://docs.hackdiffe.rent"
 readme = "README.md"
 
 authors = ["Rick Mark <rickmark@outlook.com>"]
-include = ['share/**/*']
-build = "build.py"
+include = [{ path = "share/**/*", format = ["sdist", "wheel"] }]
 
 [tool.poetry.dependencies]
 python = "^3.10"

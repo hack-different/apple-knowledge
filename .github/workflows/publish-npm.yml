@@ -1,6 +1,3 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
-
 name: Publish Package - Node / NPM
 
 on:
@@ -9,39 +6,32 @@ on:
 
 jobs:
   ci-build-node:
-    uses: hack-different/apple-knowledge/.github/workflows/build-node.yml@main
+    uses: ./.github/workflows/build-node.yml
 
   publish-npm:
     name: Publish to NPM
     runs-on: ubuntu-latest
     needs: ci-build-node
     environment: node-push
+    permissions:
+      contents: read
+      # Required for npm trusted publishing (OIDC) and provenance
+      id-token: write
 
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: Cache Node Packages
-        id: cache-node
-        uses: actions/cache@v4
-        with:
-          path:  _packages/node/node_modules
-          key: ${{ runner.os }}-publish-npm-${{ hashFiles('_packages/node/yarn.lock') }}
-
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v5
         with:
           node-version: 24
-          cache: bun
           registry-url: https://registry.npmjs.org/
 
       - name: Download Node Package Artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: package-node-24
-          path:  _packages/node/dist/
+          path: dist
 
       - name: Publish to NPM Registry
-        run: yarn publish  _packages/node/
+        # Uses npm trusted publishing (OIDC) when configured on npmjs.com, otherwise falls back to NPM_TOKEN
+        run: npm publish dist/*.tgz --access public --provenance
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
