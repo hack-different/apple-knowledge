@@ -2,6 +2,8 @@
 metadata:
   description:
   credits:
+  collections:
+  - sep_services
 sep_services:
   SEPD:
     description: 'Incorrect: fixed at ID 0, sepd is a play on launchd'
@@ -52,60 +54,19 @@ sep_services:
     - id: 39
       const: kOpCode_SEPOSPANIC
       description: Panic the SEPOS
-  slog:
-    description: SEP logging service
-    xnu_name: AppleSEPLogger
-    xnu_kext: AppleSEPManager
+  artr:
+    description: Anti-replay token request
+    xnu_name:
   arts:
     description: Anti-replay Token Storage
     xnu_name: AppleSEPARTStorage
     xnu_kext: AppleSEPManager
-  artr:
-    description: Anti-replay token request
-    xnu_name:
-  sepS:
-    description: SEP services endpoint
-  sbio:
-    description: Secure Biometic Services
-  skgs:
-    description: Secure Key Generation Service
-  xarm:
-    description: xART
-  xars:
-    description: xART
   cntl:
     description:
-  sidv:
-    description:
-  test:
-    description: Test Service
-  sars:
-    description: Secure Anti-Replay Service
-  enti:
-    description: Entitlement Service
   debg:
     description: Debug
     xnu_name: AppleSEPDebug
     xnu_kext: AppleSEPManager
-  "sks\0":
-    description: Secure Key Storage (AppleKeyStore)
-    xnu_name: AppleSEPKeyStore
-    xnu_kext: AppleSEPKeyStore
-  "sse\0":
-    description: Proxy access to the SE (secure element)
-    xnu_kext: AppleSSE
-  scrd:
-    description: Secure Credential Manager (AppleCredentialStore)
-    xnu_kext: AppleCredentialManager
-  lpol:
-    name: boot_policy
-    description: Manage Apple Silicon macOS boot policy
-    opcodes:
-    - id: 2
-      name: begin_update_policy
-      description: Begin a boot policy update operation
-    - id: 3
-      name: end_update_policy
   disc:
     fixed_endpoint: 253
     name: discovery
@@ -140,6 +101,8 @@ sep_services:
             char ool_out_min_pages;
             char ool_out_max_pages;
           };
+  enti:
+    description: Entitlement Service
   krnl:
     fixed_endpoint: 254
     name: L4info
@@ -200,6 +163,24 @@ sep_services:
     - id: 64
       name: L4_KernelInterface
       description: Get information about the running L4 kernel
+  lpol:
+    name: boot_policy
+    description: Manage Apple Silicon macOS boot policy
+    opcodes:
+    - id: 2
+      name: begin_update_policy
+      description: Begin a boot policy update operation
+    - id: 3
+      name: end_update_policy
+  sars:
+    description: Secure Anti-Replay Service
+  sbio:
+    description: Secure Biometic Services
+  scrd:
+    description: Secure Credential Manager (AppleCredentialStore)
+    xnu_kext: AppleCredentialManager
+  sepS:
+    description: SEP services endpoint
   sepr:
     fixed_endpoint: 255
     name: seprom
@@ -213,3 +194,24 @@ sep_services:
     - id: 10
       name: random
       description: get random bytes from the SEP
+  sidv:
+    description:
+  skgs:
+    description: Secure Key Generation Service
+  "sks\0":
+    description: Secure Key Storage (AppleKeyStore)
+    xnu_name: AppleSEPKeyStore
+    xnu_kext: AppleSEPKeyStore
+  slog:
+    description: SEP logging service
+    xnu_name: AppleSEPLogger
+    xnu_kext: AppleSEPManager
+  "sse\0":
+    description: Proxy access to the SE (secure element)
+    xnu_kext: AppleSSE
+  test:
+    description: Test Service
+  xarm:
+    description: xART
+  xars:
+    description: xART

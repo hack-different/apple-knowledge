@@ -2,3 +2,129 @@
 metadata:
   description:
   credits:
+  collections:
+  - values
+  - stores
+  - entitlements
+stores:
+  0Cfg:
+    description: Hypervisor Domain 0 SysCfg
+  ADCL:
+    name: Apple Display Calibration Store
+  ADDA:
+  appv:
+  dCfg:
+    name: Display Config Store
+  eCfg:
+    name: NVMe Config Store
+  fCfg:
+    name: Firmware SysCfg Store
+  seal:
+    name: Seal of FDR Data
+  trst:
+    name: Trust Object
+entitlements:
+  SrvP:
+  SrvT:
+  esca:
+  faic:
+  faus:
+  fsca:
+values:
+  AICl:
+  ARNC:
+  AROC:
+  ARSC:
+  ARXC:
+  ARXN:
+  ARot:
+  ASCl:
+  BCAL:
+  BCAR:
+  BGMt:
+  BMac:
+    description: Bluetooth MAC Address
+  BTBF:
+  BTRx:
+  BTTx:
+  CDCC:
+  CFG#:
+    description: Configuration Number
+  CGMt:
+  CGSp:
+  CLBG:
+  CLCG:
+    description: Cover glass (gloss or opaque)
+  CLCL:
+  CLHS:
+  CMOC:
+  CPAS:
+  CRot:
+  CSCM:
+  CVCC:
+  Coor:
+    description: Country of Origin
+    values:
+    - C
+  DBCl:
+  DClr:
+  DPCl:
+  DTCl:
+  EMac:
+  EMc2:
+  EnMt:
+  GICl:
+  GRNC:
+  GRSC:
+  GRXC:
+  GRXN:
+  GRot:
+  GSCl:
+  GYTT:
+  JRot:
+  LTAO:
+  MBac:
+  MDCC:
+  MLB#:
+    description: Main Logic Board Serial Number
+  MdlC:
+    description: Model Configuration (key value seperated by ";" and "key=value")
+  MiGB:
+  MiGH:
+  MkBH:
+  MkBS:
+  Mod#:
+    description: Model Number
+  PRTT: "(Pressure Sensor / Barometer) temp-compensation-table"
+  PSCl:
+  PrCL:
+  PxCl: "(Proximity Sensor) prox-calibration"
+  RACa:
+  RACm:
+  RFEM:
+  RMd#:
+    description: Regulatory Model Number
+  RSKU:
+    description: Region SKU (in US "/LLA")
+  Regn:
+    description: Region Info
+  RxCL:
+  SBVr:
+  SPPO: "(Pressure Sensor / Barometer) pressure-offset-calibration"
+  STRB:
+  SpGH:
+  SpPH:
+  SrNm:
+    description: Serial Number
+  SwBh:
+    description: Software Behavior
+  TCID:
+  TCal:
+  TMac:
+  WCAL:
+    description: WiFi Calibration Data
+  WMac:
+  WSKU:
+    description: WiFi Chip / Product SKU
+  ksku:
+  rpcp:

@@ -16,10 +16,7 @@
 		<key>CSR_ALLOW_APPLE_INTERNAL</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Allows for AppleInternal (non-production signed code)</string>
 			<key>disable_default</key>
 			<true/>
 			<key>value</key>
@@ -30,17 +27,14 @@
 			<key>always_enforced</key>
 			<true/>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>This indicates that the device is booted into a mode whereby `bputil` will allow changes</string>
 			<key>value</key>
 			<integer>128</integer>
 		</dict>
 		<key>CSR_ALLOW_EXECUTABLE_POLICY_OVERRIDE</key>
 		<dict>
 			<key>description</key>
-			<string>override spctl or executable policy</string>
+			<string>override trust-cache or executable policy</string>
 			<key>value</key>
 			<integer>1024</integer>
 		</dict>
@@ -56,7 +50,7 @@
 		<key>CSR_ALLOW_TASK_FOR_PID</key>
 		<dict>
 			<key>description</key>
-			<string>allow getting the pid task, required for debugging</string>
+			<string>allow getting the pid task, required for privileged debugging</string>
 			<key>disable_default</key>
 			<true/>
 			<key>value</key>
@@ -72,10 +66,7 @@
 		<key>CSR_ALLOW_UNAUTHENTICATED_ROOT</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Permits the root filesystem to lack SSV (signed system volume) protection</string>
 			<key>value</key>
 			<integer>2048</integer>
 		</dict>
@@ -153,8 +144,119 @@
 			<integer>1</integer>
 		</dict>
 	</dict>
+	<key>csrutil</key>
+	<dict>
+		<key>commands</key>
+		<dict>
+			<key>authenticated-root</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>disable</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>enable</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>netboot</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>report</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>status</key>
+			<dict>
+				<key>description</key>
+				<string>Shows</string>
+			</dict>
+			<key>verify-factory-sip</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+		</dict>
+		<key>flags</key>
+		<dict>
+			<key>--no-internal</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>--with</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>--without</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+		</dict>
+		<key>options</key>
+		<dict>
+			<key>basesystem</key>
+			<dict>
+				<key>flag</key>
+				<string>CSR_ALLOW_ANY_RECOVERY_OS</string>
+				<key>name</key>
+				<string>BaseSystem Verification</string>
+			</dict>
+			<key>debug</key>
+			<dict>
+				<key>flag</key>
+				<string>CSR_ALLOW_KERNEL_DEBUGGER</string>
+				<key>name</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>dtrace</key>
+			<dict>
+				<key>flag</key>
+				<string>CSR_ALLOW_UNRESTRICTED_DTRACE</string>
+				<key>name</key>
+				<string>DTrace Restrictions</string>
+			</dict>
+			<key>fs</key>
+			<dict>
+				<key>flag</key>
+				<string>CSR_ALLOW_UNRESTRICTED_FS</string>
+				<key>name</key>
+				<string>Filesystem Protections</string>
+			</dict>
+			<key>kext</key>
+			<dict>
+				<key>flag</key>
+				<string>CSR_ALLOW_UNTRUSTED_KEXTS</string>
+				<key>name</key>
+				<string>Kext Signing</string>
+			</dict>
+			<key>nvram</key>
+			<dict>
+				<key>flag</key>
+				<string>CSR_ALLOW_UNRESTRICTED_NVRAM</string>
+				<key>name</key>
+				<string>NVRAM Protections</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>metadata</key>
 	<dict>
+		<key>collections</key>
+		<array>
+			<string>csr_process_capabilities</string>
+		</array>
 		<key>credits</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
 		<data>

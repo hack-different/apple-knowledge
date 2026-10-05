@@ -2,8 +2,109 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>fdr_modes</key>
+	<dict>
+		<key>base</key>
+		<dict>
+			<key>description</key>
+			<string>Objects for the device directly, indicates no factory process or mode in use.</string>
+		</dict>
+		<key>mandev</key>
+		<dict>
+			<key>description</key>
+			<string>The &quot;Managed Device&quot;, or the device attached to the `mansta` to be configured or tested at a factory</string>
+		</dict>
+		<key>mansta</key>
+		<dict>
+			<key>description</key>
+			<string>The &quot;Management Station&quot;, or factory station being used to configure a device at an Apple factory using factory tooling and images</string>
+		</dict>
+	</dict>
+	<key>fdr_objects</key>
+	<dict>
+		<key>ADCL</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>FSCl</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>HmCA</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>NvMR</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>appv</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>dCfg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>eCfg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>fCfg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>hop0</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>lcrt</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>pcrt</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>scrt</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>sePk</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>seal</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>trst</key>
+		<dict>
+			<key>description</key>
+			<string>The trust object establishes the signing root for FDR objects, the SSL CA for connections to FDR, the set of revoked keys, as well as trusted public keys</string>
+		</dict>
+	</dict>
 	<key>fdr_properties</key>
 	<dict>
+		<key>ADCL</key>
+		<dict>
+			<key>description</key>
+			<string>Raw Panel / Coverglass</string>
+		</dict>
 		<key>AlsH</key>
 		<dict>
 			<key>description</key>
@@ -37,6 +138,22 @@
 				<string>mandev</string>
 				<string>mansta</string>
 			</array>
+			<key>data</key>
+			<dict>
+				<key>comb</key>
+				<dict>
+					<key>fdrd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+					<key>secb</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+			</dict>
 			<key>description</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
 			<data>
@@ -59,10 +176,7 @@
 				<string>mansta</string>
 			</array>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Ambient Light Sensor</string>
 		</dict>
 		<key>HmCl</key>
 		<dict>
@@ -71,6 +185,11 @@
 			<data>
 			BAgw
 			</data>
+		</dict>
+		<key>IM4C</key>
+		<dict>
+			<key>description</key>
+			<string>Img4 Certificate</string>
 		</dict>
 		<key>IfCl</key>
 		<dict>
@@ -160,6 +279,11 @@
 			<key>description</key>
 			<string>Baseband</string>
 		</dict>
+		<key>comb</key>
+		<dict>
+			<key>description</key>
+			<string>Combined FDR object</string>
+		</dict>
 		<key>dCfg</key>
 		<dict>
 			<key>contexts</key>
@@ -191,6 +315,11 @@
 			<key>description</key>
 			<string>eSIM Embedded ID (EID)</string>
 		</dict>
+		<key>esdm</key>
+		<dict>
+			<key>description</key>
+			<string>Effective Security Domain Mode</string>
+		</dict>
 		<key>fCfg</key>
 		<dict>
 			<key>contexts</key>
@@ -204,6 +333,16 @@
 			<data>
 			BAgw
 			</data>
+		</dict>
+		<key>fdr2</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>fdrd</key>
+		<dict>
+			<key>description</key>
+			<string>FDR2 Data</string>
 		</dict>
 		<key>hop0</key>
 		<dict>
@@ -308,13 +447,25 @@
 		</dict>
 		<key>meid</key>
 		<dict>
-			<key>description</key>
+			<key>title</key>
 			<string>Mobile Equipment Identifier (CMDA)</string>
 		</dict>
+		<key>mft2</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>mlb#</key>
 		<dict>
-			<key>description</key>
+			<key>title</key>
 			<string>Main Logic Board Serial Number</string>
+		</dict>
+		<key>mmap</key>
+		<dict>
+			<key>description</key>
+			<string>The memory map passed from the iBoot loader to the Kernel</string>
+			<key>title</key>
+			<string>Memory Map</string>
 		</dict>
 		<key>nuid</key>
 		<dict>
@@ -480,6 +631,20 @@
 			BAgw
 			</data>
 		</dict>
+		<key>rssl</key>
+		<dict>
+			<key>description</key>
+			<string>Root SSL / TLS certificate</string>
+			<key>title</key>
+			<string>Recovery SSL</string>
+		</dict>
+		<key>rvok</key>
+		<dict>
+			<key>description</key>
+			<string>FDR trust object list of revoked certificates / public keys</string>
+			<key>title</key>
+			<string>Revocation List</string>
+		</dict>
 		<key>scrt</key>
 		<dict>
 			<key>contexts</key>
@@ -487,10 +652,12 @@
 				<string>base</string>
 			</array>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>SEP Certificate</string>
+		</dict>
+		<key>sePK</key>
+		<dict>
+			<key>description</key>
+			<string>Point Compressed Elliptic Curve point sering as the master Public Key for the SE</string>
 		</dict>
 		<key>seal</key>
 		<dict>
@@ -499,15 +666,24 @@
 				<string>base</string>
 			</array>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Used to provide a cryptographic seal of the data that is restored to the device via FDR to prevent tampering with said data.</string>
+			<key>title</key>
+			<string>FDR Sealing Object</string>
 		</dict>
+		<key>secb</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>seid</key>
 		<dict>
 			<key>description</key>
 			<string>Secure Element ID (for NFC / Payments)</string>
+		</dict>
+		<key>sreq</key>
+		<dict>
+			<key>description</key>
+			<string>Sealing request</string>
 		</dict>
 		<key>tCfg</key>
 		<dict>
@@ -529,6 +705,20 @@
 			BAgw
 			</data>
 		</dict>
+		<key>trpk</key>
+		<dict>
+			<key>description</key>
+			<string>Trusted Public Key</string>
+			<key>title</key>
+			<string>Trusted Public Keys</string>
+		</dict>
+		<key>trst</key>
+		<dict>
+			<key>description</key>
+			<string>The various data required to connect to FDR, includes the remote SSL root, revocation list, and trusted public keys</string>
+			<key>title</key>
+			<string>Trust Object</string>
+		</dict>
 		<key>tsid</key>
 		<dict>
 			<key>description</key>
@@ -548,12 +738,34 @@
 	</dict>
 	<key>metadata</key>
 	<dict>
+		<key>collections</key>
+		<array>
+			<string>fdr_properties</string>
+		</array>
 		<key>credits</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
 		<data>
 		BAgw
 		</data>
 		<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
+	<key>to_be_signed_keys</key>
+	<dict>
+		<key>DGST</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>clid</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>inst</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
 		<data>
 		BAgw

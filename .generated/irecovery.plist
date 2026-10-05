@@ -174,6 +174,24 @@
 		</dict>
 		<dict>
 			<key>board_id</key>
+			<integer>1</integer>
+			<key>board_name</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>chip_id</key>
+			<integer>25856</integer>
+			<key>product_id</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>product_name</key>
+			<string>Apple Vision Pro (R1)</string>
+		</dict>
+		<dict>
+			<key>board_id</key>
 			<integer>4</integer>
 			<key>board_name</key>
 			<string>N56AP</string>
@@ -2034,6 +2052,18 @@
 		</dict>
 		<dict>
 			<key>board_id</key>
+			<integer>66</integer>
+			<key>board_name</key>
+			<string>n301</string>
+			<key>chip_id</key>
+			<integer>33042</integer>
+			<key>product_id</key>
+			<string>RealityDevice14,1</string>
+			<key>product_name</key>
+			<string>Apple Vision Pro</string>
+		</dict>
+		<dict>
+			<key>board_id</key>
 			<integer>8</integer>
 			<key>board_name</key>
 			<string>D37AP</string>
@@ -2923,9 +2953,49 @@
 	</array>
 	<key>env_vars</key>
 	<array>
+		<string>AAPL,ignore</string>
+		<string>ApChipID</string>
+		<string>AppleSecureBootWindowsPolicy</string>
+		<string>BOSCatalogURL</string>
+		<string>BaseSystemAccessabiliityFeatures</string>
+		<string>BluetoothInfo</string>
+		<string>BluetoothUHEDevices</string>
+		<string>DClr_override</string>
+		<string>DebugBluetoothHIDShim</string>
+		<string>DefaultBackgroundColor</string>
+		<string>GPUROM</string>
+		<string>HW_BOOT_DATA</string>
+		<string>HardwareModel</string>
+		<string>IASCurrentInstallPhase</string>
+		<string>IASInstallPhaseList</string>
+		<string>IASUCatalogURL</string>
+		<string>IDInstallerDataV2</string>
+		<string>IOBusyInterest</string>
+		<string>IODeviceMemory</string>
+		<string>IONVRAM-FORCESYNCNOW-PROPERTY</string>
+		<string>IOPlatformActiveAction</string>
+		<string>IOPlatformHaltRestartAction</string>
+		<string>IOPlatformPanicAction</string>
+		<string>IOPlatformQuiensceAction</string>
+		<string>IOPlatformSleepAction</string>
+		<string>IOPlatformWakeAction</string>
+		<string>IORematchPersonality</string>
+		<string>LocationServicesEnabled</string>
+		<string>OTA-fsck-metrics</string>
+		<string>OTA-post-conversion</string>
+		<string>OTA-pre-conversion</string>
+		<string>OTA-sealvolume-metrics</string>
+		<string>PSFU_STATUS</string>
+		<string>SleepWakeFailurePanic</string>
+		<string>SleepWakeFailureString</string>
+		<string>StartupManagerPolicy</string>
+		<string>StartupMute</string>
+		<string>SystemAudioVolume</string>
+		<string>SystemAudioVolumeExtension</string>
+		<string>SystemAudioVolumeSaved</string>
+		<string>UIScale</string>
 		<string>_csegbufsz_experiment</string>
 		<string>_libmalloc_experiment</string>
-		<string>AAPL,ignore</string>
 		<string>aapl,panic-info</string>
 		<string>aapl,pci</string>
 		<string>acc-cm-override-charger-count</string>
@@ -2937,8 +3007,6 @@
 		<string>aht-results</string>
 		<string>allow-root-hash-mismatch</string>
 		<string>ane-type</string>
-		<string>ApChipID</string>
-		<string>AppleSecureBootWindowsPolicy</string>
 		<string>aud-early-boot-critical</string>
 		<string>auto-boot</string>
 		<string>auto-boot-halt-stage</string>
@@ -2948,14 +3016,12 @@
 		<string>backlight-level</string>
 		<string>backlight-nits</string>
 		<string>base-system-path</string>
-		<string>BaseSystemAccessabiliityFeatures</string>
 		<string>battery-health</string>
 		<string>bluetoothActiveControllerInfo</string>
 		<string>bluetoothHostControllerSwitchBehaviour</string>
-		<string>BluetoothInfo</string>
 		<string>bluetoothInternalControllerInfo</string>
-		<string>BluetoothUHEDevices</string>
 		<string>board-id</string>
+		<string>boop-storage-nonces</string>
 		<string>boot-args</string>
 		<string>boot-breadcrumbs</string>
 		<string>boot-command</string>
@@ -2969,7 +3035,6 @@
 		<string>boot-stage</string>
 		<string>boot-volume</string>
 		<string>bootdelay</string>
-		<string>BOSCatalogURL</string>
 		<string>bt1addr</string>
 		<string>btaddr</string>
 		<string>build-style</string>
@@ -2986,18 +3051,15 @@
 		<string>csr-data</string>
 		<string>current-network</string>
 		<string>darkboot</string>
-		<string>DClr_override</string>
 		<string>debug-gg</string>
 		<string>debug-soc</string>
 		<string>debug-uarts</string>
-		<string>DebugBluetoothHIDShim</string>
 		<string>default-client-ip</string>
 		<string>default-gateway-ip</string>
 		<string>default-mac-address?</string>
 		<string>default-router-ip</string>
 		<string>default-server-ip</string>
 		<string>default-subnet-mask</string>
-		<string>DefaultBackgroundColor</string>
 		<string>device-material</string>
 		<string>diag-device</string>
 		<string>diag-file</string>
@@ -3035,25 +3097,9 @@
 		<string>force-upgrade-fail</string>
 		<string>gpu-policy</string>
 		<string>gpu-power-prefs</string>
-		<string>GPUROM</string>
-		<string>HardwareModel</string>
-		<string>HW_BOOT_DATA</string>
-		<string>IASCurrentInstallPhase</string>
-		<string>IASInstallPhaseList</string>
-		<string>IASUCatalogURL</string>
-		<string>IDInstallerDataV2</string>
 		<string>idle-off</string>
 		<string>input-device</string>
 		<string>input-device-1</string>
-		<string>IOBusyInterest</string>
-		<string>IODeviceMemory</string>
-		<string>IOPlatformActiveAction</string>
-		<string>IOPlatformHaltRestartAction</string>
-		<string>IOPlatformPanicAction</string>
-		<string>IOPlatformQuiensceAction</string>
-		<string>IOPlatformSleepAction</string>
-		<string>IOPlatformWakeAction</string>
-		<string>IORematchPersonality</string>
 		<string>ipaddr</string>
 		<string>is-tethered</string>
 		<string>kaslr-off</string>
@@ -3061,7 +3107,6 @@
 		<string>little-endian?</string>
 		<string>load-base</string>
 		<string>loadaddr</string>
-		<string>LocationServicesEnabled</string>
 		<string>lts-persistance</string>
 		<string>mca-info0</string>
 		<string>mouse-device</string>
@@ -3088,7 +3133,6 @@
 		<string>ota-conv-panic-indicator</string>
 		<string>ota-failure-reason</string>
 		<string>ota-forced-reset-uptime</string>
-		<string>OTA-fsck-metrics</string>
 		<string>ota-initial-breadcrumbs</string>
 		<string>ota-initial-result</string>
 		<string>ota-install-tonight</string>
@@ -3099,8 +3143,6 @@
 		<string>ota-os-version</string>
 		<string>ota-outcome</string>
 		<string>ota-perform-shutdown</string>
-		<string>OTA-post-conversion</string>
-		<string>OTA-pre-conversion</string>
 		<string>ota-reboot-retry-enabled</string>
 		<string>ota-reboot-retry-zone</string>
 		<string>ota-result</string>
@@ -3120,7 +3162,6 @@
 		<string>ota-retry-uptime</string>
 		<string>ota-retry-user-progress</string>
 		<string>ota-retry-warnings</string>
-		<string>OTA-sealvolume-metrics</string>
 		<string>ota-snapshot-update</string>
 		<string>ota-step-battery-level</string>
 		<string>ota-step-codes</string>
@@ -3155,7 +3196,6 @@
 		<string>prev-lang:kbd</string>
 		<string>prevent-restores</string>
 		<string>previous-system-uuid</string>
-		<string>PSFU_STATUS</string>
 		<string>pwr-path</string>
 		<string>radio-error</string>
 		<string>ramdisk-size</string>
@@ -3197,21 +3237,14 @@
 		<string>security-mode</string>
 		<string>security-password</string>
 		<string>selftest-#megs</string>
+		<string>sep-debug-args</string>
 		<string>serverip</string>
-		<string>SleepWakeFailurePanic</string>
-		<string>SleepWakeFailureString</string>
 		<string>soc-bin-offset</string>
-		<string>StartupManagerPolicy</string>
-		<string>StartupMute</string>
 		<string>stress-rack</string>
 		<string>summit-panel-id</string>
 		<string>system-passcode-lock-blob</string>
-		<string>SystemAudioVolume</string>
-		<string>SystemAudioVolumeExtension</string>
-		<string>SystemAudioVolumeSaved</string>
 		<string>target-uuid</string>
 		<string>tbt-options</string>
-		<string>UIScale</string>
 		<string>update-volume</string>
 		<string>upgrade-boot-volume</string>
 		<string>upgrade-fallback-boot-command</string>

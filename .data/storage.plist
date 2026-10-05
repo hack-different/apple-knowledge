@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>metadata</key>
+	<dict>
+		<key>collections</key>
+		<array/>
+		<key>credits</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
+	<key>non_volatile_storage</key>
+	<dict>
+		<key>EAN</key>
+		<dict>
+			<key>description</key>
+			<string>Emulated Apple NOR?</string>
+			<key>parts</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+		</dict>
+		<key>NAND</key>
+		<dict>
+			<key>parts</key>
+			<dict>
+				<key>boot</key>
+				<dict>
+					<key>title</key>
+					<string>Boot Block</string>
+				</dict>
+				<key>diag</key>
+				<dict>
+					<key>title</key>
+					<string>Diagnostic Data</string>
+				</dict>
+				<key>fbbt</key>
+				<dict>
+					<key>title</key>
+					<string>Bad Block Table</string>
+				</dict>
+				<key>firm</key>
+				<dict>
+					<key>title</key>
+					<string>Firmware</string>
+				</dict>
+				<key>fsys</key>
+				<dict>
+					<key>title</key>
+					<string>Filesystem</string>
+				</dict>
+				<key>none</key>
+				<dict>
+					<key>title</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+					<data>
+					BAgw
+					</data>
+				</dict>
+				<key>nvrm</key>
+				<dict>
+					<key>title</key>
+					<string>Firmware</string>
+				</dict>
+				<key>plog</key>
+				<dict>
+					<key>title</key>
+					<string>Effaceable</string>
+				</dict>
+				<key>scfg</key>
+				<dict>
+					<key>title</key>
+					<string>System Config</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>NOR</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>NVMe</key>
+		<dict>
+			<key>parts</key>
+			<dict>
+				<key>EAN</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>diagnostics</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>fsys</key>
+				<dict>
+					<key>dsecription</key>
+					<string>The user filesystem.</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>SEP</key>
+		<dict>
+			<key>description</key>
+			<string>The Lynx or Ocelot directly attached to the SEP</string>
+		</dict>
+		<key>SysCfg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>nvram</key>
+		<dict>
+			<key>formats</key>
+			<dict>
+				<key>NVV3</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>parts</key>
+			<dict>
+				<key>anvram</key>
+				<string>ARM NVRAM (Default for iDevices)</string>
+				<key>common</key>
+				<string>Classical NVRAM for OS specific installs</string>
+				<key>rnvram</key>
+				<string>Intel NVRAM (For devices with a T2)</string>
+				<key>system</key>
+				<string>The &quot;system&quot; layer NVRAM for Apple Silicon (for the domain of the SFR and core APTicket)</string>
+			</dict>
+		</dict>
+		<key>ramrod_shadow</key>
+		<dict>
+			<key>formats</key>
+			<dict>
+				<key>nvram.plist</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+		</dict>
+		<key>xarts</key>
+		<dict>
+			<key>formats</key>
+			<dict>
+				<key>GigaLocker</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

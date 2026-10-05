@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>icloud_services</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+	<data>
+	BAgw
+	</data>
 	<key>icloud_servies</key>
 	<dict>
 		<key>com.apple.ess</key>
@@ -40,6 +45,11 @@
 	</dict>
 	<key>metadata</key>
 	<dict>
+		<key>collections</key>
+		<array>
+			<string>icloud_topics</string>
+			<string>icloud_services</string>
+		</array>
 		<key>credits</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
 		<data>

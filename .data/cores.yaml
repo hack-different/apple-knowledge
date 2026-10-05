@@ -2,6 +2,7 @@
 metadata:
   description: attributes about various Apple SoCs and Boards
   credits:
+  auto_sort: false
 templates:
 - dfu_image_base: 6442450944
   dfu_load_base: 34359738368
@@ -267,6 +268,17 @@ chip_ids:
         product_name: Mac Studio (M2 Ultra, 2023)
         product_id: Mac14,14
         board_name: J475dAP
+  25856:
+    name: R1
+    description: Vision Pro R1
+    architecture: arm64
+    type: AVISP
+    revisions:
+    boards:
+      1:
+        product_name: Apple Vision Pro (R1)
+        product_id:
+        board_name:
   28672:
     name: t7000
     description: A8
@@ -1433,6 +1445,10 @@ chip_ids:
         product_name: MacBook Air (M2, 2023)
         product_id: Mac14,15
         board_name: J415AP
+      66:
+        product_name: Apple Vision Pro
+        product_id: RealityDevice14,1
+        board_name: n301
   33056:
     name: t8120
     description: A16

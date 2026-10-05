@@ -2,8 +2,10 @@
 qualcomm:
   mav13:
     metadata:
+      description:
       credits:
       - rickmark
+      collections: []
     bbfw_contents:
       acdb.mbn:
         description: accessory database
@@ -28,6 +30,9 @@ qualcomm:
         description: hexagon DSP software
   mav20:
     metadata:
+      description:
+      credits: []
+      collections: []
     versions:
     - 1.00.03-5
     - 1.14.04
@@ -75,6 +80,7 @@ qualcomm:
       description: Data on the Qualcomm X55 (Mav21) baseband
       credits:
       - rickmark
+      collections: []
     bbfw_contents:
     - acdb.mbn
     - apdp.mbn

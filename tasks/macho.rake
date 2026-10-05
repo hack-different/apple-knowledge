@@ -8,8 +8,9 @@ require_relative '../lib/common'
 FILESET_REGION = /__REGION\d+/
 
 namespace :data do
+  desc 'Generate data from MachO binaries'
   task :macho do |example|
-    data_file = DataFile.new 'mach_o'
+    data_file = AppleData::DataFile.new 'mach_o'
     file = MachO.open example
 
     binary = file.is_a?(MachO::FatFile) ? file.machos[0] : file

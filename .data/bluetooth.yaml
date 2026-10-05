@@ -2,16 +2,18 @@
 metadata:
   description:
   credits:
+  collections:
+  - uuids
 constants:
   apple_id: 19456
 low_energy:
 - subtype: 2
   description: iBeacon Advertisement Data
 uuids:
-  '0x110B':
-    description: A2DP sink (receiver)
   '0x110A':
     descritpion: A2DP source (sender)
+  '0x110B':
+    description: A2DP sink (receiver)
   '0x1800':
     description: Generic Access Profile
   '0x1801':
@@ -24,18 +26,6 @@ uuids:
     description: Device Information
   '0x180F':
     description: Battery
-  7798082B-B7B7-45A6-9DED-F6B6C4551967:
-  7905F431-B5CE-4E99-A40F-4B1E122D00D0:
-    description: Apple Notification Service (Voice & SMS)
-  87290102-3C51-43B1-A1A9-11B9DC38478B:
-  89D3502B-0F36-433A-8EF4-C502AD55F8DC:
-    description: Apple Media Service
-  9BD708D7-64C7-4E9F-9DED-F6B6C4551967:
-    description: AirPods Specific
-  9FA480E0-4967-4542-9390-D343DC5D04AE:
-    description: Apple Nearby Service
-  D0611E78-BBB4-4591-A5F8-487910AE4366:
-    description: Continuity
   '0xFD43':
     description: Apple (Unknown)
   '0xFD44':
@@ -78,3 +68,15 @@ uuids:
     description: Apple (Unknown)
   '0xFED4':
     description: Apple (Unknown)
+  7798082B-B7B7-45A6-9DED-F6B6C4551967:
+  7905F431-B5CE-4E99-A40F-4B1E122D00D0:
+    description: Apple Notification Service (Voice & SMS)
+  87290102-3C51-43B1-A1A9-11B9DC38478B:
+  89D3502B-0F36-433A-8EF4-C502AD55F8DC:
+    description: Apple Media Service
+  9BD708D7-64C7-4E9F-9DED-F6B6C4551967:
+    description: AirPods Specific
+  9FA480E0-4967-4542-9390-D343DC5D04AE:
+    description: Apple Nearby Service
+  D0611E78-BBB4-4591-A5F8-487910AE4366:
+    description: Continuity

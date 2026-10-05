@@ -9,8 +9,7 @@
 			<key>data</key>
 			<integer>1334440654591915542993625911497130241</integer>
 			<key>description</key>
-			<string>Used for data protection.
-</string>
+			<string>Used for data protection.</string>
 			<key>type</key>
 			<string>uid</string>
 		</dict>
@@ -67,8 +66,7 @@ DeviceTree, pictures).
 			<key>data</key>
 			<integer>291263742049262950426416465193106933345</integer>
 			<key>description</key>
-			<string>Used on A4 devices. A device-specific key. It is used to encrypt the SHSH blobs on the device.
-</string>
+			<string>Used on A4 devices. A device-specific key. It is used to encrypt the SHSH blobs on the device.</string>
 			<key>type</key>
 			<string>uid</string>
 		</dict>
@@ -77,8 +75,7 @@ DeviceTree, pictures).
 			<key>data</key>
 			<integer>32226505706565189832158137978565999945</integer>
 			<key>description</key>
-			<string>It is used to encrypt the data partition key.
-</string>
+			<string>It is used to encrypt the data partition key.</string>
 			<key>type</key>
 			<string>uid</string>
 		</dict>
@@ -105,6 +102,11 @@ before hashing it to become the nonce.
 	</dict>
 	<key>metadata</key>
 	<dict>
+		<key>collections</key>
+		<array>
+			<string>keys</string>
+			<string>derrived_keys</string>
+		</array>
 		<key>credits</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
 		<data>

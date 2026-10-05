@@ -2,6 +2,8 @@
 metadata:
   description:
   credits:
+  collections:
+  - boot_args
 boot_args:
   "-arm64e_preview_abi":
     description:
@@ -10,9 +12,6 @@ boot_args:
   "-corpse_threshold_system_limit":
     description:
   "-cpuid":
-  medetect_panic:
-  no_medetect:
-    description:
   "-disable_aslr":
     description:
   "-disable_atm":
@@ -487,6 +486,7 @@ boot_args:
     description:
   md:
     description: The "memory device"
+  medetect_panic:
   memmap:
     description:
   meter:
@@ -528,6 +528,8 @@ boot_args:
   no32exec:
     description:
   no_interrupt_masked_debug:
+    description:
+  no_medetect:
     description:
   noidle:
     description:
@@ -833,6 +835,8 @@ boot_args:
     description:
   zc_mag_size:
     description:
+  zc_mag_size():
+    description:
   zc_recirc_denom:
     description:
   zclear_size:
@@ -858,6 +862,4 @@ boot_args:
   zs:
     description:
   zsize:
-    description:
-  zc_mag_size():
     description:

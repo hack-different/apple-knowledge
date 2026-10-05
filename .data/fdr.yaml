@@ -2,9 +2,85 @@
 metadata:
   description:
   credits:
+  collections:
+  - fdr_properties
+fdr_modes:
+  base:
+    description: Objects for the device directly, indicates no factory process or
+      mode in use.
+  mansta:
+    description: The "Management Station", or factory station being used to configure
+      a device at an Apple factory using factory tooling and images
+  mandev:
+    description: The "Managed Device", or the device attached to the `mansta` to be
+      configured or tested at a factory
+fdr_objects:
+  trst:
+    description: The trust object establishes the signing root for FDR objects, the
+      SSL CA for connections to FDR, the set of revoked keys, as well as trusted public
+      keys
+  fCfg:
+  eCfg:
+  dCfg:
+  appv:
+  ADCL:
+  FSCl:
+  HmCA:
+  hop0:
+  lcrt:
+  NvMR:
+  sePk:
+  pcrt:
+  scrt:
+  seal:
 fdr_properties:
+  ADCL:
+    description: Raw Panel / Coverglass
   AlsH:
     description:
+  BMac:
+    description: Bluetooth MAC Address
+  BORD:
+    description: Board ID
+  CmCl:
+    description:
+  FSCl:
+    description:
+    contexts:
+    - mandev
+    - mansta
+    data:
+      comb:
+        fdrd:
+        secb:
+  GpC2:
+    description:
+  HmCA:
+    description: Ambient Light Sensor
+    contexts:
+    - base
+    - mansta
+  HmCl:
+    description:
+  IM4C:
+    description: Img4 Certificate
+  IfCl:
+    description:
+  NvMR:
+    description:
+    contexts:
+    - mandev
+    - mansta
+  SDOM:
+    description: Security Domain
+  ShMC:
+    description:
+  ShSC:
+    description:
+  SrNm:
+    description: Serial Number
+  WMac:
+    description: Wireless MAC Address
   appv:
     description:
     contexts:
@@ -18,12 +94,8 @@ fdr_properties:
     description: Baseband
   bbpv:
     description: Baseband
-  BMac:
-    description: Bluetooth MAC Address
-  BORD:
-    description: Board ID
-  CmCl:
-    description:
+  comb:
+    description: Combined FDR object
   dCfg:
     description:
     contexts:
@@ -37,34 +109,23 @@ fdr_properties:
     description:
   eeid:
     description: eSIM Embedded ID (EID)
+  esdm:
+    description: Effective Security Domain Mode
   fCfg:
     description:
     contexts:
     - base
     - mandev
     - mansta
-  FSCl:
-    description:
-    contexts:
-    - mandev
-    - mansta
-  GpC2:
-    description:
-  HmCA:
-    description:
-    contexts:
-    - base
-    - mansta
-  HmCl:
-    description:
+  fdr2:
+  fdrd:
+    description: FDR2 Data
   hop0:
     description:
     contexts:
     - base
     - mandev
     - mansta
-  IfCl:
-    description:
   ime2:
     description: International Mobile Equipment Identifier 2
   imei:
@@ -91,16 +152,15 @@ fdr_properties:
     - base
     - mansta
   meid:
-    description: Mobile Equipment Identifier (CMDA)
+    title: Mobile Equipment Identifier (CMDA)
+  mft2:
   mlb#:
-    description: Main Logic Board Serial Number
+    title: Main Logic Board Serial Number
+  mmap:
+    title: Memory Map
+    description: The memory map passed from the iBoot loader to the Kernel
   nuid:
     description:
-  NvMR:
-    description:
-    contexts:
-    - mandev
-    - mansta
   pbas:
     description:
   pcic:
@@ -135,39 +195,54 @@ fdr_properties:
     description:
   pwcl:
     description:
-  rcrt:
-    description:
   rMCl:
     description:
   rSCl:
     description:
+  rcrt:
+    description:
+  rssl:
+    title: Recovery SSL
+    description: Root SSL / TLS certificate
+  rvok:
+    title: Revocation List
+    description: FDR trust object list of revoked certificates / public keys
   scrt:
-    description:
+    description: SEP Certificate
     contexts:
     - base
-  SDOM:
-    description: Security Domain
+  sePK:
+    description: Point Compressed Elliptic Curve point sering as the master Public
+      Key for the SE
   seal:
-    description:
+    title: FDR Sealing Object
+    description: Used to provide a cryptographic seal of the data that is restored
+      to the device via FDR to prevent tampering with said data.
     contexts:
     - base
+  secb:
   seid:
     description: Secure Element ID (for NFC / Payments)
-  ShMC:
-    description:
-  ShSC:
-    description:
-  SrNm:
-    description: Serial Number
+  sreq:
+    description: Sealing request
   tCfg:
     description:
     contexts:
     - mansta
   tcrt:
     description:
+  trpk:
+    title: Trusted Public Keys
+    description: Trusted Public Key
+  trst:
+    title: Trust Object
+    description: The various data required to connect to FDR, includes the remote
+      SSL root, revocation list, and trusted public keys
   tsid:
     description:
   vcrt:
     description:
-  WMac:
-    description: Wireless MAC Address
+to_be_signed_keys:
+  DGST:
+  clid:
+  inst:

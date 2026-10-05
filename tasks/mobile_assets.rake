@@ -8,8 +8,8 @@ require 'hashie'
 namespace :data do
   desc 'Update files from MESU'
   task :mobile_assets do
-    data_file = DataFile.new 'mobile_assets'
-    ipsw_data_file = DataFile.new 'ipsw'
+    data_file = AppleData::DataFile.new 'mobile_assets'
+    ipsw_data_file = AppleData::DataFile.new 'ipsw'
 
     data_file.data['mobile_assets'] ||= []
     new_entries = []
@@ -17,7 +17,6 @@ namespace :data do
     ipsw_collection = ipsw_data_file.collection :ipsw_files
 
     data_file.data['mobile_assets'].each do |asset|
-      puts "Updating from: #{asset['url']}"
       xml = Faraday.new.get(asset['url']).body
 
       next unless xml
@@ -51,8 +50,6 @@ namespace :data do
           ipsw_entry['urls'] << { 'url' => ipsw['FirmwareURL'] }
         end
       end
-    rescue StandardError
-      puts 'Unable to parse element'
     end
 
     data_file.save

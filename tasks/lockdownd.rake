@@ -9,24 +9,24 @@ namespace :data do
   namespace :lockdownd do
     desc 'scan lockdownd log for data update'
     task :example do |example_file|
-      data_file = LockdownData.new
+      data_file = Lockdown.new
 
       File.open(example_file, 'r') do |file|
         file.each_line do |line|
           case line
           when DIRTIED_DOMAIN_REGEX
             data_file.ensure_domain_has_property Regexp.last_match(1), Regexp.last_match(2)
-            puts "Dirtied #{Regexp.last_match(1)} key #{Regexp.last_match(2)}"
+
           when GET_VALUE_REGEX
             data_file.ensure_client Regexp.last_match(1)
             key = Regexp.last_match(3) == '(null)' ? nil : Regexp.last_match(3)
             data_file.ensure_domain_has_property Regexp.last_match(2), key
-            puts "Get #{Regexp.last_match(2)} key #{key}"
+
           when SET_VALUE_REGEX
             data_file.ensure_client Regexp.last_match(1)
             key = Regexp.last_match(3) == '(null)' ? nil : Regexp.last_match(3)
             data_file.ensure_domain_has_property Regexp.last_match(2), key, Regexp.last_match(5)
-            puts "Set #{Regexp.last_match(2)} key #{key}"
+
           end
         end
       end

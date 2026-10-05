@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>apple_vdm</key>
+	<dict>
+		<key>1</key>
+		<dict>
+			<key>vdo</key>
+			<array/>
+		</dict>
+		<key>21</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>257</key>
+		<dict>
+			<key>description</key>
+			<string>This VDM appears, followed immediately by a `0x0111` - It appears to be the generic &quot;command&quot; VDM</string>
+			<key>vdo</key>
+			<array>
+				<integer>0</integer>
+				<integer>4</integer>
+				<integer>16777216</integer>
+				<integer>8</integer>
+				<integer>16777220</integer>
+				<integer>12</integer>
+				<integer>100663296</integer>
+				<integer>16</integer>
+				<integer>50331648</integer>
+				<integer>0</integer>
+			</array>
+		</dict>
+		<key>258</key>
+		<dict>
+			<key>attention</key>
+			<dict>
+				<key>0</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>268435456</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>268435460</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>4</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>object_count</key>
+			<integer>2</integer>
+			<key>vdo</key>
+			<array>
+				<dict>
+					<key>objects</key>
+					<array>
+						<integer>0</integer>
+						<integer>536870914</integer>
+					</array>
+				</dict>
+				<dict>
+					<key>objects</key>
+					<array>
+						<integer>4</integer>
+						<integer>196628</integer>
+					</array>
+				</dict>
+				<dict>
+					<key>objects</key>
+					<array>
+						<integer>268435456</integer>
+						<integer>4</integer>
+					</array>
+				</dict>
+				<dict>
+					<key>objects</key>
+					<array>
+						<integer>268435460</integer>
+						<integer>76</integer>
+					</array>
+				</dict>
+				<dict>
+					<key>objects</key>
+					<array>
+						<integer>4</integer>
+						<integer>196628</integer>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<key>261</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>273</key>
+		<dict>
+			<key>description</key>
+			<string>This VDM appears in response to the 0x0101 VDM, seeming to be a generic &quot;response&quot;</string>
+			<key>vdo</key>
+			<array>
+				<integer>536870914</integer>
+				<integer>196628</integer>
+				<integer>4</integer>
+				<integer>76</integer>
+				<integer>196628</integer>
+				<integer>16777216</integer>
+				<integer>536870914</integer>
+			</array>
+		</dict>
+		<key>274</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>32786</key>
+		<dict>
+			<key>command</key>
+			<dict>
+				<key>25428742</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>261</key>
+				<dict>
+					<key>description</key>
+					<string>Reboot (two uint32, mode bitflag then 00 to null)</string>
+					<key>vdm_objects</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+							<data>
+							BAgw
+							</data>
+							<key>values</key>
+							<dict>
+								<key>2147483648</key>
+								<dict>
+									<key>description</key>
+									<string>Reboot</string>
+								</dict>
+							</dict>
+						</dict>
+					</dict>
+				</dict>
+				<key>262</key>
+				<dict>
+					<key>description</key>
+					<string>Enter DFU</string>
+					<key>vdm_objects</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<dict>
+								<key>values</key>
+								<dict>
+									<key>2147549184</key>
+									<dict>
+										<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+										<data>
+										BAgw
+										</data>
+									</dict>
+								</dict>
+							</dict>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+		<key>33</key>
+		<dict>
+			<key>vdo</key>
+			<array/>
+		</dict>
+		<key>5</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>collections</key>
+		<array/>
+		<key>credits</key>
+		<array>
+			<string>rickmark</string>
+		</array>
+		<key>description</key>
+		<string>A breakdown of all USB-C / USB-PD non-standard data (Vendor Defined Messages)</string>
+	</dict>
+	<key>usbc_alternate_modes</key>
+	<dict>
+		<key>apple</key>
+		<dict>
+			<key>modes</key>
+			<dict>
+				<key>2</key>
+				<dict>
+					<key>description</key>
+					<string>Shortly after transitioning to this mode, non-standard &quot;Get_Battery_Cap&quot; commands are issued, indicating this may be a Apple specific charge / power mode (it is also possible that the commands share the command ID with that standard command causing the parsing issue)</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>appears_in</key>
+					<array>
+						<string>Apple Silicon Mac in Recovery Mode</string>
+					</array>
+				</dict>
+			</dict>
+			<key>pids</key>
+			<dict>
+				<key>29458</key>
+				<dict>
+					<key>devices_bcd</key>
+					<dict>
+						<key>8261</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+						<data>
+						BAgw
+						</data>
+					</dict>
+				</dict>
+			</dict>
+			<key>svid</key>
+			<integer>1452</integer>
+		</dict>
+		<key>display_port</key>
+		<dict>
+			<key>svid</key>
+			<integer>65281</integer>
+		</dict>
+		<key>intel</key>
+		<dict>
+			<key>modes</key>
+			<dict>
+				<key>1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>svid</key>
+			<integer>32903</integer>
+		</dict>
+	</dict>
+</dict>
+</plist>

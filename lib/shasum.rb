@@ -4,14 +4,16 @@
 class SHASum
   SHASUM_LINE = /^([0-9a-fA-F]*)\s+(\S+)$/m
 
-  def self.shasum_type?(input)
+  # @param [String] input hash to check
+  # @return [String] type of hash
+  def self.shasum_type(input)
     case input.length
     when 32
       'md5'
     when 40
       'sha1'
     when 56
-      'sha2-224'
+      'sha2-224' # Technically, this could be sha3 or keccak, but apple uses sha2 (same for all below)
     when 64
       'sha2-256'
     when 96
@@ -40,7 +42,7 @@ class SHASum
     @sums.each do |filename, hash|
       entry = collection.ensure_key filename, description: false
       entry['hashes'] ||= {}
-      entry['hashes'][SHASum.shasum_type?(hash)] = hash
+      entry['hashes'][SHASum.shasum_type(hash)] = hash
     end
   end
 end

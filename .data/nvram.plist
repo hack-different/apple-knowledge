@@ -4,6 +4,10 @@
 <dict>
 	<key>metadata</key>
 	<dict>
+		<key>collections</key>
+		<array>
+			<string>nvram_variables</string>
+		</array>
 		<key>credits</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
 		<data>
@@ -14,6 +18,26 @@
 		<data>
 		BAgw
 		</data>
+	</dict>
+	<key>nvram_scopes</key>
+	<dict>
+		<key>common</key>
+		<dict>
+			<key>description</key>
+			<string>For Apple Silicon Macs - The Per OS or Non-SFR / System NVRAM</string>
+			<key>uuid</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+		</dict>
+		<key>system</key>
+		<dict>
+			<key>description</key>
+			<string>For Apple Silicon Macs - The SFR / System Level NVRAM</string>
+			<key>uuid</key>
+			<string>40A0DDD2-77F8-4392-B4A3-1E7304206516</string>
+		</dict>
 	</dict>
 	<key>nvram_variables</key>
 	<dict>
@@ -146,6 +170,12 @@
 		<data>
 		BAgw
 		</data>
+		<key>IONVRAM-FORCESYNCNOW-PROPERTY</key>
+		<dict>
+			<key>description</key>
+			<string>Embedded still throttles NVRAM commits via kIONVRAMSyncNowPropertyKey, but some clients still need a stricter NVRAM commit contract. Please use this with care.
+</string>
+		</dict>
 		<key>IOPlatformActiveAction</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
 		<data>
@@ -415,6 +445,13 @@
 		<data>
 		BAgw
 		</data>
+		<key>boop-storage-nonces</key>
+		<dict>
+			<key>scopes</key>
+			<array>
+				<string>system</string>
+			</array>
+		</dict>
 		<key>boot-args</key>
 		<dict>
 			<key>description</key>
@@ -504,7 +541,7 @@
 		<key>bootdelay</key>
 		<dict>
 			<key>description</key>
-			<string>Seconds to pause before autoboot</string>
+			<string>Seconds to pause before `auto-boot`</string>
 			<key>persistent</key>
 			<true/>
 			<key>type</key>
@@ -536,10 +573,10 @@
 		BAgw
 		</data>
 		<key>com.apple.System.boot-nonce</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-		<data>
-		BAgw
-		</data>
+		<dict>
+			<key>description</key>
+			<string>The persisted random seed that is hashed to become APNonce.  While this value is not changed, the APNonce remains the same.  When a device is booted from DFU, a new value is computed for this which is later in restore saved to ensure that the APTicket remains valid.  Upgrades to APTicket will generate a new nonce value.</string>
+		</dict>
 		<key>com.apple.System.fp-state</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
 		<data>
@@ -1036,10 +1073,10 @@
 		BAgw
 		</data>
 		<key>one-time-boot-command</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-		<data>
-		BAgw
-		</data>
+		<dict>
+			<key>description</key>
+			<string>A boot command to be used on the next reboot, which is then cleared</string>
+		</dict>
 		<key>ota-anomalies</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
 		<data>
@@ -1356,10 +1393,10 @@
 		BAgw
 		</data>
 		<key>policy-nonce-digests</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-		<data>
-		BAgw
-		</data>
+		<dict>
+			<key>description</key>
+			<string>The hashed digests of the recoveryOS, remote and local policies.</string>
+		</dict>
 		<key>pre-recovery-ota-failure-uuid</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
 		<data>
@@ -1392,7 +1429,7 @@
 		<key>prev-lang:kbd</key>
 		<dict>
 			<key>description</key>
-			<string>Default keyboard layout</string>
+			<string>The last selected language and keyboard layout pair</string>
 			<key>scopes</key>
 			<array>
 				<string>common</string>
@@ -1623,6 +1660,11 @@ See IOFireWireController.cpp in IOFireWireFamily: https://github.com/apple-oss-d
 			<key>type</key>
 			<string>number</string>
 		</dict>
+		<key>sep-debug-args</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>serverip</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
 		<data>

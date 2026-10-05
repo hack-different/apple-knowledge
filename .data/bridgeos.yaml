@@ -2,6 +2,11 @@
 metadata:
   description:
   credits:
+  collections:
+  - local_properties
+  - local_services
+  - remote_properties
+  - remote_services
 local_properties:
   AppleInternal:
     description:
@@ -11,11 +16,11 @@ local_properties:
     description:
   BuildVersion:
     description:
+  CPUArchitecture:
+    description:
   CertificateProductionStatus:
     description:
   CertificateSecurityMode:
-    description:
-  CPUArchitecture:
     description:
   DeviceClass:
     description:
@@ -34,11 +39,11 @@ local_properties:
     description:
   EffectiveSecurityModeSEP:
     description:
+  HWModel:
+    description:
   HasSEP:
     description:
     type: boolean
-  HWModel:
-    description:
   Image4Supported:
     description:
   IsUIBuild:
@@ -67,9 +72,9 @@ local_properties:
   UniqueDeviceID:
     description:
 local_services:
-  com.apple.corecaptured.remoteservice:
-    description:
   com.apple.CSCSupportd:
+    description:
+  com.apple.corecaptured.remoteservice:
     description:
   com.apple.mobile.notification_proxy.remote:
     description:
@@ -90,10 +95,10 @@ remote_properties:
   BootSessionUUID:
   BridgeVersion:
   BuildVersion:
+  CPUArchitecture:
   CertificateProductionStatus:
   CertificateSecurityMode:
   ChipID:
-  CPUArchitecture:
   DeviceClass:
   DeviceColor:
   DeviceEnclosureColor:
@@ -102,9 +107,9 @@ remote_properties:
   EffectiveProductionStatusSEP:
   EffectiveSecurityModeAp:
   EffectiveSecurityModeSEP:
+  HWModel:
   HardwarePlatform:
   HasSEP:
-  HWModel:
   Image4CryptoHashMethod:
   Image4Supported:
   InterfaceIndex:
@@ -125,6 +130,16 @@ remote_properties:
   UniqueChipID:
   UniqueDeviceID:
 remote_services:
+  com.apple.CoreKDL.remoteXPC:
+    description:
+  com.apple.RestoreRemoteServices.restoreserviced:
+    version: 2
+    properties:
+      ServiceVersion: 2
+      UsesRemoteXPC: true
+  com.apple.TrustedAccessoryController:
+    properties:
+      UsesRemoteXPC: true
   com.apple.aveservice:
     properties:
       UsesRemoteXPC: true
@@ -134,8 +149,6 @@ remote_services:
   com.apple.corecaptured.remoteservice:
     properties:
       UsesRemoteXPC: true
-  com.apple.CoreKDL.remoteXPC:
-    description:
   com.apple.corespeech.xpc.remote.control:
     properties:
       UsesRemoteXPC: true
@@ -183,18 +196,10 @@ remote_services:
     properties:
       ServiceVersion: 1
       UsesRemoteXPC: true
-  com.apple.RestoreRemoteServices.restoreserviced:
-    version: 2
-    properties:
-      ServiceVersion: 2
-      UsesRemoteXPC: true
   com.apple.sysdiagnose.remote:
     properties:
       UsesRemoteXPC: true
   com.apple.sysdiagnose.stackshot.remote:
-    properties:
-      UsesRemoteXPC: true
-  com.apple.TrustedAccessoryController:
     properties:
       UsesRemoteXPC: true
   com.apple.videoprocessingd.encode.remote:

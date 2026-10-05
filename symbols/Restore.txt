@@ -1,0 +1,112 @@
+/System/Library/PrivateFrameworks/Restore.framework/Versions/A/Restore [arm64e, 0.040132 seconds]:
+    80488F20-E5F8-38C6-B7E8-9FAE36D5DBC3 /System/Library/PrivateFrameworks/Restore.framework/Versions/A/Restore [DYLIB, DYLDSHAREDCACHE, FaultedFromDiskDyldSharedCache, MMap64]  
+        0x00000001a3011000 (  0x4000) __TEXT SEGMENT
+            0x00000001a3011000 (  0x2f00) MACH_HEADER
+            0x00000001a3013f00 (   0x788) __TEXT __text
+                0x00000001a3013f00 (    0x94) RestoreOperation [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a3013f94 (    0x48) -[RestoreHelper init] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a3013fdc (    0x5c) -[RestoreHelper dealloc] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a3014038 (    0xa0) -[RestoreHelper doCommand:withStatusFn:completionFn:andContext:] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a30140d8 (    0x80) -[RestoreHelper(Private) executeCompleted:] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a3014158 (    0x10) -[RestoreHelper(Private) updateStatus:] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a3014168 (   0x178) -[RestoreHelper(Private) asrAgentConnectionCallback:] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a30142e0 (   0x1f0) -[RestoreHelper(Private) doCommand:withStatusFn:andContext:] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a30144d0 (     0xc) __60-[RestoreHelper(Private) doCommand:withStatusFn:andContext:]_block_invoke [FUNC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a30144dc (    0x10) __copy_helper_block_e8_32o [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a30144ec (     0xc) __destroy_helper_block_e8_32o [FUNC, PEXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a30144f8 (     0x8) -[RestoreHelper(Private) commTimeout:] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a3014500 (    0x4c) -[RestoreHelper(Private) authenticate] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a301454c (    0x24) -[RestoreHelper(Private) isAuthenticated] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a3014570 (   0x110) -[RestoreHelper(Private) authWithFlags:] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001a3014680 (     0x8) -[RestoreHelper(Private) askForPassword] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+            0x00000001a3014688 (   0x1e0) __TEXT __auth_stubs
+                0x00000001a3014688 (    0x10) DYLD-STUB$$AuthorizationCopyRights [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014698 (    0x10) DYLD-STUB$$AuthorizationCreate [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a30146a8 (    0x10) DYLD-STUB$$AuthorizationFree [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a30146b8 (    0x10) DYLD-STUB$$AuthorizationFreeItemSet [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a30146c8 (    0x10) DYLD-STUB$$AuthorizationMakeExternalForm [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a30146d8 (    0x10) DYLD-STUB$$CFDictionaryGetValue [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a30146e8 (    0x10) DYLD-STUB$$CFNumberGetValue [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a30146f8 (    0x10) DYLD-STUB$$NSLog [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014708 (    0x10) DYLD-STUB$$_Block_object_assign [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014718 (    0x10) DYLD-STUB$$_Block_object_dispose [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014728 (    0x10) DYLD-STUB$$_CFXPCCreateCFObjectFromXPCObject [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014738 (    0x10) DYLD-STUB$$_CFXPCCreateXPCObjectFromCFObject [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014748 (    0x10) DYLD-STUB$$__stack_chk_fail [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014758 (    0x10) DYLD-STUB$$_os_log_internal [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014768 (    0x10) DYLD-STUB$$getuid [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014778 (    0x10) DYLD-STUB$$objc_alloc [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014788 (    0x10) DYLD-STUB$$objc_autorelease [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014798 (    0x10) DYLD-STUB$$objc_msgSendSuper2 [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a30147a8 (    0x10) DYLD-STUB$$objc_release [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a30147b8 (    0x10) DYLD-STUB$$strlen [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a30147c8 (    0x10) DYLD-STUB$$uuid_generate [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a30147d8 (    0x10) DYLD-STUB$$xpc_connection_cancel [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a30147e8 (    0x10) DYLD-STUB$$xpc_connection_create_mach_service [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a30147f8 (    0x10) DYLD-STUB$$xpc_connection_resume [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014808 (    0x10) DYLD-STUB$$xpc_connection_send_message [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014818 (    0x10) DYLD-STUB$$xpc_connection_set_event_handler [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014828 (    0x10) DYLD-STUB$$xpc_connection_set_oneshot_instance [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014838 (    0x10) DYLD-STUB$$xpc_dictionary_get_string [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014848 (    0x10) DYLD-STUB$$xpc_get_type [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001a3014858 (    0x10) DYLD-STUB$$xpc_release [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+            0x00000001a3014868 (    0x98) __TEXT __objc_methlist
+                0x00000001a3014868 (    0x98) _OBJC_$_INSTANCE_METHODS_RestoreHelper(Private) [NameNList, MangledNameNList, NList] 
+            0x00000001a3014900 (     0x8) __TEXT __const
+            0x00000001a3014908 (    0xfc) __TEXT __cstring
+            0x00000001a3014a04 (    0x88) __TEXT __unwind_info
+            0x00000001a3014a8c (    0x16) __TEXT __objc_classname
+            0x00000001a3014aa2 (   0x212) __TEXT __objc_methname
+            0x00000001a3014cb4 (    0xe5) __TEXT __objc_methtype
+            0x00000001a3014da0 (   0x260) __TEXT __objc_stubs
+                0x00000001a3014da0 (    0x20) objc_msgSend$askForPassword [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014dc0 (    0x20) objc_msgSend$asrAgentConnectionCallback: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014de0 (    0x20) objc_msgSend$authWithFlags: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014e00 (    0x20) objc_msgSend$authenticate [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014e20 (    0x20) objc_msgSend$dataWithBytes:length: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014e40 (    0x20) objc_msgSend$doCommand:withStatusFn:andContext: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014e60 (    0x20) objc_msgSend$doCommand:withStatusFn:completionFn:andContext: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014e80 (    0x20) objc_msgSend$executeCompleted: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014ea0 (    0x20) objc_msgSend$fileSystemRepresentation [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014ec0 (    0x20) objc_msgSend$init [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014ee0 (    0x20) objc_msgSend$invalidate [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014f00 (    0x20) objc_msgSend$isAuthenticated [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014f20 (    0x20) objc_msgSend$mainBundle [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014f40 (    0x20) objc_msgSend$mutableCopy [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014f60 (    0x20) objc_msgSend$numberWithBool: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014f80 (    0x20) objc_msgSend$preferredLocalizations [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014fa0 (    0x20) objc_msgSend$scheduledTimerWithTimeInterval:target:selector:userInfo:repeats: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014fc0 (    0x20) objc_msgSend$setObject:forKey: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001a3014fe0 (    0x20) objc_msgSend$updateStatus: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+        0x00000001dd6be640 (   0x190) __DATA_CONST SEGMENT
+            0x00000001dd6be640 (    0x30) __DATA_CONST __got
+            0x00000001dd6be670 (     0x8) __DATA_CONST __objc_classlist
+            0x00000001dd6be678 (     0x8) __DATA_CONST __objc_imageinfo
+            0x00000001dd6be680 (   0x150) __DATA_CONST __objc_const
+                0x00000001dd6be680 (    0x48) _OBJC_METACLASS_RO_$_RestoreHelper [NameNList, MangledNameNList, NList] 
+                0x00000001dd6be6c8 (   0x108) _OBJC_$_INSTANCE_VARIABLES_RestoreHelper [NameNList, MangledNameNList, NList] 
+        0x00000001dd6be7d0 (   0x290) __AUTH_CONST SEGMENT
+            0x00000001dd6be7d0 (   0x120) __AUTH_CONST __cfstring
+            0x00000001dd6be8f0 (    0x48) __AUTH_CONST __objc_const
+                0x00000001dd6be8f0 (    0x48) _OBJC_CLASS_RO_$_RestoreHelper [NameNList, MangledNameNList, NList] 
+            0x00000001dd6be938 (    0x30) __AUTH_CONST __const
+                0x00000001dd6be938 (    0x30) __block_descriptor_40_e8_32o_e33_v16?0"NSObject<OS_xpc_object>"8l [PEXT, NameNList, MangledNameNList, NList] 
+            0x00000001dd6be968 (    0xf8) __AUTH_CONST __auth_got
+        0x00000001d74f7e70 (    0x50) __AUTH SEGMENT
+            0x00000001d74f7e70 (    0x50) __AUTH __objc_data
+                0x00000001d74f7e70 (    0x28) OBJC_CLASS_$_RestoreHelper [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d74f7e98 (    0x28) OBJC_METACLASS_$_RestoreHelper [EXT, NameNList, MangledNameNList, NList] 
+        0x00000001d606c4f8 (   0x100) __DATA SEGMENT
+            0x00000001d606c4f8 (    0xa8) __DATA __objc_selrefs
+            0x00000001d606c5a0 (    0x30) __DATA __objc_classrefs
+            0x00000001d606c5d0 (     0x8) __DATA __objc_superrefs
+            0x00000001d606c5d8 (    0x20) __DATA __objc_ivar
+                0x00000001d606c5d8 (     0x4) OBJC_IVAR_$_RestoreHelper._startTimer [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d606c5dc (     0x4) OBJC_IVAR_$_RestoreHelper._statusFn [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d606c5e0 (     0x4) OBJC_IVAR_$_RestoreHelper._completionFn [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d606c5e4 (     0x4) OBJC_IVAR_$_RestoreHelper._context [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d606c5e8 (     0x4) OBJC_IVAR_$_RestoreHelper._connection [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d606c5ec (     0x4) OBJC_IVAR_$_RestoreHelper._operation [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d606c5f0 (     0x4) OBJC_IVAR_$_RestoreHelper._authRef [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d606c5f4 (     0x4) OBJC_IVAR_$_RestoreHelper._authorization [EXT, NameNList, MangledNameNList, NList] 
+        0x000000023a910000 (0x37bf0000) __LINKEDIT SEGMENT

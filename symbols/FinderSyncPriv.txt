@@ -1,0 +1,54 @@
+/System/Library/PrivateFrameworks/FinderSyncPriv.framework/Versions/A/FinderSyncPriv [arm64e, 0.037772 seconds]:
+    402524B2-923A-3490-89F0-64A24B2B65FC /System/Library/PrivateFrameworks/FinderSyncPriv.framework/Versions/A/FinderSyncPriv [DYLIB, DYLDSHAREDCACHE, FaultedFromDiskDyldSharedCache, MMap64]  
+        0x00000001b887d000 (  0x4000) __TEXT SEGMENT
+            0x00000001b887d000 (  0x3b30) MACH_HEADER
+            0x00000001b8880b30 (   0x1c0) __TEXT __text
+                0x00000001b8880b30 (   0x168) -[FIFinderSyncExtensionHost initWithInputItems:] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001b8880c98 (    0x58) +[FIFinderSyncExtensionHost _allowedItemPayloadClasses] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+            0x00000001b8880cf0 (    0xb0) __TEXT __auth_stubs
+                0x00000001b8880cf0 (    0x10) DYLD-STUB$$NSClassFromString [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001b8880d00 (    0x10) DYLD-STUB$$_Unwind_Resume [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001b8880d10 (    0x10) DYLD-STUB$$objc_alloc [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001b8880d20 (    0x10) DYLD-STUB$$objc_msgSendSuper2 [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001b8880d30 (    0x10) DYLD-STUB$$objc_opt_class [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001b8880d40 (    0x10) DYLD-STUB$$objc_opt_isKindOfClass [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001b8880d50 (    0x10) DYLD-STUB$$objc_release [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001b8880d60 (    0x10) DYLD-STUB$$objc_retain [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001b8880d70 (    0x10) DYLD-STUB$$objc_retainAutoreleasedReturnValue [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001b8880d80 (    0x10) DYLD-STUB$$object_getClassName [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001b8880d90 (    0x10) DYLD-STUB$$strcmp [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+            0x00000001b8880da0 (    0x2c) __TEXT __objc_methlist
+                0x00000001b8880da0 (    0x18) _OBJC_$_CLASS_METHODS_FIFinderSyncExtensionHost [NameNList, MangledNameNList, NList] 
+                0x00000001b8880db8 (    0x14) _OBJC_$_INSTANCE_METHODS_FIFinderSyncExtensionHost [NameNList, MangledNameNList, NList] 
+            0x00000001b8880dd0 (    0x40) __TEXT __const
+                0x00000001b8880dd0 (    0x38) FinderSyncPrivVersionString [PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001b8880e08 (     0x8) FinderSyncPrivVersionNumber [PEXT, NameNList, MangledNameNList, NList] 
+            0x00000001b8880e10 (    0x30) __TEXT __gcc_except_tab
+                0x00000001b8880e10 (    0x30) GCC_except_table0 [NameNList, MangledNameNList, NList] 
+            0x00000001b8880e40 (    0x84) __TEXT __cstring
+            0x00000001b8880ec4 (    0x5c) __TEXT __unwind_info
+            0x00000001b8880f20 (    0x1a) __TEXT __objc_classname
+            0x00000001b8880f3a (    0x4c) __TEXT __objc_methname
+            0x00000001b8880f86 (    0x13) __TEXT __objc_methtype
+            0x00000001b8880fa0 (    0x60) __TEXT __objc_stubs
+                0x00000001b8880fa0 (    0x20) objc_msgSend$firstObject [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001b8880fc0 (    0x20) objc_msgSend$initWithInputItems: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+                0x00000001b8880fe0 (    0x20) objc_msgSend$setWithObjects: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+        0x00000001d3b6afe0 (    0x30) __DATA_CONST SEGMENT
+            0x00000001d3b6afe0 (     0x8) __DATA_CONST __objc_classlist
+            0x00000001d3b6afe8 (     0x8) __DATA_CONST __objc_imageinfo
+            0x00000001d3b6aff0 (    0x20) __DATA_CONST __objc_selrefs
+        0x00000001deefdc00 (   0x158) __AUTH_CONST SEGMENT
+            0x00000001deefdc00 (    0x60) __AUTH_CONST __cfstring
+            0x00000001deefdc60 (    0x90) __AUTH_CONST __objc_const
+                0x00000001deefdc60 (    0x48) _OBJC_METACLASS_RO_$_FIFinderSyncExtensionHost [NameNList, MangledNameNList, NList] 
+                0x00000001deefdca8 (    0x48) _OBJC_CLASS_RO_$_FIFinderSyncExtensionHost [NameNList, MangledNameNList, NList] 
+            0x00000001deefdcf0 (    0x68) __AUTH_CONST __auth_got
+        0x00000001d7aa1c70 (    0x50) __AUTH SEGMENT
+            0x00000001d7aa1c70 (    0x50) __AUTH __objc_data
+                0x00000001d7aa1c70 (    0x28) OBJC_CLASS_$_FIFinderSyncExtensionHost [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d7aa1c98 (    0x28) OBJC_METACLASS_$_FIFinderSyncExtensionHost [EXT, NameNList, MangledNameNList, NList] 
+        0x00000001d66c7c48 (    0x18) __DATA SEGMENT
+            0x00000001d66c7c48 (    0x10) __DATA __objc_classrefs
+            0x00000001d66c7c58 (     0x8) __DATA __objc_superrefs
+        0x000000023a910000 (0x37bf0000) __LINKEDIT SEGMENT

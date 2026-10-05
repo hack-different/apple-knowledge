@@ -1,0 +1,12 @@
+ARCHES: [string]
+COMMON_OPTS: string
+SYM_FILES: [string]
+FRAMEWORK_FILES: [string]
+XPC_FILES: [string]
+IGNORE_PATHS: [string]
+OUT: string
+PATH_MATCH: Regexp
+
+module Kernel
+  def do_read_symbols: (string?, string, string, string?) -> void
+end

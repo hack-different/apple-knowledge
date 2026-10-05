@@ -1,0 +1,109 @@
+/System/Library/PrivateFrameworks/MachineSettings.framework/Versions/A/MachineSettings [arm64e, 0.041683 seconds]:
+    8B13208E-9D67-3C15-9622-C528F6496FA5 /System/Library/PrivateFrameworks/MachineSettings.framework/Versions/A/MachineSettings [DYLIB, DYLDSHAREDCACHE, FaultedFromDiskDyldSharedCache, MMap64]  
+        0x00000001c115a000 (  0x4000) __TEXT SEGMENT
+            0x00000001c115a000 (  0x280c) MACH_HEADER
+            0x00000001c115c80c (   0xb14) __TEXT __text
+                0x00000001c115c80c (    0x30) getEVSHandle [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115c83c (    0x40) doubleClickThresholdLevel [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115c87c (    0xe4) openIOConnection [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115c960 (    0x8c) setDoubleClickThresholdLevel [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115c9ec (     0x8) setTrackpadBehavior [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115c9f4 (    0x6c) setMultitouchTrackpadBehavior [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115ca60 (    0x28) setTrackpadBehaviorExtended [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115ca88 (   0x168) createDictionaryForTrackpadPreferences [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115cbf0 (   0x170) setTrackpadTapBehavior [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115cd60 (   0x1ec) setIgnoreTrackWhileTypingBehavior [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115cf4c (    0x7c) setIgnoreTrackpadIfMousePresent [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115cfc8 (    0x7c) NSSetMouseButtonClickBehavior [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115d044 (    0xc0) NSMouseButtonClickBehavior [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115d104 (    0x54) setXServeLockEnclosureState [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115d158 (    0x3c) setXServeLockEnclosureStateForConnection [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115d194 (   0x170) createKeyForKeyboard [FUNC, EXT, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115d304 (     0x8) +[SoundSettings sharedSoundSettings] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115d30c (     0x4) -[SoundSettings load] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115d310 (     0x8) -[SoundSettings mainVolume] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115d318 (     0x4) -[SoundSettings setMainVolume:] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+                0x00000001c115d31c (     0x4) -[SoundSettings save] [FUNC, OBJC, NameNList, MangledNameNList, Merged, NList, FunctionStarts] 
+            0x00000001c115d320 (   0x170) __TEXT __auth_stubs
+                0x00000001c115d320 (    0x10) DYLD-STUB$$CFDictionaryCreateMutable [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d330 (    0x10) DYLD-STUB$$CFDictionarySetValue [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d340 (    0x10) DYLD-STUB$$CFNumberCreate [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d350 (    0x10) DYLD-STUB$$CFNumberGetValue [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d360 (    0x10) DYLD-STUB$$CFRelease [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d370 (    0x10) DYLD-STUB$$IOHIDGetParameter [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d380 (    0x10) DYLD-STUB$$IOHIDServiceClientCopyProperty [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d390 (    0x10) DYLD-STUB$$IOHIDSetCFTypeParameter [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d3a0 (    0x10) DYLD-STUB$$IOHIDSetParameter [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d3b0 (    0x10) DYLD-STUB$$IOIteratorNext [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d3c0 (    0x10) DYLD-STUB$$IOMasterPort [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d3d0 (    0x10) DYLD-STUB$$IOObjectRelease [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d3e0 (    0x10) DYLD-STUB$$IOServiceClose [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d3f0 (    0x10) DYLD-STUB$$IOServiceGetMatchingServices [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d400 (    0x10) DYLD-STUB$$IOServiceMatching [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d410 (    0x10) DYLD-STUB$$IOServiceOpen [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d420 (    0x10) DYLD-STUB$$NSLog [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d430 (    0x10) DYLD-STUB$$NXClickTime [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d440 (    0x10) DYLD-STUB$$NXOpenEventStatus [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d450 (    0x10) DYLD-STUB$$NXSetClickSpace [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d460 (    0x10) DYLD-STUB$$NXSetClickTime [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d470 (    0x10) DYLD-STUB$$objc_retain [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+                0x00000001c115d480 (    0x10) DYLD-STUB$$syslog$DARWIN_EXTSN [DYLD-STUB, LENGTH, NameNList, MangledNameNList, NList] 
+            0x00000001c115d490 (    0x50) __TEXT __objc_methlist
+                0x00000001c115d490 (    0x18) _OBJC_$_CLASS_METHODS_SoundSettings [NameNList, MangledNameNList, NList] 
+                0x00000001c115d4a8 (    0x38) _OBJC_$_INSTANCE_METHODS_SoundSettings [NameNList, MangledNameNList, NList] 
+            0x00000001c115d4e0 (   0xa04) __TEXT __cstring
+            0x00000001c115dee4 (    0x7c) __TEXT __unwind_info
+            0x00000001c115df60 (     0xe) __TEXT __objc_classname
+            0x00000001c115df6e (    0x4a) __TEXT __objc_methname
+            0x00000001c115dfb8 (    0x23) __TEXT __objc_methtype
+            0x00000001c115dfe0 (    0x20) __TEXT __objc_stubs
+                0x00000001c115dfe0 (    0x20) objc_msgSend$stringWithFormat: [FUNC, PEXT, NameNList, MangledNameNList, NList] 
+        0x00000001d3b721d8 (    0x68) __DATA_CONST SEGMENT
+            0x00000001d3b721d8 (    0x28) __DATA_CONST __got
+            0x00000001d3b72200 (     0x8) __DATA_CONST __objc_classlist
+            0x00000001d3b72208 (     0x8) __DATA_CONST __objc_imageinfo
+            0x00000001d3b72210 (    0x30) __DATA_CONST __objc_selrefs
+        0x00000001df4f9618 (   0x970) __AUTH_CONST SEGMENT
+            0x00000001df4f9618 (   0x820) __AUTH_CONST __cfstring
+            0x00000001df4f9e38 (    0x90) __AUTH_CONST __objc_const
+                0x00000001df4f9e38 (    0x48) _OBJC_METACLASS_RO_$_SoundSettings [NameNList, MangledNameNList, NList] 
+                0x00000001df4f9e80 (    0x48) _OBJC_CLASS_RO_$_SoundSettings [NameNList, MangledNameNList, NList] 
+            0x00000001df4f9ec8 (    0xc0) __AUTH_CONST __auth_got
+        0x00000001d680d538 (    0xec) __DATA SEGMENT
+            0x00000001d680d538 (     0x8) __DATA __objc_classrefs
+            0x00000001d680d540 (    0xe0) __DATA __data
+                0x00000001d680d540 (     0x8) DoubleClickThresholdTimeKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d548 (     0x8) MouseScalingKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d550 (     0x8) UseLinearAccelerationKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d558 (     0x8) ScrollWheelScalingKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d560 (     0x8) TrackPadScalingKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d568 (     0x8) TrackPadScrollingKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d570 (     0x8) TrackPadTapBehaviorKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d578 (     0x8) TrackPadScrollBehaviorKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d580 (     0x8) TrackPadIgnoreTypingKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d588 (     0x8) TrackPadEnableSecondaryClick [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d590 (     0x8) TrackPadCornerClickBehavior [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d598 (     0x8) TrackPadRotateGesture [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d5a0 (     0x8) TrackpadPinchGesture [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d5a8 (     0x8) TrackpadThreeFingerSwipeGesture [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d5b0 (     0x8) TrackpadFourFingerHorizSwipeGesture [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d5b8 (     0x8) TrackpadFourFingerNavigationHorizSwipeGesture [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d5c0 (     0x8) TrackpadFourFingerNavigationVertSwipeGesture [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d5c8 (     0x8) TrackpadFourFingerVertSwipeGesture [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d5d0 (     0x8) IgnoreTrackpadIfMousePresentKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d5d8 (     0x8) NewIgnoreTrackpadIfMousePresentKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d5e0 (     0x8) SwapMouseButtonsStateKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d5e8 (     0x8) MouseButtonClickBehaviorKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d5f0 (     0x8) FNStateKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d5f8 (     0x8) XServeLockEnclosureStateKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d600 (     0x8) ModifierMappingKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d608 (     0x8) DelayUntilRepeatKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d610 (     0x8) KeyRepeatIntervalKey [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d680d618 (     0x8) NSSoundSettingsChangedNotificationName [EXT, NameNList, MangledNameNList, NList] 
+            0x00000001d680d620 (     0x4) __DATA __bss
+                0x00000001d680d620 (     0x4) getEVSHandle.h [NameNList, MangledNameNList, NList] 
+        0x00000001d70df2c0 (    0x50) __DATA_DIRTY SEGMENT
+            0x00000001d70df2c0 (    0x50) __DATA_DIRTY __objc_data
+                0x00000001d70df2c0 (    0x28) OBJC_CLASS_$_SoundSettings [EXT, NameNList, MangledNameNList, NList] 
+                0x00000001d70df2e8 (    0x28) OBJC_METACLASS_$_SoundSettings [EXT, NameNList, MangledNameNList, NList] 
+        0x000000023a910000 (0x37bf0000) __LINKEDIT SEGMENT

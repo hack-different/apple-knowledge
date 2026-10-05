@@ -2,12 +2,13 @@
 
 require_relative '../lib/shasum'
 require_relative '../lib/merkle'
+require_relative '../lib/cid'
 
 namespace :data do
   namespace :ipsw do
     desc 'process ipsw manifests'
     task :manifests do
-      data_file = DataFile.new 'ipsw'
+      data_file = AppleData::DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
 
       file_path = File.join(TMP_DIR, 'ipsw', 'build_manifests')
@@ -35,7 +36,7 @@ namespace :data do
     namespace :manifests do
       desc 'download ipsw manifests'
       task :download do
-        data_file = DataFile.new 'ipsw'
+        data_file = AppleData::DataFile.new 'ipsw'
         collection = data_file.collection :ipsw_files
 
         file_path = File.join(TMP_DIR, 'ipsw', 'build_manifests')
@@ -60,8 +61,6 @@ namespace :data do
           rescue StandardError
             next
           end
-
-          puts "Unable to get manifest for #{key}"
         end
       end
 
@@ -69,7 +68,7 @@ namespace :data do
       task :local, [:dir] do |_task, args|
         raise("No directory exists at #{args[:dir]}") unless File.directory? args[:dir]
 
-        data_file = DataFile.new 'ipsw'
+        data_file = AppleData::DataFile.new 'ipsw'
         collection = data_file.collection :ipsw_files
 
         file_path = File.join(TMP_DIR, 'ipsw', 'build_manifests')
@@ -80,18 +79,11 @@ namespace :data do
           next if File.exist? output_file
 
           full_path = File.join(args[:dir], key)
-          unless File.exist? full_path
-            puts "Unable to get IPSW for #{key}"
-            next
-          end
+          next unless File.exist? full_path
 
           Zip::File.open(full_path) do |zip_file|
             entry = zip_file.find_entry('BuildManifest.plist')
-            if entry
-              File.write output_file, entry.get_input_stream.read
-            else
-              puts "Unable to get manifest in IPSW at #{full_path}"
-            end
+            File.write output_file, entry.get_input_stream.read if entry
           end
         rescue StandardError
           next
@@ -103,7 +95,7 @@ namespace :data do
     task :dt, [:dir] do |_task, args|
       raise("No directory exists at #{args[:dir]}") unless File.directory? args[:dir]
 
-      data_file = DataFile.new 'ipsw'
+      data_file = AppleData::DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
 
       file_path = File.join(TMP_DIR, 'ipsw', 'device_trees')
@@ -119,8 +111,6 @@ namespace :data do
         Zip::File.foreach(full_path) do |entry|
           entry.extract(File.join(ipsw_root, File.basename(entry.name))) if entry.name.include? 'DeviceTree'
         end
-      rescue StandardError => e
-        puts e
       end
     end
 
@@ -129,7 +119,7 @@ namespace :data do
       filename = args[:shasums]
       raise("File #{filename} does not exist") unless File.exist?(filename)
 
-      data_file = DataFile.new 'ipsw'
+      data_file = AppleData::DataFile.new 'ipsw'
 
       sum = SHASum.from_file filename
       sum.update_collection(data_file.collection(:ipsw_files))
@@ -138,7 +128,7 @@ namespace :data do
 
     desc 'missing IPSWs that have URLs but no hashes'
     task :missing_hashes, [:batch_size] do |_task, args|
-      data_file = DataFile.new 'ipsw'
+      data_file = AppleData::DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
 
       urls = collection.map do |_filename, entry|
@@ -151,10 +141,10 @@ namespace :data do
       if args[:batch_size]
         FileUtils.mkdir_p File.join(TMP_DIR, 'ipsw', 'urls')
         batch_size = args[:batch_size].to_i
-        puts "Writing to download files with batch size of #{batch_size}"
+
         urls.flatten.compact.each_slice(batch_size).with_index do |url_list, index|
           file_path = File.join(TMP_DIR, 'ipsw', 'urls', "batch_#{index}.txt")
-          puts "Writing group #{index} to #{file_path}"
+
           File.open(file_path, 'w') do |file|
             url_list.each do |url|
               file.puts url
@@ -162,7 +152,7 @@ namespace :data do
           end
         end
       else
-        urls.compact.each { |url| puts url }
+        urls.compact
       end
     end
 
@@ -170,19 +160,17 @@ namespace :data do
     task :merkle, [:file] do |_task, args|
       tree = MerkleTree.new File.open(args[:file])
       tree.scan
-
-      ap tree.to_h
     end
 
     desc 'total order each IPSW'
     task :total_order do
-      data_file = DataFile.new 'ipsw'
+      data_file = AppleData::DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
 
       collection.each_value do |entry|
         entry.delete 'description'
 
-        if entry['urls']&.any? { |url| url.is_a?(String) }
+        if entry['urls']&.any?(String)
           entry['urls'] = entry['urls'].map do |url|
             { 'url' => url }
           end
@@ -198,7 +186,7 @@ namespace :data do
     task :missing, [:dir] do |_task, args|
       raise("No directory exists at #{args[:dir]}") unless File.directory? args[:dir]
 
-      data_file = DataFile.new 'ipsw'
+      data_file = AppleData::DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
 
       result = []
@@ -214,31 +202,45 @@ namespace :data do
       rescue StandardError
         next
       end
+    end
 
-      puts result.to_json
+    desc 'Calculate the IPFS addresses for known hashes'
+    task :ipfs do
+      data_file = AppleData::DataFile.new 'ipsw'
+      collection = data_file.collection :ipsw_files
+
+      collection.each_value do |value|
+        value['urls'] ||= []
+        next if value['urls'].any? { |url| url['ipfs'] }
+
+        hashes = value['hashes'] ||= {}
+        hash = hashes['sha2-256']
+        next unless hash
+
+        hash = [hash].pack('H*')
+
+        ipfs_cid = CID.from_hex(hash)
+
+        value['urls'] << { 'ipfs' => ipfs_cid }
+      end
+
+      data_file.save
     end
 
     desc 'invalid IPSWs from local store'
     task :invalid, [:dir] do |_task, args|
       raise("No directory exists at #{args[:dir]}") unless File.directory? args[:dir]
 
-      data_file = DataFile.new 'ipsw'
+      data_file = AppleData::DataFile.new 'ipsw'
       collection = data_file.collection :ipsw_files
 
       collection.each_key do |key|
         full_path = File.join(args[:dir], key)
-        unless File.exist? full_path
-          puts "Missing IPSW: #{key}"
-          next
-        end
+        next unless File.exist? full_path
 
         Zip::File.open(full_path) do |zip_file|
           entry = zip_file.find_entry('BuildManifest.plist')
-          if entry
-            File.write output_file, entry.get_input_stream.read
-          else
-            puts "Unable to get manifest in IPSW at #{full_path}"
-          end
+          File.write output_file, entry.get_input_stream.read if entry
         end
       rescue StandardError
         next

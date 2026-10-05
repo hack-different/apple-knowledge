@@ -17173,6 +17173,16 @@
 				<string>boolean</string>
 			</array>
 		</dict>
+		<key>com.apple.private.driverkit.allows-publish</key>
+		<dict>
+			<key>checks</key>
+			<array>
+				<string>kernel</string>
+			</array>
+			<key>description</key>
+			<string>Entitlement allows a DK driver to publish services to other dexts, using the standard IOKit registerService() or DriverKit RegisterService() api. Those client dexts must have an entitlement specified by the kIODriverKitPublishEntitlementsKey property in the IOService being published, and subscribed in the client dext with IOServiceNotificationDispatchSource.
+</string>
+		</dict>
 		<key>com.apple.private.dt.automationmode.writer-client</key>
 		<dict>
 			<key>description</key>
@@ -18933,10 +18943,7 @@
 		<key>com.apple.private.img4.nonce.trust-cache</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Provides access to the AppleImage4 IOKit Services</string>
 			<key>types</key>
 			<array>
 				<string>boolean</string>
@@ -19178,16 +19185,33 @@
 				<string>boolean</string>
 			</array>
 		</dict>
+		<key>com.apple.private.iokit.system-nvram-hidden-allow</key>
+		<dict>
+			<key>checks</key>
+			<array>
+				<string>kernel</string>
+			</array>
+			<key>description</key>
+			<string>Internal only key to give access to hidden system region variables</string>
+		</dict>
 		<key>com.apple.private.iokit.system-nvram-internal-allow</key>
 		<dict>
+			<key>checks</key>
+			<array>
+				<string>kernel</string>
+			</array>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Internal only key to give access to system region on internal builds</string>
 			<key>types</key>
 			<array>
 				<string>boolean</string>
+			</array>
+		</dict>
+		<key>com.apple.private.iokit.systemstate</key>
+		<dict>
+			<key>checks</key>
+			<array>
+				<string>kernel</string>
 			</array>
 		</dict>
 		<key>com.apple.private.iopol.case_sensitivity</key>
@@ -21690,10 +21714,7 @@
 		<key>com.apple.private.security.AppleImage4.user-client</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Used to authorize user space applications to access the</string>
 			<key>types</key>
 			<array>
 				<string>boolean</string>
@@ -22802,6 +22823,13 @@
 			<key>types</key>
 			<array>
 				<string>boolean</string>
+			</array>
+		</dict>
+		<key>com.apple.private.security.waitquiet-panics</key>
+		<dict>
+			<key>checks</key>
+			<array>
+				<string>kernel</string>
 			</array>
 		</dict>
 		<key>com.apple.private.securityuploadd</key>
@@ -31060,6 +31088,10 @@
 	</dict>
 	<key>metadata</key>
 	<dict>
+		<key>collections</key>
+		<array>
+			<string>entitlements</string>
+		</array>
 		<key>credits</key>
 		<array>
 			<string>rickmark</string>

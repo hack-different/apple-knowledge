@@ -5,12 +5,11 @@ require_relative '../lib/common'
 namespace :data do
   desc 'update firmwares from example manifests in tmp/build_manifests'
   task :firmware do
-    data_file = DataFile.new 'firmware'
+    data_file = AppleData::DataFile.new 'firmware'
 
     firmware_types = data_file.collection :firmware_types
 
     Dir.glob(File.join(TMP_DIR, 'build_manifests', '*.plist')) do |file_path|
-      puts "Reading build manifest file #{file_path}"
       build_manifest = Plist.parse_xml file_path
 
       build_manifest['BuildIdentities'].each do |identity|

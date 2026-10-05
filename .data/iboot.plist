@@ -3,50 +3,272 @@
 <plist version="1.0">
 <dict>
 	<key>commands</key>
-	<array>
-		<string>saveenv</string>
-		<string>setenv</string>
-		<string>getenv</string>
-		<string>reset</string>
-		<string>reboot</string>
-		<string>setenvnp</string>
-		<string>clearenvp</string>
-		<string>alamo</string>
-		<string>rtos</string>
-		<string>diags</string>
-		<string>fsboot</string>
-		<string>upgrade</string>
-		<string>recover</string>
-		<string>recover-once</string>
-	</array>
+	<dict>
+		<key>alamo</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>bgcolor</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>bootx</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>clearenvp</key>
+		<dict>
+			<key>description</key>
+			<string>Clear Environment - Persistent</string>
+		</dict>
+		<key>devicetree</key>
+		<dict>
+			<key>description</key>
+			<string>Sends the DeviceTree for the XNU Kernel</string>
+		</dict>
+		<key>diags</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>enter-tdm-mode</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>firmware</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>fsboot</key>
+		<dict>
+			<key>description</key>
+			<string>Perform a &quot;normal&quot; boot from the disk</string>
+		</dict>
+		<key>getenv</key>
+		<dict>
+			<key>description</key>
+			<string>gets an environment variable</string>
+		</dict>
+		<key>go</key>
+		<dict>
+			<key>secure_disabled</key>
+			<true/>
+		</dict>
+		<key>lpolrestore</key>
+		<dict>
+			<key>description</key>
+			<string>Restores Local Policy to Known Good State</string>
+		</dict>
+		<key>memboot</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>nvme_firmware0</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>ramdisk</key>
+		<dict>
+			<key>description</key>
+			<string>Sends the Restore or Upgrade disk image for `rd=md0`</string>
+		</dict>
+		<key>reboot</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>recover</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>recover-once</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>recover-system</key>
+		<dict>
+			<key>description</key>
+			<string>Boot to System Firmware Recovery</string>
+		</dict>
+		<key>reset</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>rsepfirmware</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>rtos</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>saveenv</key>
+		<dict>
+			<key>description</key>
+			<string>takes the current set of setenv values and writes it back to nvram</string>
+		</dict>
+		<key>setenv</key>
+		<dict>
+			<key>description</key>
+			<string>sets a key to a value in memory</string>
+		</dict>
+		<key>setenvnp</key>
+		<string>Set environment - non-persistent</string>
+		<key>setpicture</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>spi_nand0</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>upgrade</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
 	<key>environment_vars</key>
-	<array>
-		<string>auto-boot</string>
-		<string>boot-args</string>
-		<string>debug-uarts</string>
-		<string>filesize</string>
-		<string>pw-path</string>
-		<string>auto-boot</string>
-		<string>backlight-level</string>
-		<string>boot-command</string>
-		<string>com.apple.System.boot-nonce</string>
-		<string>device-material</string>
-		<string>display-rotation</string>
-		<string>display-vsh-comp</string>
-		<string>idle-off</string>
-		<string>is-tethered</string>
-		<string>darkboot</string>
-		<string>ota-breadcrumbs</string>
-		<string>boot-breadcrumbs</string>
-		<string>recovery-breadcrumbs</string>
-		<string>com.apple.System.tz0-size</string>
-		<string>com.apple.System.rtc-offset</string>
-		<string>pwr-path</string>
-		<string>upgrade-retry</string>
-		<string>preserve-debuggability</string>
-	</array>
+	<dict>
+		<key>auto-boot</key>
+		<dict>
+			<key>description</key>
+			<string>boolean if the device should wait or proceed to boot (usually true)</string>
+		</dict>
+		<key>backlight-level</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>boot-args</key>
+		<dict>
+			<key>description</key>
+			<string>The boot args passed to the XNU Kernel (subject to filtering with `sip3`)</string>
+		</dict>
+		<key>boot-breadcrumbs</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>boot-command</key>
+		<dict>
+			<key>description</key>
+			<string>the command to run if auto-boot is true (usually `fsboot` on iDevices)</string>
+		</dict>
+		<key>com.apple.System.boot-nonce</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.System.rtc-offset</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>com.apple.System.tz0-size</key>
+		<dict>
+			<key>description</key>
+			<string>The size of the SEP TrustZone</string>
+		</dict>
+		<key>com.apple.System.tz1-size</key>
+		<dict>
+			<key>description</key>
+			<string>The size of the CPU TrustZone</string>
+		</dict>
+		<key>darkboot</key>
+		<dict>
+			<key>description</key>
+			<string>(maybe) if the device should power on and not turn on the display (seems like a huge security isseue)</string>
+		</dict>
+		<key>debug-uarts</key>
+		<dict>
+			<key>description</key>
+			<string>a bitfield of which UART lines to enable (such as AP, baseband etc)</string>
+		</dict>
+		<key>device-material</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>display-rotation</key>
+		<dict>
+			<key>description</key>
+			<string>Primary use is for iPad to allow the boot logo to show correct for the way the device is held</string>
+		</dict>
+		<key>display-vsh-comp</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>filesize</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>idle-off</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>is-tethered</key>
+		<dict>
+			<key>description</key>
+			<string>if the device is connected via USB to a host (such as restore etc)</string>
+		</dict>
+		<key>ota-breadcrumbs</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>preserve-debuggability</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>pw-path</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>pwr-path</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>recovery-breadcrumbs</key>
+		<dict>
+			<key>description</key>
+			<string>a series of logged events along the boot path when starting up recovery</string>
+		</dict>
+		<key>upgrade-retry</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
 	<key>metadata</key>
 	<dict>
+		<key>collections</key>
+		<array>
+			<string>tasks</string>
+			<string>commands</string>
+			<string>environment_vars</string>
+			<string>obfuscated_hashes</string>
+		</array>
 		<key>credits</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
 		<data>
@@ -240,16 +462,52 @@
 		<string>lib/macho/kernelcache.c</string>
 	</dict>
 	<key>tasks</key>
-	<array>
-		<string>main</string>
-		<string>poweroff</string>
-		<string>command</string>
-		<string>idleoff</string>
-		<string>usb req</string>
-		<string>usb-high-current</string>
-		<string>usb-no-current</string>
-		<string>usb</string>
-		<string>usb_serial</string>
-	</array>
+	<dict>
+		<key>command</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>idleoff</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>main</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>poweroff</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>usb</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>usb req</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>usb-high-current</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>usb-no-current</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>usb_serial</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
 </dict>
 </plist>

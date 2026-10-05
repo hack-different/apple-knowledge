@@ -2,31 +2,97 @@
 metadata:
   description:
   credits:
+  collections:
+  - tasks
+  - commands
+  - environment_vars
+  - obfuscated_hashes
 tasks:
-- main
-- poweroff
-- command
-- idleoff
-- usb req
-- usb-high-current
-- usb-no-current
-- usb
-- usb_serial
+  command:
+  idleoff:
+  main:
+  poweroff:
+  usb:
+  usb req:
+  usb-high-current:
+  usb-no-current:
+  usb_serial:
 commands:
-- saveenv
-- setenv
-- getenv
-- reset
-- reboot
-- setenvnp
-- clearenvp
-- alamo
-- rtos
-- diags
-- fsboot
-- upgrade
-- recover
-- recover-once
+  alamo:
+  bgcolor:
+  bootx:
+  clearenvp:
+    description: Clear Environment - Persistent
+  devicetree:
+    description: Sends the DeviceTree for the XNU Kernel
+  diags:
+  enter-tdm-mode:
+  firmware:
+  fsboot:
+    description: Perform a "normal" boot from the disk
+  getenv:
+    description: gets an environment variable
+  go:
+    secure_disabled: true
+  lpolrestore:
+    description: Restores Local Policy to Known Good State
+  memboot:
+  nvme_firmware0:
+  ramdisk:
+    description: Sends the Restore or Upgrade disk image for `rd=md0`
+  reboot:
+  recover:
+  recover-once:
+  recover-system:
+    description: Boot to System Firmware Recovery
+  reset:
+  rsepfirmware:
+  rtos:
+  saveenv:
+    description: takes the current set of setenv values and writes it back to nvram
+  setenv:
+    description: sets a key to a value in memory
+  setenvnp: Set environment - non-persistent
+  setpicture:
+  spi_nand0:
+  upgrade:
+environment_vars:
+  auto-boot:
+    description: boolean if the device should wait or proceed to boot (usually true)
+  backlight-level:
+  boot-args:
+    description: The boot args passed to the XNU Kernel (subject to filtering with
+      `sip3`)
+  boot-breadcrumbs:
+  boot-command:
+    description: the command to run if auto-boot is true (usually `fsboot` on iDevices)
+  com.apple.System.boot-nonce:
+  com.apple.System.rtc-offset:
+  com.apple.System.tz0-size:
+    description: The size of the SEP TrustZone
+  com.apple.System.tz1-size:
+    description: The size of the CPU TrustZone
+  darkboot:
+    description: "(maybe) if the device should power on and not turn on the display
+      (seems like a huge security isseue)"
+  debug-uarts:
+    description: a bitfield of which UART lines to enable (such as AP, baseband etc)
+  device-material:
+  display-rotation:
+    description: Primary use is for iPad to allow the boot logo to show correct for
+      the way the device is held
+  display-vsh-comp:
+  filesize:
+  idle-off:
+  is-tethered:
+    description: if the device is connected via USB to a host (such as restore etc)
+  ota-breadcrumbs:
+  preserve-debuggability:
+  pw-path:
+  pwr-path:
+  recovery-breadcrumbs:
+    description: a series of logged events along the boot path when starting up recovery
+  upgrade-retry:
 obfuscated_hashes:
   25629712044137433: arch/arm64/cpu.c
   45546403955607489: drivers/usb/usb_controller.c
@@ -117,27 +183,3 @@ obfuscated_hashes:
   1100221367319980790: lib/huffman/huffman.c
   1126834423361578506: lib/mib/mib.c
   1138901756230437902: target/iphone11/init.c
-environment_vars:
-- auto-boot
-- boot-args
-- debug-uarts
-- filesize
-- pw-path
-- auto-boot
-- backlight-level
-- boot-command
-- com.apple.System.boot-nonce
-- device-material
-- display-rotation
-- display-vsh-comp
-- idle-off
-- is-tethered
-- darkboot
-- ota-breadcrumbs
-- boot-breadcrumbs
-- recovery-breadcrumbs
-- com.apple.System.tz0-size
-- com.apple.System.rtc-offset
-- pwr-path
-- upgrade-retry
-- preserve-debuggability

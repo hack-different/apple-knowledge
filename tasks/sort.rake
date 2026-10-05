@@ -17,15 +17,19 @@ desc 'sort everything'
 task :sort do
   path = File.join(DATA_DIR, '**', '*.yaml')
   Dir.glob(path) do |file|
-    YAML.load_file file
+    data_file = AppleData::DataFile.from_path file
+    next unless data_file.auto_sort?
+
+    data_file.sort!
+    data_file.save!
   end
 end
 
 desc 'sort single collection in data file'
 task :sort_collection, [:data_file, :collection] do |_task, args|
   args[:collection] ||= args[:data_file]
-  data_file = DataFile.new args[:data_file]
+  data_file = AppleData::DataFile.new args[:data_file]
   collection = data_file.collection args[:collection]
-  collection.sort
-  data_file.save
+  collection.sort!
+  data_file.save!
 end

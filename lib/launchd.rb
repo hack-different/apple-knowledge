@@ -40,8 +40,6 @@ module LaunchD
 
   def self.map_services_to_hash(output_data, services)
     services.each do |service|
-      puts "Service Label: #{service['Label']}"
-
       output_data['services'] << map_service_to_hash(service).stringify_keys
     end
 

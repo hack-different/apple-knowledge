@@ -2,201 +2,589 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>img4_tags</key>
+	<key>core</key>
 	<dict>
-		<key>AMNM</key>
-		<dict>
-			<key>description</key>
-			<string>allow mix-n-match</string>
-			<key>type</key>
-			<string>boolean</string>
-		</dict>
-		<key>BLDS</key>
-		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>BNCH</key>
-		<dict>
-			<key>description</key>
-			<string>Boot Nonce Hash - based on the values of com.apple.System.boot-nonces</string>
-		</dict>
-		<key>BORD</key>
-		<dict>
-			<key>alias</key>
-			<array>
-				<string>board-id</string>
-			</array>
-			<key>description</key>
-			<string>The board the chip is attached to.  With iPhones/iPads this is the variation between device sizes (occasionally
-also used for low cost devices like the SE/XR).  This is usually expressed as a hex encoded uint8_t.  Some
-types of board seem to encode a bitfield for non MP (mainline production) boards such as EVT/DVT
-
-With the T2 this value is unique to all MacBooks with the T2.</string>
-			<key>type</key>
-			<string>integer</string>
-		</dict>
-		<key>CEPO</key>
-		<dict>
-			<key>alias</key>
-			<array>
-				<string>chip-epoch</string>
-			</array>
-			<key>description</key>
-			<string>Certificate/Chip Epoch.  This is a unit of roll-forward time (monotonic) that allows for any security issues
-in the prior epoch to be fixed by a anti-rollback scheme.</string>
-		</dict>
-		<key>CHIP</key>
-		<dict>
-			<key>description</key>
-			<string>Unique identifier for a single Apple designed application processor sharing the same GID key</string>
-			<key>width</key>
-			<integer>2</integer>
-		</dict>
-		<key>CHMH</key>
-		<dict>
-			<key>description</key>
-			<string>chained manifest hash</string>
-		</dict>
-		<key>CPRO</key>
-		<dict>
-			<key>alias</key>
-			<array>
-				<string>certificate-production-status</string>
-			</array>
-			<key>description</key>
-			<string>Chip promotion fuse value (what is burned in)</string>
-			<key>type</key>
-			<string>boolean</string>
-		</dict>
-		<key>CSEC</key>
-		<dict>
-			<key>alias</key>
-			<array>
-				<string>certificate-security-mode</string>
-			</array>
-			<key>description</key>
-			<string>Burned-in chip security mode</string>
-		</dict>
-		<key>DGST</key>
-		<dict>
-			<key>description</key>
-			<string>payload digest</string>
-		</dict>
-		<key>DPRO</key>
-		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>DSEC</key>
-		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>ECID</key>
-		<dict>
-			<key>description</key>
-			<string>Exclusive chip identifier.  This is burned into an eFuse at time of manufacture and unique across all devices sharing the same CHIP</string>
-			<key>width</key>
-			<integer>8</integer>
-		</dict>
-		<key>EKEY</key>
-		<dict>
-			<key>description</key>
-			<string>Effective chip promoted</string>
-		</dict>
-		<key>EPRO</key>
-		<dict>
-			<key>alias</key>
-			<array>
-				<string>effective-production-status-ap</string>
-			</array>
-			<key>description</key>
-			<string>Effective chip promotion / demotion state (if CPFM 03 this must be 0 to set ESEC)</string>
-		</dict>
-		<key>ESEC</key>
-		<dict>
-			<key>alias</key>
-			<array>
-				<string>effective-security-mode-ap</string>
-			</array>
-			<key>description</key>
-			<string>Effective security mode</string>
-		</dict>
 		<key>IM4M</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Image4 Manifest Object (No payload, only manifest).  IM4M, verion,</string>
+			<key>title</key>
+			<string>IMG4 Manifest</string>
 		</dict>
 		<key>IM4P</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Image4 Payload (No Manifest, Only Data).  Contains IM4P, type, description, data and optional keybags</string>
+			<key>title</key>
+			<string>IMG4 Payload</string>
 		</dict>
 		<key>IM4R</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Image4 Recovery</string>
 		</dict>
 		<key>IMG4</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>LLB</key>
-		<dict>
-			<key>description</key>
-			<string>Low Level iBoot</string>
-		</dict>
-		<key>LNCH</key>
-		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Wrapper for all Image4 Objects (Payload, Manifest, Recovery)</string>
+			<key>title</key>
+			<string>IMG4 File</string>
 		</dict>
 		<key>MANB</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Manifest Body</string>
+			<key>title</key>
+			<string>Manifest Body</string>
 		</dict>
 		<key>MANP</key>
 		<dict>
 			<key>description</key>
-			<string>Manifest Payload</string>
+			<string>Manifest Properties</string>
+			<key>title</key>
+			<string>Manifest Proeprties</string>
 		</dict>
 		<key>OBJP</key>
+		<dict>
+			<key>description</key>
+			<string>Object Properties - Values that may be assigned per &quot;object&quot; (firmwares) that contain a `DGST`</string>
+			<key>name</key>
+			<string>ObjectPayloadPropertyDigest</string>
+			<key>type</key>
+			<string>sequence</string>
+		</dict>
+	</dict>
+	<key>cryptex_objects</key>
+	<dict>
+		<key>caos</key>
 		<dict>
 			<key>description</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
 			<data>
 			BAgw
 			</data>
+			<key>root</key>
+			<array>
+				<string>ExtraContent</string>
+			</array>
+			<key>title</key>
+			<string>Cryptex Application Signature</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>casy</key>
+		<dict>
+			<key>description</key>
+			<string>App Cryptex SSV Root Hash</string>
+			<key>roots</key>
+			<array>
+				<string>ExtraContents</string>
+			</array>
+			<key>subtype</key>
+			<string>ssv-root-hash</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>csos</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>roots</key>
+			<array>
+				<string>ExtraContent</string>
+			</array>
+			<key>title</key>
+			<string>Cryptex System Signature</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>cssy</key>
+		<dict>
+			<key>description</key>
+			<string>System Cryptex SSV Root Hash</string>
+			<key>roots</key>
+			<array>
+				<string>ExtraContent</string>
+			</array>
+			<key>subtype</key>
+			<string>ssv-root-hash</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>trca</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>roots</key>
+			<array>
+				<string>ExtraContent</string>
+			</array>
+			<key>title</key>
+			<string>Trust Cache Application</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>trcs</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>roots</key>
+			<array>
+				<string>ExtraContent</string>
+			</array>
+			<key>title</key>
+			<string>Trust Cache System</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+	</dict>
+	<key>cryptex_properties</key>
+	<dict>
+		<key>UDID</key>
+		<dict>
+			<key>description</key>
+			<string>universal device identifier</string>
+			<key>name</key>
+			<string>Cryptex1,UDID</string>
+			<key>title</key>
+			<string>Universal Device Identifier</string>
+		</dict>
+		<key>augs</key>
+		<dict>
+			<key>description</key>
+			<string>Auxiliary System Image Included in APTicket CA extensions, as well as factory manifests.  All cryptex manifests, and APTickets other then the root APTicket (the one that is used directly from NOR) have this set to 1, indicating that it is an an addition or replacement to APTicket, but only if authorized.  It also seems to travel with `aubt` and `aupr`</string>
+			<key>roots</key>
+			<array>
+				<string>ExtraContent</string>
+				<string>ManifestKey</string>
+			</array>
+			<key>title</key>
+			<string>Augment System</string>
+		</dict>
+		<key>auxh</key>
+		<dict>
+			<key>context</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>description</key>
+			<string>User Authorized Kext List Hash</string>
+		</dict>
+		<key>clas</key>
+		<dict>
+			<key>description</key>
+			<string>Class for Key / Object - Found in FDR objects</string>
+			<key>examples</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>roots</key>
+			<array>
+				<string>ExtraContent</string>
+			</array>
+			<key>title</key>
+			<string>SEP Extension Command ID</string>
+		</dict>
+		<key>cnch</key>
+		<dict>
+			<key>roots</key>
+			<array>
+				<string>ExtraContent</string>
+			</array>
+			<key>title</key>
+			<string>Cryptex Nonce Hash</string>
+		</dict>
+		<key>fchp</key>
+		<dict>
+			<key>description</key>
+			<string>Chip Family Mask</string>
+			<key>roots</key>
+			<array>
+				<string>ExtraContent</string>
+			</array>
+		</dict>
+		<key>ndom</key>
+		<dict>
+			<key>description</key>
+			<string>Nonce Domain</string>
+			<key>roots</key>
+			<array>
+				<string>ExtraContent</string>
+				<string>ExtraContent</string>
+			</array>
+		</dict>
+		<key>pave</key>
+		<dict>
+			<key>description</key>
+			<string>Pre-authorization Version (XNU) The version of a pre-authorized Cryptex.</string>
+			<key>name</key>
+			<string>Cryptex1,PreauthorizationVersion</string>
+			<key>roots</key>
+			<array>
+				<string>ExtraContent</string>
+			</array>
+			<key>title</key>
+			<string>Pre-Authorized Version Extension</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>snuf</key>
+		<dict>
+			<key>description</key>
+			<string>SoftwareNonceForUpdateFreshness</string>
+			<key>title</key>
+			<string>Software Update Freshness Nonce</string>
+		</dict>
+		<key>styp</key>
+		<dict>
+			<key>alias</key>
+			<array>
+				<string>cryptex subtype</string>
+			</array>
+			<key>description</key>
+			<string>Crytpex Subtype</string>
+			<key>name</key>
+			<string>Cryptex1,SubType</string>
+			<key>roots</key>
+			<array>
+				<string>ExtraContent</string>
+			</array>
+			<key>title</key>
+			<string>Cryptex Subtype</string>
+			<key>type</key>
+			<string>u32</string>
+		</dict>
+		<key>type</key>
+		<dict>
+			<key>description</key>
+			<string>Cryptex Type</string>
+			<key>name</key>
+			<string>Cryptex1,Type</string>
+			<key>roots</key>
+			<array>
+				<string>ExtraContent</string>
+			</array>
+			<key>type</key>
+			<string>integer</string>
+		</dict>
+		<key>vnum</key>
+		<dict>
+			<key>description</key>
+			<string>Version Number - Update Maximum</string>
+			<key>roots</key>
+			<array>
+				<string>ExtraContent</string>
+			</array>
+			<key>title</key>
+			<string>Version Number</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+	</dict>
+	<key>der</key>
+	<dict>
+		<key>acmh</key>
+		<dict>
+			<key>description</key>
+			<string>ACM (Apple Credential Manager) Handle</string>
+		</dict>
+		<key>ad</key>
+		<dict>
+			<key>description</key>
+			<string>Authentication Data</string>
+		</dict>
+		<key>ag</key>
+		<dict>
+			<key>description</key>
+			<string>Access Groups</string>
+		</dict>
+		<key>aonm</key>
+		<dict>
+			<key>description</key>
+			<string>AON Mask</string>
+		</dict>
+		<key>bc</key>
+		<dict>
+			<key>description</key>
+			<string>Keybag Class</string>
+		</dict>
+		<key>bid</key>
+		<dict>
+			<key>description</key>
+			<string>Key BID</string>
+		</dict>
+		<key>ckon</key>
+		<dict>
+			<key>description</key>
+			<string>Key ACL Constraint K of N (Shamir Key Split)</string>
+		</dict>
+		<key>cpo</key>
+		<dict>
+			<key>description</key>
+			<string>Key ACL Constraint Policy</string>
+		</dict>
+		<key>cup</key>
+		<dict>
+			<key>description</key>
+			<string>Key ACL Constraint User Passcode</string>
+		</dict>
+		<key>d</key>
+		<dict>
+			<key>description</key>
+			<string>Data</string>
+		</dict>
+		<key>ed</key>
+		<dict>
+			<key>description</key>
+			<string>External Data</string>
+		</dict>
+		<key>id</key>
+		<dict>
+			<key>description</key>
+			<string>Key ID</string>
+		</dict>
+		<key>iter</key>
+		<dict>
+			<key>description</key>
+			<string>Iterations (Hash Rounds)</string>
+		</dict>
+		<key>kid</key>
+		<dict>
+			<key>description</key>
+			<string>Key UUID</string>
+		</dict>
+		<key>kt</key>
+		<dict>
+			<key>description</key>
+			<string>Key Type</string>
+		</dict>
+		<key>kv</key>
+		<dict>
+			<key>description</key>
+			<string>Key Version</string>
+		</dict>
+		<key>p</key>
+		<dict>
+			<key>description</key>
+			<string>Passcode</string>
+		</dict>
+		<key>pad</key>
+		<dict>
+			<key>description</key>
+			<string>Key Padding (Block alignment bytes)</string>
+		</dict>
+		<key>pd</key>
+		<dict>
+			<key>description</key>
+			<string>Protected Data</string>
+		</dict>
+		<key>pub</key>
+		<dict>
+			<key>description</key>
+			<string>Public Key</string>
+		</dict>
+		<key>rk</key>
+		<dict>
+			<key>description</key>
+			<string>Key Ref Key</string>
+		</dict>
+		<key>rkm</key>
+		<dict>
+			<key>description</key>
+			<string>Ref Key Mask / Key Ref MAC (message authentication code)</string>
+		</dict>
+		<key>tag</key>
+		<dict>
+			<key>description</key>
+			<string>Key Tag</string>
+		</dict>
+		<key>uikp</key>
+		<dict>
+			<key>description</key>
+			<string>UIK Public</string>
+		</dict>
+		<key>wk</key>
+		<dict>
+			<key>description</key>
+			<string>Wrapped Key</string>
+		</dict>
+	</dict>
+	<key>img4_tags</key>
+	<dict>
+		<key>0Cfg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>ADCL</key>
+		<dict>
+			<key>description</key>
+			<string>Apple Display Calibration</string>
+		</dict>
+		<key>ADDA</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>AMNM</key>
+		<dict>
+			<key>title</key>
+			<string>Allow Mix-n-Match</string>
+		</dict>
+		<key>BCAL</key>
+		<dict>
+			<key>title</key>
+			<string>Bluetooth Calibration</string>
+		</dict>
+		<key>BICS</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>BLDS</key>
+		<dict>
+			<key>description</key>
+			<string>Boot LocalPolicy Digest String?</string>
+		</dict>
+		<key>BNCH</key>
+		<dict>
+			<key>title</key>
+			<string>Boot Nonce</string>
+		</dict>
+		<key>BNCN</key>
+		<dict>
+			<key>title</key>
+			<string>Board Nonce</string>
+		</dict>
+		<key>BTBF</key>
+		<dict>
+			<key>title</key>
+			<string>Bluetooth Taurus Calibration Data</string>
+		</dict>
+		<key>CBAT</key>
+		<dict>
+			<key>title</key>
+			<string>Charger Input Limit Calibration</string>
+		</dict>
+		<key>CEPO</key>
+		<dict>
+			<key>title</key>
+			<string>Certificate Epoch</string>
+		</dict>
+		<key>CLHS</key>
+		<dict>
+			<key>description</key>
+			<string>Chained LocalPolicy Hash String</string>
+		</dict>
+		<key>Coor</key>
+		<dict>
+			<key>title</key>
+			<string>Country of Origin</string>
+		</dict>
+		<key>Csta</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>DGST</key>
+		<dict>
+			<key>title</key>
+			<string>Object Digest</string>
+		</dict>
+		<key>DPCl</key>
+		<dict>
+			<key>title</key>
+			<string>Primary Calibration Matrix</string>
+		</dict>
+		<key>DPRO</key>
+		<dict>
+			<key>description</key>
+			<string>Demote from Production Request Value is used by TSS sever to issue EPRO values, or effective AP production state.</string>
+			<key>title</key>
+			<string>Demote Production</string>
+		</dict>
+		<key>DSEC</key>
+		<dict>
+			<key>description</key>
+			<string>Demote from Secure Request Value is used by TSS server to issue ESEC values, or effective AP Security Mode should the requester be authorized.  These requests are not available to consumers, only to Apple Internal.</string>
+			<key>title</key>
+			<string>Demote Security</string>
+		</dict>
+		<key>DTCl</key>
+		<dict>
+			<key>title</key>
+			<string>Display Temperature Calibration</string>
+		</dict>
+		<key>EKEY</key>
+		<dict>
+			<key>title</key>
+			<string>Effective Key Type</string>
+		</dict>
+		<key>EPRO</key>
+		<dict>
+			<key>title</key>
+			<string>Effective Production Status</string>
+		</dict>
+		<key>ESEC</key>
+		<dict>
+			<key>title</key>
+			<string>Effective Security Mode</string>
+		</dict>
+		<key>GLCl</key>
+		<dict>
+			<key>title</key>
+			<string>Gamma Tables Calibration</string>
+		</dict>
+		<key>GYTT</key>
+		<dict>
+			<key>title</key>
+			<string>Gyroscope Temperature Calibration</string>
+		</dict>
+		<key>HMHC</key>
+		<dict>
+			<key>title</key>
+			<string>Chained Manifest Hash</string>
+		</dict>
+		<key>HmCA</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>HmCl</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>LCfg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>LPEM</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>MLB#</key>
+		<dict>
+			<key>title</key>
+			<string>Main Logic Board Serial Number</string>
+		</dict>
+		<key>MdlC</key>
+		<dict>
+			<key>title</key>
+			<string>Model Configuration</string>
 		</dict>
 		<key>PAYP</key>
 		<dict>
@@ -206,68 +594,70 @@ in the prior epoch to be fixed by a anti-rollback scheme.</string>
 			BAgw
 			</data>
 		</dict>
-		<key>RNCH</key>
-		<dict>
-			<key>description</key>
+		<key>PRST</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>RSCH</key>
+		<data>
+		BAgw
+		</data>
+		<key>PRTT</key>
 		<dict>
-			<key>description</key>
-			<string>Research mode</string>
+			<key>title</key>
+			<string>Pressure Temperature Compensation Table</string>
 		</dict>
+		<key>PxCL</key>
+		<dict>
+			<key>title</key>
+			<string>Proximity Calibration Data</string>
+		</dict>
+		<key>RMd#</key>
+		<dict>
+			<key>title</key>
+			<string>Regional Model Number</string>
+		</dict>
+		<key>Rcvr</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>SDOM</key>
 		<dict>
-			<key>alias</key>
-			<array>
-				<string>security-domain</string>
-			</array>
-			<key>description</key>
-			<string>Security domain, or which set of certificates govern device security.
-
-Known values:
-  0x01 - Main Production certificates</string>
-			<key>width</key>
-			<integer>2</integer>
+			<key>title</key>
+			<string>Security Domain</string>
 		</dict>
-		<key>SECM</key>
-		<dict>
-			<key>description</key>
+		<key>SPAY</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>SNON</key>
-		<dict>
-			<key>description</key>
-			<string>SEP Nonce</string>
-		</dict>
+		<data>
+		BAgw
+		</data>
 		<key>SPTM</key>
 		<dict>
 			<key>description</key>
 			<string>Secure Page Table Monitor</string>
 		</dict>
-		<key>UDID</key>
+		<key>SpTS</key>
 		<dict>
-			<key>description</key>
-			<string>universal device identifier</string>
+			<key>title</key>
+			<string>Speaker Thiele-Small Parameters</string>
 		</dict>
-		<key>WCHF</key>
+		<key>SwBh</key>
 		<dict>
-			<key>description</key>
-			<string>Wireless Charging Firmware</string>
+			<key>title</key>
+			<string>Software Behaviour (GreenTea)</string>
 		</dict>
-		<key>acfw</key>
-		<dict>
-			<key>description</key>
+		<key>TBIC</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+		<data>
+		BAgw
+		</data>
+		<key>UCAL</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>WCAL</key>
+		<dict>
+			<key>title</key>
+			<string>Wireless Calibration</string>
 		</dict>
 		<key>ache</key>
 		<dict>
@@ -293,6 +683,16 @@ Known values:
 			BAgw
 			</data>
 		</dict>
+		<key>adba</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>add2</key>
+		<dict>
+			<key>title</key>
+			<string>Chip AP DDI SHA2 384</string>
+		</dict>
 		<key>ader</key>
 		<dict>
 			<key>description</key>
@@ -309,39 +709,70 @@ Known values:
 			BAgw
 			</data>
 		</dict>
-		<key>almo</key>
+		<key>am1d</key>
 		<dict>
-			<key>description</key>
+			<key>title</key>
+			<string>cryptex1 mobile asset dfu</string>
+		</dict>
+		<key>anid</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>anef</key>
-		<dict>
-			<key>description</key>
-			<string>Apple Neural Engine Firmware</string>
-		</dict>
+		<data>
+		BAgw
+		</data>
 		<key>anrd</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Apple Notarized Ram Disk</string>
 		</dict>
 		<key>aofi</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Always on Firmware Image</string>
 		</dict>
-		<key>aopf</key>
+		<key>ap00</key>
 		<dict>
-			<key>description</key>
-			<string>Always on processor firmware</string>
+			<key>title</key>
+			<string>Chip AP Software FF00</string>
+		</dict>
+		<key>ap01</key>
+		<dict>
+			<key>title</key>
+			<string>Chip AP Software FF01</string>
+		</dict>
+		<key>ap06</key>
+		<dict>
+			<key>title</key>
+			<string>Chip AP Software FF06</string>
+		</dict>
+		<key>apc0</key>
+		<dict>
+			<key>title</key>
+			<string>Chip AP Cryptex0</string>
+		</dict>
+		<key>apd2</key>
+		<dict>
+			<key>title</key>
+			<string>Chip AP PDI SHA2 384</string>
+		</dict>
+		<key>apdc</key>
+		<dict>
+			<key>title</key>
+			<string>Chip AP ACDC</string>
+		</dict>
+		<key>apin</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>apkc</key>
+		<dict>
+			<key>title</key>
+			<string>Chip AP KCInstall</string>
+		</dict>
+		<key>apln</key>
+		<dict>
+			<key>title</key>
+			<string>Chip AP Local Prospective</string>
 		</dict>
 		<key>apmv</key>
 		<dict>
@@ -350,6 +781,33 @@ Known values:
 			<data>
 			BAgw
 			</data>
+			<key>title</key>
+			<string>OS Version</string>
+		</dict>
+		<key>aprd</key>
+		<dict>
+			<key>title</key>
+			<string>Chip AP Reduced</string>
+		</dict>
+		<key>aps2</key>
+		<dict>
+			<key>title</key>
+			<string>Chip AP SHA2 384</string>
+		</dict>
+		<key>apsr</key>
+		<dict>
+			<key>title</key>
+			<string>AP Security Research Cryptex Nonce</string>
+		</dict>
+		<key>aptk</key>
+		<dict>
+			<key>title</key>
+			<string>AP Ticket</string>
+		</dict>
+		<key>arms</key>
+		<dict>
+			<key>title</key>
+			<string>ARM Size</string>
 		</dict>
 		<key>ater</key>
 		<dict>
@@ -375,72 +833,21 @@ Known values:
 			BAgw
 			</data>
 		</dict>
-		<key>aubt</key>
-		<dict>
-			<key>description</key>
+		<key>bCfg</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>augs</key>
-		<dict>
-			<key>description</key>
-			<string>Included in APTicket CA extensions</string>
-		</dict>
-		<key>aupr</key>
-		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>auxh</key>
-		<dict>
-			<key>description</key>
-			<string>User Authorized Kext List Hash</string>
-		</dict>
-		<key>auxi</key>
-		<dict>
-			<key>description</key>
-			<string>Auxiliary Kernel Cache Image4 Hash</string>
-		</dict>
-		<key>auxk</key>
-		<dict>
-			<key>description</key>
-			<string>Auxiliary Kernel Cache</string>
-		</dict>
-		<key>auxp</key>
-		<dict>
-			<key>description</key>
-			<string>User Authorized Kext List Hash</string>
-		</dict>
-		<key>auxr</key>
-		<dict>
-			<key>description</key>
-			<string>AuxKC Kext Receipt Hash</string>
-		</dict>
-		<key>avef</key>
-		<dict>
-			<key>description</key>
-			<string>AV Encryption (DRM) Firmware</string>
-		</dict>
-		<key>bat0</key>
-		<dict>
-			<key>description</key>
-			<string>battery image 0</string>
-		</dict>
-		<key>bat1</key>
-		<dict>
-			<key>description</key>
-			<string>battery image 1</string>
-		</dict>
+		<data>
+		BAgw
+		</data>
 		<key>batf</key>
 		<dict>
-			<key>description</key>
-			<string>battery full image</string>
+			<key>title</key>
+			<string>Battery Firmware</string>
 		</dict>
+		<key>berb</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>bles</key>
 		<dict>
 			<key>description</key>
@@ -449,22 +856,106 @@ Known values:
 			BAgw
 			</data>
 		</dict>
-		<key>bstc</key>
+		<key>bmfh</key>
 		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<key>title</key>
+			<string>Boot Manifest Hash</string>
 		</dict>
-		<key>bsys</key>
+		<key>boid</key>
 		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<key>title</key>
+			<string>Boot UUID</string>
 		</dict>
+		<key>c1ab</key>
+		<dict>
+			<key>title</key>
+			<string>Chip Cryptex1 Asset Brain</string>
+		</dict>
+		<key>c1ai</key>
+		<dict>
+			<key>title</key>
+			<string>Chip Cryptex1 Mobile Asset Code Installer AP</string>
+		</dict>
+		<key>c1am</key>
+		<dict>
+			<key>title</key>
+			<string>Chip Cryptex1 Mobile Asset</string>
+		</dict>
+		<key>c1br</key>
+		<dict>
+			<key>title</key>
+			<string>Chip Cryptex1 Boot Reduced</string>
+		</dict>
+		<key>c1bt</key>
+		<dict>
+			<key>title</key>
+			<string>Chip Cryptex1 Boot AP</string>
+		</dict>
+		<key>c1bv</key>
+		<dict>
+			<key>title</key>
+			<string>Chip Cryptex1 Boot Verification</string>
+		</dict>
+		<key>c1fs</key>
+		<dict>
+			<key>title</key>
+			<string>Chip Cryptex1 Safari Downlevel</string>
+		</dict>
+		<key>c1g0</key>
+		<dict>
+			<key>title</key>
+			<string>Chip Cryptex1 Generic Cryptex0</string>
+		</dict>
+		<key>c1gn</key>
+		<dict>
+			<key>title</key>
+			<string>Chip Cryptex1 Generic AP</string>
+		</dict>
+		<key>c1nb</key>
+		<dict>
+			<key>title</key>
+			<string>CHIP_CRYPTEX1_BOOT_AP_PROSPECTIVE</string>
+		</dict>
+		<key>c1rp</key>
+		<dict>
+			<key>title</key>
+			<string>Chip Cryptex1 Reduced Prospective</string>
+		</dict>
+		<key>c1sm</key>
+		<dict>
+			<key>title</key>
+			<string>Cryptex1 simulator</string>
+		</dict>
+		<key>c1v2</key>
+		<dict>
+			<key>title</key>
+			<string>Chip Cryptex1 Boot VMA2</string>
+		</dict>
+		<key>c1vn</key>
+		<dict>
+			<key>title</key>
+			<string>Chip Cryptex1 Boot VMA2 Clone</string>
+		</dict>
+		<key>c1vr</key>
+		<dict>
+			<key>title</key>
+			<string>Chip Cryptex1 Boot Boot AV Reduced Verification</string>
+		</dict>
+		<key>c1vv</key>
+		<dict>
+			<key>title</key>
+			<string>Chip Cryptex1 Boot VMA2 Verification</string>
+		</dict>
+		<key>cCfg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>cLTH</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>cfel</key>
 		<dict>
 			<key>description</key>
@@ -472,37 +963,37 @@ Known values:
 			<data>
 			BAgw
 			</data>
+			<key>firmware_name</key>
+			<string>CFELoader</string>
+			<key>title</key>
+			<string>CFELoader</string>
 		</dict>
-		<key>chg0</key>
-		<dict>
-			<key>description</key>
-			<string>Charging Image 0</string>
-		</dict>
-		<key>chg1</key>
-		<dict>
-			<key>description</key>
-			<string>Charging Image 1</string>
-		</dict>
+		<key>ciof</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>cker</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Chained Kernel for Recovery</string>
+			<key>recovery</key>
+			<true/>
 		</dict>
 		<key>ckih</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Chained Kernel Image4 Hash</string>
 		</dict>
 		<key>clas</key>
 		<dict>
+			<key>title</key>
+			<string>Cryptex1 product class</string>
+		</dict>
+		<key>clid</key>
+		<dict>
 			<key>description</key>
-			<string>product class</string>
+			<string>Class Identifier</string>
 		</dict>
 		<key>cmsv</key>
 		<dict>
@@ -512,22 +1003,51 @@ Known values:
 			BAgw
 			</data>
 		</dict>
-		<key>coih</key>
+		<key>cnch</key>
 		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<key>title</key>
+			<string>cryptex1 boot nonce hash</string>
 		</dict>
-		<key>csys</key>
+		<key>cncn</key>
 		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<key>title</key>
+			<string>Cryptex1 boot nonce</string>
 		</dict>
+		<key>cphy</key>
+		<dict>
+			<key>title</key>
+			<string>USB-C Physical Controller</string>
+		</dict>
+		<key>cptx</key>
+		<dict>
+			<key>title</key>
+			<string>srdp cryptex</string>
+		</dict>
+		<key>dBIC</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>dCfg</key>
+		<dict>
+			<key>title</key>
+			<string>Device Configuration</string>
+		</dict>
+		<key>dLTH</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>dPSF</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>dSrc</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>dali</key>
 		<dict>
 			<key>description</key>
@@ -544,13 +1064,17 @@ Known values:
 			BAgw
 			</data>
 		</dict>
+		<key>dcpf</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>diag</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Diagnostic (AHT) Image</string>
+			<key>firmware_name</key>
+			<string>Diags</string>
 		</dict>
 		<key>disk</key>
 		<dict>
@@ -560,86 +1084,77 @@ Known values:
 			BAgw
 			</data>
 		</dict>
-		<key>dtre</key>
+		<key>dvdi</key>
 		<dict>
-			<key>description</key>
-			<string>device tree</string>
+			<key>title</key>
+			<string>Developer Disk Image</string>
 		</dict>
-		<key>dtrs</key>
-		<dict>
-			<key>description</key>
-			<string>device tree for recovery</string>
-		</dict>
+		<key>eCfg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>edcp</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>efib</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>EFI Bootloader</string>
 		</dict>
 		<key>eg0n</key>
 		<dict>
 			<key>description</key>
-			<string>Effective GID 0 Nonce</string>
+			<string>Emulated GID0 Nonce</string>
 		</dict>
 		<key>eg0t</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Emulated GID0 Type</string>
 		</dict>
 		<key>eg1n</key>
 		<dict>
 			<key>description</key>
-			<string>Effective GID 1 Nonce</string>
+			<string>Emulated GID1 Nonce</string>
 		</dict>
 		<key>eg1t</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Emulated GID1 Type</string>
 		</dict>
 		<key>eg3n</key>
 		<dict>
 			<key>description</key>
-			<string>Effective GID3 Nonce</string>
+			<string>Emulated GID3 Nonce</string>
 		</dict>
 		<key>eg3t</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Emulated GID3 Type</string>
 		</dict>
+		<key>eply</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>esca</key>
 		<dict>
 			<key>description</key>
+			<string>Emulated System Certificate Authority</string>
+		</dict>
+		<key>faus</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>esdm</key>
-		<dict>
-			<key>alias</key>
-			<array>
-				<string>esdm-fuses</string>
-			</array>
-			<key>description</key>
-			<string>Extended Security Domain fuses</string>
-		</dict>
-		<key>euou</key>
-		<dict>
-			<key>description</key>
-			<string>engineering use-only unit</string>
-		</dict>
-		<key>fchp</key>
+		<data>
+		BAgw
+		</data>
+		<key>fdr1</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>fdr2</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
 		<data>
 		BAgw
@@ -647,23 +1162,17 @@ Known values:
 		<key>fdrs</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Factory Debug Recovery System</string>
 		</dict>
 		<key>fdrt</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Factory Debug Recovery Trust</string>
 		</dict>
 		<key>fgpt</key>
 		<dict>
 			<key>description</key>
-			<string>factory pre-release global trust</string>
+			<string>Factory Global Pre-Release Trust</string>
 		</dict>
 		<key>file</key>
 		<dict>
@@ -676,45 +1185,38 @@ Known values:
 		<key>fpgt</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Factory Pre-Release Global Trust</string>
 		</dict>
-		<key>ftap</key>
-		<dict>
-			<key>description</key>
+		<key>fsca</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
+		<data>
+		BAgw
+		</data>
 		<key>ftot</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>ftsp</key>
-		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Factory Trust Operations Test</string>
 		</dict>
 		<key>fuos</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>gdmg</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>gf1f</key>
 		<dict>
-			<key>description</key>
-			<string>Fully Unsigned OS</string>
+			<key>title</key>
+			<string>Apple Graphics Stage1 Firmware</string>
 		</dict>
-		<key>gfxf</key>
-		<dict>
-			<key>description</key>
-			<string>Graphics Firmware</string>
-		</dict>
+		<key>ginf</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>ging</key>
 		<dict>
 			<key>description</key>
@@ -726,19 +1228,23 @@ Known values:
 		<key>glyc</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Gyroscope Calibration</string>
 		</dict>
-		<key>glyp</key>
+		<key>gmdp</key>
 		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<key>title</key>
+			<string>Personalized Disk Image</string>
 		</dict>
+		<key>gtcd</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>gtgv</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>hash</key>
 		<dict>
 			<key>description</key>
@@ -750,78 +1256,74 @@ Known values:
 		<key>hclo</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Hypervisor Custom/Current LocalPolicy Object?</string>
 		</dict>
 		<key>hime</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Hypervisor Related</string>
 		</dict>
 		<key>hmmr</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>PEHammer</string>
+			<key>firmware_name</key>
+			<string>PEHammer</string>
 		</dict>
 		<key>homr</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Hypervisor Related</string>
 		</dict>
-		<key>hrlp</key>
+		<key>hop0</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Hypervisor OS Partition 0 (`dom0`)</string>
 		</dict>
 		<key>hypr</key>
 		<dict>
 			<key>description</key>
-			<string>Hypervisor</string>
+			<string>Hypervisor Related</string>
 		</dict>
-		<key>iBEC</key>
+		<key>i4ct</key>
 		<dict>
-			<key>description</key>
-			<string>iBoot Epoch Change</string>
+			<key>title</key>
+			<string>Image4 Certificate Type</string>
 		</dict>
-		<key>iBSS</key>
+		<key>iCCl</key>
 		<dict>
-			<key>description</key>
-			<string>iBoot Second Stage</string>
+			<key>title</key>
+			<string>iCloud Activation Lock Clear</string>
 		</dict>
-		<key>iBoot</key>
-		<dict>
-			<key>description</key>
-			<string>iBoot</string>
-		</dict>
+		<key>iLAC</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>idia</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>ienv</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Install Environment?</string>
 		</dict>
-		<key>ipdf</key>
-		<dict>
-			<key>description</key>
+		<key>ifw1</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+		<data>
+		BAgw
+		</data>
+		<key>ifw2</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>inst</key>
+		<dict>
+			<key>title</key>
+			<string>Key Instance</string>
 		</dict>
 		<key>isor</key>
 		<dict>
@@ -831,65 +1333,50 @@ Known values:
 			BAgw
 			</data>
 		</dict>
-		<key>ispf</key>
-		<dict>
-			<key>description</key>
-			<string>Image Signal Processor Firmware</string>
-		</dict>
-		<key>isys</key>
-		<dict>
-			<key>description</key>
-			<string>iBridge System</string>
-		</dict>
 		<key>itst</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Installer Test?</string>
 		</dict>
-		<key>iuob</key>
-		<dict>
-			<key>description</key>
+		<key>jCfg</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+		<data>
+		BAgw
+		</data>
+		<key>kcrf</key>
+		<dict>
+			<key>name</key>
+			<string>Kernel Cache Read-Only File Offset</string>
 		</dict>
-		<key>iuos</key>
+		<key>kcrz</key>
 		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<key>name</key>
+			<string>Kernel Cache Read-Only File Size</string>
 		</dict>
-		<key>iuou</key>
+		<key>kcwf</key>
 		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<key>name</key>
+			<string>Kernel Cache Write File Offset</string>
+		</dict>
+		<key>kcwz</key>
+		<dict>
+			<key>name</key>
+			<string>Kernel Cache Write File Size</string>
+		</dict>
+		<key>kcxf</key>
+		<dict>
+			<key>name</key>
+			<string>Kernel Cache Execute File Offset</string>
+		</dict>
+		<key>kcxz</key>
+		<dict>
+			<key>name</key>
+			<string>Kernel Cache Execute File Size</string>
 		</dict>
 		<key>kdlv</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>krnl</key>
-		<dict>
-			<key>description</key>
-			<string>Kernel</string>
-		</dict>
-		<key>kuid</key>
-		<dict>
-			<key>description</key>
-			<string>KEK Group UUID</string>
+			<string>Kernel Linker Version</string>
 		</dict>
 		<key>lamo</key>
 		<dict>
@@ -902,64 +1389,48 @@ Known values:
 		<key>lckr</key>
 		<dict>
 			<key>description</key>
+			<string>Locker - Used for Effaceable Storage end Obliteration</string>
+		</dict>
+		<key>lcrt</key>
+		<dict>
+			<key>title</key>
+			<string>Lynx Certificate</string>
+		</dict>
+		<key>lnch</key>
+		<dict>
+			<key>title</key>
+			<string>Cryptex1 live nonce hash</string>
+		</dict>
+		<key>lndm</key>
+		<dict>
+			<key>title</key>
+			<string>Nonce Domain</string>
+		</dict>
+		<key>lpbt</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>lobo</key>
-		<dict>
-			<key>description</key>
-			<string>Local Boot</string>
-		</dict>
-		<key>logo</key>
-		<dict>
-			<key>description</key>
-			<string>Apple logo image</string>
-		</dict>
-		<key>love</key>
-		<dict>
-			<key>description</key>
-			<string>OS Version - dotted form. Last portion after the version and comma is a cryptex update?</string>
-			<key>example</key>
-			<string>21.3.66.0.0,0</string>
-			<key>type</key>
-			<string>string</string>
-		</dict>
+		<data>
+		BAgw
+		</data>
 		<key>lphp</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>lpnh</key>
-		<dict>
-			<key>description</key>
-			<string>LocalPolicy nonce hash</string>
+			<string>Local Policy Hash Protection?</string>
 		</dict>
 		<key>lpol</key>
-		<dict>
-			<key>description</key>
-			<string>Local Policy</string>
-		</dict>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>ltrs</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Local TrustStore Recovery System?</string>
 		</dict>
-		<key>magg</key>
-		<dict>
-			<key>description</key>
+		<key>mCfg</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
+		<data>
+		BAgw
+		</data>
 		<key>manx</key>
 		<dict>
 			<key>description</key>
@@ -968,74 +1439,42 @@ Known values:
 			BAgw
 			</data>
 		</dict>
-		<key>mefi</key>
-		<dict>
-			<key>description</key>
-			<string>MacEFI (T2 firmware for Intel chip)</string>
-		</dict>
 		<key>ment</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>mmap</key>
-		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Memory Map Entitlements</string>
 		</dict>
 		<key>mmer</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Memory Map Entitlements for Recovery</string>
+			<key>recovery</key>
+			<true/>
 		</dict>
 		<key>mmsv</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Memory Map System</string>
 		</dict>
 		<key>mpro</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Memory/Modem? Promotion</string>
 		</dict>
 		<key>msec</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Memory/Modem? Security</string>
 		</dict>
-		<key>msys</key>
-		<dict>
-			<key>description</key>
+		<key>mspr</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>mtfw</key>
+		<data>
+		BAgw
+		</data>
+		<key>msrf</key>
 		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<key>title</key>
+			<string>Machine Specific Register Filter</string>
 		</dict>
 		<key>name</key>
 		<dict>
@@ -1045,73 +1484,49 @@ Known values:
 			BAgw
 			</data>
 		</dict>
-		<key>nish</key>
+		<key>ndom</key>
 		<dict>
 			<key>description</key>
-			<string>preboot splat manifest hash</string>
+			<string>Nonce Domain</string>
 		</dict>
+		<key>nefw</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>nrde</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>nsih</key>
-		<dict>
-			<key>description</key>
-			<string>Next Stage Image Hash</string>
-		</dict>
-		<key>nsph</key>
-		<dict>
-			<key>description</key>
-			<string>preboot splat manifest hash</string>
+			<string>Native Ramdisk Environment</string>
 		</dict>
 		<key>nsrv</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Needs Service</string>
+			<key>firmware_name</key>
+			<string>NeedService</string>
 		</dict>
 		<key>omer</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>O M E Receipt?</string>
 		</dict>
 		<key>ooth</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>oppd</key>
-		<dict>
-			<key>description</key>
-			<string>Unknown, used by `stg1`/`sepi` - sha384 hash sized</string>
+			<string>Other OS Translator (Rosetta) Hash?</string>
 		</dict>
 		<key>osev</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Operating System Environment</string>
+			<key>name</key>
+			<string>Ap,OSEnvironment</string>
 		</dict>
 		<key>osrd</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Other System (Rosetta) Ramdisk?</string>
 		</dict>
 		<key>otes</key>
 		<dict>
@@ -1134,47 +1549,29 @@ Known values:
 			<key>description</key>
 			<string>Production certificate root</string>
 		</dict>
-		<key>pdmg</key>
-		<dict>
-			<key>description</key>
-			<string>Personalized Disk Image</string>
-		</dict>
 		<key>pert</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>PERTOS</string>
+			<key>firmware_name</key>
+			<string>PERTOS</string>
 		</dict>
 		<key>pfle</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Pre-OS Factory Launch Environment?</string>
 		</dict>
 		<key>pflp</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Pre-OS Factory Local Policy</string>
 		</dict>
 		<key>phlt</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>pmpf</key>
-		<dict>
-			<key>description</key>
-			<string>Power Management Processor Firmware</string>
+			<string>PHLEET</string>
+			<key>firmware_name</key>
+			<string>PHLEET</string>
 		</dict>
 		<key>pndp</key>
 		<dict>
@@ -1184,162 +1581,74 @@ Known values:
 			BAgw
 			</data>
 		</dict>
+		<key>prid</key>
+		<dict>
+			<key>description</key>
+			<string>Encrypted Private Key / Private Key Info / Private Recovery Identity?</string>
+			<key>title</key>
+			<string>Private Data</string>
+		</dict>
 		<key>prot</key>
-		<dict>
-			<key>description</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>prtp</key>
-		<dict>
-			<key>description</key>
-			<string>Product ID String</string>
-			<key>example</key>
-			<string>iPhone16,2</string>
-			<key>type</key>
-			<string>string</string>
-		</dict>
-		<key>psmh</key>
-		<dict>
-			<key>description</key>
-			<string>previous stage manifest hash</string>
-		</dict>
+		<data>
+		BAgw
+		</data>
+		<key>ptrp</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>rLAS</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
 		<key>rbmt</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Restore Boot Monitor?</string>
+			<key>firmware_name</key>
+			<string>RBM</string>
 		</dict>
 		<key>rddg</key>
 		<dict>
 			<key>description</key>
+			<string>Ramdisk for Debugging</string>
+		</dict>
+		<key>refk</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>rdsk</key>
-		<dict>
-			<key>description</key>
-			<string>Restore Disk Image</string>
-		</dict>
-		<key>rdtr</key>
-		<dict>
-			<key>description</key>
+		<data>
+		BAgw
+		</data>
+		<key>ros0</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>recm</key>
-		<dict>
-			<key>description</key>
+		<data>
+		BAgw
+		</data>
+		<key>ros1</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>rfta</key>
-		<dict>
-			<key>description</key>
+		<data>
+		BAgw
+		</data>
+		<key>ros2</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>rfts</key>
-		<dict>
-			<key>description</key>
+		<data>
+		BAgw
+		</data>
+		<key>ros3</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>rkrn</key>
-		<dict>
-			<key>description</key>
-			<string>restore kernel</string>
-		</dict>
-		<key>rlgo</key>
-		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>rolp</key>
-		<dict>
-			<key>description</key>
-			<string>recoveryOS local policy</string>
-		</dict>
-		<key>ronh</key>
-		<dict>
-			<key>description</key>
-			<string>recoveryOS nonce hash</string>
-		</dict>
-		<key>rosi</key>
-		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>rpnh</key>
-		<dict>
-			<key>description</key>
-			<string>RemotePolicy nonce hash</string>
-		</dict>
+		<data>
+		BAgw
+		</data>
 		<key>rsch</key>
 		<dict>
-			<key>description</key>
-			<string>research mode</string>
+			<key>title</key>
+			<string>Research Mode</string>
 		</dict>
-		<key>rsep</key>
+		<key>rspt</key>
 		<dict>
-			<key>description</key>
-			<string>Restore SEP Image, paired with oppd/tbms</string>
-			<key>encoding</key>
-			<string>sha2-384</string>
-			<key>type</key>
-			<string>string</string>
-		</dict>
-		<key>rso0</key>
-		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>rso1</key>
-		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>rso2</key>
-		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>rso3</key>
-		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<key>title</key>
+			<string>Restore Secure Page Table Monitor</string>
 		</dict>
 		<key>rtpf</key>
 		<dict>
@@ -1349,77 +1658,15 @@ Known values:
 			BAgw
 			</data>
 		</dict>
-		<key>rtsc</key>
+		<key>rtrx</key>
 		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<key>title</key>
+			<string>Restore TrustCache Extensions</string>
 		</dict>
-		<key>scef</key>
+		<key>scrt</key>
 		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>sdkp</key>
-		<dict>
-			<key>description</key>
-			<string>SEP Product Type</string>
-			<key>example</key>
-			<string>iphoneos</string>
-			<key>type</key>
-			<string>string</string>
-		</dict>
-		<key>seid</key>
-		<dict>
-			<key>description</key>
-			<string>Secure Enclave ID</string>
-		</dict>
-		<key>sepi</key>
-		<dict>
-			<key>description</key>
-			<string>SEP Image, contains oppd and tbms in seal</string>
-			<key>encoding</key>
-			<string>sha2-384</string>
-			<key>type</key>
-			<string>string</string>
-		</dict>
-		<key>sika</key>
-		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>siof</key>
-		<dict>
-			<key>description</key>
-			<string>Smart IO Firmware</string>
-		</dict>
-		<key>sip0</key>
-		<dict>
-			<key>description</key>
-			<string>System Integrity Protection (SIP) 0 Status - Overall</string>
-		</dict>
-		<key>sip1</key>
-		<dict>
-			<key>description</key>
-			<string>System Integrity Protection (SIP) 1 Status - Signed System Volume Status</string>
-		</dict>
-		<key>sip2</key>
-		<dict>
-			<key>description</key>
-			<string>System Integrity Protection (SIP) 2 Status - Kernel CTRR Status</string>
-		</dict>
-		<key>sip3</key>
-		<dict>
-			<key>description</key>
-			<string>System Integrity Protection (SIP) 3 Status - Boot Args Filtering Status</string>
+			<key>title</key>
+			<string>Silicon Certificate (SIK)</string>
 		</dict>
 		<key>slvn</key>
 		<dict>
@@ -1429,56 +1676,30 @@ Known values:
 			BAgw
 			</data>
 		</dict>
-		<key>smb0</key>
+		<key>sm3f</key>
 		<dict>
-			<key>description</key>
-			<string>Secure Multi-Boot 0 - Security Mode - Full Security, Reduced, Disabled</string>
+			<key>title</key>
+			<string>Secure M3 Firmware</string>
 		</dict>
-		<key>smb1</key>
-		<dict>
-			<key>description</key>
-			<string>Secure Multi-Boot 1</string>
-		</dict>
-		<key>smb2</key>
-		<dict>
-			<key>description</key>
-			<string>Secure Multi-Boot 2 - 3rd Party Kexts Status</string>
-		</dict>
-		<key>smb3</key>
-		<dict>
-			<key>description</key>
-			<string>Secure Multi-Boot 3 - User-allowed MDM Control</string>
-		</dict>
-		<key>smb4</key>
-		<dict>
-			<key>description</key>
-			<string>Secure Multi-Boot 3 - DEP-allowed MDM Control</string>
-		</dict>
-		<key>snon</key>
-		<dict>
-			<key>description</key>
-			<string>SEP Nonce</string>
-		</dict>
-		<key>snuf</key>
-		<dict>
-			<key>description</key>
+		<key>snid</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-		</dict>
-		<key>spih</key>
+		<data>
+		BAgw
+		</data>
+		<key>sptm</key>
 		<dict>
-			<key>description</key>
-			<string>Cryptex1 Image4 Hash</string>
+			<key>title</key>
+			<string>Secure Page Table Monitor</string>
 		</dict>
-		<key>srnm</key>
-		<dict>
-			<key>description</key>
+		<key>srvn</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+		<data>
+		BAgw
+		</data>
+		<key>ssca</key>
+		<dict>
+			<key>description</key>
+			<string>SEP Subject Certificate Authority?</string>
 		</dict>
 		<key>ster</key>
 		<dict>
@@ -1491,49 +1712,26 @@ Known values:
 		<key>stg1</key>
 		<dict>
 			<key>description</key>
-			<string>stage 1 bootloader</string>
+			<string>Stage 1 Bootloader</string>
 			<key>encoding</key>
 			<string>sha2-384</string>
 			<key>type</key>
 			<string>string</string>
 		</dict>
-		<key>stng</key>
+		<key>strc</key>
 		<dict>
-			<key>description</key>
-			<string>Cryptex1 Generation</string>
+			<key>title</key>
+			<string>Apple Firmware Kit??</string>
 		</dict>
-		<key>styp</key>
+		<key>tagt</key>
 		<dict>
-			<key>alias</key>
-			<array>
-				<string>cryptex subtype</string>
-			</array>
-			<key>description</key>
-			<string>Crytpex Subtype</string>
-			<key>type</key>
-			<string>u32</string>
-		</dict>
-		<key>svrn</key>
-		<dict>
-			<key>description</key>
-			<string>Server nonce</string>
-		</dict>
-		<key>tatp</key>
-		<dict>
-			<key>description</key>
-			<string>Board Name (such as d84)</string>
+			<key>title</key>
+			<string>Target Board Name (Processor)</string>
 		</dict>
 		<key>tbmr</key>
 		<dict>
 			<key>description</key>
-			<string>Trusted Boot Measurement (Root?)</string>
-		</dict>
-		<key>tbms</key>
-		<dict>
-			<key>description</key>
-			<string>Trusted Boot Measurement (Signature?)</string>
-			<key>notes</key>
-			<string>Likely encrypted by the SEP and opaque to the AP</string>
+			<string>Trusted Boot Measurement (Recovery/Root?)</string>
 		</dict>
 		<key>tery</key>
 		<dict>
@@ -1559,23 +1757,35 @@ Known values:
 			BAgw
 			</data>
 		</dict>
-		<key>trst</key>
+		<key>time</key>
 		<dict>
-			<key>description</key>
-			<string>Trust Cache</string>
+			<key>title</key>
+			<string>Timestamp</string>
 		</dict>
-		<key>tsys</key>
-		<dict>
-			<key>description</key>
+		<key>tmuf</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+		<data>
+		BAgw
+		</data>
+		<key>trxm</key>
+		<dict>
+			<key>title</key>
+			<string>Trusted Execution Monitor</string>
+		</dict>
+		<key>tstp</key>
+		<dict>
+			<key>title</key>
+			<string>Testing Product</string>
 		</dict>
 		<key>type</key>
 		<dict>
-			<key>description</key>
-			<string>Cryptex Type</string>
+			<key>title</key>
+			<string>Cryptex1 Chip Type</string>
+		</dict>
+		<key>tz0s</key>
+		<dict>
+			<key>title</key>
+			<string>TrustZone EL0 Size</string>
 		</dict>
 		<key>ucer</key>
 		<dict>
@@ -1585,25 +1795,12 @@ Known values:
 		<key>ucon</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>User Console Connection</string>
 		</dict>
-		<key>udid</key>
+		<key>ucrt</key>
 		<dict>
-			<key>description</key>
-			<string>Unique Device ID</string>
-		</dict>
-		<key>uidm</key>
-		<dict>
-			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
-			<key>type</key>
-			<string>boolean</string>
+			<key>title</key>
+			<string>User Certificate</string>
 		</dict>
 		<key>vice</key>
 		<dict>
@@ -1616,30 +1813,1645 @@ Known values:
 		<key>vkdl</key>
 		<dict>
 			<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+			<string>Virtual Kernel Linker</string>
+		</dict>
+		<key>vma2</key>
+		<dict>
+			<key>title</key>
+			<string>Chip VMA2</string>
+		</dict>
+		<key>vman</key>
+		<dict>
+			<key>title</key>
+			<string>Chip VMA2 Clone</string>
 		</dict>
 		<key>vnum</key>
 		<dict>
-			<key>description</key>
-			<string>maximum restore version</string>
-			<key>type</key>
-			<string>string</string>
+			<key>title</key>
+			<string>Long OS Version</string>
 		</dict>
-		<key>vuid</key>
+		<key>vpdc</key>
 		<dict>
-			<key>description</key>
-			<string>Volume Group UUID</string>
+			<key>title</key>
+			<string>Chip VMA2 ACDC</string>
 		</dict>
 		<key>ware</key>
 		<dict>
 			<key>description</key>
+			<string>VMWare?</string>
+		</dict>
+		<key>xDCl</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>xugs</key>
+		<dict>
+			<key>description</key>
+			<string>x64 User System Disk</string>
+		</dict>
+		<key>zine</key>
+		<dict>
+			<key>title</key>
+			<string>Magazine psudo-descriptor</string>
+		</dict>
+	</dict>
+	<key>lpol_properties</key>
+	<dict>
+		<key>auxi</key>
+		<dict>
+			<key>access</key>
+			<dict>
+				<key>write</key>
+				<array>
+					<string>macOS</string>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>After the system verifies that the UAKL hash matches whats found in the `auxp` field of the LocalPolicy, it requests that the AuxKC be signed by the Secure Enclave processor application thats responsible for LocalPolicy signing. Next, an SHA384 hash of the AuxKC Image4 manifest signature is placed into the LocalPolicy to avoid the potential for mixing and matching previously signed AuxKCs to an operating system at boot time. If iBoot finds the auxi field in the LocalPolicy, it attempts to load the AuxKC from storage and validate its signature. It also verifies that the hash of the Image4 manifest attached to the AuxKC matches the value found in the auxi field. If the AuxKC fails to load for any reason, the system continues to boot without this boot object and (so) without any third-party kexts loaded. The auxp field is a prerequisite for setting the auxi field in the LocalPolicy. Users change the auxi value implicitly when they change the UAKL by approving a kext from the Security &amp; Privacy pane in System Preferences.</string>
+			<key>subtype</key>
+			<string>manifest</string>
+			<key>title</key>
+			<string>Auxiliary Image4 Manifest Hash (`auxi`)</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>auxp</key>
+		<dict>
+			<key>access</key>
+			<dict>
+				<key>write</key>
+				<array>
+					<string>macOS</string>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>The `auxp` is an SHA384 hash of the user-authorized kext list (UAKL) policy. This is used at AuxKC generation time to help ensure that only user-authorized kexts are included in the AuxKC. `smb2` is a prerequisite for setting this field. Users change the `auxp` value implicitly when they change the UAKL by approving a kext from the Security &amp; Privacy pane in System Preferences.</string>
+			<key>subtype</key>
+			<string>sha2-384</string>
+			<key>title</key>
+			<string>Auxiliary Policy Hash (auxp)</string>
+			<key>type</key>
+			<string>binary</string>
+		</dict>
+		<key>auxr</key>
+		<dict>
+			<key>access</key>
+			<dict>
+				<key>write</key>
+				<array>
+					<string>macOS</string>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>The `auxr` is an SHA384 hash of the AuxKC receipt, which indicates the exact set of kexts that were included into the AuxKC. The AuxKC receipt can be a subset of the UAKL, because kexts can be excluded from the AuxKC even if theyre user authorized if theyre known to be used for attacks. In addition, some kexts that can be used to break the user-kernel boundary may lead to decreased functionality, such as an inability to use Apple Pay or play 4K and HDR content. Users who want these capabilities opt in to a more restrictive AuxKC inclusion. The auxp field is a prerequisite for setting the auxr field in the LocalPolicy. Users change the auxr value implicitly when they build a new AuxKC from the Security &amp; Privacy pane in System Preferences.</string>
+			<key>subtype</key>
+			<string>sha2-384</string>
+			<key>title</key>
+			<string>Auxiliary Kernel Collection (AuxKC) Receipt Hash (auxr)</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>c1md</key>
+		<dict>
+			<key>title</key>
+			<string>chip cryptex1 mobile asset dfu ap</string>
+		</dict>
+		<key>coih</key>
+		<dict>
+			<key>access</key>
+			<dict>
+				<key>write</key>
+				<array>
+					<string>1TR</string>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>The `coih` is an SHA384 hash of CustomOS Image4 manifest. The payload for that manifest is used by iBoot (instead of the XNU kernel) to transfer control. Users change the `coih` value implicitly when they use the `kmutil` configure-boot command-line tool in 1TR.</string>
+			<key>subtype</key>
+			<string>IM4M</string>
+			<key>title</key>
+			<string>CustomOS Image4 Manifest Hash (coih)</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>gaid</key>
+		<dict>
+			<key>description</key>
+			<string>Gaia Authentication ID (Apple Internal)</string>
+		</dict>
+		<key>hrlp</key>
+		<dict>
+			<key>access</key>
+			<dict>
+				<key>write</key>
+				<array>
+					<string>1TR</string>
+					<string>recoveryOS</string>
+					<string>macOS</string>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>The `hrlp` indicates whether or not the `prot` value is the measurement of a Secure Enclavesigned recoveryOS LocalPolicy. If not, then the recoveryOS LocalPolicy is signed by the Apple online signing server, which signs things such as macOS Image4 files.</string>
+			<key>title</key>
+			<string>Has recoveryOS Local Policy</string>
+			<key>type</key>
+			<string>boolean</string>
+		</dict>
+		<key>kuid</key>
+		<dict>
+			<key>access</key>
+			<dict>
+				<key>write</key>
+				<array>
+					<string>1TR</string>
+					<string>recoveryOS</string>
+					<string>macOS</string>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>The kuid indicates the volume that was booted. The key encryption key has typically been used for Data Protection. For each LocalPolicy, its used to protect the LocalPolicy signing key. The kuid is set by the user implicitly when creating a new operating system install.</string>
+			<key>subtype</key>
+			<string>sha2-384</string>
+			<key>title</key>
+			<string>Key Encryption Key</string>
+			<key>type</key>
+			<string>binary</string>
+		</dict>
+		<key>lobo</key>
+		<dict>
+			<key>description</key>
+			<string>Local Boot Object.  Indicates that the object is to be used as the target of a local boot only and not provided by the server for remote / DFU boots.</string>
+			<key>title</key>
+			<string>Local Boot Object</string>
+		</dict>
+		<key>lpnh</key>
+		<dict>
+			<key>access</key>
+			<dict>
+				<key>write</key>
+				<array>
+					<string>1TR</string>
+					<string>recoveryOS</string>
+					<string>macOS</string>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>The lpnh is used for anti-replay of the LocalPolicy. This is an SHA384 hash of the LocalPolicy Nonce (LPN), which is stored in the Secure Storage Component and accessible using the Secure Enclave Boot ROM or Secure Enclave. The raw nonce is never visible to the Application Processor, only to the sepOS. An attacker wanting to convince LLB that a previous LocalPolicy they had captured was valid would need to place a value into the Secure Storage Component, which hashes to the same lpnh value found in the LocalPolicy they want to replay. Normally there is a single LPN valid on the systemexcept during software updates, when two are simultaneously validto allow for the possibility of falling back to booting the old software in the event of an update error. When any LocalPolicy for any operating system is changed, all policies are re-signed with the new lpnh value corresponding to the new LPN found in the Secure Storage Component. This change happens when the user changes security settings or creates new operating systems with a new LocalPolicy for each.</string>
+			<key>subtype</key>
+			<string>sha2-384</string>
+			<key>title</key>
+			<string>LocalPolicy Nonce Hash</string>
+			<key>type</key>
+			<string>binary</string>
+		</dict>
+		<key>nish</key>
+		<dict>
+			<key>access</key>
+			<dict>
+				<key>write</key>
+				<array>
+					<string>1TR</string>
+					<string>recoveryOS</string>
+					<string>macOS</string>
+				</array>
+			</dict>
+			<key>context</key>
+			<dict>
+				<key>lpol</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+			</dict>
+			<key>description</key>
+			<string>The nsih field represents an SHA384 hash of the Image4 manifest data structure that describes the booted macOS. The macOS Image4 manifest contains measurements for all the boot objectssuch as iBoot, the static trust cache, device tree, Boot Kernel Collection, and signed system volume (SSV) volume root hash. When LLB is directed to boot a given macOS, its designed to ensure that the hash of the macOS Image4 manifest attached to iBoot matches whats captured in the nsih field of the LocalPolicy. In this way, the nsih captures the user intention of what operating system the user has created a LocalPolicy for. Users change the nsih value implicitly when they perform a software update.</string>
+			<key>name</key>
+			<string>Ap,NextStageCryptex1IM4MHash</string>
+			<key>subtype</key>
+			<string>sha2-384</string>
+			<key>title</key>
+			<string>Next Stage Image4 Manifest Hash</string>
+			<key>type</key>
+			<string>binary</string>
+		</dict>
+		<key>nsrv</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>prot</key>
+		<dict>
+			<key>access</key>
+			<dict>
+				<key>write</key>
+				<array>
+					<string>1TR</string>
+					<string>recoveryOS</string>
+					<string>macOS</string>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>A paired recoveryOS Trusted Boot Policy Measurement (TBPM) is a special iterative SHA384 hash calculation over the Image4 manifest of a LocalPolicy, excluding nonces, in order to give a consistent measurement over time (because nonces like lpnh are frequently updated). The prot field, which is found only in each macOS LocalPolicy, provides a pairing to indicate the recoveryOS LocalPolicy that corresponds to the macOS LocalPolicy.</string>
+			<key>subtype</key>
+			<string>trust-measurement</string>
+			<key>title</key>
+			<string>Paired recoveryOS Trusted Boot Policy Measurement</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>rolp</key>
+		<dict>
+			<key>description</key>
+			<string>recoveryOS local policy</string>
+			<key>type</key>
+			<string>boolean</string>
+		</dict>
+		<key>ronh</key>
+		<dict>
+			<key>access</key>
+			<dict>
+				<key>write</key>
+				<array>
+					<string>1TR</string>
+					<string>recoveryOS</string>
+					<string>macOS</string>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>The ronh behaves the same way as the lpnh, but is found exclusively in the LocalPolicy for system recoveryOS. Its updated when the system recoveryOS is updated, such as on software updates. A separate nonce from the lpnh and rpnh is used so that when a device is put into a disabled state by Find My, existing operating systems can be disabled (by removing their LPN and RPN from the Secure Storage Component), while still leaving the system recoveryOS bootable. In this way, the operating systems can be re-enabled when the system owner proves their control over the system by putting in their iCloud password used for the Find My account. This change happens when a user updates the system recoveryOS or creates new operating systems.</string>
+			<key>subtype</key>
+			<string>sha2-384</string>
+			<key>title</key>
+			<string>recoveryOS Nonce Hash (ronh)</string>
+			<key>type</key>
+			<string>binary</string>
+		</dict>
+		<key>rpnh</key>
+		<dict>
+			<key>access</key>
+			<dict>
+				<key>write</key>
+				<array>
+					<string>1TR</string>
+					<string>recoveryOS</string>
+					<string>macOS</string>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>The rpnh behaves the same way as the lpnh but is updated only when the remote policy is updated, such as when changing the state of Find My enrollment. This change happens when the user changes the state of Find My on their Mac.</string>
+			<key>subtype</key>
+			<string>sha2-384</string>
+			<key>title</key>
+			<string>Remote Policy Nonce Hash (rpnh)</string>
+			<key>type</key>
+			<string>binary</string>
+		</dict>
+		<key>sip0</key>
+		<dict>
+			<key>access</key>
+			<dict>
+				<key>write</key>
+				<array>
+					<string>1TR</string>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>The sip0 holds the existing System Integrity Protection (SIP) policy bits that previously were stored in NVRAM. New SIP policy bits are added here (instead of using LocalPolicy fields like the below) if theyre used only in macOS and not used by LLB. Users can change this field using csrutil from 1TR to disable SIP and downgrade to Permissive Security.</string>
+			<key>title</key>
+			<string>System Integrity Protection (SIP) 0 Status - Overall</string>
+		</dict>
+		<key>sip1</key>
+		<dict>
+			<key>description</key>
+			<string>If sip1 is present and true, iBoot will allow failures to verify the SSV volume root hash. Users can change this field using csrutil or bputil from 1TR.</string>
+			<key>title</key>
+			<string>System Integrity Protection (SIP) 1 Status - Signed System Volume</string>
+		</dict>
+		<key>sip2</key>
+		<dict>
+			<key>description</key>
+			<string>If sip2 is present and true, iBoot will not lock the Configurable Text Read- only Region (CTRR) hardware register that marks kernel memory as non-writable. Users can change this field using csrutil or bputil from 1TR.</string>
+			<key>title</key>
+			<string>System Integrity Protection (SIP) 2 Status - Kernel CTRR Status</string>
+		</dict>
+		<key>sip3</key>
+		<dict>
+			<key>description</key>
+			<string>If sip3 is present and true, iBoot will not enforce its built-in allow list for the boot-args NVRAM variable, which would otherwise filter the options passed to the kernel. Users can change this field using csrutil or bputil from 1TR.</string>
+			<key>title</key>
+			<string>System Integrity Protection (SIP) 3 Status - Boot Args Filtering</string>
+		</dict>
+		<key>smb0</key>
+		<dict>
+			<key>description</key>
+			<string>Secure Multi-Boot 0 - Security Mode - Full Security, Reduced, Disabled - Setting to 1 sets to reduced</string>
+		</dict>
+		<key>smb1</key>
+		<dict>
+			<key>description</key>
+			<string>Secure Multi-Boot 1 - Setting to 1 allows Permissive</string>
+		</dict>
+		<key>smb2</key>
+		<dict>
+			<key>description</key>
+			<string>Secure Multi-Boot 2 - 3rd Party Kexts Status</string>
+		</dict>
+		<key>smb3</key>
+		<dict>
+			<key>description</key>
+			<string>Secure Multi-Boot 3 - User-allowed MDM Control</string>
+		</dict>
+		<key>smb4</key>
+		<dict>
+			<key>description</key>
+			<string>Secure Multi-Boot 3 - DEP-allowed MDM Control</string>
+		</dict>
+		<key>smb5</key>
+		<dict>
+			<key>description</key>
+			<string>Unknown - but known to exist in Factory signing</string>
+		</dict>
+		<key>spih</key>
+		<dict>
+			<key>description</key>
+			<string>Cryptex1 Image4 Hash (supplimental image hash)</string>
+			<key>title</key>
+			<string>Cryptex1 manifest Hash</string>
+		</dict>
+		<key>tbmr</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>tbms</key>
+		<dict>
+			<key>title</key>
+			<string>Trusted Boot Measurement</string>
+		</dict>
+		<key>vuid</key>
+		<dict>
+			<key>access</key>
+			<array>
+				<string>1TR</string>
+				<string>recoveryOS</string>
+				<string>macOS</string>
+			</array>
+			<key>description</key>
+			<string>The vuid indicates the volume group the kernel should use as root. This field is primarily informational and isnt used for security constraints. This vuid is set by the user implicitly when creating a new operating system install.</string>
+			<key>subtype</key>
+			<string>sha2-384</string>
+			<key>title</key>
+			<string>Volume Group ID</string>
+			<key>type</key>
+			<string>binary</string>
+		</dict>
+	</dict>
+	<key>manifest_properties</key>
+	<dict>
+		<key>AMNM</key>
+		<dict>
+			<key>description</key>
+			<string>allow mix-n-match When set to true, img4s can be any valid signed version, allowing for unusual AP tickets where some components may be from a prior version</string>
+			<key>title</key>
+			<string>Allow Mix-and-Match</string>
+			<key>type</key>
+			<string>boolean</string>
+		</dict>
+		<key>BMac</key>
+		<dict>
+			<key>description</key>
+			<string>Bluetooth MAC Address</string>
+			<key>manifest</key>
+			<true/>
+		</dict>
+		<key>BNCH</key>
+		<dict>
+			<key>description</key>
+			<string>Based on the values of com.apple.System.boot-nonces, this is either the true APNonce (in the case of SFR or the root APTicket where no scope or tweak is applied) or a shadowed BNCH in the case of macOS. If it is a root boot nonce the value is stored in com.apple.System.boot-nonce, for scoped or shadowed BNCH values this is stored in `nonce-seeds` (A list of random values per domain)</string>
+			<key>metadata</key>
+			<dict>
+				<key>domains</key>
+				<dict>
+					<key>IMG4_NONCE_DOMAIN_INDEX_CRYPTEX</key>
+					<dict>
+						<key>description</key>
+						<string>Cryptex / Rapid Security Response Domain</string>
+						<key>value</key>
+						<integer>3</integer>
+					</dict>
+					<key>IMG4_NONCE_DOMAIN_INDEX_CRYPTEX1_ASSET</key>
+					<dict>
+						<key>description</key>
+						<string>Asset Cryptex (App Usually)</string>
+						<key>value</key>
+						<integer>8</integer>
+					</dict>
+					<key>IMG4_NONCE_DOMAIN_INDEX_CRYPTEX1_BOOT</key>
+					<dict>
+						<key>description</key>
+						<string>Boot Cryptex (OS Usually)</string>
+						<key>value</key>
+						<integer>7</integer>
+					</dict>
+					<key>IMG4_NONCE_DOMAIN_INDEX_CRYPTEX1_SNUF_STUB</key>
+					<dict>
+						<key>description</key>
+						<string>Staged Next Update Firmware</string>
+						<key>value</key>
+						<integer>6</integer>
+					</dict>
+					<key>IMG4_NONCE_DOMAIN_INDEX_DDI</key>
+					<dict>
+						<key>description</key>
+						<string>Developer Disk Image</string>
+						<key>value</key>
+						<integer>4</integer>
+					</dict>
+					<key>IMG4_NONCE_DOMAIN_INDEX_EPHEMERAL_CRYPTEX</key>
+					<dict>
+						<key>value</key>
+						<integer>5</integer>
+					</dict>
+					<key>IMG4_NONCE_DOMAIN_INDEX_PDI</key>
+					<dict>
+						<key>description</key>
+						<string>Personalized Disk Image</string>
+						<key>value</key>
+						<integer>2</integer>
+					</dict>
+					<key>IMG4_NONCE_DOMAIN_INDEX_TEST</key>
+					<dict>
+						<key>value</key>
+						<integer>0</integer>
+					</dict>
+					<key>IMG4_NONCE_DOMAIN_INDEX_TRUST_CACHE</key>
+					<dict>
+						<key>value</key>
+						<integer>1</integer>
+					</dict>
+				</dict>
+			</dict>
+			<key>subtype</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
 			<data>
 			BAgw
 			</data>
+			<key>title</key>
+			<string>Board Nonce Cryptographic Hash</string>
+			<key>type</key>
+			<string>nonce</string>
+		</dict>
+		<key>BORD</key>
+		<dict>
+			<key>alias</key>
+			<array>
+				<string>board-id</string>
+			</array>
+			<key>description</key>
+			<string>The board the chip is attached to.  With iPhones/iPads this is the variation between
+device sizes (occasionally also used for low cost devices like the SE/XR).  This is
+usually expressed as a hex encoded uint8_t.  Some types of board seem to encode a
+bitfield for non MP (mainline production) boards such as EVT/DVT
+
+With the T2 this value is unique to all MacBooks with the T2.</string>
+			<key>title</key>
+			<string>Board Identifier</string>
+			<key>type</key>
+			<string>integer</string>
+		</dict>
+		<key>CEPO</key>
+		<dict>
+			<key>alias</key>
+			<array>
+				<string>chip-epoch</string>
+			</array>
+			<key>description</key>
+			<string>Chip Epoch.  This is a unit of roll-forward time (monotonic) that
+allows for any security issues in the prior epoch to be fixed by a anti-rollback scheme.</string>
+			<key>nullable</key>
+			<true/>
+			<key>title</key>
+			<string>Chip Epoch</string>
+			<key>type</key>
+			<string>boolean</string>
+		</dict>
+		<key>CHIP</key>
+		<dict>
+			<key>description</key>
+			<string>Unique identifier for a single Apple designed application processor sharing the same GID key</string>
+			<key>title</key>
+			<string>Chip Identifier</string>
+			<key>type</key>
+			<string>integer</string>
+			<key>width</key>
+			<integer>2</integer>
+		</dict>
+		<key>CHMH</key>
+		<dict>
+			<key>description</key>
+			<string>Appears in manifest / APTickets where the ticket is chained from another via `nish` or `nsph`.</string>
+			<key>title</key>
+			<string>Chained Manifest Hash</string>
+		</dict>
+		<key>CPRO</key>
+		<dict>
+			<key>alias</key>
+			<array>
+				<string>certificate-production-status</string>
+			</array>
+			<key>description</key>
+			<string>Certificate Promotion Mode</string>
+			<key>nullable</key>
+			<true/>
+			<key>type</key>
+			<string>boolean</string>
+		</dict>
+		<key>CSEC</key>
+		<dict>
+			<key>alias</key>
+			<array>
+				<string>certificate-security-mode</string>
+			</array>
+			<key>description</key>
+			<string>Certificate Security Mode</string>
+			<key>nullable</key>
+			<true/>
+			<key>type</key>
+			<string>boolean</string>
+		</dict>
+		<key>ECID</key>
+		<dict>
+			<key>description</key>
+			<string>Exclusive chip identifier.  This is burned into an eFuse at time of manufacture and unique across all devices sharing the same CHIP</string>
+			<key>title</key>
+			<string>Exclusive Chip Identifier</string>
+			<key>width</key>
+			<integer>8</integer>
+		</dict>
+		<key>LNCH</key>
+		<dict>
+			<key>description</key>
+			<string>Local Policy Next Cryptographic Hash</string>
+			<key>name</key>
+			<string>ApLocalNonceHash</string>
+		</dict>
+		<key>META</key>
+		<dict>
+			<key>title</key>
+			<string>Metadata</string>
+		</dict>
+		<key>Mod#</key>
+		<dict>
+			<key>title</key>
+			<string>Model ID</string>
+		</dict>
+		<key>RNCH</key>
+		<dict>
+			<key>description</key>
+			<string>Remote Nonce Cryptographic Hash</string>
+		</dict>
+		<key>RSCH</key>
+		<dict>
+			<key>description</key>
+			<string>Research mode</string>
+		</dict>
+		<key>Regn</key>
+		<dict>
+			<key>description</key>
+			<string>Region Code</string>
+			<key>example</key>
+			<string>LL/A</string>
+			<key>manifest</key>
+			<true/>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>SDOM</key>
+		<dict>
+			<key>alias</key>
+			<array>
+				<string>security-domain</string>
+			</array>
+			<key>description</key>
+			<string>Security domain, or which set of certificates govern device security.
+
+Known values:
+  0x01 - Main Production certificates</string>
+			<key>title</key>
+			<string>Security Domain</string>
+			<key>width</key>
+			<integer>2</integer>
+		</dict>
+		<key>SECM</key>
+		<dict>
+			<key>description</key>
+			<string>Security Mode</string>
+		</dict>
+		<key>SNON</key>
+		<dict>
+			<key>description</key>
+			<string>SEP Nonce</string>
+		</dict>
+		<key>SPAY</key>
+		<dict>
+			<key>title</key>
+			<string>SysCfg Payload</string>
+		</dict>
+		<key>SrNm</key>
+		<dict>
+			<key>description</key>
+			<string>Unit Serial Number</string>
+			<key>manifest</key>
+			<true/>
+		</dict>
+		<key>TMac</key>
+		<dict>
+			<key>description</key>
+			<string>Thunderbolt MAC Address</string>
+			<key>manifest</key>
+			<true/>
+		</dict>
+		<key>UID_MODE</key>
+		<dict>
+			<key>description</key>
+			<string>Used to create keybags for the UID instead of the GID key, such as the use of `sepi` or booted SEP image firmware (as SEP hibernation data is crypted with the devices UID rather then the GID).</string>
+			<key>request</key>
+			<true/>
+			<key>see</key>
+			<array>
+				<string>uidm</string>
+			</array>
+			<key>title</key>
+			<string>UID as GID Key Mode</string>
+			<key>type</key>
+			<string>boolean</string>
+		</dict>
+		<key>WMac</key>
+		<dict>
+			<key>description</key>
+			<string>Wireless MAC Address</string>
+		</dict>
+		<key>WSKU</key>
+		<dict>
+			<key>description</key>
+			<string>Wireless SKU</string>
+		</dict>
+		<key>acdc</key>
+		<dict>
+			<key>description</key>
+			<string>Apple Connect Developer Certificate</string>
+		</dict>
+		<key>acid</key>
+		<dict>
+			<key>description</key>
+			<string>Apple Connect ID (AppleInternal)</string>
+			<key>type</key>
+			<string>integer</string>
+		</dict>
+		<key>esdm</key>
+		<dict>
+			<key>alias</key>
+			<array>
+				<string>esdm-fuses</string>
+			</array>
+			<key>description</key>
+			<string>Extended Security Domain</string>
+			<key>type</key>
+			<string>integer</string>
+		</dict>
+		<key>euou</key>
+		<dict>
+			<key>description</key>
+			<string>engineering use-only unit</string>
+		</dict>
+		<key>faic</key>
+		<dict>
+			<key>default</key>
+			<integer>0</integer>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>title</key>
+			<string>Factory Authentication Identity Certificate</string>
+			<key>type</key>
+			<string>integer</string>
+		</dict>
+		<key>iuob</key>
+		<dict>
+			<key>description</key>
+			<string>Internal Use Only Build</string>
+		</dict>
+		<key>iuos</key>
+		<dict>
+			<key>description</key>
+			<string>Internal Use Only Software</string>
+		</dict>
+		<key>iuou</key>
+		<dict>
+			<key>description</key>
+			<string>Internal Use Only Unit</string>
+			<key>name</key>
+			<string>Ap,InternalUseOnlyUnit</string>
+		</dict>
+		<key>love</key>
+		<dict>
+			<key>access</key>
+			<dict>
+				<key>write</key>
+				<array>
+					<string>1TR</string>
+					<string>recoveryOS</string>
+					<string>macOS</string>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>The love indicates the OS version that the LocalPolicy is created for. The version is obtained from the next state manifest during LocalPolicy creation and is used to enforce recoveryOS pairing restrictions.</string>
+			<key>example</key>
+			<string>21.3.66.0.0,0</string>
+			<key>name</key>
+			<string>Ap,OSLongVersion</string>
+			<key>roots</key>
+			<array>
+				<string>ManifestKey-DataCenter</string>
+			</array>
+			<key>title</key>
+			<string>Long Operating System Version</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>lpol</key>
+		<dict>
+			<key>description</key>
+			<string>Local Policy</string>
+		</dict>
+		<key>manx</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>mlb#</key>
+		<dict>
+			<key>title</key>
+			<string>Main Logic Board Serial</string>
+		</dict>
+		<key>mmap</key>
+		<dict>
+			<key>description</key>
+			<string>Memory Map</string>
+		</dict>
+		<key>nsih</key>
+		<dict>
+			<key>description</key>
+			<string>Next Stage Image4 Hash</string>
+		</dict>
+		<key>nsph</key>
+		<dict>
+			<key>description</key>
+			<string>prospective cryptex1 manifest hash</string>
+		</dict>
+		<key>oppd</key>
+		<dict>
+			<key>title</key>
+			<string>Owner Password Permission Delegation</string>
+		</dict>
+		<key>prtp</key>
+		<dict>
+			<key>description</key>
+			<string>Product Type String</string>
+			<key>example</key>
+			<string>iPhone16,2</string>
+			<key>name</key>
+			<string>Ap,ProductType</string>
+			<key>roots</key>
+			<array>
+				<string>ManifestKey-DataCenter</string>
+			</array>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>psmh</key>
+		<dict>
+			<key>description</key>
+			<string>previous stage manifest hash</string>
+		</dict>
+		<key>rcfg</key>
+		<dict>
+			<key>description</key>
+			<string>Appears in certificates issues by factory such as `T6031-SDOM1-TssLive-ManifestKey-RevA-Factory`. Potentially indicates that the policy is for a recovery boot only.</string>
+			<key>type</key>
+			<string>boolean</string>
+		</dict>
+		<key>rfcg</key>
+		<dict>
+			<key>title</key>
+			<string>Reconfigure Mode</string>
+			<key>type</key>
+			<string>boolean</string>
+		</dict>
+		<key>rsch</key>
+		<dict>
+			<key>description</key>
+			<string>research mode</string>
+		</dict>
+		<key>rso0</key>
+		<dict>
+			<key>name</key>
+			<string>Ap,RestoreSecurityOverrides0</string>
+		</dict>
+		<key>rso1</key>
+		<dict>
+			<key>name</key>
+			<string>Ap,RestoreSecurityOverrides1</string>
+		</dict>
+		<key>rso2</key>
+		<dict>
+			<key>name</key>
+			<string>Ap,RestoreSecurityOverrides2</string>
+		</dict>
+		<key>rso3</key>
+		<dict>
+			<key>name</key>
+			<string>Ap,RestoreSecurityOverrides3</string>
+		</dict>
+		<key>sdkp</key>
+		<dict>
+			<key>description</key>
+			<string>SDK Platform</string>
+			<key>name</key>
+			<string>Ap,SDKPlatform</string>
+			<key>roots</key>
+			<array>
+				<string>ManifestKey-DataCenter</string>
+			</array>
+			<key>type</key>
+			<string>string</string>
+			<key>values</key>
+			<array>
+				<string>iphoneos</string>
+				<string>macos</string>
+			</array>
+		</dict>
+		<key>sei3</key>
+		<dict>
+			<key>description</key>
+			<string>Secure Enclave ID for EL3 Appears to have a value identical to `seid`.</string>
+		</dict>
+		<key>seid</key>
+		<dict>
+			<key>description</key>
+			<string>Secure Enclave ID - Root Domain</string>
+		</dict>
+		<key>sika</key>
+		<dict>
+			<key>description</key>
+			<string>System Identity Key Access/Attestation?</string>
+			<key>name</key>
+			<string>Ap,SikaFuse</string>
+		</dict>
+		<key>snon</key>
+		<dict>
+			<key>description</key>
+			<string>SEP Nonce</string>
+		</dict>
+		<key>sski</key>
+		<dict>
+			<key>description</key>
+			<string>SHA2 os some kind - sep/system subject key identifier?</string>
+			<key>type</key>
+			<string>binary</string>
+		</dict>
+		<key>stng</key>
+		<dict>
+			<key>description</key>
+			<string>Prospective Local Policy Generation</string>
+		</dict>
+		<key>svrn</key>
+		<dict>
+			<key>description</key>
+			<string>Server nonce</string>
+		</dict>
+		<key>tatp</key>
+		<dict>
+			<key>description</key>
+			<string>Target Board Name</string>
+			<key>name</key>
+			<string>Ap,TargetType</string>
+			<key>roots</key>
+			<array>
+				<string>ManifestKey-DataCenter</string>
+			</array>
+		</dict>
+		<key>uidm</key>
+		<dict>
+			<key>description</key>
+			<string>UID Mixing (Entanglement)</string>
+			<key>roots</key>
+			<array>
+				<string>ManifestKey-DataCenter</string>
+			</array>
+			<key>type</key>
+			<string>boolean</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>collections</key>
+		<array>
+			<string>img4_tags</string>
+			<string>manifest_properties</string>
+			<string>objects</string>
+			<string>lpol_properties</string>
+			<string>core</string>
+			<string>types</string>
+			<string>cryptex_properties</string>
+		</array>
+		<key>credits</key>
+		<array>
+			<string>https://www.theiphonewiki.com/wiki/IMG4_File_Format</string>
+			<string>rickmark</string>
+		</array>
+		<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>FSC2</key>
+		<dict>
+			<key>title</key>
+			<string>Factory SysConfig</string>
+		</dict>
+		<key>IM4M</key>
+		<dict>
+			<key>title</key>
+			<string>IMG4 Manifest</string>
+		</dict>
+		<key>MANB</key>
+		<dict>
+			<key>title</key>
+			<string>Manifest Body</string>
+		</dict>
+		<key>MANP</key>
+		<dict>
+			<key>title</key>
+			<string>Manifest Proeprties</string>
+		</dict>
+		<key>SPAY</key>
+		<dict>
+			<key>title</key>
+			<string>SysCfg Payload</string>
+		</dict>
+		<key>WCHF</key>
+		<dict>
+			<key>description</key>
+			<string>Wireless Charging Firmware</string>
+		</dict>
+		<key>acfw</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+		</dict>
+		<key>almo</key>
+		<dict>
+			<key>description</key>
+			<string>Some internal iBootable image.  Unknown purpose</string>
+		</dict>
+		<key>ane1</key>
+		<dict>
+			<key>title</key>
+			<string>Apple Neural Engine (Gen1)</string>
+		</dict>
+		<key>ane2</key>
+		<dict>
+			<key>title</key>
+			<string>Apple Neural Engine (Gen2)</string>
+		</dict>
+		<key>ane3</key>
+		<dict>
+			<key>title</key>
+			<string>Apple Neural Engine (Gen3)</string>
+		</dict>
+		<key>anef</key>
+		<dict>
+			<key>description</key>
+			<string>Apple Neural Engine Firmware</string>
+			<key>roots</key>
+			<array>
+				<string>ManifestKey-DataCenter</string>
+			</array>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>ansf</key>
+		<dict>
+			<key>description</key>
+			<string>NAND Storage Firmware</string>
+		</dict>
+		<key>aop2</key>
+		<dict>
+			<key>title</key>
+			<string>Always-On Processor (Gen2)</string>
+		</dict>
+		<key>aopf</key>
+		<dict>
+			<key>description</key>
+			<string>Always on processor firmware</string>
+			<key>roots</key>
+			<array>
+				<string>ManifestKey-DataCenter</string>
+			</array>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>aubt</key>
+		<dict>
+			<key>description</key>
+			<string>Audio Boot Chime</string>
+		</dict>
+		<key>aupr</key>
+		<dict>
+			<key>description</key>
+			<string>Audio Power Attach Chime</string>
+		</dict>
+		<key>auxk</key>
+		<dict>
+			<key>description</key>
+			<string>Auxiliary Kernel Cache</string>
+		</dict>
+		<key>avef</key>
+		<dict>
+			<key>description</key>
+			<string>AV Encryption (DRM) Firmware</string>
+			<key>roots</key>
+			<array>
+				<string>ManifestKey-DataCenter</string>
+			</array>
+			<key>title</key>
+			<string>AV Encryption (DRM) Firmware</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>bat0</key>
+		<dict>
+			<key>description</key>
+			<string>battery image 0</string>
+		</dict>
+		<key>bat1</key>
+		<dict>
+			<key>description</key>
+			<string>battery image 1</string>
+		</dict>
+		<key>batF</key>
+		<dict>
+			<key>description</key>
+			<string>Battery Full Image</string>
+			<key>firmware</key>
+			<true/>
+			<key>subtype</key>
+			<string>graphic</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>bstc</key>
+		<dict>
+			<key>description</key>
+			<string>The Base System Trust Cache is the static trust cache (a file containing a list of CDHashes that is to be trusted and executed at platform trust.) that corresponds to the Base System (typically arm64BaseSystem.dmg).</string>
+			<key>subtype</key>
+			<string>trust-cache</string>
+			<key>title</key>
+			<string>Base System Trust Cache</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>bsys</key>
+		<dict>
+			<key>subtype</key>
+			<string>ssv-root-hash</string>
+			<key>title</key>
+			<string>Base System Root Hash</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>chg0</key>
+		<dict>
+			<key>description</key>
+			<string>Charging Image 0</string>
+			<key>subtype</key>
+			<string>graphic</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>chg1</key>
+		<dict>
+			<key>description</key>
+			<string>Charging Image 1</string>
+			<key>subtype</key>
+			<string>graphic</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>ciof</key>
+		<dict>
+			<key>description</key>
+			<string>TypeC IO Firmware</string>
+		</dict>
+		<key>csys</key>
+		<dict>
+			<key>description</key>
+			<string>Cannonical SSV System</string>
+			<key>subtype</key>
+			<string>ssv-root-hash</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>dcp2</key>
+		<dict>
+			<key>title</key>
+			<string>DisplayPort Controller Firmware 2</string>
+		</dict>
+		<key>dcpf</key>
+		<dict>
+			<key>title</key>
+			<string>DisplayPort Controller Firmware</string>
+		</dict>
+		<key>dtre</key>
+		<dict>
+			<key>description</key>
+			<string>device tree</string>
+			<key>firmware_name</key>
+			<string>DeviceTree</string>
+			<key>subtype</key>
+			<string>device-tree</string>
+			<key>title</key>
+			<string>Device Tree</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>dtrs</key>
+		<dict>
+			<key>description</key>
+			<string>Device Tree for Recovery</string>
+			<key>recovery</key>
+			<true/>
+			<key>subtype</key>
+			<string>device-tree</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>dven</key>
+		<dict>
+			<key>description</key>
+			<string>Display Vendor Data</string>
+		</dict>
+		<key>esca</key>
+		<dict>
+			<key>description</key>
+			<string>Effective Software CA</string>
+		</dict>
+		<key>excl</key>
+		<dict>
+			<key>title</key>
+			<string>exclaveOS</string>
+		</dict>
+		<key>fdrd</key>
+		<dict>
+			<key>title</key>
+			<string>Factory Diagnostic Ramdisk</string>
+		</dict>
+		<key>fsca</key>
+		<dict>
+			<key>description</key>
+			<string>Factory Software CA</string>
+		</dict>
+		<key>ftab</key>
+		<dict>
+			<key>description</key>
+			<string>Factory Trust - Auto Boot FTAB images (used for devices such as AirPods, etc) are &quot;hacktivated&quot; or pre-APTicket&#39;ed devices as they lack either a restore connection, or persistent memory.  Common early usage of this was the Haywire dongles used for video conversion on the Mac.  It was simplest for the device to lack NAND and simply receive the firmware from a host on power-up.  FTAB files are fully ready to run blobs often including RTKit OS based memory images.</string>
+			<key>ghost_object</key>
+			<true/>
+		</dict>
+		<key>ftap</key>
+		<dict>
+			<key>description</key>
+			<string>Factory Trust APNonce</string>
+			<key>ghost_object</key>
+			<true/>
+			<key>type</key>
+			<string>hash</string>
+		</dict>
+		<key>ftsp</key>
+		<dict>
+			<key>description</key>
+			<string>Factory Trust SEPNonce</string>
+			<key>ghost_object</key>
+			<true/>
+			<key>type</key>
+			<string>hash</string>
+		</dict>
+		<key>gfxf</key>
+		<dict>
+			<key>description</key>
+			<string>Graphics Firmware</string>
+		</dict>
+		<key>glyP</key>
+		<dict>
+			<key>title</key>
+			<string>Glyphs</string>
+		</dict>
+		<key>ibd1</key>
+		<dict>
+			<key>description</key>
+			<string>iBoot Data Stage 1</string>
+		</dict>
+		<key>ibdt</key>
+		<dict>
+			<key>description</key>
+			<string>iBoot Data</string>
+		</dict>
+		<key>ibec</key>
+		<dict>
+			<key>description</key>
+			<string>iBoot Epoch Change</string>
+			<key>firmware_name</key>
+			<string>iBEC</string>
+		</dict>
+		<key>ibot</key>
+		<dict>
+			<key>description</key>
+			<string>iBoot</string>
+			<key>firmware_name</key>
+			<string>iBoot</string>
+			<key>subtype</key>
+			<string>firmware</string>
+			<key>symbol</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+		</dict>
+		<key>ibss</key>
+		<dict>
+			<key>description</key>
+			<string>iBoot Second Stage</string>
+			<key>firmware_name</key>
+			<string>iBSS</string>
+		</dict>
+		<key>illb</key>
+		<dict>
+			<key>description</key>
+			<string>Low-Level iBoot</string>
+			<key>firmware_name</key>
+			<string>LLB</string>
+			<key>symbol</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+		</dict>
+		<key>ipdf</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>title</key>
+			<string>Input Device</string>
+		</dict>
+		<key>ispf</key>
+		<dict>
+			<key>description</key>
+			<string>Image Signal Processor Firmware</string>
+		</dict>
+		<key>isys</key>
+		<dict>
+			<key>description</key>
+			<string>Integrity of System Volume</string>
+		</dict>
+		<key>krnl</key>
+		<dict>
+			<key>description</key>
+			<string>Kernel</string>
+			<key>firmware_name</key>
+			<string>KernelCache</string>
+		</dict>
+		<key>logo</key>
+		<dict>
+			<key>description</key>
+			<string>Apple Logo Image</string>
+			<key>firmware</key>
+			<true/>
+			<key>firmware_name</key>
+			<string>AppleLogo</string>
+			<key>subtype</key>
+			<string>graphic</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>lpol</key>
+		<dict>
+			<key>description</key>
+			<string>Local Policy</string>
+		</dict>
+		<key>magg</key>
+		<dict>
+			<key>description</key>
+			<string>Maggie Firmware</string>
+		</dict>
+		<key>mefi</key>
+		<dict>
+			<key>description</key>
+			<string>MacEFI (T2 firmware for Intel chip)</string>
+		</dict>
+		<key>msys</key>
+		<dict>
+			<key>description</key>
+			<string>System Volume Canonical Metadata Contains a Merkle Tree of the System Volume.  The Merkle-Tree is used to verify Signed System Volume, in a similar way to a Git repository, where every file is included in the tree of the folder and so on up to the root node. The root node is validated against the corresponding `root_hash`.  The inclusion of the merkle tree allows for discovery of where the system volume&#39;s data is broken, as the root_hash can only tell you if it is broken.</string>
+			<key>title</key>
+			<string>System Volume Canonical Metadata</string>
+		</dict>
+		<key>mtfw</key>
+		<dict>
+			<key>description</key>
+			<string>MultiTouch Firmware</string>
+		</dict>
+		<key>mtpf</key>
+		<dict>
+			<key>title</key>
+			<string>Multi-Thread Power Firmware</string>
+		</dict>
+		<key>nefw</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+		<data>
+		BAgw
+		</data>
+		<key>pdmg</key>
+		<dict>
+			<key>description</key>
+			<string>Personalized Disk Image</string>
+		</dict>
+		<key>pmcf</key>
+		<dict>
+			<key>title</key>
+			<string>Power Management (PMC)</string>
+		</dict>
+		<key>pmpf</key>
+		<dict>
+			<key>description</key>
+			<string>Power Management (PMP)</string>
+			<key>subtype</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>rans</key>
+		<dict>
+			<key>description</key>
+			<string>Restore NAND Storage Firmware</string>
+			<key>firmware</key>
+			<string>apple-nand-storage</string>
+			<key>restore</key>
+			<true/>
+			<key>subtype</key>
+			<string>firmware</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>rcio</key>
+		<dict>
+			<key>description</key>
+			<string>Restore TypeC IO</string>
+			<key>restore</key>
+			<true/>
+		</dict>
+		<key>rdc2</key>
+		<dict>
+			<key>title</key>
+			<string>Recovery DisplayPort Controller</string>
+		</dict>
+		<key>rdcp</key>
+		<dict>
+			<key>description</key>
+			<string>Recovery DCP Firmware</string>
+			<key>restore</key>
+			<true/>
+		</dict>
+		<key>rdsk</key>
+		<dict>
+			<key>description</key>
+			<string>Restore Ramdisk</string>
+			<key>firmware_name</key>
+			<string>RestoreRamDisk</string>
+		</dict>
+		<key>rdtr</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>firmware_name</key>
+			<string>RestoreDeviceTree</string>
+			<key>title</key>
+			<string>Restore Device Tree</string>
+		</dict>
+		<key>recm</key>
+		<dict>
+			<key>description</key>
+			<string>Recovery Mode</string>
+			<key>firmware_name</key>
+			<string>RecoveryMode</string>
+		</dict>
+		<key>rfta</key>
+		<dict>
+			<key>description</key>
+			<string>Recovery Factory Trust APNonce</string>
+		</dict>
+		<key>rfts</key>
+		<dict>
+			<key>description</key>
+			<string>Recovery Factory Trust SEPNonce</string>
+		</dict>
+		<key>rkrn</key>
+		<dict>
+			<key>description</key>
+			<string>Restore Kernel</string>
+			<key>firmware_name</key>
+			<string>RestoreKernelCache</string>
+			<key>restore</key>
+			<true/>
+		</dict>
+		<key>rlg1</key>
+		<dict>
+			<key>title</key>
+			<string>Restore Logo 1</string>
+		</dict>
+		<key>rlg2</key>
+		<dict>
+			<key>title</key>
+			<string>Restore Logo 2</string>
+		</dict>
+		<key>rlgo</key>
+		<dict>
+			<key>description</key>
+			<string>Restore Logo</string>
+			<key>firmware_name</key>
+			<string>RestoreLogo</string>
+			<key>restore</key>
+			<true/>
+		</dict>
+		<key>rosi</key>
+		<dict>
+			<key>description</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+			<data>
+			BAgw
+			</data>
+			<key>title</key>
+			<string>recoveryOS Image</string>
+		</dict>
+		<key>rsep</key>
+		<dict>
+			<key>description</key>
+			<string>Restore SEP Image, paired with oppd/tbms</string>
+			<key>encoding</key>
+			<string>sha2-384</string>
+			<key>firmware_name</key>
+			<string>RestoreSEP</string>
+			<key>title</key>
+			<string>Restore SEP Image</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>rssl</key>
+		<dict>
+			<key>title</key>
+			<string>Recovery SSL</string>
+		</dict>
+		<key>rtmu</key>
+		<dict>
+			<key>description</key>
+			<string>Restore TMU for AP</string>
+			<key>firmware</key>
+			<true/>
+			<key>recovery</key>
+			<true/>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>rtsc</key>
+		<dict>
+			<key>description</key>
+			<string>Recovery Trust Cache</string>
+		</dict>
+		<key>rvok</key>
+		<dict>
+			<key>title</key>
+			<string>Revocation List</string>
+		</dict>
+		<key>scef</key>
+		<dict>
+			<key>description</key>
+			<string>SEP Firmware (Boot Firmware without RAM Image)</string>
+		</dict>
+		<key>sePk</key>
+		<dict>
+			<key>title</key>
+			<string>Secure Element Public Key</string>
+		</dict>
+		<key>secb</key>
+		<dict>
+			<key>title</key>
+			<string>Security Body</string>
+		</dict>
+		<key>sepi</key>
+		<dict>
+			<key>description</key>
+			<string>SEP Image (Booted RAM Image / Hibernation Data)</string>
+			<key>encoding</key>
+			<string>sha2-384</string>
+			<key>firmware_name</key>
+			<string>SEP</string>
+			<key>metadata</key>
+			<dict>
+				<key>tbms</key>
+				<string>Trusted Boot Measurement Strings</string>
+			</dict>
+			<key>title</key>
+			<string>Secure Enclave Processor Image</string>
+			<key>type</key>
+			<string>string</string>
+		</dict>
+		<key>siof</key>
+		<dict>
+			<key>description</key>
+			<string>Smart IO Firmware</string>
+		</dict>
+		<key>srvn</key>
+		<dict>
+			<key>title</key>
+			<string>Server Nonce</string>
+		</dict>
+		<key>tmuf</key>
+		<dict>
+			<key>description</key>
+			<string>Trusted MultiUpdater Firmware</string>
+		</dict>
+		<key>trbb</key>
+		<dict>
+			<key>alias</key>
+			<array>
+				<string>Ap,BootabilityBrainTrustCache</string>
+			</array>
+			<key>supported_product_types</key>
+			<dict>
+				<key>iSim1,1</key>
+				<dict>
+					<key>board</key>
+					<integer>240</integer>
+					<key>chip</key>
+					<integer>65286</integer>
+					<key>security_domain</key>
+					<integer>1</integer>
+				</dict>
+			</dict>
+			<key>title</key>
+			<string>Trust Cache for Boot-ability Brain (iSim)</string>
+		</dict>
+		<key>trpk</key>
+		<dict>
+			<key>title</key>
+			<string>Trusted Public Keys</string>
+		</dict>
+		<key>trst</key>
+		<dict>
+			<key>description</key>
+			<string>Trust Object</string>
+			<key>subtype</key>
+			<string>trust-object</string>
+			<key>type</key>
+			<string>digest-object</string>
+		</dict>
+		<key>trxm</key>
+		<dict>
+			<key>title</key>
+			<string>Trusted Execution Monitor</string>
+		</dict>
+		<key>tsys</key>
+		<dict>
+			<key>description</key>
+			<string>Test System Volume</string>
 		</dict>
 		<key>wchf</key>
 		<dict>
@@ -1651,32 +3463,215 @@ Known values:
 			<key>description</key>
 			<string>x86 Boot Trust Cache</string>
 		</dict>
+		<key>xhcf</key>
+		<dict>
+			<key>title</key>
+			<string>USB xHCI Firmware</string>
+		</dict>
 		<key>xsys</key>
 		<dict>
 			<key>description</key>
 			<string>x86 System Root Hash</string>
 		</dict>
-		<key>xugs</key>
+	</dict>
+	<key>property_collections</key>
+	<array>
+		<string>lpol_properties</string>
+		<string>cryptex_objects</string>
+		<string>cryptex_properties</string>
+		<string>manifest_properties</string>
+		<string>img4_tags</string>
+		<string>objects</string>
+		<string>der</string>
+		<string>core</string>
+	</array>
+	<key>types</key>
+	<dict>
+		<key>digest-object</key>
 		<dict>
+			<key>common_properties</key>
+			<dict>
+				<key>DGST</key>
+				<dict>
+					<key>description</key>
+					<string>The cryptographic digest of the object</string>
+					<key>name</key>
+					<string>Digest</string>
+					<key>title</key>
+					<string>Object Digest</string>
+				</dict>
+				<key>EKEY</key>
+				<dict>
+					<key>description</key>
+					<string>Effective Key Access - The effective access to teh SEP, used to protect data during demotion.  Effective chip promoted</string>
+					<key>nullable</key>
+					<false/>
+					<key>type</key>
+					<string>boolean</string>
+				</dict>
+				<key>EPRO</key>
+				<dict>
+					<key>alias</key>
+					<array>
+						<string>effective-production-status-ap</string>
+					</array>
+					<key>description</key>
+					<string>Effective Production Mode - The production mode after evaluating the chip production and demotion request.  Effective chip promotion / demotion state (if CPFM 03 this must be 0 to set ESEC)</string>
+					<key>nullable</key>
+					<false/>
+					<key>type</key>
+					<string>boolean</string>
+				</dict>
+				<key>ESEC</key>
+				<dict>
+					<key>alias</key>
+					<array>
+						<string>effective-security-mode-ap</string>
+					</array>
+					<key>description</key>
+					<string>Effective Security Mode - The security mode after evaluating the chip and any demotion request</string>
+				</dict>
+			</dict>
 			<key>description</key>
+			<string>Digest Objects are Firmware or Other Hash-able binary streams. They will exist in NOR, Disk, or be received over USB.  These objects will contain a `DGST` value that is the cryptographic hash of the contents. They can contain additional properties per object, some of which are standard and others that are object specific.</string>
+			<key>subtypes</key>
+			<dict>
+				<key>firmware</key>
+				<dict>
+					<key>object_properties</key>
+					<dict>
+						<key>tbms</key>
+						<dict>
+							<key>description</key>
+							<string>Trusted Boot Measurement (Signature?)</string>
+							<key>notes</key>
+							<string>Likely encrypted by the SEP and opaque to the AP</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>img4-disk-image</key>
+				<dict>
+					<key>description</key>
+					<string>Disk images are often signed IMG4 payloads used for USB boot or as the arm64BaseSystem.dmg.  IMG4 is used for smaller disk images that can be entirely validated &quot;single shot&quot; unlike larger disks which use SSV and validate on read.</string>
+				</dict>
+				<key>local-boot-object</key>
 <!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-			<data>
-			BAgw
-			</data>
+				<data>
+				BAgw
+				</data>
+				<key>ssv-root-hash</key>
+				<dict>
+					<key>description</key>
+					<string>Root Hash values are used to validate the Signature of an APFS Signed volume or snapshot.  They will be paired to a corresponding disk image. Some also are paired with `ssv-merkle-tree` which includes the metadata for the volume.</string>
+				</dict>
+				<key>trust-cache</key>
+<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
+				<data>
+				BAgw
+				</data>
+				<key>trust-measurement</key>
+				<dict>
+					<key>description</key>
+					<string>A trust measurement is requested from the processor to ensure that the boot flow has not changed since a prior time that measurement was taken. To date the trust measurement is commonly found on SEP firmware images.</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>trust</key>
+		<dict>
+			<key>objects</key>
+			<dict>
+				<key>inst</key>
+				<dict>
+					<key>description</key>
+					<string>The key or file to install</string>
+					<key>title</key>
+					<string>Key Instance</string>
+				</dict>
+				<key>rssl</key>
+				<dict>
+					<key>description</key>
+					<string>The valid CA used for secure communications with the FDR server to obtain the FDR objects.  This differs from the `trst` object as `rssl` is in transit and `trst` is at rest.</string>
+				</dict>
+				<key>rvok</key>
+				<dict>
+					<key>description</key>
+					<string>Trust object revocation list</string>
+				</dict>
+				<key>secb</key>
+				<dict>
+					<key>description</key>
+					<string>Sets a security value such as `trst` or the FDR signing trust object. &quot;security blob?&quot;.  Known to include `trst` (yes a `trst` partition with a `secb` object with a `trst` object), `rssl` (Factory SSL root CA), `rvok` (Revocation list) and `trpk` (trusted public keys?)</string>
+				</dict>
+				<key>trpk</key>
+				<dict>
+					<key>description</key>
+					<string>Trust public keys</string>
+				</dict>
+				<key>trst</key>
+				<dict>
+					<key>description</key>
+					<string>The certificate used for the `seal` object</string>
+				</dict>
+			</dict>
 		</dict>
 	</dict>
-	<key>metadata</key>
-	<dict>
-		<key>credits</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-		<data>
-		BAgw
-		</data>
-		<key>description</key>
-<!-- The <data> element below contains a Ruby object which has been serialized with Marshal.dump. -->
-		<data>
-		BAgw
-		</data>
-	</dict>
+	<key>unmapped</key>
+	<array>
+		<string>ApRelaxedImageVerification</string>
+		<string>@BCert</string>
+		<string>@Managed</string>
+		<string>@AlternateSU</string>
+		<string>Ap,UseGlobalSigning</string>
+		<string>AllowNeRDBoot</string>
+		<string>NeRDEpoch</string>
+		<string>PermitNeRDPivot</string>
+		<string>Ap,OSEnvironment</string>
+		<string>Ap,CurrentOSSecurityVersion</string>
+		<string>Ap,MinimumOSSecurityVersion</string>
+		<string>Ap,EnableGroundhog</string>
+		<string>Ap,SoftwareUpdateDeviceID</string>
+		<string>ApCertificateEpoch</string>
+		<string>ApLeafCertStatus</string>
+		<string>BuildString</string>
+		<string>Name</string>
+		<string>UID_MODE</string>
+		<string>@Cryptex1,Ticket</string>
+		<string>Cryptex1,Ticket</string>
+		<string>Cryptex1,ChipID</string>
+		<string>Cryptex1,ProductClass</string>
+		<string>Cryptex1,UseProductClass</string>
+		<string>Cryptex1,Nonce</string>
+		<string>Cryptex1,NonceDomain</string>
+		<string>Cryptex1,ProductionMode</string>
+		<string>Cryptex1,UseGlobalSigning</string>
+		<string>Cryptex1,Version</string>
+		<string>Cryptex1,FakeRoot</string>
+		<string>PearlCertificationRootPub</string>
+		<string>x86,ProductionMode</string>
+		<string>x86,SecurityMode</string>
+		<string>x86,Nonce</string>
+		<string>x86,UseGlobalSigning</string>
+		<string>x86,AllowMixAndMatch</string>
+		<string>x86,OSLongVersion</string>
+		<string>x86,Ticket</string>
+		<string>@x86,Ticket</string>
+		<string>@Locality</string>
+		<string>@BBTicket</string>
+		<string>BbSNUM</string>
+		<string>BbGoldCertId</string>
+		<string>BbSkeyId</string>
+		<string>BbNonce</string>
+		<string>BpApBindingDigest</string>
+		<string>BbServerNonce</string>
+		<string>BbVendorData</string>
+		<string>BbFieldDiagsEnable</string>
+		<string>@EUICCTicket</string>
+		<string>EuiccMainTicket</string>
+		<string>EuiccGoldTicket</string>
+		<string>EUICCSignedProfileMain</string>
+		<string>EUICCSignedProfileGold</string>
+		<string>BbAntennaType</string>
+		<string>BbBehavior</string>
+	</array>
 </dict>
 </plist>

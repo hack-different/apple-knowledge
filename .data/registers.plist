@@ -21223,12 +21223,21 @@
 	</dict>
 	<key>metadata</key>
 	<dict>
+		<key>collections</key>
+		<array>
+			<string>aarch64</string>
+		</array>
 		<key>credits</key>
 		<array>
 			<string>https://gist.github.com/bazad/42054285391c6e0dcd0ede4b5f969ad2</string>
 		</array>
 		<key>description</key>
 		<string>Representations of registers and instructions for various CPU elements</string>
+		<key>sort_paths</key>
+		<array>
+			<string>$.aarch64.msr</string>
+			<string>$.aarch64.apple_system_registers</string>
+		</array>
 	</dict>
 </dict>
 </plist>

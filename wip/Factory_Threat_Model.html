@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=07d13a1486a381a6fee0b352536d00a24973f3bc">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Exploring What AppleInternal Users Can Abuse | Hack Different - Apple Knowledge</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Exploring What AppleInternal Users Can Abuse" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hack Different is a community of research around the Apple platform." />
+<meta name="twitter:description" property="og:description" content="Hack Different is a community of research around the Apple platform." />
+<link rel="canonical" href="https://docs.hackdiffe.rent/wip/Factory_Threat_Model.html" />
+<meta property="og:url" content="https://docs.hackdiffe.rent/wip/Factory_Threat_Model.html" />
+<meta property="og:site_name" content="Hack Different - Apple Knowledge" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Exploring What AppleInternal Users Can Abuse" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Hack Different is a community of research around the Apple platform.","headline":"Exploring What AppleInternal Users Can Abuse","url":"https://docs.hackdiffe.rent/wip/Factory_Threat_Model.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Hack Different - Apple Knowledge</h1>
+        </a>
+        <h2>Hack Different is a community of research around the Apple platform.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/hack-different/apple-knowledge" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="exploring-what-appleinternal-users-can-abuse">Exploring What AppleInternal Users Can Abuse</h1>
+
+<p>This article dedicated to those I’ve personally known who’ve worked in Factory Process,
+the misuse of which drives this research.</p>
+
+<h2 id="factory-trust">Factory Trust</h2>
+
+<p>From data gathered by looking at disk images in the wild, it appears that
+there are not just “customer” variants of the Restore and Upgrade disk images
+typically used in DFU based recovery, but also factory versions used in initial
+imaging and refurbishment.  The factory variants, unlike customer, do not use a strict,
+internal state machine to perform this process.  This is logical as factory
+needs to do additional privileged operations such as:</p>
+
+<ul>
+  <li>Component Testing / Quality Control (burn-in)</li>
+  <li>Calibration</li>
+  <li>Configuration of device specific identity (setting of wireless and bluetooth MAC addresses)</li>
+  <li>Creating the device parts manifest (the wrapped set of serial numbers that make up the unit,
+including main logic board, display, TouchID, etc) which is then stored in FDR (SysCfg in the
+cloud) and placed onto the device storage.</li>
+  <li>Pairing, or the process of cryptographically binding the SEP with the TouchID or FaceID
+components.  Because these use a secure channel, they must exchange keys before use.
+(This lead to numerous issues related to FaceID and TouchID with unauthorized repairs,
+as the repairing worker was unable to modify the SysCfg manifest and pair the new components).
+This key exchange ensures that the components are protected from MitM (Man-in-the-Middle)
+attacks.</li>
+  <li>Generation of key material.  The UID is generated on the AP/SEP itself during an initial run
+and stored in non-extractable fused memory of the AES hardware.  Should this not occur the
+UID would be a “clear key” consisting of all zeros/ones, and would not provide protection for user
+data.  Furthermore, it’s likely that a blank board can run a “less then authorized” payload
+to fixate the key to a known value (Key Pre-imaging Attack)</li>
+  <li>Fusing.  Devices must be moved from PVT (Production Validation Test) to MP (Mainline Production)
+after successful testing to put it into a customer ready state.  This takes devices and lowers
+them to <code class="language-plaintext highlighter-rouge">CPFM:03</code> which is a secure production device.
+    <ul>
+      <li>There are additional OPCODE based operations that can be executed when the boot manifest
+includes the <code class="language-plaintext highlighter-rouge">rcfg</code> (reconfigure boot) and <code class="language-plaintext highlighter-rouge">recm</code> (reconfigure mode) or “Reconfigure”
+entitlement.  These operations center around the reading, modification and writing of
+protected registers.  This is likely how key components setting board ID, of fusing and
+device identity change in refurbishment.</li>
+      <li>Additional details in iBoot indicate that the fuses are “sealed” (meaning its cryptographically
+validated) and that it is somewhat mutable via the correct <code class="language-plaintext highlighter-rouge">rcfg</code> provider.</li>
+    </ul>
+  </li>
+  <li>Refurbishment.  Refurbishment of a unit requires that components be re-tested and paired.</li>
+  <li>Installing the initial operating system and firmware</li>
+</ul>
+
+<p>Evidence of factory programming occurs in tickets that are issued from <code class="language-plaintext highlighter-rouge">Factory</code> ICAs (intermediate
+certificate authorities) as opposed to the typical DataCenter seen in customer based device restore.
+There are additional manifest properties that are respected by these internal signing servers,
+some of which include <code class="language-plaintext highlighter-rouge">sika</code>, <code class="language-plaintext highlighter-rouge">ftap</code>, <code class="language-plaintext highlighter-rouge">ftsp</code>, <code class="language-plaintext highlighter-rouge">rfta</code>, <code class="language-plaintext highlighter-rouge">rfts</code>, <code class="language-plaintext highlighter-rouge">uidm</code>, <code class="language-plaintext highlighter-rouge">sidm</code>, along with the
+<code class="language-plaintext highlighter-rouge">DPRO</code>, <code class="language-plaintext highlighter-rouge">DSEC</code>, <code class="language-plaintext highlighter-rouge">MPRO</code>, and <code class="language-plaintext highlighter-rouge">MSEC</code> properties to establish the effective security mode.
+These properties, in addition to the Factory Boot Disks, Developer Disks and Personal Disk Images
+allow for non-customer restore flows.</p>
+
+<h2 id="reconfigure-to-pvt-and-factory-trust">Reconfigure to PVT, and Factory Trust</h2>
+
+<p>The usage of <code class="language-plaintext highlighter-rouge">rcfg</code> boot to alter the board ID down to the PVT variant permits the usage of
+factory trust keys for boot.  By switching down to these keys, the protections of TSS can
+be avoid, and other privileged IM4M keys can be utilized.</p>
+
+<h2 id="ramrod">RamRod</h2>
+
+<p>Ramrod is a plugin to the OTA process (<code class="language-plaintext highlighter-rouge">patchd</code>) that allows for the restore of a full OTA, as well
+as other unusual features, such as NVRAM shadowing, custom sequencing and skipped phases.  It will
+often end up as <code class="language-plaintext highlighter-rouge">(null)</code> as the component in some OTA logs.  The combination of a restore of a
+lower macOS version, plus the usage of <code class="language-plaintext highlighter-rouge">ramrod</code> to update it permits the security of the
+operating system to be subverted and can be made persistent by failing to complete the update flow.
+This is advantages for a few reasons, one it uses a supported component to enter the recovery
+environment, which has lower security settings to enable the laying down of firmware to hardware
+component and lacks System Integrity Protection.</p>
+
+<p>Ramrod also has native support for NVRAM shadowing, or the ability to redirect writes to protected
+keys to a backing NVRAM plist.</p>
+
+<h2 id="clear-zero-hashes-and-keys">Clear (Zero) Hashes and Keys</h2>
+
+<p>By fixing hashes to a sequence of zeros, once a APTicket is issued it may be re-placed onto a device.
+Zero keys can be observed both the for xART root UUID (00000000-0000-0000-0000-000000000000) as well
+as the initial values for BNCH domain nonces.</p>
+
+<p>This combined with the usage of Zero nonces for the boot nonce domains further extends predictable
+concerning to the other components of the boot path.</p>
+
+<h2 id="hypervisor-hypr-application-virtualization-rosetta-appv-root-domain-hop0-and-hop0s-syscfg-0cfg">HyperVisor <code class="language-plaintext highlighter-rouge">hypr</code>, Application Virtualization (Rosetta) <code class="language-plaintext highlighter-rouge">appv</code>, Root Domain (<code class="language-plaintext highlighter-rouge">hop0</code>) and <code class="language-plaintext highlighter-rouge">hop0</code>’s SysCfg <code class="language-plaintext highlighter-rouge">0Cfg</code></h2>
+
+<p>For Apple systems historically the <code class="language-plaintext highlighter-rouge">hypr</code> role is filled by the SPTM, but with newer Apple Silicon
+this have moved from EL2 to Guarded Execution Roles.</p>
+
+<p>In “self hosted factory trust” the <code class="language-plaintext highlighter-rouge">hop0</code> partition is used to act as the restoring station, and
+a <code class="language-plaintext highlighter-rouge">hypX</code> partition is the restored station.  This manifests in the FDR cached data as unlabeled
+parts (those without any prefix such as <code class="language-plaintext highlighter-rouge">fCfg</code>, <code class="language-plaintext highlighter-rouge">dCfg</code>, etc), those of the <code class="language-plaintext highlighter-rouge">hop0</code> host station
+(<code class="language-plaintext highlighter-rouge">mansta</code>) and those of the restored device station <code class="language-plaintext highlighter-rouge">mandev</code>.  This allows the <code class="language-plaintext highlighter-rouge">fSys</code> or Firmware
+SysCfg and <code class="language-plaintext highlighter-rouge">0Cfg</code> or <code class="language-plaintext highlighter-rouge">hop0</code> domain 0 SysCfg to be stored at the root NOR part, while EAN can be
+leveraged for the per OS <code class="language-plaintext highlighter-rouge">fCfg</code>.</p>
+
+<p>The domain zero kernel is privileged above other virtual machine instance, and <code class="language-plaintext highlighter-rouge">hypX</code> lacks root level permission.
+An example of this would be access to the <code class="language-plaintext highlighter-rouge">system</code> NVRAM namespace.  This means that should an
+attacker gain control of <code class="language-plaintext highlighter-rouge">hop0</code> they can start a blue-pill like environment for any other domains.
+To do so would typically require a local recovery policy with lowered security settings, as
+non-recovery is a limited permission boot mode.</p>
+
+<h3 id="the-trusted-execution-monitor">The Trusted Execution Monitor</h3>
+
+<p><code class="language-plaintext highlighter-rouge">appv</code> is considered a boot image to begin execution once a new EL1 domain is established.  Typically
+this is simply a small shim to begin execution of the XNU kernel once EL1 is properly configured and
+to service minimal HVC requests.</p>
+
+<h2 id="re-entrant-iboot-and-sep">Re-entrant iBoot and SEP</h2>
+
+<p>To support differing versions of the sepOS and related services the device root SEPROM will load
+the system level <code class="language-plaintext highlighter-rouge">sepf</code>,<code class="language-plaintext highlighter-rouge">sepi</code>.  SEP Firmware or <code class="language-plaintext highlighter-rouge">sepf</code> payloads are de-novo images that are
+decrypted by the SEP GID and then executed at the root firmware level.  Booted Image Firmware
+(<code class="language-plaintext highlighter-rouge">sepi</code>) are combinations of the firmware as well as memory data that is launched per-operating
+system (typically used for restoring the SEP memory after hibernation).</p>
+
+<p>To support updates to the booted image, supplemental <code class="language-plaintext highlighter-rouge">sep-patches</code> images can be applied to
+alter the code and readonly regions on the fly.</p>
+
+<h2 id="iboot-ibot-iboot-data-ibdt-secondary-iboot-">iBoot (<code class="language-plaintext highlighter-rouge">ibot</code>), iBoot Data (<code class="language-plaintext highlighter-rouge">ibdt</code>), secondary iBoot (``)</h2>
+
+<h3 id="iboot-data">iBoot Data</h3>
+
+<p>Typically provides DDR timing data, which can affect the security of the system by reducing the
+time for a bank clear operation (the number of nano/pico seconds) a cell must be drained to be
+considered to be a zero state.  Additionally lengthening the charge time for a cell can cause it
+to be over-charged, increasing its durability across a PoR or Power-on-Reset event.  The combination
+of these two properties can allow for conditions where memory is retained across a PoR, permitting
+situations such as the existence of a SecureROM copy at the DRAM address thereby subverting the
+typical assurances of being copied from ROM (The header stub copes from ROM to memory, and is
+only tested by if the execution location is greater or less then the SecureROM base address).</p>
+
+<h2 id="usage-of-local-policy-and-local-trust-keys">Usage of Local Policy and Local Trust Keys</h2>
+
+<h2 id="fdr-managed-station-and-managed-device">FDR, Managed Station and Managed Device</h2>
+
+<p>FDR or “SysCfg in the Cloud” allows blobs of data to be retrieved by the restoring system through
+a proxy mechanism implemented by the restore station.  This permits the restoring device to
+request and retrieve the 4CC binary objects for placement onto persistent memory.  There are multiple
+trust primitives in the FDR system:</p>
+
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">trst</code> or at rest signing certificate</li>
+  <li>The <code class="language-plaintext highlighter-rouge">rssl</code> or TLS trusted root certificate for communications with the FDR service</li>
+  <li>The <code class="language-plaintext highlighter-rouge">rvok</code> or revoked Certificate / Key list</li>
+  <li>The <code class="language-plaintext highlighter-rouge">trpk</code> or trusted public keys (additional to the one in the <code class="language-plaintext highlighter-rouge">trst</code> certificate)
+normal restore process appears to contain the <code class="language-plaintext highlighter-rouge">trst</code>, <code class="language-plaintext highlighter-rouge">rssl</code>, an empty <code class="language-plaintext highlighter-rouge">rvok</code> and no <code class="language-plaintext highlighter-rouge">trtk</code>.
+Factory trusted installs seem to contain a <code class="language-plaintext highlighter-rouge">trpk</code> that is a sequence of public keys that may
+additionally be used.</li>
+</ul>
+
+<h2 id="communication-with-hop0-via-remotexpc">Communication with <code class="language-plaintext highlighter-rouge">hop0</code> via RemoteXPC</h2>
+
+<p>The HyperVisor Partitions are connected using synthetic USB NCM/CDC devices, usually annotated as
+apniX (Apple Private NCM Interface).  This provides a transport mechanism between the domains over
+the virtualized USB and IPv6 Fabric similar in nature to the system utilized by the T1/T2 chips.
+For this reason the <code class="language-plaintext highlighter-rouge">/usr/libexec/remotectl</code> command line app can be used to interrogate the remote
+system’s <code class="language-plaintext highlighter-rouge">remoted</code> service.</p>
+
+<h2 id="dual-nvme-endpoints-and-emulated-apple-nor">Dual NVMe Endpoints, and Emulated Apple NOR</h2>
+
+<p>The ANS3 (Apple NAND Storage components) are capable of multiple endpoints (a capability of
+the RTKit system, whereby RTBuddy has various service endpoints), where each endpoint
+is a configuration of mappings of LBAs (Logical Block Addresses) to Namespaces, with a given type.
+On systems where a hypervisor is used, typically two such endpoints can be observed, the “true” or
+“root” endpoint, as well as a shadow mapping used for the guest operating system thereby allowing
+a different set of namespaces and their LBAs.  This is the reason that <code class="language-plaintext highlighter-rouge">eCfg</code> becomes problematic
+in FDR as the one component that cannot truly be virtualized is the NAND storage component, due
+to the need to service both the <code class="language-plaintext highlighter-rouge">dom0</code> guest as well as the boot component.  Errors will includes
+<code class="language-plaintext highlighter-rouge">eCfg</code> being missing from sealing keys, or that it is not required to seal depending on which
+personality the message originates from.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">afi-ns-name</code> - Apple Firmware Image?
+    <ul>
+      <li>NS1</li>
+      <li>NS2</li>
+      <li>NS3</li>
+      <li>NS4</li>
+      <li>NS5</li>
+      <li>NS6</li>
+      <li>NS0</li>
+      <li>NS9</li>
+      <li>NS7</li>
+      <li>NS8</li>
+      <li>NS10</li>
+      <li>NS11</li>
+      <li>NS12</li>
+      <li>NS13</li>
+      <li>NS14</li>
+      <li>NS15</li>
+      <li>NS16</li>
+      <li>NS17</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">afc-ns-names</code> - Apple File Conduit?
+    <ul>
+      <li>NS1</li>
+      <li>NS2</li>
+      <li>NS3</li>
+      <li>NS4</li>
+      <li>NS0</li>
+      <li>NS5</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">afr-ns-names</code> - Apple Firmware Restore?
+    <ul>
+      <li>0SN</li>
+      <li>NS1</li>
+      <li>NS2</li>
+      <li>NS3</li>
+      <li>NS4</li>
+      <li>NS5</li>
+      <li>NS6</li>
+      <li>NS7</li>
+      <li>NS46</li>
+      <li>NS56</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="custom-sequencing-via-the-pmgr">Custom Sequencing via the PMGR</h2>
+
+<p>The Mac contains multiple PMGR devices</p>
+
+<h2 id="the-trust-object-and-embedded-trust-keys-trpk">The Trust Object, and Embedded Trust Keys <code class="language-plaintext highlighter-rouge">trpk</code></h2>
+
+<p>The firmware object <code class="language-plaintext highlighter-rouge">trst</code> sets non mask ROM security certificate and public keys.</p>
+
+<h2 id="authentication-to-the-device-via-moped">Authentication to the Device via MoPED</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">MdlC</code> SysConfig value (Model Configuration) contains the key <code class="language-plaintext highlighter-rouge">MoPED</code> which is used to authenticate
+factory based sessions from the station device to the Device-Under-Test.  Given it is the length of a SHA1
+hash, … (insert HMAC parameters here from <code class="language-plaintext highlighter-rouge">FactoryProcess</code>).</p>
+
+<h2 id="passing-out-of-usb-via-synthetic-network-from-host-to-guest">Passing out of USB via Synthetic Network from Host to Guest</h2>
+
+<h2 id="using-rosetta-to-weaken-platform-security">Using Rosetta to Weaken Platform Security</h2>
+
+<h2 id="keeping-a-place-of-privilege---the-never-ending-update">Keeping a Place of Privilege - The Never Ending Update</h2>
+
+<h2 id="using-avd-and-multiple-hypervisor-domains-to-simulate-idevices">Using AVD and Multiple Hypervisor Domains to Simulate iDevices</h2>
+
+<p>In addition to an attacker controlled <code class="language-plaintext highlighter-rouge">hop0</code>, additional domain can be used with any
+number of developer disk images (DDIs).  This allows an attacker to use an internal build of
+iOS / padOS / watchOS to pretend to be a device.  Since the Apple Silicon mac is a full fledged
+Apple ARM Device, it can gather nearly identical rights to systems like APNS and iCloud.</p>
+
+      </section>
+    </div>
+  </body>
+</html>
