@@ -79,6 +79,9 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
   * [`AllsafeCyberSecurity/awesome-ghidra`](https://github.com/AllsafeCyberSecurity/awesome-ghidra)
   * [`0x36/ghidra_kernelcache`](https://github.com/0x36/ghidra_kernelcache)
 * [Hopper Disassembler](https://www.hopperapp.com)
+* [REA](https://github.com/morluto/rea) - Local CLI and MCP tools for agent-assisted inspection of macOS app bundles
+  and Mach-O binaries, retaining evidence provenance and unknowns; deep native analysis uses separately installed
+  Hopper, Ghidra, or IDA.
 * [Capstone Engine](https://github.com/aquynh/capstone)
 * [Unicorn Engine](https://github.com/unicorn-engine/unicorn)
 * [QEMU](https://qemu.readthedocs.io/en/latest/)
