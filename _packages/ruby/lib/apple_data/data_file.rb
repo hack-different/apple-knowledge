@@ -24,29 +24,18 @@ module AppleData
     def initialize(*parts)
       @parts = parts
       @parts = [self.class.const_get(:DEFAULT_FILENAME)] if @parts.empty?
-      @collections = {}
       load_file(*@parts)
-      ensure_metadata
     end
 
     def self.from_path(path)
-      instance = DataFile.allocate
-      instance.instance_eval do
-        @filename = path
-        @collections = {}
-        @data = YAML.load_file @filename if File.exist? @filename
-        ensure_metadata
+      allocate.tap do |instance|
+        instance.send(:load_path, path)
       end
-      instance
     end
 
     def load_file(*parts)
       parts[-1] = "#{parts[-1]}.yaml" unless parts[-1].end_with? '.yaml'
-      @filename = File.join(AppleData.data_location, File.join(*parts))
-      @data = {}
-      @data = YAML.load_file @filename if File.exist? @filename
-      @data.deep_symbolize_keys!
-      @data = @data.with_indifferent_access
+      load_path(File.join(AppleData.data_location, File.join(*parts)))
     end
 
     def save!
@@ -96,12 +85,25 @@ module AppleData
 
     private
 
+    def load_path(path)
+      loaded_data = File.exist?(path) ? YAML.load_file(path) : {}
+      loaded_data = {} if loaded_data.nil?
+      raise ArgumentError, "Expected a YAML mapping in #{path}" unless loaded_data.is_a?(Hash)
+
+      @filename = path
+      @data = loaded_data.with_indifferent_access
+      @collections = {}
+      @mapped_collections = {}
+      ensure_metadata
+      @data
+    end
+
     def save_data(data)
       @collections.each do |name, collection|
         @data[name] = collection.data
       end
 
-      File.write(@filename, data.to_yaml)
+      File.write(@filename, data.to_hash.to_yaml)
     end
 
     def ensure_metadata
@@ -129,7 +131,7 @@ module AppleData
       def sort!
         case @collection_data
         when Array
-          @collection_data.sort
+          @collection_data.sort!
         when Hash
           @collection_data = @collection_data.sort_by { |key, _value| key }.to_h
         end

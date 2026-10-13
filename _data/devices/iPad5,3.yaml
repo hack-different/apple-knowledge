@@ -25,7 +25,7 @@ device_tree:
   model: iPad5,3
   device_type: bootrom
   "#size-cells": 2
-  :children:
+  children:
   - development-cert: 0
     disable-transport-rm: 0
     amfi-only-platform-code: 0
@@ -96,7 +96,7 @@ device_tree:
     effective-security-mode-sep: 0
     sepfw-load-at-boot: 1
     display-scale: 0
-    :children:
+    children:
     - UnusedIntegerProperty10: "\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty3: 0
       UnusedIntegerProperty6: "\0\0\0\0\0\0\0\0"
@@ -236,7 +236,7 @@ device_tree:
       name: iBoot
     - name: memory-report
       AAPL,phandle: 11
-      :children:
+      children:
       - name: zeroization-report
         AAPL,phandle: 12
   - name: options
@@ -245,7 +245,7 @@ device_tree:
     "#size-cells": 0
     name: cpus
     AAPL,phandle: 14
-    :children:
+    children:
     - AAPL,phandle: 15
       cpu-id: 0
       fixed-frequency: "\0\0\0\0\0\0\0\0"
@@ -352,7 +352,7 @@ device_tree:
     function-clock_gate: "\x1A\0\0\0Gklc"
     function-power_gate: "\x1A\0\0\0Grwp"
     name: arm-io
-    :children:
+    children:
     - "#interrupt-cells": 1
       "#main-cpus": 3
       compatible:
@@ -441,7 +441,7 @@ device_tree:
         Energy\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
       bridge-settings-2: !binary |-
         FAAAAAQAAcAcAAAAKCgAACAAAAAoKAAAJAAAACgoAAAoAAAAKCgAACwAAABAQAAAMAAAAEBAAAA0AAAAQEAAADgAAABAQAAAABAAAA8AD8A=
-      :children:
+      children:
       - fb-caching: 1
         compatible:
         - soc-tuner,t7000
@@ -634,7 +634,7 @@ device_tree:
       has-art: ''
       role: 5260627
       name: 7366003
-      :children:
+      children:
       - AAPL,phandle: 37
         compatible:
         - iop-nub,sep
@@ -657,7 +657,7 @@ device_tree:
       power-gates: 22
       role: 5459521
       name: 7564897
-      :children:
+      children:
       - region-size: "\0\0\0\0\0\0\0\0"
         compatible:
         - iop-nub,rtbuddy
@@ -685,12 +685,12 @@ device_tree:
       role: 5196115
       ignore-gating: ''
       name: 7301491
-      :children:
+      children:
       - compatible:
         - iop-nub,sio
         name: iop-sio-nub
         AAPL,phandle: 41
-        :children:
+        children:
         - compatible:
           - sio-dma-controller
           device_type: sio-dma
@@ -711,7 +711,7 @@ device_tree:
       uart-version: 1
       boot-console: ''
       name: uart0
-      :children:
+      children:
       - name: debug-console
         AAPL,phandle: 44
     - compatible:
@@ -733,7 +733,7 @@ device_tree:
       dma-parent: 42
       uart-version: 1
       name: uart1
-      :children:
+      children:
       - name: debug
         AAPL,phandle: 46
     - compatible:
@@ -755,7 +755,7 @@ device_tree:
       dma-parent: 42
       uart-version: 1
       name: uart2
-      :children:
+      children:
       - wlan.background-scan-cache: 1
         bcom.ps.realtime: !binary |-
           AwDIAAAAAQCgDwAA
@@ -812,7 +812,7 @@ device_tree:
       dma-parent: 42
       uart-version: 1
       name: uart3
-      :children:
+      children:
       - function-bt_wake: !binary |-
           HwAAAE9JUEekAAAAAQEAAA==
         compatible:
@@ -847,7 +847,7 @@ device_tree:
       dma-parent: 42
       uart-version: 1
       name: uart4
-      :children:
+      children:
       - required-gpios: "support_venable\0support_download_request\0"
         compatible:
         - nfc,primary,gpio
@@ -870,7 +870,7 @@ device_tree:
       function-tx: "\x1F\0\0\0OIPG\"\0\0\0\x02\x01\0\0"
       uart-version: 1
       name: uart5
-      :children:
+      children:
       - posm-threshold: "\0\0\0\0\0\0\0\0U\0Z\0U\0Z\0"
         compatible:
         - gas-gauge,bq27540
@@ -897,7 +897,7 @@ device_tree:
         HwAAAE9JUEeCAAAAAgEAAA==
       uart-version: 1
       name: uart6
-      :children:
+      children:
       - compatible:
         - iap,uart
         function-dock_parent: !binary |-
@@ -920,7 +920,7 @@ device_tree:
       dma-parent: 42
       uart-version: 1
       name: uart8
-      :children:
+      children:
       - function-oscar_power2: "N\0\0\0Lump\x15\x02\0\0"
         compatible:
         - apple-oscar
@@ -935,7 +935,7 @@ device_tree:
         device_type: oscar
         function-sensor_power: "N\0\0\0Lump\x02\x02\0\0"
         function-time-sync: "\x1F\0\0\0OIPG4\0\0\0\x01\x01\0\0"
-        :children:
+        children:
         - NoFactoryCalibration: 1
           gyro-interrupt-calibration: syscfg/GICl
           device-usage-page: 65280
@@ -1002,7 +1002,7 @@ device_tree:
       spi-version: 1
       dma-parent: 42
       name: spi1
-      :children:
+      children:
       - dmic1a-intmic: 1768778083
         at-scale-imic: 0
         compatible:
@@ -1044,7 +1044,7 @@ device_tree:
       spi-version: 1
       dma-parent: 42
       name: spi2
-      :children:
+      children:
       - compatible:
         - biosensor,mesa
         scan-timer-reset-time: 39321
@@ -1080,7 +1080,7 @@ device_tree:
       spi-version: 1
       dma-parent: 42
       name: spi3
-      :children:
+      children:
       - function-clock_enable: !binary |-
           GgAAAEtMQ1QIAAAAZAAAAACAAAA=
         compatible:
@@ -1127,7 +1127,7 @@ device_tree:
       "#size-cells": 2
       clock-ids: 274
       device_type: usb-complex
-      :children:
+      children:
       - publish-criteria: 3
         AAPL,phandle: 72
         configuration-string: stdMuxPTPEthValIDA
@@ -1174,7 +1174,7 @@ device_tree:
         cfg-incr: 15
         bus-number: 1
         clock-mask: 4
-        :children:
+        children:
         - port: 1
           AAPL,phandle: 74
           clock-mask: 4
@@ -1199,7 +1199,7 @@ device_tree:
         errata: 33554432
         bus-number: 2
         clock-mask: 8
-        :children:
+        children:
         - port: 1
           AAPL,phandle: 76
           clock-mask: 8
@@ -1224,7 +1224,7 @@ device_tree:
       AAPL,phandle: 77
       function-device_reset: "\x1A\0\0\0TSRAF\0\0\0"
       name: i2c0
-      :children:
+      children:
       - wled-enables: 63
         event_name-gpio6: battery
         event_name-gpio16: oscar
@@ -1289,7 +1289,7 @@ device_tree:
       AAPL,phandle: 80
       function-device_reset: "\x1A\0\0\0TSRAG\0\0\0"
       name: i2c1
-      :children:
+      children:
       - interrupt-parent: 31
         compatible:
         - audio-control,max98721
@@ -1336,7 +1336,7 @@ device_tree:
       AAPL,phandle: 84
       function-device_reset: "\x1A\0\0\0TSRAH\0\0\0"
       name: i2c2
-      :children:
+      children:
       - function-int_status: "\x1F\0\0\0OIPGg\0\0\0\0\0\x01\0"
         compatible:
         - als,ct819
@@ -1399,7 +1399,7 @@ device_tree:
       param_fifo-frontend: "Z\0\0\0ADPParamFIFO\0"
       power-gates: 114
       name: displayport
-      :children:
+      children:
       - name: 6579052
         compatible:
         - lcd,edp
@@ -1446,7 +1446,7 @@ device_tree:
       smmu-present: 1
       stt-idx-width: 10
       name: dart-disp0
-      :children:
+      children:
       - tail-padding: 1
         compatible:
         - iommu-mapper
@@ -1492,7 +1492,7 @@ device_tree:
       smmu-present: 1
       stt-idx-width: 10
       name: dart-scaler
-      :children:
+      children:
       - tail-padding: 1
         compatible:
         - iommu-mapper
@@ -1536,7 +1536,7 @@ device_tree:
       power-gates: 34
       stt-idx-width: 10
       name: dart-jpeg
-      :children:
+      children:
       - tail-padding: 2
         compatible:
         - iommu-mapper
@@ -1602,7 +1602,7 @@ device_tree:
       smmu-present: 1
       stt-idx-width: 8
       name: dart-isp
-      :children:
+      children:
       - AAPL,phandle: 101
         compatible:
         - iommu-mapper
@@ -1648,7 +1648,7 @@ device_tree:
       smmu-present: 1
       stt-idx-width: 10
       name: dart-ave
-      :children:
+      children:
       - tail-padding: 1
         compatible:
         - iommu-mapper
@@ -1745,7 +1745,7 @@ device_tree:
       dma-parent: 42
       mca-version: 1
       name: mca0
-      :children:
+      children:
       - AAPL,phandle: 109
         compatible:
         - audio-data,cs42l81
@@ -1771,7 +1771,7 @@ device_tree:
       dma-parent: 42
       mca-version: 1
       name: mca1
-      :children:
+      children:
       - AAPL,phandle: 111
         compatible:
         - audio-data,voice
@@ -1800,7 +1800,7 @@ device_tree:
       dma-parent: 42
       mca-version: 1
       name: mca3
-      :children:
+      children:
       - AAPL,phandle: 113
         compatible:
         - audio-data,max98721
@@ -1826,7 +1826,7 @@ device_tree:
       dma-parent: 42
       mca-version: 1
       name: mca4
-      :children:
+      children:
       - AAPL,phandle: 115
         compatible:
         - audio-data,bluetooth-voice
@@ -1868,7 +1868,7 @@ device_tree:
       "#size-cells": 2
       msi-parent-controller: 24
       "#msi-vectors": 32
-      :children:
+      children:
       - apcie-port: 1
         function-dart_force_active: "y\0\0\0tcaF"
         msi-vector-base: 8
@@ -1888,7 +1888,7 @@ device_tree:
         pci-l1pm-control: "\x0F\nl@\0\0\0\0"
         manual-enable: ''
         "#msi-vectors": 8
-        :children:
+        children:
         - pci-aspm-default: 2
           compatible:
           - wlan-pcie,bcm4350
@@ -1923,7 +1923,7 @@ device_tree:
         pci-l1pm-control: "\x0F\nl@\0\0\0\0"
         apcie-port: 2
         "#msi-vectors": 8
-        :children:
+        children:
         - function-pcie_port_control: "t\0\0\0CtrPw\0\0\0"
           pci-aspm-default: 2
           iommu-parent: 124
@@ -1956,7 +1956,7 @@ device_tree:
       stt-idx-width: 10
       name: dart-apcie1
       vm-size: 1073737728
-      :children:
+      children:
       - AAPL,phandle: 122
         compatible:
         - iommu-mapper
@@ -1982,7 +1982,7 @@ device_tree:
       stt-idx-width: 10
       name: dart-apcie2
       vm-size: 1073737728
-      :children:
+      children:
       - AAPL,phandle: 124
         compatible:
         - iommu-mapper
@@ -2396,7 +2396,7 @@ device_tree:
     artwork-scale-factor: 2
     artwork-device-idiom: 6578544
     artwork-display-gamut: sRGB
-    :children:
+    children:
     - rear-slowmo: 1
       rear-max-video-zoom: 3
       rear-hdr-on: 1
@@ -2433,12 +2433,12 @@ device_tree:
       3d-maps: 0
   - name: filesystems
     AAPL,phandle: 147
-    :children:
+    children:
     - AAPL,phandle: 148
       max_fs_entries: 7
       name: fstab
       os_env_type: 1
-      :children:
+      children:
       - vol.fs_mntopts: ''
         vol.fs_type: ro
         vol.fs_role: 1
@@ -2488,7 +2488,7 @@ device_tree:
       max_fs_entries: 3
       name: fstab-ephemeral-recovery-data
       os_env_type: 2
-      :children:
+      children:
       - AAPL,phandle: 155
         vol.fs_mntopts: nosuid,nodev,size=262144,template=/private/var/
         vol.fs_type: rw
@@ -2520,7 +2520,7 @@ device_tree:
       max_fs_entries: 7
       name: fstab-ephemeral-diag-data
       os_env_type: 3
-      :children:
+      children:
       - AAPL,phandle: 159
         vol.fs_mntopts: nosuid,nodev,size=1048576,template=/private/var/
         vol.fs_type: rw
@@ -2559,10 +2559,10 @@ device_tree:
         AAPL,phandle: 162
   - name: osenvironments
     AAPL,phandle: 163
-    :children:
+    children:
     - name: recovery-environment
       AAPL,phandle: 164
-      :children:
+      children:
       - parent: "/filesystems"
         AAPL,phandle: 165
         replacement: fstab-ephemeral-recovery-data
@@ -2598,7 +2598,7 @@ device_tree:
         AAPL,phandle: 172
     - name: diagnostics-environment
       AAPL,phandle: 173
-      :children:
+      children:
       - parent: "/filesystems"
         AAPL,phandle: 174
         replacement: fstab-ephemeral-diag-data
@@ -2622,7 +2622,7 @@ device_tree:
         AAPL,phandle: 178
     - name: darwinos-ramdisk-environment
       AAPL,phandle: 179
-      :children:
+      children:
       - property_name: isp-horizon
         value: 1
         name: isp-horizon

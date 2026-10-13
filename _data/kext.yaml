@@ -27,10 +27,10 @@ kext_eliminate_display:
 - com.apple.kext.MojoKDP
 - com.apple.pae.driver.AppleQuaibridgePCIE
 kext_eliminate_display_no_symbols:
+- com.apple.driver.AppleBSDKextStarterVPN
 - com.apple.driver.AppleRSM
 - com.apple.driver.DrizzleSMC
 - com.apple.driver.kis.AppleKIS
-- com.apple.driver.AppleBSDKextStarterVPN
 kexts:
   com.Areca.ArcMSR:
     description:

@@ -23,7 +23,7 @@ device_tree:
   model: iPod7,1
   config-number: syscfg/CFG#/0x20,zeroes/0x20
   name: device-tree
-  :children:
+  children:
   - crypto-hash-method: sha1
     housing-color: syscfg/CLHS
     unique-chip-id: "\0\0\0\0\0\0\0\0"
@@ -74,7 +74,7 @@ device_tree:
     "#address-cells": 2
     marketing-software-behavior: syscfg/MkBS
     effective-production-status-ap: 0
-    :children:
+    children:
     - UnusedIntegerProperty10: "\0\0\0\0\0\0\0\0"
       UnusedBooleanProperty3: 0
       UnusedIntegerProperty6: "\0\0\0\0\0\0\0\0"
@@ -210,7 +210,7 @@ device_tree:
     "#size-cells": 0
     name: cpus
     AAPL,phandle: 8
-    :children:
+    children:
     - AAPL,phandle: 9
       fixed-frequency: "\0\0\0\0\0\0\0\0"
       bus-frequency: "\0\0\0\0\0\0\0\0"
@@ -286,7 +286,7 @@ device_tree:
     function-clock_gate: "\x13\0\0\0Gklc"
     function-power_gate: "\x13\0\0\0Grwp"
     name: arm-io
-    :children:
+    children:
     - "#interrupt-cells": 1
       "#main-cpus": 2
       compatible:
@@ -378,7 +378,7 @@ device_tree:
         FAAAAAQAAYAcAAAAKCgAACAAAAAoKAAAJAAAACgoAAAoAAAAKCgAACwAAABAQAAAMAAAAEBAAAA0AAAAQEAAADgAAABAQAAAABAAAA8AD8A=
       bridge-settings-13: !binary |-
         FAAAAAQAAYA=
-      :children:
+      children:
       - fb-caching: 1
         compatible:
         - soc-tuner,t7000
@@ -581,7 +581,7 @@ device_tree:
       has-art: ''
       role: 5260627
       name: 7366003
-      :children:
+      children:
       - compatible:
         - iop-nub,sep
         name: iop-sep-nub
@@ -600,7 +600,7 @@ device_tree:
       power-gates: 22
       role: 5459521
       name: 7564897
-      :children:
+      children:
       - region-size: "\0\0\0\0\0\0\0\0"
         compatible:
         - iop-nub,rtbuddy
@@ -628,12 +628,12 @@ device_tree:
       role: 5196115
       ignore-gating: ''
       name: 7301491
-      :children:
+      children:
       - compatible:
         - iop-nub,sio
         name: iop-sio-nub
         AAPL,phandle: 34
-        :children:
+        children:
         - compatible:
           - sio-dma-controller
           device_type: sio-dma
@@ -653,7 +653,7 @@ device_tree:
       uart-version: 1
       boot-console: ''
       name: uart0
-      :children:
+      children:
       - name: debug-console
         AAPL,phandle: 37
     - compatible:
@@ -674,7 +674,7 @@ device_tree:
       dma-parent: 35
       uart-version: 1
       name: uart1
-      :children:
+      children:
       - function-bt_wake: "\x18\0\0\0OIPG2\0\0\0\x01\x01\0\0"
         compatible:
         - bluetooth,n88
@@ -708,7 +708,7 @@ device_tree:
       dma-parent: 35
       uart-version: 1
       name: uart4
-      :children:
+      children:
       - wlan.background-scan-cache: 1
         bcom.ps.realtime: !binary |-
           AwDIAAAAAQCgDwAA
@@ -764,7 +764,7 @@ device_tree:
       function-tx: "\x18\0\0\0OIPGT\0\0\0\x02\x01\0\0"
       uart-version: 1
       name: uart6
-      :children:
+      children:
       - function-dock_parent: "r\0\0\0Pcca"
         name: 7364969
         AAPL,phandle: 43
@@ -784,7 +784,7 @@ device_tree:
       dma-parent: 35
       uart-version: 1
       name: uart8
-      :children:
+      children:
       - function-oscar_power2: "=\0\0\0Lump\x11\x02\0\0"
         compatible:
         - apple-oscar
@@ -798,7 +798,7 @@ device_tree:
         device_type: oscar
         function-time-sync: "\x18\0\0\0OIPGQ\0\0\0\x01\x01\0\0"
         name: oscar
-        :children:
+        children:
         - gyro-trim-calibration: syscfg/GTCl
           device_type: gyro
           gyro-range-sensitivity-cal: syscfg/GRSC
@@ -839,7 +839,7 @@ device_tree:
       "#address-cells": 1
       spi-version: 1
       name: spi1
-      :children:
+      children:
       - at-scale-imic: 0
         compatible:
         - audio-control,cs42l81
@@ -875,7 +875,7 @@ device_tree:
       spi-version: 1
       dma-parent: 35
       name: spi2
-      :children:
+      children:
       - function-clock_enable: !binary |-
           EwAAAEtMQ1QIAAAAZAAAAACAAAA=
         compatible:
@@ -922,7 +922,7 @@ device_tree:
       "#size-cells": 2
       clock-ids: 275
       device_type: usb-complex
-      :children:
+      children:
       - publish-criteria: 3
         AAPL,phandle: 55
         configuration-string: stdMuxPTPEthValIDA
@@ -965,7 +965,7 @@ device_tree:
         cfg-incr: 15
         bus-number: 1
         clock-mask: 4
-        :children:
+        children:
         - port: 1
           AAPL,phandle: 57
           clock-mask: 4
@@ -989,7 +989,7 @@ device_tree:
         errata: 33554432
         bus-number: 2
         clock-mask: 8
-        :children:
+        children:
         - port: 1
           AAPL,phandle: 59
           clock-mask: 8
@@ -1014,7 +1014,7 @@ device_tree:
       function-iic_sda: "\x18\0\0\0OIPG`\0\0\0\x02\x01\x01\0"
       function-iic_scl: "\x18\0\0\0OIPGa\0\0\0\x02\x01\x01\0"
       name: i2c0
-      :children:
+      children:
       - event_name-gpio17: pcie0
         "#interrupt-cells": 1
         interrupt-controller: ''
@@ -1082,7 +1082,7 @@ device_tree:
       function-iic_scl: !binary |-
         GAAAAE9JUEeLAAAAAgEBAA==
       name: i2c1
-      :children:
+      children:
       - function-alive: "\x18\0\0\0OIPG0\0\0\0\x01\x01\0\0"
         compatible:
         - audio-control,cs35l19
@@ -1116,7 +1116,7 @@ device_tree:
       power-gates: 113
       "#lanes": 2
       name: mipi-dsim
-      :children:
+      children:
       - compatible:
         - lcd,pinot
         function-lcd_ldo: "?\0\0\0ELpd\x01\x03\0\0"
@@ -1163,7 +1163,7 @@ device_tree:
       smmu-present: 1
       stt-idx-width: 10
       name: dart-disp0
-      :children:
+      children:
       - tail-padding: 1
         compatible:
         - iommu-mapper
@@ -1206,7 +1206,7 @@ device_tree:
       smmu-present: 1
       stt-idx-width: 10
       name: dart-disp1
-      :children:
+      children:
       - tail-padding: 1
         compatible:
         - iommu-mapper
@@ -1252,7 +1252,7 @@ device_tree:
       smmu-present: 1
       stt-idx-width: 10
       name: dart-scaler
-      :children:
+      children:
       - tail-padding: 1
         compatible:
         - iommu-mapper
@@ -1296,7 +1296,7 @@ device_tree:
       power-gates: 34
       stt-idx-width: 10
       name: dart-jpeg
-      :children:
+      children:
       - tail-padding: 2
         compatible:
         - iommu-mapper
@@ -1368,7 +1368,7 @@ device_tree:
       smmu-present: 1
       stt-idx-width: 8
       name: dart-isp
-      :children:
+      children:
       - AAPL,phandle: 83
         compatible:
         - iommu-mapper
@@ -1415,7 +1415,7 @@ device_tree:
       stt-idx-width: 10
       disable-perf-counters: ''
       name: dart-ave
-      :children:
+      children:
       - tail-padding: 1
         compatible:
         - iommu-mapper
@@ -1512,7 +1512,7 @@ device_tree:
       dma-parent: 35
       mca-version: 1
       name: mca0
-      :children:
+      children:
       - AAPL,phandle: 91
         compatible:
         - audio-data,cs42l81
@@ -1539,7 +1539,7 @@ device_tree:
       dma-parent: 35
       mca-version: 1
       name: mca2
-      :children:
+      children:
       - AAPL,phandle: 93
         compatible:
         - audio-data,cs35l19
@@ -1565,7 +1565,7 @@ device_tree:
       dma-parent: 35
       mca-version: 1
       name: mca4
-      :children:
+      children:
       - AAPL,phandle: 95
         compatible:
         - audio-data,voice
@@ -1609,7 +1609,7 @@ device_tree:
       "#size-cells": 2
       msi-parent-controller: 17
       "#msi-vectors": 32
-      :children:
+      children:
       - apcie-port: 1
         function-dart_force_active: "c\0\0\0tcaF"
         msi-vector-base: 8
@@ -1627,7 +1627,7 @@ device_tree:
         pci-l1pm-control: "\x0F\nl@\0\0\0\0"
         manual-enable: ''
         "#msi-vectors": 8
-        :children:
+        children:
         - pci-l1pm-control: "\x0F\nl@(\0\0\0"
           compatible:
           - wlan-pcie,bcm4345
@@ -1660,7 +1660,7 @@ device_tree:
       stt-idx-width: 10
       name: dart-apcie1
       vm-size: 1073737728
-      :children:
+      children:
       - AAPL,phandle: 100
         compatible:
         - iommu-mapper
@@ -2060,7 +2060,7 @@ device_tree:
     artwork-scale-factor: 2
     artwork-device-idiom: phone
     artwork-display-gamut: sRGB
-    :children:
+    children:
     - rear-slowmo: 1
       rear-max-video-zoom: 3
       rear-hdr-on: 1

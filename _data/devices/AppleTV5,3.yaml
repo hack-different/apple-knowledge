@@ -23,7 +23,7 @@ device_tree:
   model: AppleTV5,3
   config-number: syscfg/CFG#/0x20,zeroes/0x20
   name: device-tree
-  :children:
+  children:
   - crypto-hash-method: sha1
     housing-color: syscfg/CLHS
     unique-chip-id: 0
@@ -72,7 +72,7 @@ device_tree:
     "#address-cells": 2
     marketing-software-behavior: syscfg/MkBS
     effective-production-status-ap: 0
-    :children:
+    children:
     - UnusedIntegerProperty10: 0
       UnusedBooleanProperty3: 0
       UnusedIntegerProperty6: 0
@@ -208,7 +208,7 @@ device_tree:
     "#size-cells": 0
     name: cpus
     AAPL,phandle: 8
-    :children:
+    children:
     - AAPL,phandle: 9
       fixed-frequency: 0
       bus-frequency: 0
@@ -284,7 +284,7 @@ device_tree:
     function-clock_gate: 7164219059926466579
     function-power_gate: 8104071703744741395
     name: arm-io
-    :children:
+    children:
     - "#interrupt-cells": 1
       "#main-cpus": 2
       compatible:
@@ -372,7 +372,7 @@ device_tree:
       bridge-settings-2: !binary |-
         FAAAAAQAAYAcAAAAKCgAACAAAAAoKAAAJAAAACgoAAAoAAAAKCgAACwAAABAQAAAMAAAAEBAAAA0AAAAQEAAADgAAABAQAAAABAAAA8AD8A=
       bridge-settings-13: 9223653529011355668
-      :children:
+      children:
       - qos-weight-tier5: 0
         cpu-utilization-ki-down-slow: 65
         dynamic-cpu-control: 1
@@ -537,7 +537,7 @@ device_tree:
       has-art: ''
       role: 5260627
       name: 7366003
-      :children:
+      children:
       - compatible:
         - iop-nub,sep
         name: iop-sep-nub
@@ -556,7 +556,7 @@ device_tree:
       power-gates: 22
       role: 5459521
       name: 7564897
-      :children:
+      children:
       - region-size: 0
         compatible:
         - iop-nub,rtbuddy
@@ -584,12 +584,12 @@ device_tree:
       role: 5196115
       ignore-gating: ''
       name: 7301491
-      :children:
+      children:
       - compatible:
         - iop-nub,sio
         name: iop-sio-nub
         AAPL,phandle: 32
-        :children:
+        children:
         - compatible:
           - sio-dma-controller
           device_type: 27423349767367027
@@ -608,7 +608,7 @@ device_tree:
       function-tx: "\x17\0\0\0OIPGO\0\0\0\x02\x01\0\0"
       uart-version: 1
       name: uart0
-      :children:
+      children:
       - device_type: 30526162991407981
         name: mcu-bsl0
         AAPL,phandle: 35
@@ -630,7 +630,7 @@ device_tree:
       dma-parent: 33
       uart-version: 1
       name: uart1
-      :children:
+      children:
       - function-bt_wake: "\x17\0\0\0OIPG0\0\0\0\x01\x01\0\0"
         compatible:
         - bluetooth,n88
@@ -665,7 +665,7 @@ device_tree:
       dma-parent: 33
       uart-version: 1
       name: uart2
-      :children:
+      children:
       - wlan.background-scan-cache: 0
         AAPL,phandle: 39
         function-reg_on: "9\0\0\0OIPG\x03\0\0\0\x01\x01\0\0"
@@ -715,7 +715,7 @@ device_tree:
       dma-parent: 33
       uart-version: 1
       name: uart3
-      :children:
+      children:
       - device_type: mcu-comm
         name: mcu-comm0
         AAPL,phandle: 41
@@ -732,7 +732,7 @@ device_tree:
       function-tx: "\x17\0\0\0OIPGv\0\0\0\x02\x01\0\0"
       uart-version: 1
       name: uart4
-      :children:
+      children:
       - function-isp_en: !binary |-
           FwAAAE9JUEeBAAAAAAAAAA==
         compatible:
@@ -756,7 +756,7 @@ device_tree:
       uart-version: 1
       boot-console: ''
       name: uart6
-      :children:
+      children:
       - name: debug-console
         AAPL,phandle: 45
     - function-sos: "\x17\0\0\0OIPG1\0\0\0\x01\x01\0\0"
@@ -801,7 +801,7 @@ device_tree:
       "#size-cells": 2
       clock-ids: 275
       device_type: usb-complex
-      :children:
+      children:
       - publish-criteria: 3
         AAPL,phandle: 49
         configuration-string: stdMuxIAPVal
@@ -842,7 +842,7 @@ device_tree:
         cfg-incr: 15
         bus-number: 1
         clock-mask: 4
-        :children:
+        children:
         - port: 1
           AAPL,phandle: 51
           clock-mask: 4
@@ -866,7 +866,7 @@ device_tree:
         errata: 33554432
         bus-number: 2
         clock-mask: 8
-        :children:
+        children:
         - port: 1
           AAPL,phandle: 53
           clock-mask: 8
@@ -891,7 +891,7 @@ device_tree:
         cfg-incr: 15
         bus-number: 4
         clock-mask: 32
-        :children:
+        children:
         - port: 1
           name: lan0
           port-current-limit: 250
@@ -922,7 +922,7 @@ device_tree:
       function-iic_sda: "\x17\0\0\0OIPG`\0\0\0\x02\x01\x01\0"
       function-iic_scl: "\x17\0\0\0OIPGa\0\0\0\x02\x01\x01\0"
       name: i2c0
-      :children:
+      children:
       - event_name-gpio17: ac
         "#interrupt-cells": 1
         event_name-hold: mcu(hold)
@@ -1029,7 +1029,7 @@ device_tree:
       smmu-present: 1
       stt-idx-width: 10
       name: dart-disp0
-      :children:
+      children:
       - tail-padding: 1
         compatible:
         - iommu-mapper
@@ -1075,7 +1075,7 @@ device_tree:
       smmu-present: 1
       stt-idx-width: 10
       name: dart-scaler
-      :children:
+      children:
       - tail-padding: 1
         compatible:
         - iommu-mapper
@@ -1118,7 +1118,7 @@ device_tree:
       power-gates: 34
       stt-idx-width: 10
       name: dart-jpeg
-      :children:
+      children:
       - tail-padding: 2
         compatible:
         - iommu-mapper
@@ -1164,7 +1164,7 @@ device_tree:
       stt-idx-width: 10
       disable-perf-counters: ''
       name: dart-ave
-      :children:
+      children:
       - tail-padding: 1
         compatible:
         - iommu-mapper
@@ -1265,7 +1265,7 @@ device_tree:
       dma-parent: 33
       mca-version: 1
       name: mca0
-      :children:
+      children:
       - AAPL,phandle: 78
         compatible:
         - audio-data,hdmi
@@ -1303,7 +1303,7 @@ device_tree:
       "#size-cells": 2
       msi-parent-controller: 17
       "#msi-vectors": 32
-      :children:
+      children:
       - apcie-port: 1
         function-dart_force_active: 5071444005263245394
         msi-vector-base: 8
@@ -1320,7 +1320,7 @@ device_tree:
         pci-l1pm-control: 1080822287
         manual-enable: ''
         "#msi-vectors": 8
-        :children:
+        children:
         - pci-l1pm-control: 172879514127
           compatible:
           - wlan-pcie,bcm4350
@@ -1352,7 +1352,7 @@ device_tree:
       stt-idx-width: 10
       name: dart-apcie1
       vm-size: 1073737728
-      :children:
+      children:
       - AAPL,phandle: 83
         compatible:
         - iommu-mapper
@@ -1653,7 +1653,7 @@ device_tree:
     ui-weather-quality: 100
     allow-32bit-apps: 0
     offline-dictation: 1
-    :children:
+    children:
     - AAPL,phandle: 99
       name: camera
       video-cap: 2

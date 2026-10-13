@@ -24,7 +24,7 @@ device_tree:
   model: iPad13,6
   device_type: 30803309831876450
   "#size-cells": 2
-  :children:
+  children:
   - development-cert: 0
     disable-transport-rm: 0
     amfi-only-platform-code: 0
@@ -91,7 +91,7 @@ device_tree:
     effective-security-mode-sep: 0
     sepfw-load-at-boot: 1
     display-scale: 0
-    :children:
+    children:
     - UnusedIntegerProperty10: 0
       UnusedBooleanProperty3: 0
       UnusedIntegerProperty6: 0
@@ -223,10 +223,10 @@ device_tree:
       AAPL,phandle: 8
     - name: lock-regs
       AAPL,phandle: 9
-      :children:
+      children:
       - name: amcc
         AAPL,phandle: 10
-        :children:
+        children:
         - name: amcc-ctrr-a
           AAPL,phandle: 11
     - AAPL,phandle: 12
@@ -241,7 +241,7 @@ device_tree:
     "#size-cells": 0
     name: cpus
     AAPL,phandle: 14
-    :children:
+    children:
     - reg: 0
       AAPL,phandle: 15
       cpu-id: 0
@@ -495,7 +495,7 @@ device_tree:
     cpm-impl: !binary |-
       AADkEAIAAAAAgAAAAAAAAAAA5BECAAAAAIAAAAAAAAA=
     name: arm-io
-    :children:
+    children:
     - "#interrupt-cells": 1
       "#main-cpus": 8
       compatible:
@@ -602,7 +602,7 @@ device_tree:
       pmgr-dock-fifo-channel: 3
       soc-dpe: 1
       function-mcc_ctrl: 5576983714954477607
-      :children:
+      children:
       - pkg-avg-limiter-kp: 3355
         cpu-lowpeak-limiter-input-tc: 0
         function-ane_perf_ctr: 4705772680115126441
@@ -953,7 +953,7 @@ device_tree:
       power-gates: ''
       role: 5263169
       name: 7368545
-      :children:
+      children:
       - aop-target: 1
         sleep-on-hibernate: ''
         compatible:
@@ -969,7 +969,7 @@ device_tree:
         watchdog-enable: ''
         bb-uart-quiescing: ''
         name: iop-aop-nub
-        :children:
+        children:
         - accel-offset-cal: syscfg/AROC
           low-temp-accel-offset: syscfg/LTAO
           device-usage-page: 65280
@@ -1027,7 +1027,7 @@ device_tree:
           device_type: aop-audio
           name: aop-audio
           AAPL,phandle: 52
-          :children:
+          children:
           - AAPL,phandle: 53
             compatible:
             - audio-aop-lp-mic-in
@@ -1149,7 +1149,7 @@ device_tree:
       reg: !binary |-
         AICASgAAAAAAQAAAAAAAAADAgEoAAAAAAEAAAAAAAAA=
       sids: 32899
-      :children:
+      children:
       - AAPL,phandle: 65
         compatible:
         - iommu-mapper
@@ -1247,7 +1247,7 @@ device_tree:
       role: 5262672
       name: 7368048
       pio-vm-size: 1073741824
-      :children:
+      children:
       - energy-model-dram-configs: !binary |-
           CAAAAAYAAADMTBoAmZkAAGZmBwAAAAEAM7MIAACAWABm5lQAMzMLAMzMAABmZhcAZmYjAACAAQCZmQ8AZuYBADOzEQDMTLQAmRmqAACAFADMzAAAzMwuAMzMJQAAgAEAMzMSAGbmAQAAABQAzEzyADMz0gAzsxYAzMwAADMzRAAIAAAA/wAAAMxMDwDMTAAAZuYFAAAAAQAzMwcAZmZqAGbmRwAzswkAAIAAAGZmFwCZmRYAAIAAAMxMDADMzAEAAIAOAJkZvQAzs5sAMzMQAACAAADMzC4AmRkaAACAAADMTA8AzMwBAAAAEgAzsw4BMzPMAGZmEwAAgAAAMzNEABAAAAAGAAAAzMwmADMzAQDMzA4AM7MBADMzEABm5m0AAIBmAMxMFgAzswEAZmYXADMzNQDMzAIAAIAcAACAAwAAgB4AzMzhAMxMzgAAgCUAM7MBAMzMLgAAgDkAzMwCAMxMIAAAgAMAzEwiAJmZJQGZmf4AzEwpADOzAQAzM0QAEAAAAP8AAABm5iEAmRkBAGbmEABm5gEAMzMTAAAAdQDMTGMAmRkcAMxMAQBmZhcAzEwuAMzMAQAzsxwAzEwDAJmZHwAzs/gAzEzUAMxMKADMTAEAzMwuADOzNADMzAEAzEwiAMxMAwCZmSUAmZlSAQAAFAEAAC4AzEwBADMzRAA=
         compatible:
@@ -1284,7 +1284,7 @@ device_tree:
       power-gates: ''
       sids: 32769
       reg: "\0\00;\0\0\0\0\0@\0\0\0\0\0\0"
-      :children:
+      children:
       - AAPL,phandle: 74
         compatible:
         - iommu-mapper
@@ -1313,14 +1313,14 @@ device_tree:
       power-gates: ''
       role: 5260627
       name: 7366003
-      :children:
+      children:
       - AAPL,phandle: 76
         compatible:
         - iop-nub,sep
         function-wait_for_power_gate: "\x1E\0\0\0tiaWi\0\0\0\0\0\0\0\0\0\0\0"
         name: iop-sep-nub
         rom-panic-bytes: 392
-        :children:
+        children:
         - name: Ocelot
           AAPL,phandle: 77
         - name: xART
@@ -1353,7 +1353,7 @@ device_tree:
       sids: 32769
       name: dart-sep
       tlb-invalid-refetch: ''
-      :children:
+      children:
       - AAPL,phandle: 81
         compatible:
         - iommu-mapper
@@ -1381,7 +1381,7 @@ device_tree:
       power-gates: 292
       role: 5196115
       name: 7301491
-      :children:
+      children:
       - compatible:
         - iop-nub,rtbuddy-v2
         coredump-enable: 64
@@ -1389,7 +1389,7 @@ device_tree:
         user-power-managed: 1
         name: iop-sio-nub
         AAPL,phandle: 83
-        :children:
+        children:
         - compatible:
           - sio-dma-controller
           device_type: 27423349767367027
@@ -1419,7 +1419,7 @@ device_tree:
       power-gates: 321
       sids: 32775
       reg: "\0@\05\0\0\0\0\0@\0\0\0\0\0\0"
-      :children:
+      children:
       - AAPL,phandle: 86
         compatible:
         - iommu-mapper
@@ -1467,7 +1467,7 @@ device_tree:
       reg: !binary |-
         AABAdwAAAAAAwAYAAAAAAAAABXcAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADMewAAAAAAAAYAAAAAAAAAAHkAAAAAAAAAAQAAAAAAALl7AAAAAADAAAAAAAAAAHzUewAAAAAAQAAAAAAAAA==
       power-gates: 103
-      :children:
+      children:
       - power-managed: 1
         compatible:
         - iop-nub,rtbuddy-v2
@@ -1501,7 +1501,7 @@ device_tree:
       role: 4410707
       power-gates: ''
       name: 6516083
-      :children:
+      children:
       - user-power-managed: 1
         quiesced: ''
         compatible:
@@ -1518,7 +1518,7 @@ device_tree:
         coredump-active-only: ''
         name: iop-smc-nub
         pre-loaded: 0
-        :children:
+        children:
         - "#interrupt-cells": 1
           name: 33052900840402291
           interrupt-controller: ''
@@ -1573,7 +1573,7 @@ device_tree:
       uart-version: 1
       boot-console: ''
       name: uart0
-      :children:
+      children:
       - name: debug-console
         AAPL,phandle: 99
     - compatible:
@@ -1591,7 +1591,7 @@ device_tree:
         JgAAAE9JUEeOAAAAAgEAAA==
       uart-version: 1
       name: uart3
-      :children:
+      children:
       - name: hsaid-uart
         AAPL,phandle: 101
     - reg: !binary |-
@@ -1621,7 +1621,7 @@ device_tree:
       spi-version: 1
       dma-parent: 84
       name: spi2
-      :children:
+      children:
       - compatible:
         - hid-transport,spi
         hid-merge-personality: K1F19,10-Slave
@@ -1655,7 +1655,7 @@ device_tree:
       spi-version: 1
       dma-parent: 84
       name: spi4
-      :children:
+      children:
       - function-clock_24MHz_enable: "E\0\0\0OIPG\0\0\0\0\x01\x01\0\x02"
         hid-merge-personality: K1F19,10
         fdr-classes: "GpC2\0multitouch-cal-container\0"
@@ -1729,7 +1729,7 @@ device_tree:
       protection-granularity: 16
       name: dart-usb0
       tlb-invalid-refetch: ''
-      :children:
+      children:
       - AAPL,phandle: 110
         compatible:
         - iommu-mapper
@@ -1771,7 +1771,7 @@ device_tree:
         HAAAAAAAAAA/AD8AAAAAACAAIAAAAAAAIAAAAAAAAAAfgAAAAAAAAAQAAAAAAAAAKAAAAAAAAAABAAAAAAAAAAEAAAAAAAAALAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAMAAAAAAAAAAfgAAAAAAAAAQAAAAAAAAA
       reg: !binary |-
         AAAoggMAAAAAGAEAAAAAAAAAIIIDAAAAAEAAAAAAAAAAwCiCAwAAAAAYAAAAAAAAAECoggMAAAAAQAAAAAAAAAAAgIIDAAAAAEAAAAAAAAAAAKiCAwAAAABAAAAAAAAAAAAAggMAAAAAQAAAAAAAAAAACIIDAAAAAEAAAAAAAAAA0CiCAwAAAABAAAAAAAAA
-      :children:
+      children:
       - port: 1
         AAPL,phandle: 112
         device_type: usb-drd0-port-hs
@@ -1801,7 +1801,7 @@ device_tree:
       AAPL,phandle: 114
       function-device_reset: "\x1E\0\0\0TSRA'\0\0\0"
       name: i2c0
-      :children:
+      children:
       - function-recovery_status_output: "E\0\0\0OIPG\n\0\0\0\x01\x01\x01\0"
         AAPL,phandle: 115
         function-LDCM_Mux_Sel0: "^\0\0\04WKp31Pg\x01\0\0\x03\x03\0\0\x03\0\0\0\x03"
@@ -1844,7 +1844,7 @@ device_tree:
       AAPL,phandle: 116
       function-device_reset: "\x1E\0\0\0TSRA(\0\0\0"
       name: i2c1
-      :children:
+      children:
       - asp-tx-config: !binary |-
           IAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAAABEAEgATABAP8AACAAMABAAFAAYABwAIAAkACgALAAwADQAOAA8AAAARABIAEwAQD/AAAgADAAQABQAGAAcACAAJAAoACwAMAA0ADgAPAAAAEQASABMAEA/wAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAAABEAEgATABAP8AAKAAsADAANAA4ADwAAAAEAAgADAAQABQAGAAcAAAARABIAEwAQD/AACgALAAwADQAOAA8AAAABAAIAAwAEAAUABgAHAAAAEQASABMAEA/wAAoACwAMAA0ADgAPAAAAAQACAAMABAAFAAYABwAAABEAEgATABAP8AAKAAsADAANAA4ADwAAAAEAAgADAAQABQAGAAcAAAARABIAEwAQD/AAA=
         AAPL,phandle: 117
@@ -1934,7 +1934,7 @@ device_tree:
       AAPL,phandle: 123
       function-device_reset: "\x1E\0\0\0TSRA)\0\0\0"
       name: i2c2
-      :children:
+      children:
       - function-boost: !binary |-
           JgAAAE9JUEeLAAAAAQEAAA==
         transports-supported: 34359738375
@@ -1970,7 +1970,7 @@ device_tree:
       AAPL,phandle: 125
       function-device_reset: "\x1E\0\0\0TSRA*\0\0\0"
       name: i2c3
-      :children:
+      children:
       - AAPL,phandle: 126
         compatible:
         - audio-control,cs35l91
@@ -2018,7 +2018,7 @@ device_tree:
       AAPL,phandle: 130
       function-device_reset: "\x1E\0\0\0TSRA+\0\0\0"
       name: i2c4
-      :children:
+      children:
       - AAPL,phandle: 131
         compatible:
         - parade,DP825
@@ -2026,7 +2026,7 @@ device_tree:
         name: dp825
         reg: !binary |-
           GAAAAMQJAAAAAAAAAAAAAA==
-        :children:
+        children:
         - reg: 68719476852
           repeated-start: 1
           interface: 3
@@ -2104,7 +2104,7 @@ device_tree:
       queue-depth: 1099511628032
       "#address-cells": 0
       name: nub-spmi
-      :children:
+      children:
       - info-clock_offset: 25769857280
         function-external_standby: "^\0\0\0WyekESBM"
         info-rtc_alarm_mask: 1
@@ -2194,7 +2194,7 @@ device_tree:
       queue-depth: 1099511628032
       "#address-cells": 0
       name: nub-spmi1
-      :children:
+      children:
       - info-fault_name-12: intboost_uvlo
         info-fault_log: 8589940736
         info-fault_name-9: 31371675520951415
@@ -2244,7 +2244,7 @@ device_tree:
       queue-depth: 1099511628032
       "#address-cells": 0
       name: aop-spmi0
-      :children:
+      children:
       - interrupt-parent: 145
         AAPL,phandle: 146
         interrupts: !binary |-
@@ -2254,7 +2254,7 @@ device_tree:
         device_type: stockholm-spmi
         name: stockholm-spmi
         reg: "\f\0\0\0\x03\0\0\0\0\0\0\0\x04\0\0\0\0\0\0\0\0\0\0\0"
-        :children:
+        children:
         - required-gpios: "support_venable\0support_virtual_gpio\0"
           AAPL,phandle: 147
           device_type: stockholm
@@ -2294,7 +2294,7 @@ device_tree:
       sids: 3
       name: dart-scaler
       tlb-invalid-refetch: ''
-      :children:
+      children:
       - AAPL,phandle: 150
         compatible:
         - iommu-mapper
@@ -2343,7 +2343,7 @@ device_tree:
       sids: 1
       name: dart-jpeg0
       tlb-invalid-refetch: ''
-      :children:
+      children:
       - AAPL,phandle: 154
         compatible:
         - iommu-mapper
@@ -2386,7 +2386,7 @@ device_tree:
       sids: 1
       name: dart-jpeg1
       tlb-invalid-refetch: ''
-      :children:
+      children:
       - AAPL,phandle: 157
         compatible:
         - iommu-mapper
@@ -2482,7 +2482,7 @@ device_tree:
       reg: !binary |-
         AIAOLAAAAAAAQAAAAAAAAABADywAAAAAAEAAAAAAAAAAwA8sAAAAAABAAAAAAAAAAAAPLAAAAAAAQAAAAAAAAACADywAAAAAAEAAAAAAAAAAwA4sAAAAAABAAAAAAAAA
       pio-vm-size: 67108864
-      :children:
+      children:
       - AAPL,phandle: 160
         compatible:
         - iommu-mapper
@@ -2532,7 +2532,7 @@ device_tree:
       power-gates: 330
       reg: "\0\0\x04g\0\0\0\0\0@\0\0\0\0\0\0\0\0\x03g\0\0\0\0\0@\0\0\0\0\0\0\0\0\x02g\0\0\0\0\0@\0\0\0\0\0\0\0@\x04g\0\0\0\0\0@\0\0\0\0\0\0"
       sids: 32769
-      :children:
+      children:
       - AAPL,phandle: 163
         compatible:
         - iommu-mapper
@@ -2577,7 +2577,7 @@ device_tree:
       sids: 32775
       name: dart-avd
       tlb-invalid-refetch: ''
-      :children:
+      children:
       - AAPL,phandle: 166
         compatible:
         - iommu-mapper
@@ -2645,7 +2645,7 @@ device_tree:
       reg: !binary |-
         AACAawAAAAAAQAAAAAAAAAAAgWsAAAAAAEAAAAAAAAAAAIJrAAAAAABAAAAAAAAAAECAawAAAAAAQAAAAAAAAA==
       pio-vm-size: 33554432
-      :children:
+      children:
       - AAPL,phandle: 171
         compatible:
         - iommu-mapper
@@ -2729,7 +2729,7 @@ device_tree:
       power-gates: 316
       role: 5785159
       name: 27992883906242151
-      :children:
+      children:
       - AAPL,phandle: 174
         compatible:
         - iop-nub,rtbuddy-v2
@@ -2804,7 +2804,7 @@ device_tree:
       role: 5260100
       function-get_temp1: 7233190324825227402
       name: 7365476
-      :children:
+      children:
       - AAPL,phandle: 179
         compatible:
         - iop-nub,rtbuddy-v2
@@ -2837,7 +2837,7 @@ device_tree:
       vm-size: 4227858432
       reg: !binary |-
         AMAwMQAAAAAAQAAAAAAAAA==
-      :children:
+      children:
       - AAPL,phandle: 181
         compatible:
         - iommu-mapper
@@ -2869,7 +2869,7 @@ device_tree:
       device_type: dart
       reg: "\0@01\0\0\0\0\0@\0\0\0\0\0\0\0\001\0\0\0\0\0@\0\0\0\0\0\0"
       sids: 32785
-      :children:
+      children:
       - AAPL,phandle: 183
         compatible:
         - iommu-mapper
@@ -2948,7 +2948,7 @@ device_tree:
         kQEAAJIBAACTAQAA
       reg: !binary |-
         AADAcQAAAAAAwAYAAAAAAAAAhXEAAAAAAEAAAAAAAAA=
-      :children:
+      children:
       - AAPL,phandle: 189
         compatible:
         - iop-nub,rtbuddy-v2
@@ -2982,7 +2982,7 @@ device_tree:
       vm-size: 4227858432
       reg: !binary |-
         AMAwcQAAAAAAQAAAAAAAAA==
-      :children:
+      children:
       - AAPL,phandle: 191
         compatible:
         - iommu-mapper
@@ -3016,7 +3016,7 @@ device_tree:
       power-gates: ''
       reg: "\0@0q\0\0\0\0\0@\0\0\0\0\0\0\0\00q\0\0\0\0\0@\0\0\0\0\0\0"
       sids: 32785
-      :children:
+      children:
       - AAPL,phandle: 193
         compatible:
         - iommu-mapper
@@ -3067,7 +3067,7 @@ device_tree:
         xAAAAENhY20uMGxj
       "#address-cells": 0
       name: mca0
-      :children:
+      children:
       - mclk-config: 18446744069414584320
         mca-identity: 1835216993
         compatible:
@@ -3085,7 +3085,7 @@ device_tree:
         function-i2s_route0: !binary |-
           xAAAAFJzMmkwLnhyMC54dAEBAAA=
         name: mca0a
-        :children:
+        children:
         - AAPL,phandle: 199
           compatible:
           - audio-data,audio-loopback
@@ -3111,7 +3111,7 @@ device_tree:
         xAAAAENhY20uM2xj
       "#address-cells": 0
       name: mca3
-      :children:
+      children:
       - mclk-config: 18446744069414584323
         mca-identity: 1835217761
         compatible:
@@ -3130,7 +3130,7 @@ device_tree:
         function-i2s_route0: !binary |-
           xAAAAFJzMmk2ZHVhM25pcAMDAgA=
         name: mca3a
-        :children:
+        children:
         - AAPL,phandle: 202
           compatible:
           - audio-data,cs35l91
@@ -3151,7 +3151,7 @@ device_tree:
       device_type: 7549545
       name: alc0
       function-aop-device-control-id: 1752195433
-      :children:
+      children:
       - input-data-selectors: 1imi2imi3imi4imi5imi
         audio-stream-formatter: 1818583408
         compatible:
@@ -3179,7 +3179,7 @@ device_tree:
       device_type: 7549545
       name: alc1
       function-aop-device-control-id: 1818518381
-      :children:
+      children:
       - name: audio-leap-ldcm
         audio-stream-formatter: 1818583408
         compatible:
@@ -3205,7 +3205,7 @@ device_tree:
       device_type: 7549545
       name: alc2
       function-aop-device-control-id: 1751218027
-      :children:
+      children:
       - name: audio-leap-hawking
         audio-stream-formatter: 1818583408
         compatible:
@@ -3247,7 +3247,7 @@ device_tree:
       "#size-cells": 2
       msi-parent-controller: 28
       "#msi-vectors": 32
-      :children:
+      children:
       - pci-l1pm-control: 1079318799
         "#msi-vectors": 8
         "#address-cells": 1
@@ -3273,7 +3273,7 @@ device_tree:
         function-dart_self: 6009328463138259159
         msi-vector-base: 0
         "#size-cells": 0
-        :children:
+        children:
         - pci-l1pm-control: 1079312399
           compatible:
           - wlan-pcie,bcm4387
@@ -3324,7 +3324,7 @@ device_tree:
         function-dart_self: 6009328463138259162
         msi-vector-base: 8
         "#size-cells": 0
-        :children:
+        children:
         - pci-l1pm-control: 207237742607
           pci-aspm-default: 2
           AAPL,unit-string: '00000000'
@@ -3354,7 +3354,7 @@ device_tree:
       tlb-invalid-refetch: ''
       vm-size: 1071644672
       name: dart-apcie0
-      :children:
+      children:
       - compatible:
         - iommu-mapper
         device_type: dart-mapper
@@ -3384,7 +3384,7 @@ device_tree:
       tlb-invalid-refetch: ''
       vm-size: 1071644672
       name: dart-apcie1
-      :children:
+      children:
       - compatible:
         - iommu-mapper
         device_type: dart-mapper
@@ -4094,7 +4094,7 @@ device_tree:
       msi-parent-controller: 28
       "#size-cells": 2
       piodma-id: 0
-      :children:
+      children:
       - msi-vector-base: 0
         IOPCITunnelLinkChange: ''
         PCI-Thunderbolt: ''
@@ -4151,7 +4151,7 @@ device_tree:
       reg: !binary |-
         AIAAoQMAAAAAQAAAAAAAAA==
       sids: 32768
-      :children:
+      children:
       - AAPL,phandle: 251
         compatible:
         - iommu-mapper
@@ -4222,7 +4222,7 @@ device_tree:
       sids: 32771
       tlb-invalid-refetch: ''
       name: dart-acio0
-      :children:
+      children:
       - AAPL,phandle: 255
         compatible:
         - iommu-mapper
@@ -4240,7 +4240,7 @@ device_tree:
       name: acio-cpu0
       reg: !binary |-
         AAAQgQMAAABEAQAAAAAAAACgEIEDAAAARAEAAAAAAAAAAKyBAwAAAABAAAAAAAAA
-      :children:
+      children:
       - AAPL,phandle: 257
         compatible:
         - iop-nub,rtbuddy-v2
@@ -4343,7 +4343,7 @@ device_tree:
       sids: 1
       tlb-invalid-refetch: ''
       name: dart-rsm
-      :children:
+      children:
       - AAPL,phandle: 265
         compatible:
         - iommu-mapper
@@ -4570,7 +4570,7 @@ device_tree:
     side-button-location: !binary |-
       gHECAIB/AwDgDQAA2y4AAOgDAAA=
     display-temp-compensation: syscfg/DTCl
-    :children:
+    children:
     - aggregate-cam-video-zoom: 600
       rear-max-video-fps-4k: 60
       rear-max-video-zoom: 3
@@ -4662,12 +4662,12 @@ device_tree:
     name: amfm
   - name: filesystems
     AAPL,phandle: 280
-    :children:
+    children:
     - AAPL,phandle: 281
       max_fs_entries: 7
       name: fstab
       os_env_type: 1
-      :children:
+      children:
       - vol.fs_mntopts: nosuid,nodev,nobrowse
         vol.fs_type: rw
         vol.fs_role: 256
@@ -4735,7 +4735,7 @@ device_tree:
       max_fs_entries: 1
       name: fstab-ephemeral-recovery-data
       os_env_type: 2
-      :children:
+      children:
       - AAPL,phandle: 290
         vol.fs_mntopts: nosuid,nodev,size=262144,template=/private/var/
         vol.fs_type: rw
@@ -4749,7 +4749,7 @@ device_tree:
       max_fs_entries: 7
       name: fstab-ephemeral-diag-data
       os_env_type: 3
-      :children:
+      children:
       - AAPL,phandle: 292
         vol.fs_mntopts: nosuid,nodev,size=1048576,template=/private/var/
         vol.fs_type: rw
@@ -4797,15 +4797,15 @@ device_tree:
         AAPL,phandle: 296
   - name: iboot-syscfg
     AAPL,phandle: 297
-    :children:
+    children:
     - name: manifest-entitlements
       AAPL,phandle: 298
   - name: osenvironments
     AAPL,phandle: 299
-    :children:
+    children:
     - name: recovery-environment
       AAPL,phandle: 300
-      :children:
+      children:
       - parent: "/filesystems"
         AAPL,phandle: 301
         replacement: fstab-ephemeral-recovery-data
@@ -4841,7 +4841,7 @@ device_tree:
         AAPL,phandle: 308
     - name: diagnostics-environment
       AAPL,phandle: 309
-      :children:
+      children:
       - parent: "/filesystems"
         AAPL,phandle: 310
         replacement: fstab-ephemeral-diag-data
@@ -4865,7 +4865,7 @@ device_tree:
         AAPL,phandle: 314
     - name: darwinos-ramdisk-environment
       AAPL,phandle: 315
-      :children:
+      children:
       - parent: "/filesystems"
         AAPL,phandle: 316
         replacement: fstab-ephemeral-recovery-data

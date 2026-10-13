@@ -10,6 +10,8 @@ AppleData::Schemas::PKI = AppleData::DataFile.define do
   end
 
   collection :keys do
+    attr_accessor :key
+
     attribute :title, :string
     attribute :certificates, :string, collection: true
   end
@@ -19,6 +21,7 @@ AppleData::Schemas::PKI = AppleData::DataFile.define do
 
     attribute :name, :string
     attribute :title, :string
+    attribute :symbol, :string
     attribute :type, :string
     attribute :description, :string
     attribute :apple_description, :string
@@ -27,7 +30,7 @@ AppleData::Schemas::PKI = AppleData::DataFile.define do
     attribute :ous, :string, collection: true
 
     define_method :to_s do
-      [name, title, description, key].reject(&:blank?).first
+      [name, title, description, key].find(&:present?).to_s
     end
   end
 end

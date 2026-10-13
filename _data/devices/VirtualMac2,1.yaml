@@ -24,7 +24,7 @@ device_tree:
   model: VirtualMac2,1
   device_type: 30803309831876450
   "#size-cells": 2
-  :children:
+  children:
   - AAPL,phandle: 2
     sshot-interrupt-masked-scale: 0
     lock-scale: 0
@@ -114,7 +114,7 @@ device_tree:
     sepfw-load-at-boot: 1
     display-scale: 0
     debug-board-revision: 0
-    :children:
+    children:
     - UnusedIntegerProperty10: 0
       UnusedBooleanProperty3: 0
       UnusedIntegerProperty6: 0
@@ -254,7 +254,7 @@ device_tree:
       name: iBoot
     - name: memory-report
       AAPL,phandle: 12
-      :children:
+      children:
       - name: zeroization-report
         AAPL,phandle: 13
     - name: asmb
@@ -265,7 +265,7 @@ device_tree:
     "#size-cells": 0
     name: cpus
     AAPL,phandle: 16
-    :children:
+    children:
     - name: cpu0
       peripheral-frequency: 24000000
       state: 29113321704551794
@@ -831,7 +831,7 @@ device_tree:
     "#size-cells": 2
     chip-revision: 0
     device_type: vmapple2-io
-    :children:
+    children:
     - interrupt-parent: 55
       compatible:
       - aes,s8000
@@ -958,7 +958,7 @@ device_tree:
     artwork-scale-factor: 2
     artwork-device-idiom: 6513005
     artwork-display-gamut: P3
-    :children:
+    children:
     - ncm-self-name-unit: 0
       configuration-string: ncmAuxBringup
       ncm-interrupt-ep-disabled: 1
@@ -976,12 +976,12 @@ device_tree:
       name: util
   - name: filesystems
     AAPL,phandle: 68
-    :children:
+    children:
     - AAPL,phandle: 69
       max_fs_entries: 7
       name: fstab
       os_env_type: 1
-      :children:
+      children:
       - vol.fs_mntopts: ''
         vol.fs_type: ro
         vol.fs_role: 1
@@ -1031,7 +1031,7 @@ device_tree:
       max_fs_entries: 3
       name: fstab-ephemeral-recovery-data
       os_env_type: 2
-      :children:
+      children:
       - AAPL,phandle: 76
         vol.fs_mntopts: nosuid,nodev,size=262144,template=/private/var/
         vol.fs_type: rw
@@ -1063,7 +1063,7 @@ device_tree:
       max_fs_entries: 7
       name: fstab-ephemeral-diag-data
       os_env_type: 3
-      :children:
+      children:
       - AAPL,phandle: 80
         vol.fs_mntopts: nosuid,nodev,size=1048576,template=/private/var/
         vol.fs_type: rw
@@ -1104,10 +1104,10 @@ device_tree:
     AAPL,phandle: 84
   - name: osenvironments
     AAPL,phandle: 85
-    :children:
+    children:
     - name: recovery-environment
       AAPL,phandle: 86
-      :children:
+      children:
       - parent: "/filesystems"
         AAPL,phandle: 87
         replacement: fstab-ephemeral-recovery-data
@@ -1155,7 +1155,7 @@ device_tree:
         AAPL,phandle: 97
     - name: diagnostics-environment
       AAPL,phandle: 98
-      :children:
+      children:
       - property_name: disable-transport-rm
         value: 1
         name: disable-transport-rm
@@ -1198,7 +1198,7 @@ device_tree:
         AAPL,phandle: 108
     - name: darwinos-ramdisk-environment
       AAPL,phandle: 109
-      :children:
+      children:
       - property_name: isp-horizon
         value: 1
         name: isp-horizon
@@ -1230,7 +1230,7 @@ device_tree:
         AAPL,phandle: 116
     - name: kcgen-environment
       AAPL,phandle: 117
-      :children:
+      children:
       - property_name: non-apple-or-untrusted-code
         value: 0
         name: apple-trusted-code
@@ -1249,7 +1249,7 @@ device_tree:
         AAPL,phandle: 121
     - name: recoveryos-environment
       AAPL,phandle: 122
-      :children:
+      children:
       - property_name: csr-allow-device-configuration
         value: 1
         name: csr-allow-device-configuration
@@ -1276,7 +1276,7 @@ device_tree:
         AAPL,phandle: 128
     - name: upgrade-environment
       AAPL,phandle: 129
-      :children:
+      children:
       - property_name: non-apple-or-untrusted-code
         value: 0
         name: apple-trusted-code
