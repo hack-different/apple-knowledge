@@ -5,34 +5,35 @@ on:
     branches:
       - main
 
+  workflow_dispatch:
+
+concurrency:
+  group: publish-site
+  cancel-in-progress: false
+
 jobs:
+  ci-build-jekyll:
+    uses: ./.github/workflows/build-jekyll.yml
+
   github-pages:
     name: Publish Static Website
     runs-on: ubuntu-latest
+    needs: ci-build-jekyll
     environment: gh-pages
+    permissions:
+      contents: write
+
     steps:
-      - name: Install Dependencies
-        run: sudo apt install libidn-dev
-
-      - uses: actions/checkout@v3
-
-      - id: gem-cache
-        uses: actions/cache@v4
+      - name: Download Site Artifacts
+        uses: actions/download-artifact@v5
         with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-
-      - uses: hack-different/jekyll-action@master
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          debug: true
-          target_branch: gh-pages
-          target_path: /
-
-      - name: Archive Data Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: data-site
+          name: data-ci-site
           path: _site
+
+      - name: Publish to gh-pages Branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./_site
+          cname: docs.hackdiffe.rent

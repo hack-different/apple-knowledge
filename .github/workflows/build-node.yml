@@ -19,44 +19,41 @@ jobs:
       matrix:
         node-version: ["22", "24"]
 
+    defaults:
+      run:
+        working-directory: ./_packages/node
+
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           fetch-depth: ${{ inputs.fetch-depth }}
 
       - uses: oven-sh/setup-bun@v2
 
-      - name: Cache Node Packages
-        id: cache-node
-        uses: actions/cache@v4
-        with:
-          path:  _packages/node/node_modules
-          key: ${{ runner.os }}-build-ci-node-yarn-${{ matrix.node-version }}-${{ hashFiles('_packages/node/yarn.lock') }}
-
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node-version }}
-          cache-dependency-path: _packages/node/yarn.lock
-          registry-url: https://registry.npmjs.org/
+
+      - name: Cache Node Packages
+        uses: actions/cache@v5
+        with:
+          path: _packages/node/node_modules
+          key: ${{ runner.os }}-build-ci-node-${{ matrix.node-version }}-${{ hashFiles('_packages/node/bun.lock') }}
 
       - name: Install dependencies
-        working-directory: ./_packages/node
         run: bun install
 
       - name: Perform a Build
-        working-directory: ./_packages/node
         run: bun run build
 
       - name: Run Package Tests
-        working-directory: ./_packages/node
         run: bun run test
 
       - name: Package Node Artifact
-        working-directory: ./_packages/node
         run: bun pm pack
 
       - name: Archive Node Package Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: package-node-${{ matrix.node-version }}
           path: _packages/node/*.tgz

@@ -15,18 +15,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Install OS Packages
+        run: sudo apt-get update && sudo apt-get install -y libidn-dev cmake
+
+      - uses: actions/checkout@v5
         with:
           fetch-depth: ${{ inputs.fetch-depth }}
-
-      - name: Cache Ruby Gems and Bundle
-        id: cache-gems
-        uses: actions/cache@v4
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-build-ruby-${{ hashFiles('Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-build-ruby-
 
       - name: Setup Ruby 4.0.5
         uses: ruby/setup-ruby@v1
@@ -36,9 +30,13 @@ jobs:
 
       - name: Build Jekyll Site
         run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Archive Site Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: data-ci-site
           path: _site
+          include-hidden-files: true
