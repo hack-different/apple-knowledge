@@ -87,6 +87,7 @@ See [docs/Binary_Tooling](docs/Binary_Tooling)
 * [`blacktop/ipsw`](https://github.com/blacktop/ipsw)
 * [jtool2](https://www.newosxbook.com/tools/jtool.html)
 * [frida](https://frida.re)
+* [iosy](https://opensyntaxx.com/) - A CLI that decompiles iOS apps (.ipa files) into readable Swift projects
 
 ## Guides and General
 
